@@ -1,0 +1,21 @@
+# public/robots.txt (LIVE VERZIA)
+User-agent: *
+Allow: /
+
+# Specific optimizations
+Allow: /sitemap.xml
+Allow: /_next/static/
+Allow: /images/
+Allow: /favicon.ico
+
+# Block admin/editor pages
+Disallow: /editor
+Disallow: /admin
+Disallow: /_next/
+Disallow: /api/
+
+# Rate limiting
+Crawl-delay: 1
+
+# Sitemap location (zmeňte na váš skutočný domain)
+Sitemap: https://www.sofoservis.sk/sitemap.xml

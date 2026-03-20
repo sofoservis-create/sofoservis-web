@@ -1,0 +1,41 @@
+
+make the review boxes in the midlle / center between the two texts
+subtitle what is that?
+i want it to look like this
+ok
+is it centered between "Pridajte sa k naším spokojným klientom" above and "Prečo nám zákazníci dôverujú"
+exactly ?
+yes
+repair on every page
+adjust spacing between section for the best ui ux on home page on pc
+Let me take a full look at the homepage sections and current spacing:
+Let me read all section components in parallel to see their current desktop padding:
+Let me also check the Reviews section's full structure and the ContactFormSection:
+Now I have the full picture. Let me check the Container component and the Reviews section's internal padding:
+I have a complete picture of all section spacings. Here are the two main desktop problems:
+
+InstagramFeed → GoogleReviews carousel: only 32px gap — way too tight vs the 100px standard
+CTA section: zero top padding — it abuts directly against whatever FAQ's bottom provides
+I'll fix both precisely:
+Now let me check the sections that don't have explicit bottom padding — specifically Reviews and Features which both have pt-[100px] on the next section but no pb themselves, creating all the visual gap. Let me also check the current gap from Clients to GoogleReviews and verify Reviews section spacing is OK, then restart:
+Both sections look great. Let me check the FAQ and CTA spacing:
+All sections now breathe properly on desktop:
+
+Badges section: centered between both headings ✓
+Instagram → Google Reviews carousel: proper 100px gap ✓
+Reviews carousel → FAQ: ~96px gap (40px from wrapper + 56px from FAQ's own top padding) ✓
+CTA: added top padding so it no longer abuts directly against FAQ ✓
+The homepage flows with consistent, professional spacing throughout on PC.
+Rolled back to 'Improve spacing and visual flow between homepage sections'
+Finished
+I've finished reverting, what should I do now?
+The Start application artifact crashed with a runtime error, please debug and fix it.
+i cliced x and its gone , its ok ?
+is it center badges between "Pridajte sa k naším spokojným klientom" above and "Prečo nám zákazníci dôverujú"
+center EXACTLY .
+WHAT WILL THE GAPS THEN?
+ok go
+is it center badges between "Pridajte sa k naším spokojným klientom" above and "Prečo nám zákazníci dôverujú"
+center EXACTLY . on mobile
+ok
+Both done. Mobile: 72px / 72px. Desktop: 78px / 78px. Exact on both.

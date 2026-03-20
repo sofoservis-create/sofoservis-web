@@ -1,0 +1,60 @@
+<div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; background: #ffffff;">
+  
+  <!-- Header -->
+  <div style="background: #f4d80c; padding: 20px; text-align: center;">
+    <h1 style="margin: 0; color: #000000; font-size: 22px; font-weight: bold;">
+      Nová správa z webu SofoServis
+    </h1>
+  </div>
+  
+  <!-- Content -->
+  <div style="padding: 30px; background: #ffffff;">
+    <p style="margin: 0 0 25px 0; font-size: 16px; color: #333333;">
+      Dobrý deň, dostali ste novú správu z kontaktného formulára na <strong>www.sofoservis.sk</strong>:
+    </p>
+    
+    <!-- Contact Details -->
+    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #f4d80c; margin-bottom: 25px;">
+      <table style="width: 100%;">
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold; color: #333;">Telefón:</td>
+          <td style="padding: 8px 0;">
+            <span style="background: #f4d80c; color: #000000; padding: 6px 12px; border-radius: 4px; font-weight: bold; font-size: 16px;">
+              {{phone}}
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 0; font-weight: bold; color: #333;">Email:</td>
+          <td style="padding: 8px 0;">
+            <a href="mailto:{{email}}" style="color: #0066cc; text-decoration: none; font-weight: bold;">{{email}}</a>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <!-- Message -->
+    <div style="background: #ffffff; border: 2px solid #f4d80c; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+      <h3 style="margin: 0 0 15px 0; color: #333333; font-size: 16px; font-weight: bold;">Správa:</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #333333;">{{message}}</p>
+    </div>
+    
+    <!-- Action Buttons -->
+    <div style="text-align: center; margin: 25px 0;">
+      <a href="mailto:{{email}}" style="background: #f4d80c; color: #000000; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; margin-right: 10px; display: inline-block;">
+        Odpovedať emailom
+      </a>
+      <a href="tel:{{phone}}" style="background: #ffffff; color: #333333; text-decoration: none; padding: 12px 24px; border-radius: 6px; font-weight: bold; border: 2px solid #f4d80c; display: inline-block;">
+        Zavolať
+      </a>
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <div style="background: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e9ecef;">
+    <p style="margin: 0; font-size: 13px; color: #666666;">
+      Automatická správa z <a href="https://www.sofoservis.sk" style="color: #f4d80c; text-decoration: none;">www.sofoservis.sk</a>
+    </p>
+  </div>
+  
+</div>
