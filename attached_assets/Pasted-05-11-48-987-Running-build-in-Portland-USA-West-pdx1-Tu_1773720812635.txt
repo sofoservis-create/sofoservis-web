@@ -1,0 +1,192 @@
+05:11:48.987 Running build in Portland, USA (West) – pdx1 (Turbo Build Machine)
+05:11:48.989 Build machine configuration: 30 cores, 60 GB
+05:11:49.080 Cloning github.com/sofoservis-create/sofoservis-web (Branch: main, Commit: 983aff7)
+05:11:57.311 Cloning completed: 8.231s
+05:11:57.392 Restored build cache from previous deployment (9qkVNX6tJBA9VJeejgMucudjBpBR)
+05:11:57.616 Running "vercel build"
+05:11:58.071 Vercel CLI 50.32.4
+05:11:58.326 Installing dependencies...
+05:11:59.283 
+05:11:59.284 up to date in 762ms
+05:11:59.284 
+05:11:59.284 147 packages are looking for funding
+05:11:59.284   run `npm fund` for details
+05:11:59.311 Detected Next.js version: 15.1.9
+05:11:59.311 Running "npm run build"
+05:11:59.392 
+05:11:59.392 > sofoservis@0.1.0 build
+05:11:59.392 > next build
+05:11:59.392 
+05:12:00.112    ▲ Next.js 15.1.9
+05:12:00.113 
+05:12:00.131    Creating an optimized production build ...
+05:12:07.896  ✓ Compiled successfully
+05:12:07.897    Linting and checking validity of types ...
+05:12:10.788 
+05:12:10.789 ./src/components/forms/QuickContactForm.tsx
+05:12:10.789 457:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+05:12:10.789 
+05:12:10.789 ./src/components/layout/Footer.tsx
+05:12:10.789 144:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+05:12:10.789 285:15  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+05:12:10.789 
+05:12:10.789 ./src/components/widgets/ReviewCarousel.tsx
+05:12:10.789 77:11  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+05:12:10.790 
+05:12:10.790 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+05:12:12.162    Collecting page data ...
+05:12:14.855    Generating static pages (0/129) ...
+05:12:15.636    Generating static pages (32/129) 
+05:12:15.636    Generating static pages (64/129) 
+05:12:15.637    Generating static pages (96/129) 
+05:12:15.894  ✓ Generating static pages (129/129)
+05:12:16.352    Finalizing page optimization ...
+05:12:16.352    Collecting build traces ...
+05:12:20.260 
+05:12:20.271 Route (app)                                                       Size     First Load JS
+05:12:20.271 ┌ ○ /                                                             2.71 kB         139 kB
+05:12:20.271 ├ ○ /_not-found                                                   160 B           106 kB
+05:12:20.271 ├ ○ /api/reviews                                                  160 B           106 kB
+05:12:20.271 ├ ƒ /api/trello                                                   160 B           106 kB
+05:12:20.271 ├ ○ /buracie-demolacne-prace                                      2.87 kB         139 kB
+05:12:20.271 ├ ○ /buracie-demolacne-prace/bratislava                           2.87 kB         139 kB
+05:12:20.271 ├ ○ /buracie-demolacne-prace/nitra                                2.87 kB         139 kB
+05:12:20.272 ├ ○ /buracie-demolacne-prace/pezinok                              2.71 kB         139 kB
+05:12:20.272 ├ ○ /buracie-demolacne-prace/trnava                               2.71 kB         139 kB
+05:12:20.272 ├ ○ /buranie-demolacia-domov-bytov                                2.71 kB         139 kB
+05:12:20.272 ├ ○ /buranie-stien-priecok                                        2.71 kB         139 kB
+05:12:20.272 ├ ○ /cennik                                                       2.6 kB          136 kB
+05:12:20.272 ├ ○ /cistenie-vypratavanie-pozemkov-nehnutelnosti                 2.71 kB         139 kB
+05:12:20.272 ├ ○ /editor                                                       11.2 kB         147 kB
+05:12:20.272 ├ ○ /en                                                           2.87 kB         139 kB
+05:12:20.272 ├ ○ /en/apartment-moving                                          2.87 kB         139 kB
+05:12:20.272 ├ ○ /en/basement-clearance-bratislava                             2.87 kB         139 kB
+05:12:20.272 ├ ○ /en/basement-garage-clearance                                 2.71 kB         139 kB
+05:12:20.272 ├ ○ /en/basement-garage-junk-removal                              2.71 kB         139 kB
+05:12:20.272 ├ ○ /en/construction-waste-removal                                2.71 kB         139 kB
+05:12:20.272 ├ ○ /en/construction-waste-removal-bratislava                     2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/construction-waste-removal-galanta                        2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/construction-waste-removal-hlohovec                       2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/construction-waste-removal-nitra                          2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/construction-waste-removal-senec                          2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/construction-waste-removal-senica                         2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/construction-waste-removal-trnava                         2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/contact                                                   145 B           130 kB
+05:12:20.273 ├ ○ /en/cookie-policy                                             160 B           106 kB
+05:12:20.273 ├ ○ /en/demolition-bratislava                                     2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/demolition-nitra                                          2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/demolition-pezinok                                        2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/demolition-services                                       2.71 kB         139 kB
+05:12:20.273 ├ ○ /en/demolition-trnava                                         2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/furniture-assembly                                        2.71 kB         139 kB
+05:12:20.273 ├ ○ /en/furniture-assembly-bratislava                             2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/furniture-moving-removal                                  2.71 kB         139 kB
+05:12:20.273 ├ ○ /en/furniture-removal                                         2.71 kB         139 kB
+05:12:20.273 ├ ○ /en/handyman-bratislava                                       2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/handyman-galanta                                          2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/handyman-levice                                           2.87 kB         139 kB
+05:12:20.273 ├ ○ /en/handyman-nitra                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/handyman-piestany                                         2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/handyman-sala                                             2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/handyman-services                                         2.71 kB         139 kB
+05:12:20.274 ├ ○ /en/handyman-trnava                                           2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/hazardous-waste-disposal                                  2.71 kB         139 kB
+05:12:20.274 ├ ○ /en/hazardous-waste-removal                                   2.71 kB         139 kB
+05:12:20.274 ├ ○ /en/home-clearance                                            2.71 kB         139 kB
+05:12:20.274 ├ ○ /en/home-clearance-bratislava                                 2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/home-junk-removal                                         2.71 kB         139 kB
+05:12:20.274 ├ ○ /en/international-moving-services                             2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/kitchen-installation                                      2.71 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-bratislava                                         2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-galanta                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-heavy-loads                                        2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-hlohovec                                           2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-komarno                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-levice                                             2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-malacky                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-nitra                                              2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-pezinok                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-piestany                                           2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-sala                                               2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-samorin                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-senec                                              2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-senica                                             2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-stupava                                            2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/moving-trnava                                             2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/office-moving                                             2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/old-furniture-removal-bratislava                          2.87 kB         139 kB
+05:12:20.274 ├ ○ /en/pricing                                                   2.6 kB          136 kB
+05:12:20.275 ├ ○ /en/privacy-policy                                            160 B           106 kB
+05:12:20.275 ├ ○ /en/property-land-clearance                                   2.71 kB         139 kB
+05:12:20.275 ├ ○ /en/property-land-junk-removal                                2.71 kB         139 kB
+05:12:20.275 ├ ○ /en/reviews                                                   709 B           137 kB
+05:12:20.275 ├ ○ /en/wall-demolition                                           2.71 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster                                      2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/bratislava                           2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/galanta                              2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/levice                               2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/nitra                                2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/piestany                             2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/sala                                 2.87 kB         139 kB
+05:12:20.275 ├ ○ /hodinovy-manzel-majster/trnava                               2.87 kB         139 kB
+05:12:20.275 ├ ○ /kontakt                                                      145 B           130 kB
+05:12:20.275 ├ ○ /likvidacia-nebezpecneho-odpadu-starych-spotrebicov           2.71 kB         139 kB
+05:12:20.275 ├ ○ /medzinarodne-stahovanie                                      2.71 kB         139 kB
+05:12:20.275 ├ ○ /montaz-kuchyne                                               2.71 kB         139 kB
+05:12:20.275 ├ ○ /montaz-nabytku                                               2.71 kB         139 kB
+05:12:20.275 ├ ○ /montaz-nabytku/bratislava                                    2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu                           2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/bratislava                2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/galanta                   2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/hlohovec                  2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/nitra                     2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/senec                     2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/senica                    2.87 kB         139 kB
+05:12:20.275 ├ ○ /odvoz-likvidacia-stavebneho-odpadu/trnava                    2.87 kB         139 kB
+05:12:20.275 ├ ○ /referencie                                                   709 B           137 kB
+05:12:20.275 ├ ○ /stahovanie-bratislava                                        2.87 kB         139 kB
+05:12:20.275 ├ ○ /stahovanie-bytov-domov                                       2.87 kB         139 kB
+05:12:20.275 ├ ○ /stahovanie-galanta                                           2.87 kB         139 kB
+05:12:20.275 ├ ○ /stahovanie-hlohovec                                          2.87 kB         139 kB
+05:12:20.275 ├ ○ /stahovanie-kancelarii-firiem                                 2.71 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-komarno                                           2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-levice                                            2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-malacky                                           2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-nitra                                             2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-pezinok                                           2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-piestany                                          2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-preprava-nabytku                                  2.71 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-sala                                              2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-samorin                                           2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-senec                                             2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-senica                                            2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-stupava                                           2.87 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-tazkych-bremien                                   2.71 kB         139 kB
+05:12:20.276 ├ ○ /stahovanie-trnava                                            2.87 kB         139 kB
+05:12:20.276 ├ ○ /vypratavanie-bytov-domov                                     2.71 kB         139 kB
+05:12:20.276 ├ ○ /vypratavanie-bytov-domov/bratislava                          2.87 kB         139 kB
+05:12:20.276 ├ ○ /vypratavanie-odvoz-stareho-nabytku                           2.87 kB         139 kB
+05:12:20.276 ├ ○ /vypratavanie-odvoz-stareho-nabytku/bratislava                2.87 kB         139 kB
+05:12:20.276 ├ ○ /vypratavanie-pivnic-garazi-nebytovych-priestorov             2.71 kB         139 kB
+05:12:20.276 ├ ○ /vypratavanie-pivnic-garazi-nebytovych-priestorov/bratislava  2.87 kB         139 kB
+05:12:20.276 ├ ○ /zasady-pouzivania-cookies                                    160 B           106 kB
+05:12:20.276 └ ○ /zasady-spracovania-osobnych-udajov                           160 B           106 kB
+05:12:20.276 + First Load JS shared by all                                     106 kB
+05:12:20.276   ├ chunks/1517-feb784bd08eefb3f.js                               50.7 kB
+05:12:20.276   ├ chunks/4bd1b696-ba6bb1d02aac08c5.js                           52.9 kB
+05:12:20.276   └ other shared chunks (total)                                   1.91 kB
+05:12:20.276 
+05:12:20.276 
+05:12:20.276 ○  (Static)   prerendered as static content
+05:12:20.276 ƒ  (Dynamic)  server-rendered on demand
+05:12:20.277 
+05:12:20.528 Traced Next.js server files in: 77.493ms
+05:12:20.707 Created all serverless functions in: 178.129ms
+05:12:20.732 Collected static files (public/, static/, .next/static): 16.87ms
+05:12:21.004 Build Completed in /vercel/output [23s]
+05:12:21.221 Deploying outputs...
+05:12:27.776 Deployment completed
+05:12:28.621 Creating build cache...
+05:12:31.442 Created build cache: 3s
+05:12:31.443 Uploading build cache [163.86 MB]
+05:12:34.950 Build cache uploaded: 3.508s

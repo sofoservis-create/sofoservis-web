@@ -1,0 +1,201 @@
+import React from "react";
+  import Hero from "@/components/sections/Hero";
+  import Clients from "@/components/sections/Clients";
+  import Features from "@/components/sections/Features";
+  import LocationMap from "@/components/sections/LocationMap";
+  import FAQ from "@/components/sections/FAQ";
+  import CTA from "@/components/sections/CTA";
+  import Reviews from "@/components/sections/Reviews";
+  import GoogleReviews from "@/components/widgets/GoogleReviews";
+  import InstagramFeed from "@/components/widgets/InstagramFeed";
+  import ServicePricing from "@/components/sections/ServicePricing";
+import TrustBadges from "@/components/sections/TrustBadges";
+import ContactFormSection from "@/components/sections/ContactFormSection";
+  import RelatedServices from "@/components/sections/RelatedServices";
+  import FAQJsonLd from "@/components/seo/FAQJsonLd";
+
+  export const metadata = {
+    title: "Vypratávanie Malacky - byty, pivnice, garáže | Sofoservis",
+    description:
+      "Profesionálne vypratávanie bytov, pivníc a garáží v Malackách od 25€/hod. Jednoizbový byt od 200€. Odvoz odpadu zabezpečíme. Obhliadka zadarmo.",
+    alternates: {
+      canonical: "https://www.sofoservis.sk/vypratavanie-malacky",
+    },
+    keywords: "vypratavanie malacky, vypratanie bytu malacky, vypratavanie pivnic malacky, odvoz nabytku malacky, vypratavanie garaz malacky",
+    openGraph: {
+      title: "Vypratávanie Malacky - byty, pivnice, garáže | Sofoservis",
+      description:
+        "Profesionálne vypratávanie bytov, pivníc a garáží v Malackách od 25€/hod. Jednoizbový byt od 200€. Odvoz odpadu zabezpečíme.",
+      url: "https://www.sofoservis.sk/vypratavanie-malacky",
+      siteName: "Sofoservis",
+      images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
+      locale: "sk_SK",
+      type: "website",
+    },
+  };
+
+  export default function VypratavanieMalackyPage() {
+    const heroData = {
+      title: "Vypratávanie Malacky: Rýchlo a spoľahlivo",
+      description:
+        "Vypratávame byty, pivnice, kobky a garáže v celých Malackách od 25€/hod. Odvoz a likvidácia starého nábytku, spotrebičov aj odpadu — všetko v jednej službe. Obhliadka zadarmo.",
+      formTitle: "Vypratávanie v Malackách — bezplatná ponuka",
+      formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+      backgroundImage: "/images/stahovanie_gauc.jpg",
+    };
+
+    const featuresData = {
+      title: "Komplexné vypratávacie služby v Malackách",
+      description:
+        "Postaráme sa o kompletné vypratávanie vašich priestorov v Malackách — od kobky až po celý byt.",
+      features: [
+        {
+          image: "/icons/broom_icon.svg",
+          title: "Vypratávanie bytov v Malackách",
+          description:
+            "Kompletné vypratanie jednoizbového, dvojizbového alebo väčšieho bytu v Malackách. Jednoizbový byt od 200€, dvojizbový od 300€. Odvoz všetkého nepotrebného zabezpečíme.",
+          link: "/vypratavanie-bytov-domov",
+        },
+        {
+          image: "/icons/house_icon.svg",
+          title: "Vypratávanie pivníc a garáží",
+          description:
+            "Vypratávame pivnice, kobky a garáže v Malackách. Klasická kobka od 60€, garáž od 80€. Naložíme a odvezieme všetko, čo nepotrebujete.",
+          link: "/vypratavanie-pivnic-garazi-nebytovych-priestorov",
+        },
+        {
+          image: "/icons/recycle_icon.svg",
+          title: "Odvoz starého nábytku a spotrebičov",
+          description:
+            "Odvoz a ekologická likvidácia starých sedačiek, skríň, práčok a ďalších spotrebičov v Malackách. Nezostane po vás nič nepotrebné — všetko odvezieme a správne zlikvidujeme.",
+          link: "/vypratavanie-odvoz-stareho-nabytku",
+        },
+        {
+          image: "/icons/truck_icon.svg",
+          title: "Odvoz stavebného odpadu",
+          description:
+            "Po rekonštrukcii bytu v Malackách rýchlo odvezieme suť, staré podlahy a stavebný materiál. Pristavíme kontajner alebo odvezieme priamo dodávkou.",
+          link: "/odvoz-likvidacia-stavebneho-odpadu",
+        },
+        {
+          image: "/icons/container_icon.svg",
+          title: "Vypratávanie kancelárií a priestorov",
+          description:
+            "Vypratávame aj nebytové priestory, kancelárie a sklady v Malackách. Rýchlo, diskrétne a bez zbytočného odpadu. Cena dohodou podľa rozsahu.",
+          link: "/cistenie-vypratavanie-pozemkov-nehnutelnosti",
+        },
+        {
+          image: "/icons/briefcase_icon.svg",
+          title: "Sťahovanie po vypratávaní",
+          description:
+            "Potrebujete po vypratávaní aj presunúť veci na nové miesto? Kombinujeme vypratávanie so sťahovaním v jednej návšteve. Ušetríte čas aj peniaze.",
+          link: "/stahovanie-malacky",
+        },
+      ],
+    };
+
+    const mapData = {
+      title: "Vypratávame po celom meste Malacky a okolí",
+      description:
+        "Pokrývame Malacky a okolité obce. Rýchly príjazd, spoľahlivý tím.",
+      locations: ["Malacky","Stupava","Záhorská Bystrica","Lozorno","Plavecký Štvrtok","Gajary","Borský Mikuláš","Sološnica","Jakubov","Kostolište","Rohožník","Zohor"],
+      additionalText: "Senica, Bratislava, Devínska Nová Ves a celé Záhorie.",
+    };
+
+    const faqData = {
+      title: "Často kladené otázky — vypratávanie v Malackách",
+      items: [
+        {
+          question: "Koľko stojí vypratávanie bytu v Malackách?",
+          answer:
+            "Jednoizbový byt v Malackách vypratáme od 200€, dvojizbový od 300€. Cena závisí od množstva vecí a poschodia bez výťahu. Obhliadka a cenová ponuka sú zadarmo.",
+        },
+        {
+          question: "Koľko stojí vypratávanie pivnice alebo garáže v Malackách?",
+          answer:
+            "Bežná kobka alebo malá pivnica od 60€. Garáž vypratáme od 80€. Cena zahŕňa naloženie a odvoz celého obsahu.",
+        },
+        {
+          question: "Odvezete aj starý nábytok a spotrebiče v Malackách?",
+          answer:
+            "Áno, odvoz starého nábytku, sedačiek, práčok, chladničiek a iných spotrebičov je súčasťou našej služby. Likvidujeme ich ekologicky a v súlade so zákonom.",
+        },
+        {
+          question: "Ako rýchlo môžete prísť vypratať v Malackách?",
+          answer:
+            "Väčšinou sme schopní prísť do 2–5 pracovných dní. V niektorých prípadoch vieme prísť aj skôr. Kontaktujte nás a dohodnem termín podľa vašich potrieb.",
+        },
+        {
+          question: "Vypratávate aj byty bez výťahu v Malackách?",
+          answer:
+            "Áno, bežne vypratávame byty na vyšších poschodiach bez výťahu. Za každé poschodie bez výťahu účtujeme 15€ navyše. Máme skúsený tím na schodiškovú vynášku.",
+        },
+        {
+          question: "Môžem objednať vypratávanie v Malackách aj so sťahovaním?",
+          answer:
+            "Samozrejme. Často kombinujeme vypratávanie bytu so sťahovaním nábytku na nové miesto — všetko zvládneme v jednej návšteve za zvýhodnenú cenu.",
+        },
+      ],
+    };
+
+    return (
+      <main className="bg-white">
+        <Hero
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          backgroundImage={heroData.backgroundImage}
+                benefits={["Poistenie nábytku zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
+      />
+        <div>
+          <Clients />
+        </div>
+        <div>
+          <GoogleReviews showCarousel={true} />
+        </div>
+        <div>
+          <Features
+            title={featuresData.title}
+            description={featuresData.description}
+            features={featuresData.features}
+          />
+        </div>
+        <div>
+          <InstagramFeed />
+        </div>
+        <div>
+          <LocationMap
+            title={mapData.title}
+            description={mapData.description}
+            locations={mapData.locations}
+            additionalText={mapData.additionalText}
+          />
+        </div>
+        <div>
+          <Reviews />
+        </div>
+        <div>
+          <FAQ title={faqData.title} items={faqData.items} />
+        </div>
+        <div>
+          <CTA />
+        </div>
+        <ServicePricing filter={["vypratavanie", "stahovanie", "buracie-prace"]} />
+      <TrustBadges />
+      <ContactFormSection />
+
+        <RelatedServices
+          title="Súvisiace služby"
+          services={[
+            { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie bytu alebo domu od 200€.", href: "/vypratavanie-bytov-domov", icon: "/icons/broom_icon.svg" },
+            { title: "Vypratávanie pivníc a garáží", description: "Rýchle vypratanie pivníc, kobiek a garáží od 60€.", href: "/vypratavanie-pivnic-garazi-nebytovych-priestorov", icon: "/icons/house_icon.svg" },
+            { title: "Odvoz starého nábytku", description: "Odvoz a ekologická likvidácia starého nábytku.", href: "/vypratavanie-odvoz-stareho-nabytku", icon: "/icons/recycle_icon.svg" },
+            { title: "Sťahovanie Malacky", description: "Profesionálne sťahovanie v Malackách od 25€/hod.", href: "/stahovanie-malacky", icon: "/icons/truck_icon.svg" },
+          ]}
+        />
+        <FAQJsonLd items={faqData.items} />
+      </main>
+    );
+  }
+  

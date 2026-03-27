@@ -1,0 +1,45 @@
+Štrukturované dáta	Štruktúrované dáta sú kódy, ktoré sú implementované na webovú stránku, aby Google lepšie pochopil, čo sa na webovej stránke nachádza (napríklad obrázok, autor článku, dĺžka článku, miesto eventu atď.) Výsledkom implementovania štrukturovaných dát sú rich snippety (rozšírenia vyhľadávania, ako obrázky, doplnkové info o stránke atď), ktoré sa môžu zobraziť vo výsledoch vyhľadávania a zlepšiť CTR zo SERPu. 	Problém	"Na webovej stránke nie sú implementované štruktúrované dáta, čo je nie je dobré riešenie.
+
+Absencia štruktúrovaných dát môže negatívne ovplyvniť zobrazovanie webu vo vyhľadávačoch a jeho viditeľnosť v rámci výsledkov vyhľadávania. Ide najmä o dáta: 
+- Organization Schema: Prezentácia firmy alebo značky (názov, logo, adresa, kontaktné údaje). 
+- Website Schema: Základné informácie o webe (názov, URL, prípadne vyhľadávacie pole).
+- Breadcrumb Schema: Navigačná cesta (omrvinková navigácia) pre lepšiu orientáciu a výsledky vo vyhľadávačoch.
+- WebPage Schema: Definícia jednotlivých podstránok (napr. domovská stránka, kontaktná stránka).
+- Product Schema: Definícia služby (názov, cena, dostupnosť, popis).
+- Article Schema: V prípade zamerania sa aj na články alebo blogové príspevky (názov, autor, dátum publikácie)."	"Odporúčame vám implementovať štrukturované dáta. 
+
+V prípade záujmu vám vieme štruktúrované dáta vytvoriť a implementovať, aby váš web spĺňal aktuálne štandardy a získal lepšie SEO hodnotenie."
+
+Chyby v štrukturovanych dátach Sofoservis
+
+Chyba ktorá sa prejavuje na podstránkach: 
+https://www.sofoservis.sk/stahovanie-bytov-domov (aj všetky jednotlivé mestá)
+https://www.sofoservis.sk/stahovanie-preprava-nabytku
+https://www.sofoservis.sk/stahovanie-tazkych-bremien
+https://www.sofoservis.sk/medzinarodne-stahovanie
+https://www.sofoservis.sk/vypratavanie-bytov-domov
+https://www.sofoservis.sk/montaz-nabytku
+https://www.sofoservis.sk/hodinovy-manzel-majster
+
+Odporúčame zo štruktúrovaných dát vyhodiť celé dva typy štruktúrovaných dát: 
+
+Product - tieto dáta sa využívajú pri fyzických/digitálnych produktoch. Napríklad knihy, hry, softvér atď. Pre poskytované služby zákazníkom sa využívajú štruktúrované dáta - Service.
+CreativeWork - tieto dáta sa využívajú pre kreatívnu prácu - napríklad články, knihy, fotografie atď. 
+
+V štruktúrovaných dátach pre Service odporúčame vykonať nasledujúce zmeny: 
+
+Vyhodiť celý objekt- offers. Táto sekcia sa využíva v prípade, že existuje exaktná cena za poskytovanú službu a táto cena je jasne viditeľná na webe. V prípade vašich služieb sú ceny len “orientačné” a uvedené v príkladoch, pretože koncová cena sa môže odlišovať od viacerých faktorov 
+V sekcii - hasOfferCatalog je jedno nevalidné pole “position”, ktoré nie je podporované, preto ho odporúčame odstrániť. Taktiež odporúčame tento element premenovať z “Sťahovanie bytov a domov - funkcie” na “Služby”. Pričom jednotlivé “itemOffered” by mali reprezentovať poskytované služby, ktoré sa nachádzajú v pätičke stránky spolu s URL adresou danej služby: Príklad s jedným itemOffered, pričom odporúčame pridať aj ďalšie služby nachádzajúce sa v pätičke: 
+
+"hasOfferCatalog": {
+  "@type": "OfferCatalog",
+  "name": "Služby",
+  "itemListElement": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Sťahovanie bytov",
+        "url": "https://www.sofoservis.sk/stahovanie-bytov-domov"
+      }
+    }
