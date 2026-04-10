@@ -1,0 +1,134 @@
+
+I've finished reverting, what should I do now?
+There's a hydration mismatch. Let me read the full error to find exactly what's conflicting:
+Server is clean — GET / 200, no errors. Let me confirm visually:
+Everything is running cleanly — no errors now. The hydration warning you saw was a transient browser-side issue (likely the page had stale cached HTML from before the restart that didn't match the fresh JavaScript). After the restart it resolved itself completely.
+
+The new logo is showing correctly in the navbar, and the app is fully functional. When you're ready I can push all these changes to GitHub for deployment.
+kolko leadov chyba v mojom crm system z 20.3
+zadali formular na webe, preco ich nemam v crm ,preco si to tam neposlal?
+ano
+je nieco co by este mohlo blokovat aby vsetky presli do mojho crm ?
+Pridám ping pred odoslaním aby sa CRM server zobudil vopred je toto potrebne ?
+ale bere page url nie
+20. 03. 2026 Galat 00 421 907765779 galat.julius@gmail.com facebook cpc Website_leads-2026 vypratavanie_vsetky_priestory Lead_all-vypratávanie facebook cpc Website_leads-2026 vypratavanie_vsetky_priestory Lead_all-vypratávanie /vypratavanie-bytov-domov /vypratavanie-bytov-domov 2026-03-20 2026-03-20 V procese
+
+pozri sa na tento priklad ?
+ano
+Ak znova zlyhá — ticho zlyhá, ale formulár používateľovi stále ukáže úspech toto co znamena ?
+neni lespsie 3 pokusy ?
+ako specialista co by si navrhol ?
+ok
+deploy to github
+when i uploud figma design will you chane accordingly ? How does it work ?
+i can see the option replit chat
+did you do this ?
+
+#1 - Replace Logo Everywhere with SVG
+
+What & Why
+
+Replace the current PNG logo references in Navbar and Footer with the SVG version of the SofoServis logo. SVG scales perfectly at any size and looks crisp on all screens and devices. The SVG file is already in the project at public/images/Sofoservis_nove_logo_SVG.svg. For favicon and meta images (which require raster formats), generate optimized PNG versions from the SVG.
+
+Done looks like
+
+SVG logo appears in the Navbar (desktop and mobile) replacing the old PNG
+SVG logo appears in the Footer replacing the old PNG
+Logo has a transparent background with no white box around it
+Logo is sized correctly — not too large or too small — consistent with current appearance
+Favicon and OG/meta image assets updated to use the new logo if they currently reference the old one
+No leftover references to the old SofoServis.png or SofoServis-footer.png files
+Out of scope
+
+Redesigning or editing the logo artwork itself
+Creating new logo variants or color schemes
+Tasks
+
+Place SVG file — The SVG logo is already available at public/images/Sofoservis_nove_logo_SVG.svg. No preparation needed.
+Replace logo in Navbar and Footer — Update all references to SofoServis.png and SofoServis-footer.png in Navbar.tsx and Footer.tsx to point to Sofoservis_nove_logo_SVG.svg. Use a standard <img> tag (not Next.js <Image>) for SVG, or use Next.js <Image> with unoptimized prop, whichever fits the existing pattern. Adjust width/height props if needed.
+Update favicon and meta assets — Check if public/favicon.ico, android-chrome-192x192.png, android-chrome-512x512.png, apple-touch-icon.png, and any OG image reference the old logo, and replace them with versions derived from the new logo.
+Relevant files
+
+src/components/layout/Navbar.tsx
+src/components/layout/Footer.tsx
+public/favicon.ico
+public/android-chrome-192x192.png
+public/android-chrome-512x512.png
+public/apple-touch-icon.png
+tuto spravi si mi mi pisal ty ?
+
+Ahoj,
+
+potrebujem, aby si v Google Ads nastavil UTM parametre pre všetky kampane. Teraz keď niekto klikne na reklamu, vidíme v systéme len technický Google kód (gclid), ale nevidíme z akej kampane, reklamnej skupiny ani kľúčového slova prišiel zákazník.
+
+Treba pridať Final URL suffix na úrovni kampane (alebo účtu):
+
+utm_source=google&utm_medium=cpc&utm_campaign={campaign}&utm_content={adgroup}&utm_term={keyword}
+Toto nastaviť tu:
+Google Ads → konkrétna kampaň → Settings → Additional settings → Campaign URL options → Final URL suffix
+
+Alebo ak chceš nastaviť pre celý účet naraz:
+Google Ads → Settings (Account settings) → Account URL options → Final URL suffix
+
+Po nastavení budeme vedieť presne:
+
+z akej kampane prišiel zákazník
+z akej reklamnej skupiny
+na aké kľúčové slovo klikol
+Ďakujem
+ok toto mi odpisal ;
+je tam nastavený autotagging, čože malo by to fičať. ale pridám to aj na úroveň kampaní
+
+skontroluj to prosim
+dobre to zapisuje ked ma takto vyplnenu tabulku
+?
+su tam ale vsetky leady ?
+
+poslla si vsetko ?
+posielaju sa formalure z linku na ktory stalic vobec do trella ?
+teraz kde posielas leady aky end pont ?
+ktore stranky maju najlsoei seo a su prve vo vyhladavaoch na slova stahovanie bratislava vypratavanie bratislva
+ako ti viem dat pristup ?
+ja myhskim cudzie webe konkirencie
+chcem asi detaile pozrel seo spravil mi analyzu
+
+kazdeho jedno. tychto webov. pouzijemem to na zlepsenie mojho webu
+
+najstahovanie.sk
+foxway.sk
+mensiestahovanie.sk
+stahovanie-golem.sk
+stahovanie-emtego.sk
+stahovanie-extra.sk
+rychlastahovka.sk
+"Vypratávanie Bratislava" — top konkurenti:
+
+progo.sk
+najstahovanie.sk
+likvidacie.com
+odvoznabytku.sk
+vypratavaniebratislava.sk
+stahovanie-golem.sk
+ako by sme sa toto mohlo obyst ?Niektoré weby zablokovali crawling (cookie wall). Fetchujem ešte zvyšné:
+Time worked
+1 minute
+Work done
+1 action
+Agent Usage
+$0.33
+ako seo optimalizacia specialista co by si mi odporocil? nainstaluje si frre e trail sem rush a dam ti pristup ?
+Nemôžem sa prihlásiť do SEMrush — nemám prehliadač. Ale keby si mi dal API kľúč zo SEMrush, mohol by som priamo volať ich API a stiahnuť dáta automaticky.
+
+Ale úprimne — ako SEO špecialista by som ti povedal, že pred SEMrush treba urobiť základy. Nástroje ukážu problémy, ale nevyriešia ich. Tu je môj prioritný zoznam:
+
+Okamžitý dopad (urobiť teraz):
+
+Google Business Profile — najrýchlejšia cesta k pozíciám pre lokálne vyhľadávanie. Máš ho správne nastavený s fotkami, službami, recenziami?
+Ceny na stránkach — "Sťahovanie od X€" — toto zvyšuje CTR v Google a konverzie zároveň
+Bratislavské mestské časti — /stahovanie-bratislava rozšíriť o Petržalku, Ružinov, Staré Mesto...
+Strednodobý dopad:
+4. Viac textu na servisných stránkach — konkurenti majú 500-800 slov, treba skontrolovať čo máš ty
+
+Interné prelinkenie — stránky sa navzájom odkazujú
+Dlhodobý dopad:
+6. Backlinky — registrácie do slovenských katalógov, spolupráce

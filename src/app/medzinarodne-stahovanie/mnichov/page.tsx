@@ -1,0 +1,173 @@
+import React from "react";
+import Hero from "@/components/sections/Hero";
+import Clients from "@/components/sections/Clients";
+import Features from "@/components/sections/Features";
+import Reviews from "@/components/sections/Reviews";
+import GoogleReviews from "@/components/widgets/GoogleReviews";
+import HowItWorks from "@/components/sections/HowItWorks";
+import FAQ from "@/components/sections/FAQ";
+import FAQJsonLd from "@/components/seo/FAQJsonLd";
+import ServicePricing from "@/components/sections/ServicePricing";
+import TrustBadges from "@/components/sections/TrustBadges";
+import CTA from "@/components/sections/CTA";
+import ContactFormSection from "@/components/sections/ContactFormSection";
+import RelatedServices from "@/components/sections/RelatedServices";
+
+export const metadata = {
+  title: "Sťahovanie do Mníchova z Bratislavy | Sofoservis",
+  description:
+    "Profesionálne sťahovanie do Mníchova z Bratislavy (620 km). Skúsený tím, poistenie zahrnuté, transparentná cena. Získajte bezplatnú kalkuláciu.",
+  alternates: {
+    canonical: "https://www.sofoservis.sk/medzinarodne-stahovanie/mnichov",
+    languages: {
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/mnichov",
+      en: "https://www.sofoservis.sk/en/moving-to-munich",
+      "x-default": "https://www.sofoservis.sk/medzinarodne-stahovanie/mnichov",
+    },
+  },
+  keywords:
+    "sťahovanie do Mníchova, preprava Bratislava Mníchov, sťahovanie Mníchov, medzinárodné sťahovanie Mníchov, sťahovanie Bavorsko",
+  openGraph: {
+    title: "Sťahovanie do Mníchova z Bratislavy | Sofoservis",
+    description:
+      "Sťahovanie do Mníchova z Bratislavy — 620 km, cca 5–6 hod. jazdy. Poistenie zahrnuté, transparentná cena.",
+    url: "https://www.sofoservis.sk/medzinarodne-stahovanie/mnichov",
+    siteName: "Sofoservis",
+    images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
+    locale: "sk_SK",
+    type: "website",
+  },
+};
+
+export default function StahovanieMnichovPage() {
+  const heroData = {
+    title: "Sťahovanie do Mníchova",
+    description:
+      "Sťahujeme z Bratislavy do Mníchova a z Mníchova do Bratislavy. Vzdialenosť 620 km — cca 5–6 hodín jazdy.",
+    formTitle: "Cenová ponuka — sťahovanie Bratislava – Mníchov",
+    formSubtitle: "Vyplňte formulár pre rýchlu kalkuláciu zadarmo",
+    backgroundImage: "/images/stahovanie_gauc.jpg",
+  };
+
+  const featuresData = {
+    title: "Prečo sťahovať do Mníchova cez Sofoservis",
+    description:
+      "Mníchov — bavorská metropola a najobľúbenejšia nemecká destinácia Slovákov. Trasa overená.",
+    features: [
+      {
+        image: "/icons/house_icon.svg",
+        title: "Sťahovanie bytov do Mníchova",
+        description:
+          "Kompletné sťahovanie bytu z Bratislavy do Mníchova vrátane balenia, nakládky a vykládky.",
+        link: "/stahovanie-bytov-domov",
+      },
+      {
+        image: "/icons/briefcase_icon.svg",
+        title: "Firemné sťahovanie do Mníchova",
+        description:
+          "Presun kancelárie z Bratislavy do Mníchova s minimálnym prestojom.",
+        link: "/stahovanie-kancelarii-firiem",
+      },
+      {
+        image: "/icons/truck_icon.svg",
+        title: "Preprava nábytku do Mníchova",
+        description:
+          "Bezpečná preprava nábytku a osobných vecí na trase Bratislava – Mníchov.",
+        link: "/stahovanie-preprava-nabytku",
+      },
+      {
+        image: "/icons/globe_icon.svg",
+        title: "Celý Mníchov a Bavorsko",
+        description:
+          "Sťahujeme do všetkých mníchovanských mestských častí aj do okolia.",
+        link: "/medzinarodne-stahovanie/nemecko",
+      },
+      {
+        image: "/icons/packing_box_icon.svg",
+        title: "Balenie a materiál",
+        description:
+          "Profesionálne balenie pre bezpečnú prepravu na dlhšej trase.",
+        link: "/medzinarodne-stahovanie",
+      },
+      {
+        image: "/icons/insurance_icon.svg",
+        title: "Poistenie prepravy",
+        description:
+          "Váš majetok je poistený počas celej trasy z Bratislavy do Mníchova.",
+        link: "/medzinarodne-stahovanie",
+      },
+    ],
+  };
+
+  const faqItems = [
+    {
+      question: "Aká je vzdialenosť z Bratislavy do Mníchova?",
+      answer:
+        "Vzdialenosť z Bratislavy do Mníchova je cca 620 km. Jazdou po diaľnici A8/E52 trvá cesta asi 5–6 hodín. Celé sťahovanie zvyčajne realizujeme ako celodenné.",
+    },
+    {
+      question: "Sťahujete aj z Mníchova do Bratislavy?",
+      answer:
+        "Áno, realizujeme sťahovanie v oboch smeroch.",
+    },
+    {
+      question: "Aká je cena sťahovania z Bratislavy do Mníchova?",
+      answer:
+        "Cena závisí od objemu vecí, poschodia a doplnkových služieb. Kontaktujte nás pre bezplatnú kalkuláciu.",
+    },
+    {
+      question: "Potrebujem špeciálne dokumenty na sťahovanie do Mníchova?",
+      answer:
+        "Nemecko je v EÚ, takže colné formality sú minimálne. Stačí doklad totožnosti a inventárny zoznam vecí.",
+    },
+    {
+      question: "Sťahujete aj do okolia Mníchova — napríklad do Augsbrugu?",
+      answer:
+        "Áno, sťahujeme do celého Bavorska — Mníchov, Augsburg, Ingolstadt, Regensburg a ďalšie mestá.",
+    },
+  ];
+
+  return (
+    <main className="bg-white">
+      <Hero
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        backgroundImage={heroData.backgroundImage}
+        benefits={["Bratislava – Mníchov 620 km / 5–6 hod.", "Poistenie prepravy zahrnuté", "Transparentná cena vopred"]}
+      />
+      <div><Clients /></div>
+      <div><GoogleReviews /></div>
+      <HowItWorks />
+      <ServicePricing filter={["medzinarodne-stahovanie", "stahovanie"]} />
+      <div><Reviews showHeadline={true} /></div>
+      <div>
+        <Features
+          title={featuresData.title}
+          description={featuresData.description}
+          features={featuresData.features}
+        />
+      </div>
+      <div>
+        <FAQ
+          title="Často kladené otázky — sťahovanie do Mníchova"
+          items={faqItems}
+        />
+      </div>
+      <FAQJsonLd items={faqItems} />
+      <div><CTA /></div>
+      <TrustBadges />
+      <ContactFormSection />
+      <RelatedServices
+        title="Súvisiace služby"
+        services={[
+          { title: "Sťahovanie do Nemecka", description: "Sťahovanie do celého Nemecka.", href: "/medzinarodne-stahovanie/nemecko", icon: "/icons/globe_icon.svg" },
+          { title: "Sťahovanie do Berlína", description: "Preprava do Berlína.", href: "/medzinarodne-stahovanie/berlin", icon: "/icons/globe_icon.svg" },
+          { title: "Medzinárodné sťahovanie", description: "Sťahovanie do celej Európy.", href: "/medzinarodne-stahovanie", icon: "/icons/globe_icon.svg" },
+          { title: "Sťahovanie bytov a domov", description: "Spoľahlivé sťahovanie pre domácnosti.", href: "/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
+        ]}
+      />
+    </main>
+  );
+}

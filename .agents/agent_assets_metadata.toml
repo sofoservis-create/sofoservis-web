@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "vvHov-deasuv-oeJ2Ngo9"
+uri = "file://public/images/mascot-clean.png"
+type = "image"
+title = "mascot background removed"

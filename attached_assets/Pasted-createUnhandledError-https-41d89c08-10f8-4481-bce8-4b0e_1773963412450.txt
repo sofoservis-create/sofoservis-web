@@ -1,0 +1,14 @@
+createUnhandledError@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_client_523921._.js:689:58
+handleClientError@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_client_523921._.js:856:56
+error@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_client_523921._.js:991:56
+@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/__replco/static/devtools/injected.js:37:32
+emitPendingHydrationWarnings@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:2768:108
+completeWork@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7238:130
+runWithFiberInDEV@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:631:28
+completeUnitOfWork@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:8020:40
+performUnitOfWork@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7957:46
+workLoopConcurrent@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7951:75
+renderRootConcurrent@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7933:89
+performWorkOnRoot@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:7565:195
+performWorkOnRootViaSchedulerTask@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js:8394:26
+performWorkUntilDeadline@https://41d89c08-10f8-4481-bce8-4b0e7ea465c6-00-2eo998mqvhv89.kirk.replit.dev/_next/static/chunks/node_modules_next_dist_compiled_107ce8._.js:2353:72

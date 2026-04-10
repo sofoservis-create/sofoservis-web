@@ -1,0 +1,48 @@
+ok uporav teraz spacing medzi sekciami kde si pridal tuto novu sekciu
+tato nova sekcia je co ? to je koli tomu aby sme mali tyvh viac slov ?
+section
+vieme to zablia ako sucast FAQ ?
+
+ako posledna drop dow moznost ktora sa bude volat ciac otazok alebo take nieco a ptotom sa rozbali cela tato sekcia priamo vo faq
+ok
+je vsetko aj v english ? su vsetky zmeny aj po anglicky ?
+ok co z tohto neni :
+sekcia suviase sluzby nie ta ista ako komplexne sluzby stahovanie bytov a domov ?
+div
+ok vies upravit suvisiace sluzby podla icons z /brand ?
+ok
+Now I'll update all 7 pages in parallel:
+Všetky zmeny sú hotové. Reštartujem server:
+Stránka beží, ale musím scrollnúť nižšie aby som videl sekciu Súvisiace služby. Dám screenshot priamo na kotvu:
+Vidím že ikony sa nezobrazujú správne — broken image. Overím cestu:
+Ikony sú v /icons/, nie /brand/. Opravím všetky cesty naraz:
+Funguje — ikony z brand sady sa zobrazujú správne (truck, broom, wrench, repair). Uložím a dokončím task:
+Hotovo. Sekcia "Súvisiace služby" teraz používa brand SVG ikony namiesto emoji na všetkých 7 stránkach. Ikony sú čierne (brightness filter) a zapadajú do existujúceho dizajnu.
+
+Ak chcete pushnúť na GitHub, dajte vedieť.
+Rolled back to 'Update service icons to use SVG assets instead of emojis'
+Finished
+I've finished reverting, what should I do now?
+ake icony si pouzil ? preco su cierne
+A) Odstrániť brightness-0 — ikony zostanú čierne siluety s bielym vnútrom (ich pôvodný dizajn)
+vies icony spravit vacsie ?
+cennik sluzieb nech nikde neni v suvisiacich sluzbach
+a
+if on desktop there are two rows of suvisice sluzby make the second row centered
+ok
+now allign spacing between card and boxeson all pages where there iare suvisiace sluzby
+pozri sa na vsetky tasky co su v task board a zavri tie ktore su uz hotove
+co z tohto mame co treba spravit :
+Tu je aktuálny stav:
+
+✅ Hotové:
+
+Schema.org — SEOProvider (LocalBusiness, Service, Organization) + FAQJsonLd na 12 stránkach
+SEO textové sekcie — zlúčené do FAQ na 5 stránkach
+Bratislavské mestské časti — všetkých 6 stránok existuje
+Interné prelinkenie — RelatedServices na 7 stránkach
+⚠️ Čiastočne:
+2. Ceny "od X€" — sú v meta description a v FAQ texte, ale nie viditeľne v hero sekcii na každej stránke
+
+OpenGraph — chýba na stahovanie-kancelarii-firiem, cennik a pravdepodobne ďalších SK stránkach
+Meta title/description — niektoré stránky majú generické popisky

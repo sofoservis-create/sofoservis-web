@@ -1,0 +1,63 @@
+Mám kompletný obraz. Tu je úplný zoznam všetkého čo treba urobiť, zoradený podľa dopadu:
+
+🔴 KRITICKÉ — najväčší dopad, urobiť ako prvé
+1. Schema.org štruktúrované dáta (žiadna slovenská stránka to nemá)
+
+LocalBusiness schema na všetkých stránkach (Google zobrazí hodnotenie, hodiny, kontakt priamo vo výsledkoch)
+FAQPage schema na každej stránke kde je FAQ sekcia (~15 stránok)
+Service schema na každej servisnej stránke
+2. "od X€" ceny na servisných stránkach
+
+Ceny existujú na /cennik ale NIE na servisných stránkach
+Treba pridať "Sťahovanie od 25€/hod" do hero/popis každej hlavnej stránky
+Google to zobrazí v snippete → vyšší CTR
+3. OpenGraph meta na slovenských stránkach
+
+Anglické stránky to majú, slovenské NIE
+Keď niekto zdieľa link na Facebooku/WhatsApp — žiadny obrázok, žiadny popis
+🟡 DÔLEŽITÉ — viditeľné zlepšenie do 1-3 mesiacov
+4. SEO textové sekcie (accordion) na top 5 stránkach
+
+/stahovanie-bratislava, /stahovanie-bytov-domov, /stahovanie-kancelarii-firiem, /vypratavanie-bytov-domov, /hodinovy-manzel-majster
+Každá má ~450 slov, treba ~700-800
+Accordion "Všetko o sťahovaní v Bratislave" — Google to vidí, návštevník musí kliknúť
+5. Bratislavské mestské časti — nové subpages
+
+/stahovanie-petrzalka, /stahovanie-ruzinov, /stahovanie-stare-mesto, /stahovanie-nove-mesto, /stahovanie-karlova-ves, /stahovanie-dubravka
+6 nových stránok, každá cielí iné kľúčové slovo s nízkou konkurenciou
+6. Interné prelinkenie — "Súvisiace služby"
+
+Na každej stránke pridať sekciu s odkazmi na súvisiace stránky
+Napr. na /stahovanie-bratislava → /vypratavanie-bytov-domov, /montaz-nabytku, /cennik
+Pomáha Google pochopiť štruktúru webu
+7. Meta title/description optimalizácia
+
+Niekoľko stránok má generické popisky
+Treba pridať kľúčové slová + CTA ("Zavolajte dnes", "Cenová ponuka zadarmo") do každého titulu
+🟢 DLHODOBÉ — efekt po 3-6 mesiacoch
+8. Blog / článkový obsah
+
+Napr. "Ako sa pripraviť na sťahovanie v Bratislave", "Koľko stojí sťahovanie v Bratislave 2025"
+Každý článok = nová stránka = nové kľúčové slová
+9. Referencie stránka SEO
+
+/referencie je nevyužitá príležitosť — pridať fotky pred/po, videá
+10. Anglické stránky — interné prelinkenie
+
+Anglická verzia má stránky ale navzájom sa neprepájajú
+
+❌ Chýba — podľa dopadu:
+Priorita
+Čo chýba
+🔴 Vysoká
+Vypratávanie mestské časti— žiadne stránky pre /vypratavanie-petrzalka, /vypratavanie-ruzinovatď.
+🔴 Vysoká
+Ceny "od 25€/hod" v herona ostatných servisných stránkach (stahovanie-bratislava, vypratavanie-bytov, hodinový manžel...)
+🟡 Stredná
+FAQPage schema na viacerých stránkach (len Petržalka ju má)
+🟡 Stredná
+RelatedServices na EN stránkach
+🟢 Dlhodobé
+Blog, referencie s fotkami
+
+
