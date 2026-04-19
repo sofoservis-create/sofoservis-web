@@ -512,7 +512,7 @@ export default function LabHero({
               {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
               <div
                 className="lg:hidden flex justify-center relative z-0 pointer-events-none"
-                style={{ marginTop: '16px', marginBottom: '-216px' }}
+                style={{ marginTop: '-20px', marginBottom: '-216px' }}
               >
                 <Image
                   src="/images/mascot/crossed-hands-mascot.svg"
