@@ -82,8 +82,6 @@ const DESKTOP_MASCOT_RIGHT = -8;       // px, fixed overflow past frame right
 const DESKTOP_MASCOT_TOP_SHIFT = 0;    // px, flush with badge top
 const DESKTOP_MASCOT_TOP_SHIFT_PCT = -0.07;  // shift mascot up by % of its own height
 const DESKTOP_MASCOT_RIGHT_SHIFT_PCT = 0.275; // shift mascot right by % of its own width
-const DESKTOP_GLOW_RIGHT_SHIFT = -103; // px, glow inset from frame right (legacy)
-const DESKTOP_GLOW_Y_SHIFT = -61;      // px, vertical nudge for glow (legacy)
 // Glow offsets relative to mascot center (% of glow diameter, 542px).
 const DESKTOP_GLOW_LEFT_PCT = 0.04;    // +X moves glow left
 const DESKTOP_GLOW_UP_PCT = 0.05;      // +Y moves glow up
@@ -448,7 +446,7 @@ export default function LabHero({
                 </a>
               </div>
 
-              <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
+              <div className="flex flex-row items-center justify-center gap-3">
                 <div className="flex -space-x-2 flex-shrink-0">
                   {[
                     { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka Sofoservis" },
@@ -619,8 +617,8 @@ export default function LabHero({
                   </div>
 
                   {/* Social proof + urgency */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 py-0.5">
-                    <div className="flex items-center gap-2">
+                  <div className="flex flex-col items-stretch gap-2 py-0.5">
+                    <div className="flex flex-row items-center gap-2">
                       <div className="flex -space-x-1.5 flex-shrink-0">
                         {[
                           { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka", z: "z-30" },
@@ -632,11 +630,10 @@ export default function LabHero({
                           </div>
                         ))}
                       </div>
-                      <span className="text-yellow-500 text-base leading-none">★★★★★</span>
-                      <span className="text-gray-600 text-sm">3500+ spokojných zákazníkov</span>
+                      <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
+                      <span className="flex-1 text-gray-600 text-sm" style={{ textAlign: 'center' }}>3500+ spokojných zákazníkov</span>
                     </div>
-                    <span className="hidden sm:block text-gray-300">·</span>
-                    <p className="text-sm text-primary-700 font-medium">⚡ Termíny sa obsadzujú rýchlo</p>
+                    <p className="text-sm text-primary-700 font-medium text-center">⚡ Termíny sa obsadzujú rýchlo</p>
                   </div>
 
                   {/* Consent */}
