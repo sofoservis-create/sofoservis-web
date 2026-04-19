@@ -1,3 +1,4 @@
+import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -156,19 +157,35 @@ export default function HomeEN() {
         }}
       />
 
-      <Hero
-        title="Moving, Clearance & Furniture Assembly – with the Best Rating"
-        description="Sofoservis is the best-rated company of its kind. More than 3,500 satisfied customers and hundreds of 5-star reviews."
-        benefits={["Moving", "Clearance", "Furniture Assembly"]}
-        ratingText="3500+ satisfied customers"
-        formTitle="Get a free price quote"
-        formSubtitle="Fill out the form for a no-obligation calculation"
-        badgeText="Services available 6 days a week"
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
-      />
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Moving, Clearance & Furniture Assembly – with the Best Rating"
+          description="Sofoservis is the best-rated company of its kind. More than 3,500 satisfied customers and hundreds of 5-star reviews."
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          badgeText="Services available 6 days a week"
+          lang="en"
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Moving, Clearance & Furniture Assembly – with the Best Rating"
+          description="Sofoservis is the best-rated company of its kind. More than 3,500 satisfied customers and hundreds of 5-star reviews."
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          badgeText="Services available 6 days a week"
+          phoneCTAText="Call us now"
+          phoneNumber="0951 735 130"
+          hoursText="6 days a week 8:00-17:00"
+          lang="en"
+          showMascot
+        />
+      </div>
 
       <Clients />
 

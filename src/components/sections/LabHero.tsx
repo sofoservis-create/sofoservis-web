@@ -20,7 +20,63 @@ interface LabHeroProps {
   narrowForm?: boolean;
   hideBadge?: boolean;
   badgeText?: string;
+  lang?: "sk" | "en";
 }
+
+const LAB_HERO_TEXTS = {
+  sk: {
+    successMessage: "Ďakujeme za vyplnenie formulára! Budeme vás kontaktovať čo najskôr.",
+    errorMessage: "Nastala chyba pri odoslaní. Skúste to znova alebo nás kontaktujte na telefóne.",
+    phoneLabel: "Telefónne číslo",
+    phonePlaceholder: "Zadajte telefónne číslo",
+    nameLabel: "Meno a priezvisko",
+    namePlaceholderShort: "Vaše meno",
+    namePlaceholderLong: "Zadajte meno a priezvisko",
+    emailLabel: "Email",
+    emailPlaceholderShort: "Váš email",
+    emailPlaceholderLong: "Zadajte email",
+    descriptionLabel: "Popíšte čo potrebujete",
+    descriptionPlaceholder: "Napr. sťahovanie 2-izbového bytu, vypratanie bytu...",
+    avatarFemale: "Spokojná zákazníčka",
+    avatarMale: "Spokojný zákazník",
+    ratingDefault: "3500+ spokojných zákazníkov",
+    urgency: "⚡ Termíny sa obsadzujú rýchlo",
+    consentText: "Odoslaním tohto formulára súhlasím so",
+    privacyLink: "spracovaním osobných údajov",
+    consentAnd: "a",
+    vopText: "VOP",
+    submitting: "Spracovávam...",
+    submit: "Získať kalkuláciu zadarmo",
+    privacyTitle: "Ochrana osobných údajov",
+    mascotAlt: "Sofoservis maskot",
+  },
+  en: {
+    successMessage: "Thank you for filling out the form! We will contact you as soon as possible.",
+    errorMessage: "An error occurred while sending. Please try again or contact us by phone.",
+    phoneLabel: "Phone number",
+    phonePlaceholder: "Enter your phone number",
+    nameLabel: "Full name",
+    namePlaceholderShort: "Your name",
+    namePlaceholderLong: "Enter your full name",
+    emailLabel: "Email",
+    emailPlaceholderShort: "Your email",
+    emailPlaceholderLong: "Enter your email",
+    descriptionLabel: "Describe what you need",
+    descriptionPlaceholder: "E.g. moving a 2-bedroom apartment, flat clearance...",
+    avatarFemale: "Satisfied customer",
+    avatarMale: "Satisfied customer",
+    ratingDefault: "3500+ satisfied customers",
+    urgency: "⚡ Slots are filling up fast",
+    consentText: "By submitting this form, I agree to the",
+    privacyLink: "processing of personal data",
+    consentAnd: "and",
+    vopText: "Terms of Service",
+    submitting: "Processing...",
+    submit: "Get a free quote",
+    privacyTitle: "Privacy Policy",
+    mascotAlt: "Sofoservis mascot",
+  },
+} as const;
 
 const PLACEHOLDER_MAP: Record<string, { sk: string; en: string }> = {
   "/stahovanie-bytov-domov": { sk: "Napr. sťahovanie 3-izbového bytu...", en: "E.g. moving a 3-bedroom apartment..." },
@@ -97,8 +153,11 @@ export default function LabHero({
   narrowForm = false,
   hideBadge = false,
   badgeText,
+  lang = "sk",
 }: LabHeroProps) {
   const pathname = usePathname();
+  const t = LAB_HERO_TEXTS[lang];
+  const vopHref = lang === "en" ? "/en/terms-of-service" : "/vseobecne-obchodne-podmienky";
 
   const cleanPath = (pathname || "").replace(/^\/en/, "") || "/";
   const segments = cleanPath.split("/");
@@ -130,8 +189,9 @@ export default function LabHero({
 
   let dynamicPlaceholder: string | null = null;
   if (matchedKey) {
-    const base = PLACEHOLDER_MAP[matchedKey]["sk"];
-    dynamicPlaceholder = cityName ? base.replace(/\.\.\.$/, ` v ${cityName}...`) : base;
+    const base = PLACEHOLDER_MAP[matchedKey][lang];
+    const cityConnector = lang === "en" ? `in ${cityName}` : `v ${cityName}`;
+    dynamicPlaceholder = cityName ? base.replace(/\.\.\.$/, ` ${cityConnector}...`) : base;
   }
 
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", description: "", consent: false });
@@ -292,7 +352,7 @@ export default function LabHero({
       setFormData({ name: "", phone: "", email: "", description: "", consent: false });
     } catch (error) {
       console.error("Form error:", error);
-      setSubmitError("Nastala chyba pri odoslaní. Skúste to znova alebo nás kontaktujte na telefóne.");
+      setSubmitError(t.errorMessage);
     } finally {
       setIsSubmitting(false);
     }
@@ -339,7 +399,7 @@ export default function LabHero({
             />
             <Image
               src="/images/mascot.png"
-              alt="Sofoservis maskot"
+              alt={t.mascotAlt}
               width={473}
               height={647}
               priority
@@ -388,7 +448,7 @@ export default function LabHero({
               />
               <Image
                 src="/images/mascot/crossed-hands-mascot.svg"
-                alt="Sofoservis maskot"
+                alt={t.mascotAlt}
                 width={647}
                 height={647}
                 priority
@@ -504,7 +564,7 @@ export default function LabHero({
                   />
                   <Image
                     src="/images/mascot/crossed-hands-mascot.svg"
-                    alt="Sofoservis maskot"
+                    alt={t.mascotAlt}
                     width={630}
                     height={630}
                     className="select-none relative"
@@ -520,7 +580,7 @@ export default function LabHero({
                     {formSubtitle && <p className="text-sm text-center text-primary-900/80 mt-1">{formSubtitle}</p>}
                   </div>
                   <div className="p-4">
-                    <QuickContactForm variant="primary" lang="sk" />
+                    <QuickContactForm variant="primary" lang={lang} />
                   </div>
                 </div>
               </div>
@@ -546,7 +606,7 @@ export default function LabHero({
                     <svg className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <p className="text-sm">Ďakujeme za vyplnenie formulára! Budeme vás kontaktovať čo najskôr.</p>
+                    <p className="text-sm">{t.successMessage}</p>
                   </div>
                 </div>
               ) : (
@@ -562,54 +622,54 @@ export default function LabHero({
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       <div>
                         <label className="block text-xs font-medium text-gray-700 mb-1">
-                          Telefónne číslo <span className="text-red-500">*</span>
+                          {t.phoneLabel} <span className="text-red-500">*</span>
                         </label>
-                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Zadajte telefónne číslo" className={inputClass} />
+                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder={t.phonePlaceholder} className={inputClass} />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-700 mb-1">
-                          Meno a priezvisko <span className="text-red-500">*</span>
+                          {t.nameLabel} <span className="text-red-500">*</span>
                         </label>
-                        <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Vaše meno" className={inputClass} />
+                        <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder={t.namePlaceholderShort} className={inputClass} />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-700 mb-1">
-                          Email <span className="text-red-500">*</span>
+                          {t.emailLabel} <span className="text-red-500">*</span>
                         </label>
-                        <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Váš email" className={inputClass} />
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder={t.emailPlaceholderShort} className={inputClass} />
                       </div>
                     </div>
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                       <div>
                         <label className="block text-xs font-medium text-gray-700 mb-1">
-                          Telefónne číslo <span className="text-red-500">*</span>
+                          {t.phoneLabel} <span className="text-red-500">*</span>
                         </label>
-                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="Zadajte telefónne číslo" className={inputClass} />
+                        <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder={t.phonePlaceholder} className={inputClass} />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-700 mb-1">
-                          Meno a priezvisko <span className="text-red-500">*</span>
+                          {t.nameLabel} <span className="text-red-500">*</span>
                         </label>
-                        <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Zadajte meno a priezvisko" className={inputClass} />
+                        <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder={t.namePlaceholderLong} className={inputClass} />
                       </div>
                       <div>
                         <label className="block text-xs font-medium text-gray-700 mb-1">
-                          Email <span className="text-red-500">*</span>
+                          {t.emailLabel} <span className="text-red-500">*</span>
                         </label>
-                        <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Zadajte email" className={inputClass} />
+                        <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder={t.emailPlaceholderLong} className={inputClass} />
                       </div>
                     </div>
                   )}
 
                   {/* Row 2: Description textarea */}
                   <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1">Popíšte čo potrebujete <span className="text-red-500">*</span></label>
+                    <label className="block text-xs font-medium text-gray-700 mb-1">{t.descriptionLabel} <span className="text-red-500">*</span></label>
                     <textarea
                       name="description"
                       value={formData.description}
                       onChange={handleChange}
-                      placeholder={dynamicPlaceholder ?? "Napr. sťahovanie 2-izbového bytu, vypratanie bytu..."}
+                      placeholder={dynamicPlaceholder ?? t.descriptionPlaceholder}
                       rows={narrowForm ? 2 : 3}
                       required
                       className={`${inputClass} resize-none`}
@@ -621,9 +681,9 @@ export default function LabHero({
                     <div className="flex flex-row items-center justify-center gap-2">
                       <div className="flex -space-x-1.5 flex-shrink-0">
                         {[
-                          { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka", z: "z-30" },
-                          { src: "/images/review-avatar-2.png", alt: "Spokojný zákazník", z: "z-20" },
-                          { src: "/images/review-avatar-3.png", alt: "Spokojná zákazníčka", z: "z-10" },
+                          { src: "/images/review-avatar-1.png", alt: t.avatarFemale, z: "z-30" },
+                          { src: "/images/review-avatar-2.png", alt: t.avatarMale, z: "z-20" },
+                          { src: "/images/review-avatar-3.png", alt: t.avatarFemale, z: "z-10" },
                         ].map((av, i) => (
                           <div key={i} className={`w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative ${av.z}`}>
                             <Image src={av.src} alt={av.alt} width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
@@ -631,9 +691,9 @@ export default function LabHero({
                         ))}
                       </div>
                       <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                      <span className="text-gray-600 text-sm text-center">3500+ spokojných zákazníkov</span>
+                      <span className="text-gray-600 text-sm text-center">{t.ratingDefault}</span>
                     </div>
-                    <p className="text-sm text-primary-700 font-medium text-center">⚡ Termíny sa obsadzujú rýchlo</p>
+                    <p className="text-sm text-primary-700 font-medium text-center">{t.urgency}</p>
                   </div>
 
                   {/* Consent */}
@@ -664,7 +724,7 @@ export default function LabHero({
                       }}
                       className="text-xs text-gray-600 cursor-pointer"
                     >
-                      Odoslaním tohto formulára súhlasím so{" "}
+                      {t.consentText}{" "}
                       <span
                         role="button"
                         tabIndex={0}
@@ -672,15 +732,15 @@ export default function LabHero({
                         onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setIsPrivacyDialogOpen(true); } }}
                         className="text-accent-600 hover:underline focus:outline-none"
                       >
-                        spracovaním osobných údajov
+                        {t.privacyLink}
                       </span>
-                      {" "}a{" "}
+                      {" "}{t.consentAnd}{" "}
                       <a
-                        href="/vseobecne-obchodne-podmienky"
+                        href={vopHref}
                         className="text-accent-600 hover:underline"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        VOP
+                        {t.vopText}
                       </a>
                     </label>
                   </div>
@@ -697,10 +757,10 @@ export default function LabHero({
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                         </svg>
-                        Spracovávam...
+                        {t.submitting}
                       </span>
                     ) : (
-                      "Získať kalkuláciu zadarmo"
+                      t.submit
                     )}
                   </button>
                 </form>
@@ -717,7 +777,7 @@ export default function LabHero({
       <Dialog
         isOpen={isPrivacyDialogOpen}
         onClose={() => setIsPrivacyDialogOpen(false)}
-        title="Ochrana osobných údajov"
+        title={t.privacyTitle}
         className="w-full max-w-6xl mx-4 sm:mx-6 lg:mx-8 my-8"
       >
         <div className="px-2 py-4">
