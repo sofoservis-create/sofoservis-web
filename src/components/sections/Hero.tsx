@@ -112,9 +112,9 @@ export default function Hero({
           alt={`Sťahovacie služby - ${title}`}
           fill
           priority
-          quality={75}
+          quality={90}
           sizes="100vw"
-          className="object-cover [object-position:center_10%] md:object-center"
+          className="object-cover object-bottom scale-110 [transform-origin:bottom] md:scale-100 md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-900/70 to-primary-900/65"></div>
       </div>
