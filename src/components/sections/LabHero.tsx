@@ -527,7 +527,7 @@ export default function LabHero({
                       borderRadius: '50%',
                       background: '#fdc70033',
                       filter: 'blur(100px)',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.05)}px))`,
+                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.07)}px))`,
                       zIndex: 0,
                     }}
                   />
@@ -539,7 +539,7 @@ export default function LabHero({
                       height: '423px',
                       borderRadius: '50%',
                       border: '2px solid red',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.05)}px))`,
+                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.07)}px))`,
                       zIndex: 20,
                     }}
                   />
@@ -552,7 +552,7 @@ export default function LabHero({
                       borderRadius: '50%',
                       background: 'red',
                       border: '2px solid white',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.05)}px))`,
+                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.07)}px))`,
                       zIndex: 21,
                     }}
                   />
