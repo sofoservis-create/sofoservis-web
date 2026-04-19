@@ -567,7 +567,7 @@ export default function LabHero({
                 </div>
               </div>
               {/* Mobile inline form — mirrors live Hero behaviour */}
-              <div className="block lg:hidden relative z-10" style={{ marginTop: '-104px' }}>
+              <div className="block lg:hidden relative z-10" style={{ marginTop: '-244px' }}>
                 <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
                   <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                     <h3 className="text-lg font-bold text-center">{formTitle}</h3>
