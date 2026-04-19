@@ -35,7 +35,7 @@ export default function Lab2Page() {
     <main>
       <LabHero
         narrowForm
-        badgeText="Pracujeme 6 dní do týždňa"
+        badgeText="Poskytujeme služby 6 dní v týždni"
         title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
         description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
         benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
