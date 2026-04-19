@@ -1,9 +1,19 @@
 "use client";
 // src/components/sections/Hero.tsx
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import QuickContactForm from "@/components/forms/QuickContactForm";
+
+const MASCOT_ASPECT = 1080 / 1080;
+const GLOW_HALF_WIDTH = 271;
+const DESKTOP_MASCOT_SCALE = 1.1608;
+const DESKTOP_MASCOT_RIGHT = -8;
+const DESKTOP_MASCOT_TOP_SHIFT = 0;
+const DESKTOP_MASCOT_TOP_SHIFT_PCT = -0.07;
+const DESKTOP_MASCOT_RIGHT_SHIFT_PCT = 0.275;
+const DESKTOP_GLOW_LEFT_PCT = 0.04;
+const DESKTOP_GLOW_UP_PCT = 0.05;
 
 interface HeroProps {
   /** Main heading for the hero section */
@@ -30,6 +40,8 @@ interface HeroProps {
   hoursText?: string;
   /** Language for the component - 'en' for English, 'sk' for Slovak */
   lang?: "en" | "sk";
+  /** Show the crossed-hands mascot + glow (lab2 style) */
+  showMascot?: boolean;
 }
 
 export default function Hero({
@@ -44,9 +56,41 @@ export default function Hero({
   phoneCTAText = "Zavolajte nám",
   phoneNumber,
   lang = "sk",
+  showMascot = false,
 }: HeroProps) {
   // Get current pathname to determine correct phone number
   const pathname = usePathname();
+
+  const heroFrameRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const formCardRef = useRef<HTMLDivElement>(null);
+  const [mascotDims, setMascotDims] = useState<{ top: number; height: number } | null>(null);
+
+  useEffect(() => {
+    if (!showMascot) return;
+    const compute = () => {
+      const frame = heroFrameRef.current;
+      const badge = badgeRef.current;
+      const formCard = formCardRef.current;
+      if (!frame || !badge || !formCard) return;
+      const frameRect = frame.getBoundingClientRect();
+      const badgeRect = badge.getBoundingClientRect();
+      const formCardRect = formCard.getBoundingClientRect();
+      const top = badgeRect.top - frameRect.top;
+      const height = formCardRect.bottom - badgeRect.top;
+      setMascotDims({ top, height });
+    };
+    compute();
+    const ro = new ResizeObserver(compute);
+    [heroFrameRef.current, badgeRef.current, formCardRef.current].forEach((el) => {
+      if (el) ro.observe(el);
+    });
+    window.addEventListener("resize", compute);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", compute);
+    };
+  }, [showMascot]);
 
   // Determine phone number based on pathname (same logic as Navbar)
   const currentPhoneNumber =
@@ -75,12 +119,50 @@ export default function Hero({
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-900/70 to-primary-900/65"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+      <div ref={heroFrameRef} className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 overflow-visible">
+        {showMascot && mascotDims && (() => {
+          const mascotH = mascotDims.height * DESKTOP_MASCOT_SCALE;
+          const mascotW = mascotDims.height * MASCOT_ASPECT * DESKTOP_MASCOT_SCALE;
+          const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
+          const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
+          const mascotCenterY = mascotTopPx + mascotH / 2;
+          const mascotCenterRight = mascotRightPx + mascotW / 2;
+          const glowDiameter = GLOW_HALF_WIDTH * 2;
+          const glowCenterY = mascotCenterY - glowDiameter * DESKTOP_GLOW_UP_PCT;
+          const glowCenterRight = mascotCenterRight + glowDiameter * DESKTOP_GLOW_LEFT_PCT;
+          return (
+            <>
+              <div
+                className="absolute hidden lg:block pointer-events-none"
+                style={{
+                  top: `${glowCenterY - GLOW_HALF_WIDTH}px`,
+                  right: `${glowCenterRight - GLOW_HALF_WIDTH}px`,
+                  width: '542px',
+                  height: '542px',
+                  borderRadius: '50%',
+                  background: '#fdc70033',
+                  filter: 'blur(100px)',
+                  zIndex: 4,
+                }}
+              />
+              <Image
+                src="/images/mascot/crossed-hands-mascot.svg"
+                alt="Sofoservis maskot"
+                width={Math.round(mascotW)}
+                height={Math.round(mascotH)}
+                priority
+                className="absolute hidden lg:block pointer-events-none select-none"
+                style={{ top: `${mascotTopPx}px`, right: `${mascotRightPx}px`, width: `${mascotW}px`, height: `${mascotH}px`, maxWidth: 'none', zIndex: 5 }}
+                sizes={`${Math.round(mascotW)}px`}
+              />
+            </>
+          );
+        })()}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
           {/* Hero Content - Left side */}
           <div className="w-full lg:w-3/5 order-1 lg:order-1 space-y-3 md:space-y-5 text-center lg:text-left">
             {/* Badge for attention */}
-            <div className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
+            <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
               <span className="mr-2">✓</span> {badgeText}
             </div>
 
@@ -169,6 +251,7 @@ export default function Hero({
             </div>
 
             {/* Benefits Bar - 3 benefits, above form on mobile */}
+            {benefits.length > 0 && (
             <div className="grid grid-cols-3 sm:grid-cols-none sm:flex sm:flex-wrap sm:justify-center lg:justify-start sm:items-center gap-3 sm:gap-6">
               {benefits.map((benefit, index) => (
                 <div
@@ -197,9 +280,44 @@ export default function Hero({
                 </div>
               ))}
             </div>
+            )}
+
+            {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
+            {showMascot && (
+              <div
+                className="lg:hidden relative z-0 pointer-events-none"
+                style={{ marginTop: '-6px', marginBottom: '-188px', height: '630px' }}
+              >
+                <div
+                  className="absolute"
+                  style={{ width: '630px', height: '630px', left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
+                >
+                  <div
+                    className="absolute left-1/2 top-1/2"
+                    style={{
+                      width: '423px',
+                      height: '423px',
+                      borderRadius: '50%',
+                      background: '#fdc70033',
+                      filter: 'blur(100px)',
+                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
+                      zIndex: 0,
+                    }}
+                  />
+                  <Image
+                    src="/images/mascot/crossed-hands-mascot.svg"
+                    alt="Sofoservis maskot"
+                    width={630}
+                    height={630}
+                    className="select-none relative"
+                    style={{ zIndex: 10, maxWidth: 'none', width: '630px', height: '630px' }}
+                  />
+                </div>
+              </div>
+            )}
 
             {/* Mobile Form - below benefits bar on mobile */}
-            <div className="block lg:hidden">
+            <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: '-314px' } : undefined}>
               <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
                 <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                   <h3 className="text-lg md:text-xl font-bold text-center">
@@ -220,7 +338,7 @@ export default function Hero({
 
           {/* Form Section - Right side */}
           <div className="w-full lg:w-2/5 order-2 lg:order-2 -mt-2 lg:mt-0 hidden lg:block">
-            <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
+            <div ref={formCardRef} className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
               {/* Form header with accent background */}
               <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                 <h3 className="text-lg md:text-xl font-bold text-center">
