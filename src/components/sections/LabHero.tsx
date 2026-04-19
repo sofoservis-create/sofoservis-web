@@ -315,7 +315,7 @@ export default function LabHero({
             priority
             quality={90}
             sizes="100vw"
-            className="object-cover object-top md:object-center lg:[object-position:35%_75%]"
+            className="object-cover object-top md:object-center lg:[object-position:center_75%]"
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, #000000b3 0% 50%, #000000a6 100%)' }} />
         </div>
