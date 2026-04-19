@@ -516,7 +516,7 @@ export default function LabHero({
               >
                 <div
                   className="absolute"
-                  style={{ width: '630px', height: '630px', left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
+                  style={{ width: '630px', height: '630px', left: '50%', transform: 'translateX(calc(-50% + 25px))' }}
                 >
                   {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
                   <div
