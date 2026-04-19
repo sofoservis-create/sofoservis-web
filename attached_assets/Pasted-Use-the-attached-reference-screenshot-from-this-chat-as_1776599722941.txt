@@ -1,0 +1,121 @@
+Use the **attached reference screenshot from this chat** as the visual target. I want the desktop hero mascot positioned to match that composition as closely as possible.
+
+## Objective
+
+Match the mascot placement from the reference screenshot exactly in feel and composition:
+
+* mascot sits mostly in the **right visual column**
+* mascot overlaps the form only a little
+* mascot does **not** cover the main headline block heavily
+* mascot remains slightly overflowing / integrated into the hero
+* mascot stays stable across desktop widths
+
+## Important
+
+Do **not** change the hero structure again if the mascot is already anchored to the shared centered wrapper.
+This is now a **desktop visual calibration task**, not another layout rewrite.
+
+## Reference target
+
+Use the screenshot with the headline:
+
+**„Montáž, skladanie a demontáž nábytku.“**
+
+That screenshot is the visual source of truth for mascot placement.
+
+## What to change
+
+Please tune the desktop `narrowForm` mascot and glow so the result matches the reference composition.
+
+### Required visual changes from the current state
+
+Compared to the current implementation, the mascot should be:
+
+* **more to the right**
+* **slightly higher**
+* **slightly smaller**
+
+## Suggested calibration constants
+
+Implement desktop-only tuning constants near the mascot render block, something like:
+
+```ts
+const DESKTOP_MASCOT_SCALE = 0.86;
+const DESKTOP_MASCOT_RIGHT = -8;      // px
+const DESKTOP_MASCOT_TOP_SHIFT = -28; // px
+const DESKTOP_GLOW_RIGHT_SHIFT = 24;  // px
+const DESKTOP_GLOW_Y_SHIFT = -10;     // px
+```
+
+Then use them in the desktop mascot style roughly like this:
+
+```tsx
+style={{
+  top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT}px`,
+  right: `${DESKTOP_MASCOT_RIGHT}px`,
+  height: `${mascotDims.height * DESKTOP_MASCOT_SCALE}px`,
+  width: "auto",
+  zIndex: 20,
+}}
+```
+
+And adjust the glow accordingly:
+
+```tsx
+style={{
+  top: `${mascotDims.top + (mascotDims.height * DESKTOP_MASCOT_SCALE) / 2 - 271 + DESKTOP_GLOW_Y_SHIFT}px`,
+  right: `${DESKTOP_GLOW_RIGHT_SHIFT}px`,
+  width: "542px",
+  height: "542px",
+  borderRadius: "50%",
+  background: "#fdc70033",
+  filter: "blur(100px)",
+  zIndex: 4,
+}}
+```
+
+## Composition rules to match the reference
+
+The final desktop result should follow these landmarks:
+
+1. **Helmet top** should sit clearly below the navbar, not crowding it.
+2. **Torso** should stay mostly in the right-side visual area.
+3. **Left-most visible edge of the mascot** should no longer cut deep into the headline block.
+4. The mascot may overlap the form slightly, but should not dominate the first input row.
+5. The **feet should visually sit near the hero bottom edge** the same way they do in the reference.
+6. The mascot should still feel intentionally oversized and branded, but it must not overpower the conversion elements.
+
+## Technical rules
+
+* Keep mascot anchored to the shared centered hero wrapper.
+* Keep fixed px offsets for calibration.
+* Do **not** use `%`-based `right` positioning.
+* Do **not** use `%`-based `transform` nudges.
+* Keep mobile behaviour unchanged.
+* Keep all form / CRM / EmailJS / tracking logic unchanged.
+
+## If needed
+
+If those exact constants do not visually match the reference, adjust them slightly, but stay in this range:
+
+* `scale`: `0.84` to `0.88`
+* `right`: `-20px` to `8px`
+* `top shift`: `-40px` to `-15px`
+
+## Acceptance criteria
+
+I will consider it correct when the mascot matches the attached reference screenshot in overall composition:
+
+* clearly right-weighted
+* slightly overlapping
+* headline readable
+* form still primary
+* stable on desktop widths
+
+After updating it, return the exact final constants used for:
+
+* scale
+* right offset
+* top shift
+* glow right shift
+* glow Y shift

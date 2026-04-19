@@ -1,0 +1,735 @@
+Implement the following design in React. Use the following files generated from a Figma design as a specification and guide:
+
+```src/styles/Section.module.css
+@import "https://fonts.googleapis.com/css?family=Inter:0,700;0,400;0,500&display=swap";
+.Section_8_4 {
+  width: 1920px;
+  height: 963px;
+}
+.SťahovacieSlužbySťahovanieVypratávanieAMontážNábytkuSNajlepšímHodnotením_8_5 {
+  background: #d3d3d3 url(<path-to-image>) 0 -55.799px/100% 111.589% no-repeat;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1920px;
+  height: 963px;
+  padding: 117px 314.357px 304.357px 1064px;
+  display: flex;
+  overflow: hidden;
+}
+.Ellipse_2_11_1225 {
+  filter: blur(100px);
+  background: #fdc7004d;
+  border-radius: 541.643px;
+  flex-shrink: 0;
+  width: 541.643px;
+  height: 541.643px;
+}
+.Gradient_8_6 {
+  background: linear-gradient(90deg, #000000b3 0% 50%, #000000a6 100%);
+  width: 1920px;
+  height: 963px;
+}
+.Heading_1_8_7 {
+  width: 693.09px;
+  height: 187px;
+}
+.SťahovanieVypratávanieAMontážNábytkuSNajlepšímHodnotením_8_8 {
+  color: #fff;
+  letter-spacing: -1.5px;
+  flex-direction: column;
+  justify-content: center;
+  width: 693.29px;
+  height: 187px;
+  font-family: Inter;
+  font-size: 58.7px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  display: inline-block;
+}
+.generated__8_9 {
+  color: #f4d80c;
+  letter-spacing: -1.5px;
+  flex-direction: column;
+  justify-content: center;
+  width: 15.37px;
+  height: 60px;
+  font-family: Inter;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 60px;
+  display: inline-block;
+}
+.SofoservisJeNajlepšieHodnotenáSpoločnosťSvojhoDruhuViacAko_3_500SpokojnýchZákazníkovAStovky_5HviezdičkovýchRecenzií_8_10 {
+  color: #ffffffe6;
+  flex-direction: column;
+  justify-content: center;
+  width: 572.15px;
+  height: 78px;
+  font-family: Inter;
+  font-size: 18.8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  display: inline-block;
+}
+.OverlayShadow_8_11 {
+  background: #fff0;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #ffffff4d;
+}
+.SpokojnáZákazníčkaSofoservis_8_12 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+}
+.OverlayShadow_8_13 {
+  background: #fff0;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #ffffff4d;
+}
+.SpokojnýZákazníkSofoservis_8_14 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+}
+.OverlayShadow_8_15 {
+  background: #fff0;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 0 2px #ffffff4d;
+}
+.SpokojnáZákazníčkaSofoservisRecenzie_8_16 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  overflow: hidden;
+}
+.Svg_8_17,
+.Svg_8_19,
+.Svg_8_21,
+.Svg_8_23,
+.Svg_8_25 {
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+.SpokojnýchZákazníkov_8_27 {
+  color: #fffc;
+  flex-direction: column;
+  justify-content: center;
+  width: 187.39px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 13.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+}
+.Background_8_28 {
+  background: #f4d80c;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 6px;
+  display: flex;
+}
+.Svg_8_29 {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+.Sťahovanie_8_31 {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  width: 71.62px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 13.3px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+}
+.Background_8_32 {
+  background: #f4d80c;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 6px;
+  display: flex;
+}
+.Svg_8_33 {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+.Vypratávanie_8_35 {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  width: 81.4px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 12.9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+}
+.Background_8_36 {
+  background: #f4d80c;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  padding: 6px;
+  display: flex;
+}
+.Svg_8_37 {
+  flex-shrink: 0;
+  width: 14px;
+  height: 14px;
+  overflow: hidden;
+}
+.MontážNábytku_8_39 {
+  color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  width: 99.04px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 12.8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+}
+.GeneratedImageMarch_31_2026_1_12Pm_1_8_607 {
+  aspect-ratio: 87/119;
+  background: #d3d3d3 url(<path-to-image>) -136.614px 0/164.877% 100% no-repeat;
+  width: 473px;
+  height: 647px;
+}
+.BackgroundShadow_8_40 {
+  background: #fff;
+  border-radius: 12px;
+  flex-flow: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 1216px;
+  height: 397px;
+  padding-bottom: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px #00000040;
+}
+.ParagraphBackground_8_41 {
+  background: #f4d80c;
+  flex-flow: row;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 484.27px;
+  height: 48px;
+  padding: 10px 23.8px 10px 24px;
+  display: flex;
+}
+.Heading_3DohodniteSiKalkuláciuÚplneZadarmo_8_42 {
+  color: #000;
+  flex-direction: column;
+  justify-content: center;
+  width: 333.26px;
+  height: 28px;
+  font-family: Inter;
+  font-size: 17.6px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  display: inline-block;
+}
+.VyplňteFormulárAZískajteNezáväznúPonukuEšteDnes_8_43 {
+  color: #000c;
+  flex-direction: column;
+  justify-content: center;
+  width: 350.67px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 13.2px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+}
+.Form_8_44 {
+  flex-flow: row;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  width: 1176px;
+  height: 309px;
+  display: flex;
+}
+.LabelTelefónneČíslo_8_45 {
+  color: #ef4444;
+  flex-direction: column;
+  justify-content: center;
+  width: 88.26px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 10.9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  display: inline-block;
+}
+.Input_8_46 {
+  box-sizing: border-box;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  height: 38px;
+  padding: 11px 13px;
+  display: flex;
+  overflow: hidden;
+}
+.Container_8_47 {
+  flex-shrink: 0;
+  align-items: center;
+  width: 358px;
+  height: 16px;
+  padding-right: 216.92px;
+  display: flex;
+  overflow: hidden;
+}
+.ZadajteTelefónneČíslo_8_48 {
+  color: #9ca3af;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 141.08px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 13.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.LabelMenoAPriezvisko_8_49 {
+  color: #ef4444;
+  flex-direction: column;
+  justify-content: center;
+  width: 104.92px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 11.1px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  display: inline-block;
+}
+.Input_8_50 {
+  box-sizing: border-box;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  height: 38px;
+  padding: 11px 13px;
+  display: flex;
+  overflow: hidden;
+}
+.Container_8_51 {
+  flex-shrink: 0;
+  align-items: center;
+  width: 358px;
+  height: 16px;
+  padding-right: 194.38px;
+  display: flex;
+  overflow: hidden;
+}
+.ZadajteMenoAPriezvisko_8_52 {
+  color: #9ca3af;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 163.62px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 13.2px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.LabelEmail_8_53 {
+  color: #ef4444;
+  flex-direction: column;
+  justify-content: center;
+  width: 38.22px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 11.4px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  display: inline-block;
+}
+.Input_8_54 {
+  box-sizing: border-box;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 384px;
+  height: 38px;
+  padding: 11px 13px;
+  display: flex;
+  overflow: hidden;
+}
+.Container_8_55 {
+  flex-shrink: 0;
+  align-items: center;
+  width: 358px;
+  height: 16px;
+  padding-right: 273.75px;
+  display: flex;
+  overflow: hidden;
+}
+.ZadajteEmail_8_56 {
+  color: #9ca3af;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 84.25px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 13.3px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: inline-block;
+}
+.LabelPopíšteČoPotrebujete_8_57 {
+  color: #374151;
+  flex-direction: column;
+  justify-content: center;
+  width: 120.29px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 10.9px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  display: inline-block;
+}
+.Textarea_8_58 {
+  box-sizing: border-box;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  align-items: center;
+  width: 1176px;
+  height: 78px;
+  padding: 9px 839.24px 49px 13px;
+  display: flex;
+  overflow: hidden;
+}
+.NaprSťahovanie_2IzbovéhoBytuVypratanieBytu_8_59 {
+  color: #9ca3af;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 323.76px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 13.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+}
+.generated__8_60 {
+  color: #eab308;
+  flex-direction: column;
+  justify-content: center;
+  width: 80.2px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 15.3px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  display: inline-block;
+}
+.SpokojnýchZákazníkov_8_61 {
+  color: #4b5563;
+  flex-direction: column;
+  justify-content: center;
+  width: 187.39px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 13.1px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  display: inline-block;
+}
+.OverlayShadow_8_62 {
+  background: #fff0;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #fff;
+}
+.SpokojnáZákazníčka_8_63 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.OverlayShadow_8_64 {
+  background: #fff0;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #fff;
+}
+.SpokojnýZákazník_8_65 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.OverlayShadow_8_66 {
+  background: #fff0;
+  border-radius: 9999px;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #fff;
+}
+.SpokojnáZákazníčka_8_67 {
+  background: #d3d3d3 url(<path-to-image>) 0 0/100% 100% no-repeat;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+}
+.generated__8_68 {
+  color: #d1d5db;
+  flex-direction: column;
+  justify-content: center;
+  width: 4.65px;
+  height: 24px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  display: inline-block;
+}
+.TermínySaObsadzujúRýchlo_8_69 {
+  color: #2b2b2b;
+  flex-direction: column;
+  justify-content: center;
+  width: 188.26px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 12.6px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  display: inline-block;
+}
+.Button_8_70 {
+  background: #f4d80c;
+  border-radius: 12px;
+  justify-content: center;
+  align-items: center;
+  width: 1176px;
+  height: 48px;
+  padding: 15px 0 16px;
+  display: flex;
+}
+.ZískaťKalkuláciuZadarmo_8_71 {
+  color: #000;
+  text-align: center;
+  letter-spacing: 0.4px;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+  width: 210.84px;
+  height: 17px;
+  font-family: Inter;
+  font-size: 15.6px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  display: inline-block;
+}
+.Input_8_72 {
+  box-sizing: border-box;
+  background: #fff;
+  border: 2px solid #6b7280;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+}
+.LabelOdoslanímTohtoFormuláraSúhlasímSoSpracovanímOsobnýchÚdajov_8_73 {
+  color: #c9b208;
+  flex-direction: column;
+  justify-content: center;
+  width: 375.08px;
+  height: 16px;
+  font-family: Inter;
+  font-size: 11.3px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  display: inline-block;
+}
+
+```
+
+---
+
+```src/components/assets/Svg.tsx
+import React from 'react';
+export default function Svg() {
+  return <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.6667 3.5L5.24999 9.91667L2.33333 7" stroke="black" strokeWidth="1.45833" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+;
+}
+```
+
+---
+
+```src/components/Section.tsx
+import React from 'react';
+import styles from '../styles/Section.module.css';
+import Svg from './assets/Svg';
+
+export default function Section() {
+  return (
+    <div className={styles.Section_8_4} data-figma-node="8:4">
+      <div className={styles.SťahovacieSlužbySťahovanieVypratávanieAMontážNábytkuSNajlepšímHodnotením_8_5} data-figma-node="8:5">
+        <div className={styles.Ellipse_2_11_1225} data-figma-node="11:1225"></div>
+      </div>
+      <div className={styles.Gradient_8_6} data-figma-node="8:6"></div>
+      <div className={styles.Heading_1_8_7} data-figma-node="8:7"><span className={styles.SťahovanieVypratávanieAMontážNábytkuSNajlepšímHodnotením_8_8} data-figma-node="8:8">S&#x165;ahovanie, vyprat&#xE1;vanie
+          a mont&#xE1;&#x17E; n&#xE1;bytku &#x2013; s
+          najlep&#x161;&#xED;m hodnoten&#xED;m</span><span className={styles.generated__8_9} data-figma-node="8:9">.</span></div><span className={styles.SofoservisJeNajlepšieHodnotenáSpoločnosťSvojhoDruhuViacAko_3_500SpokojnýchZákazníkovAStovky_5HviezdičkovýchRecenzií_8_10} data-figma-node="8:10">Sofoservis je najlep&#x161;ie hodnoten&#xE1; spolo&#x10D;nos&#x165; svojho druhu. Viac
+        ako 3 500 spokojn&#xFD;ch z&#xE1;kazn&#xED;kov a stovky 5-hviezdi&#x10D;kov&#xFD;ch
+        recenzi&#xED;.</span>
+      <div className={styles.OverlayShadow_8_11} data-figma-node="8:11">
+        <div className={styles.SpokojnáZákazníčkaSofoservis_8_12} data-figma-node="8:12"></div>
+      </div>
+      <div className={styles.OverlayShadow_8_13} data-figma-node="8:13">
+        <div className={styles.SpokojnýZákazníkSofoservis_8_14} data-figma-node="8:14"></div>
+      </div>
+      <div className={styles.OverlayShadow_8_15} data-figma-node="8:15">
+        <div className={styles.SpokojnáZákazníčkaSofoservisRecenzie_8_16} data-figma-node="8:16"></div>
+      </div>
+      <div className={styles.Svg_8_17}><Svg data-figma-node="8:17" /></div>
+      <div className={styles.Svg_8_19}><Svg data-figma-node="8:19" /></div>
+      <div className={styles.Svg_8_21}><Svg data-figma-node="8:21" /></div>
+      <div className={styles.Svg_8_23}><Svg data-figma-node="8:23" /></div>
+      <div className={styles.Svg_8_25}><Svg data-figma-node="8:25" /></div><span className={styles.SpokojnýchZákazníkov_8_27} data-figma-node="8:27">3500+ spokojn&#xFD;ch z&#xE1;kazn&#xED;kov</span>
+      <div className={styles.Background_8_28} data-figma-node="8:28">
+        <div className={styles.Svg_8_29}><Svg data-figma-node="8:29" /></div>
+      </div><span className={styles.Sťahovanie_8_31} data-figma-node="8:31">S&#x165;ahovanie</span>
+      <div className={styles.Background_8_32} data-figma-node="8:32">
+        <div className={styles.Svg_8_33}><Svg data-figma-node="8:33" /></div>
+      </div><span className={styles.Vypratávanie_8_35} data-figma-node="8:35">Vyprat&#xE1;vanie</span>
+      <div className={styles.Background_8_36} data-figma-node="8:36">
+        <div className={styles.Svg_8_37}><Svg data-figma-node="8:37" /></div>
+      </div><span className={styles.MontážNábytku_8_39} data-figma-node="8:39">Mont&#xE1;&#x17E; n&#xE1;bytku</span>
+      <div className={styles.GeneratedImageMarch_31_2026_1_12Pm_1_8_607} data-figma-node="8:607"></div>
+      <div className={styles.BackgroundShadow_8_40} data-figma-node="8:40">
+        <div className={styles.ParagraphBackground_8_41} data-figma-node="8:41"><span className={styles.Heading_3DohodniteSiKalkuláciuÚplneZadarmo_8_42} data-figma-node="8:42">Dohodnite si kalkul&#xE1;ciu &#xFA;plne zadarmo</span><span className={styles.VyplňteFormulárAZískajteNezáväznúPonukuEšteDnes_8_43} data-figma-node="8:43">Vypl&#x148;te formul&#xE1;r a z&#xED;skajte nez&#xE1;v&#xE4;zn&#xFA; ponuku e&#x161;te dnes</span></div>
+        <div className={styles.Form_8_44} data-figma-node="8:44"><span className={styles.LabelTelefónneČíslo_8_45} data-figma-node="8:45">Telef&#xF3;nne &#x10D;&#xED;slo *</span>
+          <div className={styles.Input_8_46} data-figma-node="8:46">
+            <div className={styles.Container_8_47} data-figma-node="8:47"><span className={styles.ZadajteTelefónneČíslo_8_48} data-figma-node="8:48">Zadajte telef&#xF3;nne &#x10D;&#xED;slo</span></div>
+          </div><span className={styles.LabelMenoAPriezvisko_8_49} data-figma-node="8:49">Meno a priezvisko *</span>
+          <div className={styles.Input_8_50} data-figma-node="8:50">
+            <div className={styles.Container_8_51} data-figma-node="8:51"><span className={styles.ZadajteMenoAPriezvisko_8_52} data-figma-node="8:52">Zadajte meno a priezvisko</span></div>
+          </div><span className={styles.LabelEmail_8_53} data-figma-node="8:53">Email *</span>
+          <div className={styles.Input_8_54} data-figma-node="8:54">
+            <div className={styles.Container_8_55} data-figma-node="8:55"><span className={styles.ZadajteEmail_8_56} data-figma-node="8:56">Zadajte email</span></div>
+          </div><span className={styles.LabelPopíšteČoPotrebujete_8_57} data-figma-node="8:57">Pop&#xED;&#x161;te &#x10D;o potrebujete</span>
+          <div className={styles.Textarea_8_58} data-figma-node="8:58"><span className={styles.NaprSťahovanie_2IzbovéhoBytuVypratanieBytu_8_59} data-figma-node="8:59">Napr. s&#x165;ahovanie 2-izbov&#xE9;ho bytu, vypratanie bytu...</span></div><span className={styles.generated__8_60} data-figma-node="8:60">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</span><span className={styles.SpokojnýchZákazníkov_8_61} data-figma-node="8:61">3500+ spokojn&#xFD;ch z&#xE1;kazn&#xED;kov</span>
+          <div className={styles.OverlayShadow_8_62} data-figma-node="8:62">
+            <div className={styles.SpokojnáZákazníčka_8_63} data-figma-node="8:63"></div>
+          </div>
+          <div className={styles.OverlayShadow_8_64} data-figma-node="8:64">
+            <div className={styles.SpokojnýZákazník_8_65} data-figma-node="8:65"></div>
+          </div>
+          <div className={styles.OverlayShadow_8_66} data-figma-node="8:66">
+            <div className={styles.SpokojnáZákazníčka_8_67} data-figma-node="8:67"></div>
+          </div><span className={styles.generated__8_68} data-figma-node="8:68">&#xB7;</span><span className={styles.TermínySaObsadzujúRýchlo_8_69} data-figma-node="8:69">&#x26A1; Term&#xED;ny sa obsadzuj&#xFA; r&#xFD;chlo</span>
+          <div className={styles.Button_8_70} data-figma-node="8:70"><span className={styles.ZískaťKalkuláciuZadarmo_8_71} data-figma-node="8:71">Z&#xED;ska&#x165; kalkul&#xE1;ciu zadarmo</span></div>
+          <div className={styles.Input_8_72} data-figma-node="8:72"></div><span className={styles.LabelOdoslanímTohtoFormuláraSúhlasímSoSpracovanímOsobnýchÚdajov_8_73} data-figma-node="8:73">Odoslan&#xED;m tohto formul&#xE1;ra s&#xFA;hlas&#xED;m so spracovan&#xED;m osobn&#xFD;ch &#xFA;dajov</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+

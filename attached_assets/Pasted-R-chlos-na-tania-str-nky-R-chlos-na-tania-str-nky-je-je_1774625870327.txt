@@ -1,0 +1,19 @@
+Rýchlosť načítania stránky	Rýchlosť načítania stránky je jedným z faktorov, ktoré Google neustále posúva do popredia. V tejto dobe je takmer nemožné sa presadiť s pomalým webom, nielen v očiach Google ale aj z pohľadu jeho návštevníkov. Mať rýchly web je základom pri optimalizácii webovej stránky. Rýchlosť načítania stránky sa nerieši už len na desktopovej verzii webu, ale aj na tej mobilnej a nakoľko Google zavádza mobile-first index. Tento update Google má za následok napríklad fakt, že dôležitosť responzivity a rýchlosti načítania mobilnej verzie prekonáva tú desktopovú.	Potenciál na zlepšenie	"V rámci analýzy rýchlosti načítavania webovej stránky v prípade informačných podstránok (https://sofo-web-eight.vercel.app/stahovanie-bratislava/) sme zistili, že desktopová aj mobilná verzia dosahuje dobré hodnotenie a v súčasnosti nevyžaduje výrazne zásahy.
+
+Avšak v prípade homepage (https://sofo-web-eight.vercel.app/) sú výsledky analýzy zhoršené a stránka sa načítava pomalšie, pretože sa na webe nachádzajú elementy, ktoré spomaľujú celkové vykreslenie. Ide o tieto prvky:
+
+Načítanie najväčšieho obsahu vo viewporte - Ide o skrátenie času, kedy sa používateľovi vykreslí najväčší prvok na obrazovke.
+
+Redukovanie načítavania JS kódov - Ide o skrátenie času stráveného analyzovaním, kompilovaním a spúšťaním JS. 
+
+Načítavanie hlavného vlákna - Je potrebné skrátiť načítavanie hlavného vlákla a JS scriptu, aby sa web rýchlejšie načítal a ukázal sa používateľovi vo viewporte.
+
+Optimalizácia third-party code - Optimalizácia načítania a spustenia kódov 3. strany ako môžu byť GA4, GTM, FB pixel a iné. Ide o optimalizovanie načítania týchto kódov tak, aby čo najmenej predlžovali primárne načítavanie stránky.  
+
+Príliš dlý DOM size - DOM size je príliš dlhý a tým pádom je celkové načítavanie web stránky časovo náročné. Odporúčali by sme sa pozrieť na tento problém a optimalizovať celý DOM strom tak, aby pracoval, čo najviac efektívne a stránka sa rýchlo načítala používateľovi. 
+
+Nepoužívané JavaScripty a CSS kódy - Na webe sa nachádzajú niektoré JS a CSS kódy, ktoré sa nachádzajú v kóde, ale reálne sa na webe nevyužívajú a spomaľujú načítavanie stránky. V tomto prípade, by ste mali odstrániť z webu všetky JS a CSS kódy, ktoré sa nevyužívajú, aby sa stránka rýchlejšie načítala. 
+
+Obrázky vo formáte ďalšej generácie - Obrázky by mali mať formát WebP, ktorý bol primárne určený pre webové prehliadače a tým pádom sú lepšie optimalizované a rýchlejšie sa načítajú. 
+
+Lazy-loading pre obrázky mimo obrazovky - Obrázky mimo obrazovky by mali mať nastavený lazy loading, aby sa tieto obrázky nenačítavali pri prvotnom vykreslení webu. Toto riešenie zabezpečí to, že obrázky sa budú načítavať až po tom, ako sa k ním používateľ dostane. "

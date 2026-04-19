@@ -1,0 +1,36 @@
+URL	Pôvodný titulok 	Nový titulok	Dĺžka v pixloch
+https://sofo-web-eight.vercel.app/	Sofoservis | Sťahovacie služby - lacné a profesionálne	Môže zostať	54
+https://sofo-web-eight.vercel.app/buranie-demolacia-domov-bytov/	Búranie a demolícia starých domov, budov, stodôl | Sofoservis	Môže zostať	61
+https://sofo-web-eight.vercel.app/buranie-stien-priecok/	Búranie nosných stien, priečok v dome a byte | Sofoservis	Môže zostať	57
+https://sofo-web-eight.vercel.app/cennik/	Sťahovacie služby cena a cenník | Sofoservis	Môže zostať	44
+https://sofo-web-eight.vercel.app/cistenie-vypratavanie-pozemkov-nehnutelnosti/	Čistenie a vypratávanie pozemku, nehnuteľnosti | Sofoservis	Môže zostať	59
+https://sofo-web-eight.vercel.app/hodinovy-manzel-majster/	Hodinový manžel a majster | Sofoservis	Hodinový manžel, majster a kutil | Sofoservis	38
+https://sofo-web-eight.vercel.app/kontakt/	Kontaktujte nás | Sofoservis - Profesionálne sťahovacie služby	Môže zostať	62
+https://sofo-web-eight.vercel.app/likvidacia-nebezpecneho-odpadu-starych-spotrebicov/	Likvidácia a odvoz nebezpečného odpadu, starých spotrebičov | Sofoservis	Likvidácia a odvoz nebezpečného odpadu | Sofoservis	72
+https://sofo-web-eight.vercel.app/medzinarodne-stahovanie/	Medzinárodné sťahovanie - rýchlo a lacno | Sofoservis	Medzinárodné sťahovanie - Česko a Rakúsko | Sofoservis	53
+https://sofo-web-eight.vercel.app/montaz-kuchyne/	Montáž a skladanie nábytku od profesionálov | Sofoservis	Montáž kuchýň a skladanie kuchyne | Sofoservis	56
+https://sofo-web-eight.vercel.app/montaz-nabytku/	Montáž, skladanie a demontáž nábytku | Sofoservis	Môže zostať	49
+https://sofo-web-eight.vercel.app/montaz-stresnych-okien/	Montáž strešných okien od profesionálov | Sofoservis	Môže zostať	52
+https://sofo-web-eight.vercel.app/montaz-vonkajsich-vnutornych-zaluzii/	Montáž vonkajších a vnútorných žalúzií, roliet | Sofoservis	Môže zostať	59
+https://sofo-web-eight.vercel.app/odvoz-likvidacia-stavebneho-odpadu/	Odvoz a likvidácia stavebného odpadu, sute | Sofoservis	Môže zostať	55
+https://sofo-web-eight.vercel.app/referencie/	Referencie našich prác | Sofoservis	Môže zostať	35
+https://sofo-web-eight.vercel.app/stahovanie-bratislava/	Sťahovanie Bratislava | Profesionálne služby | Sofoservis	Sťahovanie Bratislava - byty, domy, nábytok a kancelárie	57
+https://sofo-web-eight.vercel.app/stahovanie-bytov-domov/	Sťahovanie bytov a domov - rýchlo a lacno | Sofoservis	Môže zostať	54
+https://sofo-web-eight.vercel.app/stahovanie-galanta/	Sťahovanie Galanta | Profesionálne služby | Sofoservis	Sťahovanie Galanta - byty, domy, nábytok a kancelárie	54
+https://sofo-web-eight.vercel.app/stahovanie-hlohovec/	Sťahovanie Hlohovec | Profesionálne služby | Sofoservis	Sťahovanie Hlohovec - byty, domy, nábytok a kancelárie	55
+https://sofo-web-eight.vercel.app/stahovanie-kancelarii-firiem/	Sťahovanie kancelárií a firiem - rýchlo a lacno | Sofoservis	Môže zostať	60
+https://sofo-web-eight.vercel.app/stahovanie-komarno/	Sťahovanie Komárno | Profesionálne služby | Sofoservis	Sťahovanie Komárno - byty, domy, nábytok a kancelárie	54
+https://sofo-web-eight.vercel.app/stahovanie-levice/	Sťahovanie Levice | Profesionálne služby | Sofoservis	Sťahovanie Levice - byty, domy, nábytok a kancelárie	53
+https://sofo-web-eight.vercel.app/stahovanie-malacky/	Sťahovanie Malacky | Profesionálne služby | Sofoservis	Sťahovanie Malacky - byty, domy, nábytok a kancelárie	54
+https://sofo-web-eight.vercel.app/stahovanie-nitra/	Sťahovanie Nitra | Profesionálne služby | Sofoservis	Sťahovanie Nitra - byty, domy, nábytok a kancelárie	52
+https://sofo-web-eight.vercel.app/stahovanie-pezinok/	Sťahovanie Pezinok | Profesionálne služby | Sofoservis	Sťahovanie Pezinok - byty, domy, nábytok a kancelárie	54
+https://sofo-web-eight.vercel.app/stahovanie-piestany/	Sťahovanie Piešťany | Profesionálne služby | Sofoservis	Sťahovanie Piešťany - byty, domy, nábytok a kancelárie	55
+https://sofo-web-eight.vercel.app/stahovanie-preprava-nabytku/	Sťahovanie a preprava nábytku - rýchlo a lacno | Sofoservis	Môže zostať	59
+https://sofo-web-eight.vercel.app/stahovanie-samorin/	Sťahovanie Šamorín | Profesionálne služby | Sofoservis	Sťahovanie Šamorín - byty, domy, nábytok a kancelárie	54
+https://sofo-web-eight.vercel.app/stahovanie-senec/	Sťahovanie Senec | Profesionálne služby | Sofoservis	Sťahovanie Senec - byty, domy, nábytok a kancelárie	52
+https://sofo-web-eight.vercel.app/stahovanie-senica/	Sťahovanie Senica | Profesionálne služby | Sofoservis	Sťahovanie Senica - byty, domy, nábytok a kancelárie	53
+https://sofo-web-eight.vercel.app/stahovanie-stupava/	Sťahovanie Stupava | Profesionálne služby | Sofoservis	Sťahovanie Stupava - byty, domy, nábytok a kancelárie	54
+https://sofo-web-eight.vercel.app/stahovanie-tazkych-bremien/	Sťahovanie ťažkých bremien - rýchlo a bezpečne | Sofoservis	Sťahovanie klavírov a ťažkých bremien | Sofoservis	59
+https://sofo-web-eight.vercel.app/stahovanie-trnava/	Sťahovanie Trnava | Profesionálne služby | Sofoservis	Sťahovanie Trnava - byty, domy, nábytok a kancelárie	53
+https://sofo-web-eight.vercel.app/vypratavanie-bytov-domov/	Vypratávanie bytov a domov | Sofoservis	Môže zostať	39
+https://sofo-web-eight.vercel.app/vypratavanie-pivnic-garazi-nebytovych-priestorov/	Vypratávanie pivníc, garáži a nebytových priestorov | Sofoservis	Môže zostať	64

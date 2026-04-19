@@ -1,0 +1,177 @@
+Please refactor `src/components/sections/LabHero.tsx` to stabilize the mascot position across desktop widths **without losing the intentional slight overflow effect**.
+
+## Goal
+
+Fix the hero so the mascot:
+
+* stays visually locked to the hero content/form on all desktop sizes
+* still overlaps the form a bit
+* can still overflow slightly to the right/top in a controlled way
+* does **not** drift away on wider monitors
+
+## Root cause
+
+Right now the mascot and glow are absolutely positioned directly inside the full-width `<section>`, while the text and form live inside centered `max-w-7xl` containers. On wide screens, the content stays centered but the mascot stays pinned to the viewport edge, so the gap grows.
+
+## Required structural fix
+
+Create **one shared centered positioning wrapper** inside the hero section and make that wrapper the positioning context for:
+
+* text content
+* form card
+* mascot
+* glow
+
+The mascot must no longer be positioned relative to the full-width section.
+
+## Implementation requirements
+
+### 1. Add a shared frame ref
+
+Add:
+
+```ts
+const heroFrameRef = useRef<HTMLDivElement>(null);
+```
+
+### 2. Change the section structure
+
+Keep the section as the outer shell, but:
+
+* remove `overflow-hidden` from the `<section>` itself
+* keep the background image/overlay inside its own absolute layer with `overflow-hidden`
+* add a shared inner wrapper like:
+
+```tsx
+<div
+  ref={heroFrameRef}
+  className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-visible"
+>
+  ...
+</div>
+```
+
+Everything visual that should stay aligned together must live inside this wrapper.
+
+### 3. Move mascot + glow into the shared wrapper
+
+The mascot and glow should no longer be section-level absolute elements.
+
+Instead:
+
+* place them inside an absolute right-side visual layer inside `heroFrameRef`
+* anchor them to the shared wrapper, not the viewport
+* use the existing right-side visual column idea (`lg:w-2/5`) as the mascot rail
+* allow controlled overflow with a small fixed negative right offset, e.g. `right: -12px` to `-24px`
+
+Do **not** use:
+
+* `right: '0%'`
+* `right: '5%'`
+* `right: 'calc(15% - 35px)'`
+* percentage translate nudges
+
+### 4. Update mascot measurement logic
+
+In the `narrowForm` `compute()` effect, stop measuring relative to `sectionRef`.
+
+Change the anchor rectangle from:
+
+```ts
+const sectionRect = section.getBoundingClientRect();
+```
+
+to:
+
+```ts
+const frame = heroFrameRef.current;
+if (!frame || !badge || !formCard) return;
+
+const frameRect = frame.getBoundingClientRect();
+const badgeRect = badge.getBoundingClientRect();
+const formCardRect = formCard.getBoundingClientRect();
+
+const top = badgeRect.top - frameRect.top;
+const height = formCardRect.bottom - badgeRect.top;
+
+const consentRect = consentRef.current?.getBoundingClientRect();
+const checkboxCenterY = consentRect
+  ? consentRect.top + consentRect.height / 2 - frameRect.top
+  : top + height / 2;
+```
+
+Then keep:
+
+```ts
+setMascotDims({ top, height, checkboxCenterY });
+```
+
+### 5. Remove unstable transform logic
+
+Delete the current narrowForm mascot style:
+
+```ts
+right: '0%',
+transform: 'translate(2%, 2%)'
+```
+
+Replace it with:
+
+* `right: '-16px'` or similar fixed px offset
+* no percentage transform
+* `width: 'auto'`
+* `height: mascotDims.height`
+
+### 6. Keep the current visual behaviour
+
+Preserve:
+
+* mascot overlapping the form card
+* text staying above mascot where needed
+* glow behind mascot
+* current badge-to-form alignment logic
+* current copy, form logic, EmailJS, CRM, dialog, tracking, etc.
+
+This is a **layout refactor only**. Do not change business logic.
+
+## Suggested structure
+
+Use this pattern inside `heroFrameRef`:
+
+* text content block
+* form block
+* absolute mascot/glow layer on desktop only
+
+Rough shape:
+
+```tsx
+<section ...>
+  <div className="absolute inset-0 z-0 overflow-hidden">
+    ...background...
+  </div>
+
+  <div ref={heroFrameRef} className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-visible">
+    ...text content...
+    ...form card...
+    ...desktop mascot/glow layer absolute on right...
+  </div>
+</section>
+```
+
+## Acceptance criteria
+
+1. On desktop widths like 1280 / 1440 / 1728 / 1920, the mascot remains visually tied to the content/form instead of drifting toward the viewport edge.
+2. The mascot still overlaps the form slightly.
+3. The mascot can still bleed slightly past the right side in a controlled way.
+4. No percentage-based right positioning or percentage translate is used for mascot placement.
+5. `narrowForm` sizing still follows badge-to-form height.
+6. Existing mobile behaviour remains unchanged.
+7. No business logic regressions.
+
+## Deliverable
+
+Please update `LabHero.tsx` directly and return:
+
+* the completed refactor
+* a short summary of what changed
+* any small constants used for final mascot overflow offset
