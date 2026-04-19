@@ -442,7 +442,7 @@ export default function LabHero({
             <div className="w-full lg:w-3/5 space-y-3 md:space-y-5 text-center lg:text-left">
               {(hideBadge && !badgeText)
                 ? <div ref={badgeRef} className="h-0 w-0 overflow-hidden" aria-hidden="true" />
-                : <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1">
+                : <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
                     <span className="mr-2">✓</span> {badgeText ?? "Poskytujeme služby 6 dní v týždni"}
                   </div>
               }
