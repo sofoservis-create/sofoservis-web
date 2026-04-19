@@ -446,7 +446,7 @@ export default function LabHero({
                 </a>
               </div>
 
-              <div className="flex flex-row items-center justify-center gap-3 lg:translate-x-[33.333%]">
+              <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
                 <div className="flex -space-x-2 flex-shrink-0">
                   {[
                     { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka Sofoservis" },
