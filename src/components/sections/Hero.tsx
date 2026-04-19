@@ -245,9 +245,7 @@ export default function Hero({
                   </svg>
                 ))}
               </div>
-              <div className="text-white/80 text-sm flex-1 lg:flex-initial" style={{ textAlign: 'center' }}>
-                <span className="lg:text-left">{ratingText}</span>
-              </div>
+              <div className="text-white/80 text-sm text-center lg:text-left">{ratingText}</div>
             </div>
 
             {/* Benefits Bar - 3 benefits, above form on mobile */}

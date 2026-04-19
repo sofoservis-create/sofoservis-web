@@ -86,7 +86,7 @@ export default function ContactInfo() {
               </span>
             </h2>
 
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
               <div className="flex -space-x-2 flex-shrink-0">
                 <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white relative z-30">
                   <Image

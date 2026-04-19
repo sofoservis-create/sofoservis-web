@@ -465,7 +465,7 @@ export default function LabHero({
                     </svg>
                   ))}
                 </div>
-                <div className="flex-1 lg:flex-initial text-white/80 text-sm" style={{ textAlign: 'center' }}>{ratingText}</div>
+                <div className="text-white/80 text-sm text-center">{ratingText}</div>
               </div>
 
               <div className="hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center gap-6">
