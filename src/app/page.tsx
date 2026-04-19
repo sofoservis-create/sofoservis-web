@@ -1,4 +1,5 @@
 import LabHero from "@/components/sections/LabHero";
+import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -92,13 +93,24 @@ export default function Home() {
     <main className="bg-white">
       <FAQJsonLd items={faqItems} />
 
-      <LabHero
-        narrowForm
-        title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-        description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
-        benefits={[]}
-        ratingText="3500+ spokojných zákazníkov"
-      />
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
+          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
+          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          showMascot
+        />
+      </div>
 
       <Clients />
 
