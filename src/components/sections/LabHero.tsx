@@ -514,7 +514,7 @@ export default function LabHero({
                 className="lg:hidden flex justify-center relative z-0 pointer-events-none"
                 style={{ marginTop: '-6px', marginBottom: '-324px' }}
               >
-                <div className="relative inline-block">
+                <div className="relative inline-block flex-shrink-0" style={{ width: '1089px', height: '1089px' }}>
                   {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
                   <div
                     className="absolute left-1/2 top-1/2"
@@ -559,7 +559,7 @@ export default function LabHero({
                     width={1089}
                     height={1089}
                     className="select-none relative"
-                    style={{ zIndex: 10 }}
+                    style={{ zIndex: 10, maxWidth: 'none', width: '1089px', height: '1089px' }}
                   />
                 </div>
               </div>
