@@ -512,9 +512,9 @@ export default function LabHero({
               {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
               <div
                 className="lg:hidden flex justify-center relative z-0 pointer-events-none"
-                style={{ marginTop: '-6px', marginBottom: '-243px' }}
+                style={{ marginTop: '-6px', marginBottom: '-219px' }}
               >
-                <div className="relative inline-block flex-shrink-0" style={{ width: '817px', height: '817px' }}>
+                <div className="relative inline-block flex-shrink-0" style={{ width: '735px', height: '735px' }}>
                   {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
                   <div
                     className="absolute left-1/2 top-1/2"
@@ -556,10 +556,10 @@ export default function LabHero({
                   <Image
                     src="/images/mascot/crossed-hands-mascot.svg"
                     alt="Sofoservis maskot"
-                    width={817}
-                    height={817}
+                    width={735}
+                    height={735}
                     className="select-none relative"
-                    style={{ zIndex: 10, maxWidth: 'none', width: '817px', height: '817px' }}
+                    style={{ zIndex: 10, maxWidth: 'none', width: '735px', height: '735px' }}
                   />
                 </div>
               </div>
