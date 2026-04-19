@@ -511,10 +511,13 @@ export default function LabHero({
               </div>
               {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
               <div
-                className="lg:hidden flex justify-center relative z-0 pointer-events-none"
-                style={{ marginTop: '-6px', marginBottom: '-219px' }}
+                className="lg:hidden relative z-0 pointer-events-none"
+                style={{ marginTop: '-6px', marginBottom: '-219px', height: '735px' }}
               >
-                <div className="relative inline-block flex-shrink-0" style={{ width: '735px', height: '735px' }}>
+                <div
+                  className="absolute"
+                  style={{ width: '735px', height: '735px', left: '50%', transform: 'translateX(-50%)' }}
+                >
                   {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
                   <div
                     className="absolute left-1/2 top-1/2"
