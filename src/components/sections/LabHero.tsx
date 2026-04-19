@@ -512,11 +512,11 @@ export default function LabHero({
               {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
               <div
                 className="lg:hidden relative z-0 pointer-events-none"
-                style={{ marginTop: '-6px', marginBottom: '-208px', height: '698px' }}
+                style={{ marginTop: '-6px', marginBottom: '-198px', height: '663px' }}
               >
                 <div
                   className="absolute"
-                  style={{ width: '698px', height: '698px', left: '50%', transform: 'translateX(-50%)' }}
+                  style={{ width: '663px', height: '663px', left: '50%', transform: 'translateX(-50%)' }}
                 >
                   {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
                   <div
@@ -559,15 +559,15 @@ export default function LabHero({
                   <Image
                     src="/images/mascot/crossed-hands-mascot.svg"
                     alt="Sofoservis maskot"
-                    width={698}
-                    height={698}
+                    width={663}
+                    height={663}
                     className="select-none relative"
-                    style={{ zIndex: 10, maxWidth: 'none', width: '698px', height: '698px' }}
+                    style={{ zIndex: 10, maxWidth: 'none', width: '663px', height: '663px' }}
                   />
                 </div>
               </div>
               {/* Mobile inline form — mirrors live Hero behaviour */}
-              <div className="block lg:hidden relative z-10" style={{ marginTop: '-244px' }}>
+              <div className="block lg:hidden relative z-10" style={{ marginTop: '-314px' }}>
                 <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
                   <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                     <h3 className="text-lg font-bold text-center">{formTitle}</h3>
