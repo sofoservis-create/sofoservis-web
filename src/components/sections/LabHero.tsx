@@ -512,18 +512,59 @@ export default function LabHero({
               {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
               <div
                 className="lg:hidden flex justify-center relative z-0 pointer-events-none"
-                style={{ marginTop: '-20px', marginBottom: '-216px' }}
+                style={{ marginTop: '-6px', marginBottom: '-216px' }}
               >
-                <Image
-                  src="/images/mascot/crossed-hands-mascot.svg"
-                  alt="Sofoservis maskot"
-                  width={726}
-                  height={726}
-                  className="select-none"
-                />
+                <div className="relative inline-block">
+                  {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
+                  <div
+                    className="absolute left-1/2 top-1/2"
+                    style={{
+                      width: '542px',
+                      height: '542px',
+                      borderRadius: '50%',
+                      background: '#fdc70033',
+                      filter: 'blur(100px)',
+                      transform: `translate(calc(-50% - ${542 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${542 * DESKTOP_GLOW_UP_PCT}px))`,
+                      zIndex: 0,
+                    }}
+                  />
+                  {/* DEBUG: red outline ring matching glow position */}
+                  <div
+                    className="absolute left-1/2 top-1/2"
+                    style={{
+                      width: '542px',
+                      height: '542px',
+                      borderRadius: '50%',
+                      border: '2px solid red',
+                      transform: `translate(calc(-50% - ${542 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${542 * DESKTOP_GLOW_UP_PCT}px))`,
+                      zIndex: 20,
+                    }}
+                  />
+                  {/* DEBUG: red dot at exact glow centre */}
+                  <div
+                    className="absolute left-1/2 top-1/2"
+                    style={{
+                      width: '12px',
+                      height: '12px',
+                      borderRadius: '50%',
+                      background: 'red',
+                      border: '2px solid white',
+                      transform: `translate(calc(-50% - ${542 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${542 * DESKTOP_GLOW_UP_PCT}px))`,
+                      zIndex: 21,
+                    }}
+                  />
+                  <Image
+                    src="/images/mascot/crossed-hands-mascot.svg"
+                    alt="Sofoservis maskot"
+                    width={726}
+                    height={726}
+                    className="select-none relative"
+                    style={{ zIndex: 10 }}
+                  />
+                </div>
               </div>
               {/* Mobile inline form — mirrors live Hero behaviour */}
-              <div className="block lg:hidden relative z-10">
+              <div className="block lg:hidden relative z-10" style={{ marginTop: '36px' }}>
                 <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
                   <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                     <h3 className="text-lg font-bold text-center">{formTitle}</h3>
