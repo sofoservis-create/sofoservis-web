@@ -245,7 +245,7 @@ export default function Hero({
                   </svg>
                 ))}
               </div>
-              <div className="text-white/80 text-sm">
+              <div className="text-white/80 text-sm text-center lg:text-left">
                 {ratingText}
               </div>
             </div>
