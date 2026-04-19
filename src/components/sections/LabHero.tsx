@@ -618,7 +618,7 @@ export default function LabHero({
 
                   {/* Social proof + urgency */}
                   <div className="flex flex-col items-stretch gap-2 py-0.5">
-                    <div className="flex flex-row items-center gap-2">
+                    <div className="flex flex-row items-center justify-center gap-2">
                       <div className="flex -space-x-1.5 flex-shrink-0">
                         {[
                           { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka", z: "z-30" },
@@ -631,7 +631,7 @@ export default function LabHero({
                         ))}
                       </div>
                       <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                      <span className="flex-1 text-gray-600 text-sm" style={{ textAlign: 'center' }}>3500+ spokojných zákazníkov</span>
+                      <span className="text-gray-600 text-sm text-center">3500+ spokojných zákazníkov</span>
                     </div>
                     <p className="text-sm text-primary-700 font-medium text-center">⚡ Termíny sa obsadzujú rýchlo</p>
                   </div>

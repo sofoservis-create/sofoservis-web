@@ -789,7 +789,7 @@ export default function QuickContactForm({
             </div>
 
             {showRating && (
-              <div className="flex flex-row items-center gap-2 py-1">
+              <div className="flex flex-row items-center justify-center gap-2 py-1">
                 <div className="flex -space-x-1.5 flex-shrink-0">
                   <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-30">
                     <Image src="/images/review-avatar-1.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
@@ -802,7 +802,7 @@ export default function QuickContactForm({
                   </div>
                 </div>
                 <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                <span className="flex-1 text-gray-600 text-sm" style={{ textAlign: 'center' }}>{lang === "en" ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}</span>
+                <span className="text-gray-600 text-sm text-center">{lang === "en" ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}</span>
               </div>
             )}
 
