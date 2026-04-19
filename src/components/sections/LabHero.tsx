@@ -388,33 +388,6 @@ export default function LabHero({
                   zIndex: 4,
                 }}
               />
-              {/* DEBUG: red outline showing glow ellipse position (no blur) */}
-              <div
-                className="absolute hidden lg:block pointer-events-none"
-                style={{
-                  top: `${glowCenterY - GLOW_HALF_WIDTH}px`,
-                  right: `${glowCenterRight - GLOW_HALF_WIDTH}px`,
-                  width: '542px',
-                  height: '542px',
-                  borderRadius: '50%',
-                  border: '2px solid red',
-                  zIndex: 30,
-                }}
-              />
-              {/* DEBUG: red target dot at exact centre of glow ellipse */}
-              <div
-                className="absolute hidden lg:block pointer-events-none"
-                style={{
-                  top: `${glowCenterY - 6}px`,
-                  right: `${glowCenterRight - 6}px`,
-                  width: '12px',
-                  height: '12px',
-                  borderRadius: '50%',
-                  background: 'red',
-                  border: '2px solid white',
-                  zIndex: 31,
-                }}
-              />
               <Image
                 src="/images/mascot/crossed-hands-mascot.svg"
                 alt="Sofoservis maskot"
@@ -529,31 +502,6 @@ export default function LabHero({
                       filter: 'blur(100px)',
                       transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
                       zIndex: 0,
-                    }}
-                  />
-                  {/* DEBUG: red outline ring matching glow position */}
-                  <div
-                    className="absolute left-1/2 top-1/2"
-                    style={{
-                      width: '423px',
-                      height: '423px',
-                      borderRadius: '50%',
-                      border: '2px solid red',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
-                      zIndex: 20,
-                    }}
-                  />
-                  {/* DEBUG: red dot at exact glow centre */}
-                  <div
-                    className="absolute left-1/2 top-1/2"
-                    style={{
-                      width: '12px',
-                      height: '12px',
-                      borderRadius: '50%',
-                      background: 'red',
-                      border: '2px solid white',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
-                      zIndex: 21,
                     }}
                   />
                   <Image
