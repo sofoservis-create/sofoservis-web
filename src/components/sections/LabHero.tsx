@@ -522,12 +522,12 @@ export default function LabHero({
                   <div
                     className="absolute left-1/2 top-1/2"
                     style={{
-                      width: '542px',
-                      height: '542px',
+                      width: '325px',
+                      height: '325px',
                       borderRadius: '50%',
                       background: '#fdc70033',
                       filter: 'blur(100px)',
-                      transform: `translate(calc(-50% - ${542 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${542 * DESKTOP_GLOW_UP_PCT}px))`,
+                      transform: `translate(calc(-50% - ${325 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${325 * DESKTOP_GLOW_UP_PCT}px))`,
                       zIndex: 0,
                     }}
                   />
@@ -535,11 +535,11 @@ export default function LabHero({
                   <div
                     className="absolute left-1/2 top-1/2"
                     style={{
-                      width: '542px',
-                      height: '542px',
+                      width: '325px',
+                      height: '325px',
                       borderRadius: '50%',
                       border: '2px solid red',
-                      transform: `translate(calc(-50% - ${542 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${542 * DESKTOP_GLOW_UP_PCT}px))`,
+                      transform: `translate(calc(-50% - ${325 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${325 * DESKTOP_GLOW_UP_PCT}px))`,
                       zIndex: 20,
                     }}
                   />
@@ -552,7 +552,7 @@ export default function LabHero({
                       borderRadius: '50%',
                       background: 'red',
                       border: '2px solid white',
-                      transform: `translate(calc(-50% - ${542 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${542 * DESKTOP_GLOW_UP_PCT}px))`,
+                      transform: `translate(calc(-50% - ${325 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${325 * DESKTOP_GLOW_UP_PCT}px))`,
                       zIndex: 21,
                     }}
                   />
