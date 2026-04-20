@@ -38,7 +38,7 @@ export default function ContactInfo() {
                 borderRadius: '50%',
                 background: '#fdc70033',
                 filter: 'blur(100px)',
-                transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
+                transform: `translate(calc(-50% - 13.92px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
                 zIndex: 0,
               }}
             />
@@ -49,7 +49,7 @@ export default function ContactInfo() {
                 height: 278,
                 borderRadius: '50%',
                 border: '2px solid red',
-                transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
+                transform: `translate(calc(-50% - 13.92px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
                 zIndex: 12,
               }}
             />
@@ -60,7 +60,7 @@ export default function ContactInfo() {
                 height: 8,
                 borderRadius: '50%',
                 background: 'red',
-                transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
+                transform: `translate(calc(-50% - 13.92px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
                 zIndex: 11,
               }}
             />
