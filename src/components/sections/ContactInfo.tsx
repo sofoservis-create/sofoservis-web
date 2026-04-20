@@ -177,12 +177,6 @@ export default function ContactInfo() {
                   <p className="text-lg font-semibold text-primary-800">
                     {isEnglish ? "Phone (all services)" : "Telefón (všetky služby)"}
                   </p>
-                  <a
-                    href={`tel:${phoneNumber.replace(/\s/g, '')}`}
-                    className="md:hidden text-2xl text-accent-500 hover:underline transition-colors font-bold"
-                  >
-                    {phoneNumber}
-                  </a>
                   <PhoneRevealLarge
                     phoneNumber={phoneNumber.replace(/\s/g, '')}
                     displayNumber={phoneNumber}
@@ -216,12 +210,6 @@ export default function ContactInfo() {
                     <p className="text-lg font-semibold text-primary-800">
                       {isEnglish ? "Phone (assembly)" : "Telefón (montáž)"}
                     </p>
-                    <a
-                      href="tel:0952044363"
-                      className="md:hidden text-2xl text-accent-500 hover:underline transition-colors font-bold"
-                    >
-                      0952 044 363
-                    </a>
                     <PhoneRevealLarge
                       phoneNumber="0952044363"
                       displayNumber="0952 044 363"
@@ -371,7 +359,7 @@ function PhoneRevealLarge({
   }, [showPhone]);
 
   return (
-    <div ref={blockRef} className="hidden md:flex items-center gap-3">
+    <div ref={blockRef} className="flex items-center gap-3">
       {showPhone ? (
         <a
           href={`tel:${phoneNumber}`}
