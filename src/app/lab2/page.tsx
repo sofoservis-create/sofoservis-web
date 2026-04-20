@@ -37,7 +37,7 @@ export default function Lab2Page() {
         narrowForm
         badgeText="Poskytujeme služby 6 dní v týždni"
         title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-        description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+        description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
         benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
       />
       <Clients />

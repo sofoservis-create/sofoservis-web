@@ -143,7 +143,7 @@ const DESKTOP_GLOW_UP_PCT = 0.05;      // +Y moves glow up
 
 export default function LabHero({
   title = "Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením",
-  description = "Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií.",
+  description = "Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií.",
   backgroundImage = "/images/sofoservis-zamestnanci-hero.avif",
   formTitle = "Dohodnite si kalkuláciu úplne zadarmo",
   formSubtitle = "Vyplňte formulár a získajte nezáväznú ponuku ešte dnes",

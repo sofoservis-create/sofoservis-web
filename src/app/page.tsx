@@ -57,7 +57,7 @@ const faqItems = [
 export const metadata = {
   title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
   description:
-    "Sofoservis – sťahovanie, vypratávanie a montáž nábytku. 3 500+ spokojných zákazníkov. Obhliadka zadarmo. Férové ceny.",
+    "Sofoservis – sťahovanie, vypratávanie a montáž nábytku. 3500+ spokojných zákazníkov. Obhliadka zadarmo. Férové ceny.",
   keywords:
     "sťahovanie, sťahovanie bratislava, sťahovacie služby, vypratávanie, vypratávanie bytov, montáž nábytku, montáž IKEA, montáž kuchyne, sťahovanie bytov, sťahovanie domov, sťahovanie kancelárií, vypratávanie pivníc, odvoz nábytku, sofoservis",
   alternates: {
@@ -72,7 +72,7 @@ export const metadata = {
   openGraph: {
     title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
     description:
-      "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3 500+ spokojných zákazníkov.",
+      "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3500+ spokojných zákazníkov.",
     url: "https://www.sofoservis.sk",
     siteName: "Sofoservis",
     images: [{ url: "https://www.sofoservis.sk/images/og-logo.png", width: 1200, height: 630 }],
@@ -83,7 +83,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
     description:
-      "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3 500+ spokojných zákazníkov.",
+      "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3500+ spokojných zákazníkov.",
     images: ["https://www.sofoservis.sk/images/og-logo.png"],
   },
 };
@@ -97,7 +97,7 @@ export default function Home() {
         <LabHero
           narrowForm
           title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
         />
@@ -105,7 +105,7 @@ export default function Home() {
       <div className="lg:hidden">
         <Hero
           title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3 500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot

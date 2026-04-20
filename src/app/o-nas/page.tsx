@@ -80,7 +80,7 @@ const services = [
 
 const stats = [
   { value: "2018", label: "Rok vzniku" },
-  { value: "3 500+", label: "Spokojných zákazníkov" },
+  { value: "3500+", label: "Spokojných zákazníkov" },
   { value: "6", label: "Nákladných áut" },
   { value: "3", label: "Profesionálne tímy" },
 ];

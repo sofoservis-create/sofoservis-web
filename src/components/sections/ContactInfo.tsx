@@ -90,7 +90,7 @@ export default function ContactInfo() {
                 </div>
               </div>
               <p className="text-sm text-gray-600">
-                {isEnglish ? "3 500+ happy customers" : "3 500+ spokojných zákazníkov"}
+                {isEnglish ? "3500+ happy customers" : "3500+ spokojných zákazníkov"}
               </p>
             </div>
             <div className="flex flex-row gap-4 mb-10 lg:mb-12">
