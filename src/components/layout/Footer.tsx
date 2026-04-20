@@ -133,7 +133,11 @@ export default function Footer() {
     pathname?.includes("/en/handyman");
 
   const isKontaktRoute =
-    pathname === "/kontakt" || pathname === "/en/contact";
+    pathname === "/kontakt" ||
+    pathname === "/en/contact" ||
+    pathname === "/" ||
+    pathname === "/en" ||
+    pathname === "/en/";
 
   return (
     <footer className="relative bg-[#303030] text-white pt-6 pb-8 md:py-16">
@@ -191,7 +195,7 @@ export default function Footer() {
                     <PhoneReveal
                       phoneNumber={isSpecialRoute ? "0952044363" : "0951735130"}
                       displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
-                      suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">(všetky služby)</span> : undefined}
+                      suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
                       isEnglish={isEnglish}
                     />
                   </li>
@@ -200,7 +204,7 @@ export default function Footer() {
                       <PhoneReveal
                         phoneNumber="0952044363"
                         displayNumber="0952 044 363"
-                        suffix={<span className="text-gray-300 text-xs ml-1">(montáž)</span>}
+                        suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
                         isEnglish={isEnglish}
                       />
                     </li>
@@ -215,7 +219,7 @@ export default function Footer() {
                       </div>
                       <span className="text-sm break-all">
                         {isSpecialRoute ? "montaz@sofoservis.sk" : "doprava@sofoservis.sk"}
-                        {isKontaktRoute && <span className="text-gray-300 text-xs ml-1">(všetky služby)</span>}
+                        {isKontaktRoute && <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span>}
                       </span>
                     </a>
                   </li>
@@ -228,7 +232,7 @@ export default function Footer() {
                         <div className="text-accent-500 group-hover:text-accent-400 transition-colors flex-shrink-0">
                           <EmailIcon />
                         </div>
-                        <span className="text-sm break-all">montaz@sofoservis.sk <span className="text-gray-300 text-xs">(montáž)</span></span>
+                        <span className="text-sm break-all">montaz@sofoservis.sk <span className="text-gray-300 text-xs">{isEnglish ? "(installation)" : "(montáž)"}</span></span>
                       </a>
                     </li>
                   )}
@@ -350,7 +354,7 @@ export default function Footer() {
                 <PhoneReveal
                   phoneNumber={isSpecialRoute ? "0952044363" : "0951735130"}
                   displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
-                  suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">(všetky služby)</span> : undefined}
+                  suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
                   isEnglish={isEnglish}
                 />
               </li>
@@ -359,7 +363,7 @@ export default function Footer() {
                   <PhoneReveal
                     phoneNumber="0952044363"
                     displayNumber="0952 044 363"
-                    suffix={<span className="text-gray-300 text-xs ml-1">(montáž)</span>}
+                    suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
                     isEnglish={isEnglish}
                   />
                 </li>
@@ -374,7 +378,7 @@ export default function Footer() {
                   </div>
                   <span className="text-sm break-all">
                     {isSpecialRoute ? "montaz@sofoservis.sk" : "doprava@sofoservis.sk"}
-                    {isKontaktRoute && <span className="text-gray-300 text-xs ml-1">(všetky služby)</span>}
+                    {isKontaktRoute && <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span>}
                   </span>
                 </a>
               </li>
@@ -387,7 +391,7 @@ export default function Footer() {
                     <div className="text-accent-500 group-hover:text-accent-400 transition-colors flex-shrink-0">
                       <EmailIcon />
                     </div>
-                    <span className="text-sm break-all">montaz@sofoservis.sk <span className="text-gray-300 text-xs">(montáž)</span></span>
+                    <span className="text-sm break-all">montaz@sofoservis.sk <span className="text-gray-300 text-xs">{isEnglish ? "(installation)" : "(montáž)"}</span></span>
                   </a>
                 </li>
               )}
