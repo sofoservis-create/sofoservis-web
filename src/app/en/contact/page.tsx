@@ -19,7 +19,7 @@ export const metadata = {
       sk: "https://www.sofoservis.sk/kontakt",
       en: "https://www.sofoservis.sk/en/contact",
       "x-default": "https://www.sofoservis.sk/kontakt",
-      },
+    },
   },
   openGraph: {
     title: "Contact Us | Sofoservis - Professional Moving Services",
@@ -27,6 +27,7 @@ export const metadata = {
       "Contact Sofoservis for a free moving quote. Fast, reliable, and professional!",
     url: "https://www.sofoservis.sk/en/contact",
     siteName: "Sofoservis",
+    images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -37,42 +38,61 @@ export default function ContactPageEN() {
     title: "Frequently Asked Questions About Our Services",
     items: [
       {
-        question: "What is the process for ordering moving services?",
+        question: "What is the process for ordering your services?",
         answer:
-          "To order our services, simply fill out the contact form, call us, or send an email. We will then arrange a date and scope of the move, prepare a quote, and finalize all details.",
+          "Just fill in the contact form, call us, or send an email. We will arrange a date, scope of work, and prepare a non-binding quote — for moving, clearance, or furniture assembly.",
       },
       {
-        question: "How far in advance should I book a move?",
+        question: "How is the price for your services calculated?",
         answer:
-          "We recommend booking at least 7-14 days in advance to ensure availability on your preferred date. However, in urgent cases, we can arrange a move within 24-48 hours.",
+          "The price depends on the type of service, volume of work, distance, and other factors. After a short consultation we will prepare an exact quote free of charge — with no obligation.",
+      },
+      {
+        question: "How far in advance should I book?",
+        answer:
+          "We recommend 7–14 days in advance. In urgent cases we can react within 24–48 hours for moving, clearance, and assembly.",
+      },
+      {
+        question: "What is included in clearance services and how do you handle waste?",
+        answer:
+          "We clear apartments, houses, basements, garages, and properties. Waste is sorted and taken to collection yards or recycling facilities — in line with the law.",
+      },
+      {
+        question: "What types of assembly do you carry out?",
+        answer:
+          "We assemble furniture of all brands, kitchen units, and carry out minor construction work. We work fast and according to your needs.",
       },
       {
         question: "Do you provide services on weekends?",
         answer:
-          "Yes, we provide our services 6 days a week including Saturday, with no extra charge. We adapt to your schedule.",
-      },
-      {
-        question: "How is the price for moving services calculated?",
-        answer:
-          "We determine the price based on the volume of items, distance, floor level, elevator availability, and other factors. For an accurate estimate, we prepare a non-binding quote after you fill out the form or speak with us by phone.",
-      },
-      {
-        question: "Do you offer packing services before the move?",
-        answer:
-          "Yes, we offer comprehensive services including professional packing. Our workers know how to properly pack and protect all your belongings including fragile items, electronics, and furniture.",
+          "Yes, we work 6 days a week including Saturday, with no extra charge. We adapt to your schedule.",
       },
     ],
   };
 
   return (
     <main>
+      {/* Contact Header Section */}
       <ContactHeader lang="en" />
 
+      {/* Contact Information Section */}
       <ContactInfo />
 
-      <section>
+      {/* Contact Form Section */}
+      <section className="pt-6 md:pt-10 pb-10 md:pb-14">
         <Container>
-          <div className="text-center mb-12">
+          <div className="md:hidden bg-accent-500/10 rounded-xl p-5 flex items-center gap-4 mb-8">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-accent-500 flex-shrink-0">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <p className="text-primary-800 text-lg">
+              <span className="font-bold">Free consultation:</span>{" "}
+              Call us or fill in the contact form below for a quick response.
+            </p>
+          </div>
+
+          <div className="text-center mb-6 md:mb-8">
             <h2 className="text-3xl font-bold text-primary-900 mb-4">
               Write to Us
             </h2>
@@ -88,26 +108,21 @@ export default function ContactPageEN() {
         </Container>
       </section>
 
+      {/* Reviews Showcase */}
+      <ReviewsShowcase variant="full" title="What our clients say about us" />
+
+      {/* FAQ Section */}
+      <FAQ
+        title={faqData.title}
+        items={faqData.items}
+        subtitle="Found the answer to your question? If not, do not hesitate to contact us."
+      />
+
+      {/* CTA Section */}
       <section className="bg-white">
-        <ReviewsShowcase
-          variant="full"
-          title="What our clients say about us"
-        />
-      </section>
-
-      <section>
-        <FAQ
-          title={faqData.title}
-          items={faqData.items}
-          subtitle="Found the answer to your question? If not, do not hesitate to contact us."
-          callToActionText="Still have questions? Get in touch"
-        />
-      </section>
-
-      <section className="py-16 bg-white">
         <CTA
-          title="Need help with moving?"
-          description="Our experts are ready to help you with all your moving needs. Contact us today for a free quote."
+          title="Need help?"
+          description="Our experts are ready to help you with all your needs. Contact us today for a free quote."
           buttonText="Get a free quote"
           buttonLink="/en/contact"
         />
