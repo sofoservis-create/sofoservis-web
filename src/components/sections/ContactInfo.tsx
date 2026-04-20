@@ -36,6 +36,9 @@ export default function ContactInfo() {
               alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
               width={630}
               height={630}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="pointer-events-none select-none relative"
               style={{ width: 630, height: 630, maxWidth: 'none', zIndex: 10 }}
             />
@@ -114,6 +117,9 @@ export default function ContactInfo() {
                 alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
                 width={672}
                 height={672}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[270px] lg:-top-[308px] xl:-top-[378px] w-[480px] lg:w-[577px] xl:w-[672px] max-w-none h-auto z-10 pointer-events-none select-none"
               />
               <div

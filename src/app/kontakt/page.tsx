@@ -73,6 +73,13 @@ export default function ContactPage() {
 
   return (
     <main>
+      {/* Preload mascot SVG for faster LCP on contact page */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-on-phone.svg"
+        as="image"
+        type="image/svg+xml"
+      />
       {/* Contact Header Section */}
       <ContactHeader />
 
