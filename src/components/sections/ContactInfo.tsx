@@ -124,8 +124,8 @@ export default function ContactInfo() {
             </div>
           </div>
 
-          {/* Bottom right - Contact list */}
-          <div className="px-4 sm:px-6 md:px-8 lg:px-12 md:col-start-2 md:row-start-2">
+          {/* Bottom left - Contact list */}
+          <div className="px-4 sm:px-6 md:px-8 lg:px-12 md:col-start-1 md:row-start-2">
             <div className="space-y-8">
               {/* Phone contact */}
               <div className="flex items-center gap-4 group">
