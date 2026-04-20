@@ -574,7 +574,7 @@ export default function Navbar() {
         pathname?.includes("/hodinovy-manzel-majster")
           ? "0952 044 363"
           : "0951 735 130",
-      businessHours: "6 dní v týždni 8:00-17:00",
+      businessHours: "6 dní v týždni 8:00 -17:00",
       phoneLabel: "Zavolajte nám",
       menu: "Menu",
       close: "Zavrieť",
@@ -592,7 +592,7 @@ export default function Navbar() {
         pathname?.includes("/en/handyman-services")
           ? "0952 044 363"
           : "0951 735 130",
-      businessHours: "6 days a week 8:00-17:00",
+      businessHours: "6 dní v týždni 8:00 -17:00",
       phoneLabel: "Call us now",
       menu: "Menu",
       close: "Close",
