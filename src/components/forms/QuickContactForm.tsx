@@ -426,6 +426,18 @@ export default function QuickContactForm({
     e.preventDefault();
     // Hard guard against double submit (covers React 18 strict-mode double-invokes too)
     if (isSubmitting || inFlightRef.current) return;
+
+    // Soft phone validation: at least 9 digits, any format accepted
+    const phoneDigits = (formData.phone || "").replace(/\D/g, "");
+    if (phoneDigits.length < 9) {
+      setSubmitError(
+        lang === "en"
+          ? "Please enter a valid phone number (at least 9 digits)."
+          : "Zadajte platné telefónne číslo (aspoň 9 číslic)."
+      );
+      return;
+    }
+
     inFlightRef.current = true;
     setIsSubmitting(true);
     setSubmitError("");

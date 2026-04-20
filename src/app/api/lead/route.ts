@@ -114,6 +114,19 @@ async function handlePost(req: Request) {
     );
   }
 
+  // Soft phone validation: if a phone is provided, it must contain at least
+  // 9 digits (any format). This blocks obvious typos like "1234" or "abc"
+  // while still accepting "+421 911 222 333", "0911-222-333", etc.
+  if (phone) {
+    const phoneDigits = phone.replace(/\D/g, "");
+    if (phoneDigits.length < 9) {
+      return NextResponse.json(
+        { ok: false, error: "Invalid phone number (at least 9 digits required)" },
+        { status: 400 }
+      );
+    }
+  }
+
   // Decide service_type. Body wins; fall back to path heuristic.
   let service_type = clean(body.service_type);
   const pathIsMontaz = isMontazPath(page_url);
