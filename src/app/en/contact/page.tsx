@@ -72,12 +72,20 @@ export default function ContactPageEN() {
 
   return (
     <main>
-      {/* Preload mascot SVG for faster LCP on contact page */}
+      {/* Preload mascot SVG for faster LCP on contact page (split by viewport) */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-on-phone-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 767px)"
+      />
       <link
         rel="preload"
         href="/images/mascot/mascot-on-phone.svg"
         as="image"
         type="image/svg+xml"
+        media="(min-width: 768px)"
       />
       {/* Contact Header Section */}
       <ContactHeader lang="en" />

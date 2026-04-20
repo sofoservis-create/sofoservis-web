@@ -25,22 +25,38 @@ export default function ContactInfo() {
   return (
     <section className={`md:pt-14 pb-6 md:pb-10 bg-white ${isKontaktRoute ? "pt-0 mt-[65px] md:mt-0" : "pt-10"}`}>
       {isKontaktRoute && (
-        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 275, marginTop: -63, transform: 'translateY(-48px)' }}>
+        <div
+          className="md:hidden flex justify-center overflow-hidden mb-2"
+          style={{
+            height: 'clamp(180px, 73vw, 275px)',
+            marginTop: -63,
+            transform: 'translateY(-48px)',
+          }}
+        >
           <div
             className="relative"
-            style={{ width: 630, height: 630, transform: 'translateX(12px)' }}
+            style={{
+              width: 'clamp(420px, 168vw, 630px)',
+              aspectRatio: '1 / 1',
+              transform: 'translateX(12px)',
+            }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/mascot/mascot-on-phone.svg"
+              src="/images/mascot/mascot-on-phone-mobile.svg"
               alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-              width={630}
-              height={630}
+              width={1080}
+              height={560}
               loading="eager"
               fetchPriority="high"
               decoding="async"
               className="pointer-events-none select-none relative"
-              style={{ width: 630, height: 630, maxWidth: 'none', zIndex: 10 }}
+              style={{
+                width: '100%',
+                height: 'auto',
+                maxWidth: 'none',
+                zIndex: 10,
+              }}
             />
           </div>
         </div>
