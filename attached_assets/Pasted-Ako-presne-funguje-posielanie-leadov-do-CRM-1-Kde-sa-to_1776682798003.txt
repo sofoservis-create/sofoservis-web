@@ -1,0 +1,98 @@
+Ako presne funguje posielanie leadov do CRM
+1. Kde sa to spúšťa
+Súbor: src/components/forms/QuickContactForm.tsx (cca riadky 485–510)
+
+Po stlačení "Odoslať" sa paralelne spustia 2 vetvy podľa toho, či ide o montáž alebo nie:
+
+serviceType === "montaz"  →  iba EmailJS  (CRM sa NEvolá vôbec)
+inak                       →  /api/trello  +  sendLeadToCRM(...)   ← oba paralelne
+
+Konkrétny kód (zjednodušene):
+
+const isFurnitureAssemblyPage = serviceType === "montaz";
+const [emailResult, trelloResult] = await Promise.allSettled([
+  isFurnitureAssemblyPage ? emailjs.send(...) : Promise.resolve({status:"skipped"}),
+  isFurnitureAssemblyPage ? Promise.resolve({status:"skipped"})
+                          : postJson("/api/trello", submissionPayload, "Trello"),
+]);
+if (!isFurnitureAssemblyPage) {
+  sendLeadToCRM({                  // ⚠️ NEAWAITED — fire-and-forget
+    name: formData.name,
+    phone: formData.phone,
+    email: formData.email,
+    description: formData.description,
+  });
+}
+
+Dôležité: sendLeadToCRM(...) nie je await-ované. Ak používateľ zatvorí tab pred tým, než sa request dokončí, lead sa do CRM nedostane. Trello áno, lebo to sa awaituje.
+
+2. Endpoint a payload — src/lib/crm.ts
+URL: POST https://sofoservis-crm.replit.app/api/website-lead
+Headers: Content-Type: application/json
+Fetch options: keepalive: true (toto pomáha pri zatváraní tabu, ale negarantuje doručenie)
+
+Telo (presné polia, ktoré posielame):
+
+{
+  "name": "...",
+  "phone": "...",
+  "email": "...",
+  "description": "...",
+  "first_utm_source":   "...",
+  "first_utm_medium":   "...",
+  "first_utm_campaign": "...",
+  "first_utm_content":  "...",
+  "first_utm_term":     "...",
+  "first_gclid":        "...",
+  "first_landing_page": "...",
+  "first_visit_date":   "...",
+  "last_utm_source":    "...",
+  "last_utm_medium":    "...",
+  "last_utm_campaign":  "...",
+  "last_utm_content":   "...",
+  "last_utm_term":      "...",
+  "last_gclid":         "...",
+  "last_landing_page":  "...",
+  "last_visit_date":    "..."
+}
+
+Hodnoty (none) alebo prázdne sa pred odoslaním vyčistia na prázdny string (helper clean()).
+
+UTM dáta tahá z getUTMAttribution() v src/lib/utm.ts — uložené v localStorage, rozlišuje first-click (prvá návšteva) a last-click (návšteva, počas ktorej odoslal formulár).
+
+3. Retry logika (presná)
+const delays = [3000, 5000];   // 3 s, 5 s
+try { await postToCRM(payload); return; } catch (e) { lastErr = e; }
+for (const delay of delays) {
+  await new Promise(r => setTimeout(r, delay));
+  try { await postToCRM(payload); return; } catch (e) { lastErr = e; }
+}
+// Po 3 pokusoch tichá chyba — nikomu sa nehlási, nikde sa neloguje.
+
+Takže celkovo: 1. pokus okamžite → ak zlyhá počká 3 s → 2. pokus → ak zlyhá počká 5 s → 3. pokus → ak zlyhá tichá smrť.
+
+postToCRM považuje request za úspešný len ak HTTP status je 2xx (if (!res.ok) throw new Error(...)).
+
+4. Čo NEPOSIELAME do CRM (a v Trello to máme)
+V CRM payloade chýba oproti Trellu:
+
+service_type / druh (sťahovanie, vypratávanie, montáž, doprava…)
+page_url (odkiaľ formulár prišiel — /stahovanie-levice, /kontakt, atď.)
+firma_nazov, ico, adresa1, poschodie, atď. — všetky business polia z dlhého formulára
+timestamp "kedyPrisiel" — CRM si musí dať vlastný timestamp pri prijatí
+Inými slovami: CRM dostane len základ (meno, tel, email, popis) + UTM atribúciu. Trello dostane plný formulár.
+
+5. Slabiny, ktoré stoja za pozornosť pri analýze
+#	Problém	Dôsledok
+1	sendLeadToCRM nie je await-ované	Lead sa môže stratiť pri rýchlom zatvorení tabu / navigácii
+2	Chyby sa úplne prehltnú (catch {} na konci)	Nikto sa nedozvie, že CRM vypadol
+3	Žiadny serverový log na strane webu	Nemáš ako spätne dohľadať, ktoré leady sa do CRM dostali a ktoré nie
+4	UTM údaje pridáva len klient (z localStoragu)	Ak má používateľ vypnutý localStorage / inkognito vyčistený → atribúcia chýba
+5	Žiadny service_type ani page_url v payloade	V CRM nevieš, či lead je montáž / vypratávanie / sťahovanie bez krížového pozretia s Trellom
+6	Žiadne deduplikovanie	Ak používateľ klikne 2× (ako pani Skačanová 19.4. o 21:49 a 21:50), oba leady letia do CRM ako 2 samostatné
+7	Žiadny shared request_id medzi Trello a CRM	Nedá sa jednoducho spárovať: "tento Trello card == tento CRM lead"
+6. TL;DR pre analýzu
+CRM dostáva: meno, telefón, email, popis, 16 UTM polí.
+CRM NEDOSTÁVA: typ služby, URL stránky, firmu/IČO/adresu, žiadny ID na sparovanie s Trellom.
+Doručenie je best-effort (3 pokusy, žiadne potvrdenie, žiadne logy) → CRM môže mať menej leadov ako Trello a nikto to nezistí.
+Ak chceš, viem to celé prepísať na server-side flow (/api/lead na našej strane → odošle do Trella + CRM s logom v DB), takto by si mal v každej chvíli presný prehľad a žiadny lead by nezmizol. Stačí povedať.
