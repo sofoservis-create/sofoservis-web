@@ -28,13 +28,13 @@ export default function ContactInfo() {
         <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 275, marginTop: -63, transform: 'translateY(-48px)' }}>
           <div
             className="relative"
-            style={{ width: 630, height: 630 }}
+            style={{ width: 630, height: 630, transform: 'translateX(31px)' }}
           >
             <div
               className="absolute left-1/2 top-1/2 pointer-events-none"
               style={{
-                width: 253,
-                height: 253,
+                width: 278,
+                height: 278,
                 borderRadius: '50%',
                 background: '#fdc70033',
                 filter: 'blur(100px)',
@@ -45,8 +45,8 @@ export default function ContactInfo() {
             <div
               className="absolute left-1/2 top-1/2 pointer-events-none"
               style={{
-                width: 253,
-                height: 253,
+                width: 278,
+                height: 278,
                 borderRadius: '50%',
                 border: '2px solid red',
                 transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
