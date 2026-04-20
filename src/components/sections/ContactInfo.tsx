@@ -108,7 +108,7 @@ export default function ContactInfo() {
           <div className="hidden md:block md:col-start-2 md:row-start-2">
             <div className="relative h-full min-h-[420px]">
               <div
-                className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
+                className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8 lg:translate-x-10 lg:translate-y-10 xl:translate-x-12 xl:translate-y-12"
                 aria-hidden="true"
               ></div>
               <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg transition-transform duration-300 ease-out hover:scale-[1.02] h-full">
