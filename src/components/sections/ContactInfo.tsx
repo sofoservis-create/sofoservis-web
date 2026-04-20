@@ -43,7 +43,7 @@ export default function ContactInfo() {
         </div>
       )}
       <Container>
-        <div className="w-full flex flex-col md:grid md:grid-cols-2 md:items-stretch gap-12 md:gap-16 xl:gap-24">
+        <div className="w-full flex flex-col md:grid md:grid-cols-2 md:items-stretch gap-12 md:gap-x-16 md:gap-y-0 xl:gap-x-24">
           {/* Top left - Header (H2 + reviews) — sits above contact list only */}
           <div className={`md:col-start-1 md:row-start-1 px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "-mt-[37.5px] md:mt-0" : ""}`}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-bold text-primary-900 mb-8 lg:mb-10">
