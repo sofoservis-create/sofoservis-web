@@ -29,16 +29,6 @@ export default function ContactHeader({ lang = "sk" }: ContactHeaderProps) {
 
       <Container>
         <div className="relative z-10 max-w-5xl space-y-6 text-left">
-          <div className="md:hidden flex justify-center -mt-2 mb-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/mascot/mascot-on-phone.svg"
-              alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-              width={220}
-              height={220}
-              className="w-44 h-auto pointer-events-none select-none"
-            />
-          </div>
           <div className="animate-in">
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-white">
               {isEnglish ? "Contact" : "Kontakt"}<span className="text-accent-500">.</span>
