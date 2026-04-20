@@ -204,7 +204,25 @@ export default function LabHero({
   const badgeRef = useRef<HTMLDivElement>(null);
   const formCardRef = useRef<HTMLDivElement>(null);
   const consentRef = useRef<HTMLDivElement>(null);
+  const formBodyRef = useRef<HTMLDivElement>(null);
   const [mascotDims, setMascotDims] = useState<{ top: number; height: number; checkboxCenterY: number } | null>(null);
+  const [frozenBodyHeight, setFrozenBodyHeight] = useState<number | null>(null);
+
+  // Measure form body height while form is visible; freeze it when success takes over
+  // so the card (and therefore the mascot/glow) keeps the same size.
+  useEffect(() => {
+    if (submitSuccess) return;
+    const el = formBodyRef.current;
+    if (!el) return;
+    const update = () => {
+      const h = el.offsetHeight;
+      if (h > 0) setFrozenBodyHeight(h);
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [submitSuccess]);
 
   useEffect(() => {
     if (!narrowForm) return;
@@ -588,9 +606,13 @@ export default function LabHero({
               {formSubtitle && <p className={`text-sm text-primary-900/80 ${narrowForm ? "mt-0.5" : ""}`}>{formSubtitle}</p>}
             </div>
 
-            <div className={narrowForm ? "p-3 md:p-4" : "p-4 md:p-5"}>
+            <div
+              ref={formBodyRef}
+              className={narrowForm ? "p-3 md:p-4" : "p-4 md:p-5"}
+              style={submitSuccess && frozenBodyHeight ? { minHeight: `${frozenBodyHeight}px`, display: 'flex', alignItems: 'center', justifyContent: 'center' } : undefined}
+            >
               {submitSuccess ? (
-                <div className="form-submission-success bg-green-50 border border-green-200 text-green-800 rounded-lg p-4">
+                <div className="form-submission-success bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 w-full">
                   <div className="flex">
                     <svg className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
