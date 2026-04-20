@@ -1,0 +1,252 @@
+Potrebujem prerobiť lead intake flow z web formulárov tak, aby bol spoľahlivý a aby sa leady nestrácali. Aktuálne sa časť logiky rieši priamo vo fronte v `src/components/forms/QuickContactForm.tsx`, čo je krehké. Chcem to presunúť na server-side flow.
+
+## Cieľ
+
+Sprav jeden serverový intake endpoint pre formuláre, ktorý bude jediným vstupným bodom. Frontend už nemá volať CRM ani Trello priamo. Server má najprv lead uložiť, potom rozhodnúť kam sa má poslať.
+
+## Dôležité business pravidlá
+
+1. `serviceType === "montaz"` musí zostať posielané tam, kam ide dnes:
+
+   * iba cez EmailJS
+   * NIE do CRM
+   * NIE do Trella
+
+2. Všetky ostatné formuláre (`serviceType !== "montaz"`) majú ísť:
+
+   * do CRM
+   * do Trella ako backup
+
+3. UTM dáta musia zostať zachované.
+
+4. Trello zatiaľ nechávame ako backup proti strate leadov. Do budúcna ho možno zrušíme, ale teraz musí zostať.
+
+## Aktuálny problém
+
+Dnes sa pri nemontážových formulároch volá Trello a CRM z frontendu. CRM ide cez `sendLeadToCRM(...)`, ktoré nie je `await`-ované a je fire-and-forget. To je nespoľahlivé. Ak user zavrie tab alebo request zlyhá, lead sa môže stratiť. Chyby sa navyše ticho prehltnú.
+
+## Chcem nové riešenie
+
+### 1. Jeden nový endpoint
+
+Sprav nový endpoint, napríklad:
+`POST /api/lead`
+
+Toto bude jediný endpoint, ktorý frontend zavolá po odoslaní formulára.
+
+### 2. Flow na serveri
+
+Po prijatí payloadu:
+
+* validuj payload
+* normalizuj dáta
+* vygeneruj `request_id`
+* ulož lead do DB spolu s raw payloadom, UTM dátami, service type, page URL a časom prijatia
+* potom podľa `serviceType` rozhodni routing:
+
+#### A. Montáž
+
+Ak `serviceType === "montaz"`:
+
+* pošli lead cez rovnaký EmailJS flow / rovnaký mechanizmus ako doteraz
+* CRM = skipped
+* Trello = skipped
+
+#### B. Ostatné formuláre
+
+Ak `serviceType !== "montaz"`:
+
+* pošli lead do CRM
+* pošli lead do Trella ako backup
+
+### 3. Frontend zmena
+
+Uprav `src/components/forms/QuickContactForm.tsx` tak, aby:
+
+* už priamo nevolal `/api/trello`
+* už priamo nevolal `sendLeadToCRM(...)`
+* namiesto toho zavolal iba nový endpoint `/api/lead`
+* request mal normálny `await`
+* submit button bol počas odoslania disable
+* nevznikal double submit
+
+## Čo sa má ukladať do DB
+
+Navrhni a implementuj tabuľku pre prijaté leady, minimálne s týmito poľami:
+
+* `id`
+* `request_id`
+* `created_at`
+* `service_type`
+* `page_url`
+* `name`
+* `phone`
+* `email`
+* `description`
+* `utm_json` alebo rozdelené UTM polia
+* `raw_payload_json`
+* `crm_status`
+* `trello_status`
+* `email_status`
+* `crm_attempt_count`
+* `trello_attempt_count`
+* `email_attempt_count`
+* `last_error`
+* `dedupe_fingerprint` alebo podobné pole
+
+Ak už existuje vhodná DB vrstva/modely, nadviaž na existujúcu architektúru a nerob zbytočne druhý paralelný systém.
+
+## UTM dáta
+
+Zachovaj všetky UTM polia, ktoré sa dnes posielajú do CRM:
+
+* first_utm_source
+* first_utm_medium
+* first_utm_campaign
+* first_utm_content
+* first_utm_term
+* first_gclid
+* first_landing_page
+* first_visit_date
+* last_utm_source
+* last_utm_medium
+* last_utm_campaign
+* last_utm_content
+* last_utm_term
+* last_gclid
+* last_landing_page
+* last_visit_date
+
+Tieto hodnoty sa majú uložiť pri prijatí leadu, nie iba preposlať ďalej.
+
+## Povinné nové polia
+
+Doplň do intake flow aj tieto polia:
+
+* `service_type`
+* `page_url`
+* `request_id`
+* `submitted_at`
+
+`page_url` je dôležité zachovať, aby bolo jasné, z ktorej landing page lead prišiel.
+
+## Request ID a párovanie
+
+Každý lead musí dostať unikátne `request_id`.
+
+Pre nemontážové leady posielaj `request_id` aj:
+
+* do CRM
+* do Trella
+
+Aby sa dalo spätne spárovať:
+
+* tento DB lead
+* tento CRM lead
+* tento Trello card
+
+## Idempotencia a duplicity
+
+Chcem obmedziť duplicity.
+
+Implementuj:
+
+1. ochranu proti double submitu na fronte
+2. idempotentné správanie na serveri podľa `request_id` alebo iného stabilného kľúča
+3. soft dedupe signalizáciu pre prípady, keď príde ten istý lead 2x v krátkom čase
+
+Stačí rozumné riešenie, nie zbytočný overengineering. Dôležité je, aby retry alebo double click nevytváral zbytočne viacero záznamov.
+
+## Retry a logging
+
+### Nemontážové leady
+
+Pri CRM a Trello chcem:
+
+* logging každého pokusu
+* status `pending/sent/failed/skipped`
+* uchovanie chybovej hlášky
+* zmysluplné retry na serveri
+
+Nemusí to byť hneď robustná queue infra, ale už to nesmie byť fire-and-forget z frontendu.
+
+Ak je jednoduchšie riešenie:
+
+* prvý pokus hneď pri requeste
+* pri zlyhaní uložiť `failed`
+* aby sa dalo lead neskôr dohľadať a resendnúť
+
+To je stále lepšie než dnešný stav.
+
+### Montáž
+
+Aj pri montáži chcem logovať:
+
+* že lead bol prijatý
+* že email odoslanie bolo `sent` alebo `failed`
+
+## Chybové správanie
+
+Nechcem tiché `catch {}`.
+
+Ak zlyhá downstream:
+
+* lead musí zostať uložený v DB
+* stav musí byť viditeľný
+* chyba sa musí logovať
+
+Používateľovi na fronte nedávaj zbytočne technické chyby, ale systém interne musí vedieť, čo sa stalo.
+
+## Kompatibilita
+
+Zachovaj aktuálne správanie formulárov z pohľadu používateľa:
+
+* formulár sa normálne odošle
+* success state ostane
+* montáž sa správa rovnako ako dnes, len spoľahlivejšie
+* ostatné leady idú do CRM + Trella, len už cez server
+
+## Refaktor konkrétnych častí
+
+Skontroluj a uprav najmä:
+
+* `src/components/forms/QuickContactForm.tsx`
+* `src/lib/crm.ts`
+* aktuálny Trello endpoint / flow
+* UTM helper logiku, ak treba doplniť page URL a request metadata
+
+Ak existuje serverová route štruktúra, drž sa jej. Nechcem obrovský chaos v codebase.
+
+## Čo nechcem
+
+* Nechcem, aby montáž išla do CRM
+* Nechcem, aby frontend priamo volal CRM alebo Trello
+* Nechcem fire-and-forget lead delivery
+* Nechcem tiché prehĺtanie chýb
+* Nechcem prísť o UTM dáta
+* Nechcem rozbiť existujúce formuláre
+
+## Done = hotové keď
+
+1. Frontend volá už iba jeden serverový lead endpoint
+2. Montáž ide iba do email flow, nie do CRM/Trella
+3. Ostatné leady idú server-side do CRM + Trella
+4. Lead sa pred odoslaním ďalej uloží do DB
+5. UTM dáta sa ukladajú
+6. Je tam `request_id`
+7. Sú tam statusy/logy pre CRM/Trello/email
+8. Chyby sa neprehĺtajú potichu
+9. Existuje základná ochrana proti duplicate submitu
+10. Z pohľadu používateľa formuláre fungujú normálne
+
+## Výstup od teba
+
+Chcem, aby si:
+
+1. implementoval zmeny
+2. stručne opísal, čo si zmenil
+3. uviedol, aké nové modely/tabuľky/routes vznikli
+4. uviedol, ako sa teraz správa montáž vs ostatné formuláre
+5. vypísal, čo ešte prípadne odporúčaš ako ďalší krok, ale implementuj najprv funkčné minimum
+
+Ak niekde bude treba urobiť rozumný technický kompromis kvôli aktuálnej architektúre projektu, sprav ho, ale zachovaj presne business pravidlá vyššie.
