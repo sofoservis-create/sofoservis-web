@@ -1,10 +1,12 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 import Dialog from "@/components/elements/Dialog";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
+import { sendLeadToCRM } from "@/lib/crm";
 import QuickContactForm from "@/components/forms/QuickContactForm";
 
 interface LabHeroProps {
@@ -111,9 +113,8 @@ const CITY_SLUGS = [
   "senec", "sala",
 ];
 
-// Note: EmailJS sending now happens server-side via /api/lead.
-// EMAIL_ROUTING here is only used to compute serviceType ("montaz" vs "general")
-// from the current path. The server re-derives the same routing in src/lib/leads/routing.ts.
+const EMAILJS_SERVICE_ID = "service_fcbgn5u";
+const EMAILJS_PUBLIC_KEY = "aYRRi7nyH2P26Q4jc";
 
 const EMAIL_ROUTING = {
   "/montaz-nabytku": { templateId: "template_cqtaia8" },
@@ -239,8 +240,6 @@ export default function LabHero({
     };
   }, [narrowForm]);
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
-  const inFlightRef = useRef(false);
-  const requestIdRef = useRef<string | null>(null);
 
   const getEmailConfig = () => {
     if (EMAIL_ROUTING[pathname as keyof typeof EMAIL_ROUTING]) {
@@ -266,8 +265,6 @@ export default function LabHero({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (isSubmitting || inFlightRef.current) return;
-    inFlightRef.current = true;
     setIsSubmitting(true);
     setSubmitError("");
 
@@ -277,35 +274,63 @@ export default function LabHero({
       const utmAttribution = getUTMAttribution();
       const utmFlat = flattenUTMForEmail(utmAttribution);
 
-      if (!requestIdRef.current) {
-        requestIdRef.current =
-          typeof crypto !== "undefined" && "randomUUID" in crypto
-            ? crypto.randomUUID()
-            : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-      }
-
-      const submissionPayload = {
-        request_id: requestIdRef.current,
+      const templateParams = {
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
-        description: formData.description,
+        message: formData.description,
+        page_url: pathname,
+        service_type: serviceType,
+        ...utmFlat,
+      };
+
+      const submissionPayload = {
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        message: formData.description,
         consent: formData.consent,
         service_type: serviceType,
         page_url: pathname,
         ...utmFlat,
       };
 
-      const r = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        cache: "no-store",
-        body: JSON.stringify(submissionPayload),
-      });
-      const data = await r.json().catch(() => ({}));
-      if (!r.ok || !data?.ok) {
-        throw new Error(data?.error || `Odoslanie zlyhalo (HTTP ${r.status})`);
+      const postJson = async (url: string, payload: Record<string, unknown>, label: string) => {
+        const r = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          cache: "no-store",
+          body: JSON.stringify(payload),
+        });
+        const data = await r.json().catch(() => ({}));
+        if (!r.ok || !data?.ok) throw new Error(data?.error || `${label} API error (${r.status})`);
+        return data;
+      };
+
+      const isFurnitureAssemblyPage = serviceType === "montaz";
+
+      const [emailResult, trelloResult] = await Promise.allSettled([
+        isFurnitureAssemblyPage
+          ? emailjs.send(EMAILJS_SERVICE_ID, emailConfig.templateId, templateParams, EMAILJS_PUBLIC_KEY)
+          : Promise.resolve({ status: "skipped" }),
+        isFurnitureAssemblyPage
+          ? Promise.resolve({ status: "skipped" })
+          : postJson("/api/trello", submissionPayload, "Trello"),
+      ]);
+
+      if (!isFurnitureAssemblyPage) {
+        sendLeadToCRM({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          description: formData.description,
+        });
       }
+
+      const failures: string[] = [];
+      if (isFurnitureAssemblyPage && emailResult.status === "rejected") failures.push("email");
+      if (!isFurnitureAssemblyPage && trelloResult.status === "rejected") failures.push("Trello");
+      if (failures.length) throw new Error(`Odoslanie zlyhalo: ${failures.join(" + ")}`);
 
       try {
         pushDataLayerEvent("form_submission_success", {
@@ -327,10 +352,8 @@ export default function LabHero({
       setFormData({ name: "", phone: "", email: "", description: "", consent: false });
     } catch (error) {
       console.error("Form error:", error);
-      requestIdRef.current = null;
       setSubmitError(t.errorMessage);
     } finally {
-      inFlightRef.current = false;
       setIsSubmitting(false);
     }
   };

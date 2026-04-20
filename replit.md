@@ -129,28 +129,11 @@ The `/editor` route provides a split-pane visual editor:
 - **Google Fonts (Sora)**: Loaded via `next/font/google` for automatic optimization.
 - **Unsplash / CloudFront CDN**: Configured as allowed remote image sources in Next.js config.
 
-### Lead Intake Pipeline (server-side)
-All website forms POST to a single server endpoint `/api/lead`. The endpoint:
-- Validates and normalizes the payload, generates a `request_id` (UUID v4), and computes a dedupe fingerprint (sha256 of name+phone+email+desc).
-- Persists every lead to a Postgres `leads` table (`src/lib/leads/schema.ts`) with raw payload, UTM JSON, status columns and attempt counters.
-- Routes by `service_type`:
-  - `montaz` → server-side EmailJS REST (`src/lib/leads/email.ts`); CRM + Trello are skipped.
-  - everything else → CRM (`src/lib/leads/crm.ts`, 5-attempt backoff to survive Replit cold starts) **and** Trello (`src/lib/leads/trello.ts`) as backup, in parallel.
-- Idempotent on `request_id` (replay returns the prior result without re-sending).
-- Soft-duplicate flag if the same fingerprint arrives within 5 minutes.
-- Errors are logged + saved on the row's `last_error`; never silently swallowed.
+### No Database
 
-Frontend (`QuickContactForm.tsx`, `LabHero.tsx`) only calls `/api/lead` and uses an `inFlightRef` + stable `requestIdRef` to prevent double submits.
-
-The legacy `/api/trello` route and `src/lib/crm.ts` client helper remain in the tree as no-op back-compat (no current callers) in case an old cached browser bundle reaches them during deploys.
-
-### Database
-- Postgres (Replit-managed). Connection string in `DATABASE_URL`.
-- Single table `leads` is auto-created on first call to `/api/lead` via `ensureLeadsTable()` — no migration tool required.
-
-Most page content is still static (no ORM/migrations). Page data is either:
+This project has **no database**. All data is either:
 1. Hardcoded in page components as local constants
 2. Stored in browser `localStorage` (editor content, cookie consent, UTM attribution)
 3. Fetched from external widget APIs (Google Reviews, Instagram)
 
-The only server-persisted data is the `leads` table written by `/api/lead` (see Lead Intake Pipeline above).
+There is no backend API, no Drizzle, no Postgres, and no server-side data persistence.
