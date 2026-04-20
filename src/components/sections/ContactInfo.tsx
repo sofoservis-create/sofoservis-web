@@ -25,14 +25,15 @@ export default function ContactInfo() {
   return (
     <section className="pt-10 md:pt-14 pb-6 md:pb-10 bg-white">
       {isKontaktRoute && (
-        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 130 }}>
+        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 315 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/mascot/mascot-on-phone.svg"
             alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-            width={260}
-            height={260}
-            className="w-64 h-auto pointer-events-none select-none"
+            width={630}
+            height={630}
+            className="pointer-events-none select-none"
+            style={{ width: 630, height: 630, maxWidth: 'none' }}
           />
         </div>
       )}
