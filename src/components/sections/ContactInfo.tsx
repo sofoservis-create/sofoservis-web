@@ -112,15 +112,15 @@ export default function ContactInfo() {
               <img
                 src="/images/mascot/mascot-on-phone.svg"
                 alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-                width={700}
-                height={700}
-                className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[300px] lg:-top-[360px] xl:-top-[420px] w-[500px] lg:w-[600px] xl:w-[700px] h-auto z-20 pointer-events-none select-none"
+                width={1050}
+                height={1050}
+                className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[450px] lg:-top-[540px] xl:-top-[630px] w-[750px] lg:w-[900px] xl:w-[1050px] h-auto z-10 pointer-events-none select-none"
               />
               <div
-                className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
+                className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8 z-0"
                 aria-hidden="true"
               ></div>
-              <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg transition-transform duration-300 ease-out hover:scale-[1.02] h-full">
+              <div className="relative z-20 rounded-2xl overflow-hidden bg-white shadow-lg transition-transform duration-300 ease-out hover:scale-[1.02] h-full">
                 <Image
                   src="/images/SofoServis_Volajte.jpg"
                   alt={isEnglish ? "Contact SofoServis - professional moving services" : "Kontaktujte SofoServis - profesionálne sťahovacie služby"}
