@@ -28,7 +28,7 @@ export default function ContactInfo() {
         <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 275, marginTop: -63, transform: 'translateY(-48px)' }}>
           <div
             className="relative"
-            style={{ width: 630, height: 630, transform: 'translateX(31px)' }}
+            style={{ width: 630, height: 630, transform: 'translateX(15px)' }}
           >
             <div
               className="absolute left-1/2 top-1/2 pointer-events-none"
