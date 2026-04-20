@@ -107,6 +107,15 @@ export default function ContactInfo() {
           {/* Bottom right - Image (only md+); auto-stretches to match contact list height */}
           <div className="hidden md:block md:col-start-2 md:row-start-2">
             <div className="relative h-full min-h-[420px]">
+              {/* Mascot — 60% above image, 40% overlapping top */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/mascot/mascot-on-phone.svg"
+                alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
+                width={400}
+                height={400}
+                className="hidden md:block absolute left-2 -top-[150px] lg:-top-[180px] xl:-top-[210px] w-[250px] lg:w-[300px] xl:w-[350px] h-auto z-20 pointer-events-none select-none"
+              />
               <div
                 className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
                 aria-hidden="true"
