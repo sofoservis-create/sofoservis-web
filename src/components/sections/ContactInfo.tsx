@@ -44,8 +44,8 @@ export default function ContactInfo() {
       )}
       <Container>
         <div className="w-full flex flex-col md:grid md:grid-cols-2 md:items-stretch gap-12 md:gap-16 xl:gap-24">
-          {/* Top right - Header (H2 + reviews) — sits above contact list only */}
-          <div className={`md:col-start-2 md:row-start-1 px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "-mt-[37.5px] md:mt-0" : ""}`}>
+          {/* Top left - Header (H2 + reviews) — sits above contact list only */}
+          <div className={`md:col-start-1 md:row-start-1 px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "-mt-[37.5px] md:mt-0" : ""}`}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-bold text-primary-900 mb-8 lg:mb-10">
               {isEnglish ? "Contact us —" : "Kontaktujte nás"}{" "}
               <span className="text-accent-500 underline decoration-[3px] underline-offset-[3px] transition-colors duration-300 hover:text-accent-600">
@@ -104,8 +104,8 @@ export default function ContactInfo() {
             </div>
           </div>
 
-          {/* Bottom left - Image (only md+); auto-stretches to match contact list height */}
-          <div className="hidden md:block md:col-start-1 md:row-start-2">
+          {/* Bottom right - Image (only md+); auto-stretches to match contact list height */}
+          <div className="hidden md:block md:col-start-2 md:row-start-2">
             <div className="relative h-full min-h-[420px]">
               <div
                 className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
