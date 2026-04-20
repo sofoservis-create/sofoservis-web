@@ -1,14 +1,12 @@
 // src/components/forms/QuickContactForm.tsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
-import emailjs from "@emailjs/browser";
 import Dialog from "@/components/elements/Dialog";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
-import { sendLeadToCRM } from "@/lib/crm";
 
 interface QuickContactFormProps {
   variant?: "primary" | "white";
@@ -26,9 +24,8 @@ export interface QuickFormData {
   consent: boolean;
 }
 
-// EmailJS configuration
-const EMAILJS_SERVICE_ID = "service_fcbgn5u";
-const EMAILJS_PUBLIC_KEY = "aYRRi7nyH2P26Q4jc";
+// EmailJS sending now happens server-side via /api/lead.
+// (Routing/template selection is mirrored in src/lib/leads/routing.ts.)
 
 const PLACEHOLDER_MAP: Record<string, { sk: string; en: string }> = {
   // SK routes — specific (matched before prefix keys due to longest-first sorting)
@@ -369,6 +366,9 @@ export default function QuickContactForm({
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
+  // Refs for double-submit guard and stable request_id across retries within one submit
+  const inFlightRef = useRef(false);
+  const requestIdRef = useRef<string | null>(null);
 
   // Determine email routing based on current page or serviceType prop
   const getEmailConfig = () => {
@@ -424,97 +424,50 @@ export default function QuickContactForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    // Hard guard against double submit (covers React 18 strict-mode double-invokes too)
+    if (isSubmitting || inFlightRef.current) return;
+    inFlightRef.current = true;
     setIsSubmitting(true);
     setSubmitError("");
 
     try {
       const emailConfig = getEmailConfig();
-
-      // Add page context to the message
-      const contextualMessage = formData.description;
-
       const serviceType =
         emailConfig.templateId === "template_cqtaia8" ? "montaz" : "general";
+
+      // Stable request_id so retries within the same submit don't create duplicate DB rows
+      if (!requestIdRef.current) {
+        requestIdRef.current =
+          typeof crypto !== "undefined" && "randomUUID" in crypto
+            ? crypto.randomUUID()
+            : `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      }
 
       // Collect UTM attribution data (first-click + last-click)
       const utmAttribution = getUTMAttribution();
       const utmFlat = flattenUTMForEmail(utmAttribution);
 
-      const templateParams = {
-        name: formData.name,
-        phone: formData.phone,
-        email: formData.email,
-        message: contextualMessage,
-        page_url: pathname,
-        service_type: serviceType,
-        ...utmFlat,
-      };
-
       const submissionPayload = {
+        request_id: requestIdRef.current,
         name: formData.name,
         phone: formData.phone,
         email: formData.email,
-        message: contextualMessage,
+        description: formData.description,
         consent: formData.consent,
         service_type: serviceType,
         page_url: pathname,
         ...utmFlat,
       };
 
-      const postJson = async (
-        url: string,
-        payload: Record<string, unknown>,
-        label: string
-      ) => {
-        const r = await fetch(url, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          cache: "no-store",
-          body: JSON.stringify(payload),
-        });
-        const data = await r.json().catch(() => ({}));
-        if (!r.ok || !data?.ok) {
-          throw new Error(data?.error || `${label} API error (${r.status})`);
-        }
-        return data;
-      };
-
-      // Check if this is a furniture assembly page (montaz)
-      const isFurnitureAssemblyPage = serviceType === "montaz";
-
-      // For furniture assembly pages: send email only (no Trello)
-      // For other pages: send to Trello only (no email)
-      const [emailResult, trelloResult] = await Promise.allSettled([
-        isFurnitureAssemblyPage
-          ? emailjs.send(
-              EMAILJS_SERVICE_ID,
-              emailConfig.templateId,
-              templateParams,
-              EMAILJS_PUBLIC_KEY
-            )
-          : Promise.resolve({ status: "skipped" }), // Skip email for non-montaz pages
-        isFurnitureAssemblyPage
-          ? Promise.resolve({ status: "skipped" }) // Skip Trello for montaz pages
-          : postJson("/api/trello", submissionPayload, "Trello"),
-      ]);
-
-      if (!isFurnitureAssemblyPage) {
-        sendLeadToCRM({
-          name: formData.name,
-          phone: formData.phone,
-          email: formData.email,
-          description: formData.description,
-        });
-      }
-
-      const failures: string[] = [];
-      // Only check email result if it was actually sent (furniture assembly pages)
-      if (isFurnitureAssemblyPage && emailResult.status === "rejected") failures.push("email");
-      // Only check Trello result if it was actually sent (non-montaz pages)
-      if (!isFurnitureAssemblyPage && trelloResult.status === "rejected") failures.push("Trello");
-
-      if (failures.length) {
-        throw new Error(`Odoslanie zlyhalo: ${failures.join(" + ")}`);
+      const r = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        cache: "no-store",
+        body: JSON.stringify(submissionPayload),
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok || !data?.ok) {
+        throw new Error(data?.error || `Odoslanie zlyhalo (HTTP ${r.status})`);
       }
 
       // 🔥 GTM event – form_submission_success (len ak je udelený súhlas)
@@ -547,13 +500,16 @@ export default function QuickContactForm({
         consent: false,
       });
     } catch (error) {
-      console.error("EmailJS error:", error);
+      console.error("Lead submit error:", error);
+      // Allow user to try again with a fresh request_id
+      requestIdRef.current = null;
       setSubmitError(
         lang === "en"
           ? "An error occurred while sending. Please try again or contact us by phone."
           : "Nastala chyba pri odoslaní. Skúste to znova alebo nás kontaktujte na telefóne."
       );
     } finally {
+      inFlightRef.current = false;
       setIsSubmitting(false);
     }
   };
