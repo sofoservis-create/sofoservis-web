@@ -23,9 +23,9 @@ export default function ContactInfo() {
     pathname === "/kontakt" || pathname === "/en/contact";
 
   return (
-    <section className={`md:pt-14 pb-6 md:pb-10 bg-white ${isKontaktRoute ? "pt-0" : "pt-10"}`}>
+    <section className={`md:pt-14 pb-6 md:pb-10 bg-white ${isKontaktRoute ? "pt-0 mt-5 md:mt-0" : "pt-10"}`}>
       {isKontaktRoute && (
-        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 252, marginTop: -50 }}>
+        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 252, marginTop: -63 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/mascot/mascot-on-phone.svg"
@@ -91,7 +91,7 @@ export default function ContactInfo() {
           </div>
 
           {/* Right side - Contact information */}
-          <div className={`w-full md:w-[50%] flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "mt-5 md:mt-0" : ""}`}>
+          <div className="w-full md:w-[50%] flex flex-col px-4 sm:px-6 md:px-8 lg:px-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-bold text-primary-900 mb-8 lg:mb-10">
               {isEnglish ? "Contact us —" : "Kontaktujte nás"}{" "}
               <span className="text-accent-500 underline decoration-[3px] underline-offset-[3px] transition-colors duration-300 hover:text-accent-600">
