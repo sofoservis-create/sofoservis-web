@@ -115,10 +115,10 @@ export default function ContactInfo() {
                 <Image
                   src="/images/SofoServis_Volajte.jpg"
                   alt={isEnglish ? "Contact SofoServis - professional moving services" : "Kontaktujte SofoServis - profesionálne sťahovacie služby"}
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 600px"
+                  quality={90}
                 />
               </div>
             </div>
