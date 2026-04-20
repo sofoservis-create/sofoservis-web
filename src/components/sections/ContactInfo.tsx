@@ -45,7 +45,7 @@ export default function ContactInfo() {
       <Container>
         <div className="w-full flex flex-col md:flex-row-reverse md:items-stretch gap-12 md:gap-16 xl:gap-24">
           {/* Left side - Image with decorative background */}
-          <div className="hidden md:flex w-full md:w-[50%] flex-col gap-6">
+          <div className="hidden md:flex w-full md:w-[50%] flex-col gap-6 pb-6 md:pb-8">
             {/* Card above image */}
             <div className="bg-accent-500/10 rounded-xl p-5 hidden md:flex items-center gap-4">
               <svg
