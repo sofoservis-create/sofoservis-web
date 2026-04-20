@@ -43,33 +43,9 @@ export default function ContactInfo() {
         </div>
       )}
       <Container>
-        <div className="w-full flex flex-col md:flex-row-reverse md:items-stretch gap-12 md:gap-16 xl:gap-24">
-          {/* Left side - Image with decorative background */}
-          <div className="hidden md:flex w-full md:w-[50%] flex-col justify-end pb-6 md:pb-8">
-            {/* Image with decorative background */}
-            <div className="relative h-[480px] lg:h-[560px]">
-              {/* Decorative accent background */}
-              <div
-                className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
-                aria-hidden="true"
-              ></div>
-
-              {/* Main image with hover effect */}
-              <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg transition-transform duration-300 ease-out hover:scale-[1.02] h-full">
-                <Image
-                  src="/images/SofoServis_Volajte.jpg"
-                  alt={isEnglish ? "Contact SofoServis - professional moving services" : "Kontaktujte SofoServis - profesionálne sťahovacie služby"}
-                  width={600}
-                  height={600}
-                  className="w-full h-full object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Right side - Contact information */}
-          <div className={`w-full md:w-[50%] flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "-mt-[37.5px] md:mt-0" : ""}`}>
+        <div className="w-full flex flex-col md:grid md:grid-cols-2 md:items-stretch gap-12 md:gap-16 xl:gap-24">
+          {/* Top right - Header (H2 + reviews) — sits above contact list only */}
+          <div className={`md:col-start-2 md:row-start-1 px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "-mt-[37.5px] md:mt-0" : ""}`}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-bold text-primary-900 mb-8 lg:mb-10">
               {isEnglish ? "Contact us —" : "Kontaktujte nás"}{" "}
               <span className="text-accent-500 underline decoration-[3px] underline-offset-[3px] transition-colors duration-300 hover:text-accent-600">
@@ -126,7 +102,30 @@ export default function ContactInfo() {
                 reviewCount={isEnglish ? "Based on 150+ reviews" : "Na základe 150+ recenzií"}
               />
             </div>
+          </div>
 
+          {/* Bottom left - Image (only md+); auto-stretches to match contact list height */}
+          <div className="hidden md:block md:col-start-1 md:row-start-2">
+            <div className="relative h-full min-h-[420px]">
+              <div
+                className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
+                aria-hidden="true"
+              ></div>
+              <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg transition-transform duration-300 ease-out hover:scale-[1.02] h-full">
+                <Image
+                  src="/images/SofoServis_Volajte.jpg"
+                  alt={isEnglish ? "Contact SofoServis - professional moving services" : "Kontaktujte SofoServis - profesionálne sťahovacie služby"}
+                  width={600}
+                  height={600}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom right - Contact list */}
+          <div className="px-4 sm:px-6 md:px-8 lg:px-12 md:col-start-2 md:row-start-2">
             <div className="space-y-8">
               {/* Phone contact */}
               <div className="flex items-center gap-4 group">
