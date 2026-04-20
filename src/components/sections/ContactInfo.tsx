@@ -26,15 +26,44 @@ export default function ContactInfo() {
     <section className={`md:pt-14 pb-6 md:pb-10 bg-white ${isKontaktRoute ? "pt-0 mt-[65px] md:mt-0" : "pt-10"}`}>
       {isKontaktRoute && (
         <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 275, marginTop: -63, transform: 'translateY(-48px)' }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/mascot/mascot-on-phone.svg"
-            alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-            width={630}
-            height={630}
-            className="pointer-events-none select-none"
-            style={{ width: 630, height: 630, maxWidth: 'none' }}
-          />
+          <div
+            className="relative"
+            style={{ width: 630, height: 630 }}
+          >
+            <div
+              className="absolute left-1/2 top-1/2 pointer-events-none"
+              style={{
+                width: 423,
+                height: 423,
+                borderRadius: '50%',
+                background: '#fdc70033',
+                filter: 'blur(100px)',
+                outline: '2px solid red',
+                transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px))`,
+                zIndex: 0,
+              }}
+            />
+            <div
+              className="absolute left-1/2 top-1/2 pointer-events-none"
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: '50%',
+                background: 'red',
+                transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px))`,
+                zIndex: 11,
+              }}
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/mascot/mascot-on-phone.svg"
+              alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
+              width={630}
+              height={630}
+              className="pointer-events-none select-none relative"
+              style={{ width: 630, height: 630, maxWidth: 'none', zIndex: 10 }}
+            />
+          </div>
         </div>
       )}
       <Container>
