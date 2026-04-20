@@ -1003,7 +1003,7 @@ export default function Navbar() {
                       </>
                     )}
                   </div>
-                  <div className="text-accent-500 text-sm font-semibold mt-1 whitespace-nowrap">
+                  <div className="text-primary-900 text-sm font-semibold mt-1 whitespace-nowrap">
                     {t.businessHours}
                   </div>
                 </div>
@@ -1233,7 +1233,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            <div className="text-center py-3 text-accent-500 text-lg font-medium border-t border-gray-200">
+            <div className="text-center py-3 text-primary-900 text-lg font-medium border-t border-gray-200">
               {t.businessHours}
             </div>
           </div>
