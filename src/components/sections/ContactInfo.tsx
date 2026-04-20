@@ -37,7 +37,7 @@ export default function ContactInfo() {
             className="relative"
             style={{
               width: 'clamp(420px, 168vw, 630px)',
-              aspectRatio: '1 / 1',
+              height: 'clamp(420px, 168vw, 630px)',
               transform: 'translateX(12px)',
             }}
           >
@@ -45,15 +45,15 @@ export default function ContactInfo() {
             <img
               src="/images/mascot/mascot-on-phone-mobile.svg"
               alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-              width={1080}
-              height={560}
+              width={630}
+              height={630}
               loading="eager"
               fetchPriority="high"
               decoding="async"
               className="pointer-events-none select-none relative"
               style={{
                 width: '100%',
-                height: 'auto',
+                height: '100%',
                 maxWidth: 'none',
                 zIndex: 10,
               }}
