@@ -42,28 +42,6 @@ export default function ContactInfo() {
                 zIndex: 0,
               }}
             />
-            <div
-              className="absolute left-1/2 top-1/2 pointer-events-none"
-              style={{
-                width: 278,
-                height: 278,
-                borderRadius: '50%',
-                border: '2px solid red',
-                transform: `translate(calc(-50% - 13.92px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
-                zIndex: 12,
-              }}
-            />
-            <div
-              className="absolute left-1/2 top-1/2 pointer-events-none"
-              style={{
-                width: 8,
-                height: 8,
-                borderRadius: '50%',
-                background: 'red',
-                transform: `translate(calc(-50% - 13.92px), calc(-50% - ${423 * (0.05 + 0.11)}px - 51px))`,
-                zIndex: 11,
-              }}
-            />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/mascot/mascot-on-phone.svg"
