@@ -13,7 +13,7 @@ export async function GET() {
 
   if (GOOGLE_PLACES_API_KEY) {
     try {
-      const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&reviews_sort=newest&key=${GOOGLE_PLACES_API_KEY}`;
+      const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&reviews_sort=newest&reviews_no_translations=true&language=sk&key=${GOOGLE_PLACES_API_KEY}`;
       const response = await fetch(url, { next: { revalidate: 86400 } });
       const data = await response.json();
 
