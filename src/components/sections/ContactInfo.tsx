@@ -91,7 +91,7 @@ export default function ContactInfo() {
           </div>
 
           {/* Right side - Contact information */}
-          <div className="w-full md:w-[50%] flex flex-col px-4 sm:px-6 md:px-8 lg:px-12">
+          <div className={`w-full md:w-[50%] flex flex-col px-4 sm:px-6 md:px-8 lg:px-12 ${isKontaktRoute ? "-mt-10 md:mt-0" : ""}`}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.15] font-bold text-primary-900 mb-8 lg:mb-10">
               {isEnglish ? "Contact us —" : "Kontaktujte nás"}{" "}
               <span className="text-accent-500 underline decoration-[3px] underline-offset-[3px] transition-colors duration-300 hover:text-accent-600">
