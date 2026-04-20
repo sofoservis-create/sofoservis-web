@@ -347,30 +347,21 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li>
-                <a
-                  href={`tel:${isSpecialRoute ? "0952044363" : "0951735130"}`}
-                  className="text-gray-300 hover:text-accent-500 transition-colors flex items-center gap-2 group"
-                >
-                  <div className="text-accent-500 group-hover:text-accent-400 transition-colors flex-shrink-0">
-                    <PhoneIcon />
-                  </div>
-                  <span className="text-sm">
-                    {isSpecialRoute ? "0952 044 363" : "0951 735 130"}
-                    {isKontaktRoute && <span className="text-gray-300 text-xs ml-1">(všetky služby)</span>}
-                  </span>
-                </a>
+                <PhoneReveal
+                  phoneNumber={isSpecialRoute ? "0952044363" : "0951735130"}
+                  displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
+                  suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">(všetky služby)</span> : undefined}
+                  isEnglish={isEnglish}
+                />
               </li>
               {isKontaktRoute && (
                 <li>
-                  <a
-                    href="tel:0952044363"
-                    className="text-gray-300 hover:text-accent-500 transition-colors flex items-center gap-2 group"
-                  >
-                    <div className="text-accent-500 group-hover:text-accent-400 transition-colors flex-shrink-0">
-                      <PhoneIcon />
-                    </div>
-                    <span className="text-sm">0952 044 363 <span className="text-gray-300 text-xs">(montáž)</span></span>
-                  </a>
+                  <PhoneReveal
+                    phoneNumber="0952044363"
+                    displayNumber="0952 044 363"
+                    suffix={<span className="text-gray-300 text-xs ml-1">(montáž)</span>}
+                    isEnglish={isEnglish}
+                  />
                 </li>
               )}
               <li>
