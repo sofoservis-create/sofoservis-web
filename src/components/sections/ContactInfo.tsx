@@ -45,36 +45,9 @@ export default function ContactInfo() {
       <Container>
         <div className="w-full flex flex-col md:flex-row-reverse md:items-stretch gap-12 md:gap-16 xl:gap-24">
           {/* Left side - Image with decorative background */}
-          <div className="hidden md:flex w-full md:w-[50%] flex-col gap-6 pb-6 md:pb-8">
-            {/* Card above image */}
-            <div className="bg-accent-500/10 rounded-xl p-5 hidden md:flex items-center gap-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-8 h-8 text-accent-500 flex-shrink-0"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-              <p className="text-primary-800 text-lg">
-                <span className="font-bold">
-                  {isEnglish ? "Free consultation:" : "Bezplatná konzultácia:"}
-                </span>{" "}
-                {isEnglish
-                  ? "Call us or fill out the contact form below for a quick response."
-                  : "Zavolajte nám alebo vyplňte kontaktný formulár nižšie pre rýchlu reakciu."}
-              </p>
-            </div>
-
+          <div className="hidden md:flex w-full md:w-[50%] flex-col justify-end pb-6 md:pb-8">
             {/* Image with decorative background */}
-            <div className="relative flex-1 min-h-[300px] hidden md:block">
+            <div className="relative h-[480px] lg:h-[560px]">
               {/* Decorative accent background */}
               <div
                 className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8"
