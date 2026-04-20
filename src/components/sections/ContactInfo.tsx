@@ -114,7 +114,7 @@ export default function ContactInfo() {
                 alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
                 width={1050}
                 height={1050}
-                className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[450px] lg:-top-[540px] xl:-top-[630px] w-[750px] lg:w-[900px] xl:w-[1050px] h-auto z-10 pointer-events-none select-none"
+                className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[225px] lg:-top-[270px] xl:-top-[315px] w-[750px] lg:w-[900px] xl:w-[1050px] h-auto z-10 pointer-events-none select-none"
               />
               <div
                 className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8 z-0"
