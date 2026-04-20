@@ -303,10 +303,11 @@ export default function Hero({
                     }}
                   />
                   <Image
-                    src="/images/mascot/crossed-hands-mascot.svg"
+                    src="/images/mascot/crossed-hands-mascot-mobile.svg"
                     alt="Sofoservis maskot"
                     width={630}
                     height={630}
+                    priority
                     className="select-none relative"
                     style={{ zIndex: 10, maxWidth: 'none', width: '630px', height: '630px' }}
                   />

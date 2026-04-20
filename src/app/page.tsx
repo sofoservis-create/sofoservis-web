@@ -91,6 +91,21 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="bg-white">
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/crossed-hands-mascot-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
+      />
+      <link
+        rel="preload"
+        href="/images/mascot/crossed-hands-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
       <FAQJsonLd items={faqItems} />
 
       <div className="hidden lg:block">
