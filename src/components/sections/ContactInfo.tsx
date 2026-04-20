@@ -23,9 +23,9 @@ export default function ContactInfo() {
     pathname === "/kontakt" || pathname === "/en/contact";
 
   return (
-    <section className={`md:pt-14 pb-6 md:pb-10 bg-white ${isKontaktRoute ? "pt-0 mt-10 md:mt-0" : "pt-10"}`}>
+    <section className={`md:pt-14 pb-6 md:pb-10 bg-white ${isKontaktRoute ? "pt-0 mt-[45px] md:mt-0" : "pt-10"}`}>
       {isKontaktRoute && (
-        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 252, marginTop: -63, transform: 'translateY(-20px)' }}>
+        <div className="md:hidden flex justify-center overflow-hidden mb-2" style={{ height: 252, marginTop: -63, transform: 'translateY(-25px)' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/mascot/mascot-on-phone.svg"
