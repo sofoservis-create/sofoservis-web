@@ -581,7 +581,7 @@ export default function QuickContactForm({
       errorMessage:
         "Nastala chyba pri odoslaní. Skúste to znova alebo nás kontaktujte na telefóne.",
       afterSubmitText:
-        "Po odoslaní formuláru sa s vami spojíme a radi Vám odpovieme na všetky otázky.",
+        "Po odoslaní formuláru sa s Vami spojíme a radi Vám odpovieme na všetky otázky.",
       privacyTitle: "Ochrana osobných údajov",
       closeButton: "Zavrieť",
     },
