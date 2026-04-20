@@ -45,6 +45,17 @@ export default function ContactInfo() {
             <div
               className="absolute left-1/2 top-1/2 pointer-events-none"
               style={{
+                width: 211,
+                height: 211,
+                borderRadius: '50%',
+                border: '2px solid red',
+                transform: `translate(calc(-50% - ${423 * 0.04}px), calc(-50% - ${423 * (0.05 + 0.11)}px))`,
+                zIndex: 12,
+              }}
+            />
+            <div
+              className="absolute left-1/2 top-1/2 pointer-events-none"
+              style={{
                 width: 8,
                 height: 8,
                 borderRadius: '50%',
