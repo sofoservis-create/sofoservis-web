@@ -9,6 +9,9 @@ import { resolveEmailRoute, isMontazPath } from "@/lib/leads/routing";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+// CRM backoff can take up to ~57s. Vercel default is 10s on Hobby (300s on Pro).
+// 60s is the Hobby ceiling and gives the CRM cold-start enough room.
+export const maxDuration = 60;
 
 interface IncomingBody {
   request_id?: string;
