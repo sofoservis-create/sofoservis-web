@@ -612,12 +612,12 @@ export default function LabHero({
               style={submitSuccess && frozenBodyHeight ? { minHeight: `${frozenBodyHeight}px`, display: 'flex', alignItems: 'center', justifyContent: 'center' } : undefined}
             >
               {submitSuccess ? (
-                <div className="form-submission-success bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 w-full">
-                  <div className="flex">
-                    <svg className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="form-submission-success bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 md:p-8 w-full">
+                  <div className="flex flex-col items-center text-center gap-3">
+                    <svg className="h-12 w-12 md:h-14 md:w-14 text-green-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
                     </svg>
-                    <p className="text-sm">{t.successMessage}</p>
+                    <p className="text-lg md:text-xl font-medium leading-snug">{t.successMessage}</p>
                   </div>
                 </div>
               ) : (
