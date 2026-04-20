@@ -112,9 +112,9 @@ export default function ContactInfo() {
               <img
                 src="/images/mascot/mascot-on-phone.svg"
                 alt={isEnglish ? "Sofoservis mascot" : "Sofoservis maskot"}
-                width={1050}
-                height={1050}
-                className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[225px] lg:-top-[270px] xl:-top-[315px] w-[750px] lg:w-[900px] xl:w-[1050px] h-auto z-10 pointer-events-none select-none"
+                width={1575}
+                height={1575}
+                className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-[340px] lg:-top-[405px] xl:-top-[475px] w-[1125px] lg:w-[1350px] xl:w-[1575px] h-auto z-10 pointer-events-none select-none"
               />
               <div
                 className="absolute inset-0 bg-accent-500 rounded-2xl transform translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8 z-0"
