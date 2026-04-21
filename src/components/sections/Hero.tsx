@@ -48,6 +48,8 @@ interface HeroProps {
   mobileMascotSrc?: string;
   /** Additional vertical offset (px) for the mobile mascot. Negative = up. */
   mobileMascotOffsetY?: number;
+  /** Scale multiplier for the mobile mascot (default 1 = 630px). */
+  mobileMascotScale?: number;
   /** Additional vertical offset (px) for the mobile form card. Positive = down. */
   mobileFormOffsetY?: number;
   /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
@@ -103,6 +105,7 @@ export default function Hero({
   mascotSrc,
   mobileMascotSrc,
   mobileMascotOffsetY = 0,
+  mobileMascotScale = 1,
   mobileFormOffsetY = 0,
   pillsVariant,
   desktopMascotScaleMultiplier = 1,
@@ -337,24 +340,28 @@ export default function Hero({
             )}
 
             {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
-            {showMascot && (
+            {showMascot && (() => {
+              const mascotPx = 630 * mobileMascotScale;
+              const glowPx = 423 * mobileMascotScale;
+              const bottomGapPx = 188 * mobileMascotScale;
+              return (
               <div
                 className="lg:hidden relative z-0 pointer-events-none"
-                style={{ marginTop: `${-6 + mobileMascotOffsetY}px`, marginBottom: `${-188 - mobileMascotOffsetY}px`, height: '630px' }}
+                style={{ marginTop: `${-6 + mobileMascotOffsetY}px`, marginBottom: `${-bottomGapPx - mobileMascotOffsetY}px`, height: `${mascotPx}px` }}
               >
                 <div
                   className="absolute"
-                  style={{ width: '630px', height: '630px', left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
+                  style={{ width: `${mascotPx}px`, height: `${mascotPx}px`, left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
                 >
                   <div
                     className="absolute left-1/2 top-1/2"
                     style={{
-                      width: '423px',
-                      height: '423px',
+                      width: `${glowPx}px`,
+                      height: `${glowPx}px`,
                       borderRadius: '50%',
                       background: '#fdc70033',
                       filter: 'blur(100px)',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
+                      transform: `translate(calc(-50% - ${glowPx * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${glowPx * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
                       zIndex: 0,
                     }}
                   />
@@ -362,18 +369,19 @@ export default function Hero({
                     src={mobileMascot}
                     unoptimized={mobileMascot.endsWith(".svgz")}
                     alt="Sofoservis maskot"
-                    width={630}
-                    height={630}
+                    width={mascotPx}
+                    height={mascotPx}
                     priority
                     className="select-none relative"
-                    style={{ zIndex: 10, maxWidth: 'none', width: '630px', height: '630px' }}
+                    style={{ zIndex: 10, maxWidth: 'none', width: `${mascotPx}px`, height: `${mascotPx}px` }}
                   />
                 </div>
               </div>
-            )}
+              );
+            })()}
 
             {/* Mobile Form - below benefits bar on mobile */}
-            <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-314 + mobileFormOffsetY}px` } : undefined}>
+            <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-314 * mobileMascotScale + mobileFormOffsetY}px` } : undefined}>
               <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
                 <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                   <h3 className="text-lg md:text-xl font-bold text-center">
