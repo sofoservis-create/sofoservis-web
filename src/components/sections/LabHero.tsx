@@ -27,6 +27,18 @@ interface LabHeroProps {
   desktopMascotRightShiftPct?: number;
   /** When true, render the desktop mascot behind the form card (z-index below form). */
   desktopMascotBehindForm?: boolean;
+  /**
+   * Fixed desktop mascot bbox top in px, relative to the centered hero frame.
+   * Default 0 matches the historical /stahovanie value (badge sits at frame top).
+   */
+  desktopMascotFixedTopPx?: number;
+  /**
+   * Fixed desktop mascot bbox height in px (pre-scale). The rendered height is
+   * this value × desktopMascotScale. Default 728 matches the historical
+   * /stahovanie value. Pages with longer hero text (e.g. /vypratavanie) can
+   * override to 756 to preserve their pre-fix visual.
+   */
+  desktopMascotFixedHeightPx?: number;
 }
 
 const LAB_HERO_TEXTS = {
@@ -162,6 +174,8 @@ export default function LabHero({
   desktopMascotScaleMultiplier = 1,
   desktopMascotRightShiftPct,
   desktopMascotBehindForm = false,
+  desktopMascotFixedTopPx = 0,
+  desktopMascotFixedHeightPx = 728,
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
@@ -210,14 +224,20 @@ export default function LabHero({
   const [submitError, setSubmitError] = useState("");
 
   const sectionRef = useRef<HTMLElement>(null);
-  const heroFrameRef = useRef<HTMLDivElement>(null);
-  const h1Ref = useRef<HTMLHeadingElement>(null);
-  const badgeRef = useRef<HTMLDivElement>(null);
-  const formCardRef = useRef<HTMLDivElement>(null);
-  const consentRef = useRef<HTMLDivElement>(null);
   const formBodyRef = useRef<HTMLDivElement>(null);
-  const [mascotDims, setMascotDims] = useState<{ top: number; height: number; checkboxCenterY: number } | null>(null);
   const [frozenBodyHeight, setFrozenBodyHeight] = useState<number | null>(null);
+
+  // Mascot dimensions are FIXED constants (no DOM measurement). This prevents
+  // the mascot from "breathing" when hero text reflows (font swap, autocomplete,
+  // textarea auto-grow, etc.). Defaults match the historical /stahovanie visual;
+  // pages with longer hero text override via desktopMascotFixedHeightPx to
+  // preserve their pre-fix visual.
+  const mascotDims = narrowForm
+    ? {
+        top: desktopMascotFixedTopPx,
+        height: desktopMascotFixedHeightPx,
+      }
+    : null;
 
   // Measure form body height while form is visible; freeze it when success takes over
   // so the card (and therefore the mascot/glow) keeps the same size.
@@ -234,47 +254,6 @@ export default function LabHero({
     ro.observe(el);
     return () => ro.disconnect();
   }, [submitSuccess]);
-
-  useEffect(() => {
-    if (!narrowForm) return;
-    // Mascot dimensions are derived from layout once after fonts settle, then
-    // frozen until the viewport is resized. We intentionally do NOT observe
-    // h1/badge/consent/formCard for ongoing changes — that caused the mascot
-    // to "breathe" whenever text reflowed (font swap, autocomplete, textarea
-    // auto-grow). Text is static per page, so a single post-fonts measurement
-    // matches the current visual exactly while staying stable thereafter.
-    const compute = () => {
-      const frame = heroFrameRef.current;
-      const badge = badgeRef.current;
-      const formCard = formCardRef.current;
-      if (!frame || !badge || !formCard) return;
-      const frameRect = frame.getBoundingClientRect();
-      const badgeRect = badge.getBoundingClientRect();
-      const formCardRect = formCard.getBoundingClientRect();
-      const top = badgeRect.top - frameRect.top;
-      const height = formCardRect.bottom - badgeRect.top;
-      const consentRect = consentRef.current?.getBoundingClientRect();
-      const checkboxCenterY = consentRect
-        ? consentRect.top + consentRect.height / 2 - frameRect.top
-        : top + height / 2;
-      setMascotDims({ top, height, checkboxCenterY });
-    };
-    // Initial paint: compute synchronously so the mascot appears immediately.
-    compute();
-    // Re-measure once after web fonts finish loading (text reflow settles).
-    let cancelled = false;
-    if (typeof document !== "undefined" && (document as Document & { fonts?: FontFaceSet }).fonts) {
-      (document as Document & { fonts?: FontFaceSet }).fonts!.ready.then(() => {
-        if (!cancelled) compute();
-      });
-    }
-    // Recompute only on viewport resize — text content does not change at runtime.
-    window.addEventListener("resize", compute);
-    return () => {
-      cancelled = true;
-      window.removeEventListener("resize", compute);
-    };
-  }, [narrowForm]);
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const inFlightRef = useRef(false);
   const requestIdRef = useRef<string | null>(null);
@@ -440,7 +419,6 @@ export default function LabHero({
             glow, text content, and form card. Anchors them all to the same
             max-w-7xl rail so the mascot can no longer drift on wide viewports. */}
         <div
-          ref={heroFrameRef}
           className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-visible"
         >
           {/* narrowForm: glow + mascot inside the shared frame.
@@ -499,14 +477,13 @@ export default function LabHero({
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
             <div className="w-full lg:w-3/5 space-y-3 md:space-y-5 text-center lg:text-left">
               {(hideBadge && !badgeText)
-                ? <div ref={badgeRef} className="h-0 w-0 overflow-hidden" aria-hidden="true" />
-                : <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
+                ? <div className="h-0 w-0 overflow-hidden" aria-hidden="true" />
+                : <div className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
                     <span className="mr-2">✓</span> {badgeText ?? "Poskytujeme služby 6 dní v týždni"}
                   </div>
               }
 
               <h1
-                ref={h1Ref}
                 id="hero-heading"
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]"
               >
@@ -621,7 +598,7 @@ export default function LabHero({
         {/* Form card — z-10 so mascot (z-20) overlaps it */}
         <div className="relative z-10 mt-5">
           <div className={`flex flex-col lg:flex-row gap-6 lg:gap-12`}>
-          <div ref={formCardRef} className={`hidden lg:block bg-white rounded-xl shadow-2xl overflow-hidden${narrowForm ? " lg:w-3/5 w-full" : ""}`}>
+          <div className={`hidden lg:block bg-white rounded-xl shadow-2xl overflow-hidden${narrowForm ? " lg:w-3/5 w-full" : ""}`}>
             <div className={`bg-accent-500 text-primary-900 px-6 ${narrowForm ? "py-2 text-center" : "py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"}`}>
               <h3 className="text-lg font-bold">{formTitle}</h3>
               {formSubtitle && <p className={`text-sm text-primary-900/80 ${narrowForm ? "mt-0.5" : ""}`}>{formSubtitle}</p>}
@@ -729,7 +706,7 @@ export default function LabHero({
                   </div>
 
                   {/* Consent */}
-                  <div ref={consentRef} className="flex items-center gap-2">
+                  <div className="flex items-center gap-2">
                     <input
                       type="checkbox"
                       id="lab-consent"

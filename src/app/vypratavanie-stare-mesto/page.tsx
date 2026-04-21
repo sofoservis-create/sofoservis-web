@@ -185,6 +185,7 @@ export default function VypratavanieStareMestoPage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotBehindForm
+          desktopMascotFixedHeightPx={756}
         />
       </div>
       <div className="lg:hidden">
