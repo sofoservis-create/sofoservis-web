@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -126,20 +127,53 @@ export default function MachineryMovingPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Industrial Machinery Moving"
-        description="Relocating production machines, CNC equipment, production lines or ATMs requires professional expertise and specialist equipment. Our team has extensive experience in industrial machinery relocation with minimal impact on your operations — including weekend and night-shift moves planned around your schedule."
-        formTitle="Get a free price quote"
-        formSubtitle="Fill out the form for a no-obligation estimate"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={["Hydraulic equipment", "Minimal downtime", "Free site inspection"]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Industrial Machinery Moving"
+          description="Relocating production machines, CNC equipment, production lines or ATMs requires professional expertise and specialist equipment. Our team has extensive experience in industrial machinery relocation with minimal impact on your operations — including weekend and night-shift moves planned around your schedule."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation estimate"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Industrial Machinery Moving"
+          description="Relocating production machines, CNC equipment, production lines or ATMs requires professional expertise and specialist equipment. Our team has extensive experience in industrial machinery relocation with minimal impact on your operations — including weekend and night-shift moves planned around your schedule."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation estimate"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
 
       <div>
         <Clients />

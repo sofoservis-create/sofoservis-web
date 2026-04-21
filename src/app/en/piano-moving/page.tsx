@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -126,20 +127,53 @@ export default function PianoMovingPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Piano Moving Service"
-        description="Trust the moving of your piano, upright or grand to our specialist team. We carry professional piano dollies, skids and protective materials for safe transport — including up and down staircases, to upper floors or through windows."
-        formTitle="Get a free price quote"
-        formSubtitle="Fill out the form for a no-obligation estimate"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={["Specialist piano dollies", "Insurance included", "Free site inspection"]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Piano Moving Service"
+          description="Trust the moving of your piano, upright or grand to our specialist team. We carry professional piano dollies, skids and protective materials for safe transport — including up and down staircases, to upper floors or through windows."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation estimate"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Piano Moving Service"
+          description="Trust the moving of your piano, upright or grand to our specialist team. We carry professional piano dollies, skids and protective materials for safe transport — including up and down staircases, to upper floors or through windows."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation estimate"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
 
       <div>
         <Clients />

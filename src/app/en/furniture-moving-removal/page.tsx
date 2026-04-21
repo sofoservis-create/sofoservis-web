@@ -1,6 +1,7 @@
 // src/app/en/furniture-moving-removal/page.tsx
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -116,25 +117,53 @@ export default function FurnitureMovingRemovalPage() {
 
   return (
     <main className="bg-white">
-      {/* Hero section */}
-      <Hero
-        title="Furniture Moving and Removal"
-        description="Professional services for safe furniture moving and transportation of any type. Our experienced team ensures careful handling and transport of your furniture without damage, focusing on protecting your valuable pieces."
-        backgroundImage="/images/stahovanie-gauc.avif"
-        formTitle="Get a Free Quote"
-        formSubtitle="Fill in the form for a no-obligation calculation"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={[
-          "Free site inspection",
-          "High customer satisfaction",
-          "Stress-free service",
-        ]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Furniture Moving and Removal"
+          description="Professional services for safe furniture moving and transportation of any type. Our experienced team ensures careful handling and transport of your furniture without damage, focusing on protecting your valuable pieces."
+          formTitle="Get a Free Quote"
+          formSubtitle="Fill in the form for a no-obligation calculation"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Furniture Moving and Removal"
+          description="Professional services for safe furniture moving and transportation of any type. Our experienced team ensures careful handling and transport of your furniture without damage, focusing on protecting your valuable pieces."
+          formTitle="Get a Free Quote"
+          formSubtitle="Fill in the form for a no-obligation calculation"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
 
       {/* Clients section */}
       <div>
