@@ -374,19 +374,17 @@ export default function Hero({
                 </div>
               </div>
               {heroPills && (
-                <div className="mt-4 bg-white rounded-xl shadow-2xl overflow-hidden">
-                  <div className="grid grid-cols-3 gap-2 px-4 py-6">
-                    {heroPills.map((p) => (
-                      <div key={p.label} className="flex flex-col items-center gap-3">
-                        <div className="w-20 h-20 rounded-full bg-accent-500 flex items-center justify-center">
-                          <Image src={p.icon} alt="" width={44} height={44} />
-                        </div>
-                        <span className="text-sm font-medium text-primary-900 text-center leading-tight">
-                          {p.label}
-                        </span>
+                <div className="mt-5 grid grid-cols-3 gap-2">
+                  {heroPills.map((p) => (
+                    <div key={p.label} className="flex flex-col items-center gap-2">
+                      <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
+                        <Image src={p.icon} alt="" width={36} height={36} />
                       </div>
-                    ))}
-                  </div>
+                      <span className="text-sm font-medium text-white text-center leading-tight">
+                        {p.label}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
