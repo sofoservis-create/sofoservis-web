@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import LocationMap from "@/components/sections/LocationMap";
@@ -158,14 +159,50 @@ export default function VypratavaniePetrzalkaPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title={heroData.title}
-        description={heroData.description}
-        formTitle={heroData.formTitle}
-        formSubtitle={heroData.formSubtitle}
-        backgroundImage={heroData.backgroundImage}
-            benefits={["Poistenie nábytku zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
+      <link
+        rel="preload"
+        href="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          mascotSrc="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          showMascot
+          mascotSrc="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+          mobileMascotSrc="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
       <div>
         <Clients />
       </div>
