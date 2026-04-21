@@ -21,6 +21,8 @@ interface LabHeroProps {
   lang?: "sk" | "en";
   /** Override mascot SVG path. Used for both desktop and mobile. */
   mascotSrc?: string;
+  /** Multiplier on the desktop mascot scale (1 = default). */
+  desktopMascotScaleMultiplier?: number;
 }
 
 const LAB_HERO_TEXTS = {
@@ -130,11 +132,8 @@ const EMAIL_ROUTING = {
 const MASCOT_ASPECT = 1080 / 1080;
 const GLOW_HALF_WIDTH = 271;
 
-// Desktop visual calibration (narrowForm path) — tuned for the /lab2 composition:
-// mascot sits in the right column, anchored badge-top → form-card-bottom (mascotDims),
-// then scaled up by 1.1845 (= original 1.03 × 1.15 — 15% larger than the initial value).
-// Keep right + glow nudges for visual fit.
-const DESKTOP_MASCOT_SCALE = 1.1608;
+// Desktop visual calibration (narrowForm path) — tuned for the /lab2 composition.
+// Base desktop mascot scale is 1.1608; pages can multiply via desktopMascotScaleMultiplier.
 const DESKTOP_MASCOT_RIGHT = -8;       // px, fixed overflow past frame right
 const DESKTOP_MASCOT_TOP_SHIFT = 0;    // px, flush with badge top
 const DESKTOP_MASCOT_TOP_SHIFT_PCT = -0.07;  // shift mascot up by % of its own height
@@ -156,7 +155,9 @@ export default function LabHero({
   badgeText,
   lang = "sk",
   mascotSrc = "/images/mascot/crossed-hands-mascot.svg",
+  desktopMascotScaleMultiplier = 1,
 }: LabHeroProps) {
+  const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const pathname = usePathname();
   const t = LAB_HERO_TEXTS[lang];
   const vopHref = lang === "en" ? "/en/terms-of-service" : "/vseobecne-obchodne-podmienky";
@@ -432,8 +433,8 @@ export default function LabHero({
               Glow right is computed dynamically so the 542px circle stays centered behind
               the mascot regardless of mascotDims.height. */}
           {narrowForm && mascotDims && (() => {
-            const mascotH = mascotDims.height * DESKTOP_MASCOT_SCALE;
-            const mascotW = mascotDims.height * MASCOT_ASPECT * DESKTOP_MASCOT_SCALE;
+            const mascotH = mascotDims.height * desktopMascotScale;
+            const mascotW = mascotDims.height * MASCOT_ASPECT * desktopMascotScale;
             const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
             const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
             const mascotCenterY = mascotTopPx + mascotH / 2;
@@ -464,9 +465,9 @@ export default function LabHero({
                 priority
                 className="absolute hidden lg:block pointer-events-none select-none"
                 style={{
-                  top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * DESKTOP_MASCOT_SCALE * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
-                  right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * DESKTOP_MASCOT_SCALE * DESKTOP_MASCOT_RIGHT_SHIFT_PCT}px`,
-                  height: `${mascotDims.height * DESKTOP_MASCOT_SCALE}px`,
+                  top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
+                  right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * desktopMascotScale * DESKTOP_MASCOT_RIGHT_SHIFT_PCT}px`,
+                  height: `${mascotDims.height * desktopMascotScale}px`,
                   width: 'auto',
                   zIndex: 20,
                 }}
