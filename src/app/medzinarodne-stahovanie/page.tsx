@@ -238,19 +238,39 @@ export default function MedzinarodneStahovaniePage() {
           <p className="text-lg text-gray-600 text-center mb-10">
             Vyberte krajinu, do ktorej sa sťahujete, a získajte podrobné informácie o trase, cenách a formalitách.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {countries.map((country) => (
-              <Link
-                key={country.href}
-                href={country.href}
-                className="flex flex-col bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all group"
-              >
-                <span className="font-semibold text-gray-900 group-hover:text-blue-600 text-base mb-1">
-                  Sťahovanie do {country.nameGen}
-                </span>
-                <span className="text-sm text-gray-500">z Bratislavy: {country.distance}</span>
-              </Link>
-            ))}
+          <div className="max-w-2xl mx-auto">
+            <details className="group bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all open:shadow-md open:border-blue-500">
+              <summary className="flex items-center justify-between cursor-pointer list-none p-5 font-semibold text-gray-900 text-base">
+                <span>Sťahovanie do — vyber krajinu</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <ul className="border-t border-gray-200 divide-y divide-gray-100">
+                {countries.map((country) => (
+                  <li key={country.href}>
+                    <Link
+                      href={country.href}
+                      className="flex items-baseline justify-between gap-4 px-5 py-3 hover:bg-gray-50 transition-colors group/item"
+                    >
+                      <span className="font-medium text-gray-900 group-hover/item:text-blue-600">
+                        Sťahovanie do {country.nameGen}
+                      </span>
+                      <span className="text-sm text-gray-500 whitespace-nowrap">
+                        z Bratislavy: {country.distance}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </details>
           </div>
         </div>
       </section>
@@ -262,19 +282,39 @@ export default function MedzinarodneStahovaniePage() {
           <p className="text-lg text-gray-600 text-center mb-10">
             Máte konkrétne cieľové mesto? Kliknite na dané mesto a zistite viac o trase, vzdialenosti a cenách zo Slovenska.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {cities.map((city) => (
-              <Link
-                key={city.href}
-                href={city.href}
-                className="flex flex-col bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all group"
-              >
-                <span className="font-semibold text-gray-900 group-hover:text-blue-600 text-base mb-1">
-                  Sťahovanie do {city.nameGen}
-                </span>
-                <span className="text-sm text-gray-400">{city.country} · {city.distance}</span>
-              </Link>
-            ))}
+          <div className="max-w-2xl mx-auto">
+            <details className="group bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all open:shadow-md open:border-blue-500">
+              <summary className="flex items-center justify-between cursor-pointer list-none p-5 font-semibold text-gray-900 text-base">
+                <span>Sťahovanie do — vyber mesto</span>
+                <svg
+                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <ul className="border-t border-gray-200 divide-y divide-gray-100">
+                {cities.map((city) => (
+                  <li key={city.href}>
+                    <Link
+                      href={city.href}
+                      className="flex items-baseline justify-between gap-4 px-5 py-3 hover:bg-gray-50 transition-colors group/item"
+                    >
+                      <span className="font-medium text-gray-900 group-hover/item:text-blue-600">
+                        Sťahovanie do {city.nameGen}
+                      </span>
+                      <span className="text-sm text-gray-400 whitespace-nowrap">
+                        {city.country} · {city.distance}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </details>
           </div>
         </div>
       </section>
