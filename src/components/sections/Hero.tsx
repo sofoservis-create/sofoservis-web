@@ -42,7 +42,38 @@ interface HeroProps {
   lang?: "en" | "sk";
   /** Show the crossed-hands mascot + glow (lab2 style) */
   showMascot?: boolean;
+  /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
+  pillsVariant?: "home" | "stahovanie";
 }
+
+type HeroPill = { icon: string; label: string };
+
+const HERO_PILLS: Record<"home" | "stahovanie", Record<"sk" | "en", HeroPill[]>> = {
+  home: {
+    sk: [
+      { icon: "/icons/truck_icon.svg", label: "Sťahovanie" },
+      { icon: "/icons/vypratavanie_icon.svg", label: "Vypratávanie" },
+      { icon: "/icons/furniture_icon.svg", label: "Montáž nábytku" },
+    ],
+    en: [
+      { icon: "/icons/truck_icon.svg", label: "Moving" },
+      { icon: "/icons/vypratavanie_icon.svg", label: "Clearance" },
+      { icon: "/icons/furniture_icon.svg", label: "Furniture assembly" },
+    ],
+  },
+  stahovanie: {
+    sk: [
+      { icon: "/icons/insurance_icon.svg", label: "Poistenie nábytku zahrnuté" },
+      { icon: "/icons/cash_icon.svg", label: "Bez skrytých poplatkov" },
+      { icon: "/icons/document_icon.svg", label: "Záväzná cena vopred" },
+    ],
+    en: [
+      { icon: "/icons/insurance_icon.svg", label: "Furniture insurance included" },
+      { icon: "/icons/cash_icon.svg", label: "No hidden fees" },
+      { icon: "/icons/document_icon.svg", label: "Binding price upfront" },
+    ],
+  },
+};
 
 export default function Hero({
   title = "Sťahovacie služby s úsmevom a bez stresu",
@@ -57,7 +88,9 @@ export default function Hero({
   phoneNumber,
   lang = "sk",
   showMascot = false,
+  pillsVariant,
 }: HeroProps) {
+  const heroPills = pillsVariant ? HERO_PILLS[pillsVariant][lang] : null;
   // Get current pathname to determine correct phone number
   const pathname = usePathname();
 
@@ -331,6 +364,20 @@ export default function Hero({
                 <div className="p-4">
                   <QuickContactForm variant="primary" lang={lang} />
                 </div>
+                {heroPills && (
+                  <div className="grid grid-cols-3 gap-2 px-4 pb-5 pt-1">
+                    {heroPills.map((p) => (
+                      <div key={p.label} className="flex flex-col items-center gap-2">
+                        <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
+                          <Image src={p.icon} alt="" width={28} height={28} />
+                        </div>
+                        <span className="text-sm font-medium text-primary-900 text-center leading-tight">
+                          {p.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

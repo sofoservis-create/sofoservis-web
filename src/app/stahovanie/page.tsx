@@ -189,11 +189,8 @@ export default function StahovaniePage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot
+          pillsVariant="stahovanie"
         />
-      </div>
-
-      <div className="lg:hidden">
-        <TrustBadges />
       </div>
 
       <div>

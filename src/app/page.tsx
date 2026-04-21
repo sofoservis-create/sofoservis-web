@@ -1,6 +1,5 @@
 import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
-import TrustBadges from "@/components/sections/TrustBadges";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -125,11 +124,8 @@ export default function Home() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot
+          pillsVariant="home"
         />
-      </div>
-
-      <div className="lg:hidden">
-        <TrustBadges />
       </div>
 
       <Clients />

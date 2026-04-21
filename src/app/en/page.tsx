@@ -1,6 +1,5 @@
 import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
-import TrustBadges from "@/components/sections/TrustBadges";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -200,11 +199,8 @@ export default function HomeEN() {
           hoursText="6 days a week 8:00-17:00"
           lang="en"
           showMascot
+          pillsVariant="home"
         />
-      </div>
-
-      <div className="lg:hidden">
-        <TrustBadges lang="en" />
       </div>
 
       <Clients />
