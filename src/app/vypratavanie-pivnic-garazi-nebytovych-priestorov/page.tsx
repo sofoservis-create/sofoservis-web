@@ -153,7 +153,6 @@ export default function VypratavaniePivnicGaraziPage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          desktopMascotAnchor="frame-bottom"
           title={heroData.title}
           description={heroData.description}
           formTitle={heroData.formTitle}
@@ -161,6 +160,8 @@ export default function VypratavaniePivnicGaraziPage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+          desktopMascotScaleMultiplier={1.08}
+          desktopMascotRightShiftPct={0.235}
           desktopMascotBehindForm
         />
       </div>

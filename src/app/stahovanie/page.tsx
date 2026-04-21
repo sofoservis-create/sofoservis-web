@@ -172,7 +172,6 @@ export default function StahovaniePage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          desktopMascotAnchor="frame-bottom"
           title={heroData.title}
           description={heroData.description}
           formTitle={heroData.formTitle}
@@ -180,6 +179,7 @@ export default function StahovaniePage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
         />
       </div>
       <div className="lg:hidden">
