@@ -253,7 +253,7 @@ export default function InternationalMovingServicesPage() {
             const itemCls =
               "flex items-baseline justify-between gap-4 px-5 py-3 hover:bg-gray-50 transition-colors group/item";
             const labelCls = "font-medium text-gray-900 group-hover/item:text-blue-600";
-            const hubLabelCls = "font-bold text-gray-900 group-hover/item:text-blue-600";
+            const hubLabelCls = "font-semibold text-gray-900 group-hover/item:text-blue-600";
             const subCls = "text-sm text-gray-500 whitespace-nowrap";
 
             const toSlovakia: Array<{ href: string; label: string; hub?: boolean }> = [
