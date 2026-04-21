@@ -237,14 +237,17 @@ export default function LabHero({
 
   useEffect(() => {
     if (!narrowForm) return;
+    // Mascot dimensions are derived from layout once after fonts settle, then
+    // frozen until the viewport is resized. We intentionally do NOT observe
+    // h1/badge/consent/formCard for ongoing changes — that caused the mascot
+    // to "breathe" whenever text reflowed (font swap, autocomplete, textarea
+    // auto-grow). Text is static per page, so a single post-fonts measurement
+    // matches the current visual exactly while staying stable thereafter.
     const compute = () => {
       const frame = heroFrameRef.current;
       const badge = badgeRef.current;
       const formCard = formCardRef.current;
       if (!frame || !badge || !formCard) return;
-      // Anchor everything to the shared centered frame, not the full-width section.
-      // narrowForm uses /images/mascot-cropped.png — no top/bottom transparent
-      // padding, so the image bbox IS the visible mascot.
       const frameRect = frame.getBoundingClientRect();
       const badgeRect = badge.getBoundingClientRect();
       const formCardRect = formCard.getBoundingClientRect();
@@ -256,14 +259,19 @@ export default function LabHero({
         : top + height / 2;
       setMascotDims({ top, height, checkboxCenterY });
     };
+    // Initial paint: compute synchronously so the mascot appears immediately.
     compute();
-    const ro = new ResizeObserver(compute);
-    [heroFrameRef.current, h1Ref.current, badgeRef.current, formCardRef.current, consentRef.current].forEach((el) => {
-      if (el) ro.observe(el);
-    });
+    // Re-measure once after web fonts finish loading (text reflow settles).
+    let cancelled = false;
+    if (typeof document !== "undefined" && (document as Document & { fonts?: FontFaceSet }).fonts) {
+      (document as Document & { fonts?: FontFaceSet }).fonts!.ready.then(() => {
+        if (!cancelled) compute();
+      });
+    }
+    // Recompute only on viewport resize — text content does not change at runtime.
     window.addEventListener("resize", compute);
     return () => {
-      ro.disconnect();
+      cancelled = true;
       window.removeEventListener("resize", compute);
     };
   }, [narrowForm]);
