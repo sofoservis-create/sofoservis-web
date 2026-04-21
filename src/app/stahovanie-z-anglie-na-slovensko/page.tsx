@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -108,14 +109,51 @@ export default function StahovanieZAnglieNaSlovenskoPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Sťahovanie z Anglicka na Slovensko"
-        description="Vraciate sa z Anglicka (UK) na Slovensko? Sofoservis zabezpečí kompletné medzinárodné sťahovanie z Londýna, Manchesteru, Birminghamu alebo kdekoľvek inde v Británii. Postaráme sa o balenie, prepravu, colné formality a doručenie priamo na vašu novú adresu."
-        formTitle="Získajte bezplatnú cenovú ponuku"
-        formSubtitle="Sťahovanie na Slovensko — kalkulácia zadarmo"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        benefits={["Pomoc s post-Brexit colnými formalitami", "Doručenie od dverí k dverám", "Poistenie prepravy"]}
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Sťahovanie z Anglicka na Slovensko"
+          description="Vraciate sa z Anglicka (UK) na Slovensko? Sofoservis zabezpečí kompletné medzinárodné sťahovanie z Londýna, Manchesteru, Birminghamu alebo kdekoľvek inde v Británii. Postaráme sa o balenie, prepravu, colné formality a doručenie priamo na vašu novú adresu."
+          formTitle="Získajte bezplatnú cenovú ponuku"
+          formSubtitle="Sťahovanie na Slovensko — kalkulácia zadarmo"
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Sťahovanie z Anglicka na Slovensko"
+          description="Vraciate sa z Anglicka (UK) na Slovensko? Sofoservis zabezpečí kompletné medzinárodné sťahovanie z Londýna, Manchesteru, Birminghamu alebo kdekoľvek inde v Británii. Postaráme sa o balenie, prepravu, colné formality a doručenie priamo na vašu novú adresu."
+          formTitle="Získajte bezplatnú cenovú ponuku"
+          formSubtitle="Sťahovanie na Slovensko — kalkulácia zadarmo"
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
       <div><Clients /></div>
       <div><GoogleReviews /></div>
       <HowItWorks />

@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import FAQ from "@/components/sections/FAQ";
@@ -99,20 +100,53 @@ export default function MovingToBelgiumPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Moving to Belgium from Slovakia"
-        description="Relocating from Slovakia to Belgium? Sofoservis provides professional door-to-door removals on this popular EU route. We cover Brussels, Antwerp, Ghent, Bruges, and all Belgian cities."
-        backgroundImage="/images/stahovanie-gauc.avif"
-        formTitle="Get a Free Quote"
-        formSubtitle="Fill out the form for a no-obligation estimate"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={["Brussels, Antwerp, Ghent", "2-3 day delivery to Belgium", "Door-to-door service"]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Moving to Belgium from Slovakia"
+          description="Relocating from Slovakia to Belgium? Sofoservis provides professional door-to-door removals on this popular EU route. We cover Brussels, Antwerp, Ghent, Bruges, and all Belgian cities."
+          formTitle="Get a Free Quote"
+          formSubtitle="Fill out the form for a no-obligation estimate"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Moving to Belgium from Slovakia"
+          description="Relocating from Slovakia to Belgium? Sofoservis provides professional door-to-door removals on this popular EU route. We cover Brussels, Antwerp, Ghent, Bruges, and all Belgian cities."
+          formTitle="Get a Free Quote"
+          formSubtitle="Fill out the form for a no-obligation estimate"
+          benefits={[]}
+          ratingText="3500+ satisfied customers"
+          lang="en"
+          showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
       <div><Clients /></div>
       <div><GoogleReviews title="Trusted for Moves to Belgium" /></div>
       <div><Reviews showHeadline={true} callToActionText="Get a Quote" /></div>
