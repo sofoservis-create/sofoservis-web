@@ -42,40 +42,40 @@ export const metadata = {
   };
 
 const countries = [
-  { name: "Rakúsko", href: "/medzinarodne-stahovanie/rakusko", distance: "60 km" },
-  { name: "Maďarsko", href: "/medzinarodne-stahovanie/madarsko", distance: "200 km" },
-  { name: "Česká republika", href: "/medzinarodne-stahovanie/ceska-republika", distance: "130–330 km" },
-  { name: "Poľsko", href: "/medzinarodne-stahovanie/polsko", distance: "280–650 km" },
-  { name: "Nemecko", href: "/medzinarodne-stahovanie/nemecko", distance: "620–1 100 km" },
-  { name: "Taliansko", href: "/medzinarodne-stahovanie/taliansko", distance: "850–1 350 km" },
-  { name: "Švajčiarsko", href: "/medzinarodne-stahovanie/svajciarsko", distance: "950–1 200 km" },
-  { name: "Holandsko", href: "/medzinarodne-stahovanie/holandsko", distance: "1 250 km" },
-  { name: "Belgicko", href: "/medzinarodne-stahovanie/belgicko", distance: "1 350 km" },
-  { name: "Dánsko", href: "/medzinarodne-stahovanie/dansko", distance: "1 350 km" },
-  { name: "Francúzsko", href: "/medzinarodne-stahovanie/francuzsko", distance: "1 200–1 400 km" },
-  { name: "Anglicko (UK)", href: "/medzinarodne-stahovanie/anglicko", distance: "1 500 km" },
-  { name: "Švédsko", href: "/medzinarodne-stahovanie/svedsko", distance: "1 650–1 700 km" },
-  { name: "Španielsko", href: "/medzinarodne-stahovanie/spanielsko", distance: "1 700–2 100 km" },
-  { name: "Nórsko", href: "/medzinarodne-stahovanie/norsko", distance: "1 800 km" },
-  { name: "Írsko", href: "/medzinarodne-stahovanie/irsko", distance: "1 900 km + loď" },
+  { name: "Rakúsko", nameGen: "Rakúska", href: "/medzinarodne-stahovanie/rakusko", distance: "60 km" },
+  { name: "Maďarsko", nameGen: "Maďarska", href: "/medzinarodne-stahovanie/madarsko", distance: "200 km" },
+  { name: "Česká republika", nameGen: "Českej republiky", href: "/medzinarodne-stahovanie/ceska-republika", distance: "130–330 km" },
+  { name: "Poľsko", nameGen: "Poľska", href: "/medzinarodne-stahovanie/polsko", distance: "280–650 km" },
+  { name: "Nemecko", nameGen: "Nemecka", href: "/medzinarodne-stahovanie/nemecko", distance: "620–1 100 km" },
+  { name: "Taliansko", nameGen: "Talianska", href: "/medzinarodne-stahovanie/taliansko", distance: "850–1 350 km" },
+  { name: "Švajčiarsko", nameGen: "Švajčiarska", href: "/medzinarodne-stahovanie/svajciarsko", distance: "950–1 200 km" },
+  { name: "Holandsko", nameGen: "Holandska", href: "/medzinarodne-stahovanie/holandsko", distance: "1 250 km" },
+  { name: "Belgicko", nameGen: "Belgicka", href: "/medzinarodne-stahovanie/belgicko", distance: "1 350 km" },
+  { name: "Dánsko", nameGen: "Dánska", href: "/medzinarodne-stahovanie/dansko", distance: "1 350 km" },
+  { name: "Francúzsko", nameGen: "Francúzska", href: "/medzinarodne-stahovanie/francuzsko", distance: "1 200–1 400 km" },
+  { name: "Anglicko (UK)", nameGen: "Anglicka (UK)", href: "/medzinarodne-stahovanie/anglicko", distance: "1 500 km" },
+  { name: "Švédsko", nameGen: "Švédska", href: "/medzinarodne-stahovanie/svedsko", distance: "1 650–1 700 km" },
+  { name: "Španielsko", nameGen: "Španielska", href: "/medzinarodne-stahovanie/spanielsko", distance: "1 700–2 100 km" },
+  { name: "Nórsko", nameGen: "Nórska", href: "/medzinarodne-stahovanie/norsko", distance: "1 800 km" },
+  { name: "Írsko", nameGen: "Írska", href: "/medzinarodne-stahovanie/irsko", distance: "1 900 km + loď" },
 ];
 
 const cities = [
-  { name: "Viedeň", href: "/medzinarodne-stahovanie/vieden", country: "Rakúsko", distance: "60 km" },
-  { name: "Brno", href: "/medzinarodne-stahovanie/brno", country: "Česká republika", distance: "130 km" },
-  { name: "Budapešť", href: "/medzinarodne-stahovanie/budapest", country: "Maďarsko", distance: "200 km" },
-  { name: "Praha", href: "/medzinarodne-stahovanie/praha", country: "Česká republika", distance: "330 km" },
-  { name: "Varšava", href: "/medzinarodne-stahovanie/varsava", country: "Poľsko", distance: "650 km" },
-  { name: "Mníchov", href: "/medzinarodne-stahovanie/mnichov", country: "Nemecko", distance: "620 km" },
-  { name: "Zürich", href: "/medzinarodne-stahovanie/zurich", country: "Švajčiarsko", distance: "950 km" },
-  { name: "Berlín", href: "/medzinarodne-stahovanie/berlin", country: "Nemecko", distance: "900 km" },
-  { name: "Frankfurt", href: "/medzinarodne-stahovanie/frankfurt", country: "Nemecko", distance: "900 km" },
-  { name: "Amsterdam", href: "/medzinarodne-stahovanie/amsterdam", country: "Holandsko", distance: "1 250 km" },
-  { name: "Brusel", href: "/medzinarodne-stahovanie/brusel", country: "Belgicko", distance: "1 350 km" },
-  { name: "Hamburg", href: "/medzinarodne-stahovanie/hamburg", country: "Nemecko", distance: "1 100 km" },
-  { name: "Paríž", href: "/medzinarodne-stahovanie/pariz", country: "Francúzsko", distance: "1 400 km" },
-  { name: "Dublin", href: "/medzinarodne-stahovanie/dublin", country: "Írsko", distance: "1 900 km + loď" },
-  { name: "Londýn", href: "/medzinarodne-stahovanie/londyn", country: "UK", distance: "1 500 km" },
+  { name: "Viedeň", nameGen: "Viedne", href: "/medzinarodne-stahovanie/vieden", country: "Rakúsko", distance: "60 km" },
+  { name: "Brno", nameGen: "Brna", href: "/medzinarodne-stahovanie/brno", country: "Česká republika", distance: "130 km" },
+  { name: "Budapešť", nameGen: "Budapešti", href: "/medzinarodne-stahovanie/budapest", country: "Maďarsko", distance: "200 km" },
+  { name: "Praha", nameGen: "Prahy", href: "/medzinarodne-stahovanie/praha", country: "Česká republika", distance: "330 km" },
+  { name: "Varšava", nameGen: "Varšavy", href: "/medzinarodne-stahovanie/varsava", country: "Poľsko", distance: "650 km" },
+  { name: "Mníchov", nameGen: "Mníchova", href: "/medzinarodne-stahovanie/mnichov", country: "Nemecko", distance: "620 km" },
+  { name: "Zürich", nameGen: "Zürichu", href: "/medzinarodne-stahovanie/zurich", country: "Švajčiarsko", distance: "950 km" },
+  { name: "Berlín", nameGen: "Berlína", href: "/medzinarodne-stahovanie/berlin", country: "Nemecko", distance: "900 km" },
+  { name: "Frankfurt", nameGen: "Frankfurtu", href: "/medzinarodne-stahovanie/frankfurt", country: "Nemecko", distance: "900 km" },
+  { name: "Amsterdam", nameGen: "Amsterdamu", href: "/medzinarodne-stahovanie/amsterdam", country: "Holandsko", distance: "1 250 km" },
+  { name: "Brusel", nameGen: "Bruselu", href: "/medzinarodne-stahovanie/brusel", country: "Belgicko", distance: "1 350 km" },
+  { name: "Hamburg", nameGen: "Hamburgu", href: "/medzinarodne-stahovanie/hamburg", country: "Nemecko", distance: "1 100 km" },
+  { name: "Paríž", nameGen: "Paríža", href: "/medzinarodne-stahovanie/pariz", country: "Francúzsko", distance: "1 400 km" },
+  { name: "Dublin", nameGen: "Dublinu", href: "/medzinarodne-stahovanie/dublin", country: "Írsko", distance: "1 900 km + loď" },
+  { name: "Londýn", nameGen: "Londýna", href: "/medzinarodne-stahovanie/londyn", country: "UK", distance: "1 500 km" },
 ];
 
 export default function MedzinarodneStahovaniePage() {
@@ -246,7 +246,7 @@ export default function MedzinarodneStahovaniePage() {
                 className="flex flex-col bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all group"
               >
                 <span className="font-semibold text-gray-900 group-hover:text-blue-600 text-base mb-1">
-                  Sťahovanie do {country.name}
+                  Sťahovanie do {country.nameGen}
                 </span>
                 <span className="text-sm text-gray-500">z Bratislavy: {country.distance}</span>
               </Link>
@@ -270,7 +270,7 @@ export default function MedzinarodneStahovaniePage() {
                 className="flex flex-col bg-white rounded-xl border border-gray-200 p-5 hover:border-blue-500 hover:shadow-md transition-all group"
               >
                 <span className="font-semibold text-gray-900 group-hover:text-blue-600 text-base mb-1">
-                  Sťahovanie do {city.name}
+                  Sťahovanie do {city.nameGen}
                 </span>
                 <span className="text-sm text-gray-400">{city.country} · {city.distance}</span>
               </Link>
