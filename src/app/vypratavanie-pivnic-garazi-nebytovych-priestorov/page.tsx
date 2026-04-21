@@ -137,14 +137,14 @@ export default function VypratavaniePivnicGaraziPage() {
       {/* Hero section - no wrapper needed as it has its own spacing */}
       <link
         rel="preload"
-        href="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+        href="/images/mascot/stary-gauc-nosi-mascot.svg"
         as="image"
         type="image/svg+xml"
         media="(max-width: 1023px)"
       />
       <link
         rel="preload"
-        href="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+        href="/images/mascot/stary-gauc-nosi-mascot.svg"
         as="image"
         type="image/svg+xml"
         media="(min-width: 1024px)"
@@ -159,7 +159,7 @@ export default function VypratavaniePivnicGaraziPage() {
           formSubtitle={heroData.formSubtitle}
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           desktopMascotScaleMultiplier={1.03}
         />
       </div>
@@ -172,8 +172,8 @@ export default function VypratavaniePivnicGaraziPage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot
-          mascotSrc="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
-          mobileMascotSrc="/images/mascot/stary%20gauc%20nosi%20mascot.svgz"
+          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           mobileMascotOffsetY={-44}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"
