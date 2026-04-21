@@ -57,12 +57,12 @@ const HERO_PILLS: Record<"home" | "stahovanie", Record<"sk" | "en", HeroPill[]>>
     sk: [
       { icon: "/icons/truck_icon.svg", label: "Sťahovanie" },
       { icon: "/icons/vypratavanie_icon.svg", label: "Vypratávanie" },
-      { icon: "/icons/furniture_icon.svg", label: "Montáž nábytku" },
+      { icon: "/icons/repair_icon.svg", label: "Montáž nábytku" },
     ],
     en: [
       { icon: "/icons/truck_icon.svg", label: "Moving" },
       { icon: "/icons/vypratavanie_icon.svg", label: "Clearance" },
-      { icon: "/icons/furniture_icon.svg", label: "Furniture assembly" },
+      { icon: "/icons/repair_icon.svg", label: "Furniture assembly" },
     ],
   },
   stahovanie: {
