@@ -240,10 +240,10 @@ export default function MedzinarodneStahovaniePage() {
           </p>
           <div className="max-w-2xl mx-auto">
             <details className="group bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all open:shadow-md open:border-blue-500">
-              <summary className="flex items-center justify-between cursor-pointer list-none p-5 font-semibold text-gray-900 text-base">
+              <summary className="relative cursor-pointer list-none p-5 pr-14 font-semibold text-gray-900 text-lg sm:text-xl text-center">
                 <span>Sťahovanie do — vyber krajinu</span>
                 <svg
-                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -284,10 +284,10 @@ export default function MedzinarodneStahovaniePage() {
           </p>
           <div className="max-w-2xl mx-auto">
             <details className="group bg-white rounded-xl border border-gray-200 hover:border-blue-500 hover:shadow-md transition-all open:shadow-md open:border-blue-500">
-              <summary className="flex items-center justify-between cursor-pointer list-none p-5 font-semibold text-gray-900 text-base">
+              <summary className="relative cursor-pointer list-none p-5 pr-14 font-semibold text-gray-900 text-lg sm:text-xl text-center">
                 <span>Sťahovanie do — vyber mesto</span>
                 <svg
-                  className="w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
+                  className="absolute right-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500 transition-transform group-open:rotate-180"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
