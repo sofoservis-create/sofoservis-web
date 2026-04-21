@@ -46,6 +46,8 @@ interface HeroProps {
   mascotSrc?: string;
   /** Override mascot SVG path for mobile only. Defaults to mascotSrc or crossed-hands mobile variant. */
   mobileMascotSrc?: string;
+  /** Additional vertical offset (px) for the mobile mascot. Negative = up. */
+  mobileMascotOffsetY?: number;
   /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
   pillsVariant?: "home" | "stahovanie";
 }
@@ -94,6 +96,7 @@ export default function Hero({
   showMascot = false,
   mascotSrc,
   mobileMascotSrc,
+  mobileMascotOffsetY = 0,
   pillsVariant,
 }: HeroProps) {
   const heroPills = pillsVariant ? HERO_PILLS[pillsVariant][lang] : null;
@@ -325,7 +328,7 @@ export default function Hero({
             {showMascot && (
               <div
                 className="lg:hidden relative z-0 pointer-events-none"
-                style={{ marginTop: '-6px', marginBottom: '-188px', height: '630px' }}
+                style={{ marginTop: `${-6 + mobileMascotOffsetY}px`, marginBottom: `${-188 - mobileMascotOffsetY}px`, height: '630px' }}
               >
                 <div
                   className="absolute"
