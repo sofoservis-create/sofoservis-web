@@ -39,6 +39,13 @@ interface LabHeroProps {
    * override to 756 to preserve their pre-fix visual.
    */
   desktopMascotFixedHeightPx?: number;
+  /**
+   * When true, ignore desktopMascotFixedHeightPx/TopPx and dynamically measure
+   * the mascot's vertical span (badge top → form card bottom) via DOM. Restores
+   * the pre-Task-#164 behaviour for pages where the hero composition varies
+   * with viewport width (e.g. homepage 3-line vs 4-line h1 wrap).
+   */
+  desktopMascotDynamicHeight?: boolean;
 }
 
 const LAB_HERO_TEXTS = {
@@ -176,6 +183,7 @@ export default function LabHero({
   desktopMascotBehindForm = false,
   desktopMascotFixedTopPx = 0,
   desktopMascotFixedHeightPx = 728,
+  desktopMascotDynamicHeight = false,
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
@@ -225,19 +233,48 @@ export default function LabHero({
 
   const sectionRef = useRef<HTMLElement>(null);
   const formBodyRef = useRef<HTMLDivElement>(null);
+  const heroFrameRef = useRef<HTMLDivElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const formCardRef = useRef<HTMLDivElement>(null);
   const [frozenBodyHeight, setFrozenBodyHeight] = useState<number | null>(null);
+  const [dynamicMascotDims, setDynamicMascotDims] = useState<{ top: number; height: number } | null>(null);
 
-  // Mascot dimensions are FIXED constants (no DOM measurement). This prevents
-  // the mascot from "breathing" when hero text reflows (font swap, autocomplete,
-  // textarea auto-grow, etc.). Defaults match the historical /stahovanie visual;
-  // pages with longer hero text override via desktopMascotFixedHeightPx to
-  // preserve their pre-fix visual.
+  // Mascot dimensions: by default FIXED constants (stable, no "breathing").
+  // Pages where hero composition varies with viewport (e.g. homepage h1 wrap)
+  // can opt into dynamic DOM measurement via desktopMascotDynamicHeight.
   const mascotDims = narrowForm
-    ? {
-        top: desktopMascotFixedTopPx,
-        height: desktopMascotFixedHeightPx,
-      }
+    ? (desktopMascotDynamicHeight && dynamicMascotDims
+        ? dynamicMascotDims
+        : { top: desktopMascotFixedTopPx, height: desktopMascotFixedHeightPx })
     : null;
+
+  // Optional dynamic measurement (opt-in). Measures badge top → form card bottom
+  // and re-measures on resize so the mascot tracks the actual hero composition.
+  useEffect(() => {
+    if (!narrowForm || !desktopMascotDynamicHeight) return;
+    const compute = () => {
+      const frame = heroFrameRef.current;
+      const badge = badgeRef.current;
+      const formCard = formCardRef.current;
+      if (!frame || !badge || !formCard) return;
+      const frameRect = frame.getBoundingClientRect();
+      const badgeRect = badge.getBoundingClientRect();
+      const formCardRect = formCard.getBoundingClientRect();
+      const top = badgeRect.top - frameRect.top;
+      const height = formCardRect.bottom - badgeRect.top;
+      setDynamicMascotDims({ top, height });
+    };
+    compute();
+    let cancelled = false;
+    const docFonts = (typeof document !== "undefined" ? (document as Document & { fonts?: { ready?: Promise<unknown> } }).fonts : undefined);
+    if (docFonts?.ready) {
+      docFonts.ready.then(() => { if (!cancelled) compute(); });
+    }
+    const ro = new ResizeObserver(() => compute());
+    [heroFrameRef.current, badgeRef.current, formCardRef.current].forEach((el) => { if (el) ro.observe(el); });
+    window.addEventListener("resize", compute);
+    return () => { cancelled = true; ro.disconnect(); window.removeEventListener("resize", compute); };
+  }, [narrowForm, desktopMascotDynamicHeight, submitSuccess]);
 
   // Measure form body height while form is visible; freeze it when success takes over
   // so the card (and therefore the mascot/glow) keeps the same size.
@@ -419,6 +456,7 @@ export default function LabHero({
             glow, text content, and form card. Anchors them all to the same
             max-w-7xl rail so the mascot can no longer drift on wide viewports. */}
         <div
+          ref={heroFrameRef}
           className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-visible"
         >
           {/* narrowForm: glow + mascot inside the shared frame.
@@ -477,8 +515,8 @@ export default function LabHero({
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
             <div className="w-full lg:w-3/5 space-y-3 md:space-y-5 text-center lg:text-left">
               {(hideBadge && !badgeText)
-                ? <div className="h-0 w-0 overflow-hidden" aria-hidden="true" />
-                : <div className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
+                ? <div ref={badgeRef} className="h-0 w-0 overflow-hidden" aria-hidden="true" />
+                : <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
                     <span className="mr-2">✓</span> {badgeText ?? "Poskytujeme služby 6 dní v týždni"}
                   </div>
               }
@@ -598,7 +636,7 @@ export default function LabHero({
         {/* Form card — z-10 so mascot (z-20) overlaps it */}
         <div className="relative z-10 mt-5">
           <div className={`flex flex-col lg:flex-row gap-6 lg:gap-12`}>
-          <div className={`hidden lg:block bg-white rounded-xl shadow-2xl overflow-hidden${narrowForm ? " lg:w-3/5 w-full" : ""}`}>
+          <div ref={formCardRef} className={`hidden lg:block bg-white rounded-xl shadow-2xl overflow-hidden${narrowForm ? " lg:w-3/5 w-full" : ""}`}>
             <div className={`bg-accent-500 text-primary-900 px-6 ${narrowForm ? "py-2 text-center" : "py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"}`}>
               <h3 className="text-lg font-bold">{formTitle}</h3>
               {formSubtitle && <p className={`text-sm text-primary-900/80 ${narrowForm ? "mt-0.5" : ""}`}>{formSubtitle}</p>}
