@@ -185,6 +185,7 @@ export default function StahovaniePage() {
           showMascot
           mascotSrc="/images/mascot/mascot-holding-boxes.svg"
           mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
           pillsVariant="stahovanie"
         />
       </div>
