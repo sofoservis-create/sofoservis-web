@@ -192,6 +192,10 @@ export default function StahovaniePage() {
         />
       </div>
 
+      <div className="lg:hidden">
+        <TrustBadges />
+      </div>
+
       <div>
         <Clients />
       </div>
