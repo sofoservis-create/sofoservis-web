@@ -23,6 +23,8 @@ interface LabHeroProps {
   mascotSrc?: string;
   /** Multiplier on the desktop mascot scale (1 = default). */
   desktopMascotScaleMultiplier?: number;
+  /** Override the desktop mascot horizontal right shift (% of mascot width). Default 0.275. */
+  desktopMascotRightShiftPct?: number;
 }
 
 const LAB_HERO_TEXTS = {
@@ -156,8 +158,10 @@ export default function LabHero({
   lang = "sk",
   mascotSrc = "/images/mascot/crossed-hands-mascot.svg",
   desktopMascotScaleMultiplier = 1,
+  desktopMascotRightShiftPct,
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
+  const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
   const pathname = usePathname();
   const t = LAB_HERO_TEXTS[lang];
   const vopHref = lang === "en" ? "/en/terms-of-service" : "/vseobecne-obchodne-podmienky";
@@ -436,7 +440,7 @@ export default function LabHero({
             const mascotH = mascotDims.height * desktopMascotScale;
             const mascotW = mascotDims.height * MASCOT_ASPECT * desktopMascotScale;
             const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
-            const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
+            const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * desktopMascotRightShift;
             const mascotCenterY = mascotTopPx + mascotH / 2;
             const mascotCenterRight = mascotRightPx + mascotW / 2;
             const glowDiameter = GLOW_HALF_WIDTH * 2;
@@ -467,7 +471,7 @@ export default function LabHero({
                 className="absolute hidden lg:block pointer-events-none select-none"
                 style={{
                   top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
-                  right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * desktopMascotScale * DESKTOP_MASCOT_RIGHT_SHIFT_PCT}px`,
+                  right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * desktopMascotScale * desktopMascotRightShift}px`,
                   height: `${mascotDims.height * desktopMascotScale}px`,
                   width: 'auto',
                   zIndex: 20,

@@ -52,6 +52,10 @@ interface HeroProps {
   mobileFormOffsetY?: number;
   /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
   pillsVariant?: "home" | "stahovanie";
+  /** Multiplier on the desktop mascot scale (1 = default). */
+  desktopMascotScaleMultiplier?: number;
+  /** Override the desktop mascot horizontal right shift (% of mascot width). Default 0.275. */
+  desktopMascotRightShiftPct?: number;
 }
 
 type HeroPill = { icon: string; label: string };
@@ -101,10 +105,14 @@ export default function Hero({
   mobileMascotOffsetY = 0,
   mobileFormOffsetY = 0,
   pillsVariant,
+  desktopMascotScaleMultiplier = 1,
+  desktopMascotRightShiftPct,
 }: HeroProps) {
   const heroPills = pillsVariant ? HERO_PILLS[pillsVariant][lang] : null;
   const desktopMascot = mascotSrc ?? "/images/mascot/crossed-hands-mascot.svg";
   const mobileMascot = mobileMascotSrc ?? mascotSrc ?? "/images/mascot/crossed-hands-mascot-mobile.svg";
+  const desktopMascotScale = DESKTOP_MASCOT_SCALE * desktopMascotScaleMultiplier;
+  const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
   // Get current pathname to determine correct phone number
   const pathname = usePathname();
 
@@ -168,10 +176,10 @@ export default function Hero({
 
       <div ref={heroFrameRef} className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 overflow-visible">
         {showMascot && mascotDims && (() => {
-          const mascotH = mascotDims.height * DESKTOP_MASCOT_SCALE;
-          const mascotW = mascotDims.height * MASCOT_ASPECT * DESKTOP_MASCOT_SCALE;
+          const mascotH = mascotDims.height * desktopMascotScale;
+          const mascotW = mascotDims.height * MASCOT_ASPECT * desktopMascotScale;
           const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
-          const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
+          const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * desktopMascotRightShift;
           const mascotCenterY = mascotTopPx + mascotH / 2;
           const mascotCenterRight = mascotRightPx + mascotW / 2;
           const glowDiameter = GLOW_HALF_WIDTH * 2;

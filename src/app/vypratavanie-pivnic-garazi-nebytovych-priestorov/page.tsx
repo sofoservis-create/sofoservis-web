@@ -160,7 +160,8 @@ export default function VypratavaniePivnicGaraziPage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          desktopMascotScaleMultiplier={1.03}
+          desktopMascotScaleMultiplier={1.08}
+          desktopMascotRightShiftPct={0.305}
         />
       </div>
       <div className="lg:hidden">
