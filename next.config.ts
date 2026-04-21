@@ -55,6 +55,14 @@ const nextConfig = {
         source: "/(.*)",
         headers: securityHeaders,
       },
+      {
+        source: "/:path*.svgz",
+        headers: [
+          { key: "Content-Type", value: "image/svg+xml" },
+          { key: "Content-Encoding", value: "gzip" },
+          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+        ],
+      },
     ];
   },
   redirects: async () => {
