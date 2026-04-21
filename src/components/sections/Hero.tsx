@@ -372,12 +372,14 @@ export default function Hero({
                 <div className="p-4">
                   <QuickContactForm variant="primary" lang={lang} />
                 </div>
-                {heroPills && (
-                  <div className="grid grid-cols-3 gap-2 px-4 pb-5 pt-1">
+              </div>
+              {heroPills && (
+                <div className="mt-4 bg-white rounded-xl shadow-2xl overflow-hidden">
+                  <div className="grid grid-cols-3 gap-2 px-4 py-6">
                     {heroPills.map((p) => (
-                      <div key={p.label} className="flex flex-col items-center gap-2">
-                        <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
-                          <Image src={p.icon} alt="" width={28} height={28} />
+                      <div key={p.label} className="flex flex-col items-center gap-3">
+                        <div className="w-20 h-20 rounded-full bg-accent-500 flex items-center justify-center">
+                          <Image src={p.icon} alt="" width={44} height={44} />
                         </div>
                         <span className="text-sm font-medium text-primary-900 text-center leading-tight">
                           {p.label}
@@ -385,8 +387,8 @@ export default function Hero({
                       </div>
                     ))}
                   </div>
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </div>
 
