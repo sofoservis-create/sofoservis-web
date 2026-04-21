@@ -175,7 +175,8 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
             ratingText="3500+ spokojných zákazníkov"
             mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
             desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.305}
+          desktopMascotRightShiftPct={0.255}
+          desktopMascotBehindForm
           />
         </div>
         <div className="lg:hidden">

@@ -25,6 +25,8 @@ interface LabHeroProps {
   desktopMascotScaleMultiplier?: number;
   /** Override the desktop mascot horizontal right shift (% of mascot width). Default 0.275. */
   desktopMascotRightShiftPct?: number;
+  /** When true, render the desktop mascot behind the form card (z-index below form). */
+  desktopMascotBehindForm?: boolean;
 }
 
 const LAB_HERO_TEXTS = {
@@ -159,6 +161,7 @@ export default function LabHero({
   mascotSrc = "/images/mascot/crossed-hands-mascot.svg",
   desktopMascotScaleMultiplier = 1,
   desktopMascotRightShiftPct,
+  desktopMascotBehindForm = false,
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
@@ -474,7 +477,7 @@ export default function LabHero({
                   right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * desktopMascotScale * desktopMascotRightShift}px`,
                   height: `${mascotDims.height * desktopMascotScale}px`,
                   width: 'auto',
-                  zIndex: 20,
+                  zIndex: desktopMascotBehindForm ? 5 : 20,
                 }}
                 sizes="473px"
               />
