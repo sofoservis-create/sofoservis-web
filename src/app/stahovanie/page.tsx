@@ -184,7 +184,7 @@ export default function StahovaniePage() {
           ratingText="3500+ spokojných zákazníkov"
           showMascot
           mascotSrc="/images/mascot/mascot-holding-boxes.svg"
-          mobileMascotOffsetY={-13}
+          mobileMascotOffsetY={-44}
           pillsVariant="stahovanie"
         />
       </div>
