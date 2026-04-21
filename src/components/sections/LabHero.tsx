@@ -459,11 +459,11 @@ export default function LabHero({
               <div
                 className="absolute hidden lg:block 2xl:hidden xl:hidden pointer-events-none rounded-full"
                 style={{
-                  // lg bucket: mascot 480 → glow 403, centered with offset
-                  width: 403,
-                  height: 403,
-                  right: -110 + (480 / 2) - (403 / 2) + 403 * DESKTOP_GLOW_LEFT_PCT,
-                  bottom: -40 + (480 / 2) - (403 / 2) + 403 * DESKTOP_GLOW_UP_PCT,
+                  // lg bucket: mascot 560 → glow 470
+                  width: 470,
+                  height: 470,
+                  right: -132 + (560 / 2) - (470 / 2) + 470 * DESKTOP_GLOW_LEFT_PCT,
+                  bottom: -40 + (560 / 2) - (470 / 2) + 470 * DESKTOP_GLOW_UP_PCT,
                   background: '#fdc70033',
                   filter: 'blur(100px)',
                   zIndex: 4,
@@ -472,11 +472,11 @@ export default function LabHero({
               <div
                 className="absolute hidden xl:block 2xl:hidden pointer-events-none rounded-full"
                 style={{
-                  // xl bucket: mascot 580 → glow 487
-                  width: 487,
-                  height: 487,
-                  right: -144 + (580 / 2) - (487 / 2) + 487 * DESKTOP_GLOW_LEFT_PCT,
-                  bottom: -40 + (580 / 2) - (487 / 2) + 487 * DESKTOP_GLOW_UP_PCT,
+                  // xl bucket: mascot 680 → glow 571
+                  width: 571,
+                  height: 571,
+                  right: -160 + (680 / 2) - (571 / 2) + 571 * DESKTOP_GLOW_LEFT_PCT,
+                  bottom: -40 + (680 / 2) - (571 / 2) + 571 * DESKTOP_GLOW_UP_PCT,
                   background: '#fdc70033',
                   filter: 'blur(100px)',
                   zIndex: 4,
@@ -485,11 +485,11 @@ export default function LabHero({
               <div
                 className="absolute hidden 2xl:block pointer-events-none rounded-full"
                 style={{
-                  // 2xl bucket: mascot 680 → glow 571
-                  width: 571,
-                  height: 571,
-                  right: -168 + (680 / 2) - (571 / 2) + 571 * DESKTOP_GLOW_LEFT_PCT,
-                  bottom: -40 + (680 / 2) - (571 / 2) + 571 * DESKTOP_GLOW_UP_PCT,
+                  // 2xl bucket: mascot 780 → glow 655
+                  width: 655,
+                  height: 655,
+                  right: -183 + (780 / 2) - (655 / 2) + 655 * DESKTOP_GLOW_LEFT_PCT,
+                  bottom: -40 + (780 / 2) - (655 / 2) + 655 * DESKTOP_GLOW_UP_PCT,
                   background: '#fdc70033',
                   filter: 'blur(100px)',
                   zIndex: 4,
@@ -499,18 +499,18 @@ export default function LabHero({
               <Image
                 src={mascotSrc}
                 alt={t.mascotAlt}
-                width={680}
-                height={680}
+                width={780}
+                height={780}
                 priority
                 unoptimized={mascotSrc.endsWith(".svgz")}
                 className={
                   "absolute hidden lg:block pointer-events-none select-none w-auto " +
-                  "lg:h-[480px] xl:h-[580px] 2xl:h-[680px] " +
-                  "lg:right-[-110px] xl:right-[-144px] 2xl:right-[-168px] " +
+                  "lg:h-[560px] xl:h-[680px] 2xl:h-[780px] " +
+                  "lg:right-[-132px] xl:right-[-160px] 2xl:right-[-183px] " +
                   "bottom-[-40px]"
                 }
                 style={{ maxWidth: 'none', zIndex: desktopMascotBehindForm ? 5 : 20 }}
-                sizes="(min-width: 1536px) 680px, (min-width: 1280px) 580px, 480px"
+                sizes="(min-width: 1536px) 780px, (min-width: 1280px) 680px, 560px"
               />
             </>
           )}
