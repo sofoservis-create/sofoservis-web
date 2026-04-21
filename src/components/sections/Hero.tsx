@@ -194,6 +194,7 @@ export default function Hero({
               />
               <Image
                 src={desktopMascot}
+                unoptimized={desktopMascot.endsWith(".svgz")}
                 alt="Sofoservis maskot"
                 width={Math.round(mascotW)}
                 height={Math.round(mascotH)}
@@ -351,6 +352,7 @@ export default function Hero({
                   />
                   <Image
                     src={mobileMascot}
+                    unoptimized={mobileMascot.endsWith(".svgz")}
                     alt="Sofoservis maskot"
                     width={630}
                     height={630}

@@ -463,6 +463,7 @@ export default function LabHero({
                 width={647}
                 height={647}
                 priority
+                unoptimized={mascotSrc.endsWith(".svgz")}
                 className="absolute hidden lg:block pointer-events-none select-none"
                 style={{
                   top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
@@ -575,6 +576,7 @@ export default function LabHero({
                   />
                   <Image
                     src={mascotSrc}
+                    unoptimized={mascotSrc.endsWith(".svgz")}
                     alt={t.mascotAlt}
                     width={630}
                     height={630}
