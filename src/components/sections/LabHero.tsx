@@ -19,6 +19,8 @@ interface LabHeroProps {
   hideBadge?: boolean;
   badgeText?: string;
   lang?: "sk" | "en";
+  /** Override mascot SVG path. Used for both desktop and mobile. */
+  mascotSrc?: string;
 }
 
 const LAB_HERO_TEXTS = {
@@ -153,6 +155,7 @@ export default function LabHero({
   hideBadge = false,
   badgeText,
   lang = "sk",
+  mascotSrc = "/images/mascot/crossed-hands-mascot.svg",
 }: LabHeroProps) {
   const pathname = usePathname();
   const t = LAB_HERO_TEXTS[lang];
@@ -454,7 +457,7 @@ export default function LabHero({
                 }}
               />
               <Image
-                src="/images/mascot/crossed-hands-mascot.svg"
+                src={mascotSrc}
                 alt={t.mascotAlt}
                 width={647}
                 height={647}
@@ -570,7 +573,7 @@ export default function LabHero({
                     }}
                   />
                   <Image
-                    src="/images/mascot/crossed-hands-mascot.svg"
+                    src={mascotSrc}
                     alt={t.mascotAlt}
                     width={630}
                     height={630}

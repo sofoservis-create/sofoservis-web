@@ -156,17 +156,9 @@ export default function StahovaniePage() {
       {/* Preload hero mascot SVG for instant paint with other hero elements */}
       <link
         rel="preload"
-        href="/images/mascot/crossed-hands-mascot-mobile.svg"
+        href="/images/mascot/mascot-holding-boxes.svg"
         as="image"
         type="image/svg+xml"
-        media="(max-width: 1023px)"
-      />
-      <link
-        rel="preload"
-        href="/images/mascot/crossed-hands-mascot.svg"
-        as="image"
-        type="image/svg+xml"
-        media="(min-width: 1024px)"
       />
 
       <div className="hidden lg:block">
@@ -178,6 +170,7 @@ export default function StahovaniePage() {
           formSubtitle={heroData.formSubtitle}
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
         />
       </div>
       <div className="lg:hidden">
@@ -189,6 +182,7 @@ export default function StahovaniePage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
           pillsVariant="stahovanie"
         />
       </div>

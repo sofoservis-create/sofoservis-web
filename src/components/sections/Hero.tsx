@@ -42,6 +42,10 @@ interface HeroProps {
   lang?: "en" | "sk";
   /** Show the crossed-hands mascot + glow (lab2 style) */
   showMascot?: boolean;
+  /** Override mascot SVG path (used for both desktop and mobile). Defaults to crossed-hands. */
+  mascotSrc?: string;
+  /** Override mascot SVG path for mobile only. Defaults to mascotSrc or crossed-hands mobile variant. */
+  mobileMascotSrc?: string;
   /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
   pillsVariant?: "home" | "stahovanie";
 }
@@ -88,9 +92,13 @@ export default function Hero({
   phoneNumber,
   lang = "sk",
   showMascot = false,
+  mascotSrc,
+  mobileMascotSrc,
   pillsVariant,
 }: HeroProps) {
   const heroPills = pillsVariant ? HERO_PILLS[pillsVariant][lang] : null;
+  const desktopMascot = mascotSrc ?? "/images/mascot/crossed-hands-mascot.svg";
+  const mobileMascot = mobileMascotSrc ?? mascotSrc ?? "/images/mascot/crossed-hands-mascot-mobile.svg";
   // Get current pathname to determine correct phone number
   const pathname = usePathname();
 
@@ -179,7 +187,7 @@ export default function Hero({
                 }}
               />
               <Image
-                src="/images/mascot/crossed-hands-mascot.svg"
+                src={desktopMascot}
                 alt="Sofoservis maskot"
                 width={Math.round(mascotW)}
                 height={Math.round(mascotH)}
@@ -336,7 +344,7 @@ export default function Hero({
                     }}
                   />
                   <Image
-                    src="/images/mascot/crossed-hands-mascot-mobile.svg"
+                    src={mobileMascot}
                     alt="Sofoservis maskot"
                     width={630}
                     height={630}
