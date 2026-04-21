@@ -115,7 +115,6 @@ export default function Home() {
           description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
-          desktopMascotFixedHeightPx={908}
         />
       </div>
       <div className="lg:hidden">
