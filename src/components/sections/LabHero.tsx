@@ -27,6 +27,13 @@ interface LabHeroProps {
   desktopMascotRightShiftPct?: number;
   /** When true, render the desktop mascot behind the form card (z-index below form). */
   desktopMascotBehindForm?: boolean;
+  /**
+   * How the desktop mascot is anchored.
+   * - "form" (default): legacy behavior — height/position derived from form card + badge.
+   * - "frame-bottom": stable size & position — fixed responsive height (lg/xl/2xl) anchored to
+   *   bottom-right of the hero frame, independent of text length.
+   */
+  desktopMascotAnchor?: "form" | "frame-bottom";
 }
 
 const LAB_HERO_TEXTS = {
@@ -162,6 +169,7 @@ export default function LabHero({
   desktopMascotScaleMultiplier = 1,
   desktopMascotRightShiftPct,
   desktopMascotBehindForm = false,
+  desktopMascotAnchor = "form",
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
@@ -236,7 +244,9 @@ export default function LabHero({
   }, [submitSuccess]);
 
   useEffect(() => {
-    if (!narrowForm) return;
+    // Only the legacy "form"-anchored mascot needs DOM measurement.
+    // The "frame-bottom" mode is CSS-only, so skip the observers entirely.
+    if (!narrowForm || desktopMascotAnchor !== "form") return;
     const compute = () => {
       const frame = heroFrameRef.current;
       const badge = badgeRef.current;
@@ -439,7 +449,73 @@ export default function LabHero({
               right is a small negative px offset for controlled overflow past the frame edge.
               Glow right is computed dynamically so the 542px circle stays centered behind
               the mascot regardless of mascotDims.height. */}
-          {narrowForm && mascotDims && (() => {
+          {/* Frame-bottom anchored mascot — stable size & position regardless of text length.
+              Heights: lg 480 / xl 580 / 2xl 680 (CSS-only, no JS measurement, no CLS).
+              Width = height (1:1 aspect). Glow is sized at ~84% of mascot height and offset
+              consistently with the legacy DESKTOP_GLOW_LEFT_PCT / DESKTOP_GLOW_UP_PCT ratios. */}
+          {narrowForm && desktopMascotAnchor === "frame-bottom" && (
+            <>
+              {/* Glow — sized via Tailwind to match each mascot height bucket */}
+              <div
+                className="absolute hidden lg:block 2xl:hidden xl:hidden pointer-events-none rounded-full"
+                style={{
+                  // lg bucket: mascot 480 → glow 403, centered with offset
+                  width: 403,
+                  height: 403,
+                  right: -110 + (480 / 2) - (403 / 2) + 403 * DESKTOP_GLOW_LEFT_PCT,
+                  bottom: -40 + (480 / 2) - (403 / 2) + 403 * DESKTOP_GLOW_UP_PCT,
+                  background: '#fdc70033',
+                  filter: 'blur(100px)',
+                  zIndex: 4,
+                }}
+              />
+              <div
+                className="absolute hidden xl:block 2xl:hidden pointer-events-none rounded-full"
+                style={{
+                  // xl bucket: mascot 580 → glow 487
+                  width: 487,
+                  height: 487,
+                  right: -144 + (580 / 2) - (487 / 2) + 487 * DESKTOP_GLOW_LEFT_PCT,
+                  bottom: -40 + (580 / 2) - (487 / 2) + 487 * DESKTOP_GLOW_UP_PCT,
+                  background: '#fdc70033',
+                  filter: 'blur(100px)',
+                  zIndex: 4,
+                }}
+              />
+              <div
+                className="absolute hidden 2xl:block pointer-events-none rounded-full"
+                style={{
+                  // 2xl bucket: mascot 680 → glow 571
+                  width: 571,
+                  height: 571,
+                  right: -168 + (680 / 2) - (571 / 2) + 571 * DESKTOP_GLOW_LEFT_PCT,
+                  bottom: -40 + (680 / 2) - (571 / 2) + 571 * DESKTOP_GLOW_UP_PCT,
+                  background: '#fdc70033',
+                  filter: 'blur(100px)',
+                  zIndex: 4,
+                }}
+              />
+              {/* Mascot — fixed responsive height, anchored bottom-right of hero frame */}
+              <Image
+                src={mascotSrc}
+                alt={t.mascotAlt}
+                width={680}
+                height={680}
+                priority
+                unoptimized={mascotSrc.endsWith(".svgz")}
+                className={
+                  "absolute hidden lg:block pointer-events-none select-none w-auto " +
+                  "lg:h-[480px] xl:h-[580px] 2xl:h-[680px] " +
+                  "lg:right-[-110px] xl:right-[-144px] 2xl:right-[-168px] " +
+                  "bottom-[-40px]"
+                }
+                style={{ maxWidth: 'none', zIndex: desktopMascotBehindForm ? 5 : 20 }}
+                sizes="(min-width: 1536px) 680px, (min-width: 1280px) 580px, 480px"
+              />
+            </>
+          )}
+
+          {narrowForm && desktopMascotAnchor === "form" && mascotDims && (() => {
             const mascotH = mascotDims.height * desktopMascotScale;
             const mascotW = mascotDims.height * MASCOT_ASPECT * desktopMascotScale;
             const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
