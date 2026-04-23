@@ -262,14 +262,18 @@ export default function LabHero({
   // Mascot dimensions: by default FIXED constants (stable, no "breathing").
   // Pages where hero composition varies with viewport (e.g. homepage h1 wrap)
   // can opt into dynamic DOM measurement via desktopMascotDynamicHeight.
-  // When dynamic measurement is enabled, wait for the actual measurement before
-  // rendering the mascot — otherwise it briefly flashes at the fixed-fallback
-  // size and then snaps to the measured size, causing a visible jump.
+  // Always provide dims so the mascot <Image> is in the initial render and
+  // Next.js can preload it (priority). When dynamic measurement is enabled but
+  // not yet available, fall back to the fixed defaults — but keep the mascot
+  // visually hidden (opacity 0) until the real measurement is in to avoid a
+  // size jump.
   const mascotDims = narrowForm
-    ? (desktopMascotDynamicHeight
+    ? (desktopMascotDynamicHeight && dynamicMascotDims
         ? dynamicMascotDims
         : { top: desktopMascotFixedTopPx, height: desktopMascotFixedHeightPx })
     : null;
+  const mascotMeasured = !desktopMascotDynamicHeight || dynamicMascotDims !== null;
+  const mascotVisible = mascotMeasured && mascotLoaded;
 
   // Optional dynamic measurement (opt-in). Measures badge top → form card bottom
   // and re-measures on resize so the mascot tracks the actual hero composition.
@@ -511,7 +515,7 @@ export default function LabHero({
                   background: '#fdc70033',
                   filter: 'blur(100px)',
                   zIndex: 4,
-                  opacity: mascotLoaded ? 1 : 0,
+                  opacity: mascotVisible ? 1 : 0,
                 }}
               />
               <Image
@@ -529,7 +533,7 @@ export default function LabHero({
                   height: `${mascotDims.height * desktopMascotScale}px`,
                   width: 'auto',
                   zIndex: desktopMascotBehindForm ? 5 : 20,
-                  opacity: mascotLoaded ? 1 : 0,
+                  opacity: mascotVisible ? 1 : 0,
                 }}
                 sizes="473px"
               />
