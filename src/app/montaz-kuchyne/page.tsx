@@ -155,9 +155,6 @@ export default function MontazKuchynePage() {
           showMascot
           mascotSrc="/images/mascot/montaz-mascot.svg"
           mobileMascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotOffsetY={-24}
-          mobileMascotScale={0.847}
-          mobileFormOffsetY={39}
           pillsVariant="stahovanie"
         />
       </div>
