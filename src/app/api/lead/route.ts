@@ -36,6 +36,8 @@ const UTM_FIELDS = [
   "gclid",
   "landing_page",
   "visit_date",
+  "referrer",
+  "source_classified",
 ] as const;
 
 function clean(v: unknown): string {
