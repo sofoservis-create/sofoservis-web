@@ -515,6 +515,7 @@ function PhoneReveal({
           >
             {isEnglish ? "Show" : "Zobraz."}
           </button>
+          {suffix}
         </>
       )}
     </div>
