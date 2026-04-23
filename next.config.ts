@@ -67,6 +67,39 @@ const nextConfig = {
   },
   redirects: async () => {
     return [
+      // Safety-net: staré test/dev stránky ktoré boli odstránené, ale
+      // môžu byť stále indexované v Google (vrátane sub-pathov)
+      {
+        source: "/editor",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/editor/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/lab2",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/lab2/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      // EN deprecated URL → kanonická EN clearance stránka
+      {
+        source: "/en/junk-removal-services",
+        destination: "/en/clearance",
+        permanent: true,
+      },
+      {
+        source: "/en/junk-removal",
+        destination: "/en/clearance",
+        permanent: true,
+      },
       {
         source: "/moving",
         destination: "https://www.sofoservis.sk/en/apartment-moving",

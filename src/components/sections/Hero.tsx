@@ -187,7 +187,7 @@ export default function Hero({
           fill
           priority
           quality={75}
-          sizes="100vw"
+          sizes="(max-width: 1920px) 100vw, 1920px"
           className="object-cover object-top md:object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-900/70 to-primary-900/65"></div>

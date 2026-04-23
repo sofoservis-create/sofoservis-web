@@ -1,6 +1,40 @@
+# Hlavné pravidlá pre všetky boty
 User-agent: *
 Allow: /
 Disallow: /admin
 Disallow: /api/
+
+# Bloking parametrov ktoré spôsobujú duplicitné URL v Google indexe
+# (UTM tracking ostáva plne funkčný — týka sa len search botov, nie analytics)
+Disallow: /*?utm_*
+Disallow: /*?gclid=*
+Disallow: /*?fbclid=*
+Disallow: /*?msclkid=*
+Disallow: /*?_branch_match_id=*
+
+# AI crawlers — explicitne povolení (visibility v ChatGPT, Claude, Perplexity, Google AI Overviews)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
 
 Sitemap: https://www.sofoservis.sk/sitemap.xml

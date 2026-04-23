@@ -24,6 +24,14 @@ export const metadata = {
     siteName: "Sofoservis",
     locale: "sk_SK",
     type: "website",
+    images: [
+      {
+        url: "https://www.sofoservis.sk/images/og-logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -62,9 +70,10 @@ export default async function RootLayout({
   const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "/";
   const isBrand = pathname.startsWith("/brand");
+  const htmlLang = pathname.startsWith("/en") ? "en" : "sk";
 
   return (
-    <html lang="sk" className={`${sora.variable} scroll-smooth`}>
+    <html lang={htmlLang} className={`${sora.variable} scroll-smooth`}>
       <head>
         <link rel="preconnect" href="https://load.server.sofoservis.sk" />
         <link rel="dns-prefetch" href="https://load.server.sofoservis.sk" />

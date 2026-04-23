@@ -444,8 +444,8 @@ export default function LabHero({
             alt={`Sťahovacie služby - ${title}`}
             fill
             priority
-            quality={90}
-            sizes="100vw"
+            quality={75}
+            sizes="(max-width: 1920px) 100vw, 1920px"
             className="object-cover object-top md:object-center lg:[object-position:center_85%]"
           />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, #000000b3 0% 50%, #000000a6 100%)' }} />

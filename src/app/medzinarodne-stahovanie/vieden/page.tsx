@@ -15,7 +15,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
-  title: "Sťahovanie do Viedne zo Bratislavy | Sofoservis",
+  title: "Sťahovanie do Viedne z Bratislavy | Sofoservis",
   description:
     "Profesionálne sťahovanie do Viedne z Bratislavy. Vzdialenosť len 60 km — rýchla a cenovo výhodná preprava. Skúsený tím, poistenie zahrnuté.",
   alternates: {
@@ -29,7 +29,7 @@ export const metadata = {
   keywords:
     "sťahovanie do Viedne, preprava Bratislava Viedeň, sťahovanie Viedeň, medzinárodné sťahovanie Viedeň, sťahovanie do Rakúska Viedeň",
   openGraph: {
-    title: "Sťahovanie do Viedne zo Bratislavy | Sofoservis",
+    title: "Sťahovanie do Viedne z Bratislavy | Sofoservis",
     description:
       "Sťahovanie do Viedne z Bratislavy — len 60 km. Rýchla preprava, férové ceny, poistenie zahrnuté.",
     url: "https://www.sofoservis.sk/medzinarodne-stahovanie/vieden",
