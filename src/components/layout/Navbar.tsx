@@ -505,7 +505,7 @@ export default function Navbar() {
           href: "",
           label: "Hodinový manžel",
           subLinks: [
-            { href: "/hodinovy-manzel-majster", label: "→ Hodinový manžel (hlavná)" },
+            { href: "/hodinovy-manzel-majster", label: "Hodinový manžel — prehľad" },
             {
               href: "/hodinovy-manzel-majster",
               label: "Mestá",
@@ -668,7 +668,7 @@ export default function Navbar() {
           href: "",
           label: "Handyman Services",
           subLinks: [
-            { href: "/en/handyman-services", label: "→ Handyman Services (main)" },
+            { href: "/en/handyman-services", label: "Handyman Services — overview" },
             {
               href: "/en/handyman-services",
               label: "Cities",
