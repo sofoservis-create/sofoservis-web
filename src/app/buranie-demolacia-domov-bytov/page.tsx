@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -38,7 +39,7 @@ export default function BuranieDemlaciaPage() {
       "Profesionálne služby v oblasti búrania a demolácie starých domov, budov, stodôl a iných objektov. Zabezpečíme kompletný proces od prípravných prác.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
-    backgroundImage: "/images/stahovanie-gauc.avif",
+    backgroundImage: "/images/sofoservis-zamestnanci-hero.avif",
   };
 
   // Custom data for Features section
@@ -122,15 +123,51 @@ export default function BuranieDemlaciaPage() {
           ];
   return (
     <main className="bg-white">
-      {/* Hero section - no wrapper needed as it has its own spacing */}
-      <Hero
-        title={heroData.title}
-        description={heroData.description}
-        formTitle={heroData.formTitle}
-        formSubtitle={heroData.formSubtitle}
-        backgroundImage={heroData.backgroundImage}
-            benefits={["Poistenie nábytku zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
+      {/* Mascot preload — desktop + mobile */}
+      <link
+        rel="preload"
+        as="image"
+        href="/images/mascot/buranie-mascot.svg"
+        media="(min-width: 1024px)"
       />
+      <link
+        rel="preload"
+        as="image"
+        href="/images/mascot/buranie-mascot.svg"
+        media="(max-width: 1023px)"
+      />
+
+      {/* Hero — desktop (LabHero) */}
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          mascotSrc="/images/mascot/buranie-mascot.svg"
+          desktopMascotDynamicHeight
+        />
+      </div>
+      {/* Hero — mobile */}
+      <div className="lg:hidden">
+        <Hero
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          backgroundImage={heroData.backgroundImage}
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          showMascot
+          mascotSrc="/images/mascot/buranie-mascot.svg"
+          mobileMascotOffsetY={-44}
+          mobileMascotScale={0.847}
+          mobileFormOffsetY={19}
+        />
+      </div>
 
       {/* Clients section */}
       <div>
