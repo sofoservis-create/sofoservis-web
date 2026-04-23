@@ -1,6 +1,8 @@
 "use client";
 // src/components/sections/Hero.tsx
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import QuickContactForm from "@/components/forms/QuickContactForm";
@@ -123,8 +125,10 @@ export default function Hero({
   const badgeRef = useRef<HTMLDivElement>(null);
   const formCardRef = useRef<HTMLDivElement>(null);
   const [mascotDims, setMascotDims] = useState<{ top: number; height: number } | null>(null);
+  const [desktopMascotLoaded, setDesktopMascotLoaded] = useState(false);
+  const [mobileMascotLoaded, setMobileMascotLoaded] = useState(false);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     if (!showMascot) return;
     const compute = () => {
       const frame = heroFrameRef.current;
@@ -178,10 +182,17 @@ export default function Hero({
       </div>
 
       <div ref={heroFrameRef} className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10 overflow-visible">
-        {showMascot && mascotDims && (() => {
-          const mascotH = mascotDims.height * desktopMascotScale;
-          const mascotW = mascotDims.height * MASCOT_ASPECT * desktopMascotScale;
-          const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
+        {showMascot && (() => {
+          // Always render the mascot Image so Next.js priority preload starts
+          // during initial HTML parse. Use a fallback height until the real
+          // measurement is in, and gate visibility via opacity so there's no
+          // size jump or "lonely glow" flash.
+          const dims = mascotDims ?? { top: 0, height: 728 };
+          const measured = mascotDims !== null;
+          const visible = measured && desktopMascotLoaded;
+          const mascotH = dims.height * desktopMascotScale;
+          const mascotW = dims.height * MASCOT_ASPECT * desktopMascotScale;
+          const mascotTopPx = dims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
           const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * desktopMascotRightShift;
           const mascotCenterY = mascotTopPx + mascotH / 2;
           const mascotCenterRight = mascotRightPx + mascotW / 2;
@@ -191,7 +202,7 @@ export default function Hero({
           return (
             <>
               <div
-                className="absolute hidden lg:block pointer-events-none"
+                className="absolute hidden lg:block pointer-events-none transition-opacity duration-200"
                 style={{
                   top: `${glowCenterY - GLOW_HALF_WIDTH}px`,
                   right: `${glowCenterRight - GLOW_HALF_WIDTH}px`,
@@ -201,6 +212,7 @@ export default function Hero({
                   background: '#fdc70033',
                   filter: 'blur(100px)',
                   zIndex: 4,
+                  opacity: visible ? 1 : 0,
                 }}
               />
               <Image
@@ -210,8 +222,9 @@ export default function Hero({
                 width={Math.round(mascotW)}
                 height={Math.round(mascotH)}
                 priority
-                className="absolute hidden lg:block pointer-events-none select-none"
-                style={{ top: `${mascotTopPx}px`, right: `${mascotRightPx}px`, width: `${mascotW}px`, height: `${mascotH}px`, maxWidth: 'none', zIndex: 5 }}
+                onLoad={() => setDesktopMascotLoaded(true)}
+                className="absolute hidden lg:block pointer-events-none select-none transition-opacity duration-200"
+                style={{ top: `${mascotTopPx}px`, right: `${mascotRightPx}px`, width: `${mascotW}px`, height: `${mascotH}px`, maxWidth: 'none', zIndex: 5, opacity: visible ? 1 : 0 }}
                 sizes={`${Math.round(mascotW)}px`}
               />
             </>
@@ -354,7 +367,7 @@ export default function Hero({
                   style={{ width: `${mascotPx}px`, height: `${mascotPx}px`, left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
                 >
                   <div
-                    className="absolute left-1/2 top-1/2"
+                    className="absolute left-1/2 top-1/2 transition-opacity duration-200"
                     style={{
                       width: `${glowPx}px`,
                       height: `${glowPx}px`,
@@ -363,6 +376,7 @@ export default function Hero({
                       filter: 'blur(100px)',
                       transform: `translate(calc(-50% - ${glowPx * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${glowPx * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
                       zIndex: 0,
+                      opacity: mobileMascotLoaded ? 1 : 0,
                     }}
                   />
                   <Image
@@ -372,8 +386,9 @@ export default function Hero({
                     width={mascotPx}
                     height={mascotPx}
                     priority
-                    className="select-none relative"
-                    style={{ zIndex: 10, maxWidth: 'none', width: `${mascotPx}px`, height: `${mascotPx}px` }}
+                    onLoad={() => setMobileMascotLoaded(true)}
+                    className="select-none relative transition-opacity duration-200"
+                    style={{ zIndex: 10, maxWidth: 'none', width: `${mascotPx}px`, height: `${mascotPx}px`, opacity: mobileMascotLoaded ? 1 : 0 }}
                   />
                 </div>
               </div>

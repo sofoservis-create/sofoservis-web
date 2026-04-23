@@ -525,7 +525,7 @@ export default function LabHero({
                 height={647}
                 priority
                 unoptimized={mascotSrc.endsWith(".svgz")}
-                onLoadingComplete={() => setMascotLoaded(true)}
+                onLoad={() => setMascotLoaded(true)}
                 className="absolute hidden lg:block pointer-events-none select-none transition-opacity duration-200"
                 style={{
                   top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
