@@ -168,6 +168,7 @@ export default function BuranieStienPriecokPage() {
           mobileMascotOffsetY={-24}
           mobileMascotScale={0.847}
           mobileFormOffsetY={39}
+          pillsVariant="stahovanie"
         />
       </div>
 
