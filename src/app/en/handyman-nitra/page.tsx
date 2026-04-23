@@ -121,7 +121,7 @@ export default function HandymanNitraPage() {
         formSubtitle={heroData.formSubtitle}
         backgroundImage={heroData.backgroundImage}
         lang="en"
-            benefits={["Furniture insurance included", "No hidden fees", "Fixed price upfront"]}
+            benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
       />
 
       <div>

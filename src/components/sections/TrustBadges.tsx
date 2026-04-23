@@ -15,8 +15,8 @@ const badges: Badge[] = [
   {
     icon: "/icons/insurance_icon.svg",
     iconAlt: "Poistenie",
-    textSk: "Poistenie nábytku zahrnuté",
-    textEn: "Furniture insurance included",
+    textSk: "Poistenie zahrnuté",
+    textEn: "Insurance included",
   },
   {
     icon: "/icons/cash_icon.svg",

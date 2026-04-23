@@ -140,7 +140,7 @@ export default function WallDemolitionPageEN() {
         phoneNumber="0951 735 130"
         hoursText="6 days a week 8:00-17:00"
         lang="en"
-            benefits={["Furniture insurance included", "No hidden fees", "Fixed price upfront"]}
+            benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
       />
 
       <div>

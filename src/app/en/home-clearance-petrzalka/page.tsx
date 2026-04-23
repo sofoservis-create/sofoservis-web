@@ -47,7 +47,7 @@ export default function HomeClearancePetrzalkaPage() {
         formSubtitle="Fill out the form for a no-obligation estimate in Petržalka"
         backgroundImage="/images/stahovanie-gauc.avif"
         lang="en"
-        benefits={["Furniture insurance included", "No hidden fees", "Fixed price upfront"]}
+        benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
       />
 
       <div>

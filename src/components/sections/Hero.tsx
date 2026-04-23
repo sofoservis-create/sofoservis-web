@@ -79,12 +79,12 @@ const HERO_PILLS: Record<"home" | "stahovanie", Record<"sk" | "en", HeroPill[]>>
   },
   stahovanie: {
     sk: [
-      { icon: "/icons/insurance_icon.svg", label: "Poistenie nábytku zahrnuté" },
+      { icon: "/icons/insurance_icon.svg", label: "Poistenie zahrnuté" },
       { icon: "/icons/cash_icon.svg", label: "Bez skrytých poplatkov" },
       { icon: "/icons/document_icon.svg", label: "Záväzná cena vopred" },
     ],
     en: [
-      { icon: "/icons/insurance_icon.svg", label: "Furniture insurance included" },
+      { icon: "/icons/insurance_icon.svg", label: "Insurance included" },
       { icon: "/icons/cash_icon.svg", label: "No hidden fees" },
       { icon: "/icons/document_icon.svg", label: "Binding price upfront" },
     ],

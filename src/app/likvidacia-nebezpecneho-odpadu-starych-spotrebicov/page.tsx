@@ -140,7 +140,7 @@ export default function LikvidaciaSpotrebicovPage() {
         formTitle={heroData.formTitle}
         formSubtitle={heroData.formSubtitle}
         backgroundImage={heroData.backgroundImage}
-            benefits={["Poistenie nábytku zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
+            benefits={["Poistenie zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
       />
 
       {/* Clients section */}
