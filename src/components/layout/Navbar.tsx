@@ -800,8 +800,8 @@ export default function Navbar() {
     },
     {
       name: "INFORMATION",
+      flat: true,
       links: [
-        { href: "/en/blog", label: "Blog" },
         { href: "/en/contact", label: "Contact" },
       ],
     },
