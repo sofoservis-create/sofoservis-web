@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -121,26 +122,66 @@ export default function HazardousWasteRemovalPage() {
     ],
   };
 
+  const heroTitle = "Hazardous Waste & Appliance Removal";
+  const heroDescription =
+    "Reliable and eco-friendly solutions for removal of hazardous waste and old electrical appliances. We ensure professional removal and licensed recycling in compliance with environmental regulations and waste management laws.";
+  const heroFormTitle = "Get a free price quote";
+  const heroFormSubtitle = "Fill out the form for a no-obligation calculation";
+
   return (
     <main className="bg-white">
-      <Hero
-        title="Hazardous Waste & Appliance Removal"
-        description="Reliable and eco-friendly solutions for removal of hazardous waste and old electrical appliances. We ensure professional removal and licensed recycling in compliance with environmental regulations and waste management laws."
-        formTitle="Get a free price quote"
-        formSubtitle="Fill out the form for a no-obligation calculation"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={[
-          "Certified removal",
-          "All waste types",
-          "Full documentation",
-        ]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
+      <link
+        rel="preload"
+        href="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title={heroTitle}
+          description={heroDescription}
+          formTitle={heroFormTitle}
+          formSubtitle={heroFormSubtitle}
+          benefits={[]}
+          ratingText="Over 3500+ satisfied customers"
+          mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+          desktopMascotScaleMultiplier={1.08}
+          desktopMascotRightShiftPct={0.235}
+          desktopMascotBehindForm
+          desktopMascotFixedHeightPx={756}
+          desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={460}
+          lang="en"
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title={heroTitle}
+          description={heroDescription}
+          formTitle={heroFormTitle}
+          formSubtitle={heroFormSubtitle}
+          benefits={[]}
+          ratingText="Over 3500+ satisfied customers"
+          showMascot
+          mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+          mobileMascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+          mobileMascotOffsetY={-44}
+          mobileMascotScale={0.847}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+          lang="en"
+        />
+      </div>
 
       <div>
         <Clients />
