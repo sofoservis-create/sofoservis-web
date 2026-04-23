@@ -124,18 +124,14 @@ export default function BuranieDemlaciaPage() {
   return (
     <main className="bg-white">
       {/* Mascot preload — desktop + mobile */}
-      <link
-        rel="preload"
+      <link rel="preload"
         as="image"
         href="/images/mascot/buranie-mascot.svg"
-        media="(min-width: 1024px)"
-      />
-      <link
-        rel="preload"
+        media="(min-width: 1024px)" fetchPriority="high" />
+      <link rel="preload"
         as="image"
         href="/images/mascot/buranie-mascot.svg"
-        media="(max-width: 1023px)"
-      />
+        media="(max-width: 1023px)" fetchPriority="high" />
 
       {/* Hero — desktop (LabHero) */}
       <div className="hidden lg:block">

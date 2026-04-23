@@ -115,20 +115,16 @@ export default function ConstructionWasteRemovalGalantaPage() {
 
   return (
     <main className="bg-white">
-      <link
-        rel="preload"
+      <link rel="preload"
         href="/images/mascot/buranie-mascot.svg"
         as="image"
         type="image/svg+xml"
-        media="(max-width: 1023px)"
-      />
-      <link
-        rel="preload"
+        media="(max-width: 1023px)" fetchPriority="high" />
+      <link rel="preload"
         href="/images/mascot/buranie-mascot.svg"
         as="image"
         type="image/svg+xml"
-        media="(min-width: 1024px)"
-      />
+        media="(min-width: 1024px)" fetchPriority="high" />
 
       <div className="hidden lg:block">
         <LabHero

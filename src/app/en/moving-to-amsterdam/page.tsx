@@ -112,20 +112,16 @@ export default function MovingToAmsterdamPage() {
   return (
     <main className="bg-white">
       {/* Preload hero mascot SVG for instant paint with other hero elements */}
-      <link
-        rel="preload"
+      <link rel="preload"
         href="/images/mascot/mascot-holding-boxes-mobile.svg"
         as="image"
         type="image/svg+xml"
-        media="(max-width: 1023px)"
-      />
-      <link
-        rel="preload"
+        media="(max-width: 1023px)" fetchPriority="high" />
+      <link rel="preload"
         href="/images/mascot/mascot-holding-boxes.svg"
         as="image"
         type="image/svg+xml"
-        media="(min-width: 1024px)"
-      />
+        media="(min-width: 1024px)" fetchPriority="high" />
 
       <div className="hidden lg:block">
         <LabHero
