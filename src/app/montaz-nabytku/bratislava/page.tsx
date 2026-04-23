@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -75,13 +76,49 @@ export default function MontazNabytkuBratislavaPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Montáž nábytku v Bratislave"
-        description="Profesionálne skladanie a montáž nábytku v celej Bratislave. Ušetrite si čas a nervy, my sa postaráme o to, aby váš nový nábytok stál pevne a rovno."
-        formTitle="Získať kalkuláciu"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        phoneNumber="421952044363"
+      <link
+        rel="preload"
+        href="/images/mascot/montaz-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/montaz-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Montáž nábytku v Bratislave"
+          description="Profesionálne skladanie a montáž nábytku v celej Bratislave. Ušetrite si čas a nervy, my sa postaráme o to, aby váš nový nábytok stál pevne a rovno."
+          formTitle="Získať kalkuláciu"
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          mascotSrc="/images/mascot/montaz-mascot.svg"
+          desktopMascotDynamicHeight
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Montáž nábytku v Bratislave"
+          description="Profesionálne skladanie a montáž nábytku v celej Bratislave. Ušetrite si čas a nervy, my sa postaráme o to, aby váš nový nábytok stál pevne a rovno."
+          formTitle="Získať kalkuláciu"
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          showMascot
+          mascotSrc="/images/mascot/montaz-mascot.svg"
+          mobileMascotSrc="/images/mascot/montaz-mascot.svg"
+          mobileMascotOffsetY={-45}
+          mobileFormOffsetY={32}
+          pillsVariant="stahovanie"
+          phoneNumber="421952044363"
+        />
+      </div>
       <Clients />
       <GoogleReviews title="Recenzie montáže — Bratislava" />
       <Reviews showHeadline={true} />
