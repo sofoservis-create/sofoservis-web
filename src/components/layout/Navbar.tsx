@@ -505,11 +505,10 @@ export default function Navbar() {
           href: "",
           label: "Hodinový manžel",
           subLinks: [
-            { href: "/hodinovy-manzel-majster", label: "Hodinový manžel — prehľad" },
+            { href: "/hodinovy-manzel-majster", label: "Hodinový manžel" },
             {
               href: "/hodinovy-manzel-majster",
               label: "Mestá",
-              subLinksAllLabel: "→ Všetky mestá",
               subLinks: [
                 { href: "/hodinovy-manzel-majster/bratislava", label: "Bratislava" },
                 { href: "/hodinovy-manzel-majster/galanta", label: "Galanta" },
@@ -668,11 +667,10 @@ export default function Navbar() {
           href: "",
           label: "Handyman Services",
           subLinks: [
-            { href: "/en/handyman-services", label: "Handyman Services — overview" },
+            { href: "/en/handyman-services", label: "Handyman Services" },
             {
               href: "/en/handyman-services",
               label: "Cities",
-              subLinksAllLabel: "→ All cities",
               subLinks: [
                 { href: "/en/handyman-bratislava", label: "Bratislava" },
                 { href: "/en/handyman-galanta", label: "Galanta" },
@@ -856,7 +854,7 @@ export default function Navbar() {
             <div key={index}>
               <button
                 onClick={() => { const key = category.name + "-" + link.label; setExpandedSubLink(expandedSubLink === key ? null : key); }}
-                className="w-full flex justify-between items-center px-5 py-2.5 text-primary-700 text-base hover:bg-accent-400 hover:text-primary-900 transition-colors font-medium border-t border-gray-100 mt-1"
+                className="w-full flex justify-between items-center text-left px-5 py-2.5 text-primary-700 text-base hover:bg-accent-400 hover:text-primary-900 transition-colors font-medium border-t border-gray-100 mt-1"
               >
                 <span>{link.label}</span>
                 <svg
@@ -881,7 +879,7 @@ export default function Navbar() {
                       <div key={si}>
                         <button
                           onClick={() => { const key = category.name + "-" + sub.label; setExpandedSubSubLink(expandedSubSubLink === key ? null : key); }}
-                          className="w-full flex justify-between items-center pl-8 pr-5 py-2 text-primary-700 text-sm hover:bg-accent-400 hover:text-primary-900 transition-colors font-medium"
+                          className="w-full flex justify-between items-center text-left pl-8 pr-5 py-2 text-primary-700 text-sm hover:bg-accent-400 hover:text-primary-900 transition-colors font-medium"
                         >
                           <span>{sub.label}</span>
                           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`flex-shrink-0 transition-transform duration-200 ${expandedSubSubLink === category.name + "-" + sub.label ? "rotate-180" : ""}`}>
