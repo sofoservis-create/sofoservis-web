@@ -21,6 +21,7 @@ interface NavLink {
   href: string;
   label: string;
   subLinks?: NavSubLink[];
+  subLinksAllLabel?: string;
 }
 
 interface NavCategory {
@@ -311,6 +312,13 @@ export default function Navbar() {
         {
           href: "/stahovanie-tazkych-bremien",
           label: "Sťahovanie ťažkých bremien",
+          subLinksAllLabel: "→ Všetky ťažké bremená",
+          subLinks: [
+            { href: "/stahovanie-klavira", label: "Sťahovanie klavírov" },
+            { href: "/stahovanie-pianina", label: "Sťahovanie pianín" },
+            { href: "/stahovanie-strojov-zariadeni", label: "Sťahovanie strojov a zariadení" },
+            { href: "/stahovanie-trezorov", label: "Sťahovanie trezorov" },
+          ],
         },
         {
           href: "",
@@ -443,6 +451,16 @@ export default function Navbar() {
         },
         {
           href: "",
+          label: "Špeciálne typy",
+          subLinks: [
+            { href: "/vypratavanie-chalupy", label: "Vypratávanie chalupy" },
+            { href: "/vypratavanie-kancelarii", label: "Vypratávanie kancelárií" },
+            { href: "/vypratavanie-po-rekonstrukcii", label: "Vypratávanie po rekonštrukcii" },
+            { href: "/vypratavanie-pozostalosti", label: "Vypratávanie pozostalosti" },
+          ],
+        },
+        {
+          href: "",
           label: "Mestá",
           subLinks: [
             {
@@ -494,12 +512,13 @@ export default function Navbar() {
       mobileName: "ĎALŠIE SLUŽBY",
       links: [
         {
-          href: "/buranie-demolacia-domov-bytov",
-          label: "Búranie a demolácia domov, budov",
-        },
-        {
-          href: "/buranie-stien-priecok",
-          label: "Búranie stien v dome a byte",
+          href: "",
+          label: "Búranie / demolácie",
+          subLinks: [
+            { href: "/buracie-demolacne-prace", label: "→ Všetky búracie a demolačné práce" },
+            { href: "/buranie-demolacia-domov-bytov", label: "Búranie a demolácia domov, budov" },
+            { href: "/buranie-stien-priecok", label: "Búranie stien v dome a byte" },
+          ],
         },
         {
           href: "",
@@ -544,7 +563,17 @@ export default function Navbar() {
         { href: "/en/apartment-moving", label: "Apartment & House Moving" },
         { href: "/en/office-moving", label: "Office & Business Moving" },
         { href: "/en/furniture-moving-removal", label: "Furniture Moving & Removal" },
-        { href: "/en/moving-heavy-loads", label: "Moving Heavy Loads" },
+        {
+          href: "/en/moving-heavy-loads",
+          label: "Moving Heavy Loads",
+          subLinksAllLabel: "→ All heavy load services",
+          subLinks: [
+            { href: "/en/piano-moving", label: "Piano Moving" },
+            { href: "/en/upright-piano-moving", label: "Upright Piano Moving" },
+            { href: "/en/machinery-moving", label: "Machinery Moving" },
+            { href: "/en/safe-moving", label: "Safe Moving" },
+          ],
+        },
         {
           href: "",
           label: "International Moving",
@@ -642,6 +671,16 @@ export default function Navbar() {
         { href: "/en/furniture-removal", label: "Furniture Junk Removal" },
         { href: "/en/construction-waste-removal", label: "Construction Waste Removal" },
         { href: "/en/hazardous-waste-removal", label: "Hazardous Waste Removal" },
+        {
+          href: "",
+          label: "Special Types",
+          subLinks: [
+            { href: "/en/cottage-clearance", label: "Cottage Clearance" },
+            { href: "/en/office-clearance", label: "Office Clearance" },
+            { href: "/en/post-renovation-clearance", label: "Post-Renovation Clearance" },
+            { href: "/en/estate-clearance-bereavement", label: "Estate Clearance (Bereavement)" },
+          ],
+        },
       ],
     },
     {
@@ -661,8 +700,15 @@ export default function Navbar() {
     {
       name: "OTHER",
       links: [
-        { href: "/en/demolition-services", label: "Demolition Services" },
-        { href: "/en/wall-demolition", label: "Wall & Partition Demolition" },
+        {
+          href: "",
+          label: "Demolition",
+          subLinks: [
+            { href: "/en/demolition-services", label: "→ All demolition services" },
+            { href: "/en/house-demolition", label: "House & Building Demolition" },
+            { href: "/en/wall-demolition", label: "Wall & Partition Demolition" },
+          ],
+        },
         {
           href: "",
           label: "Handyman Services",
