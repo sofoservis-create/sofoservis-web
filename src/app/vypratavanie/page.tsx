@@ -183,6 +183,7 @@ export default function VypratavaniePage() {
           desktopMascotBehindForm
           desktopMascotFixedHeightPx={756}
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">

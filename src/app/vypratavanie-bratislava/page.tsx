@@ -190,6 +190,7 @@ export default function VypratavanieBratislavaPage() {
           desktopMascotRightShiftPct={0.235}
           desktopMascotBehindForm
           desktopMascotFixedHeightPx={756}
+          desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">
