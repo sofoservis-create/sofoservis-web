@@ -163,9 +163,9 @@ export default function BuranieDemlaciaPage() {
           ratingText="3500+ spokojných zákazníkov"
           showMascot
           mascotSrc="/images/mascot/buranie-mascot.svg"
-          mobileMascotOffsetY={-44}
+          mobileMascotOffsetY={-24}
           mobileMascotScale={0.847}
-          mobileFormOffsetY={19}
+          mobileFormOffsetY={39}
         />
       </div>
 

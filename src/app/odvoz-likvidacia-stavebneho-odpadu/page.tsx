@@ -181,9 +181,9 @@ export default function OdvozStavebnehoOdpaduPage() {
           showMascot
           mascotSrc="/images/mascot/buranie-mascot.svg"
           mobileMascotSrc="/images/mascot/buranie-mascot.svg"
-          mobileMascotOffsetY={-44}
+          mobileMascotOffsetY={-24}
           mobileMascotScale={0.847}
-          mobileFormOffsetY={19}
+          mobileFormOffsetY={39}
           pillsVariant="stahovanie"
         />
       </div>
