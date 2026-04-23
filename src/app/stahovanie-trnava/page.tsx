@@ -195,6 +195,7 @@ export default function StahovanieTrnavaPage() {
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/mascot-holding-boxes.svg"
           desktopMascotScaleMultiplier={1.03}
+        desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">

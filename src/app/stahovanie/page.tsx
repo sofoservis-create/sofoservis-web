@@ -181,6 +181,7 @@ export default function StahovaniePage() {
           mascotSrc="/images/mascot/mascot-holding-boxes.svg"
           desktopMascotScaleMultiplier={1.03}
           desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">
