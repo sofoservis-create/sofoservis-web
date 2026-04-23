@@ -544,7 +544,7 @@ export default function LabHero({
                   </span>
                 </h1>
 
-                <div className="block text-base lg:text-xl text-white/90 max-w-xl lg:max-w-[18rem] leading-relaxed mx-auto lg:mx-0">
+                <div className="block text-base lg:text-xl text-white/90 max-w-xl lg:max-w-[20rem] leading-relaxed mx-auto lg:mx-0">
                   <p>{description}</p>
                 </div>
               </div>
