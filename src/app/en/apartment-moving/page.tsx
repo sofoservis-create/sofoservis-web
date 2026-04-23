@@ -236,7 +236,7 @@ export default function ApartmentMovingPage() {
           title="Service Areas"
           description="We provide our apartment moving services in these locations"
           locations={serviceLocations}
-          supporText="We also operate outside Bratislava:"
+          supporText="We also operate outside Slovakia:"
           callToActionText="We move in your area too, get a quote"
           additionalText="We operate throughout Slovakia and can also handle international moves to neighboring countries. Contact us for more information about services outside these areas."
         />

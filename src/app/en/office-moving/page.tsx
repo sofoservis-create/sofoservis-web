@@ -238,7 +238,7 @@ export default function OfficeMovingPage() {
           title="Service Areas"
           description="We provide our office moving services throughout these locations"
           locations={serviceLocations}
-          supporText="We also operate outside Bratislava:"
+          supporText="We also operate outside Slovakia:"
           callToActionText="We move in your area too, get a quote"
           additionalText="We serve businesses all across Slovakia and can also handle international relocations. Contact us for more information about services outside these listed areas."
         />

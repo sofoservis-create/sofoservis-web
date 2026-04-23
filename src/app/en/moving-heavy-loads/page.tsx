@@ -236,7 +236,7 @@ export default function HeavyLoadsMovingPage() {
           title="Service Areas"
           description="We provide our heavy item moving services throughout these locations"
           locations={serviceLocations}
-          supporText="We also operate outside Bratislava:"
+          supporText="We also operate outside Slovakia:"
           callToActionText="We move in your area too, get a quote"
           additionalText="Our specialized heavy item moving services are available nationwide. We have the equipment and expertise to transport heavy loads safely across Slovakia and even to neighboring countries."
         />

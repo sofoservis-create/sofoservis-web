@@ -382,7 +382,7 @@ export default function InternationalMovingServicesPage() {
           title="Our European Coverage"
           description="We provide international moving services to and from these countries"
           locations={europeanCountries}
-          supporText="We also operate outside Bratislava:"
+          supporText="We also operate outside Slovakia:"
           callToActionText="We move in your area too, get a quote"
           additionalText="We can also arrange moving services to other countries outside Europe. Contact us for details about your specific destination."
         />
