@@ -162,7 +162,7 @@ export default function MontazNabytkuPage() {
           showMascot
           mascotSrc="/images/mascot/montaz-mascot.svg"
           mobileMascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotOffsetY={-45}
+          mobileMascotOffsetY={-32}
           mobileFormOffsetY={13}
           pillsVariant="stahovanie"
         />
