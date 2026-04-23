@@ -480,6 +480,13 @@ export default function Navbar() {
       links: [
         { href: "/montaz-nabytku", label: "Montáž nábytku" },
         { href: "/montaz-kuchyne", label: "Montáž kuchyne" },
+        {
+          href: "",
+          label: "Mestá",
+          subLinks: [
+            { href: "/montaz-nabytku/bratislava", label: "Bratislava" },
+          ],
+        },
       ],
     },
     {
@@ -494,7 +501,27 @@ export default function Navbar() {
           href: "/buranie-stien-priecok",
           label: "Búranie stien v dome a byte",
         },
-        { href: "/hodinovy-manzel-majster", label: "Hodinový manžel" },
+        {
+          href: "",
+          label: "Hodinový manžel",
+          subLinks: [
+            { href: "/hodinovy-manzel-majster", label: "→ Hodinový manžel (hlavná)" },
+            {
+              href: "/hodinovy-manzel-majster",
+              label: "Mestá",
+              subLinksAllLabel: "→ Všetky mestá",
+              subLinks: [
+                { href: "/hodinovy-manzel-majster/bratislava", label: "Bratislava" },
+                { href: "/hodinovy-manzel-majster/galanta", label: "Galanta" },
+                { href: "/hodinovy-manzel-majster/levice", label: "Levice" },
+                { href: "/hodinovy-manzel-majster/nitra", label: "Nitra" },
+                { href: "/hodinovy-manzel-majster/piestany", label: "Piešťany" },
+                { href: "/hodinovy-manzel-majster/sala", label: "Šaľa" },
+                { href: "/hodinovy-manzel-majster/trnava", label: "Trnava" },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -623,6 +650,13 @@ export default function Navbar() {
       links: [
         { href: "/en/furniture-assembly", label: "Furniture Assembly" },
         { href: "/en/kitchen-installation", label: "Kitchen Installation" },
+        {
+          href: "",
+          label: "Cities",
+          subLinks: [
+            { href: "/en/furniture-assembly-bratislava", label: "Bratislava" },
+          ],
+        },
       ],
     },
     {
@@ -630,7 +664,27 @@ export default function Navbar() {
       links: [
         { href: "/en/demolition-services", label: "Demolition Services" },
         { href: "/en/wall-demolition", label: "Wall & Partition Demolition" },
-        { href: "/en/handyman-services", label: "Handyman Services" },
+        {
+          href: "",
+          label: "Handyman Services",
+          subLinks: [
+            { href: "/en/handyman-services", label: "→ Handyman Services (main)" },
+            {
+              href: "/en/handyman-services",
+              label: "Cities",
+              subLinksAllLabel: "→ All cities",
+              subLinks: [
+                { href: "/en/handyman-bratislava", label: "Bratislava" },
+                { href: "/en/handyman-galanta", label: "Galanta" },
+                { href: "/en/handyman-levice", label: "Levice" },
+                { href: "/en/handyman-nitra", label: "Nitra" },
+                { href: "/en/handyman-piestany", label: "Piešťany" },
+                { href: "/en/handyman-sala", label: "Šaľa" },
+                { href: "/en/handyman-trnava", label: "Trnava" },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
