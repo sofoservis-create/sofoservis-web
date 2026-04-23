@@ -145,19 +145,11 @@ export default function MovingHlohovecPage() {
   return (
     <main className="bg-white">
       {/* Preload hero mascot SVG for instant paint with other hero elements */}
-      <link
-        rel="preload"
-        href="/images/mascot/mascot-holding-boxes-mobile.svg"
-        as="image"
-        type="image/svg+xml"
-        media="(max-width: 1023px)"
-      />
-      <link
+<link
         rel="preload"
         href="/images/mascot/mascot-holding-boxes.svg"
         as="image"
         type="image/svg+xml"
-        media="(min-width: 1024px)"
       />
 
       <div className="hidden lg:block">
@@ -185,7 +177,7 @@ export default function MovingHlohovecPage() {
           lang="en"
           showMascot
           mascotSrc="/images/mascot/mascot-holding-boxes.svg"
-          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes.svg"
           mobileMascotOffsetY={-44}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"
