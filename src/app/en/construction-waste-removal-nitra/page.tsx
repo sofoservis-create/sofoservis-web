@@ -239,7 +239,7 @@ export default function ConstructionWasteRemovalNitraPage() {
       </div>
       <RelatedServices
         title="Related Services"
-        services={[{"title":"Construction Waste Removal","description":"Fast removal and ecological disposal of all construction waste.","href":"/en/construction-waste-removal","icon":"/icons/container_icon.svg"},{"title":"Demolition Services","description":"Professional demolition of buildings, walls and interiors.","href":"/en/demolition-services","icon":"/icons/wrecking_ball_icon.svg"},{"title":"Hazardous Waste Disposal","description":"Safe disposal of hazardous waste and old appliances.","href":"/en/hazardous-waste-disposal","icon":"/icons/hazmat_icon.svg"},{"title":"Home Clearance","description":"Complete home clearance — we remove everything.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
+        services={[{"title":"Construction Waste Removal","description":"Fast removal and ecological disposal of all construction waste.","href":"/en/construction-waste-removal","icon":"/icons/container_icon.svg"},{"title":"Demolition Services","description":"Professional demolition of buildings, walls and interiors.","href":"/en/demolition-services","icon":"/icons/wrecking_ball_icon.svg"},{"title":"Hazardous Waste Disposal","description":"Safe disposal of hazardous waste and old appliances.","href":"/en/hazardous-waste-removal","icon":"/icons/hazmat_icon.svg"},{"title":"Home Clearance","description":"Complete home clearance — we remove everything.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
       />
 
       <ServicePricing filter={["demolition", "clearance", "moving"]} lang="en" />

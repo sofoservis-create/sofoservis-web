@@ -292,7 +292,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/en/apartment-clearance-samorin`, changeFrequency: "weekly", priority: 0.55 },
     { url: `${BASE_URL}/en/apartment-clearance-stupava`, changeFrequency: "weekly", priority: 0.55 },
 
-    { url: `${BASE_URL}/en/home-clearance`, changeFrequency: "weekly", priority: 0.65 },
+    { url: `${BASE_URL}/en/home-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
     { url: `${BASE_URL}/en/home-clearance-galanta`, changeFrequency: "weekly", priority: 0.55 },
     { url: `${BASE_URL}/en/home-clearance-hlohovec`, changeFrequency: "weekly", priority: 0.55 },
     { url: `${BASE_URL}/en/home-clearance-komarno`, changeFrequency: "weekly", priority: 0.55 },
@@ -352,10 +352,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/en/safe-moving`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE_URL}/en/upright-piano-moving`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE_URL}/en/basement-garage-junk-removal`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/basement-garage-clearance`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${BASE_URL}/en/property-land-junk-removal`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/property-land-clearance`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/hazardous-waste-disposal`, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${BASE_URL}/en/hazardous-waste-removal`, changeFrequency: "weekly", priority: 0.6 },
 
     { url: `${BASE_URL}/en/moving-from-slovakia`, changeFrequency: "monthly", priority: 0.6 },
     { url: `${BASE_URL}/en/moving-to-slovakia`, changeFrequency: "monthly", priority: 0.6 },

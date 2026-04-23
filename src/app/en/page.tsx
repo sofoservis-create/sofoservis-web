@@ -243,7 +243,7 @@ export default function HomeEN() {
             title: "Space Clearance & Furniture Removal",
             description:
               "We'll take away your old furniture, appliances and construction waste. Quickly, responsibly and at fair prices.",
-            link: "/en/home-clearance",
+            link: "/en/home-junk-removal",
           },
           {
             image: "/icons/repair_icon.svg",
