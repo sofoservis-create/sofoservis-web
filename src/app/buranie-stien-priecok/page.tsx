@@ -165,9 +165,6 @@ export default function BuranieStienPriecokPage() {
           ratingText="3500+ spokojných zákazníkov"
           showMascot
           mascotSrc="/images/mascot/buranie-mascot.svg"
-          mobileMascotOffsetY={-24}
-          mobileMascotScale={0.847}
-          mobileFormOffsetY={39}
           pillsVariant="stahovanie"
         />
       </div>
