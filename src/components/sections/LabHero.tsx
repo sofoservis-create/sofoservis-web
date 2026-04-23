@@ -523,17 +523,17 @@ export default function LabHero({
 
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
             <div
-              className="w-full lg:w-3/5 space-y-3 md:space-y-5 text-center lg:text-left lg:min-h-[var(--hero-text-min-h,0px)] lg:flex lg:flex-col"
+              className="w-full lg:w-3/5 space-y-3 md:space-y-5 text-center lg:text-left lg:min-h-[var(--hero-text-min-h,0px)] lg:flex lg:flex-col lg:items-start"
               style={desktopMinHeroTextHeightPx ? ({ ["--hero-text-min-h" as string]: `${desktopMinHeroTextHeightPx}px` } as React.CSSProperties) : undefined}
             >
               {(hideBadge && !badgeText)
                 ? <div ref={badgeRef} className="h-0 w-0 overflow-hidden" aria-hidden="true" />
-                : <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
+                : <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0% lg:self-start">
                     <span className="mr-2">✓</span> {badgeText ?? "Poskytujeme služby 6 dní v týždni"}
                   </div>
               }
 
-              <div className="space-y-3 md:space-y-5 lg:flex-1 lg:flex lg:flex-col lg:justify-center">
+              <div className="space-y-3 md:space-y-5 w-full lg:flex-1 lg:flex lg:flex-col">
                 <h1
                   id="hero-heading"
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]"
@@ -544,7 +544,7 @@ export default function LabHero({
                   </span>
                 </h1>
 
-                <div className="block text-base lg:text-xl text-white/90 max-w-xl leading-relaxed mx-auto lg:mx-0">
+                <div className="block text-base lg:text-xl text-white/90 max-w-xl lg:max-w-md leading-relaxed mx-auto lg:mx-0">
                   <p>{description}</p>
                 </div>
               </div>
