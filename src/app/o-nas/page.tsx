@@ -209,27 +209,27 @@ export default function ONasPage() {
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             {/* Photos column */}
             <div className="w-full lg:w-2/5 flex flex-col sm:flex-row lg:flex-col gap-4">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl flex-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl flex-1 aspect-[2/3]">
                 <ZoomableImage
                   src="/images/zakladatel-sofoservis-portrait.png"
                   alt="Sofian Sofo Hidbani – zakladateľ Sofoservis"
                   width={800}
                   height={1200}
                   priority
-                  className="w-full object-cover"
+                  className="w-full h-full object-cover object-center"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
                   <span className="text-white text-sm font-medium">Sofian &ldquo;Sofo&rdquo; Hidbani – zakladateľ</span>
                 </div>
               </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-xl flex-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl flex-1 aspect-[2/3]">
                 <ZoomableImage
                   src="/images/zakladatel-zaciatky.webp"
                   alt="Zakladateľ Sofoservis v začiatkoch – pri žltej dodávke 2018"
                   width={800}
                   height={800}
-                  className="w-full object-cover"
+                  className="w-full h-full object-cover object-center"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
