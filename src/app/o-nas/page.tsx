@@ -248,10 +248,10 @@ export default function ONasPage() {
               </h2>
               <div className="space-y-4 text-primary-700 text-lg leading-relaxed">
                 <p>
-                  V roku 2018 som videl kamarátov, ako začali podnikať — a pochopil som: ak oni môžu, prečo nie ja? Začal som s otcovou dodávkou a inzerátom na Bazoši: <em>&ldquo;Najlacnejšie sťahovanie v Bratislave.&rdquo;</em> Prvý byt som presťahoval za 50 € a aj to som sa hanbil vypýtať.
+                  V roku 2018 som videl kamarátov, ako začali podnikať, a pochopil som: ak oni môžu, prečo nie ja? Začal som s otcovou dodávkou a inzerátom na Bazoši: <em>&ldquo;Najlacnejšie sťahovanie v Bratislave.&rdquo;</em> Prvý byt som presťahoval za 50 € a aj to som sa hanbil vypýtať.
                 </p>
                 <p>
-                  Firma rástla rýchlo — možno príliš rýchlo. Keď ma moja pravá ruka okradla o viac ako 50 000 €, takmer sme skrachovali. No nevzdal som sa.
+                  Firma rástla rýchlo, možno príliš rýchlo. Keď ma moja pravá ruka okradla o viac ako 50 000 €, takmer sme skrachovali. No nevzdal som sa.
                 </p>
                 <p>
                   Dnes máme stabilnú firmu s troma vyškolenými tímami. <Link href="/stahovanie" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Sťahujeme</Link> byty, domy aj kancelárie. <Link href="/vypratavanie-bytov-domov" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Vypratávame</Link> priestory po zosnulých, pred rekonštrukciou aj po nej. <Link href="/montaz-nabytku" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Montujeme</Link> nábytok a kuchyne na dennej báze.
