@@ -55,7 +55,7 @@ interface HeroProps {
   /** Additional vertical offset (px) for the mobile form card. Positive = down. */
   mobileFormOffsetY?: number;
   /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
-  pillsVariant?: "home" | "stahovanie";
+  pillsVariant?: "home" | "stahovanie" | "hodinovy";
   /** Multiplier on the desktop mascot scale (1 = default). */
   desktopMascotScaleMultiplier?: number;
   /** Override the desktop mascot horizontal right shift (% of mascot width). Default 0.275. */
@@ -64,7 +64,7 @@ interface HeroProps {
 
 type HeroPill = { icon: string; label: string };
 
-const HERO_PILLS: Record<"home" | "stahovanie", Record<"sk" | "en", HeroPill[]>> = {
+const HERO_PILLS: Record<"home" | "stahovanie" | "hodinovy", Record<"sk" | "en", HeroPill[]>> = {
   home: {
     sk: [
       { icon: "/icons/truck_icon.svg", label: "Sťahovanie" },
@@ -87,6 +87,18 @@ const HERO_PILLS: Record<"home" | "stahovanie", Record<"sk" | "en", HeroPill[]>>
       { icon: "/icons/insurance_icon.svg", label: "Insurance included" },
       { icon: "/icons/cash_icon.svg", label: "No hidden fees" },
       { icon: "/icons/document_icon.svg", label: "Binding price upfront" },
+    ],
+  },
+  hodinovy: {
+    sk: [
+      { icon: "/icons/wrench_icon.svg", label: "Skúsení majstri" },
+      { icon: "/icons/cash_icon.svg", label: "Bez skrytých poplatkov" },
+      { icon: "/icons/repair_icon.svg", label: "Výjazd zdarma" },
+    ],
+    en: [
+      { icon: "/icons/wrench_icon.svg", label: "Experienced handymen" },
+      { icon: "/icons/cash_icon.svg", label: "No hidden fees" },
+      { icon: "/icons/repair_icon.svg", label: "Free callout" },
     ],
   },
 };
