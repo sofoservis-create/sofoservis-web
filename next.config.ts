@@ -180,6 +180,54 @@ const nextConfig = {
         destination: "/en/furniture-assembly",
         permanent: true,
       },
+      // EN duplicate consolidation: /en/moving-to-{country} → /en/moving-from-slovakia-to-{country}
+      // Both URL sets covered the same use-case (moving from Slovakia to a country).
+      // Canonical set is moving-from-slovakia-to-X (clearer URL, in main menu, longer content).
+      {
+        source: "/en/moving-to-austria",
+        destination: "/en/moving-from-slovakia-to-austria",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-france",
+        destination: "/en/moving-from-slovakia-to-france",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-germany",
+        destination: "/en/moving-from-slovakia-to-germany",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-ireland",
+        destination: "/en/moving-from-slovakia-to-ireland",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-netherlands",
+        destination: "/en/moving-from-slovakia-to-netherlands",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-norway",
+        destination: "/en/moving-from-slovakia-to-norway",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-sweden",
+        destination: "/en/moving-from-slovakia-to-sweden",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-switzerland",
+        destination: "/en/moving-from-slovakia-to-switzerland",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-to-uk",
+        destination: "/en/moving-from-slovakia-to-uk",
+        permanent: true,
+      },
     ];
   },
 };

@@ -179,7 +179,7 @@ export default function MovingToDenmarkPage() {
         title="Related Services"
         services={[
           { title: "Moving to Copenhagen", description: "Dedicated Copenhagen route page.", href: "/en/moving-to-copenhagen", icon: "/icons/globe_icon.svg" },
-          { title: "Moving to Sweden", description: "Also moving to Sweden?", href: "/en/moving-to-sweden", icon: "/icons/globe_icon.svg" },
+          { title: "Moving to Sweden", description: "Also moving to Sweden?", href: "/en/moving-from-slovakia-to-sweden", icon: "/icons/globe_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

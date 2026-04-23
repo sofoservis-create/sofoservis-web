@@ -24,6 +24,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
     languages: {
       en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/rakusko",
       "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
     },
   },

@@ -24,6 +24,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-uk",
     languages: {
       en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-uk",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/anglicko",
       "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-uk",
     },
   },

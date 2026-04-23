@@ -21,7 +21,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/medzinarodne-stahovanie/francuzsko",
     languages: {
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/francuzsko",
-      en: "https://www.sofoservis.sk/en/moving-to-france",
+      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-france",
       "x-default": "https://www.sofoservis.sk/medzinarodne-stahovanie/francuzsko",
     },
   },

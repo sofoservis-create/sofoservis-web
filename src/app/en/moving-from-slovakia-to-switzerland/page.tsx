@@ -24,6 +24,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-switzerland",
     languages: {
       en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-switzerland",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/svajciarsko",
       "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-switzerland",
     },
   },

@@ -21,7 +21,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/medzinarodne-stahovanie/norsko",
     languages: {
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/norsko",
-      en: "https://www.sofoservis.sk/en/moving-to-norway",
+      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-norway",
       "x-default": "https://www.sofoservis.sk/medzinarodne-stahovanie/norsko",
     },
   },

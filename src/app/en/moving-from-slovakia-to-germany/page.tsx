@@ -24,6 +24,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-germany",
     languages: {
       en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-germany",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/nemecko",
       "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-germany",
     },
   },

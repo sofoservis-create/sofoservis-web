@@ -21,7 +21,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/medzinarodne-stahovanie/holandsko",
     languages: {
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/holandsko",
-      en: "https://www.sofoservis.sk/en/moving-to-netherlands",
+      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-netherlands",
       "x-default": "https://www.sofoservis.sk/medzinarodne-stahovanie/holandsko",
     },
   },
