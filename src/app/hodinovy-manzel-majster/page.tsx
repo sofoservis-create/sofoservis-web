@@ -174,7 +174,7 @@ export default function HodinovyManzelMajsterPage() {
           mascotSrc="/images/mascot/montaz-mascot.svg"
           mobileMascotSrc="/images/mascot/montaz-mascot.svg"
           mobileMascotOffsetY={-45}
-          mobileFormOffsetY={26}
+          mobileFormOffsetY={32}
           pillsVariant="hodinovy"
         />
       </div>
