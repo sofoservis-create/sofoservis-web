@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -114,15 +115,53 @@ export default function ConstructionWasteRemovalGalantaPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title={heroData.title}
-        description={heroData.description}
-        formTitle={heroData.formTitle}
-        formSubtitle={heroData.formSubtitle}
-        backgroundImage={heroData.backgroundImage}
-        lang="en"
-            benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
+      <link
+        rel="preload"
+        href="/images/mascot/buranie-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/buranie-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          backgroundImage={heroData.backgroundImage}
+          lang="en"
+          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
+          mascotSrc="/images/mascot/buranie-mascot.svg"
+          desktopMascotDynamicHeight
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          backgroundImage={heroData.backgroundImage}
+          lang="en"
+          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
+          showMascot
+          mascotSrc="/images/mascot/buranie-mascot.svg"
+          mobileMascotSrc="/images/mascot/buranie-mascot.svg"
+          mobileMascotOffsetY={-24}
+          mobileMascotScale={0.847}
+          mobileFormOffsetY={39}
+          pillsVariant="stahovanie"
+        />
+      </div>
 
       <div>
         <Clients />

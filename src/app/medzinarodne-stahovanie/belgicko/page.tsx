@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -129,14 +130,50 @@ export default function StahovanieBelgickoPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title={heroData.title}
-        description={heroData.description}
-        formTitle={heroData.formTitle}
-        formSubtitle={heroData.formSubtitle}
-        backgroundImage={heroData.backgroundImage}
-        benefits={["Brusel, Antverpy, Gent a ďalšie", "Poistenie prepravy zahrnuté", "Transparentná cena vopred"]}
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/mascot-holding-boxes.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          backgroundImage={heroData.backgroundImage}
+          benefits={["Brusel, Antverpy, Gent a ďalšie", "Poistenie prepravy zahrnuté", "Transparentná cena vopred"]}
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          desktopMascotScaleMultiplier={1.03}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title={heroData.title}
+          description={heroData.description}
+          formTitle={heroData.formTitle}
+          formSubtitle={heroData.formSubtitle}
+          backgroundImage={heroData.backgroundImage}
+          benefits={["Brusel, Antverpy, Gent a ďalšie", "Poistenie prepravy zahrnuté", "Transparentná cena vopred"]}
+          showMascot
+          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mobileMascotOffsetY={-44}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
       <div><Clients /></div>
       <div><GoogleReviews /></div>
       <HowItWorks />

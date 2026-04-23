@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -123,24 +124,68 @@ export default function ConstructionWasteRemovalPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Construction Waste Removal & Disposal"
-        description="Professional and fast construction waste removal and eco-friendly disposal services. We handle waste removal after renovation, demolition, or construction at competitive prices with complete disposal documentation."
-        formTitle="Get a free price quote"
-        formSubtitle="Fill out the form for a no-obligation calculation"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={[
+      <link
+        rel="preload"
+        href="/images/mascot/buranie-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
+      />
+      <link
+        rel="preload"
+        href="/images/mascot/buranie-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Construction Waste Removal & Disposal"
+          description="Professional and fast construction waste removal and eco-friendly disposal services. We handle waste removal after renovation, demolition, or construction at competitive prices with complete disposal documentation."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          backgroundImage="/images/stahovanie-gauc.avif"
+          badgeText="Services available 6 days a week"
+          ratingText="Over 3500+ satisfied customers"
+          benefits={[
           "Full documentation",
           "Container delivery",
           "Eco-friendly disposal",
         ]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
-      />
+          lang="en"
+          mascotSrc="/images/mascot/buranie-mascot.svg"
+          desktopMascotDynamicHeight
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Construction Waste Removal & Disposal"
+          description="Professional and fast construction waste removal and eco-friendly disposal services. We handle waste removal after renovation, demolition, or construction at competitive prices with complete disposal documentation."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          backgroundImage="/images/stahovanie-gauc.avif"
+          badgeText="Services available 6 days a week"
+          ratingText="Over 3500+ satisfied customers"
+          benefits={[
+          "Full documentation",
+          "Container delivery",
+          "Eco-friendly disposal",
+        ]}
+          phoneCTAText="Call us now"
+          phoneNumber="0951 735 130"
+          hoursText="6 days a week 8:00-17:00"
+          lang="en"
+          showMascot
+          mascotSrc="/images/mascot/buranie-mascot.svg"
+          mobileMascotSrc="/images/mascot/buranie-mascot.svg"
+          mobileMascotOffsetY={-24}
+          mobileMascotScale={0.847}
+          mobileFormOffsetY={39}
+          pillsVariant="stahovanie"
+        />
+      </div>
 
       <div>
         <Clients />

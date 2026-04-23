@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -55,15 +56,57 @@ const faqItems = [
 export default function PostRenovationClearancePage() {
   return (
     <main className="bg-white">
-      <Hero
-        title="Post-Renovation Clearance Services"
-        description="Finished your renovation? We'll handle the removal of construction waste, rubble, and old fixtures. We quickly clear the space so you can move in sooner."
-        formTitle="Get a free quote"
-        formSubtitle="Fill out the form for a fast calculation"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        lang="en"
-        benefits={["Removal within 48h", "Eco-friendly disposal", "Fixed price upfront"]}
+      <link
+        rel="preload"
+        href="/images/mascot/stary-gauc-nosi-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/stary-gauc-nosi-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Post-Renovation Clearance Services"
+          description="Finished your renovation? We'll handle the removal of construction waste, rubble, and old fixtures. We quickly clear the space so you can move in sooner."
+          formTitle="Get a free quote"
+          formSubtitle="Fill out the form for a fast calculation"
+          backgroundImage="/images/stahovanie-gauc.avif"
+          lang="en"
+          benefits={["Removal within 48h", "Eco-friendly disposal", "Fixed price upfront"]}
+          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+          desktopMascotScaleMultiplier={1.08}
+          desktopMascotRightShiftPct={0.235}
+          desktopMascotBehindForm
+          desktopMascotFixedHeightPx={756}
+          desktopMinHeroTextHeightPx={460}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Post-Renovation Clearance Services"
+          description="Finished your renovation? We'll handle the removal of construction waste, rubble, and old fixtures. We quickly clear the space so you can move in sooner."
+          formTitle="Get a free quote"
+          formSubtitle="Fill out the form for a fast calculation"
+          backgroundImage="/images/stahovanie-gauc.avif"
+          lang="en"
+          benefits={["Removal within 48h", "Eco-friendly disposal", "Fixed price upfront"]}
+          showMascot
+          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+          mobileMascotOffsetY={-44}
+          mobileMascotScale={0.847}
+          mobileFormOffsetY={19}
+          pillsVariant="stahovanie"
+        />
+      </div>
       <div>
         <Clients />
       </div>

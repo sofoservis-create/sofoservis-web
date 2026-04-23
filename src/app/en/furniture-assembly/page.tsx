@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "@/components/sections/Hero";
+import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import Reviews from "@/components/sections/Reviews";
@@ -122,24 +123,67 @@ export default function FurnitureAssemblyPage() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Furniture Assembly & Disassembly"
-        description="Professional furniture assembly, disassembly, and installation services for all types of furniture. Our experienced experts handle new furniture assembly or disassembly and relocation of existing furniture quickly, precisely, and without damage."
-        formTitle="Get a free price quote"
-        formSubtitle="Fill out the form for a no-obligation calculation"
-        backgroundImage="/images/stahovanie-gauc.avif"
-        badgeText="Services available 6 days a week"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={[
+      <link
+        rel="preload"
+        href="/images/mascot/montaz-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
+      />
+      <link
+        rel="preload"
+        href="/images/mascot/montaz-mascot.svg"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Furniture Assembly & Disassembly"
+          description="Professional furniture assembly, disassembly, and installation services for all types of furniture. Our experienced experts handle new furniture assembly or disassembly and relocation of existing furniture quickly, precisely, and without damage."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          backgroundImage="/images/stahovanie-gauc.avif"
+          badgeText="Services available 6 days a week"
+          ratingText="Over 3500+ satisfied customers"
+          benefits={[
           "All furniture brands",
           "Own professional tools",
           "Fast and precise",
         ]}
-        phoneCTAText="Call us now"
-        phoneNumber="0952 044 363"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
-      />
+          lang="en"
+          mascotSrc="/images/mascot/montaz-mascot.svg"
+          desktopMascotDynamicHeight
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Furniture Assembly & Disassembly"
+          description="Professional furniture assembly, disassembly, and installation services for all types of furniture. Our experienced experts handle new furniture assembly or disassembly and relocation of existing furniture quickly, precisely, and without damage."
+          formTitle="Get a free price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          backgroundImage="/images/stahovanie-gauc.avif"
+          badgeText="Services available 6 days a week"
+          ratingText="Over 3500+ satisfied customers"
+          benefits={[
+          "All furniture brands",
+          "Own professional tools",
+          "Fast and precise",
+        ]}
+          phoneCTAText="Call us now"
+          phoneNumber="0952 044 363"
+          hoursText="6 days a week 8:00-17:00"
+          lang="en"
+          showMascot
+          mascotSrc="/images/mascot/montaz-mascot.svg"
+          mobileMascotSrc="/images/mascot/montaz-mascot.svg"
+          mobileMascotOffsetY={-45}
+          mobileFormOffsetY={32}
+          pillsVariant="stahovanie"
+        />
+      </div>
 
       <div>
         <Clients />
