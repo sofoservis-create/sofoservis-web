@@ -88,7 +88,7 @@ export default function FurnitureAssemblyBratislavaPage() {
           mobileMascotSrc="/images/mascot/montaz-mascot.svg"
           mobileMascotOffsetY={-45}
           mobileFormOffsetY={32}
-          pillsVariant="stahovanie"
+          pillsVariant="hodinovy"
         />
       </div>
 
