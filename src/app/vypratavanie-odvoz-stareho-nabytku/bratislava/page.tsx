@@ -102,8 +102,8 @@ export default function OdvozNabytkuBratislavaPage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotBehindForm
-          desktopMascotFixedHeightPx={756}
-          desktopMinHeroTextHeightPx={460}
+          desktopMascotFixedHeightPx={800}
+          desktopMinHeroTextHeightPx={500}
         />
       </div>
       <div className="lg:hidden">

@@ -159,8 +159,8 @@ export default function FurnitureRemovalPage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotBehindForm
-          desktopMascotFixedHeightPx={756}
-          desktopMinHeroTextHeightPx={460}
+          desktopMascotFixedHeightPx={900}
+          desktopMinHeroTextHeightPx={580}
         />
       </div>
       <div className="lg:hidden">
