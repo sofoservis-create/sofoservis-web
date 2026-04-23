@@ -182,6 +182,7 @@ export default function StahovaniePage() {
           desktopMascotScaleMultiplier={1.03}
           desktopMascotDynamicHeight
         desktopMinHeroTextHeightPx={460}
+        desktopDescriptionMaxWidthClass="lg:max-w-[20rem]"
         />
       </div>
       <div className="lg:hidden">

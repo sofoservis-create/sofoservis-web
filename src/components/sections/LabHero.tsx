@@ -54,6 +54,13 @@ interface LabHeroProps {
    * use the largest page's height so the layout never shifts).
    */
   desktopMinHeroTextHeightPx?: number;
+  /**
+   * Tailwind class for description max-width on lg+ viewports.
+   * Defaults to "lg:max-w-md". Use a narrower value (e.g. "lg:max-w-[20rem]")
+   * on pages with very short descriptions so the text fills the reserved
+   * vertical space.
+   */
+  desktopDescriptionMaxWidthClass?: string;
 }
 
 const LAB_HERO_TEXTS = {
@@ -193,6 +200,7 @@ export default function LabHero({
   desktopMascotFixedHeightPx = 728,
   desktopMascotDynamicHeight = true,
   desktopMinHeroTextHeightPx,
+  desktopDescriptionMaxWidthClass = "lg:max-w-md",
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
@@ -544,7 +552,7 @@ export default function LabHero({
                   </span>
                 </h1>
 
-                <div className="block text-base lg:text-xl text-white/90 max-w-xl lg:max-w-[20rem] leading-relaxed mx-auto lg:mx-0">
+                <div className={`block text-base lg:text-xl text-white/90 max-w-xl ${desktopDescriptionMaxWidthClass} leading-relaxed mx-auto lg:mx-0`}>
                   <p>{description}</p>
                 </div>
               </div>
