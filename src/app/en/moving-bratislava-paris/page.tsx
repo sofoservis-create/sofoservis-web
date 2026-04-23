@@ -23,6 +23,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-bratislava-paris",
     languages: {
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/pariz",
       en: "https://www.sofoservis.sk/en/moving-bratislava-paris",
       "x-default": "https://www.sofoservis.sk/en/moving-bratislava-paris",
     },

@@ -23,6 +23,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-bratislava-munich",
     languages: {
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/mnichov",
       en: "https://www.sofoservis.sk/en/moving-bratislava-munich",
       "x-default": "https://www.sofoservis.sk/en/moving-bratislava-munich",
     },

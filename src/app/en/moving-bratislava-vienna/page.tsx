@@ -23,6 +23,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-bratislava-vienna",
     languages: {
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/vieden",
       en: "https://www.sofoservis.sk/en/moving-bratislava-vienna",
       "x-default": "https://www.sofoservis.sk/en/moving-bratislava-vienna",
     },

@@ -23,6 +23,7 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-bratislava-berlin",
     languages: {
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/berlin",
       en: "https://www.sofoservis.sk/en/moving-bratislava-berlin",
       "x-default": "https://www.sofoservis.sk/en/moving-bratislava-berlin",
     },
