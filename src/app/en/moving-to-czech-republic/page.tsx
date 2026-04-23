@@ -175,7 +175,7 @@ export default function MovingToCzechRepublicPage() {
         title="Related Services"
         services={[
           { title: "Moving to Prague", description: "Dedicated Prague route page.", href: "/en/moving-to-prague", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Prague", description: "Bratislava–Prague moving route.", href: "/en/moving-bratislava-prague", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Prague", description: "Bratislava–Prague moving route.", href: "/en/moving-to-prague", icon: "/icons/truck_icon.svg" },
           { title: "Moving to Brno", description: "Dedicated Brno route page.", href: "/en/moving-to-brno", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

@@ -216,13 +216,13 @@ export default function MovingFromSlovakiaToGermanyPage() {
           {
             title: "Moving Bratislava to Munich",
             description: "City-to-city route between Bratislava and Munich.",
-            href: "/en/moving-bratislava-munich",
+            href: "/en/moving-to-munich",
             icon: "/icons/truck_icon.svg",
           },
           {
             title: "Moving Bratislava to Berlin",
             description: "City-to-city route between Bratislava and Berlin.",
-            href: "/en/moving-bratislava-berlin",
+            href: "/en/moving-to-berlin",
             icon: "/icons/truck_icon.svg",
           },
           {

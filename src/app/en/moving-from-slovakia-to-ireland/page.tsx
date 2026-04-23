@@ -216,7 +216,7 @@ export default function MovingFromSlovakiaToIrelandPage() {
           {
             title: "Moving Bratislava to Dublin",
             description: "City-to-city route between Bratislava and Dublin.",
-            href: "/en/moving-bratislava-dublin",
+            href: "/en/moving-to-dublin",
             icon: "/icons/truck_icon.svg",
           },
           {

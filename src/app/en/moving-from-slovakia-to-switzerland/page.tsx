@@ -216,7 +216,7 @@ export default function MovingFromSlovakiaToSwitzerlandPage() {
           {
             title: "Moving Bratislava to Zurich",
             description: "City-to-city route between Bratislava and Zurich.",
-            href: "/en/moving-bratislava-zurich",
+            href: "/en/moving-to-zurich",
             icon: "/icons/truck_icon.svg",
           },
           {

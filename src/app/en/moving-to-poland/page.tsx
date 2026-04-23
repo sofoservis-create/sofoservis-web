@@ -175,7 +175,7 @@ export default function MovingToPolandPage() {
         title="Related Services"
         services={[
           { title: "Moving to Warsaw", description: "Dedicated Warsaw route page.", href: "/en/moving-to-warsaw", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Warsaw", description: "Bratislava–Warsaw moving route.", href: "/en/moving-bratislava-warsaw", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Warsaw", description: "Bratislava–Warsaw moving route.", href: "/en/moving-to-warsaw", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

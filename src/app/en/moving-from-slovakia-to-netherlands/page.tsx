@@ -216,7 +216,7 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
           {
             title: "Moving Bratislava to Amsterdam",
             description: "City-to-city route between Bratislava and Amsterdam.",
-            href: "/en/moving-bratislava-amsterdam",
+            href: "/en/moving-to-amsterdam",
             icon: "/icons/truck_icon.svg",
           },
           {

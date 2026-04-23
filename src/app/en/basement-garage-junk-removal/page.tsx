@@ -269,9 +269,9 @@ export default function BasementGarageJunkRemovalPage() {
 
       <RelatedServices
           title="Related Services"
-          services={[{"title":"Basement & Garage Clearance","description":"Professional basement and garage cleanouts.","href":"/en/basement-garage-junk-removal","icon":"/icons/house_icon.svg"},{"title":"Old Furniture Removal","description":"Fast pickup and eco-friendly disposal of old furniture.","href":"/en/furniture-removal","icon":"/icons/truck_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Home Clearance","description":"Complete home clearance — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
+          services={[{"title":"Basement & Garage Junk Removal","description":"Professional basement and garage cleanouts.","href":"/en/basement-garage-junk-removal","icon":"/icons/house_icon.svg"},{"title":"Old Furniture Removal","description":"Fast pickup and eco-friendly disposal of old furniture.","href":"/en/furniture-removal","icon":"/icons/truck_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
         />
-      <ServicePricing filter={["clearance", "moving", "demolition"]} lang="en" />
+      <ServicePricing filter={["junk removal", "moving", "demolition"]} lang="en" />
       <TrustBadges lang="en" />
       <ContactFormSection lang="en" />
           <FAQJsonLd items={faqItems} />

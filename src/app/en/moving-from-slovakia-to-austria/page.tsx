@@ -216,7 +216,7 @@ export default function MovingFromSlovakiaToAustriaPage() {
           {
             title: "Moving Bratislava to Vienna",
             description: "City-to-city route between Bratislava and Vienna.",
-            href: "/en/moving-bratislava-vienna",
+            href: "/en/moving-to-vienna",
             icon: "/icons/truck_icon.svg",
           },
           {

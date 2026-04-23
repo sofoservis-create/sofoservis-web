@@ -185,7 +185,7 @@ export default function MovingToWarsawPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving Bratislava to Warsaw", description: "Dedicated Bratislava–Warsaw route page.", href: "/en/moving-bratislava-warsaw", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Warsaw", description: "Dedicated Bratislava–Warsaw route page.", href: "/en/moving-to-warsaw", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Moving from Slovakia", description: "Overview of all routes from Slovakia abroad.", href: "/en/moving-from-slovakia", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

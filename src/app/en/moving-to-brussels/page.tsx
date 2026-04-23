@@ -185,7 +185,7 @@ export default function MovingToBrusselsPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving Bratislava to Brussels", description: "Dedicated Bratislava–Brussels route page.", href: "/en/moving-bratislava-brussels", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Brussels", description: "Dedicated Bratislava–Brussels route page.", href: "/en/moving-to-brussels", icon: "/icons/truck_icon.svg" },
           { title: "Moving to Amsterdam", description: "Also moving to Amsterdam?", href: "/en/moving-to-amsterdam", icon: "/icons/globe_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

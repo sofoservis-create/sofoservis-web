@@ -292,7 +292,7 @@ export default function MovingPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Home Clearance", description: "Complete clearance — we remove everything you no longer need.", href: "/en/clearance", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Complete clearance — we remove everything you no longer need.", href: "/en/junk-removal", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture types.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
           { title: "Office Moving", description: "Efficient office relocation with minimal downtime.", href: "/en/office-moving", icon: "/icons/briefcase_icon.svg" },
           { title: "Handyman Services", description: "Professional repairs and installations for your home.", href: "/en/handyman-services", icon: "/icons/repair_icon.svg" },

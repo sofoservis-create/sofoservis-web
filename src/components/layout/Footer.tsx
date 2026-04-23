@@ -103,7 +103,7 @@ export default function Footer() {
       navigationLinks: [
         { href: "/en", label: "Home" },
         { href: "/en/moving", label: "Moving" },
-        { href: "/en/clearance", label: "Junk Removal" },
+        { href: "/en/junk-removal", label: "Junk Removal" },
         { href: "/en/furniture-assembly", label: "Furniture Assembly" },
         { href: "/en/pricing", label: "Pricing" },
         { href: "/en/contact", label: "Contact" },

@@ -126,7 +126,7 @@ export default function OfficeMovingPage() {
         title: "Disposal of Unwanted Equipment",
         description:
           "Moving is an ideal opportunity to get rid of unnecessary equipment. We provide environmentally friendly disposal or donation of unwanted furniture and equipment.",
-        link: "/en/clearance",
+        link: "/en/junk-removal",
       },
     ],
   };

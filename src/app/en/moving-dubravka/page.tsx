@@ -192,7 +192,7 @@ export default function MovingDubravkaPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Apartment Moving", description: "Reliable moving of apartments and family houses.", href: "/en/apartment-moving", icon: "/icons/house_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Dúbravka from €25/hour.", href: "/en/home-clearance-dubravka", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Dúbravka from €25/hour.", href: "/en/home-junk-removal-dubravka", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Assembly", description: "Professional assembly and disassembly of furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}
       />

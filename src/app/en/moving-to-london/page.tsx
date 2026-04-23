@@ -186,7 +186,7 @@ export default function MovingToLondonPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to the UK", description: "Full Slovakia-to-UK coverage.", href: "/en/moving-from-slovakia-to-uk", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to London", description: "Dedicated Bratislava–London route page.", href: "/en/moving-bratislava-london", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to London", description: "Dedicated Bratislava–London route page.", href: "/en/moving-to-london", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

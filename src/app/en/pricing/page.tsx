@@ -268,7 +268,7 @@ export default function PricingPageEN() {
           {
             title: "Home Clearance",
             description: "Full property clearance including furniture, appliances and junk removal.",
-            href: "/en/home-clearance-bratislava",
+            href: "/en/home-junk-removal-bratislava",
             icon: "/icons/vypratavanie_icon.svg",
           },
           {

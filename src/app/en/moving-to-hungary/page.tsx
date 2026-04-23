@@ -175,7 +175,7 @@ export default function MovingToHungaryPage() {
         title="Related Services"
         services={[
           { title: "Moving to Budapest", description: "Dedicated Budapest route page.", href: "/en/moving-to-budapest", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Budapest", description: "Bratislava–Budapest moving route.", href: "/en/moving-bratislava-budapest", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Budapest", description: "Bratislava–Budapest moving route.", href: "/en/moving-to-budapest", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

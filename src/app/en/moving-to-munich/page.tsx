@@ -186,7 +186,7 @@ export default function MovingToMunichPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Germany", description: "Full Slovakia-to-Germany coverage.", href: "/en/moving-from-slovakia-to-germany", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Munich", description: "Dedicated Bratislava–Munich route page.", href: "/en/moving-bratislava-munich", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Munich", description: "Dedicated Bratislava–Munich route page.", href: "/en/moving-to-munich", icon: "/icons/truck_icon.svg" },
           { title: "Moving to Berlin", description: "Relocating to Berlin from Slovakia.", href: "/en/moving-to-berlin", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

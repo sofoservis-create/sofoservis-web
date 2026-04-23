@@ -192,7 +192,7 @@ export default function MovingPetrzalkaPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Apartment Moving", description: "Reliable moving of apartments and family houses.", href: "/en/apartment-moving", icon: "/icons/house_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Petržalka from €25/hour.", href: "/en/home-clearance-petrzalka", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Petržalka from €25/hour.", href: "/en/home-junk-removal-petrzalka", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Removal", description: "Old furniture pickup and ecological disposal.", href: "/en/furniture-removal", icon: "/icons/recycle_icon.svg" },
         ]}
       />

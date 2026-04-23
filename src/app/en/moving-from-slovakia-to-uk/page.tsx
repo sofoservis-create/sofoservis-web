@@ -216,7 +216,7 @@ export default function MovingFromSlovakiaToUKPage() {
           {
             title: "Moving Bratislava to London",
             description: "City-to-city route between Bratislava and London.",
-            href: "/en/moving-bratislava-london",
+            href: "/en/moving-to-london",
             icon: "/icons/truck_icon.svg",
           },
           {

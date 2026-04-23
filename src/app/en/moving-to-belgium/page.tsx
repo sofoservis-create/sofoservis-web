@@ -175,7 +175,7 @@ export default function MovingToBelgiumPage() {
         title="Related Services"
         services={[
           { title: "Moving to Brussels", description: "Dedicated Brussels route page.", href: "/en/moving-to-brussels", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Brussels", description: "Bratislava–Brussels moving route.", href: "/en/moving-bratislava-brussels", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Brussels", description: "Bratislava–Brussels moving route.", href: "/en/moving-to-brussels", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

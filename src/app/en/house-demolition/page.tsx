@@ -74,7 +74,7 @@ export default function HouseDemolitionPage() {
         title: "Pre-Demolition Clearance",
         description:
           "Complete clearance of the property before demolition. We eco-friendly dispose of all movable items and waste in accordance with applicable regulations.",
-        link: "/en/clearance",
+        link: "/en/junk-removal",
       },
       {
         image: "/icons/truck_icon.svg",

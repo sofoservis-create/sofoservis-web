@@ -186,7 +186,7 @@ export default function MovingToDublinPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Ireland", description: "Full Slovakia-to-Ireland coverage.", href: "/en/moving-from-slovakia-to-ireland", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Dublin", description: "Dedicated Bratislava–Dublin route page.", href: "/en/moving-bratislava-dublin", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Dublin", description: "Dedicated Bratislava–Dublin route page.", href: "/en/moving-to-dublin", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

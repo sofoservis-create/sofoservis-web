@@ -186,7 +186,7 @@ export default function MovingToParis() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to France", description: "Full Slovakia-to-France coverage.", href: "/en/moving-from-slovakia-to-france", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Paris", description: "Dedicated Bratislava–Paris route page.", href: "/en/moving-bratislava-paris", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Paris", description: "Dedicated Bratislava–Paris route page.", href: "/en/moving-to-paris", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

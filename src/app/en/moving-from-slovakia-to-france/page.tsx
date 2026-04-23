@@ -216,7 +216,7 @@ export default function MovingFromSlovakiaToFrancePage() {
           {
             title: "Moving Bratislava to Paris",
             description: "City-to-city route between Bratislava and Paris.",
-            href: "/en/moving-bratislava-paris",
+            href: "/en/moving-to-paris",
             icon: "/icons/truck_icon.svg",
           },
           {

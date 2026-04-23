@@ -296,18 +296,18 @@ export default function InternationalMovingServicesPage() {
               { href: "/en/moving-to-lisbon", label: "Moving to Lisbon" },
             ];
             const fromBratislava: Array<{ href: string; label: string; distance: string }> = [
-              { href: "/en/moving-bratislava-vienna", label: "Bratislava → Vienna", distance: "60 km" },
-              { href: "/en/moving-bratislava-budapest", label: "Bratislava → Budapest", distance: "200 km" },
-              { href: "/en/moving-bratislava-prague", label: "Bratislava → Prague", distance: "330 km" },
-              { href: "/en/moving-bratislava-munich", label: "Bratislava → Munich", distance: "360 km" },
-              { href: "/en/moving-bratislava-warsaw", label: "Bratislava → Warsaw", distance: "660 km" },
-              { href: "/en/moving-bratislava-berlin", label: "Bratislava → Berlin", distance: "690 km" },
-              { href: "/en/moving-bratislava-zurich", label: "Bratislava → Zurich", distance: "800 km" },
-              { href: "/en/moving-bratislava-brussels", label: "Bratislava → Brussels", distance: "1,150 km" },
-              { href: "/en/moving-bratislava-amsterdam", label: "Bratislava → Amsterdam", distance: "1,200 km" },
-              { href: "/en/moving-bratislava-paris", label: "Bratislava → Paris", distance: "1,300 km" },
-              { href: "/en/moving-bratislava-london", label: "Bratislava → London", distance: "~1,500 km" },
-              { href: "/en/moving-bratislava-dublin", label: "Bratislava → Dublin", distance: "sea incl." },
+              { href: "/en/moving-to-vienna", label: "Bratislava → Vienna", distance: "60 km" },
+              { href: "/en/moving-to-budapest", label: "Bratislava → Budapest", distance: "200 km" },
+              { href: "/en/moving-to-prague", label: "Bratislava → Prague", distance: "330 km" },
+              { href: "/en/moving-to-munich", label: "Bratislava → Munich", distance: "360 km" },
+              { href: "/en/moving-to-warsaw", label: "Bratislava → Warsaw", distance: "660 km" },
+              { href: "/en/moving-to-berlin", label: "Bratislava → Berlin", distance: "690 km" },
+              { href: "/en/moving-to-zurich", label: "Bratislava → Zurich", distance: "800 km" },
+              { href: "/en/moving-to-brussels", label: "Bratislava → Brussels", distance: "1,150 km" },
+              { href: "/en/moving-to-amsterdam", label: "Bratislava → Amsterdam", distance: "1,200 km" },
+              { href: "/en/moving-to-paris", label: "Bratislava → Paris", distance: "1,300 km" },
+              { href: "/en/moving-to-london", label: "Bratislava → London", distance: "~1,500 km" },
+              { href: "/en/moving-to-dublin", label: "Bratislava → Dublin", distance: "sea incl." },
             ];
 
             const renderLinkList = (

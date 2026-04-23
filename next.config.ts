@@ -89,23 +89,20 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
-      // EN deprecated URL → kanonická EN clearance stránka
+      // EN deprecated URL → kanonická EN junk-removal hub stránka
       {
         source: "/en/junk-removal-services",
-        destination: "/en/clearance",
+        destination: "/en/junk-removal",
         permanent: true,
       },
-      {
-        source: "/en/junk-removal",
-        destination: "/en/clearance",
-        permanent: true,
-      },
+      // POZN: /en/junk-removal je teraz reálna stránka (premenovaná z /en/clearance),
+      // takže žiadny redirect odtiaľto nie je potrebný.
       {
         source: "/moving",
         destination: "https://www.sofoservis.sk/en/apartment-moving",
         permanent: true,
       },
-      // EN clearance → junk removal URL renames
+      // EN clearance → junk removal URL renames (service hub stránky)
       {
         source: "/en/home-clearance",
         destination: "/en/home-junk-removal",
@@ -211,6 +208,278 @@ const nextConfig = {
       {
         source: "/en/services/furniture-assembly",
         destination: "/en/furniture-assembly",
+        permanent: true,
+      },
+      // Sprint 2: 12× /en/moving-bratislava-{city} → /en/moving-to-{city} (consolidácia)
+      // Sprint 2: 42× /en/*clearance* → /en/*junk-removal* (terminology migration)
+      {
+        source: "/en/moving-bratislava-amsterdam",
+        destination: "/en/moving-to-amsterdam",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-berlin",
+        destination: "/en/moving-to-berlin",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-brussels",
+        destination: "/en/moving-to-brussels",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-budapest",
+        destination: "/en/moving-to-budapest",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-dublin",
+        destination: "/en/moving-to-dublin",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-london",
+        destination: "/en/moving-to-london",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-munich",
+        destination: "/en/moving-to-munich",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-paris",
+        destination: "/en/moving-to-paris",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-prague",
+        destination: "/en/moving-to-prague",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-vienna",
+        destination: "/en/moving-to-vienna",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-warsaw",
+        destination: "/en/moving-to-warsaw",
+        permanent: true,
+      },
+      {
+        source: "/en/moving-bratislava-zurich",
+        destination: "/en/moving-to-zurich",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-bratislava",
+        destination: "/en/apartment-junk-removal-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-galanta",
+        destination: "/en/apartment-junk-removal-galanta",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-hlohovec",
+        destination: "/en/apartment-junk-removal-hlohovec",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-komarno",
+        destination: "/en/apartment-junk-removal-komarno",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-levice",
+        destination: "/en/apartment-junk-removal-levice",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-malacky",
+        destination: "/en/apartment-junk-removal-malacky",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-nitra",
+        destination: "/en/apartment-junk-removal-nitra",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-pezinok",
+        destination: "/en/apartment-junk-removal-pezinok",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-piestany",
+        destination: "/en/apartment-junk-removal-piestany",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-sala",
+        destination: "/en/apartment-junk-removal-sala",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-samorin",
+        destination: "/en/apartment-junk-removal-samorin",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-senec",
+        destination: "/en/apartment-junk-removal-senec",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-senica",
+        destination: "/en/apartment-junk-removal-senica",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-stupava",
+        destination: "/en/apartment-junk-removal-stupava",
+        permanent: true,
+      },
+      {
+        source: "/en/apartment-clearance-trnava",
+        destination: "/en/apartment-junk-removal-trnava",
+        permanent: true,
+      },
+      {
+        source: "/en/basement-clearance-bratislava",
+        destination: "/en/basement-junk-removal-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/en/cottage-clearance",
+        destination: "/en/cottage-junk-removal",
+        permanent: true,
+      },
+      {
+        source: "/en/estate-clearance-bereavement",
+        destination: "/en/estate-junk-removal-bereavement",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-bratislava",
+        destination: "/en/home-junk-removal-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-dubravka",
+        destination: "/en/home-junk-removal-dubravka",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-galanta",
+        destination: "/en/home-junk-removal-galanta",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-hlohovec",
+        destination: "/en/home-junk-removal-hlohovec",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-karlova-ves",
+        destination: "/en/home-junk-removal-karlova-ves",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-komarno",
+        destination: "/en/home-junk-removal-komarno",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-levice",
+        destination: "/en/home-junk-removal-levice",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-malacky",
+        destination: "/en/home-junk-removal-malacky",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-nitra",
+        destination: "/en/home-junk-removal-nitra",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-nove-mesto",
+        destination: "/en/home-junk-removal-nove-mesto",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-petrzalka",
+        destination: "/en/home-junk-removal-petrzalka",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-pezinok",
+        destination: "/en/home-junk-removal-pezinok",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-piestany",
+        destination: "/en/home-junk-removal-piestany",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-ruzinov",
+        destination: "/en/home-junk-removal-ruzinov",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-sala",
+        destination: "/en/home-junk-removal-sala",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-samorin",
+        destination: "/en/home-junk-removal-samorin",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-senec",
+        destination: "/en/home-junk-removal-senec",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-senica",
+        destination: "/en/home-junk-removal-senica",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-stare-mesto",
+        destination: "/en/home-junk-removal-stare-mesto",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-stupava",
+        destination: "/en/home-junk-removal-stupava",
+        permanent: true,
+      },
+      {
+        source: "/en/home-clearance-trnava",
+        destination: "/en/home-junk-removal-trnava",
+        permanent: true,
+      },
+      {
+        source: "/en/clearance",
+        destination: "/en/junk-removal",
+        permanent: true,
+      },
+      {
+        source: "/en/office-clearance",
+        destination: "/en/office-junk-removal",
+        permanent: true,
+      },
+      {
+        source: "/en/post-renovation-clearance",
+        destination: "/en/post-renovation-junk-removal",
         permanent: true,
       },
       // EN duplicate consolidation: /en/moving-to-{country} → /en/moving-from-slovakia-to-{country}

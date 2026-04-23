@@ -216,7 +216,7 @@ export default function MovingFromAustriaToSlovakiaPage() {
           {
             title: "Moving Bratislava to Vienna",
             description: "Moving from Bratislava to Vienna? We cover that too.",
-            href: "/en/moving-bratislava-vienna",
+            href: "/en/moving-to-vienna",
             icon: "/icons/truck_icon.svg",
           },
           {

@@ -65,7 +65,7 @@ export default function NotFound() {
                 title: "Clearance",
                 description:
                   "Apartments, basements, properties, garages. Legal and eco-friendly disposal.",
-                href: "/en/clearance",
+                href: "/en/junk-removal",
               },
               {
                 icon: "/icons/repair_icon.svg",
