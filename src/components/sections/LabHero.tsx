@@ -257,6 +257,7 @@ export default function LabHero({
   const formCardRef = useRef<HTMLDivElement>(null);
   const [frozenBodyHeight, setFrozenBodyHeight] = useState<number | null>(null);
   const [dynamicMascotDims, setDynamicMascotDims] = useState<{ top: number; height: number } | null>(null);
+  const [mascotLoaded, setMascotLoaded] = useState(false);
 
   // Mascot dimensions: by default FIXED constants (stable, no "breathing").
   // Pages where hero composition varies with viewport (e.g. homepage h1 wrap)
@@ -500,7 +501,7 @@ export default function LabHero({
             return (
             <>
               <div
-                className="absolute hidden lg:block pointer-events-none"
+                className="absolute hidden lg:block pointer-events-none transition-opacity duration-200"
                 style={{
                   top: `${glowCenterY - GLOW_HALF_WIDTH}px`,
                   right: `${glowCenterRight - GLOW_HALF_WIDTH}px`,
@@ -510,6 +511,7 @@ export default function LabHero({
                   background: '#fdc70033',
                   filter: 'blur(100px)',
                   zIndex: 4,
+                  opacity: mascotLoaded ? 1 : 0,
                 }}
               />
               <Image
@@ -519,13 +521,15 @@ export default function LabHero({
                 height={647}
                 priority
                 unoptimized={mascotSrc.endsWith(".svgz")}
-                className="absolute hidden lg:block pointer-events-none select-none"
+                onLoadingComplete={() => setMascotLoaded(true)}
+                className="absolute hidden lg:block pointer-events-none select-none transition-opacity duration-200"
                 style={{
                   top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
                   right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * desktopMascotScale * desktopMascotRightShift}px`,
                   height: `${mascotDims.height * desktopMascotScale}px`,
                   width: 'auto',
                   zIndex: desktopMascotBehindForm ? 5 : 20,
+                  opacity: mascotLoaded ? 1 : 0,
                 }}
                 sizes="473px"
               />
