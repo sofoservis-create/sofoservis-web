@@ -167,12 +167,7 @@ export default function OdvozStavebnehoOdpaduPage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/buranie-mascot.svg"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotBehindForm
-          desktopMascotFixedHeightPx={756}
           desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">
