@@ -141,14 +141,8 @@ export default function MontazNabytkuPage() {
           description={heroData.description}
           formTitle={heroData.formTitle}
           formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          badgeText="Služby 6 dní v týždni"
+          benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
-          benefits={[
-            "Vlastné profi náradie",
-            "Skúsení montážnici",
-            "Výjazd od 20€",
-          ]}
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
         />
@@ -159,17 +153,8 @@ export default function MontazNabytkuPage() {
           description={heroData.description}
           formTitle={heroData.formTitle}
           formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          badgeText="Služby 6 dní v týždni"
+          benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
-          benefits={[
-            "Vlastné profi náradie",
-            "Skúsení montážnici",
-            "Výjazd od 20€",
-          ]}
-          phoneCTAText="Zavolajte hneď"
-          phoneNumber="0952 044 363"
-          hoursText="6 dní v týždni 8:00-17:00"
           showMascot
           mascotSrc="/images/mascot/montaz-mascot.svg"
           mobileMascotSrc="/images/mascot/montaz-mascot.svg"
