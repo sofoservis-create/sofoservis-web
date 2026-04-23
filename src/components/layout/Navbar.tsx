@@ -14,6 +14,7 @@ interface NavSubLink {
   href: string;
   label: string;
   subLinks?: NavSubSubLink[];
+  subLinksAllLabel?: string;
 }
 
 interface NavLink {
@@ -455,7 +456,91 @@ export default function Navbar() {
         { href: "/en/office-moving", label: "Office & Business Moving" },
         { href: "/en/furniture-moving-removal", label: "Furniture Moving & Removal" },
         { href: "/en/moving-heavy-loads", label: "Moving Heavy Loads" },
-        { href: "/en/international-moving-services", label: "International Moving" },
+        {
+          href: "",
+          label: "International Moving",
+          subLinks: [
+            { href: "/en/international-moving-services", label: "→ All international services" },
+            { href: "/en/moving-to-slovakia", label: "Moving to Slovakia" },
+            { href: "/en/moving-from-slovakia", label: "Moving from Slovakia" },
+            {
+              href: "/en/moving-to-slovakia",
+              label: "To Slovakia — pick origin",
+              subLinksAllLabel: "→ All origin countries",
+              subLinks: [
+                { href: "/en/moving-from-austria-to-slovakia", label: "From Austria" },
+                { href: "/en/moving-from-france-to-slovakia", label: "From France" },
+                { href: "/en/moving-from-germany-to-slovakia", label: "From Germany" },
+                { href: "/en/moving-from-netherlands-to-slovakia", label: "From Netherlands" },
+                { href: "/en/moving-from-uk-to-slovakia", label: "From UK" },
+                { href: "/en/moving-from-usa-to-slovakia", label: "From USA" },
+              ],
+            },
+            {
+              href: "/en/moving-from-slovakia",
+              label: "From Slovakia — pick destination",
+              subLinksAllLabel: "→ All destination countries",
+              subLinks: [
+                { href: "/en/moving-from-slovakia-to-austria", label: "To Austria" },
+                { href: "/en/moving-from-slovakia-to-france", label: "To France" },
+                { href: "/en/moving-from-slovakia-to-germany", label: "To Germany" },
+                { href: "/en/moving-from-slovakia-to-ireland", label: "To Ireland" },
+                { href: "/en/moving-from-slovakia-to-netherlands", label: "To Netherlands" },
+                { href: "/en/moving-from-slovakia-to-norway", label: "To Norway" },
+                { href: "/en/moving-from-slovakia-to-sweden", label: "To Sweden" },
+                { href: "/en/moving-from-slovakia-to-switzerland", label: "To Switzerland" },
+                { href: "/en/moving-from-slovakia-to-uk", label: "To UK" },
+              ],
+            },
+            {
+              href: "/en/international-moving-services",
+              label: "Moving to a city — pick a city",
+              subLinksAllLabel: "→ All cities",
+              subLinks: [
+                { href: "/en/moving-to-amsterdam", label: "Amsterdam" },
+                { href: "/en/moving-to-barcelona", label: "Barcelona" },
+                { href: "/en/moving-to-berlin", label: "Berlin" },
+                { href: "/en/moving-to-brno", label: "Brno" },
+                { href: "/en/moving-to-brussels", label: "Brussels" },
+                { href: "/en/moving-to-budapest", label: "Budapest" },
+                { href: "/en/moving-to-copenhagen", label: "Copenhagen" },
+                { href: "/en/moving-to-dublin", label: "Dublin" },
+                { href: "/en/moving-to-frankfurt", label: "Frankfurt" },
+                { href: "/en/moving-to-hamburg", label: "Hamburg" },
+                { href: "/en/moving-to-lisbon", label: "Lisbon" },
+                { href: "/en/moving-to-london", label: "London" },
+                { href: "/en/moving-to-munich", label: "Munich" },
+                { href: "/en/moving-to-oslo", label: "Oslo" },
+                { href: "/en/moving-to-paris", label: "Paris" },
+                { href: "/en/moving-to-prague", label: "Prague" },
+                { href: "/en/moving-to-rome", label: "Rome" },
+                { href: "/en/moving-to-stockholm", label: "Stockholm" },
+                { href: "/en/moving-to-vienna", label: "Vienna" },
+                { href: "/en/moving-to-warsaw", label: "Warsaw" },
+                { href: "/en/moving-to-zurich", label: "Zurich" },
+              ],
+            },
+            {
+              href: "/en/moving-bratislava",
+              label: "From Bratislava — choose a city",
+              subLinksAllLabel: "→ All Bratislava routes",
+              subLinks: [
+                { href: "/en/moving-bratislava-amsterdam", label: "Amsterdam" },
+                { href: "/en/moving-bratislava-berlin", label: "Berlin" },
+                { href: "/en/moving-bratislava-brussels", label: "Brussels" },
+                { href: "/en/moving-bratislava-budapest", label: "Budapest" },
+                { href: "/en/moving-bratislava-dublin", label: "Dublin" },
+                { href: "/en/moving-bratislava-london", label: "London" },
+                { href: "/en/moving-bratislava-munich", label: "Munich" },
+                { href: "/en/moving-bratislava-paris", label: "Paris" },
+                { href: "/en/moving-bratislava-prague", label: "Prague" },
+                { href: "/en/moving-bratislava-vienna", label: "Vienna" },
+                { href: "/en/moving-bratislava-warsaw", label: "Warsaw" },
+                { href: "/en/moving-bratislava-zurich", label: "Zurich" },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -689,7 +774,7 @@ export default function Navbar() {
                         {expandedSubSubLink === category.name + "-" + sub.label && (
                           <div className="bg-white">
                             <Link href={sub.href} className="block pl-10 pr-5 py-1.5 text-primary-700 text-xs hover:bg-accent-400 hover:text-primary-900 transition-colors font-semibold border-b border-gray-100" prefetch={false}>
-                              → Všetky mestské časti
+                              {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
                             </Link>
                             {sub.subLinks.map((subsub, ssi) => (
                               <Link key={ssi} href={subsub.href} className="block pl-12 pr-5 py-1.5 text-primary-600 text-xs hover:bg-accent-400 hover:text-primary-900 transition-colors font-medium" prefetch={false}>
@@ -819,7 +904,7 @@ export default function Navbar() {
                             {expandedSubSubLink === category.name + "-" + sub.label && (
                               <div className="bg-gray-50">
                                 <Link href={sub.href} className="block pl-14 pr-8 py-2 text-primary-700 text-xs font-semibold border-b border-gray-200" onClick={() => setMobileMenuOpen(false)} prefetch={false}>
-                                  → Všetky mestské časti
+                                  {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
                                 </Link>
                                 {sub.subLinks.map((subsub, ssi) => (
                                   <Link key={ssi} href={subsub.href} className="block pl-16 pr-8 py-2 text-primary-600 text-xs font-medium" onClick={() => setMobileMenuOpen(false)} prefetch={false}>
