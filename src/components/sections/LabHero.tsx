@@ -183,7 +183,7 @@ export default function LabHero({
   desktopMascotBehindForm = false,
   desktopMascotFixedTopPx = 0,
   desktopMascotFixedHeightPx = 728,
-  desktopMascotDynamicHeight = false,
+  desktopMascotDynamicHeight = true,
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
