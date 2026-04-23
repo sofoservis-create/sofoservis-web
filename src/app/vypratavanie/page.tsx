@@ -182,6 +182,7 @@ export default function VypratavaniePage() {
           desktopMascotRightShiftPct={0.235}
           desktopMascotBehindForm
           desktopMascotFixedHeightPx={756}
+          desktopMascotDynamicHeight
         />
       </div>
       <div className="lg:hidden">
