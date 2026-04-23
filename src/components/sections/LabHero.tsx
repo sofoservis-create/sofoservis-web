@@ -1,5 +1,7 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
+
+const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import Image from "next/image";
 import Dialog from "@/components/elements/Dialog";
 import { usePathname } from "next/navigation";
@@ -259,15 +261,20 @@ export default function LabHero({
   // Mascot dimensions: by default FIXED constants (stable, no "breathing").
   // Pages where hero composition varies with viewport (e.g. homepage h1 wrap)
   // can opt into dynamic DOM measurement via desktopMascotDynamicHeight.
+  // When dynamic measurement is enabled, wait for the actual measurement before
+  // rendering the mascot — otherwise it briefly flashes at the fixed-fallback
+  // size and then snaps to the measured size, causing a visible jump.
   const mascotDims = narrowForm
-    ? (desktopMascotDynamicHeight && dynamicMascotDims
+    ? (desktopMascotDynamicHeight
         ? dynamicMascotDims
         : { top: desktopMascotFixedTopPx, height: desktopMascotFixedHeightPx })
     : null;
 
   // Optional dynamic measurement (opt-in). Measures badge top → form card bottom
   // and re-measures on resize so the mascot tracks the actual hero composition.
-  useEffect(() => {
+  // Uses layout effect so the measurement runs synchronously before the browser
+  // paints — preventing a flash of mascot at the fixed-fallback size.
+  useIsomorphicLayoutEffect(() => {
     if (!narrowForm || !desktopMascotDynamicHeight) return;
     const compute = () => {
       const frame = heroFrameRef.current;
