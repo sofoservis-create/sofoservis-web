@@ -164,6 +164,7 @@ export default function CennikPage() {
             "Obhliadka zadarmo",
           ]}
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">

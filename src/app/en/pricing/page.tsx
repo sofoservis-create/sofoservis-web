@@ -159,6 +159,7 @@ export default function PricingPageEN() {
             "Free inspection",
           ]}
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={460}
           lang="en"
         />
       </div>
