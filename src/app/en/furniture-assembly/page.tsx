@@ -152,6 +152,8 @@ export default function FurnitureAssemblyPage() {
           lang="en"
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
+          desktopMascotScaleMultiplier={1.1}
+          desktopMascotTopOffsetPct={-0.065}
         />
       </div>
       <div className="lg:hidden">

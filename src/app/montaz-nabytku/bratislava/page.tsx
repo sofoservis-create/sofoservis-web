@@ -98,6 +98,8 @@ export default function MontazNabytkuBratislavaPage() {
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={384}
+          desktopMascotScaleMultiplier={1.1}
+          desktopMascotTopOffsetPct={-0.065}
         />
       </div>
       <div className="lg:hidden">
