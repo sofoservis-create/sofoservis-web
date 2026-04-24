@@ -146,6 +146,7 @@ export default function MontazNabytkuPage() {
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
           desktopMascotScaleMultiplier={1.1}
+          desktopMascotTopOffsetPct={-0.05}
         />
       </div>
       <div className="lg:hidden">
