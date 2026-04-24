@@ -153,18 +153,9 @@ export default function CennikPage() {
           narrowForm
           title="Cenník našich služieb"
           description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
-          backgroundImage="/images/stahovanie-gauc.avif"
-          formTitle="Získajte presnú cenovú ponuku"
-          formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
-          badgeText="Obhliadka priestoru zadarmo"
+          benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
-          benefits={[
-            "Transparentné ceny",
-            "Bez skrytých poplatkov",
-            "Obhliadka zadarmo",
-          ]}
           desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={476}
         />
       </div>
       <div className="lg:hidden">
