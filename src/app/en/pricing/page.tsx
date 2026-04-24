@@ -1,4 +1,5 @@
 import React from "react";
+import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
@@ -142,24 +143,47 @@ export default function PricingPageEN() {
 
   return (
     <main className="bg-white">
-      <Hero
-        title="Our Service Pricing"
-        description="Transparent and fair prices for professional moving services, clearance, and furniture assembly. All prices are final with no hidden fees."
-        backgroundImage="/images/stahovanie-gauc.avif"
-        formTitle="Get an accurate price quote"
-        formSubtitle="Fill out the form for a no-obligation calculation"
-        badgeText="Free site inspection"
-        ratingText="Over 3500+ satisfied customers"
-        benefits={[
-          "Transparent prices",
-          "No hidden fees",
-          "Free inspection",
-        ]}
-        phoneCTAText="Call us now"
-        phoneNumber="0951 735 130"
-        hoursText="6 days a week 8:00-17:00"
-        lang="en"
-      />
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Our Service Pricing"
+          description="Transparent and fair prices for professional moving services, clearance, and furniture assembly. All prices are final with no hidden fees."
+          backgroundImage="/images/stahovanie-gauc.avif"
+          formTitle="Get an accurate price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          badgeText="Free site inspection"
+          ratingText="Over 3500+ satisfied customers"
+          benefits={[
+            "Transparent prices",
+            "No hidden fees",
+            "Free inspection",
+          ]}
+          desktopMascotDynamicHeight
+          lang="en"
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Our Service Pricing"
+          description="Transparent and fair prices for professional moving services, clearance, and furniture assembly. All prices are final with no hidden fees."
+          backgroundImage="/images/stahovanie-gauc.avif"
+          formTitle="Get an accurate price quote"
+          formSubtitle="Fill out the form for a no-obligation calculation"
+          badgeText="Free site inspection"
+          ratingText="Over 3500+ satisfied customers"
+          benefits={[
+            "Transparent prices",
+            "No hidden fees",
+            "Free inspection",
+          ]}
+          phoneCTAText="Call us now"
+          phoneNumber="0951 735 130"
+          hoursText="6 days a week 8:00-17:00"
+          lang="en"
+          showMascot
+          pillsVariant="home"
+        />
+      </div>
 
       <div>
         <Clients />

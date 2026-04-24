@@ -1,4 +1,5 @@
 import React from "react";
+import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
@@ -147,20 +148,42 @@ export default function CennikPage() {
   return (
     <main className="bg-white">
       {/* Hero section */}
-      <Hero
-        title="Cenník našich služieb"
-        description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
-        backgroundImage="/images/stahovanie-gauc.avif"
-        formTitle="Získajte presnú cenovú ponuku"
-        formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
-        badgeText="Obhliadka priestoru zadarmo"
-        ratingText="3500+ spokojných zákazníkov"
-        benefits={[
-          "Transparentné ceny",
-          "Bez skrytých poplatkov",
-          "Obhliadka zadarmo",
-        ]}
-      />
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Cenník našich služieb"
+          description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
+          backgroundImage="/images/stahovanie-gauc.avif"
+          formTitle="Získajte presnú cenovú ponuku"
+          formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
+          badgeText="Obhliadka priestoru zadarmo"
+          ratingText="3500+ spokojných zákazníkov"
+          benefits={[
+            "Transparentné ceny",
+            "Bez skrytých poplatkov",
+            "Obhliadka zadarmo",
+          ]}
+          desktopMascotDynamicHeight
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Cenník našich služieb"
+          description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
+          backgroundImage="/images/stahovanie-gauc.avif"
+          formTitle="Získajte presnú cenovú ponuku"
+          formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
+          badgeText="Obhliadka priestoru zadarmo"
+          ratingText="3500+ spokojných zákazníkov"
+          benefits={[
+            "Transparentné ceny",
+            "Bez skrytých poplatkov",
+            "Obhliadka zadarmo",
+          ]}
+          showMascot
+          pillsVariant="home"
+        />
+      </div>
 
       {/* Clients section */}
       <div>
