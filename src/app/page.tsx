@@ -109,7 +109,7 @@ export default function Home() {
           narrowForm
           title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
           description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
-          benefits={[]}
+          benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
           ratingText="3500+ spokojných zákazníkov"
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={476}
