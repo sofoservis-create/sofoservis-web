@@ -156,6 +156,7 @@ export default function CennikPage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={476}
         />
       </div>
       <div className="lg:hidden">
