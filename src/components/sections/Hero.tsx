@@ -50,6 +50,8 @@ interface HeroProps {
   mobileMascotSrc?: string;
   /** Additional vertical offset (px) for the mobile mascot. Negative = up. */
   mobileMascotOffsetY?: number;
+  /** Additional horizontal offset (px) for the mobile mascot. Negative = left. */
+  mobileMascotOffsetX?: number;
   /** Scale multiplier for the mobile mascot (default 1 = 630px). */
   mobileMascotScale?: number;
   /** Additional vertical offset (px) for the mobile form card. Positive = down. */
@@ -119,6 +121,7 @@ export default function Hero({
   mascotSrc,
   mobileMascotSrc,
   mobileMascotOffsetY = 0,
+  mobileMascotOffsetX = 0,
   mobileMascotScale = 1,
   mobileFormOffsetY = 0,
   pillsVariant,
@@ -376,7 +379,7 @@ export default function Hero({
               >
                 <div
                   className="absolute"
-                  style={{ width: `${mascotPx}px`, height: `${mascotPx}px`, left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
+                  style={{ width: `${mascotPx}px`, height: `${mascotPx}px`, left: '50%', transform: `translateX(calc(-50% + ${19 + mobileMascotOffsetX}px))` }}
                 >
                   <div
                     className="absolute left-1/2 top-1/2 transition-opacity duration-200"
