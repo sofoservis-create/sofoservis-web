@@ -177,7 +177,6 @@ export default function VypratavaniePage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotFixedHeightPx={756}
-          desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={460}
         />
       </div>

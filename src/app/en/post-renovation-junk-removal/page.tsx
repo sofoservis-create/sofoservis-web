@@ -80,7 +80,7 @@ export default function PostRenovationJunkRemovalPage() {
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={800}
+          desktopMascotFixedHeightPx={756}
           desktopMinHeroTextHeightPx={500}
         />
       </div>

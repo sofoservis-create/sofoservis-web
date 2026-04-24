@@ -68,7 +68,7 @@ export default function BasementJunkRemovalBratislavaPage() {
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={900}
+          desktopMascotFixedHeightPx={756}
           desktopMinHeroTextHeightPx={580}
         />
       </div>
