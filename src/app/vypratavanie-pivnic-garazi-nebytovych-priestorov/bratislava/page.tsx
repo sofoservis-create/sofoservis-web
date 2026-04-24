@@ -11,7 +11,6 @@ import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import LocationMap from "@/components/sections/LocationMap";
 import ContactFormSection from "@/components/sections/ContactFormSection";
-import TrustBadges from "@/components/sections/TrustBadges";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 /**
@@ -263,7 +262,6 @@ export default function VypratavaniePivnicGaraziBratislavaPage() {
         />
       </div>
     
-      <TrustBadges />
       <ContactFormSection />
 
       <RelatedServices

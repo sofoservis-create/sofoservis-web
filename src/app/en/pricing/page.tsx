@@ -8,7 +8,6 @@ import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import Container from "@/components/ui/Container";
 import ContactFormSection from "@/components/sections/ContactFormSection";
-import TrustBadges from "@/components/sections/TrustBadges";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
@@ -280,7 +279,6 @@ export default function PricingPageEN() {
         />
       </div>
 
-      <TrustBadges lang="en" />
       <ContactFormSection lang="en" />
 
       <RelatedServices
