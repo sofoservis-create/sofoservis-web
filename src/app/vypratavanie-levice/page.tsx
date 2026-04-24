@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Levice sú krajské mesto Nitrianskeho kraja s rozsiahlymi sídliskami zo 70. a 80. rokov aj staršou zástavbou rodinných domov a záhrad. Pri vypratávaní v Leviciach sa najčastejšie stretávame s bytmi v panelových domoch na vyšších poschodiach a so staršími rodinnými domami s rozsiahlymi záhradnými hospodárskymi priestormi. Pokrývame celý okres Levice vrátane okolitých obcí.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

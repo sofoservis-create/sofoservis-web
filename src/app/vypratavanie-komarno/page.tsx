@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Komárno leží na sútoku Váhu a Dunaja a patrí k historicky najvýznamnejším mestám na juhu Slovenska. Staré budovy v historickom centre Komárna majú typicky rozsiahle pivničné priestory, zatiaľ čo novšie sídliská ponúkajú typické panelové byty. Vypratávame v celom Komárne a priľahlých obciach Nitrianskeho a Trnavského kraja.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

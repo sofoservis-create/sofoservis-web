@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Šamorín leží na Žitnom ostrove pri Dunaji a patrí k rýchlo sa rozvíjajúcim mestám v okolí Bratislavy. Kombinácia tradičných dedinských domov, moderných vilových domov a rekreačných nehnuteľností vytvára pestrý dopyt po vypratávacích službách. Sofoservis pokrýva Šamorín a celý Žitný ostrov vrátane okolitých obcí.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

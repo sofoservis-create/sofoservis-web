@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Senec je jedno z najpopulárnejších miest v okolí Bratislavy s veľkým počtom rekreačných chatiek, rodinných domov aj moderných bytových domov. Blízkosť hlavného mesta znamená, že v Senci dochádza k pravidelnému sťahovaniu a predaju nehnuteľností, ktorým predchádza komplexné vypratanie. Operujeme v Senci a celom priľahlom regióne Bratislavského kraja.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

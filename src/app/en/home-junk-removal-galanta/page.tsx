@@ -39,10 +39,6 @@ export default function HomeJunkRemovalGalantaPage() {
     { question: "Where do you take the waste from junk removal?", answer: "We transport waste to official collection yards and landfills in compliance with waste management regulations. Recyclable materials go to recycling facilities, hazardous waste to specialized disposal facilities." },
   ];
   const nearbyTowns = ["Šaľa", "Senec", "Dunajská Streda", "Sereď", "Sládkovičovo", "Matúškovo"];
-
-  const cityIntro =
-    "Galanta is a district town in the Trnava Region with many Soviet-era panel apartment buildings and older family homes in the surrounding area. Our junk removal teams in Galanta regularly handle basements in panel blocks, large cellars typical for the region, and family homes being prepared for sale. We cover the entire Galanta district and surrounding municipalities.";
-
   return (
     <main className="bg-white">
       <link rel="preload"
@@ -97,13 +93,6 @@ export default function HomeJunkRemovalGalantaPage() {
       <div>
         <Clients />
       </div>
-
-
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-        </div>
-      </section>
 
       <div>
         <GoogleReviews title="What our customers say" />

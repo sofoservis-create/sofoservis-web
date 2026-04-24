@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Hlohovec je historické mesto v Trnavskom kraji s množstvom starých vinohradníckych domov, rozľahlých pivníc a hospodárskych budov. Starší bytový fond v centre mesta a charakteristické suterénne priestory typické pre túto oblasť si pri rekonštrukciách alebo predaji nehnuteľností vyžadujú profesionálne vypratanie. Pôsobíme v Hlohovci a okolitých obciach celého Trnavského kraja.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

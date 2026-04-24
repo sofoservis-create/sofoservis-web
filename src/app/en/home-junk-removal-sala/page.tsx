@@ -39,10 +39,6 @@ export default function HomeJunkRemovalSalaPage() {
     { question: "Where do you take the waste from junk removal?", answer: "We transport waste to official collection yards and landfills in compliance with waste management regulations. Recyclable materials go to recycling facilities, hazardous waste to specialized disposal facilities." },
   ];
   const nearbyTowns = ["Galanta", "Nitra", "Komárno", "Močenok", "Trnovec nad Váhom"];
-
-  const cityIntro =
-    "Šaľa is a district town in south-western Slovakia on the Váh river. The housing stock in Šaľa combines panel apartment blocks on housing estates with older family homes in the suburban areas. We serve the entire Šaľa district and nearby towns including Galanta, Sereď, and Matúškovo.";
-
   return (
     <main className="bg-white">
       <link rel="preload"
@@ -97,13 +93,6 @@ export default function HomeJunkRemovalSalaPage() {
       <div>
         <Clients />
       </div>
-
-
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-        </div>
-      </section>
 
       <div>
         <GoogleReviews title="What our customers say" />

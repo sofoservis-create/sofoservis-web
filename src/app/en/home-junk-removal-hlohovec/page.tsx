@@ -39,10 +39,6 @@ export default function HomeJunkRemovalHlohovecPage() {
     { question: "Where do you take the waste from junk removal?", answer: "We transport waste to official collection yards and landfills in compliance with waste management regulations. Recyclable materials go to recycling facilities, hazardous waste to specialized disposal facilities." },
   ];
   const nearbyTowns = ["Leopoldov", "Piešťany", "Trnava", "Madunice", "Červeník"];
-
-  const cityIntro =
-    "Hlohovec is a historic town in the Trnava Region known for its wine culture and older residential buildings with extensive cellar spaces. Our team has substantial experience with the types of properties found here — from historic town-centre homes and agricultural outbuildings to panel flats in the newer residential areas.";
-
   return (
     <main className="bg-white">
       <link rel="preload"
@@ -97,13 +93,6 @@ export default function HomeJunkRemovalHlohovecPage() {
       <div>
         <Clients />
       </div>
-
-
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-        </div>
-      </section>
 
       <div>
         <GoogleReviews title="What our customers say" />

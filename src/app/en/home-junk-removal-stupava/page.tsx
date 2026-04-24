@@ -38,10 +38,6 @@ export default function HomeJunkRemovalStupavaPage() {
     { question: "How quickly can you arrange junk removal in Stupava?", answer: "We can usually arrange junk removal within 2-5 working days. In urgent cases, we try to accommodate your schedule and arrive even sooner. Contact us for availability." },
     { question: "Where do you take the waste from junk removal in Stupava?", answer: "We transport waste to official collection yards and landfills in compliance with waste management regulations. Recyclable materials go to recycling facilities, hazardous waste to specialized disposal facilities." },
   ];
-
-  const cityIntro =
-    "Stupava is a charming town at the foot of the Little Carpathians near Bratislava, surrounded by vineyards and forests. Many older family homes here contain decades of accumulated items that require professional clearing before sale, inheritance settlement, or renovation.";
-
   return (
     <main className="bg-white">
       <link rel="preload"
@@ -96,13 +92,6 @@ export default function HomeJunkRemovalStupavaPage() {
       <div>
         <Clients />
       </div>
-
-
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-        </div>
-      </section>
 
       <div>
         <GoogleReviews title="What our customers say" />

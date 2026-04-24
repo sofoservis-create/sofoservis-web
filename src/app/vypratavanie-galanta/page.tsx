@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Galanta je okresné mesto Trnavského kraja s množstvom panelových domov z 80. rokov a staršou zástavbou rodinných domov v okolí. Pri vypratávaní v Galante sa najčastejšie stretávame s bytmi v paneliakoch na vyšších poschodiach, starými pivnicami a hospodárskymi priestormi v prímestských obciach. Naša firma pokrýva celú Galantu a okolité obce — Šaľu, Sereď, Sládkovičovo, Dunajskú Stredu aj ďalšie miesta Trnavského kraja.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

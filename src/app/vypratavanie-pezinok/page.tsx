@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Pezinok je vinohradnícke mestečko pri Bratislave v Malokarpatskej oblasti. Veľa starých vinohradníckych domov, pivníc a záhradných domkov tu pri rekonštrukciách a predajoch vyžaduje profesionálne vypratanie. Sofoservis pokrýva Pezinok a celý priľahlý malokarpatský región vrátane okolitých vinohradníckych obcí.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

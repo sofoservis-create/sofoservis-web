@@ -143,10 +143,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         },
       ],
     };
-
-  const cityIntro =
-    "Senica je mestom záhorskej oblasti na severozápade Slovenska s charakteristickou starszou zástavbou rodinných domov a menšími panelovými sídliskami. Pri vypratávaní v Senici sa stretávame s typickými záhorskými domami so veľkými pivnicami a záhradnými prístavbami. Naša firma operuje v Senici a celom záhorskom regióne.";
-
     return (
       <main className="bg-white">
         <link rel="preload"
@@ -198,11 +194,6 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
         <div>
           <Clients />
         </div>
-        <section className="py-8 bg-gray-50">
-          <div className="container mx-auto px-4 max-w-3xl">
-            <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-          </div>
-        </section>
         <div>
           <GoogleReviews showCarousel={true} />
         </div>

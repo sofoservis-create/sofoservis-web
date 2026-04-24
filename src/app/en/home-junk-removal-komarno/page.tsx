@@ -39,10 +39,6 @@ export default function HomeJunkRemovalKomarnoPage() {
     { question: "Where do you take the waste from junk removal?", answer: "We transport waste to official collection yards and landfills in compliance with waste management regulations. Recyclable materials go to recycling facilities, hazardous waste to specialized disposal facilities." },
   ];
   const nearbyTowns = ["Hurbanovo", "Štúrovo", "Nové Zámky", "Kolárovo", "Zlatná na Ostrove"];
-
-  const cityIntro =
-    "Komárno sits at the confluence of the Váh and Danube rivers and is one of Slovakia's most historically significant southern cities. The older buildings in Komárno's historic centre often feature spacious cellar storage, while the newer districts have typical panel flats that require complete junk removal during renovation or sale.";
-
   return (
     <main className="bg-white">
       <link rel="preload"
@@ -97,13 +93,6 @@ export default function HomeJunkRemovalKomarnoPage() {
       <div>
         <Clients />
       </div>
-
-
-      <section className="py-8 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <p className="text-gray-700 text-base leading-relaxed">{cityIntro}</p>
-        </div>
-      </section>
 
       <div>
         <GoogleReviews title="What our customers say" />
