@@ -31,6 +31,25 @@ const junkRemovalLocations = [
   { name: "Malacky", href: "/en/home-junk-removal-malacky" },
   { name: "Šamorín", href: "/en/home-junk-removal-samorin" },
   { name: "Hlohovec", href: "/en/home-junk-removal-hlohovec" },
+  { name: "Šaľa", href: "/en/home-junk-removal-sala" },
+];
+
+const apartmentJunkRemovalLocations = [
+  { name: "Bratislava", href: "/en/apartment-junk-removal-bratislava" },
+  { name: "Nitra", href: "/en/apartment-junk-removal-nitra" },
+  { name: "Trnava", href: "/en/apartment-junk-removal-trnava" },
+  { name: "Pezinok", href: "/en/apartment-junk-removal-pezinok" },
+  { name: "Galanta", href: "/en/apartment-junk-removal-galanta" },
+  { name: "Levice", href: "/en/apartment-junk-removal-levice" },
+  { name: "Piešťany", href: "/en/apartment-junk-removal-piestany" },
+  { name: "Senec", href: "/en/apartment-junk-removal-senec" },
+  { name: "Senica", href: "/en/apartment-junk-removal-senica" },
+  { name: "Stupava", href: "/en/apartment-junk-removal-stupava" },
+  { name: "Komárno", href: "/en/apartment-junk-removal-komarno" },
+  { name: "Malacky", href: "/en/apartment-junk-removal-malacky" },
+  { name: "Šamorín", href: "/en/apartment-junk-removal-samorin" },
+  { name: "Hlohovec", href: "/en/apartment-junk-removal-hlohovec" },
+  { name: "Šaľa", href: "/en/apartment-junk-removal-sala" },
 ];
 
 export const metadata = {
@@ -234,6 +253,28 @@ export default function JunkRemovalPage() {
           callToActionText="We work in your area too — get a quote"
         />
       </div>
+
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-6 text-center">
+            Apartment Junk Removal by City
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Specialised apartment junk removal services in your area
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {apartmentJunkRemovalLocations.map((loc) => (
+              <a
+                key={loc.href}
+                href={loc.href}
+                className="block px-4 py-3 bg-white rounded-lg border border-gray-200 hover:border-accent-500 hover:shadow-sm transition text-center text-sm font-medium text-primary-900 hover:text-accent-600"
+              >
+                Apartment Junk Removal {loc.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div>
         <GoogleReviews showReviewsShowcase={false} title="What our customers say about us" />

@@ -4,10 +4,12 @@ import { blogPosts } from "@/lib/blog";
 const BASE_URL = "https://www.sofoservis.sk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const buildTime = new Date();
+
   const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
     changeFrequency: "monthly" as const,
-    priority: 0.65,
+    priority: 0.5,
     lastModified: new Date(post.publishDate),
   }));
 
@@ -362,5 +364,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/en/moving-from-usa-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
   ];
 
-  return [...staticRoutes, ...blogRoutes];
+  return [
+    ...staticRoutes.map((r) => ({ ...r, lastModified: buildTime })),
+    ...blogRoutes,
+  ];
 }

@@ -76,6 +76,12 @@ const cities = [
   { name: "Paríž", nameGen: "Paríža", href: "/medzinarodne-stahovanie/pariz", country: "Francúzsko", distance: "1 400 km" },
   { name: "Dublin", nameGen: "Dublinu", href: "/medzinarodne-stahovanie/dublin", country: "Írsko", distance: "1 900 km + loď" },
   { name: "Londýn", nameGen: "Londýna", href: "/medzinarodne-stahovanie/londyn", country: "UK", distance: "1 500 km" },
+  { name: "Barcelona", nameGen: "Barcelony", href: "/medzinarodne-stahovanie/barcelona", country: "Španielsko", distance: "1 850 km" },
+  { name: "Rím", nameGen: "Ríma", href: "/medzinarodne-stahovanie/rim", country: "Taliansko", distance: "1 350 km" },
+  { name: "Lisabon", nameGen: "Lisabonu", href: "/medzinarodne-stahovanie/lisabon", country: "Portugalsko", distance: "2 800 km" },
+  { name: "Štokholm", nameGen: "Štokholmu", href: "/medzinarodne-stahovanie/stockholm", country: "Švédsko", distance: "1 700 km" },
+  { name: "Oslo", nameGen: "Osla", href: "/medzinarodne-stahovanie/oslo", country: "Nórsko", distance: "1 800 km" },
+  { name: "Kodaň", nameGen: "Kodane", href: "/medzinarodne-stahovanie/kodane", country: "Dánsko", distance: "1 350 km" },
 ];
 
 export default function MedzinarodneStahovaniePage() {

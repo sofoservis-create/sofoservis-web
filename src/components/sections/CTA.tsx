@@ -37,6 +37,7 @@ export default function CTA({
                 alt="Získať 20% zľavu pre neziskové organizácie"
                 width={600}
                 height={600}
+                sizes="(max-width: 768px) 100vw, 600px"
                 className="w-full h-full object-cover aspect-square"
                 priority={false}
               />

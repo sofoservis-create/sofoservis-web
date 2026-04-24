@@ -145,6 +145,7 @@ function FeatureCard({ image, title, description, link }: FeatureItem) {
           alt={title}
           width={190}
           height={190}
+          sizes="190px"
           className="object-contain transition duration-500 ease-out"
         />
       </div>

@@ -275,6 +275,44 @@ export default function VypratavanieBytovDomovPage() {
         />
       </div>
     
+      <section className="py-10 md:py-16 bg-gray-50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-6 text-center">
+            Vypratávanie bytov a domov v mestách
+          </h2>
+          <p className="text-center text-gray-600 mb-8">
+            Pôsobíme v týchto mestách na západnom Slovensku
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+            {[
+              { name: "Bratislava", slug: "bratislava" },
+              { name: "Nitra", slug: "nitra" },
+              { name: "Trnava", slug: "trnava" },
+              { name: "Pezinok", slug: "pezinok" },
+              { name: "Senec", slug: "senec" },
+              { name: "Malacky", slug: "malacky" },
+              { name: "Stupava", slug: "stupava" },
+              { name: "Galanta", slug: "galanta" },
+              { name: "Komárno", slug: "komarno" },
+              { name: "Levice", slug: "levice" },
+              { name: "Piešťany", slug: "piestany" },
+              { name: "Šaľa", slug: "sala" },
+              { name: "Šamorín", slug: "samorin" },
+              { name: "Senica", slug: "senica" },
+              { name: "Hlohovec", slug: "hlohovec" },
+            ].map((c) => (
+              <a
+                key={c.slug}
+                href={`/vypratavanie-bytov-domov/${c.slug}`}
+                className="block px-4 py-3 bg-white rounded-lg border border-gray-200 hover:border-accent-500 hover:shadow-sm transition text-center text-sm font-medium text-primary-900 hover:text-accent-600"
+              >
+                Vypratávanie {c.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <ServicePricing filter={["vypratavanie", "stahovanie", "buracie-prace"]} />
       <TrustBadges />
       <ContactFormSection />

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Container from "@/components/ui/Container";
 
 interface InstagramPost {
@@ -31,8 +31,32 @@ export default function InstagramFeed({
   const [visible, setVisible] = useState(INITIAL_VISIBLE);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [shouldFetch, setShouldFetch] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    if (shouldFetch) return;
+    const el = sectionRef.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setShouldFetch(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldFetch(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "300px 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [shouldFetch]);
+
+  useEffect(() => {
+    if (!shouldFetch) return;
     fetch("/api/instagram")
       .then((r) => r.json())
       .then((data) => {
@@ -44,10 +68,10 @@ export default function InstagramFeed({
       })
       .catch(() => setError(true))
       .finally(() => setLoading(false));
-  }, []);
+  }, [shouldFetch]);
 
   return (
-    <section className="pt-10 md:pt-[100px] bg-white" id="instagram-feed">
+    <section ref={sectionRef} className="pt-10 md:pt-[100px] bg-white" id="instagram-feed">
       <Container>
         <div className="flex flex-col items-center justify-center text-center mb-8">
           <h3 className="text-2xl md:text-4xl font-bold text-primary-900 mb-6">
