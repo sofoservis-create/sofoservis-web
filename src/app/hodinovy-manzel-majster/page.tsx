@@ -156,7 +156,7 @@ export default function HodinovyManzelMajsterPage() {
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={460}
+          desktopMinHeroTextHeightPx={384}
         />
       </div>
       <div className="lg:hidden">

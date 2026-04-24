@@ -138,7 +138,7 @@ export default function HandymanSalaPage() {
           benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={580}
+          desktopMinHeroTextHeightPx={466}
         />
       </div>
       <div className="lg:hidden">
