@@ -153,7 +153,11 @@ export default function CennikPage() {
           narrowForm
           title="Cenník našich služieb"
           description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
-          benefits={[]}
+          benefits={[
+            "Transparentné ceny",
+            "Bez skrytých poplatkov",
+            "Obhliadka zadarmo",
+          ]}
           ratingText="3500+ spokojných zákazníkov"
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={476}
