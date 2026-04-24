@@ -11,3 +11,9 @@ id = "bereuAFiaTV6gOHhvqeWq"
 uri = "file://.local/seo/missing-crm-leads-2026-04-19.json"
 type = "unspecified"
 title = "missing-crm-leads-2026-04-19.json (10 leadov pre bulk import)"
+
+[[outputs]]
+id = "FbjUQ4hWqQGqq-JxtjV1P"
+uri = "file://screenshots/mascot-side-by-side-labeled.jpg"
+type = "image"
+title = "Cennik vs Homepage – mascot side-by-side"
