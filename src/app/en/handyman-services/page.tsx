@@ -150,6 +150,7 @@ export default function HandymanServicesPage() {
           lang="en"
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={580}
         />
       </div>
       <div className="lg:hidden">

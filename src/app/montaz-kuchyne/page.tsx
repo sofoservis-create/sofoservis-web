@@ -138,6 +138,7 @@ export default function MontazKuchynePage() {
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={460}
         />
       </div>
       <div className="lg:hidden">

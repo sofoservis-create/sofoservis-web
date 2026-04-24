@@ -138,6 +138,7 @@ export default function HandymanPiestanyPage() {
           benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={580}
         />
       </div>
       <div className="lg:hidden">
