@@ -158,11 +158,7 @@ export default function CennikPage() {
           formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
           badgeText="Obhliadka priestoru zadarmo"
           ratingText="3500+ spokojných zákazníkov"
-          benefits={[
-            "Transparentné ceny",
-            "Bez skrytých poplatkov",
-            "Obhliadka zadarmo",
-          ]}
+          benefits={[]}
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={476}
         />
