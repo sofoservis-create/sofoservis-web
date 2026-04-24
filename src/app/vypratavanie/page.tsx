@@ -193,7 +193,6 @@ export default function VypratavaniePage() {
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           mobileMascotOffsetY={-44}
-          mobileMascotScale={0.847}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"
         />
