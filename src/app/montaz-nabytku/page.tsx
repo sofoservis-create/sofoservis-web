@@ -145,6 +145,7 @@ export default function MontazNabytkuPage() {
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/montaz-mascot.svg"
           desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={476}
         />
       </div>
       <div className="lg:hidden">
