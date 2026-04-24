@@ -49,6 +49,12 @@ interface LabHeroProps {
    */
   desktopMascotDynamicHeight?: boolean;
   /**
+   * Extra vertical offset on top of the default DESKTOP_MASCOT_TOP_SHIFT_PCT,
+   * expressed as a fraction of the mascot's rendered height. Negative values
+   * move the mascot UP, positive values move it DOWN. Default 0.
+   */
+  desktopMascotTopOffsetPct?: number;
+  /**
    * Minimum height (px) of the hero text column on lg+ viewports. When set,
    * reserves vertical space so the form card and mascot anchor at the same
    * position regardless of how short the title/description are. Used to lock
@@ -201,11 +207,13 @@ export default function LabHero({
   desktopMascotFixedTopPx = 0,
   desktopMascotFixedHeightPx = 728,
   desktopMascotDynamicHeight = true,
+  desktopMascotTopOffsetPct = 0,
   desktopMinHeroTextHeightPx,
   desktopDescriptionMaxWidthClass = "lg:max-w-md",
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
+  const desktopMascotTopShiftPct = DESKTOP_MASCOT_TOP_SHIFT_PCT + desktopMascotTopOffsetPct;
   const pathname = usePathname();
   const t = LAB_HERO_TEXTS[lang];
   const vopHref = lang === "en" ? "/en/terms-of-service" : "/vseobecne-obchodne-podmienky";
@@ -495,7 +503,7 @@ export default function LabHero({
           {narrowForm && mascotDims && (() => {
             const mascotH = mascotDims.height * desktopMascotScale;
             const mascotW = mascotDims.height * MASCOT_ASPECT * desktopMascotScale;
-            const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * DESKTOP_MASCOT_TOP_SHIFT_PCT;
+            const mascotTopPx = mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotH * desktopMascotTopShiftPct;
             const mascotRightPx = DESKTOP_MASCOT_RIGHT - mascotW * desktopMascotRightShift;
             const mascotCenterY = mascotTopPx + mascotH / 2;
             const mascotCenterRight = mascotRightPx + mascotW / 2;
@@ -528,7 +536,7 @@ export default function LabHero({
                 onLoad={() => setMascotLoaded(true)}
                 className="absolute hidden lg:block pointer-events-none select-none transition-opacity duration-200"
                 style={{
-                  top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * DESKTOP_MASCOT_TOP_SHIFT_PCT}px`,
+                  top: `${mascotDims.top + DESKTOP_MASCOT_TOP_SHIFT + mascotDims.height * desktopMascotScale * desktopMascotTopShiftPct}px`,
                   right: `${DESKTOP_MASCOT_RIGHT - mascotDims.height * MASCOT_ASPECT * desktopMascotScale * desktopMascotRightShift}px`,
                   height: `${mascotDims.height * desktopMascotScale}px`,
                   width: 'auto',

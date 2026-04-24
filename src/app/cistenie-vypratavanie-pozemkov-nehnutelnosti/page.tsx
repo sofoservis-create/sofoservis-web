@@ -149,6 +149,7 @@ export default function CisteniePozemkovPage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotFixedHeightPx={756}
+          desktopMascotTopOffsetPct={-0.01}
         />
       </div>
       <div className="lg:hidden">

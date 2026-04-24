@@ -144,6 +144,7 @@ export default function VypratavaniePoRekonstrukciiPage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotFixedHeightPx={756}
+          desktopMascotTopOffsetPct={-0.01}
           desktopMinHeroTextHeightPx={460}
         />
       </div>

@@ -153,6 +153,7 @@ export default function HomeJunkRemovalPage() {
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
           desktopMascotFixedHeightPx={756}
+          desktopMascotTopOffsetPct={-0.01}
           desktopMinHeroTextHeightPx={580}
         />
       </div>
