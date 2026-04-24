@@ -182,7 +182,7 @@ export default function CennikPage() {
             "Obhliadka zadarmo",
           ]}
           showMascot
-          pillsVariant="home"
+          pillsVariant="stahovanie"
         />
       </div>
 

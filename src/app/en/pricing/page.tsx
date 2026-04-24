@@ -182,7 +182,7 @@ export default function PricingPageEN() {
           hoursText="6 days a week 8:00-17:00"
           lang="en"
           showMascot
-          pillsVariant="home"
+          pillsVariant="stahovanie"
         />
       </div>
 
