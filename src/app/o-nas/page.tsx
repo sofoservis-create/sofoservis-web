@@ -206,62 +206,60 @@ export default function ONasPage() {
       {/* Founder Story */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-            {/* Photos column */}
-            <div className="w-full lg:w-2/5 flex flex-col sm:flex-row lg:flex-col gap-4">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl flex-1 aspect-[2/3]">
-                <ZoomableImage
-                  src="/images/zakladatel-sofoservis-portrait.png"
-                  alt="Sofian Sofo Hidbani – zakladateľ Sofoservis"
-                  width={800}
-                  height={1200}
-                  priority
-                  className="w-full h-full object-cover object-center"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <span className="text-white text-sm font-medium">Sofian &ldquo;Sofo&rdquo; Hidbani – zakladateľ</span>
-                </div>
-              </div>
-              <div className="relative rounded-2xl overflow-hidden shadow-xl flex-1 aspect-[2/3]">
-                <ZoomableImage
-                  src="/images/zakladatel-zaciatky.webp"
-                  alt="Zakladateľ Sofoservis v začiatkoch – pri žltej dodávke 2018"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover object-center"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                  <span className="text-white text-sm font-medium">Začiatky — 2018</span>
-                </div>
+          {/* Story column */}
+          <div className="max-w-4xl mx-auto mb-12 lg:mb-16">
+            <div className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/15 text-accent-600 font-medium text-sm mb-4">
+              Príbeh zakladateľa
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 leading-tight">
+              Od inzerátu na Bazoši po profesionálnu firmu
+            </h2>
+            <div className="space-y-4 text-primary-700 text-lg leading-relaxed">
+              <p>
+                V roku 2018 som videl kamarátov, ako začali podnikať, a pochopil som: ak oni môžu, prečo nie ja? Začal som s otcovou dodávkou a inzerátom na Bazoši: <em>&ldquo;Najlacnejšie sťahovanie v Bratislave.&rdquo;</em> Prvý byt som presťahoval za 50 € a aj to som sa hanbil vypýtať.
+              </p>
+              <p>
+                Firma rástla rýchlo, možno príliš rýchlo. Keď ma moja pravá ruka okradla o viac ako 50 000 €, takmer sme skrachovali. No nevzdal som sa.
+              </p>
+              <p>
+                Dnes máme stabilnú firmu s troma vyškolenými tímami. <Link href="/stahovanie" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Sťahujeme</Link> byty, domy aj kancelárie. <Link href="/vypratavanie-bytov-domov" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Vypratávame</Link> priestory po zosnulých, pred rekonštrukciou aj po nej. <Link href="/montaz-nabytku" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Montujeme</Link> nábytok a kuchyne na dennej báze.
+              </p>
+              <p className="text-primary-900 font-semibold text-xl">
+                Sťahovanie nie je o nábytku. Je o ľuďoch.
+              </p>
+              <p className="text-primary-500 text-base mt-1">
+                — Sofian &ldquo;Sofo&rdquo; Hidbani, 2025
+              </p>
+            </div>
+          </div>
+
+          {/* Photos row */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
+              <ZoomableImage
+                src="/images/zakladatel-sofoservis-portrait.png"
+                alt="Sofian Sofo Hidbani – zakladateľ Sofoservis"
+                width={800}
+                height={1200}
+                priority
+                className="w-full h-full object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <span className="text-white text-sm font-medium">Sofian &ldquo;Sofo&rdquo; Hidbani – zakladateľ</span>
               </div>
             </div>
-
-            {/* Story column */}
-            <div className="w-full lg:w-3/5">
-              <div className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/15 text-accent-600 font-medium text-sm mb-4">
-                Príbeh zakladateľa
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6 leading-tight">
-                Od inzerátu na Bazoši po profesionálnu firmu
-              </h2>
-              <div className="space-y-4 text-primary-700 text-lg leading-relaxed">
-                <p>
-                  V roku 2018 som videl kamarátov, ako začali podnikať, a pochopil som: ak oni môžu, prečo nie ja? Začal som s otcovou dodávkou a inzerátom na Bazoši: <em>&ldquo;Najlacnejšie sťahovanie v Bratislave.&rdquo;</em> Prvý byt som presťahoval za 50 € a aj to som sa hanbil vypýtať.
-                </p>
-                <p>
-                  Firma rástla rýchlo, možno príliš rýchlo. Keď ma moja pravá ruka okradla o viac ako 50 000 €, takmer sme skrachovali. No nevzdal som sa.
-                </p>
-                <p>
-                  Dnes máme stabilnú firmu s troma vyškolenými tímami. <Link href="/stahovanie" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Sťahujeme</Link> byty, domy aj kancelárie. <Link href="/vypratavanie-bytov-domov" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Vypratávame</Link> priestory po zosnulých, pred rekonštrukciou aj po nej. <Link href="/montaz-nabytku" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Montujeme</Link> nábytok a kuchyne na dennej báze.
-                </p>
-                <p className="text-primary-900 font-semibold text-xl">
-                  Sťahovanie nie je o nábytku. Je o ľuďoch.
-                </p>
-                <p className="text-primary-500 text-base mt-1">
-                  — Sofian &ldquo;Sofo&rdquo; Hidbani, 2025
-                </p>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[3/4]">
+              <ZoomableImage
+                src="/images/zakladatel-zaciatky.webp"
+                alt="Zakladateľ Sofoservis v začiatkoch – pri žltej dodávke 2018"
+                width={800}
+                height={800}
+                className="w-full h-full object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <span className="text-white text-sm font-medium">Začiatky — 2018</span>
               </div>
             </div>
           </div>
