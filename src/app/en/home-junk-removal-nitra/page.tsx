@@ -69,7 +69,6 @@ export default function HomeJunkRemovalNitraPage() {
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
-          desktopMascotBehindForm
           desktopMascotFixedHeightPx={850}
           desktopMinHeroTextHeightPx={540}
         />

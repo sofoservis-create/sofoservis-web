@@ -176,7 +176,6 @@ export default function VypratavaniePage() {
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           desktopMascotScaleMultiplier={1.08}
           desktopMascotRightShiftPct={0.235}
-          desktopMascotBehindForm
           desktopMascotFixedHeightPx={756}
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={460}
