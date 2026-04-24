@@ -46,8 +46,8 @@ export default function VypratavanieRuzinovPage() {
     title: "Vypratávanie Ružinov: Rýchlo a spoľahlivo",
     description:
       "Vypratávame byty, pivnice a garáže v celom Ružinove od 25€/hod. Odvoz a likvidácia starého nábytku, spotrebičov aj odpadu — všetko v jednej službe.",
-    formTitle: "Vypratávanie v Ružinove — bezplatná ponuka",
-    formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+    formTitle: "Získajte bezplatnú cenovú ponuku",
+    formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 

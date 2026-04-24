@@ -45,8 +45,8 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
       title: "Vypratávanie Šamorín: Rýchlo a spoľahlivo",
       description:
         "Vypratávame byty, pivnice, kobky a garáže v celom Šamoríne od 25€/hod. Odvoz a likvidácia starého nábytku, spotrebičov aj odpadu — všetko v jednej službe.",
-      formTitle: "Vypratávanie v Šamoríne — bezplatná ponuka",
-      formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+      formTitle: "Získajte bezplatnú cenovú ponuku",
+      formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
       backgroundImage: "/images/stahovanie-gauc.avif",
     };
 

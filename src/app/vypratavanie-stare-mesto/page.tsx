@@ -46,8 +46,8 @@ export default function VypratavanieStareMestoPage() {
     title: "Vypratávanie Staré Mesto: Rýchlo a spoľahlivo",
     description:
       "Vypratávame byty, pivnice a staré domy na Starom Meste od 25€/hod. Máme skúsenosti so starou zástavbou, úzkymi schodiskami a historickými domami.",
-    formTitle: "Vypratávanie na Starom Meste — bezplatná ponuka",
-    formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+    formTitle: "Získajte bezplatnú cenovú ponuku",
+    formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 

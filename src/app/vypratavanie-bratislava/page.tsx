@@ -47,8 +47,8 @@ export default function VypratavanieBratislavaPage() {
     title: "Vypratávanie Bratislava: Rýchlo a spoľahlivo",
     description:
       "Vypratávame byty, pivnice, kobky a garáže v celej Bratislave od 25€/hod. Pokrývame Petržalku, Ružinov, Staré Mesto, Nové Mesto, Karlovú Ves a Dúbravku.",
-    formTitle: "Vypratávanie v Bratislave — bezplatná ponuka",
-    formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+    formTitle: "Získajte bezplatnú cenovú ponuku",
+    formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 

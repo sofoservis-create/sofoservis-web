@@ -45,8 +45,8 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
       title: "Vypratávanie Levice: Rýchlo a spoľahlivo",
       description:
         "Vypratávame byty, pivnice, kobky a garáže v celých Leviciach od 25€/hod. Odvoz a likvidácia starého nábytku, spotrebičov aj odpadu.",
-      formTitle: "Vypratávanie v Leviciach — bezplatná ponuka",
-      formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+      formTitle: "Získajte bezplatnú cenovú ponuku",
+      formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
       backgroundImage: "/images/stahovanie-gauc.avif",
     };
 

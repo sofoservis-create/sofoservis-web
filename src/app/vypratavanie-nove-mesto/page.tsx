@@ -46,8 +46,8 @@ export default function VypratavanieNoveMestoPage() {
     title: "Vypratávanie Nové Mesto: Rýchlo a spoľahlivo",
     description:
       "Vypratávame byty, pivnice a garáže po celom Novom Meste v Bratislave od 25€/hod. Vinohrady, Kramáre, Koliba — pokrývame celú mestskú časť. Odvoz odpadu.",
-    formTitle: "Vypratávanie na Novom Meste — bezplatná ponuka",
-    formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+    formTitle: "Získajte bezplatnú cenovú ponuku",
+    formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 

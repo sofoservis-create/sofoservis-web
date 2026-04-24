@@ -46,8 +46,8 @@ export default function VypratavaniePetrzalkaPage() {
     title: "Vypratávanie Petržalka: Rýchlo a spoľahlivo",
     description:
       "Vypratávame byty, pivnice, kobky a garáže v celej Petržalke od 25€/hod. Odvoz a likvidácia starého nábytku, spotrebičov aj odpadu.",
-    formTitle: "Vypratávanie v Petržalke — bezplatná ponuka",
-    formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+    formTitle: "Získajte bezplatnú cenovú ponuku",
+    formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 

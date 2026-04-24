@@ -46,8 +46,8 @@ export default function VypratavanieKarlovaVesPage() {
     title: "Vypratávanie Karlova Ves: Rýchlo a spoľahlivo",
     description:
       "Vypratávame byty, pivnice a rodinné domy v celej Karlovej Vsi od 25€/hod. Dlhé diely, Líščie údolie, Nad lúčkami — pokrývame celú mestskú časť. Odvoz.",
-    formTitle: "Vypratávanie v Karlovej Vsi — bezplatná ponuka",
-    formSubtitle: "Vyplňte formulár pre rýchlu fixnú cenu",
+    formTitle: "Získajte bezplatnú cenovú ponuku",
+    formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 
