@@ -15,95 +15,95 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
-  title: "Moving to France — International Removals | Sofoservis",
+  title: "Moving to Norway — International Removals | Sofoservis",
   description:
-    "Professional international moving from Slovakia to France. We cover Paris, Lyon, Marseille, Bordeaux, and all French cities.",
+    "Professional international moving from Slovakia to Norway. We handle Norwegian customs clearance and deliver to Oslo, Bergen, Stavanger, and Trondheim.",
   keywords:
-    "moving from slovakia to france, moving from bratislava to paris, slovakia to france removals, international moving slovakia france, moving to paris from slovakia",
+    "moving from slovakia to norway, moving from bratislava to oslo, slovakia to norway removals, international moving slovakia norway, moving to oslo from slovakia",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-france",
+    canonical: "https://www.sofoservis.sk/en/moving-to-norway",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-france",
-      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/francuzsko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-france",
+      en: "https://www.sofoservis.sk/en/moving-to-norway",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/norsko",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-norway",
     },
   },
 };
 
-export default function MovingFromSlovakiaToFrancePage() {
+export default function MovingFromSlovakiaToNorwayPage() {
   const faqItems = [
     {
-      question: "How long does moving from Slovakia to France take?",
+      question: "Are there customs requirements when moving from Slovakia to Norway?",
       answer:
-        "Transit from Slovakia to France typically takes 4-7 days. From Bratislava to Paris it is usually 4-5 days. Destinations in the south of France may take slightly longer. We provide regular updates throughout your move.",
+        "Yes — Norway is not an EU member state (it is EEA/EFTA). Moving personal household goods from Slovakia to Norway requires Norwegian customs clearance. You may qualify for customs duty relief if you are permanently relocating. Our team prepares all required documentation.",
     },
     {
-      question: "Are there customs formalities for moving from Slovakia to France?",
+      question: "How long does a move from Slovakia to Norway take?",
       answer:
-        "No — both Slovakia and France are EU member states. No customs declarations are required for moving personal household goods between EU countries. We handle all standard transport documentation.",
+        "Transit from Slovakia to Norway typically takes 5-8 days. To Oslo it is usually 5-6 days. Destinations in northern Norway may take longer. We provide regular updates throughout.",
     },
     {
-      question: "Which cities in France do you deliver to?",
+      question: "Which Norwegian cities do you deliver to?",
       answer:
-        "We deliver throughout France — Paris, Lyon, Marseille, Toulouse, Nice, Bordeaux, Strasbourg, Nantes, Lille, Rennes, and all other cities, towns, and regions.",
+        "We deliver throughout Norway — Oslo, Bergen, Stavanger, Trondheim, Drammen, Fredrikstad, Kristiansand, and all other Norwegian cities and towns.",
     },
     {
-      question: "Can I use a groupage service for my Slovakia to France move?",
+      question: "What documents are needed for the Norwegian customs process?",
       answer:
-        "Yes, if you have a partial household or fewer items, our groupage (part-load) service allows you to share a vehicle with other shipments, significantly reducing the cost.",
+        "You typically need a detailed inventory of items, proof of residency change, and a completed Norwegian customs declaration (Toll declaration). Our team guides you through every step and prepares all paperwork.",
     },
     {
-      question: "Do you assemble furniture at my new French address?",
+      question: "Can I send a partial load from Slovakia to Norway?",
       answer:
-        "Yes, furniture disassembly and reassembly is available as part of our full-service move.",
+        "Yes, our groupage (part-load) service lets you share a vehicle with other Norwegian shipments, making it cost-effective for smaller quantities.",
     },
   ];
 
   const featuresData = {
-    title: "Slovakia to France — Long-Distance Moving Professionals",
+    title: "Slovakia to Norway — Expert Non-EU Removals",
     description:
-      "Regular departures between Slovakia and France ensure competitive prices and reliable transit times for your international relocation.",
+      "Norway requires customs clearance — our experienced team handles all formalities so your move from Slovakia to Norway is smooth and stress-free.",
     features: [
       {
-        image: "/icons/truck_icon.svg",
-        title: "Regular Slovakia–France Departures",
+        image: "/icons/document_icon.svg",
+        title: "Norwegian Customs Expertise",
         description:
-          "We operate scheduled services between Slovakia and France, keeping transit times and prices competitive.",
-        link: "/en/moving-from-slovakia-to-france",
+          "We prepare all Norwegian customs documentation and guide you through the import process step by step.",
+        link: "/en/moving-to-norway",
       },
       {
-        image: "/icons/globe_icon.svg",
-        title: "Delivery Throughout France",
+        image: "/icons/truck_icon.svg",
+        title: "Door-to-Door Delivery",
         description:
-          "We deliver to Paris, Lyon, Marseille, Bordeaux, Toulouse, Strasbourg, Lille, and all French cities.",
-        link: "/en/moving-from-slovakia-to-france",
+          "We collect from your Slovak address and deliver directly to Oslo, Bergen, Stavanger, or anywhere in Norway.",
+        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
-          "We use quality materials suited for long international journeys to keep your items safe.",
-        link: "/en/moving-from-slovakia-to-france",
+          "Quality packing materials and expert techniques for long Scandinavian routes.",
+        link: "/en/moving-to-norway",
       },
       {
-        image: "/icons/document_icon.svg",
-        title: "All Documentation Handled",
+        image: "/icons/globe_icon.svg",
+        title: "All Norwegian Destinations",
         description:
-          "We manage all transport paperwork so your relocation runs without delays.",
-        link: "/en/moving-from-slovakia-to-france",
+          "We deliver throughout Norway — from Oslo to the far north.",
+        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/insurance_icon.svg",
-        title: "Insured Transport",
+        title: "Fully Insured Transport",
         description:
-          "All items are insured during transport for complete peace of mind.",
-        link: "/en/moving-from-slovakia-to-france",
+          "Your belongings are insured for the complete journey from Slovakia to Norway.",
+        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/furniture_icon.svg",
         title: "Furniture Assembly",
         description:
-          "We disassemble before the move and reassemble your furniture at your new French home.",
+          "We disassemble furniture before the move and reassemble it at your new Norwegian home.",
         link: "/en/furniture-assembly",
       },
     ],
@@ -126,8 +126,8 @@ export default function MovingFromSlovakiaToFrancePage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          title="Moving from Slovakia to France"
-          description="Relocating from Slovakia to France? Sofoservis provides professional long-distance international removals from anywhere in Slovakia to Paris, Lyon, Marseille, and all French cities. Regular routes, affordable prices, and a stress-free experience."
+          title="Moving from Slovakia to Norway"
+          description="Relocating from Slovakia to Norway? Sofoservis provides professional door-to-door removals from anywhere in Slovakia to Oslo, Bergen, Stavanger, and all of Norway. Our team handles Norwegian customs clearance, professional packing, and safe final delivery."
           formTitle="Get a Free Quote"
           formSubtitle="Fill out the form for a no-obligation estimate"
           benefits={[]}
@@ -139,8 +139,8 @@ export default function MovingFromSlovakiaToFrancePage() {
       </div>
       <div className="lg:hidden">
         <Hero
-          title="Moving from Slovakia to France"
-          description="Relocating from Slovakia to France? Sofoservis provides professional long-distance international removals from anywhere in Slovakia to Paris, Lyon, Marseille, and all French cities. Regular routes, affordable prices, and a stress-free experience."
+          title="Moving from Slovakia to Norway"
+          description="Relocating from Slovakia to Norway? Sofoservis provides professional door-to-door removals from anywhere in Slovakia to Oslo, Bergen, Stavanger, and all of Norway. Our team handles Norwegian customs clearance, professional packing, and safe final delivery."
           formTitle="Get a Free Quote"
           formSubtitle="Fill out the form for a no-obligation estimate"
           benefits={[]}
@@ -160,7 +160,7 @@ export default function MovingFromSlovakiaToFrancePage() {
       </div>
 
       <div>
-        <GoogleReviews title="Trusted for Slovakia to France Removals" />
+        <GoogleReviews title="Trusted for Slovakia to Norway Removals" />
       </div>
 
       <div>
@@ -183,23 +183,23 @@ export default function MovingFromSlovakiaToFrancePage() {
       <div>
         <GoogleReviews
           showReviewsShowcase={false}
-          title="Reviews from Customers Who Moved from Slovakia to France"
+          title="Reviews from Customers Who Moved from Slovakia to Norway"
         />
       </div>
 
       <div>
         <FAQ
-          title="FAQ — Moving from Slovakia to France"
-          subtitle="Common questions about relocating from Slovakia to France"
+          title="FAQ — Moving from Slovakia to Norway"
+          subtitle="Common questions about relocating from Slovakia to Norway"
           items={faqItems}
-          callToActionText="Moving from Slovakia to France? Get a free quote"
+          callToActionText="Moving from Slovakia to Norway? Get a free quote"
         />
       </div>
 
       <div>
         <CTA
-          title="Moving from Slovakia to France?"
-          description="Contact us today for a free, detailed quote. Our team is ready to help you relocate to France."
+          title="Moving from Slovakia to Norway?"
+          description="Contact us today for a free quote. We handle Norwegian customs and deliver door-to-door anywhere in Norway."
           buttonText="Request a Quote"
         />
       </div>
@@ -214,9 +214,9 @@ export default function MovingFromSlovakiaToFrancePage() {
             icon: "/icons/globe_icon.svg",
           },
           {
-            title: "Moving Bratislava to Paris",
-            description: "City-to-city route between Bratislava and Paris.",
-            href: "/en/moving-to-paris",
+            title: "Moving from Slovakia to Sweden",
+            description: "Also moving to Sweden? We cover that route too.",
+            href: "/en/moving-to-sweden",
             icon: "/icons/truck_icon.svg",
           },
           {

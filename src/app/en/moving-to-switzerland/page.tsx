@@ -15,95 +15,95 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
-  title: "Moving to Norway — International Removals | Sofoservis",
+  title: "Moving to Switzerland — International Removals | Sofoservis",
   description:
-    "Professional international moving from Slovakia to Norway. We handle Norwegian customs clearance and deliver to Oslo, Bergen, Stavanger, and Trondheim.",
+    "Professional international moving from Slovakia to Switzerland. We handle Swiss customs clearance and deliver to Zurich, Geneva, Basel, and Bern.",
   keywords:
-    "moving from slovakia to norway, moving from bratislava to oslo, slovakia to norway removals, international moving slovakia norway, moving to oslo from slovakia",
+    "moving from slovakia to switzerland, moving from bratislava to zurich, slovakia to switzerland removals, international moving slovakia switzerland, moving to switzerland from slovakia",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-norway",
+    canonical: "https://www.sofoservis.sk/en/moving-to-switzerland",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-norway",
-      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/norsko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-norway",
+      en: "https://www.sofoservis.sk/en/moving-to-switzerland",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/svajciarsko",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-switzerland",
     },
   },
 };
 
-export default function MovingFromSlovakiaToNorwayPage() {
+export default function MovingFromSlovakiaToSwitzerlandPage() {
   const faqItems = [
     {
-      question: "Are there customs requirements when moving from Slovakia to Norway?",
+      question: "Are there customs requirements when moving from Slovakia to Switzerland?",
       answer:
-        "Yes — Norway is not an EU member state (it is EEA/EFTA). Moving personal household goods from Slovakia to Norway requires Norwegian customs clearance. You may qualify for customs duty relief if you are permanently relocating. Our team prepares all required documentation.",
+        "Yes — Switzerland is not an EU member state. Moving personal household goods from Slovakia to Switzerland requires Swiss customs clearance. You may qualify for customs duty relief if you are permanently relocating. Our team prepares all the required documentation.",
     },
     {
-      question: "How long does a move from Slovakia to Norway take?",
+      question: "How long does the move from Slovakia to Switzerland take?",
       answer:
-        "Transit from Slovakia to Norway typically takes 5-8 days. To Oslo it is usually 5-6 days. Destinations in northern Norway may take longer. We provide regular updates throughout.",
+        "Transit from Slovakia to Switzerland typically takes 2-4 days depending on the destination city. To Zurich it is usually 2-3 days, to Geneva it may take 3-4 days.",
     },
     {
-      question: "Which Norwegian cities do you deliver to?",
+      question: "Which cities in Switzerland do you deliver to?",
       answer:
-        "We deliver throughout Norway — Oslo, Bergen, Stavanger, Trondheim, Drammen, Fredrikstad, Kristiansand, and all other Norwegian cities and towns.",
+        "We deliver throughout Switzerland — Zurich, Geneva, Basel, Bern, Lausanne, Lugano, Winterthur, St. Gallen, and all other cities and municipalities.",
     },
     {
-      question: "What documents are needed for the Norwegian customs process?",
+      question: "What documents do I need for the Swiss customs process?",
       answer:
-        "You typically need a detailed inventory of items, proof of residency change, and a completed Norwegian customs declaration (Toll declaration). Our team guides you through every step and prepares all paperwork.",
+        "You will typically need a detailed inventory list, proof of your change of residence, and a completed Swiss customs declaration form. Our team guides you through the entire process and prepares all paperwork.",
     },
     {
-      question: "Can I send a partial load from Slovakia to Norway?",
+      question: "Can you move a partial household from Slovakia to Switzerland?",
       answer:
-        "Yes, our groupage (part-load) service lets you share a vehicle with other Norwegian shipments, making it cost-effective for smaller quantities.",
+        "Yes, our groupage service allows you to send a partial load at a significantly reduced cost compared to a full truck.",
     },
   ];
 
   const featuresData = {
-    title: "Slovakia to Norway — Expert Non-EU Removals",
+    title: "Slovakia to Switzerland — Expert Non-EU Moving",
     description:
-      "Norway requires customs clearance — our experienced team handles all formalities so your move from Slovakia to Norway is smooth and stress-free.",
+      "Switzerland requires customs clearance — but our experienced team handles everything, making your Slovakia-to-Switzerland move smooth and straightforward.",
     features: [
       {
         image: "/icons/document_icon.svg",
-        title: "Norwegian Customs Expertise",
+        title: "Swiss Customs Expertise",
         description:
-          "We prepare all Norwegian customs documentation and guide you through the import process step by step.",
-        link: "/en/moving-from-slovakia-to-norway",
+          "We prepare all Swiss customs documentation and guide you through the import process for a hassle-free relocation.",
+        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Door-to-Door Delivery",
         description:
-          "We collect from your Slovak address and deliver directly to Oslo, Bergen, Stavanger, or anywhere in Norway.",
-        link: "/en/moving-from-slovakia-to-norway",
+          "We collect from your Slovak address and deliver directly to Zurich, Geneva, Basel, Bern, or anywhere in Switzerland.",
+        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
-          "Quality packing materials and expert techniques for long Scandinavian routes.",
-        link: "/en/moving-from-slovakia-to-norway",
+          "We use quality materials to protect all your belongings during international transport.",
+        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/globe_icon.svg",
-        title: "All Norwegian Destinations",
+        title: "All Swiss Destinations",
         description:
-          "We deliver throughout Norway — from Oslo to the far north.",
-        link: "/en/moving-from-slovakia-to-norway",
+          "We deliver throughout all Swiss cantons — German, French, and Italian-speaking regions.",
+        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
-          "Your belongings are insured for the complete journey from Slovakia to Norway.",
-        link: "/en/moving-from-slovakia-to-norway",
+          "Your belongings are insured for the entire journey from Slovakia to Switzerland.",
+        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/furniture_icon.svg",
         title: "Furniture Assembly",
         description:
-          "We disassemble furniture before the move and reassemble it at your new Norwegian home.",
+          "We disassemble furniture before the move and reassemble it at your new Swiss home.",
         link: "/en/furniture-assembly",
       },
     ],
@@ -126,8 +126,8 @@ export default function MovingFromSlovakiaToNorwayPage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          title="Moving from Slovakia to Norway"
-          description="Relocating from Slovakia to Norway? Sofoservis provides professional door-to-door removals from anywhere in Slovakia to Oslo, Bergen, Stavanger, and all of Norway. Our team handles Norwegian customs clearance, professional packing, and safe final delivery."
+          title="Moving from Slovakia to Switzerland"
+          description="Relocating from Slovakia to Switzerland? Sofoservis provides professional door-to-door removals from anywhere in Slovakia to all Swiss cities. Our team handles Swiss customs clearance, professional packing, and safe delivery to your new Swiss home."
           formTitle="Get a Free Quote"
           formSubtitle="Fill out the form for a no-obligation estimate"
           benefits={[]}
@@ -139,8 +139,8 @@ export default function MovingFromSlovakiaToNorwayPage() {
       </div>
       <div className="lg:hidden">
         <Hero
-          title="Moving from Slovakia to Norway"
-          description="Relocating from Slovakia to Norway? Sofoservis provides professional door-to-door removals from anywhere in Slovakia to Oslo, Bergen, Stavanger, and all of Norway. Our team handles Norwegian customs clearance, professional packing, and safe final delivery."
+          title="Moving from Slovakia to Switzerland"
+          description="Relocating from Slovakia to Switzerland? Sofoservis provides professional door-to-door removals from anywhere in Slovakia to all Swiss cities. Our team handles Swiss customs clearance, professional packing, and safe delivery to your new Swiss home."
           formTitle="Get a Free Quote"
           formSubtitle="Fill out the form for a no-obligation estimate"
           benefits={[]}
@@ -160,7 +160,7 @@ export default function MovingFromSlovakiaToNorwayPage() {
       </div>
 
       <div>
-        <GoogleReviews title="Trusted for Slovakia to Norway Removals" />
+        <GoogleReviews title="Trusted for Slovakia to Switzerland Removals" />
       </div>
 
       <div>
@@ -183,23 +183,23 @@ export default function MovingFromSlovakiaToNorwayPage() {
       <div>
         <GoogleReviews
           showReviewsShowcase={false}
-          title="Reviews from Customers Who Moved from Slovakia to Norway"
+          title="Reviews from Customers Who Moved from Slovakia to Switzerland"
         />
       </div>
 
       <div>
         <FAQ
-          title="FAQ — Moving from Slovakia to Norway"
-          subtitle="Common questions about relocating from Slovakia to Norway"
+          title="FAQ — Moving from Slovakia to Switzerland"
+          subtitle="Common questions about relocating from Slovakia to Switzerland"
           items={faqItems}
-          callToActionText="Moving from Slovakia to Norway? Get a free quote"
+          callToActionText="Moving from Slovakia to Switzerland? Get a free quote"
         />
       </div>
 
       <div>
         <CTA
-          title="Moving from Slovakia to Norway?"
-          description="Contact us today for a free quote. We handle Norwegian customs and deliver door-to-door anywhere in Norway."
+          title="Moving from Slovakia to Switzerland?"
+          description="Contact us today for a free quote. We handle Swiss customs and deliver door-to-door anywhere in Switzerland."
           buttonText="Request a Quote"
         />
       </div>
@@ -214,9 +214,9 @@ export default function MovingFromSlovakiaToNorwayPage() {
             icon: "/icons/globe_icon.svg",
           },
           {
-            title: "Moving from Slovakia to Sweden",
-            description: "Also moving to Sweden? We cover that route too.",
-            href: "/en/moving-from-slovakia-to-sweden",
+            title: "Moving Bratislava to Zurich",
+            description: "City-to-city route between Bratislava and Zurich.",
+            href: "/en/moving-to-zurich",
             icon: "/icons/truck_icon.svg",
           },
           {

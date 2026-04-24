@@ -22,7 +22,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/medzinarodne-stahovanie/rakusko",
     languages: {
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/rakusko",
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
+      en: "https://www.sofoservis.sk/en/moving-to-austria",
       "x-default": "https://www.sofoservis.sk/medzinarodne-stahovanie/rakusko",
     },
   },

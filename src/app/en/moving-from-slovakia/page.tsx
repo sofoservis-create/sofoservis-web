@@ -69,63 +69,63 @@ export default function MovingFromSlovakiaPage() {
         title: "Moving from Slovakia to Austria",
         description:
           "Fast and affordable moves from Slovakia to Austria. Vienna is just 60 km from Bratislava — ideal for quick, efficient relocations.",
-        link: "/en/moving-from-slovakia-to-austria",
+        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to Germany",
         description:
           "Regular routes to Munich, Berlin, Hamburg, Frankfurt, and all German cities. Competitive group-load pricing available.",
-        link: "/en/moving-from-slovakia-to-germany",
+        link: "/en/moving-to-germany",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to the UK",
         description:
           "Post-Brexit moves to England, Scotland, and Wales. We handle all UK customs documentation and Border Force requirements.",
-        link: "/en/moving-from-slovakia-to-uk",
+        link: "/en/moving-to-uk",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to Switzerland",
         description:
           "Professional moves from Slovakia to Zurich, Geneva, Basel, and Bern. Swiss customs clearance handled by our experienced team.",
-        link: "/en/moving-from-slovakia-to-switzerland",
+        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to the Netherlands",
         description:
           "Efficient relocation from Slovakia to Amsterdam, Rotterdam, The Hague, and all Dutch cities with regular scheduled departures.",
-        link: "/en/moving-from-slovakia-to-netherlands",
+        link: "/en/moving-to-netherlands",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to France",
         description:
           "Long-distance moves from Slovakia to Paris, Lyon, Marseille, and across France. Full-load and groupage options available.",
-        link: "/en/moving-from-slovakia-to-france",
+        link: "/en/moving-to-france",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to Ireland",
         description:
           "Specialist moves from Slovakia to Dublin, Cork, Galway, and beyond. Sea freight options for larger volumes.",
-        link: "/en/moving-from-slovakia-to-ireland",
+        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to Sweden",
         description:
           "Reliable Scandinavian route from Slovakia to Stockholm, Gothenburg, and Malmö. Full customs support included.",
-        link: "/en/moving-from-slovakia-to-sweden",
+        link: "/en/moving-to-sweden",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Moving from Slovakia to Norway",
         description:
           "Expert moves from Slovakia to Oslo, Bergen, and Stavanger. Norwegian customs formalities handled professionally.",
-        link: "/en/moving-from-slovakia-to-norway",
+        link: "/en/moving-to-norway",
       },
     ],
   };

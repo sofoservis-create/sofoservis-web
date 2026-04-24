@@ -185,7 +185,7 @@ export default function MovingToViennaPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving from Slovakia to Austria", description: "Full country-to-country coverage.", href: "/en/moving-from-slovakia-to-austria", icon: "/icons/globe_icon.svg" },
+          { title: "Moving from Slovakia to Austria", description: "Full country-to-country coverage.", href: "/en/moving-to-austria", icon: "/icons/globe_icon.svg" },
           { title: "Moving Bratislava to Vienna", description: "City-to-city Bratislava–Vienna route.", href: "/en/moving-to-vienna", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

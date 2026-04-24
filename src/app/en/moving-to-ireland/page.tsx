@@ -21,11 +21,11 @@ export const metadata = {
   keywords:
     "moving from slovakia to ireland, moving from bratislava to dublin, slovakia to ireland removals, international moving slovakia ireland, moving to dublin from slovakia",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-ireland",
+    canonical: "https://www.sofoservis.sk/en/moving-to-ireland",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-ireland",
+      en: "https://www.sofoservis.sk/en/moving-to-ireland",
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/irsko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-ireland",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-ireland",
     },
   },
 };
@@ -69,35 +69,35 @@ export default function MovingFromSlovakiaToIrelandPage() {
         title: "Regular Slovakia–Ireland Service",
         description:
           "We operate scheduled departures between Slovakia and Ireland including the sea crossing, keeping the process seamless.",
-        link: "/en/moving-from-slovakia-to-ireland",
+        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Delivery Throughout Ireland",
         description:
           "We deliver to Dublin, Cork, Galway, Limerick, and all other Irish destinations.",
-        link: "/en/moving-from-slovakia-to-ireland",
+        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "Expert packing using materials suited for long international journeys including sea transit.",
-        link: "/en/moving-from-slovakia-to-ireland",
+        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport and ferry documentation for a hassle-free move.",
-        link: "/en/moving-from-slovakia-to-ireland",
+        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the entire journey including the sea crossing.",
-        link: "/en/moving-from-slovakia-to-ireland",
+        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/furniture_icon.svg",

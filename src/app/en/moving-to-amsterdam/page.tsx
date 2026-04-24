@@ -185,7 +185,7 @@ export default function MovingToAmsterdamPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving from Slovakia to Netherlands", description: "Full Slovakia-to-Netherlands coverage.", href: "/en/moving-from-slovakia-to-netherlands", icon: "/icons/globe_icon.svg" },
+          { title: "Moving from Slovakia to Netherlands", description: "Full Slovakia-to-Netherlands coverage.", href: "/en/moving-to-netherlands", icon: "/icons/globe_icon.svg" },
           { title: "Moving Bratislava to Amsterdam", description: "Dedicated Bratislava–Amsterdam route page.", href: "/en/moving-to-amsterdam", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

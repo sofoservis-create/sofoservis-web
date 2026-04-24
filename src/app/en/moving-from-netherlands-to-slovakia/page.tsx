@@ -216,7 +216,7 @@ export default function MovingFromNetherlandsToSlovakiaPage() {
           {
             title: "Moving from Slovakia to Netherlands",
             description: "Moving the other direction? We cover that too.",
-            href: "/en/moving-from-slovakia-to-netherlands",
+            href: "/en/moving-to-netherlands",
             icon: "/icons/truck_icon.svg",
           },
           {

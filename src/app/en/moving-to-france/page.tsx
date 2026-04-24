@@ -15,95 +15,95 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
-  title: "Moving to Netherlands — International Removals | Sofoservis",
+  title: "Moving to France — International Removals | Sofoservis",
   description:
-    "Professional international moving from Slovakia to the Netherlands. Regular routes to Amsterdam, Rotterdam, The Hague, and all Dutch cities.",
+    "Professional international moving from Slovakia to France. We cover Paris, Lyon, Marseille, Bordeaux, and all French cities.",
   keywords:
-    "moving from slovakia to netherlands, moving from bratislava to amsterdam, slovakia to netherlands removals, international moving slovakia netherlands, moving to holland from slovakia",
+    "moving from slovakia to france, moving from bratislava to paris, slovakia to france removals, international moving slovakia france, moving to paris from slovakia",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-netherlands",
+    canonical: "https://www.sofoservis.sk/en/moving-to-france",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-netherlands",
-      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/holandsko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-netherlands",
+      en: "https://www.sofoservis.sk/en/moving-to-france",
+      sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/francuzsko",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-france",
     },
   },
 };
 
-export default function MovingFromSlovakiaToNetherlandsPage() {
+export default function MovingFromSlovakiaToFrancePage() {
   const faqItems = [
     {
-      question: "How long does it take to move from Slovakia to the Netherlands?",
+      question: "How long does moving from Slovakia to France take?",
       answer:
-        "Transit from Slovakia to the Netherlands typically takes 3-5 days. We operate regular scheduled routes to minimise waiting times.",
+        "Transit from Slovakia to France typically takes 4-7 days. From Bratislava to Paris it is usually 4-5 days. Destinations in the south of France may take slightly longer. We provide regular updates throughout your move.",
     },
     {
-      question: "Are there customs requirements between Slovakia and the Netherlands?",
+      question: "Are there customs formalities for moving from Slovakia to France?",
       answer:
-        "No — both countries are EU members. There are no customs formalities for moving personal household goods between Slovakia and the Netherlands. We handle all standard transport documentation.",
+        "No — both Slovakia and France are EU member states. No customs declarations are required for moving personal household goods between EU countries. We handle all standard transport documentation.",
     },
     {
-      question: "Which cities in the Netherlands do you deliver to?",
+      question: "Which cities in France do you deliver to?",
       answer:
-        "We deliver throughout the Netherlands — Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven, Tilburg, Groningen, Breda, and all other cities and towns.",
+        "We deliver throughout France — Paris, Lyon, Marseille, Toulouse, Nice, Bordeaux, Strasbourg, Nantes, Lille, Rennes, and all other cities, towns, and regions.",
     },
     {
-      question: "Do you offer a groupage (part-load) service?",
+      question: "Can I use a groupage service for my Slovakia to France move?",
       answer:
-        "Yes, if you have less than a full truck load, we consolidate your shipment with others on the same route, significantly reducing the cost.",
+        "Yes, if you have a partial household or fewer items, our groupage (part-load) service allows you to share a vehicle with other shipments, significantly reducing the cost.",
     },
     {
-      question: "What packing services do you offer for Slovakia to Netherlands moves?",
+      question: "Do you assemble furniture at my new French address?",
       answer:
-        "We offer a full professional packing service as well as supply of materials (boxes, tape, bubble wrap) for self-packing. Our team uses materials suited for long international transit.",
+        "Yes, furniture disassembly and reassembly is available as part of our full-service move.",
     },
   ];
 
   const featuresData = {
-    title: "Slovakia to Netherlands — Reliable Long-Distance Service",
+    title: "Slovakia to France — Long-Distance Moving Professionals",
     description:
-      "Regular routes between Slovakia and the Netherlands mean competitive prices and short transit times for your international move.",
+      "Regular departures between Slovakia and France ensure competitive prices and reliable transit times for your international relocation.",
     features: [
       {
         image: "/icons/truck_icon.svg",
-        title: "Regular Slovakia–Netherlands Routes",
+        title: "Regular Slovakia–France Departures",
         description:
-          "We run scheduled services between Slovakia and the Netherlands, keeping transit times short and prices low.",
-        link: "/en/moving-from-slovakia-to-netherlands",
+          "We operate scheduled services between Slovakia and France, keeping transit times and prices competitive.",
+        link: "/en/moving-to-france",
       },
       {
         image: "/icons/globe_icon.svg",
-        title: "Nationwide Dutch Delivery",
+        title: "Delivery Throughout France",
         description:
-          "We deliver to Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven, and all Dutch cities.",
-        link: "/en/moving-from-slovakia-to-netherlands",
+          "We deliver to Paris, Lyon, Marseille, Bordeaux, Toulouse, Strasbourg, Lille, and all French cities.",
+        link: "/en/moving-to-france",
       },
       {
         image: "/icons/packing_box_icon.svg",
-        title: "Professional Packing Service",
+        title: "Professional Packing",
         description:
-          "Expert packing using materials designed for long-distance international transport.",
-        link: "/en/moving-from-slovakia-to-netherlands",
+          "We use quality materials suited for long international journeys to keep your items safe.",
+        link: "/en/moving-to-france",
       },
       {
         image: "/icons/document_icon.svg",
-        title: "All Documentation Managed",
+        title: "All Documentation Handled",
         description:
-          "We handle all transport paperwork so your move proceeds smoothly.",
-        link: "/en/moving-from-slovakia-to-netherlands",
+          "We manage all transport paperwork so your relocation runs without delays.",
+        link: "/en/moving-to-france",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
-          "Your belongings are insured throughout the entire journey from Slovakia to the Netherlands.",
-        link: "/en/moving-from-slovakia-to-netherlands",
+          "All items are insured during transport for complete peace of mind.",
+        link: "/en/moving-to-france",
       },
       {
         image: "/icons/furniture_icon.svg",
         title: "Furniture Assembly",
         description:
-          "We disassemble furniture before loading and reassemble it at your new Dutch address.",
+          "We disassemble before the move and reassemble your furniture at your new French home.",
         link: "/en/furniture-assembly",
       },
     ],
@@ -126,8 +126,8 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          title="Moving from Slovakia to the Netherlands"
-          description="Relocating from Slovakia to the Netherlands? Sofoservis provides professional door-to-door international removals from anywhere in Slovakia to Amsterdam, Rotterdam, and all Dutch cities. Regular routes, competitive prices, and a fully managed experience."
+          title="Moving from Slovakia to France"
+          description="Relocating from Slovakia to France? Sofoservis provides professional long-distance international removals from anywhere in Slovakia to Paris, Lyon, Marseille, and all French cities. Regular routes, affordable prices, and a stress-free experience."
           formTitle="Get a Free Quote"
           formSubtitle="Fill out the form for a no-obligation estimate"
           benefits={[]}
@@ -139,8 +139,8 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
       </div>
       <div className="lg:hidden">
         <Hero
-          title="Moving from Slovakia to the Netherlands"
-          description="Relocating from Slovakia to the Netherlands? Sofoservis provides professional door-to-door international removals from anywhere in Slovakia to Amsterdam, Rotterdam, and all Dutch cities. Regular routes, competitive prices, and a fully managed experience."
+          title="Moving from Slovakia to France"
+          description="Relocating from Slovakia to France? Sofoservis provides professional long-distance international removals from anywhere in Slovakia to Paris, Lyon, Marseille, and all French cities. Regular routes, affordable prices, and a stress-free experience."
           formTitle="Get a Free Quote"
           formSubtitle="Fill out the form for a no-obligation estimate"
           benefits={[]}
@@ -160,7 +160,7 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
       </div>
 
       <div>
-        <GoogleReviews title="Trusted for Slovakia to Netherlands Removals" />
+        <GoogleReviews title="Trusted for Slovakia to France Removals" />
       </div>
 
       <div>
@@ -183,23 +183,23 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
       <div>
         <GoogleReviews
           showReviewsShowcase={false}
-          title="Reviews from Customers Who Moved from Slovakia to the Netherlands"
+          title="Reviews from Customers Who Moved from Slovakia to France"
         />
       </div>
 
       <div>
         <FAQ
-          title="FAQ — Moving from Slovakia to the Netherlands"
-          subtitle="Common questions about relocating from Slovakia to the Netherlands"
+          title="FAQ — Moving from Slovakia to France"
+          subtitle="Common questions about relocating from Slovakia to France"
           items={faqItems}
-          callToActionText="Moving from Slovakia to the Netherlands? Get a free quote"
+          callToActionText="Moving from Slovakia to France? Get a free quote"
         />
       </div>
 
       <div>
         <CTA
-          title="Moving from Slovakia to the Netherlands?"
-          description="Contact us today for a free, detailed quote. Our team is ready to help you relocate to the Netherlands."
+          title="Moving from Slovakia to France?"
+          description="Contact us today for a free, detailed quote. Our team is ready to help you relocate to France."
           buttonText="Request a Quote"
         />
       </div>
@@ -214,9 +214,9 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
             icon: "/icons/globe_icon.svg",
           },
           {
-            title: "Moving Bratislava to Amsterdam",
-            description: "City-to-city route between Bratislava and Amsterdam.",
-            href: "/en/moving-to-amsterdam",
+            title: "Moving Bratislava to Paris",
+            description: "City-to-city route between Bratislava and Paris.",
+            href: "/en/moving-to-paris",
             icon: "/icons/truck_icon.svg",
           },
           {

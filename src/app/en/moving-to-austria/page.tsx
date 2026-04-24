@@ -21,11 +21,11 @@ export const metadata = {
   keywords:
     "moving from slovakia to austria, moving from bratislava to vienna, slovakia to austria removals, international moving slovakia austria, moving bratislava vienna",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
+    canonical: "https://www.sofoservis.sk/en/moving-to-austria",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
+      en: "https://www.sofoservis.sk/en/moving-to-austria",
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/rakusko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-austria",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-austria",
     },
   },
 };
@@ -69,21 +69,21 @@ export default function MovingFromSlovakiaToAustriaPage() {
         title: "Fast Bratislava–Vienna Service",
         description:
           "The short distance between Bratislava and Vienna allows for very fast turnaround, often same-day or next-day.",
-        link: "/en/moving-from-slovakia-to-austria",
+        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Delivery Throughout Austria",
         description:
           "We deliver to Vienna, Graz, Linz, Salzburg, Innsbruck, Klagenfurt, and all other Austrian destinations.",
-        link: "/en/moving-from-slovakia-to-austria",
+        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "We professionally pack your belongings to ensure everything arrives safely at your new Austrian home.",
-        link: "/en/moving-from-slovakia-to-austria",
+        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -97,14 +97,14 @@ export default function MovingFromSlovakiaToAustriaPage() {
         title: "Fully Insured Transport",
         description:
           "Your belongings are covered by transport insurance for the entire journey.",
-        link: "/en/moving-from-slovakia-to-austria",
+        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs Hassle",
         description:
           "EU-to-EU move — no customs declarations required. A smooth, straightforward relocation.",
-        link: "/en/moving-from-slovakia-to-austria",
+        link: "/en/moving-to-austria",
       },
     ],
   };

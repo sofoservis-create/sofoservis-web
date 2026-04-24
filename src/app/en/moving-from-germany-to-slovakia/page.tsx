@@ -216,7 +216,7 @@ export default function MovingFromGermanyToSlovakiaPage() {
           {
             title: "Moving from Slovakia to Germany",
             description: "Moving the other direction? We cover that too.",
-            href: "/en/moving-from-slovakia-to-germany",
+            href: "/en/moving-to-germany",
             icon: "/icons/truck_icon.svg",
           },
           {

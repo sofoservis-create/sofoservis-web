@@ -185,7 +185,7 @@ export default function MovingToZurichPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving from Slovakia to Switzerland", description: "Full Slovakia-to-Switzerland coverage.", href: "/en/moving-from-slovakia-to-switzerland", icon: "/icons/globe_icon.svg" },
+          { title: "Moving from Slovakia to Switzerland", description: "Full Slovakia-to-Switzerland coverage.", href: "/en/moving-to-switzerland", icon: "/icons/globe_icon.svg" },
           { title: "Moving Bratislava to Zurich", description: "Dedicated Bratislava–Zurich route page.", href: "/en/moving-to-zurich", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

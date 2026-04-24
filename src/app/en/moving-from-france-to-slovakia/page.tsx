@@ -216,7 +216,7 @@ export default function MovingFromFranceToSlovakiaPage() {
           {
             title: "Moving from Slovakia to France",
             description: "Moving the other direction? We cover that too.",
-            href: "/en/moving-from-slovakia-to-france",
+            href: "/en/moving-to-france",
             icon: "/icons/truck_icon.svg",
           },
           {

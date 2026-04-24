@@ -263,15 +263,15 @@ export default function InternationalMovingServicesPage() {
             ];
             const fromSlovakia: Array<{ href: string; label: string; hub?: boolean }> = [
               { href: "/en/moving-from-slovakia", label: "Moving from Slovakia (hub)", hub: true },
-              { href: "/en/moving-from-slovakia-to-austria", label: "Slovakia to Austria" },
-              { href: "/en/moving-from-slovakia-to-germany", label: "Slovakia to Germany" },
-              { href: "/en/moving-from-slovakia-to-uk", label: "Slovakia to UK" },
-              { href: "/en/moving-from-slovakia-to-switzerland", label: "Slovakia to Switzerland" },
-              { href: "/en/moving-from-slovakia-to-netherlands", label: "Slovakia to Netherlands" },
-              { href: "/en/moving-from-slovakia-to-france", label: "Slovakia to France" },
-              { href: "/en/moving-from-slovakia-to-ireland", label: "Slovakia to Ireland" },
-              { href: "/en/moving-from-slovakia-to-sweden", label: "Slovakia to Sweden" },
-              { href: "/en/moving-from-slovakia-to-norway", label: "Slovakia to Norway" },
+              { href: "/en/moving-to-austria", label: "Slovakia to Austria" },
+              { href: "/en/moving-to-germany", label: "Slovakia to Germany" },
+              { href: "/en/moving-to-uk", label: "Slovakia to UK" },
+              { href: "/en/moving-to-switzerland", label: "Slovakia to Switzerland" },
+              { href: "/en/moving-to-netherlands", label: "Slovakia to Netherlands" },
+              { href: "/en/moving-to-france", label: "Slovakia to France" },
+              { href: "/en/moving-to-ireland", label: "Slovakia to Ireland" },
+              { href: "/en/moving-to-sweden", label: "Slovakia to Sweden" },
+              { href: "/en/moving-to-norway", label: "Slovakia to Norway" },
             ];
             const toCity: Array<{ href: string; label: string }> = [
               { href: "/en/moving-to-vienna", label: "Moving to Vienna" },

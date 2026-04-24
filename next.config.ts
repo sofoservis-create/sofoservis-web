@@ -486,48 +486,48 @@ const nextConfig = {
       // Both URL sets covered the same use-case (moving from Slovakia to a country).
       // Canonical set is moving-from-slovakia-to-X (clearer URL, in main menu, longer content).
       {
-        source: "/en/moving-to-austria",
-        destination: "/en/moving-from-slovakia-to-austria",
+        source: "/en/moving-from-slovakia-to-austria",
+        destination: "/en/moving-to-austria",
         permanent: true,
       },
       {
-        source: "/en/moving-to-france",
-        destination: "/en/moving-from-slovakia-to-france",
+        source: "/en/moving-from-slovakia-to-france",
+        destination: "/en/moving-to-france",
         permanent: true,
       },
       {
-        source: "/en/moving-to-germany",
-        destination: "/en/moving-from-slovakia-to-germany",
+        source: "/en/moving-from-slovakia-to-germany",
+        destination: "/en/moving-to-germany",
         permanent: true,
       },
       {
-        source: "/en/moving-to-ireland",
-        destination: "/en/moving-from-slovakia-to-ireland",
+        source: "/en/moving-from-slovakia-to-ireland",
+        destination: "/en/moving-to-ireland",
         permanent: true,
       },
       {
-        source: "/en/moving-to-netherlands",
-        destination: "/en/moving-from-slovakia-to-netherlands",
+        source: "/en/moving-from-slovakia-to-netherlands",
+        destination: "/en/moving-to-netherlands",
         permanent: true,
       },
       {
-        source: "/en/moving-to-norway",
-        destination: "/en/moving-from-slovakia-to-norway",
+        source: "/en/moving-from-slovakia-to-norway",
+        destination: "/en/moving-to-norway",
         permanent: true,
       },
       {
-        source: "/en/moving-to-sweden",
-        destination: "/en/moving-from-slovakia-to-sweden",
+        source: "/en/moving-from-slovakia-to-sweden",
+        destination: "/en/moving-to-sweden",
         permanent: true,
       },
       {
-        source: "/en/moving-to-switzerland",
-        destination: "/en/moving-from-slovakia-to-switzerland",
+        source: "/en/moving-from-slovakia-to-switzerland",
+        destination: "/en/moving-to-switzerland",
         permanent: true,
       },
       {
-        source: "/en/moving-to-uk",
-        destination: "/en/moving-from-slovakia-to-uk",
+        source: "/en/moving-from-slovakia-to-uk",
+        destination: "/en/moving-to-uk",
         permanent: true,
       },
     ];

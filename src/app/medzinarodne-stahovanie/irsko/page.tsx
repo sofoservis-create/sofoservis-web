@@ -22,7 +22,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/medzinarodne-stahovanie/irsko",
     languages: {
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/irsko",
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-ireland",
+      en: "https://www.sofoservis.sk/en/moving-to-ireland",
       "x-default": "https://www.sofoservis.sk/medzinarodne-stahovanie/irsko",
     },
   },

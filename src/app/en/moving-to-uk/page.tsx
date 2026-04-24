@@ -21,11 +21,11 @@ export const metadata = {
   keywords:
     "moving from slovakia to uk, moving from slovakia to england, moving from bratislava to london, slovakia to uk removals, international moving slovakia uk",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-uk",
+    canonical: "https://www.sofoservis.sk/en/moving-to-uk",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-uk",
+      en: "https://www.sofoservis.sk/en/moving-to-uk",
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/anglicko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-uk",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-uk",
     },
   },
 };
@@ -69,35 +69,35 @@ export default function MovingFromSlovakiaToUKPage() {
         title: "Post-Brexit Customs Expertise",
         description:
           "Full guidance on UK import requirements. We handle all customs documentation for a smooth arrival of your belongings in the UK.",
-        link: "/en/moving-from-slovakia-to-uk",
+        link: "/en/moving-to-uk",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Door-to-Door Service",
         description:
           "We collect from your Slovak address and deliver directly to your new UK home. No depots, no hassle.",
-        link: "/en/moving-from-slovakia-to-uk",
+        link: "/en/moving-to-uk",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "Trained packers protect all your items using materials suited for long international journeys.",
-        link: "/en/moving-from-slovakia-to-uk",
+        link: "/en/moving-to-uk",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "All belongings are insured for the complete journey from Slovakia to the UK.",
-        link: "/en/moving-from-slovakia-to-uk",
+        link: "/en/moving-to-uk",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Nationwide UK Delivery",
         description:
           "We deliver to London, Manchester, Birmingham, Edinburgh, and anywhere else in the UK.",
-        link: "/en/moving-from-slovakia-to-uk",
+        link: "/en/moving-to-uk",
       },
       {
         image: "/icons/furniture_icon.svg",

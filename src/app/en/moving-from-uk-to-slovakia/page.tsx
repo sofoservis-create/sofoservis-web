@@ -216,7 +216,7 @@ export default function MovingFromUKToSlovakiaPage() {
           {
             title: "Moving from Slovakia to the UK",
             description: "Moving the other direction? We cover that too.",
-            href: "/en/moving-from-slovakia-to-uk",
+            href: "/en/moving-to-uk",
             icon: "/icons/truck_icon.svg",
           },
           {

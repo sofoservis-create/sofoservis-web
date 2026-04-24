@@ -21,11 +21,11 @@ export const metadata = {
   keywords:
     "moving from slovakia to germany, moving from bratislava to munich, slovakia to germany removals, international moving slovakia germany, moving to munich from slovakia",
   alternates: {
-    canonical: "https://www.sofoservis.sk/en/moving-from-slovakia-to-germany",
+    canonical: "https://www.sofoservis.sk/en/moving-to-germany",
     languages: {
-      en: "https://www.sofoservis.sk/en/moving-from-slovakia-to-germany",
+      en: "https://www.sofoservis.sk/en/moving-to-germany",
       sk: "https://www.sofoservis.sk/medzinarodne-stahovanie/nemecko",
-      "x-default": "https://www.sofoservis.sk/en/moving-from-slovakia-to-germany",
+      "x-default": "https://www.sofoservis.sk/en/moving-to-germany",
     },
   },
 };
@@ -69,35 +69,35 @@ export default function MovingFromSlovakiaToGermanyPage() {
         title: "Regular Slovakia–Germany Routes",
         description:
           "We operate scheduled services between Slovakia and Germany, keeping transit times short and prices competitive.",
-        link: "/en/moving-from-slovakia-to-germany",
+        link: "/en/moving-to-germany",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Nationwide German Delivery",
         description:
           "We deliver to Munich, Berlin, Hamburg, Frankfurt, Cologne, Stuttgart, and all other German cities.",
-        link: "/en/moving-from-slovakia-to-germany",
+        link: "/en/moving-to-germany",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing using materials suited for long-distance international moves.",
-        link: "/en/moving-from-slovakia-to-germany",
+        link: "/en/moving-to-germany",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport paperwork so your move proceeds without delays.",
-        link: "/en/moving-from-slovakia-to-germany",
+        link: "/en/moving-to-germany",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the entire journey from Slovakia to Germany.",
-        link: "/en/moving-from-slovakia-to-germany",
+        link: "/en/moving-to-germany",
       },
       {
         image: "/icons/furniture_icon.svg",

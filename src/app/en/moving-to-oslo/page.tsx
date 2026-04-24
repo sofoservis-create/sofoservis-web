@@ -159,7 +159,7 @@ export default function MovingToOsloPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving from Slovakia to Norway", description: "Full Slovakia-to-Norway coverage.", href: "/en/moving-from-slovakia-to-norway", icon: "/icons/globe_icon.svg" },
+          { title: "Moving from Slovakia to Norway", description: "Full Slovakia-to-Norway coverage.", href: "/en/moving-to-norway", icon: "/icons/globe_icon.svg" },
           { title: "Moving to Stockholm", description: "Also moving to Stockholm?", href: "/en/moving-to-stockholm", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
