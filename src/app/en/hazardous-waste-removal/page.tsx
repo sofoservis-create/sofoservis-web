@@ -151,11 +151,7 @@ export default function HazardousWasteRemovalPage() {
           benefits={[]}
           ratingText="Over 3500+ satisfied customers"
           mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={756}
           desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={460}
           lang="en"
         />
       </div>
@@ -170,9 +166,6 @@ export default function HazardousWasteRemovalPage() {
           showMascot
           mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
           mobileMascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
-          mobileMascotOffsetY={-44}
-          mobileMascotScale={0.847}
-          mobileFormOffsetY={19}
           pillsVariant="stahovanie"
           lang="en"
         />
