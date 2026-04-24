@@ -393,7 +393,7 @@ export default function InternationalMovingServicesPage() {
       <div>
         <GoogleReviews
           showReviewsShowcase={false}
-          title="Reviews from Our International Clients"
+          title="Reviews from Our Clients"
         />
       </div>
 
