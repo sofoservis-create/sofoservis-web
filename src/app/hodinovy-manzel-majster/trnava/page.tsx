@@ -116,7 +116,7 @@ export default function HodinovyManzelTrnavaPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie z Trnavy" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku"]} />
       <Features title="Majstrovské služby v Trnave" description="Kvalitná práca pre váš spokojný domov." features={features} />

@@ -119,7 +119,7 @@ export default function OdvozNabytkuBratislavaPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie odvozu — Bratislava" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["vypratavanie"]} />
       <Features title="Odvoz a likvidácia v Bratislave" description="Profesionálny prístup k vypratávaniu vašich priestorov." features={features} />

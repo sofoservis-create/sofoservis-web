@@ -153,7 +153,7 @@ export default function MovingToLisbonPage() {
       <div><Reviews showHeadline={true} callToActionText="Get a Quote" /></div>
       <div><Features title={featuresData.title} description={featuresData.description} features={featuresData.features} callToActionText="Get a Free Quote" /></div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Lisbon" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div><FAQ title="FAQ — Moving to Lisbon from Slovakia" subtitle="Common questions about relocating to Lisbon" items={faqItems} callToActionText="Moving to Lisbon? Get a free quote" /></div>
       <div><CTA title="Ready to Move to Lisbon?" description="Get a free quote today. We deliver from Slovakia to Lisbon — a long journey made easy." buttonText="Request a Quote" /></div>
       <RelatedServices

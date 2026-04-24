@@ -161,7 +161,7 @@ export default function MovingToBarcelonaPage() {
         <Features title={featuresData.title} description={featuresData.description} features={featuresData.features} callToActionText="Get a Free Quote" />
       </div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Barcelona" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div>
         <FAQ title="FAQ — Moving to Barcelona from Slovakia" subtitle="Common questions about relocating to Barcelona" items={faqItems} callToActionText="Moving to Barcelona? Get a free quote" />
       </div>

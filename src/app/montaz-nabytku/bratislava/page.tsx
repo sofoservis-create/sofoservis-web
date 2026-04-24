@@ -116,7 +116,7 @@ export default function MontazNabytkuBratislavaPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie montáže — Bratislava" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["montaz-nabytku", "montaz-kuchyne"]} />
       <Features title="Odborná montáž v Bratislave" description="Kvalitné skladanie pre váš domov." features={features} />

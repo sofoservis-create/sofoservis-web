@@ -155,7 +155,7 @@ export default function MovingToItalyPage() {
         />
       </div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Italy" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div>
         <FAQ
           title="FAQ — Moving to Italy from Slovakia"

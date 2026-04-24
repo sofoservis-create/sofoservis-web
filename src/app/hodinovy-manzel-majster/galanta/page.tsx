@@ -116,7 +116,7 @@ export default function HodinovyManzelGalantaPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie z Galanty" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku"]} />
       <Features title="Majstrovské služby v Galante" description="Všetko pre váš domov pod jednou strechou." features={features} />

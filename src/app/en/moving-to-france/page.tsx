@@ -183,7 +183,7 @@ export default function MovingFromSlovakiaToFrancePage() {
       <div>
         <GoogleReviews
           showReviewsShowcase={false}
-          title="Reviews from Customers Who Moved from Slovakia to France"
+          title="Reviews from Our Clients"
         />
       </div>
 

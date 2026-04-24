@@ -166,7 +166,7 @@ export default function MovingToBerlinPage() {
         />
       </div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Berlin" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div>
         <FAQ
           title="FAQ — Moving to Berlin from Slovakia"

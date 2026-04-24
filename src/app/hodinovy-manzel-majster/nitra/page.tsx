@@ -116,7 +116,7 @@ export default function HodinovyManzelNitraPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie z Nitry" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku"]} />
       <Features title="Handyman služby v Nitre" description="Odborná pomoc pre každú domácnosť." features={features} />

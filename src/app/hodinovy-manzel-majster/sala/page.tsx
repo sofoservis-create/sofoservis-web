@@ -116,7 +116,7 @@ export default function HodinovyManzelSalaPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie zo Šale" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku"]} />
       <Features title="Majstrovské práce v Šali" description="Kvalitne a rýchlo pre váš domov." features={features} />

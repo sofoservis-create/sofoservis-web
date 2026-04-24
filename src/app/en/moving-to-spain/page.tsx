@@ -155,7 +155,7 @@ export default function MovingToSpainPage() {
         />
       </div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Spain" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div>
         <FAQ
           title="FAQ — Moving to Spain from Slovakia"

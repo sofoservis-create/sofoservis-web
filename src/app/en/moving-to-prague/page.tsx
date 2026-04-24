@@ -166,7 +166,7 @@ export default function MovingToPraguePage() {
         />
       </div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Prague" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div>
         <FAQ
           title="FAQ — Moving to Prague from Slovakia"

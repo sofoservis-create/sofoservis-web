@@ -118,7 +118,7 @@ export default function HodinovyManzelMajsterBratislavaPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie od zákazníkov z Bratislavy" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku", "montaz-kuchyne"]} />
       <Features title="Čo všetko vybaví náš majster?" description="Široká škála služieb pre vašu domácnosť v Bratislave." features={features} />

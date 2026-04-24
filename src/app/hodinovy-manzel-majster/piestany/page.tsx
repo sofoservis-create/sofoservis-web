@@ -116,7 +116,7 @@ export default function HodinovyManzelPiestanyPage() {
         />
       </div>
       <Clients />
-      <GoogleReviews title="Recenzie — Piešťany" />
+      <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku"]} />
       <Features title="Majstrovské služby v Piešťanoch" description="Pomocná ruka pre každú domácnosť v kúpeľnom meste." features={features} />

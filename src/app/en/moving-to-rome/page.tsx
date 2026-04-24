@@ -153,7 +153,7 @@ export default function MovingToRomePage() {
       <div><Reviews showHeadline={true} callToActionText="Get a Quote" /></div>
       <div><Features title={featuresData.title} description={featuresData.description} features={featuresData.features} callToActionText="Get a Free Quote" /></div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Rome" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div><FAQ title="FAQ — Moving to Rome from Slovakia" subtitle="Common questions about relocating to Rome" items={faqItems} callToActionText="Moving to Rome? Get a free quote" /></div>
       <div><CTA title="Ready to Move to Rome?" description="Get a free quote today. We deliver from Slovakia to Rome in 4-6 business days." buttonText="Request a Quote" /></div>
       <RelatedServices

@@ -153,7 +153,7 @@ export default function MovingToStockholmPage() {
       <div><Reviews showHeadline={true} callToActionText="Get a Quote" /></div>
       <div><Features title={featuresData.title} description={featuresData.description} features={featuresData.features} callToActionText="Get a Free Quote" /></div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Customers Who Moved to Stockholm" /></div>
+      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div><FAQ title="FAQ — Moving to Stockholm from Slovakia" subtitle="Common questions about relocating to Stockholm" items={faqItems} callToActionText="Moving to Stockholm? Get a free quote" /></div>
       <div><CTA title="Ready to Move to Stockholm?" description="Get a free quote today. We deliver from Slovakia to Stockholm in 5-7 business days." buttonText="Request a Quote" /></div>
       <RelatedServices
