@@ -85,8 +85,9 @@ export default function HomeJunkRemovalSenecPage() {
           showMascot
           mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
           mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotOffsetY={-44}
-          mobileMascotScale={0.847}
+          mobileMascotOffsetY={-57}
+          mobileMascotOffsetX={-32}
+          mobileMascotScale={1.02}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"
         />
