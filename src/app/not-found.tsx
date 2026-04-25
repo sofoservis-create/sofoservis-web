@@ -11,6 +11,15 @@ export const metadata = {
 export default function NotFound() {
   return (
     <main className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-12 md:pt-28 pb-12 md:pb-16">
+      {/* Preload 404 mascot SVGZ for instant first paint */}
+      <link
+        rel="preload"
+        href="/images/mascot/404 mascot-2.svgz"
+        as="image"
+        type="image/svg+xml"
+        fetchPriority="high"
+      />
+
       <div className="max-w-5xl w-full mt-6">
         <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10">
           <div className="relative shrink-0">
@@ -22,6 +31,8 @@ export default function NotFound() {
               sizes="(max-width: 768px) 80vw, 528px"
               className="mx-auto w-[280px] sm:w-[396px] md:w-[484px] lg:w-[528px] h-auto"
               priority
+              fetchPriority="high"
+              decoding="async"
               unoptimized
             />
           </div>
