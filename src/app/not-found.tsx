@@ -17,10 +17,10 @@ export default function NotFound() {
             <Image
               src="/images/mascot/404 mascot-2.svgz"
               alt="404 stránka nenájdená"
-              width={480}
-              height={480}
-              sizes="(max-width: 768px) 80vw, 480px"
-              className="mx-auto w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] h-auto"
+              width={528}
+              height={528}
+              sizes="(max-width: 768px) 88vw, 528px"
+              className="mx-auto w-[308px] sm:w-[396px] md:w-[484px] lg:w-[528px] h-auto"
               priority
               unoptimized
             />
