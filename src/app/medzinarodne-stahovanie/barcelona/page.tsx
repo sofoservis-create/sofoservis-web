@@ -131,12 +131,12 @@ export default function StahovanieBarcelonaPage() {
   return (
     <main className="bg-white">
       <link rel="preload"
-        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        href="/images/mascot/2holding boxes mascot.svgz"
         as="image"
         type="image/svg+xml"
         media="(max-width: 1023px)" fetchPriority="high" />
       <link rel="preload"
-        href="/images/mascot/mascot-holding-boxes.svg"
+        href="/images/mascot/2holding boxes mascot.svgz"
         as="image"
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
@@ -150,7 +150,7 @@ export default function StahovanieBarcelonaPage() {
           formSubtitle={heroData.formSubtitle}
           backgroundImage={heroData.backgroundImage}
           benefits={["Slovensko – Barcelona ~1 900 km", "Tranzitný čas 2–3 dni", "Poistenie a fixná cena"]}
-          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
           desktopMascotScaleMultiplier={1.03}
         />
       </div>
@@ -163,8 +163,8 @@ export default function StahovanieBarcelonaPage() {
           backgroundImage={heroData.backgroundImage}
           benefits={["Slovensko – Barcelona ~1 900 km", "Tranzitný čas 2–3 dni", "Poistenie a fixná cena"]}
           showMascot
-          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
-          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
           mobileMascotOffsetY={-44}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"

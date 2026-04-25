@@ -131,12 +131,12 @@ export default function StahovanieHolandskoPage() {
   return (
     <main className="bg-white">
       <link rel="preload"
-        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        href="/images/mascot/2holding boxes mascot.svgz"
         as="image"
         type="image/svg+xml"
         media="(max-width: 1023px)" fetchPriority="high" />
       <link rel="preload"
-        href="/images/mascot/mascot-holding-boxes.svg"
+        href="/images/mascot/2holding boxes mascot.svgz"
         as="image"
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
@@ -150,7 +150,7 @@ export default function StahovanieHolandskoPage() {
           formSubtitle={heroData.formSubtitle}
           backgroundImage={heroData.backgroundImage}
           benefits={["Amsterdam, Rotterdam, Haag a ďalšie", "Poistenie prepravy zahrnuté", "Transparentná cena vopred"]}
-          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
           desktopMascotScaleMultiplier={1.03}
         />
       </div>
@@ -163,8 +163,8 @@ export default function StahovanieHolandskoPage() {
           backgroundImage={heroData.backgroundImage}
           benefits={["Amsterdam, Rotterdam, Haag a ďalšie", "Poistenie prepravy zahrnuté", "Transparentná cena vopred"]}
           showMascot
-          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
-          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
           mobileMascotOffsetY={-44}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"

@@ -173,7 +173,7 @@ const EMAIL_ROUTING = {
 };
 
 // Mascot constants (narrowForm path)
-// MASCOT_ASPECT: width/height of /images/mascot/mascot-holding-boxes.svg (1080 x 1080).
+// MASCOT_ASPECT: width/height of /images/mascot/2holding boxes mascot.svgz (1080 x 1080).
 // GLOW_HALF_WIDTH: half of the 542px glow circle, used to center it behind the mascot.
 const MASCOT_ASPECT = 1080 / 1080;
 const GLOW_HALF_WIDTH = 271;

@@ -178,12 +178,12 @@ export default function MedzinarodneStahovaniePage() {
     <main className="bg-white">
       {/* Preload hero mascot SVG for instant paint with other hero elements */}
       <link rel="preload"
-        href="/images/mascot/mascot-holding-boxes-mobile.svg"
+        href="/images/mascot/2holding boxes mascot.svgz"
         as="image"
         type="image/svg+xml"
         media="(max-width: 1023px)" fetchPriority="high" />
       <link rel="preload"
-        href="/images/mascot/mascot-holding-boxes.svg"
+        href="/images/mascot/2holding boxes mascot.svgz"
         as="image"
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
@@ -197,7 +197,7 @@ export default function MedzinarodneStahovaniePage() {
           formSubtitle={heroData.formSubtitle}
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
+          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
           desktopMascotScaleMultiplier={1.03}
         />
       </div>
@@ -210,8 +210,8 @@ export default function MedzinarodneStahovaniePage() {
           benefits={[]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot
-          mascotSrc="/images/mascot/mascot-holding-boxes.svg"
-          mobileMascotSrc="/images/mascot/mascot-holding-boxes-mobile.svg"
+          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
           mobileMascotOffsetY={-44}
           mobileFormOffsetY={19}
           pillsVariant="stahovanie"
