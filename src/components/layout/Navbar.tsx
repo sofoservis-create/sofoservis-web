@@ -549,8 +549,8 @@ export default function Navbar() {
         { href: "/referencie", label: "Referencie" },
         { href: "/cennik", label: "Cenník" },
         { href: "/o-nas", label: "O nás" },
-        { href: "/blog", label: "Blog" },
         { href: "/kontakt", label: "Kontakt" },
+        { href: "/blog", label: "Blog" },
       ],
     },
   ];
@@ -753,13 +753,6 @@ export default function Navbar() {
       ],
     },
     {
-      name: "O NÁS",
-      flat: true,
-      links: [
-        { href: "/o-nas", label: "O nás" },
-      ],
-    },
-    {
       name: "CENNÍK",
       flat: true,
       links: [
@@ -767,10 +760,17 @@ export default function Navbar() {
       ],
     },
     {
+      name: "O NÁS",
+      flat: true,
+      links: [
+        { href: "/o-nas", label: "O nás" },
+      ],
+    },
+    {
       name: "INFORMÁCIE",
       links: [
-        { href: "/blog", label: "Blog" },
         { href: "/kontakt", label: "Kontakt" },
+        { href: "/blog", label: "Blog" },
       ],
     },
   ];
@@ -785,17 +785,17 @@ export default function Navbar() {
       ],
     },
     {
-      name: "ABOUT US",
-      flat: true,
-      links: [
-        { href: "/en/about", label: "About Us" },
-      ],
-    },
-    {
       name: "PRICING",
       flat: true,
       links: [
         { href: "/en/pricing", label: "Pricing" },
+      ],
+    },
+    {
+      name: "ABOUT US",
+      flat: true,
+      links: [
+        { href: "/en/about", label: "About Us" },
       ],
     },
     {
