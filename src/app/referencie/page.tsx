@@ -66,7 +66,7 @@ export default function ReferencePage() {
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={476}
           desktopMascotScaleMultiplier={1.05}
-          desktopMascotTopShiftPct={-0.03}
+          desktopMascotTopOffsetPct={-0.03}
         />
       </div>
       <div className="lg:hidden">
