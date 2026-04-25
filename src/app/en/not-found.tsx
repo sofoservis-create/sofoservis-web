@@ -12,43 +12,47 @@ export const metadata = {
 export default function NotFound() {
   return (
     <main className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-16">
-      <div className="max-w-3xl w-full text-center mt-6">
-        <div className="relative mb-8">
-          <Image
-            src="/images/mascot/404 mascot-2.svgz"
-            alt="404 page not found"
-            width={320}
-            height={320}
-            sizes="(max-width: 768px) 70vw, 320px"
-            className="mx-auto"
-            priority
-            unoptimized
-          />
-        </div>
+      <div className="max-w-5xl w-full mt-6">
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10">
+          <div className="relative shrink-0">
+            <Image
+              src="/images/mascot/404 mascot-2.svgz"
+              alt="404 page not found"
+              width={480}
+              height={480}
+              sizes="(max-width: 768px) 80vw, 480px"
+              className="mx-auto w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] h-auto"
+              priority
+              unoptimized
+            />
+          </div>
 
-        <h1 className="text-3xl font-bold text-primary-900 mb-4">
-          Page not found
-        </h1>
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+              Page not found
+            </h1>
 
-        <p className="text-primary-600 mb-8 max-w-md mx-auto">
-          We&apos;re sorry, the page you are looking for has moved or no longer
-          exists.
-        </p>
+            <p className="text-primary-600 mb-8 max-w-md mx-auto md:mx-0">
+              We&apos;re sorry, the page you are looking for has moved or no
+              longer exists.
+            </p>
 
-        <div className="space-y-3 max-w-md mx-auto">
-          <Link
-            href="/en"
-            className="block w-full bg-accent-500 hover:bg-accent-600 text-primary-900 font-medium py-3.5 rounded-md transition-all duration-300"
-          >
-            Go to homepage
-          </Link>
+            <div className="space-y-3 max-w-md mx-auto md:mx-0">
+              <Link
+                href="/en"
+                className="block w-full bg-accent-500 hover:bg-accent-600 text-primary-900 font-medium py-3.5 rounded-md transition-all duration-300 text-center"
+              >
+                Go to homepage
+              </Link>
 
-          <Link
-            href="/en/contact"
-            className="block w-full bg-gray-200 hover:bg-gray-300 text-primary-800 font-medium py-3.5 rounded-md transition-all duration-300"
-          >
-            Contact us
-          </Link>
+              <Link
+                href="/en/contact"
+                className="block w-full bg-gray-200 hover:bg-gray-300 text-primary-800 font-medium py-3.5 rounded-md transition-all duration-300 text-center"
+              >
+                Contact us
+              </Link>
+            </div>
+          </div>
         </div>
 
         <div className="mt-10">
