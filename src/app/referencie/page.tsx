@@ -1,4 +1,5 @@
 import React from "react";
+import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
 import CTA from "@/components/sections/CTA";
 import Reviews from "@/components/sections/Reviews";
@@ -34,26 +35,48 @@ export const metadata = {
   };
 
 export default function ReferencePage() {
-  // Data for Hero section
-  const heroData = {
-    title: "Referencie našich prác",
-    description:
-      "Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu.",
-    formTitle: "Hľadáte profesionálne sťahovanie?",
-    formSubtitle: "Vyplňte formulár a získajte nezáväznú ponuku ešte dnes.",
-    backgroundImage: "/images/sofo-bratislava-stahovanie.avif",
-  };
-
   return (
-    <main>
-      {/* Hero section */}
-      <Hero
-        title={heroData.title}
-        description={heroData.description}
-        formTitle={heroData.formTitle}
-        formSubtitle={heroData.formSubtitle}
-        backgroundImage={heroData.backgroundImage}
+    <main className="bg-white">
+      {/* Preload hero mascot SVG for instant paint with other hero elements */}
+      <link
+        rel="preload"
+        href="/images/mascot/ok sign mascot.svgz"
+        as="image"
+        type="image/svg+xml"
+        media="(max-width: 1023px)"
+        fetchPriority="high"
       />
+      <link
+        rel="preload"
+        href="/images/mascot/ok sign mascot.svgz"
+        as="image"
+        type="image/svg+xml"
+        media="(min-width: 1024px)"
+        fetchPriority="high"
+      />
+
+      <div className="hidden lg:block">
+        <LabHero
+          narrowForm
+          title="Referencie našich prác"
+          description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
+          benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
+          ratingText="3500+ spokojných zákazníkov"
+          mascotSrc="/images/mascot/ok sign mascot.svgz"
+          desktopMascotDynamicHeight
+          desktopMinHeroTextHeightPx={476}
+        />
+      </div>
+      <div className="lg:hidden">
+        <Hero
+          title="Referencie našich prác"
+          description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
+          benefits={[]}
+          ratingText="3500+ spokojných zákazníkov"
+          showMascot
+          mascotSrc="/images/mascot/ok sign mascot.svgz"
+        />
+      </div>
 
       {/* Clients — trust strip, sits flush under hero */}
       <div>
