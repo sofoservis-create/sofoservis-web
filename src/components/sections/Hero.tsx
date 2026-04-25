@@ -184,15 +184,33 @@ export default function Hero({
     >
       {/* Background image with optimization */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src={backgroundImage}
-          alt={`Sťahovacie služby - ${title}`}
-          fill
-          priority
-          quality={75}
-          sizes="(max-width: 1920px) 100vw, 1920px"
-          className="object-cover object-top md:object-center"
-        />
+        {backgroundImage === "/images/sofoservis-zamestnanci-hero.avif" ? (
+          <picture>
+            <source
+              media="(max-width: 1023px)"
+              srcSet="/images/sofoservis-zamestnanci-hero-mobile.avif"
+              type="image/avif"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={backgroundImage}
+              alt={`Sťahovacie služby - ${title}`}
+              fetchPriority="high"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover object-top md:object-center"
+            />
+          </picture>
+        ) : (
+          <Image
+            src={backgroundImage}
+            alt={`Sťahovacie služby - ${title}`}
+            fill
+            priority
+            quality={65}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1920px"
+            className="object-cover object-top md:object-center"
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-900/70 to-primary-900/65"></div>
       </div>
 

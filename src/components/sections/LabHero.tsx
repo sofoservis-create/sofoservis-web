@@ -447,15 +447,33 @@ export default function LabHero({
         aria-labelledby="hero-heading"
       >
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <Image
-            src={backgroundImage}
-            alt={`Sťahovacie služby - ${title}`}
-            fill
-            priority
-            quality={75}
-            sizes="(max-width: 1920px) 100vw, 1920px"
-            className="object-cover object-top md:object-center lg:[object-position:center_85%]"
-          />
+          {backgroundImage === "/images/sofoservis-zamestnanci-hero.avif" ? (
+            <picture>
+              <source
+                media="(max-width: 1023px)"
+                srcSet="/images/sofoservis-zamestnanci-hero-mobile.avif"
+                type="image/avif"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={backgroundImage}
+                alt={`Sťahovacie služby - ${title}`}
+                fetchPriority="high"
+                decoding="async"
+                className="absolute inset-0 w-full h-full object-cover object-top md:object-center lg:[object-position:center_85%]"
+              />
+            </picture>
+          ) : (
+            <Image
+              src={backgroundImage}
+              alt={`Sťahovacie služby - ${title}`}
+              fill
+              priority
+              quality={65}
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1920px"
+              className="object-cover object-top md:object-center lg:[object-position:center_85%]"
+            />
+          )}
           <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, #000000b3 0% 50%, #000000a6 100%)' }} />
         </div>
 

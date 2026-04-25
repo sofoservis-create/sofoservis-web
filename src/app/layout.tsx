@@ -77,6 +77,23 @@ export default async function RootLayout({
       <head>
         <link rel="preconnect" href="https://load.server.sofoservis.sk" />
         <link rel="dns-prefetch" href="https://load.server.sofoservis.sk" />
+        {/* Hero LCP image preload — mobile vs desktop variant via media query */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/sofoservis-zamestnanci-hero-mobile.avif"
+          media="(max-width: 1023px)"
+          type="image/avif"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/sofoservis-zamestnanci-hero.avif"
+          media="(min-width: 1024px)"
+          type="image/avif"
+          fetchPriority="high"
+        />
         {/* Consent Mode V2 + gtag wrapper — synchronický inline skript, musí byť pred GTM */}
         <script
           dangerouslySetInnerHTML={{

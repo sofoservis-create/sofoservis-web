@@ -1,15 +1,19 @@
+import dynamic from "next/dynamic";
 import LabHero from "@/components/sections/LabHero";
 import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
-import Reviews from "@/components/sections/Reviews";
-import GoogleReviews from "@/components/widgets/GoogleReviews";
-import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
-import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
+
+// Code-split heavy below-fold client components (preserve SSR for SEO,
+// only defer hydration JS from the initial bundle).
+const Reviews = dynamic(() => import("@/components/sections/Reviews"));
+const GoogleReviews = dynamic(() => import("@/components/widgets/GoogleReviews"));
+const FAQ = dynamic(() => import("@/components/sections/FAQ"));
+const InstagramFeed = dynamic(() => import("@/components/widgets/InstagramFeed"));
 
 const faqItems = [
   {
