@@ -10,17 +10,17 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <main className="flex flex-col items-center min-h-[60vh] px-4 pt-24 md:pt-28">
+    <main className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-16">
       <div className="max-w-5xl w-full mt-6">
         <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10">
           <div className="relative shrink-0">
             <Image
               src="/images/mascot/404 mascot-2.svgz"
               alt="404 stránka nenájdená"
-              width={580}
-              height={580}
-              sizes="(max-width: 768px) 92vw, 580px"
-              className="mx-auto w-[340px] sm:w-[436px] md:w-[532px] lg:w-[580px] h-auto"
+              width={480}
+              height={480}
+              sizes="(max-width: 768px) 80vw, 480px"
+              className="mx-auto w-[280px] sm:w-[360px] md:w-[440px] lg:w-[480px] h-auto"
               priority
               unoptimized
             />
