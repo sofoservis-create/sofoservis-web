@@ -19,8 +19,8 @@ export default function NotFound() {
               alt="404 stránka nenájdená"
               width={528}
               height={528}
-              sizes="(max-width: 768px) 95vw, 528px"
-              className="mx-auto w-[340px] sm:w-[436px] md:w-[484px] lg:w-[528px] h-auto"
+              sizes="(max-width: 768px) 100vw, 528px"
+              className="mx-auto w-[380px] max-w-[95vw] sm:w-[480px] md:w-[484px] lg:w-[528px] h-auto"
               priority
               unoptimized
             />
