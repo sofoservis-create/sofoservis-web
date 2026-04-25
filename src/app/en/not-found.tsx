@@ -15,13 +15,14 @@ export default function NotFound() {
       <div className="max-w-3xl w-full text-center mt-6">
         <div className="relative mb-8">
           <Image
-            src="/images/404.webp"
+            src="/images/mascot/404 mascot-2.svgz"
             alt="404 page not found"
-            width={380}
-            height={220}
-            sizes="(max-width: 768px) 80vw, 380px"
+            width={320}
+            height={320}
+            sizes="(max-width: 768px) 70vw, 320px"
             className="mx-auto"
             priority
+            unoptimized
           />
         </div>
 
