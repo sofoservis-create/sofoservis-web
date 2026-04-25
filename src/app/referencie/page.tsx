@@ -66,7 +66,7 @@ export default function ReferencePage() {
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={476}
           desktopMascotScaleMultiplier={1.05}
-          desktopMascotTopOffsetPct={-0.03}
+          desktopMascotTopOffsetPct={-0.025}
         />
       </div>
       <div className="lg:hidden">
@@ -78,7 +78,7 @@ export default function ReferencePage() {
           showMascot
           mascotSrc="/images/mascot/ok sign mascot.svgz"
           mobileMascotScale={1.05}
-          mobileMascotOffsetY={-20}
+          mobileMascotOffsetY={-17}
         />
       </div>
 
