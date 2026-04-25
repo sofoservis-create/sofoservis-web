@@ -60,7 +60,7 @@ export default function ReferencePage() {
           narrowForm
           title="Referencie našich prác"
           description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
-          benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
+          benefits={["Obhliadka zdarma", "Vysoká spokojnosť zákazníkov", "Bez stresu"]}
           ratingText="3500+ spokojných zákazníkov"
           mascotSrc="/images/mascot/ok sign mascot.svgz"
           desktopMascotDynamicHeight
@@ -73,7 +73,7 @@ export default function ReferencePage() {
         <Hero
           title="Referencie našich prác"
           description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
-          benefits={[]}
+          benefits={["Obhliadka zdarma", "Vysoká spokojnosť zákazníkov", "Bez stresu"]}
           ratingText="3500+ spokojných zákazníkov"
           showMascot
           mascotSrc="/images/mascot/ok sign mascot.svgz"
