@@ -14,14 +14,14 @@ export default function NotFound() {
     <main className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-24 md:pt-28">
       <div className="max-w-5xl w-full mt-6">
         <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10">
-          <div className="relative shrink-0">
+          <div className="relative shrink-0 -mx-4 sm:mx-0 w-screen sm:w-auto flex justify-center">
             <Image
               src="/images/mascot/404 mascot-2.svgz"
               alt="404 page not found"
               width={528}
               height={528}
               sizes="(max-width: 768px) 100vw, 528px"
-              className="mx-auto w-[420px] max-w-[95vw] sm:w-[528px] md:w-[484px] lg:w-[528px] h-auto"
+              className="w-[100vw] max-w-[460px] sm:max-w-none sm:w-[528px] md:w-[484px] lg:w-[528px] h-auto"
               priority
               unoptimized
             />
