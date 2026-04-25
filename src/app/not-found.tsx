@@ -20,7 +20,7 @@ export default function NotFound() {
               width={528}
               height={528}
               sizes="(max-width: 768px) 100vw, 528px"
-              className="mx-auto w-[380px] max-w-[95vw] sm:w-[480px] md:w-[484px] lg:w-[528px] h-auto"
+              className="mx-auto w-[420px] max-w-[95vw] sm:w-[528px] md:w-[484px] lg:w-[528px] h-auto"
               priority
               unoptimized
             />
