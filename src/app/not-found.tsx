@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-24 md:pt-28">
+    <main className="flex flex-col items-center justify-center min-h-[60vh] px-4 pt-12 md:pt-28">
       <div className="max-w-5xl w-full mt-6">
         <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-10">
           <div className="relative shrink-0">
