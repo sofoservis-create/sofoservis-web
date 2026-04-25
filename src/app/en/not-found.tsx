@@ -20,8 +20,8 @@ export default function NotFound() {
               alt="404 page not found"
               width={528}
               height={528}
-              sizes="(max-width: 768px) 88vw, 528px"
-              className="mx-auto w-[308px] sm:w-[396px] md:w-[484px] lg:w-[528px] h-auto"
+              sizes="(max-width: 768px) 80vw, 528px"
+              className="mx-auto w-[280px] sm:w-[396px] md:w-[484px] lg:w-[528px] h-auto"
               priority
               unoptimized
             />
