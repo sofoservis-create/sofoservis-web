@@ -65,6 +65,8 @@ export default function ReferencePage() {
           mascotSrc="/images/mascot/ok sign mascot.svgz"
           desktopMascotDynamicHeight
           desktopMinHeroTextHeightPx={476}
+          desktopMascotScaleMultiplier={1.05}
+          desktopMascotTopShiftPct={0.03}
         />
       </div>
       <div className="lg:hidden">
@@ -75,6 +77,8 @@ export default function ReferencePage() {
           ratingText="3500+ spokojných zákazníkov"
           showMascot
           mascotSrc="/images/mascot/ok sign mascot.svgz"
+          mobileMascotScale={1.05}
+          mobileMascotOffsetY={20}
         />
       </div>
 
