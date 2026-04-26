@@ -9,6 +9,7 @@ import InstagramFeed from "@/components/widgets/InstagramFeed";
 import Container from "@/components/ui/Container";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
+import PriceListJsonLd from "@/components/seo/PriceListJsonLd";
 
 export const metadata = {
   title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
@@ -147,6 +148,31 @@ export default function CennikPage() {
 
   return (
     <main className="bg-white">
+      {/* JSON-LD Service + OfferCatalog schema pre rich snippets s cenami v Google */}
+      <PriceListJsonLd
+        offers={[
+          { name: "Sťahovanie – 1 pracovník", price: 25, unitCode: "HUR" },
+          { name: "Sťahovanie – 2 pracovníci", price: 50, unitCode: "HUR" },
+          { name: "Sťahovanie – 3 pracovníci (akcia)", price: 67, unitCode: "HUR" },
+          { name: "Sťahovanie – každý ďalší pracovník", price: 17, unitCode: "HUR" },
+          { name: "Vynáška bez výťahu", price: 15, description: "za poschodie" },
+          { name: "Sťahovanie v rámci mesta", price: 40, isMinPrice: true },
+          { name: "Sťahovanie mimo mesta", price: 0.7, unitCode: "KMT" },
+          { name: "Sťahovanie ťažkých bremien", price: 80, isMinPrice: true },
+          { name: "Vypratávanie – 1 pracovník", price: 25, unitCode: "HUR" },
+          { name: "Vypratávanie – 2 pracovníci", price: 50, unitCode: "HUR" },
+          { name: "Vypratávanie – 3 pracovníci (akcia)", price: 67, unitCode: "HUR" },
+          { name: "Vypratávanie – plná dodávka 17 m²", price: 200 },
+          { name: "Vypratávanie pivnice", price: 60, isMinPrice: true },
+          { name: "Vypratávanie garáže", price: 70, isMinPrice: true },
+          { name: "Vypratávanie jednoizbového bytu", price: 200, isMinPrice: true },
+          { name: "Vypratávanie – každá ďalšia miestnosť", price: 60 },
+          { name: "Montáž nábytku – výjazd", price: 20, isMinPrice: true },
+          { name: "Montáž kuchyne", price: 120, unitCode: "MTR", isMinPrice: true },
+          { name: "Demontáž kuchyne", price: 60, unitCode: "MTR", isMinPrice: true },
+        ]}
+      />
+
       {/* Hero section */}
       <div className="hidden lg:block">
         <LabHero

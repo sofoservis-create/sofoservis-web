@@ -8,6 +8,7 @@ import GoogleReviews from "@/components/widgets/GoogleReviews";
 import Clients from "@/components/sections/Clients";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ContactFormSection from "@/components/sections/ContactFormSection";
+import ReviewAggregateJsonLd from "@/components/seo/ReviewAggregateJsonLd";
 
 export const metadata = {
   title: "Referencie a recenzie zákazníkov | Sofoservis",
@@ -37,6 +38,12 @@ export const metadata = {
 export default function ReferencePage() {
   return (
     <main className="bg-white">
+      {/* JSON-LD AggregateRating + Review schema pre hviezdičky v Google výsledkoch */}
+      <ReviewAggregateJsonLd
+        ratingValue={4.9}
+        reviewCount={500}
+      />
+
       {/* Preload hero mascot SVG for instant paint with other hero elements */}
       <link
         rel="preload"

@@ -583,7 +583,7 @@ export default function LabHero({
               }
 
               <div className="space-y-3 md:space-y-5 w-full lg:flex-1 lg:flex lg:flex-col">
-                <h1
+                <h2
                   id="hero-heading"
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]"
                 >
@@ -591,7 +591,7 @@ export default function LabHero({
                     {title}
                     <span className="absolute -right-4 text-accent-500">.</span>
                   </span>
-                </h1>
+                </h2>
 
                 <div className={`block text-base lg:text-xl text-white/90 max-w-xl ${desktopDescriptionMaxWidthClass} leading-relaxed mx-auto lg:mx-0`}>
                   <p>{description}</p>
