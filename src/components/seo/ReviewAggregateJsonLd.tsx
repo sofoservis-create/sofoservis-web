@@ -1,5 +1,4 @@
 interface ReviewAggregateJsonLdProps {
-  url?: string;
   ratingValue?: number;
   reviewCount?: number;
   bestRating?: number;
@@ -7,7 +6,6 @@ interface ReviewAggregateJsonLdProps {
 }
 
 export default function ReviewAggregateJsonLd({
-  url = "https://www.sofoservis.sk/referencie",
   ratingValue = 4.9,
   reviewCount = 500,
   bestRating = 5,
