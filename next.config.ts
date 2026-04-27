@@ -154,6 +154,38 @@ const nextConfig = {
         destination: "/blog/hodinovy-manzel-sluzby-cena",
         permanent: true,
       },
+      // Zrušené mestské podstránky hodinového manžela → 301 redirect na hlavnú stránku služby.
+      // Konsolidácia link equity + zachovanie SEO pre indexované URL.
+      {
+        source: "/hodinovy-manzel-majster/levice",
+        destination: "/hodinovy-manzel-majster",
+        permanent: true,
+      },
+      {
+        source: "/hodinovy-manzel-majster/nitra",
+        destination: "/hodinovy-manzel-majster",
+        permanent: true,
+      },
+      {
+        source: "/hodinovy-manzel-majster/sala",
+        destination: "/hodinovy-manzel-majster",
+        permanent: true,
+      },
+      {
+        source: "/en/handyman-levice",
+        destination: "/en/handyman-services",
+        permanent: true,
+      },
+      {
+        source: "/en/handyman-nitra",
+        destination: "/en/handyman-services",
+        permanent: true,
+      },
+      {
+        source: "/en/handyman-sala",
+        destination: "/en/handyman-services",
+        permanent: true,
+      },
       // SK /sluzby/* → correct service URLs (404 fix)
       {
         source: "/sluzby/montaz-nabytku",

@@ -44,12 +44,16 @@ export const metadata = {
 
 const hodinyManzealLocations = [
   { name: "Bratislava", href: "/hodinovy-manzel-majster/bratislava" },
-  { name: "Galanta", href: "/hodinovy-manzel-majster/galanta" },
-  { name: "Levice", href: "/hodinovy-manzel-majster/levice" },
-  { name: "Nitra", href: "/hodinovy-manzel-majster/nitra" },
-  { name: "Piešťany", href: "/hodinovy-manzel-majster/piestany" },
-  { name: "Šaľa", href: "/hodinovy-manzel-majster/sala" },
+  { name: "Malacky" },
+  { name: "Pezinok" },
+  { name: "Senec" },
+  { name: "Skalica" },
+  { name: "Senica" },
   { name: "Trnava", href: "/hodinovy-manzel-majster/trnava" },
+  { name: "Piešťany", href: "/hodinovy-manzel-majster/piestany" },
+  { name: "Hlohovec" },
+  { name: "Dunajská Streda" },
+  { name: "Galanta", href: "/hodinovy-manzel-majster/galanta" },
 ];
 
 const faqSchemaItems = [
