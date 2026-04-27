@@ -75,7 +75,7 @@ export default function HodinovyManzelMajsterPage() {
   const heroData = {
     title: "Hodinový manžel a majster",
     description:
-      "Profesionálne služby hodinového manžela od 20€/hod. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
+      "Profesionálne služby hodinového manžela od 25€/hod. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -257,7 +257,7 @@ export default function HodinovyManzelMajsterPage() {
             {
               question: "Aké náradie a vybavenie si mám pripraviť?",
               answer:
-                "Nemusíte si pripravovať žiadne náradie ani vybavenie. Naši hodinoví manželi prichádzajú plne vybavení profesionálnym náradím a základným spotrebným materiálom na všetky bežné typy prác v domácnosti. Disponujeme: elektrickým náradím (vŕtačky, skrutkovače, brúsky, píly); ručným náradím (skrutkovače, kliešte, kladivá, pilníky); meracími prístrojmi; rebríkmi a pracovnými plošinami; špecializovaným náradím pre vodoinštalácie a elektroinštalácie. Ak práca vyžaduje špecifický materiál (náhradné diely, upevňovacie prvky, farby a pod.), môžete ho zabezpečiť sami alebo ho po dohode zabezpečíme my. V prípade, že máte vlastný materiál alebo náhradné diely, ktoré chcete použiť, pripravte ich, prosím, pred príchodom technika, aby práca prebiehala efektívne.",
+                "Nemusíte si pripravovať žiadne náradie ani vybavenie. Naši majstri prichádzajú plne vybavení profesionálnym náradím a základným spotrebným materiálom na všetky bežné typy prác v domácnosti. Ak práca vyžaduje špecifický materiál (náhradné diely, upevňovacie prvky a pod.), môžete ho zabezpečiť sami alebo ho po dohode zabezpečíme my. V prípade, že máte vlastný materiál alebo náhradné diely, ktoré chcete použiť, pripravte ich, prosím, pred príchodom technika.",
             },
           ]}
           expandableGroup={{
@@ -265,23 +265,19 @@ export default function HodinovyManzelMajsterPage() {
             panels: [
               {
                 title: "Čo robí hodinový manžel a prečo sa to oplatí?",
-                content: "Hodinový manžel (hodinový majster) je profesionál, ktorý sa postará o všetky drobné opravy, montáže a údržbu vašej domácnosti. Cena začína od 25€/hod, čo je zlomok toho, čo by vás stálo volanie špecialistu na každú drobnú opravu zvlášť.\n\nTipické práce: montáž nábytku z obchodov, vešanie obrazov a poličiek, výmena tesnení a kohútikov, oprava kvapkajúcich kohútikov, inštalácia svietidiel, drobné maľovacie práce, inštalácia kuchynských doplnkov, opredy dverí a zámkov, montáž žalúzií a rolet. Hodinový manžel príde vybavený vlastným náradím — nemusíte si nič pripravovať.",
+                content: "Hodinový manžel (hodinový majster) je profesionál, ktorý sa postará o všetky drobné opravy, montáže a údržbu vašej domácnosti. Cena začína od 25€/hod, čo je zlomok toho, čo by vás stálo volanie špecialistu na každú drobnú opravu zvlášť.\n\nTipické práce: vešanie obrazov, garníž, poličiek, zrkadiel, inštalácia svietidiel, výmena vodovodnej batérie, montáž interiérových roliet… Hodinový manžel príde vybavený vlastným náradím — nemusíte si nič pripravovať.",
               },
               {
                 title: "Kedy sa oplatí hodinový manžel a kedy špecialista?",
-                content: "Hodinový manžel je ideálny pre drobné práce do niekoľkých hodín, kde nie je potrebná odborná certifikácia. Pre väčšie elektroinštalačné práce, rozvody vody alebo stavebné práce odporúčame certifikovaného odborníka.\n\nOplátí sa najmä vtedy, keď máte nazbieraných viac drobných opráv naraz — napríklad vesiete nové skrine, potrebujete opraviť dvere a inštalovať nové svietidlá. Za jednu návštevu vybavíme aj 5-6 drobností, čím ušetríte oproti plateniu za každú opravu zvlášť.",
-              },
-              {
-                title: "Montáž nábytku z IKEA a iných obchodov",
-                content: "Montáž nábytku z IKEA, Asko, Jysk alebo iných obchodov je jednou z najpopulárnejších služieb hodinového manžela. Naši technici poznajú systémy montáže všetkých bežných výrobcov a poskladajú nábytok 2-3× rýchlejšie ako priemerný domácich majster.\n\nPri montáži skrine, postele alebo komody zvyčajne trvá práca 1-2 hodiny. Kuchynský stôl so stoličkami alebo rozkladacia pohovka môže trvať 2-3 hodiny. Cena je vždy hodinová — platíte len za skutočne odpracovaný čas.",
+                content: "Hodinový manžel je ideálny pre drobné práce do niekoľkých hodín, kde nie je potrebná odborná certifikácia. Pre väčšie elektroinštalačné práce, rozvody vody alebo stavebné práce odporúčame certifikovaného odborníka.\n\nOplátí sa najmä vtedy, keď máte nazbieraných viac drobných opráv naraz — napríklad 2-3 garníže, výmena zámku FAB a inštalovať nové svietidlo. Za jednu návštevu vybavíme aj 5-6 drobností, čím ušetríte oproti plateniu za každú opravu zvlášť.",
               },
               {
                 title: "Ako sa pripraviť na návštevu hodinového manžela?",
-                content: "Aby práca prebehla čo najefektívnejšie, odporúčame: pripraviť zoznam všetkých prác, ktoré chcete vybaviť, mať k dispozícii manuály alebo návody na montáž (pri nábytku z obchodu), zabezpečiť voľný prístup k miestam, kde sa budú práce vykonávať, a mať pripravený materiál alebo náhradné diely, ak ich máte.\n\nNáš technik príde v dohodnutom čase so základnou sadou profesionálneho náradia. Ak sa ukáže, že potrebuje špeciálne náradie alebo materiál, informuje vás vopred. Účtujeme hodinovo od príchodu do odchodu.",
+                content: "Aby práca prebehla čo najefektívnejšie, odporúčame: pripraviť zoznam všetkých prác, ktoré chcete vybaviť, mať k dispozícii manuály alebo návody ak je to možné, zabezpečiť voľný prístup k miestam, kde sa budú práce vykonávať, a mať pripravený materiál alebo náhradné diely, ak ich máte.\n\nNáš technik príde v dohodnutom čase so základnou sadou profesionálneho náradia. Ak sa ukáže, že potrebuje špeciálne náradie alebo materiál, informuje vás vopred. Účtujeme hodinovo od príchodu do odchodu.",
               },
               {
                 title: "Oblasti pôsobenia hodinového manžela v Bratislave",
-                content: "Naše služby hodinového manžela pokrývajú celú Bratislavu vrátane všetkých mestských častí: Staré Mesto, Ružinov, Nové Mesto, Rača, Vajnory, Karlova Ves, Dúbravka, Lamač, Devín, Devínska Nová Ves, Petržalka, Vrakuňa a Podunajské Biskupice.\n\nOkrem Bratislavy obsluhujeme aj okolie do vzdialenosti 30-40 km: Senec, Pezinok, Modra, Svätý Jur, Stupava, Malacky, Šamorín a ďalšie. Pre väčšie zákazky mimo týchto lokalít nás kontaktujte — dohodneme individuálne podmienky.",
+                content: "Naše služby hodinového manžela pokrývajú celú Bratislavu vrátane všetkých mestských častí: Staré Mesto, Ružinov, Nové Mesto, Rača, Vajnory, Karlova Ves, Dúbravka, Lamač, Devín, Devínska Nová Ves, Petržalka, Vrakuňa a Podunajské Biskupice.\n\nOkrem Bratislavy obsluhujeme celý Bratislavský a Trnavský kraj. Pre väčšie zákazky mimo týchto lokalít nás kontaktujte — dohodneme individuálne podmienky.",
               },
             ],
           }}

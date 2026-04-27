@@ -60,13 +60,13 @@ export default function HandymanServicesPage() {
               question:
                 "In which areas do you provide handyman services?",
               answer:
-                "We primarily provide our handyman services in Bratislava and the wider surrounding area, covering all city districts. We also operate in surrounding towns up to approximately 30-40 km away, including Senec, Pezinok, Modra, Stupava, Malacky, and others. For larger jobs or regular cooperation, we can provide services in more distant locations as well.",
+                "We primarily provide our handyman services in Bratislava and cover all city districts. Beyond Bratislava, we serve the entire Bratislava and Trnava regions. For larger jobs or regular cooperation in more distant locations, please contact us to arrange individual terms.",
             },
             {
               question:
                 "What tools and equipment should I prepare?",
               answer:
-                "You do not need to prepare any tools or equipment. Our handymen arrive fully equipped with professional tools and basic consumables for all common types of household work. We have power tools (drills, screwdrivers, grinders, saws), hand tools, measuring instruments, ladders, and specialized tools for plumbing and electrical work.",
+                "You do not need to prepare any tools or equipment. Our technicians arrive fully equipped with professional tools and basic consumables for all common types of household work. If the work requires specific materials (spare parts, fixings, etc.), you can supply them yourself or we can arrange them for you. If you have your own materials or spare parts you wish to use, please prepare them before the technician arrives.",
             },
           ];
   const featuresData = {
@@ -239,13 +239,13 @@ export default function HandymanServicesPage() {
               question:
                 "In which areas do you provide handyman services?",
               answer:
-                "We primarily provide our handyman services in Bratislava and the wider surrounding area, covering all city districts. We also operate in surrounding towns up to approximately 30-40 km away, including Senec, Pezinok, Modra, Stupava, Malacky, and others. For larger jobs or regular cooperation, we can provide services in more distant locations as well.",
+                "We primarily provide our handyman services in Bratislava and cover all city districts. Beyond Bratislava, we serve the entire Bratislava and Trnava regions. For larger jobs or regular cooperation in more distant locations, please contact us to arrange individual terms.",
             },
             {
               question:
                 "What tools and equipment should I prepare?",
               answer:
-                "You do not need to prepare any tools or equipment. Our handymen arrive fully equipped with professional tools and basic consumables for all common types of household work. We have power tools (drills, screwdrivers, grinders, saws), hand tools, measuring instruments, ladders, and specialized tools for plumbing and electrical work.",
+                "You do not need to prepare any tools or equipment. Our technicians arrive fully equipped with professional tools and basic consumables for all common types of household work. If the work requires specific materials (spare parts, fixings, etc.), you can supply them yourself or we can arrange them for you. If you have your own materials or spare parts you wish to use, please prepare them before the technician arrives.",
             },
           ]}
           callToActionText="Questions about handyman services? Get in touch"
