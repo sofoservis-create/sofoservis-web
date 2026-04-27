@@ -154,3 +154,11 @@ Most page content is still static (no ORM/migrations). Page data is either:
 3. Fetched from external widget APIs (Google Reviews, Instagram)
 
 The only server-persisted data is the `leads` table written by `/api/lead` (see Lead Intake Pipeline above).
+---
+
+## Recent SEO Updates (April 27, 2026)
+
+- Removed 6 unused city pages (Levice, Nitra, Šaľa SK + EN) and added 308 redirects to main service pages
+- Restructured Hodinový manžel navigation menu with nested "Mestá" sub-dropdown
+- Updated FAQ pricing on `/hodinovy-manzel-majster` (25€/hod) and shortened tool/IKEA sections
+- Reordered service area locations on handyman page (11 cities total: 4 linked + 7 plain text)
