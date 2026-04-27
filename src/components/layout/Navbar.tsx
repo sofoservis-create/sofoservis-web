@@ -519,10 +519,17 @@ export default function Navbar() {
           label: "Hodinový manžel",
           subLinks: [
             { href: "/hodinovy-manzel-majster", label: "Hodinový manžel" },
-            { href: "/hodinovy-manzel-majster/bratislava", label: "Bratislava" },
-            { href: "/hodinovy-manzel-majster/galanta", label: "Galanta" },
-            { href: "/hodinovy-manzel-majster/piestany", label: "Piešťany" },
-            { href: "/hodinovy-manzel-majster/trnava", label: "Trnava" },
+            {
+              href: "/hodinovy-manzel-majster",
+              label: "Mestá",
+              subLinksAllLabel: "",
+              subLinks: [
+                { href: "/hodinovy-manzel-majster/bratislava", label: "Bratislava" },
+                { href: "/hodinovy-manzel-majster/galanta", label: "Galanta" },
+                { href: "/hodinovy-manzel-majster/piestany", label: "Piešťany" },
+                { href: "/hodinovy-manzel-majster/trnava", label: "Trnava" },
+              ],
+            },
           ],
         },
       ],
@@ -699,10 +706,17 @@ export default function Navbar() {
           label: "Handyman Services",
           subLinks: [
             { href: "/en/handyman-services", label: "Handyman Services" },
-            { href: "/en/handyman-bratislava", label: "Bratislava" },
-            { href: "/en/handyman-galanta", label: "Galanta" },
-            { href: "/en/handyman-piestany", label: "Piešťany" },
-            { href: "/en/handyman-trnava", label: "Trnava" },
+            {
+              href: "/en/handyman-services",
+              label: "Cities",
+              subLinksAllLabel: "",
+              subLinks: [
+                { href: "/en/handyman-bratislava", label: "Bratislava" },
+                { href: "/en/handyman-galanta", label: "Galanta" },
+                { href: "/en/handyman-piestany", label: "Piešťany" },
+                { href: "/en/handyman-trnava", label: "Trnava" },
+              ],
+            },
           ],
         },
       ],
@@ -910,9 +924,11 @@ export default function Navbar() {
                         </button>
                         {expandedSubSubLink === category.name + "-" + sub.label && (
                           <div className="bg-white">
-                            <Link href={sub.href} className="block pl-10 pr-5 py-1.5 text-primary-700 text-xs hover:bg-accent-400 hover:text-primary-900 transition-colors font-semibold border-b border-gray-100" prefetch={false}>
-                              {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
-                            </Link>
+                            {sub.subLinksAllLabel !== "" && (
+                              <Link href={sub.href} className="block pl-10 pr-5 py-1.5 text-primary-700 text-xs hover:bg-accent-400 hover:text-primary-900 transition-colors font-semibold border-b border-gray-100" prefetch={false}>
+                                {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
+                              </Link>
+                            )}
                             {sub.subLinks.map((subsub, ssi) => (
                               <Link key={ssi} href={subsub.href} className="block pl-12 pr-5 py-1.5 text-primary-600 text-xs hover:bg-accent-400 hover:text-primary-900 transition-colors font-medium" prefetch={false}>
                                 {subsub.label}
@@ -1040,9 +1056,11 @@ export default function Navbar() {
                             </button>
                             {expandedSubSubLink === category.name + "-" + sub.label && (
                               <div className="bg-gray-50">
-                                <Link href={sub.href} className="block pl-14 pr-8 py-2 text-primary-700 text-xs font-semibold border-b border-gray-200" onClick={() => setMobileMenuOpen(false)} prefetch={false}>
-                                  {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
-                                </Link>
+                                {sub.subLinksAllLabel !== "" && (
+                                  <Link href={sub.href} className="block pl-14 pr-8 py-2 text-primary-700 text-xs font-semibold border-b border-gray-200" onClick={() => setMobileMenuOpen(false)} prefetch={false}>
+                                    {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
+                                  </Link>
+                                )}
                                 {sub.subLinks.map((subsub, ssi) => (
                                   <Link key={ssi} href={subsub.href} className="block pl-16 pr-8 py-2 text-primary-600 text-xs font-medium" onClick={() => setMobileMenuOpen(false)} prefetch={false}>
                                     {subsub.label}
