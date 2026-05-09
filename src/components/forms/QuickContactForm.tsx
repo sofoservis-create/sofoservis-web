@@ -178,8 +178,8 @@ const PLACEHOLDER_MAP: Record<string, { sk: string; en: string }> = {
     en: "E.g. moving a grand piano, 2nd floor, no lift...",
   },
   "/stahovanie-pianina": {
-    sk: "Napr. sťahovanie pianina z 3. poschodia bez výťahu...",
-    en: "E.g. moving an upright piano, 3rd floor, no lift...",
+    sk: "Napr. sťahovanie klavíra, 2. poschodie, výťah nie je...",
+    en: "E.g. moving a grand piano, 2nd floor, no lift...",
   },
   "/stahovanie-preprava-nabytku": {
     sk: "Napr. preprava nábytku do nového bytu, 2-izbový...",

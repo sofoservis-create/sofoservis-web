@@ -308,7 +308,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/stahovanie`, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE_URL}/vypratavanie`, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE_URL}/stahovanie-klavira`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/stahovanie-pianina`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/stahovanie-trezorov`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/stahovanie-strojov-zariadeni`, changeFrequency: "weekly", priority: 0.75 },
 

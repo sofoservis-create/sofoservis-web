@@ -308,8 +308,7 @@ export default function Navbar() {
           label: "Sťahovanie ťažkých bremien",
           subLinksAllLabel: "→ Všetky ťažké bremená",
           subLinks: [
-            { href: "/stahovanie-klavira", label: "Sťahovanie klavírov" },
-            { href: "/stahovanie-pianina", label: "Sťahovanie pianín" },
+            { href: "/stahovanie-klavira", label: "Sťahovanie klavírov a pianín" },
             { href: "/stahovanie-strojov-zariadeni", label: "Sťahovanie strojov a zariadení" },
             { href: "/stahovanie-trezorov", label: "Sťahovanie trezorov" },
           ],

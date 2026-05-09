@@ -105,6 +105,18 @@ const nextConfig = {
         destination: "https://www.sofoservis.sk/:path*",
         permanent: true,
       },
+      // Sťahovanie pianína → klavíra (konsolidácia kanibalizácie)
+      {
+        source: "/stahovanie-pianina",
+        destination: "/stahovanie-klavira",
+        permanent: true,
+      },
+      // EN upright-piano-moving → piano-moving (konsolidácia)
+      {
+        source: "/en/upright-piano-moving",
+        destination: "/en/piano-moving",
+        permanent: true,
+      },
       // EN deprecated URL → kanonická EN junk-removal hub stránka
       {
         source: "/en/junk-removal-services",

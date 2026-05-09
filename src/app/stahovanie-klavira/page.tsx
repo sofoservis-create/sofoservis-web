@@ -251,9 +251,9 @@ export default function StahovanieKlaviraPage() {
         title="Súvisiace služby"
         services={[
           {
-            title: "Sťahovanie pianína",
-            description: "Dedikovaná stránka pre sťahovanie pianín a pián.",
-            href: "/stahovanie-pianina",
+            title: "Sťahovanie ťažkých bremien",
+            description: "Komplexné služby pre sťahovanie všetkých typov ťažkých bremien.",
+            href: "/stahovanie-tazkych-bremien",
             icon: "/icons/crane_icon.svg",
           },
           {
