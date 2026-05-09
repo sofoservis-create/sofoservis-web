@@ -590,6 +590,33 @@ const nextConfig = {
         destination: "/en/moving-to-uk",
         permanent: true,
       },
+      // Blog kanibalizácia: 3 mestské blogy → service stránky
+      {
+        source: "/blog/vypratavanie-bytov-senec",
+        destination: "/vypratavanie-senec",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-bytov-pezinok",
+        destination: "/vypratavanie-pezinok",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-bytov-malacky",
+        destination: "/vypratavanie-malacky",
+        permanent: true,
+      },
+      // Blog kanibalizácia: intra-blog konsolidácia (slabší → silnejší)
+      {
+        source: "/blog/kolko-stoji-vypratavanie-bytu-bratislava-2026",
+        destination: "/blog/vypratavanie-bytu-cena-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/ako-spravne-zabalit-byt-na-stahovanie",
+        destination: "/blog/ako-sa-pripravit-na-stahovanie-checklist",
+        permanent: true,
+      },
     ];
   },
 };
