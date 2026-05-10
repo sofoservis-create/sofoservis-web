@@ -162,3 +162,4 @@ The only server-persisted data is the `leads` table written by `/api/lead` (see 
 - Restructured Hodinový manžel navigation menu with nested "Mestá" sub-dropdown
 - Updated FAQ pricing on `/hodinovy-manzel-majster` (25€/hod) and shortened tool/IKEA sections
 - Reordered service area locations on handyman page (11 cities total: 4 linked + 7 plain text)
+
