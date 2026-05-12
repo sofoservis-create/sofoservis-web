@@ -131,7 +131,7 @@ export default function StahovanieNoveMestoPage() {
       {
         question: "Aká je cena sťahovania v Novom Meste?",
         answer:
-          "Sťahovanie v Novom Meste účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci mesta od 40€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
+          "Sťahovanie v Novom Meste účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci mesta od 55€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
       },
       {
         question: "Ako dlho trvá sťahovanie bytu v Novom Meste?",

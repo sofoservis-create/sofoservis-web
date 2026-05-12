@@ -129,7 +129,7 @@ export default function StahovanieDubravkaPage() {
       {
         question: "Aká je cena sťahovania v Dúbravke?",
         answer:
-          "Sťahovanie v Dúbravke účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci Bratislavy od 40€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
+          "Sťahovanie v Dúbravke účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci Bratislavy od 55€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
       },
       {
         question: "Ako dlho trvá sťahovanie bytu v Dúbravke?",
@@ -139,7 +139,7 @@ export default function StahovanieDubravkaPage() {
       {
         question: "Sťahujete aj z Dúbravky do Karlovej Vsi alebo Devínskej?",
         answer:
-          "Áno, sťahujeme z Dúbravky do akejkoľvek časti Bratislavy — Karlova Ves, Devínska Nová Ves, Lamač, centrum a ďalšie. Sťahovanie v rámci mesta od 40€.",
+          "Áno, sťahujeme z Dúbravky do akejkoľvek časti Bratislavy — Karlova Ves, Devínska Nová Ves, Lamač, centrum a ďalšie. Sťahovanie v rámci mesta od 55€.",
       },
       {
         question: "Pomáhate aj s rozobraním a zložením nábytku?",

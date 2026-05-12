@@ -94,7 +94,7 @@ export default function PricingPageEN() {
         { label: "Each additional", price: "€17/hr" },
         { label: "Carry without elevator", price: "€15/floor" },
         { label: "Moving within city", price: "from €40" },
-        { label: "Moving outside city", price: "€0.70/km" },
+        { label: "Moving outside city", price: "€0.80/km" },
         { label: "International moving", price: "by agreement" },
         { label: "Heavy item moving", price: "from €80" },
         { label: "Warehouse moving", price: "by agreement" },
@@ -264,7 +264,7 @@ export default function PricingPageEN() {
             {
               question: "How are travel costs calculated?",
               answer:
-                "For moves within the city, we charge a flat rate from €40. For longer distances, we charge €0.70 per kilometer. The exact travel cost is determined during the inspection based on the specific route.",
+                "For moves within the city, we charge a flat rate from €55. For longer distances, we charge €0.80 per kilometer. The exact travel cost is determined during the inspection based on the specific route.",
             },
           ]}
           callToActionText="Have questions about pricing? Get in touch"

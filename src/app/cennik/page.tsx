@@ -96,10 +96,10 @@ export default function CennikPage() {
           price: "67€/hod",
           isHighlighted: true,
         },
-        { label: "Každý ďalší", price: "17€/hod" },
+        { label: "Každý ďalší", price: "20€/hod" },
         { label: "Vynáška bez výťahu", price: "15€/poschodie" },
-        { label: "Sťahovanie v rámci mesta", price: "od 40€" },
-        { label: "Sťahovanie mimo mesta", price: "0.70€/Km" },
+        { label: "Sťahovanie v rámci mesta", price: "od 55€" },
+        { label: "Sťahovanie mimo mesta", price: "0.80€/Km" },
         { label: "Medzinárodné sťahovanie", price: "dohodou" },
         { label: "Sťahovanie bremien", price: "od 80€" },
         { label: "Sťahovanie skladov", price: "dohodou" },
@@ -284,7 +284,7 @@ export default function CennikPage() {
             {
               question: "Ako sa počítajú cestovné náklady?",
               answer:
-                "Pre sťahovanie v rámci mesta účtujeme paušálnu sumu od 40€. Pre vzdialenejšie destinácie účtujeme 0,70€ za kilometer. Presná cena cestovného sa určí pri obhliadke na základe konkrétnej trasy.",
+                "Pre sťahovanie v rámci mesta účtujeme paušálnu sumu od 55€. Pre vzdialenejšie destinácie účtujeme 0,80€ za kilometer. Presná cena cestovného sa určí pri obhliadke na základe konkrétnej trasy.",
             },
           ]}
         />

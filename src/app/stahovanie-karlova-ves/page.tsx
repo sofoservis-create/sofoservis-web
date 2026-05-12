@@ -130,7 +130,7 @@ export default function StahovanieKarlovaVesPage() {
       {
         question: "Aká je cena sťahovania v Karlovej Vsi?",
         answer:
-          "Sťahovanie v Karlovej Vsi účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci mesta od 40€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
+          "Sťahovanie v Karlovej Vsi účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci mesta od 55€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
       },
       {
         question: "Ako dlho trvá sťahovanie bytu v Karlovej Vsi?",
@@ -140,7 +140,7 @@ export default function StahovanieKarlovaVesPage() {
       {
         question: "Sťahujete aj do Dúbravky alebo Lamača?",
         answer:
-          "Áno, sťahujeme z Karlovej Vsi do Dúbravky, Lamača, Devínskej Novej Vsi aj ďalších mestských častí Bratislavy. Sťahovanie v rámci mesta od 40€.",
+          "Áno, sťahujeme z Karlovej Vsi do Dúbravky, Lamača, Devínskej Novej Vsi aj ďalších mestských častí Bratislavy. Sťahovanie v rámci mesta od 55€.",
       },
       {
         question: "Pomáhate aj s balením vecí pred sťahovaním?",
