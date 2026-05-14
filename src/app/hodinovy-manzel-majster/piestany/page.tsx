@@ -39,7 +39,7 @@ export default function HodinovyManzelPiestanyPage() {
     {
       question: "Koľko stojí hodinový manžel v Piešťanoch?",
       answer:
-        "Cena práce je 25€ za hodinu. Minimálna objednávka je 1 hodina. Doprava v rámci Piešťan je účtovaná paušálne od 20€.",
+        "Cena práce je 25€ za hodinu. Minimálna objednávka je 1 hodina. Doprava v rámci Piešťan je účtovaná paušálne od 25€.",
     },
     {
       question: "Ste k dispozícii aj cez víkendy v Piešťanoch?",

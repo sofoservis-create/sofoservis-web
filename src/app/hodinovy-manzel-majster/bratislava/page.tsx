@@ -39,7 +39,7 @@ export default function HodinovyManzelMajsterBratislavaPage() {
     {
       question: "Koľko stojí hodinový manžel v Bratislave?",
       answer:
-        "Cena začína od 25€ za hodinu práce. Minimálna objednávka je 1 hodina, následne účtujeme v 30-minútových intervaloch. Doprava v rámci Bratislavy je od 20€.",
+        "Cena začína od 25€ za hodinu práce. Minimálna objednávka je 1 hodina, následne účtujeme v 30-minútových intervaloch. Doprava v rámci Bratislavy je od 25€.",
     },
     {
       question: "Ako rýchlo príde hodinový manžel v Bratislave?",

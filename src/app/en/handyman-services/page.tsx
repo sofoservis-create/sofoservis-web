@@ -49,7 +49,7 @@ export default function HandymanServicesPage() {
             {
               question: "How much do handyman services cost?",
               answer:
-                "Handyman service pricing is based on several factors, most commonly an hourly rate. The standard hourly rate is €25 per hour of work. For some common tasks, we offer flat rates. Material costs are added if not supplied by the customer. The minimum billable time is 1 hour, then we charge in 30-minute intervals. Travel costs are charged based on distance, starting from €20 within Bratislava and nearby areas.",
+                "Handyman service pricing is based on several factors, most commonly an hourly rate. The standard hourly rate is €25 per hour of work. For some common tasks, we offer flat rates. Material costs are added if not supplied by the customer. The minimum billable time is 1 hour, then we charge in 30-minute intervals. Travel costs are charged based on distance, starting from €25 within Bratislava and nearby areas.",
             },
             {
               question: "How do I book handyman services?",
@@ -228,7 +228,7 @@ export default function HandymanServicesPage() {
             {
               question: "How much do handyman services cost?",
               answer:
-                "Handyman service pricing is based on several factors, most commonly an hourly rate. The standard hourly rate is €25 per hour of work. For some common tasks, we offer flat rates. Material costs are added if not supplied by the customer. The minimum billable time is 1 hour, then we charge in 30-minute intervals. Travel costs are charged based on distance, starting from €20 within Bratislava and nearby areas.",
+                "Handyman service pricing is based on several factors, most commonly an hourly rate. The standard hourly rate is €25 per hour of work. For some common tasks, we offer flat rates. Material costs are added if not supplied by the customer. The minimum billable time is 1 hour, then we charge in 30-minute intervals. Travel costs are charged based on distance, starting from €25 within Bratislava and nearby areas.",
             },
             {
               question: "How do I book handyman services?",

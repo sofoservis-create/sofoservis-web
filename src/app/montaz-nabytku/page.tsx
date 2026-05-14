@@ -18,7 +18,7 @@ import TrustBadges from "@/components/sections/TrustBadges";
 export const metadata = {
   title: "Montáž, skladanie a demontáž nábytku | Sofoservis",
   description:
-    "Profesionálna montáž a demontáž nábytku. Výjazd od 20€. IKEA, Asko, Jysk a všetky typy nábytku. Rýchlo a spoľahlivo. Kontaktujte nás ešte dnes!",
+    "Profesionálna montáž a demontáž nábytku. Výjazd od 25€. IKEA, Asko, Jysk a všetky typy nábytku. Rýchlo a spoľahlivo. Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/montaz-nabytku",
       languages: {
@@ -32,7 +32,7 @@ export const metadata = {
   openGraph: {
     title: "Montáž, skladanie a demontáž nábytku | Sofoservis",
     description:
-      "Profesionálna montáž a demontáž nábytku. Výjazd od 20€. IKEA, Asko, Jysk a všetky typy nábytku.",
+      "Profesionálna montáž a demontáž nábytku. Výjazd od 25€. IKEA, Asko, Jysk a všetky typy nábytku.",
     url: "https://www.sofoservis.sk/montaz-nabytku",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -45,7 +45,7 @@ const faqSchemaItems = [
   {
     question: "Aká je cena za montáž nábytku?",
     answer:
-      "Cena za montáž nábytku závisí od typu a množstva nábytku. Výjazd začína od 20€. Pre presný cenový odhad nás kontaktujte s popisom nábytku.",
+      "Cena za montáž nábytku závisí od typu a množstva nábytku. Výjazd začína od 25€. Pre presný cenový odhad nás kontaktujte s popisom nábytku.",
   },
   {
     question: "Robíte montáž nábytku IKEA?",

@@ -126,7 +126,7 @@ export default function PricingPageEN() {
       title: "FURNITURE ASSEMBLY",
       items: [
         { label: "Assembly/disassembly", price: "by furniture type" },
-        { label: "Call-out fee", price: "from €20" },
+        { label: "Call-out fee", price: "from €25" },
       ],
       buttonText: "BOOK FOR FREE",
     },
@@ -135,7 +135,7 @@ export default function PricingPageEN() {
       items: [
         { label: "Installation", price: "from €120/m" },
         { label: "Removal", price: "from €60/m" },
-        { label: "Call-out fee", price: "from €20" },
+        { label: "Call-out fee", price: "from €25" },
       ],
       buttonText: "BOOK FOR FREE",
     },
