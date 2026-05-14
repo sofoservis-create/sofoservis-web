@@ -13,7 +13,7 @@ import RelatedServices from "@/components/sections/RelatedServices";
 export const metadata = {
   title: "Service Pricing - Moving, Clearance, Assembly | Sofoservis",
   description:
-    "Transparent prices for our services. Moving from €25/hr, clearance from €25/hr, furniture assembly from €20. Free inspection!",
+    "Transparent prices for our services. Moving from €25/hr, clearance from €25/hr, furniture assembly from €25/hr. Free inspection!",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/pricing",
     languages: {

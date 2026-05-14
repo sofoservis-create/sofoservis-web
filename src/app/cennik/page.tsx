@@ -14,7 +14,7 @@ import PriceListJsonLd from "@/components/seo/PriceListJsonLd";
 export const metadata = {
   title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
   description:
-    "Transparentné ceny za naše služby. Sťahovanie od 25€/hod, vypratávanie od 25€/hod, montáž nábytku od 20€. Obhliadka zadarmo!",
+    "Transparentné ceny za naše služby. Sťahovanie od 25€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
   alternates: {
     canonical: "https://www.sofoservis.sk/cennik",
       languages: {
@@ -27,7 +27,7 @@ export const metadata = {
     "cenník sťahovanie, ceny sťahovanie, cenník vypratávanie, ceny montáž nábytku, cenník sofoservis, ceny služieb bratislava",
   openGraph: {
       title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
-      description: "Transparentné ceny za naše služby. Sťahovanie od 25€/hod, vypratávanie od 25€/hod, montáž nábytku od 20€. Obhliadka zadarmo!",
+      description: "Transparentné ceny za naše služby. Sťahovanie od 25€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
       url: "https://www.sofoservis.sk/cennik",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
