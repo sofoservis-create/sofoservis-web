@@ -131,7 +131,7 @@ export default function CennikPage() {
       title: "MONTÁŽ NÁBYTKU",
       items: [
         { label: "Montáž/demontáž", price: "podľa typu nábytku" },
-        { label: "Výjazd", price: "od 20€" },
+        { label: "Výjazd", price: "od 25€" },
       ],
       buttonText: "REZERVÁCIA ZDARMA",
     },
@@ -140,7 +140,7 @@ export default function CennikPage() {
       items: [
         { label: "Montáž", price: "od 120€/m" },
         { label: "Demontáž", price: "od 60€/m" },
-        { label: "Výjazd", price: "od 20€" },
+        { label: "Výjazd", price: "od 25€" },
       ],
       buttonText: "REZERVÁCIA ZDARMA",
     },
