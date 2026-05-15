@@ -31,7 +31,7 @@ export const metadata = {
     "stahovanie komarno, stahovanie bytov komarno, stahovacie služby komarno, stahovanie firiem komarno, preprava nabytku komarno, stahovanie dom komarno",
   openGraph: {
       title: "Sťahovanie Komárno - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Komárne a okolí od 25€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      description: "Profesionálne sťahovacie služby v Komárne a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
       url: "https://www.sofoservis.sk/stahovanie-komarno",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

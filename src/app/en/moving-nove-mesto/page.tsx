@@ -40,7 +40,7 @@ const faqItems = [
   {
     question: "What is the price for moving in Nové Mesto?",
     answer:
-      "Our rates start from €25/hour per worker. A standard move within Nové Mesto or to other parts of Bratislava starts from €40. For a precise estimate, please fill out our contact form.",
+      "Our rates start from €30/hour per worker. A standard move within Nové Mesto or to other parts of Bratislava starts from €40. For a precise estimate, please fill out our contact form.",
   },
   {
     question: "Can you handle moving from high-rise buildings in Nové Mesto?",
@@ -192,7 +192,7 @@ export default function MovingNoveMestoPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Office Moving", description: "Efficient office relocation with minimal downtime.", href: "/en/office-moving", icon: "/icons/briefcase_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Nové Mesto from €25/hour.", href: "/en/home-junk-removal-nove-mesto", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Nové Mesto from €30/hour.", href: "/en/home-junk-removal-nove-mesto", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Assembly", description: "Professional assembly and disassembly of furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}
       />

@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
       title: "Sťahovanie a preprava nábytku - rýchlo a lacno | Sofoservis",
-      description: "Profesionálne sťahovanie a preprava nábytku od 25€/hod. Lacné ceny, bezpečná manipulácia. Obhliadka priestoru zadarmo. Kontaktujte nás ešte dnes!",
+      description: "Profesionálne sťahovanie a preprava nábytku od 30€/hod. Lacné ceny, bezpečná manipulácia. Obhliadka priestoru zadarmo. Kontaktujte nás ešte dnes!",
       url: "https://www.sofoservis.sk/stahovanie-preprava-nabytku",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

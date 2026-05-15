@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
       title: "Sťahovanie Stupava - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Stupave a okolí od 25€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      description: "Profesionálne sťahovacie služby v Stupave a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
       url: "https://www.sofoservis.sk/stahovanie-stupava",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

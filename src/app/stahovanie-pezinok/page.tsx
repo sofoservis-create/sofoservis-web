@@ -31,7 +31,7 @@ export const metadata = {
     "stahovanie pezinok, stahovanie bytov pezinok, stahovacie služby pezinok, stahovanie firiem pezinok, preprava nabytku pezinok, malokarpatská oblasť stahovanie",
   openGraph: {
       title: "Sťahovanie Pezinok - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Pezinku a okolí od 25€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      description: "Profesionálne sťahovacie služby v Pezinku a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
       url: "https://www.sofoservis.sk/stahovanie-pezinok",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

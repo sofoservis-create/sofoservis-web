@@ -18,7 +18,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 export const metadata = {
   title: "Sťahovanie Bratislava - byty, domy, nábytok a kancelárie",
   description:
-    "Profesionálne sťahovacie služby v Bratislave od 25€/hod. Sťahujeme byty, domy, kancelárie a firmy v každej mestskej časti. Rýchlo a spoľahlivo.",
+    "Profesionálne sťahovacie služby v Bratislave od 30€/hod. Sťahujeme byty, domy, kancelárie a firmy v každej mestskej časti. Rýchlo a spoľahlivo.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie-bratislava",
       languages: {
@@ -32,7 +32,7 @@ export const metadata = {
   openGraph: {
     title: "Sťahovanie Bratislava - byty, domy, nábytok a kancelárie",
     description:
-      "Profesionálne sťahovacie služby v Bratislave a okolí od 25€/hod. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
+      "Profesionálne sťahovacie služby v Bratislave a okolí od 30€/hod. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
     url: "https://www.sofoservis.sk/stahovanie-bratislava",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -46,7 +46,7 @@ export default function StahovanieBratislavaPage() {
   const heroData = {
     title: "Sťahovanie Bratislava: Rýchlo a spoľahlivo",
     description:
-      "Kompletné sťahovacie služby v Bratislave a okolí od 25€/hod. Profesionálny tím, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
+      "Kompletné sťahovacie služby v Bratislave a okolí od 30€/hod. Profesionálny tím, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
     formTitle: "Sťahovanie v Bratislave bez starostí s bezplatnou ponukou",
     formSubtitle: "Vyplňte formulár nižšie pre rýchlu fixnú cenu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -269,7 +269,7 @@ export default function StahovanieBratislavaPage() {
               },
               {
                 title: "Čo ovplyvňuje cenu sťahovania v Bratislave?",
-                content: "Cena sťahovania v Bratislave závisí od viacerých faktorov. Základná hodinová sadzba začína od 25€/hod, no výsledná suma sa odvíja od: počtu pracovníkov (štandardne 2, pri väčších zákazkách 3 alebo viac), objemu a hmotnosti vecí, vzdialenosti medzi starým a novým miestom, prístupových podmienok (poschodie, výťah, parkovanie), potreby demontáže a montáže nábytku a požiadavky na baliaci materiál.\n\nPre presný cenový odhad odporúčame vyplniť kontaktný formulár alebo nám zavolať. Bezplatnú obhliadku robíme priamo u vás, aby sme vedeli pripraviť reálnu cenovú ponuku bez skrytých poplatkov.",
+                content: "Cena sťahovania v Bratislave závisí od viacerých faktorov. Základná hodinová sadzba začína od 30€/hod, no výsledná suma sa odvíja od: počtu pracovníkov (štandardne 2, pri väčších zákazkách 3 alebo viac), objemu a hmotnosti vecí, vzdialenosti medzi starým a novým miestom, prístupových podmienok (poschodie, výťah, parkovanie), potreby demontáže a montáže nábytku a požiadavky na baliaci materiál.\n\nPre presný cenový odhad odporúčame vyplniť kontaktný formulár alebo nám zavolať. Bezplatnú obhliadku robíme priamo u vás, aby sme vedeli pripraviť reálnu cenovú ponuku bez skrytých poplatkov.",
               },
               {
                 title: "Mestské časti Bratislavy a špeciality sťahovania",
@@ -301,7 +301,7 @@ export default function StahovanieBratislavaPage() {
       <RelatedServices
         title="Ďalšie služby v Bratislave"
         services={[
-          { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti od 25€/hod.", href: "/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
+          { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti od 30€/hod.", href: "/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
           { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie a odvoz nepotrebných vecí.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Montáž nábytku", description: "Skladanie a montáž nábytku všetkých značiek.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
         ]}

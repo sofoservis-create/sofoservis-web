@@ -31,7 +31,7 @@ export const metadata = {
   },
   openGraph: {
       title: "Sťahovanie Trnava - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Trnave a okolí od 25€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
+      description: "Profesionálne sťahovacie služby v Trnave a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
       url: "https://www.sofoservis.sk/stahovanie-trnava",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

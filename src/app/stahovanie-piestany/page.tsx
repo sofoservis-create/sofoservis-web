@@ -31,7 +31,7 @@ export const metadata = {
     "stahovanie piestany, stahovanie bytov piestany, stahovacie služby piestany, stahovanie firiem piestany, preprava nabytku piestany, stahovanie dom piestany, stahovanie kupele piestany",
   openGraph: {
       title: "Sťahovanie Piešťany - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Piešťanoch a okolí od 25€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      description: "Profesionálne sťahovacie služby v Piešťanoch a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
       url: "https://www.sofoservis.sk/stahovanie-piestany",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

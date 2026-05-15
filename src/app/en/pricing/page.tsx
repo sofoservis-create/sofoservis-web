@@ -13,7 +13,7 @@ import RelatedServices from "@/components/sections/RelatedServices";
 export const metadata = {
   title: "Service Pricing - Moving, Clearance, Assembly | Sofoservis",
   description:
-    "Transparent prices for our services. Moving from €25/hr, clearance from €25/hr, furniture assembly from €25/hr. Free inspection!",
+    "Transparent prices for our services. Moving from €30/hr, clearance from €25/hr, furniture assembly from €25/hr. Free inspection!",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/pricing",
     languages: {
@@ -84,11 +84,11 @@ export default function PricingPageEN() {
       title: "MOVING",
       items: [
         { label: "Site inspection", price: "free" },
-        { label: "1 worker", price: "€25/hr" },
-        { label: "2 workers", price: "€50/hr" },
+        { label: "1 worker", price: "€30/hr" },
+        { label: "2 workers", price: "€60/hr" },
         {
           label: "3 workers - PROMO",
-          price: "€67/hr",
+          price: "€80/hr",
           isHighlighted: true,
         },
         { label: "Each additional", price: "€17/hr" },
@@ -106,11 +106,11 @@ export default function PricingPageEN() {
       title: "CLEARANCE",
       items: [
         { label: "Site inspection", price: "free" },
-        { label: "1 worker", price: "€25/hr" },
-        { label: "2 workers", price: "€50/hr" },
+        { label: "1 worker", price: "€30/hr" },
+        { label: "2 workers", price: "€60/hr" },
         {
           label: "3 workers - PROMO",
-          price: "€67/hr",
+          price: "€80/hr",
           isHighlighted: true,
         },
         { label: "Full van 17 m²", price: "€200" },
@@ -259,7 +259,7 @@ export default function PricingPageEN() {
             {
               question: "What does the promotional price for 3 workers include?",
               answer:
-                "The promotional price of €67/hr for 3 workers is our most popular option, offering excellent value for money. At standard rates, 3 workers would cost €75/hr (3 × €25), so you save €8 for every hour.",
+                "The promotional price of €80/hr for 3 workers is our most popular option, offering excellent value for money. At standard rates, 3 workers would cost €90/hr (3 × €30), so you save €10 for every hour.",
             },
             {
               question: "How are travel costs calculated?",

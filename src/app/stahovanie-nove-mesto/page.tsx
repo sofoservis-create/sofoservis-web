@@ -32,7 +32,7 @@ export const metadata = {
   openGraph: {
     title: "Sťahovanie Nové Mesto Bratislava - byty, domy, kancelárie | Sofoservis",
     description:
-      "Profesionálne sťahovanie v Novom Meste Bratislava od 25€/hod. Byty, domy, kancelárie. Spoľahlivý tím, výhodné ceny.",
+      "Profesionálne sťahovanie v Novom Meste Bratislava od 30€/hod. Byty, domy, kancelárie. Spoľahlivý tím, výhodné ceny.",
     url: "https://www.sofoservis.sk/stahovanie-nove-mesto",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -131,7 +131,7 @@ export default function StahovanieNoveMestoPage() {
       {
         question: "Aká je cena sťahovania v Novom Meste?",
         answer:
-          "Sťahovanie v Novom Meste účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Sťahovanie v rámci mesta od 55€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
+          "Sťahovanie v Novom Meste účtujeme od 30€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 80€/hod. Sťahovanie v rámci mesta od 55€. Pre presný odhad vyplňte formulár — ponuka je zadarmo.",
       },
       {
         question: "Ako dlho trvá sťahovanie bytu v Novom Meste?",
@@ -239,7 +239,7 @@ export default function StahovanieNoveMestoPage() {
 
       <RelatedServices
         title="Súvisiace služby"
-        services={[{"title":"Sťahovanie Bratislava","description":"Profesionálne sťahovanie v celej Bratislave.","href":"/stahovanie-bratislava","icon":"/icons/truck_icon.svg"},{"title":"Sťahovanie bytov a domov","description":"Spoľahlivé sťahovanie bytov a rodinných domov.","href":"/stahovanie-bytov-domov","icon":"/icons/house_icon.svg"},{"title":"Vypratávanie Bratislava","description":"Vypratávanie bytov a priestorov v Bratislave od 25€/hod.","href":"/vypratavanie-bratislava","icon":"/icons/vypratavanie_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
+        services={[{"title":"Sťahovanie Bratislava","description":"Profesionálne sťahovanie v celej Bratislave.","href":"/stahovanie-bratislava","icon":"/icons/truck_icon.svg"},{"title":"Sťahovanie bytov a domov","description":"Spoľahlivé sťahovanie bytov a rodinných domov.","href":"/stahovanie-bytov-domov","icon":"/icons/house_icon.svg"},{"title":"Vypratávanie Bratislava","description":"Vypratávanie bytov a priestorov v Bratislave od 30€/hod.","href":"/vypratavanie-bratislava","icon":"/icons/vypratavanie_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
       />
       <FAQJsonLd items={faqData.items} />
     </main>

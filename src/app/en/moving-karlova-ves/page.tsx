@@ -40,7 +40,7 @@ const faqItems = [
   {
     question: "What is the cost of moving in Karlova Ves?",
     answer:
-      "Moving in Karlova Ves starts from €25/hour per worker. A standard move with 3 workers costs €67/hour. Moving within Bratislava starts from €40. Contact us for a free fixed price quote.",
+      "Moving in Karlova Ves starts from €30/hour per worker. A standard move with 3 workers costs €80/hour. Moving within Bratislava starts from €40. Contact us for a free fixed price quote.",
   },
   {
     question: "Do you move apartments in Dlhé Diely?",
@@ -192,7 +192,7 @@ export default function MovingKarlovaVesPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Apartment Moving", description: "Reliable moving of apartments and family houses.", href: "/en/apartment-moving", icon: "/icons/house_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Karlova Ves from €25/hour.", href: "/en/home-junk-removal-karlova-ves", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Karlova Ves from €30/hour.", href: "/en/home-junk-removal-karlova-ves", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Removal", description: "Old furniture pickup and ecological disposal.", href: "/en/furniture-removal", icon: "/icons/recycle_icon.svg" },
         ]}
       />

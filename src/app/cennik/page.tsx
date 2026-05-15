@@ -14,7 +14,7 @@ import PriceListJsonLd from "@/components/seo/PriceListJsonLd";
 export const metadata = {
   title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
   description:
-    "Transparentné ceny za naše služby. Sťahovanie od 25€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
+    "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
   alternates: {
     canonical: "https://www.sofoservis.sk/cennik",
       languages: {
@@ -27,7 +27,7 @@ export const metadata = {
     "cenník sťahovanie, ceny sťahovanie, cenník vypratávanie, ceny montáž nábytku, cenník sofoservis, ceny služieb bratislava",
   openGraph: {
       title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
-      description: "Transparentné ceny za naše služby. Sťahovanie od 25€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
+      description: "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
       url: "https://www.sofoservis.sk/cennik",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -89,14 +89,14 @@ export default function CennikPage() {
       title: "SŤAHOVANIE",
       items: [
         { label: "Obhliadka", price: "zadarmo" },
-        { label: "1 pracovník", price: "25€/hod" },
-        { label: "2 pracovníci", price: "50€/hod" },
+        { label: "1 pracovník", price: "30€/hod" },
+        { label: "2 pracovníci", price: "60€/hod" },
         {
           label: "3 pracovníci - AKCIA",
-          price: "67€/hod",
+          price: "80€/hod",
           isHighlighted: true,
         },
-        { label: "Každý ďalší", price: "20€/hod" },
+        { label: "Každý ďalší", price: "30€/hod" },
         { label: "Vynáška bez výťahu", price: "15€/poschodie" },
         { label: "Sťahovanie v rámci mesta", price: "od 55€" },
         { label: "Sťahovanie mimo mesta", price: "0.80€/Km" },
@@ -111,11 +111,11 @@ export default function CennikPage() {
       title: "VYPRATÁVANIE",
       items: [
         { label: "Obhliadka", price: "zadarmo" },
-        { label: "1 pracovník", price: "25€/hod" },
-        { label: "2 pracovníci", price: "50€/hod" },
+        { label: "1 pracovník", price: "30€/hod" },
+        { label: "2 pracovníci", price: "60€/hod" },
         {
           label: "3 pracovníci - AKCIA",
-          price: "67€/hod",
+          price: "80€/hod",
           isHighlighted: true,
         },
         { label: "Plná dodávka 17 m2", price: "200€" },
@@ -151,17 +151,17 @@ export default function CennikPage() {
       {/* JSON-LD Service + OfferCatalog schema pre rich snippets s cenami v Google */}
       <PriceListJsonLd
         offers={[
-          { name: "Sťahovanie – 1 pracovník", price: 25, unitCode: "HUR" },
-          { name: "Sťahovanie – 2 pracovníci", price: 50, unitCode: "HUR" },
-          { name: "Sťahovanie – 3 pracovníci (akcia)", price: 67, unitCode: "HUR" },
-          { name: "Sťahovanie – každý ďalší pracovník", price: 17, unitCode: "HUR" },
+          { name: "Sťahovanie – 1 pracovník", price: 30, unitCode: "HUR" },
+          { name: "Sťahovanie – 2 pracovníci", price: 60, unitCode: "HUR" },
+          { name: "Sťahovanie – 3 pracovníci (akcia)", price: 80, unitCode: "HUR" },
+          { name: "Sťahovanie – každý ďalší pracovník", price: 30, unitCode: "HUR" },
           { name: "Vynáška bez výťahu", price: 15, description: "za poschodie" },
           { name: "Sťahovanie v rámci mesta", price: 40, isMinPrice: true },
           { name: "Sťahovanie mimo mesta", price: 0.7, unitCode: "KMT" },
           { name: "Sťahovanie ťažkých bremien", price: 80, isMinPrice: true },
           { name: "Vypratávanie – 1 pracovník", price: 25, unitCode: "HUR" },
-          { name: "Vypratávanie – 2 pracovníci", price: 50, unitCode: "HUR" },
-          { name: "Vypratávanie – 3 pracovníci (akcia)", price: 67, unitCode: "HUR" },
+          { name: "Vypratávanie – 2 pracovníci", price: 60, unitCode: "HUR" },
+          { name: "Vypratávanie – 3 pracovníci (akcia)", price: 80, unitCode: "HUR" },
           { name: "Vypratávanie – plná dodávka 17 m²", price: 200 },
           { name: "Vypratávanie pivnice", price: 60, isMinPrice: true },
           { name: "Vypratávanie garáže", price: 70, isMinPrice: true },
@@ -279,7 +279,7 @@ export default function CennikPage() {
             {
               question: "Čo zahŕňa akciová cena pre 3 pracovníkov?",
               answer:
-                "Akciová cena 67€/hod pre 3 pracovníkov je našou najobľúbenejšou možnosťou, ktorá poskytuje vynikajúci pomer ceny a výkonu. Pri štandardnom účtovaní by 3 pracovníci stáli 75€/hod (3 × 25€), takže ušetríte 8€ za každú hodinu.",
+                "Akciová cena 80€/hod pre 3 pracovníkov je našou najobľúbenejšou možnosťou, ktorá poskytuje vynikajúci pomer ceny a výkonu. Pri štandardnom účtovaní by 3 pracovníci stáli 90€/hod (3 × 30€), takže ušetríte 10€ za každú hodinu.",
             },
             {
               question: "Ako sa počítajú cestovné náklady?",

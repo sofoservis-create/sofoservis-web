@@ -18,7 +18,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 export const metadata = {
   title: "Sťahovanie kancelárií a firiem - rýchlo a lacno | Sofoservis",
   description:
-    "Profesionálne sťahovanie kancelárií a firiem od 25€/hod ✅ Minimálne výpadky prevádzky ✅ Obhliadka zadarmo ✅ Kontaktujte nás ešte dnes!",
+    "Profesionálne sťahovanie kancelárií a firiem od 30€/hod ✅ Minimálne výpadky prevádzky ✅ Obhliadka zadarmo ✅ Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie-kancelarii-firiem",
       languages: {
@@ -31,7 +31,7 @@ export const metadata = {
     "stahovanie kancelarii, stahovanie kancelárií, stahovanie firiem, stahovanie firemneho nabytku, kancelárske sťahovanie, firemné sťahovanie, sťahovanie podnikov, montáž kancelárskeho nábytku",
   openGraph: {
       title: "Sťahovanie kancelárií a firiem - rýchlo a lacno | Sofoservis",
-      description: "Profesionálne sťahovanie kancelárií a firiem od 25€/hod. Minimalizujeme výpadky vašej prevádzky. Obhliadka zadarmo. Kontaktujte nás ešte dnes!",
+      description: "Profesionálne sťahovanie kancelárií a firiem od 30€/hod. Minimalizujeme výpadky vašej prevádzky. Obhliadka zadarmo. Kontaktujte nás ešte dnes!",
       url: "https://www.sofoservis.sk/stahovanie-kancelarii-firiem",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -53,7 +53,7 @@ export default function StahovanieKancelariiPage() {
   const heroData = {
     title: "Sťahovanie kancelárií a firiem",
     description:
-      "Profesionálne sťahovanie kancelárií a firiem od 25€/hod. Minimalizujeme výpadky vašej prevádzky vďaka skúsenému tímu, ktorý sa postará o efektívny presun.",
+      "Profesionálne sťahovanie kancelárií a firiem od 30€/hod. Minimalizujeme výpadky vašej prevádzky vďaka skúsenému tímu, ktorý sa postará o efektívny presun.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",

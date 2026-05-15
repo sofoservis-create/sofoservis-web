@@ -32,7 +32,7 @@ export const metadata = {
   openGraph: {
     title: "Sťahovanie Petržalka - byty, panelové domy, nábytok | Sofoservis",
     description:
-      "Profesionálne sťahovanie v Petržalke od 25€/hod. Skúsenosti s panelovými domami, vynáška bez výťahu, doprava po celej Bratislave.",
+      "Profesionálne sťahovanie v Petržalke od 30€/hod. Skúsenosti s panelovými domami, vynáška bez výťahu, doprava po celej Bratislave.",
     url: "https://www.sofoservis.sk/stahovanie-petrzalka",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -137,7 +137,7 @@ export default function StahovaniePetrzalkaPage() {
       {
         question: "Aká je cena sťahovania v Petržalke?",
         answer:
-          "Sťahovanie v Petržalke účtujeme od 25€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 67€/hod. Pre presný odhad vyplňte formulár alebo nám zavolajte — ponuka je zadarmo.",
+          "Sťahovanie v Petržalke účtujeme od 30€/hod na pracovníka. Najobľúbenejšia možnosť sú 3 pracovníci za 80€/hod. Pre presný odhad vyplňte formulár alebo nám zavolajte — ponuka je zadarmo.",
       },
       {
         question: "Kde parkujete sťahovacie auto v Petržalke?",
@@ -240,7 +240,7 @@ export default function StahovaniePetrzalkaPage() {
 
       <RelatedServices
         title="Súvisiace služby"
-        services={[{"title":"Sťahovanie Bratislava","description":"Profesionálne sťahovanie v celej Bratislave.","href":"/stahovanie-bratislava","icon":"/icons/truck_icon.svg"},{"title":"Sťahovanie bytov a domov","description":"Spoľahlivé sťahovanie bytov a rodinných domov.","href":"/stahovanie-bytov-domov","icon":"/icons/house_icon.svg"},{"title":"Vypratávanie Bratislava","description":"Vypratávanie bytov a priestorov v Bratislave od 25€/hod.","href":"/vypratavanie-bratislava","icon":"/icons/vypratavanie_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
+        services={[{"title":"Sťahovanie Bratislava","description":"Profesionálne sťahovanie v celej Bratislave.","href":"/stahovanie-bratislava","icon":"/icons/truck_icon.svg"},{"title":"Sťahovanie bytov a domov","description":"Spoľahlivé sťahovanie bytov a rodinných domov.","href":"/stahovanie-bytov-domov","icon":"/icons/house_icon.svg"},{"title":"Vypratávanie Bratislava","description":"Vypratávanie bytov a priestorov v Bratislave od 30€/hod.","href":"/vypratavanie-bratislava","icon":"/icons/vypratavanie_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
       />
       <FAQJsonLd items={faqData.items} />
     </main>

@@ -36,7 +36,7 @@ const stahovanieLocations = [
 export const metadata = {
   title: "Sťahovanie - profesionálne sťahovacie služby | Sofoservis",
   description:
-    "Profesionálne sťahovanie bytov, domov, kancelárií a medzinárodné sťahovanie od 25€/hod. Obhliadka zadarmo. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
+    "Profesionálne sťahovanie bytov, domov, kancelárií a medzinárodné sťahovanie od 30€/hod. Obhliadka zadarmo. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie",
     languages: {
@@ -50,7 +50,7 @@ export const metadata = {
   openGraph: {
     title: "Sťahovanie - profesionálne sťahovacie služby | Sofoservis",
     description:
-      "Profesionálne sťahovanie bytov, domov, kancelárií a medzinárodné sťahovanie od 25€/hod. Obhliadka zadarmo. Rýchlo, spoľahlivo.",
+      "Profesionálne sťahovanie bytov, domov, kancelárií a medzinárodné sťahovanie od 30€/hod. Obhliadka zadarmo. Rýchlo, spoľahlivo.",
     url: "https://www.sofoservis.sk/stahovanie",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -63,7 +63,7 @@ const faqSchemaItems = [
   {
     question: "Koľko stojí sťahovanie?",
     answer:
-      "Hodinová sadzba začína od 25€/hod pre 2 pracovníkov. Cena závisí od vzdialenosti, poschodia, množstva vecí a požiadaviek na demontáž nábytku. Pre 2-izbový byt v Bratislave je bežná cena 200–350€.",
+      "Hodinová sadzba začína od 30€/hod pre 2 pracovníkov. Cena závisí od vzdialenosti, poschodia, množstva vecí a požiadaviek na demontáž nábytku. Pre 2-izbový byt v Bratislave je bežná cena 200–350€.",
   },
   {
     question: "Robíte sťahovanie aj cez víkendy?",
@@ -247,7 +247,7 @@ export default function StahovaniePage() {
             {
               question: "Koľko stojí sťahovanie bytu alebo domu?",
               answer:
-                "Hodinová sadzba začína od 25€/hod pre 2 pracovníkov. Pre 2-izbový byt v Bratislave s výťahom je bežná cena 200–350€, pre 3-4-izbový byt 350–600€. Rodinné domy sa cenia individuálne. Pre presný odhad pripravíme bezplatnú cenovú ponuku.",
+                "Hodinová sadzba začína od 30€/hod pre 2 pracovníkov. Pre 2-izbový byt v Bratislave s výťahom je bežná cena 200–350€, pre 3-4-izbový byt 350–600€. Rodinné domy sa cenia individuálne. Pre presný odhad pripravíme bezplatnú cenovú ponuku.",
             },
             {
               question: "Ako dlho trvá sťahovanie?",

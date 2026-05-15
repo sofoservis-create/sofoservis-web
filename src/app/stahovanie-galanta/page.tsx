@@ -31,7 +31,7 @@ export const metadata = {
     "stahovanie galanta, stahovanie bytov galanta, stahovacie služby galanta, stahovanie firiem galanta, preprava nabytku galanta, stahovanie dom galanta",
   openGraph: {
       title: "Sťahovanie Galanta - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Galante a okolí od 25€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
+      description: "Profesionálne sťahovacie služby v Galante a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
       url: "https://www.sofoservis.sk/stahovanie-galanta",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],

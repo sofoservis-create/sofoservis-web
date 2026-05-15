@@ -40,7 +40,7 @@ const faqItems = [
   {
     question: "What is the cost of moving in Dúbravka?",
     answer:
-      "Moving in Dúbravka starts from €25/hour per worker. Our most popular option is 3 workers for €67/hour. Moving within Bratislava starts from €40. Fill out the form for a free estimate.",
+      "Moving in Dúbravka starts from €30/hour per worker. Our most popular option is 3 workers for €80/hour. Moving within Bratislava starts from €40. Fill out the form for a free estimate.",
   },
   {
     question: "How long does it take to move an apartment in Dúbravka?",
@@ -192,7 +192,7 @@ export default function MovingDubravkaPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Apartment Moving", description: "Reliable moving of apartments and family houses.", href: "/en/apartment-moving", icon: "/icons/house_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Dúbravka from €25/hour.", href: "/en/home-junk-removal-dubravka", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Dúbravka from €30/hour.", href: "/en/home-junk-removal-dubravka", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Assembly", description: "Professional assembly and disassembly of furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}
       />
