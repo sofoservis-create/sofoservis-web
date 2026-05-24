@@ -485,7 +485,7 @@ export default function LabHero({
               className="absolute hidden lg:block pointer-events-none"
               style={{
                 top: '156px',
-                right: 'max(calc(13% - 35px), calc((100% - 1280px) / 2 + 131px))',
+                right: 'calc(13% - 35px)',
                 width: '542px',
                 height: '542px',
                 borderRadius: '50%',
@@ -501,7 +501,7 @@ export default function LabHero({
               height={647}
               priority
               className="absolute hidden lg:block pointer-events-none select-none"
-              style={{ top: '104px', right: 'max(5%, calc((100% - 1280px) / 2 + 64px))', height: '647px', width: 'auto', zIndex: 5 }}
+              style={{ top: '104px', right: '5%', height: '647px', width: 'auto', zIndex: 5 }}
               sizes="473px"
             />
           </>
