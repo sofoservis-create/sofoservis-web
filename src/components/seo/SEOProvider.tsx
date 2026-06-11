@@ -293,7 +293,6 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
         itemListElement: generateBreadcrumbs(pathname, cityName, serviceData),
       },
       // Enhanced page properties
-      specialty: serviceData?.category,
       audience: {
         "@type": "Audience",
         audienceType: cityName
