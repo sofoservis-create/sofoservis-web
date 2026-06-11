@@ -38,3 +38,4 @@ User-agent: cohere-ai
 Allow: /
 
 Sitemap: https://www.sofoservis.sk/sitemap.xml
+LLMs: https://www.sofoservis.sk/llms.txt
