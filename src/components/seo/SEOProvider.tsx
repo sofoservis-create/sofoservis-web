@@ -1,11 +1,9 @@
 // src/components/seo/SEOProvider.tsx
 
-// Extended types for enhanced schemas
 interface ServiceData {
   serviceName: string;
   serviceDescription: string;
   serviceType: string;
-  category?: string;
 }
 
 interface BreadcrumbItem {
@@ -22,70 +20,134 @@ interface StructuredDataSchema {
   [key: string]: unknown;
 }
 
-// Service mapping with enhanced details for better SEO
 const SERVICE_MAPPING: Record<string, ServiceData> = {
   "/stahovanie-bytov-domov": {
     serviceName: "Sťahovanie bytov a domov",
     serviceDescription:
       "Profesionálne sťahovanie bytov a rodinných domov s kompletným servisom vrátane balenia, prepravy a vybalenia",
-    serviceType: "ResidentialMoving",
-    category: "Sťahovacie služby",
+    serviceType: "ResidentialMovingService",
   },
   "/stahovanie-kancelarii-firiem": {
     serviceName: "Sťahovanie kancelárií a firiem",
     serviceDescription:
       "Sťahovanie kancelárií s minimálnym výpadkom prevádzky, vrátane IT technológií",
-    serviceType: "OfficeMoving",
-    category: "Firemné služby",
+    serviceType: "OfficeMovingService",
   },
   "/medzinarodne-stahovanie": {
     serviceName: "Medzinárodné sťahovanie",
-    serviceDescription: "Sťahovanie do zahraničia a zo zahraničia",
-    serviceType: "InternationalMoving",
-    category: "Medzinárodné služby",
+    serviceDescription: "Sťahovanie do zahraničia a zo zahraničia na Slovensko",
+    serviceType: "InternationalMovingService",
   },
   "/buracie-demolacne-prace": {
     serviceName: "Búracie a demolačné práce",
     serviceDescription:
       "Profesionálne búranie a demolácia objektov s povoleniami a odvozom sute",
-    serviceType: "DemolitionWork",
-    category: "Stavebné práce",
+    serviceType: "DemolitionService",
   },
   "/montaz-nabytku": {
     serviceName: "Montáž a skladanie nábytku",
     serviceDescription: "Profesionálna montáž všetkých typov nábytku",
-    serviceType: "FurnitureAssembly",
-    category: "Montážne služby",
+    serviceType: "FurnitureAssemblyService",
+  },
+  "/montaz-kuchyne": {
+    serviceName: "Montáž kuchyne",
+    serviceDescription: "Profesionálna montáž kuchynskej linky a kuchynského nábytku",
+    serviceType: "FurnitureAssemblyService",
   },
   "/vypratavanie-bytov-domov": {
     serviceName: "Vypratávanie bytov a domov",
     serviceDescription:
       "Kompletné vypratanie a čistenie nehnuteľností vrátane likvidácie odpadu",
-    serviceType: "PropertyClearance",
-    category: "Čistiace služby",
+    serviceType: "PropertyClearanceService",
   },
   "/hodinovy-manzel-majster": {
     serviceName: "Hodinový manžel a majster",
     serviceDescription: "Drobné opravy a údržba v domácnosti",
-    serviceType: "HandymanServices",
-    category: "Údržbové služby",
+    serviceType: "HandymanService",
   },
   "/stahovanie-preprava-nabytku": {
     serviceName: "Sťahovanie a preprava nábytku",
     serviceDescription: "Bezpečná preprava a sťahovanie nábytku všetkých typov",
-    serviceType: "FurnitureMoving",
-    category: "Prepravné služby",
+    serviceType: "FurnitureMovingService",
   },
   "/stahovanie-tazkych-bremien": {
     serviceName: "Sťahovanie ťažkých bremien",
     serviceDescription:
       "Špecializované sťahovanie pianín, trezórov a ťažkých predmetov",
-    serviceType: "HeavyItemMoving",
-    category: "Špecializované služby",
+    serviceType: "HeavyItemMovingService",
+  },
+  "/vypratavanie-odvoz-stareho-nabytku": {
+    serviceName: "Vypratávanie a odvoz starého nábytku",
+    serviceDescription: "Odvoz a likvidácia starého nábytku a objemného odpadu",
+    serviceType: "PropertyClearanceService",
+  },
+  "/vypratavanie-pivnic-garazi-nebytovych-priestorov": {
+    serviceName: "Vypratávanie pivníc a garáží",
+    serviceDescription: "Kompletné vypratanie pivníc, garáží a nebytových priestorov",
+    serviceType: "PropertyClearanceService",
+  },
+  "/odvoz-likvidacia-stavebneho-odpadu": {
+    serviceName: "Odvoz a likvidácia stavebného odpadu",
+    serviceDescription: "Profesionálny odvoz a ekologická likvidácia stavebného odpadu",
+    serviceType: "WasteRemovalService",
+  },
+  "/buranie-stien-priecok": {
+    serviceName: "Búranie stien a priečok",
+    serviceDescription: "Búranie vnútorných stien a priečok s odvozom materiálu",
+    serviceType: "DemolitionService",
+  },
+  "/buranie-demolacia-domov-bytov": {
+    serviceName: "Búranie a demolácia domov a bytov",
+    serviceDescription: "Kompletná demolácia rodinných domov a bytových jednotiek",
+    serviceType: "DemolitionService",
+  },
+  "/cistenie-vypratavanie-pozemkov-nehnutelnosti": {
+    serviceName: "Čistenie a vypratávanie pozemkov",
+    serviceDescription: "Komplexné čistenie a vypratávanie pozemkov a nehnuteľností",
+    serviceType: "PropertyClearanceService",
+  },
+  "/likvidacia-nebezpecneho-odpadu-starych-spotrebicov": {
+    serviceName: "Likvidácia nebezpečného odpadu",
+    serviceDescription: "Ekologická likvidácia nebezpečného odpadu a starých spotrebičov",
+    serviceType: "WasteRemovalService",
+  },
+  "/stahovanie-klavira": {
+    serviceName: "Sťahovanie klavíra a pianína",
+    serviceDescription: "Špecializované sťahovanie klavírov a pianín",
+    serviceType: "HeavyItemMovingService",
+  },
+  "/stahovanie-na-slovensko": {
+    serviceName: "Sťahovanie na Slovensko",
+    serviceDescription: "Medzinárodné sťahovanie na Slovensko zo zahraničia",
+    serviceType: "InternationalMovingService",
+  },
+  "/stahovanie-zo-slovenska": {
+    serviceName: "Sťahovanie zo Slovenska",
+    serviceDescription: "Medzinárodné sťahovanie zo Slovenska do zahraničia",
+    serviceType: "InternationalMovingService",
+  },
+  "/vypratavanie-pozostalosti": {
+    serviceName: "Vypratávanie pozostalosti",
+    serviceDescription: "Citlivé a profesionálne vypratávanie pozostalosti",
+    serviceType: "PropertyClearanceService",
+  },
+  "/vypratavanie-kancelarii": {
+    serviceName: "Vypratávanie kancelárií",
+    serviceDescription: "Rýchle a kompletné vypratávanie kancelárskych priestorov",
+    serviceType: "PropertyClearanceService",
+  },
+  "/vypratavanie-po-rekonstrukcii": {
+    serviceName: "Vypratávanie po rekonštrukcii",
+    serviceDescription: "Čistenie a odvoz odpadu po rekonštrukcii",
+    serviceType: "PropertyClearanceService",
+  },
+  "/vypratavanie-chalupy": {
+    serviceName: "Vypratávanie chalupy",
+    serviceDescription: "Kompletné vypratávanie chalúp a rekreačných nehnuteľností",
+    serviceType: "PropertyClearanceService",
   },
 };
 
-// City mapping
 const CITY_MAPPING: Record<string, string> = {
   bratislava: "Bratislava",
   nitra: "Nitra",
@@ -149,13 +211,9 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
   const structuredData = (() => {
     const baseUrl = "https://www.sofoservis.sk";
     const isHomePage = pathname === "/";
-    const isServicePage = Object.keys(SERVICE_MAPPING).some((key) =>
-      pathname.includes(key)
-    );
     const isEnglishPage = pathname.startsWith("/en");
 
-    // City and service detection
-    const cityMatch = pathname.match(/\/([^\/]+)$/);
+    const cityMatch = pathname.match(/\/([^/]+)$/);
     const citySlug = cityMatch?.[1];
     const cityName = citySlug ? CITY_MAPPING[citySlug] : null;
 
@@ -166,7 +224,7 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
 
     const schemas: StructuredDataSchema[] = [];
 
-    // 1. Enhanced Organization Schema - homepage only
+    // 1. MovingCompany + WebSite — homepage only
     if (isHomePage) {
       schemas.push({
         "@context": "https://schema.org",
@@ -190,54 +248,24 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
           postalCode: "811 05",
           addressCountry: "SK",
         },
-        contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+421951735130",
-          contactType: "customer service",
-          areaServed: "SK",
-          availableLanguage: ["Slovak", "English"],
-          hoursAvailable: {
-            "@type": "OpeningHoursSpecification",
-            dayOfWeek: [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-            ],
-            opens: "07:00",
-            closes: "19:00",
-          },
-        },
-        sameAs: [
-          "https://www.facebook.com/SofoServis",
-          "https://www.instagram.com/sofoservis",
-          "https://www.linkedin.com/company/sofoservis",
-        ],
-        email: "doprava@sofoservis.sk",
-        telephone: "+421951735130",
-        foundingDate: "2019",
-        priceRange: "€€",
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Služby",
-          itemListElement: [
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie bytov a domov", url: `${baseUrl}/stahovanie-bytov-domov` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie kancelárií a firiem", url: `${baseUrl}/stahovanie-kancelarii-firiem` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Medzinárodné sťahovanie", url: `${baseUrl}/medzinarodne-stahovanie` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie ťažkých bremien", url: `${baseUrl}/stahovanie-tazkych-bremien` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie a preprava nábytku", url: `${baseUrl}/stahovanie-preprava-nabytku` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie", url: `${baseUrl}/vypratavanie` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Montáž nábytku", url: `${baseUrl}/montaz-nabytku` } },
-          ],
-        },
-        image: "https://www.sofoservis.sk/images/og-logo.png",
         geo: {
           "@type": "GeoCoordinates",
           latitude: 48.1512,
           longitude: 17.1113,
         },
+        telephone: "+421951735130",
+        email: "doprava@sofoservis.sk",
+        openingHours: "Mo-Sa 07:00-19:00",
+        priceRange: "€€",
+        currenciesAccepted: "EUR",
+        paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
+        foundingDate: "2019",
+        areaServed: { "@type": "Country", name: "Slovakia" },
+        sameAs: [
+          "https://www.facebook.com/SofoServis",
+          "https://www.instagram.com/sofoservis",
+          "https://www.linkedin.com/company/sofoservis",
+        ],
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: 4.9,
@@ -245,13 +273,23 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
           bestRating: 5,
           worstRating: 1,
         },
-        paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
-        currenciesAccepted: "EUR",
-        openingHours: "Mo-Sa 07:00-19:00",
-        slogan: "Sťahovanie, vypratávanie a montáž nábytku — s úsmevom a bez stresu",
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Služby SofoServis",
+          itemListElement: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie bytov a domov", url: `${baseUrl}/stahovanie-bytov-domov` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie kancelárií a firiem", url: `${baseUrl}/stahovanie-kancelarii-firiem` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Medzinárodné sťahovanie", url: `${baseUrl}/medzinarodne-stahovanie` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie ťažkých bremien", url: `${baseUrl}/stahovanie-tazkych-bremien` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie a preprava nábytku", url: `${baseUrl}/stahovanie-preprava-nabytku` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie bytov a domov", url: `${baseUrl}/vypratavanie-bytov-domov` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Montáž nábytku", url: `${baseUrl}/montaz-nabytku` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hodinový manžel", url: `${baseUrl}/hodinovy-manzel-majster` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Búracie a demolačné práce", url: `${baseUrl}/buracie-demolacne-prace` } },
+          ],
+        },
       });
 
-      // Enhanced Website Schema
       schemas.push({
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -262,20 +300,10 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
           "Profesionálne sťahovanie, vypratávanie a montáž nábytku v Bratislave a celom Slovensku",
         publisher: { "@id": `${baseUrl}/#organization` },
         inLanguage: "sk-SK",
-        copyrightYear: "2024",
-        copyrightHolder: { "@id": `${baseUrl}/#organization` },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: `${baseUrl}/search?q={search_term_string}`,
-          },
-          "query-input": "required name=search_term_string",
-        },
       });
     }
 
-    // 2. Enhanced WebPage Schema - all pages
+    // 2. WebPage — všetky stránky
     const pageTitle = generatePageTitle(pathname, serviceData, cityName);
     schemas.push({
       "@context": "https://schema.org",
@@ -287,66 +315,37 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
       isPartOf: { "@id": `${baseUrl}/#website` },
       about: { "@id": `${baseUrl}/#organization` },
       inLanguage: isEnglishPage ? "en-US" : "sk-SK",
-      dateModified: new Date().toISOString(),
       breadcrumb: {
         "@type": "BreadcrumbList",
         itemListElement: generateBreadcrumbs(pathname, cityName, serviceData),
       },
-      // Enhanced page properties
-      audience: {
-        "@type": "Audience",
-        audienceType: cityName
-          ? `Residents of ${cityName}`
-          : "Slovak residents",
-      },
     });
 
-    // 3. Service Schema - service pages
-    if (isServicePage && serviceData) {
+    // 3. Service — stránky služieb (s mestom alebo bez)
+    if (serviceData) {
       const serviceName = cityName
         ? `${serviceData.serviceName} ${cityName}`
         : serviceData.serviceName;
+
+      const areaServed = cityName
+        ? {
+            "@type": "City",
+            name: cityName,
+            containedInPlace: { "@type": "Country", name: "Slovakia" },
+          }
+        : { "@type": "Country", name: "Slovakia" };
 
       schemas.push({
         "@context": "https://schema.org",
         "@type": "Service",
         "@id": `${baseUrl}${pathname}/#service`,
         name: serviceName,
-        description: serviceData.serviceDescription,
+        description: cityName
+          ? `${serviceData.serviceDescription} v meste ${cityName}.`
+          : serviceData.serviceDescription,
         provider: { "@id": `${baseUrl}/#organization` },
         serviceType: serviceData.serviceType,
-        category: serviceData.category,
-        hasOfferCatalog: {
-          "@type": "OfferCatalog",
-          name: "Služby",
-          itemListElement: [
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie bytov a domov", url: `${baseUrl}/stahovanie-bytov-domov` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie kancelárií a firiem", url: `${baseUrl}/stahovanie-kancelarii-firiem` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Medzinárodné sťahovanie", url: `${baseUrl}/medzinarodne-stahovanie` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie a preprava nábytku", url: `${baseUrl}/stahovanie-preprava-nabytku` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie ťažkých bremien", url: `${baseUrl}/stahovanie-tazkych-bremien` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie bytov a domov", url: `${baseUrl}/vypratavanie-bytov-domov` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie a odvoz starého nábytku", url: `${baseUrl}/vypratavanie-odvoz-stareho-nabytku` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie pivníc a garáží", url: `${baseUrl}/vypratavanie-pivnic-garazi-nebytovych-priestorov` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Montáž nábytku", url: `${baseUrl}/montaz-nabytku` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Montáž kuchyne", url: `${baseUrl}/montaz-kuchyne` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hodinový manžel", url: `${baseUrl}/hodinovy-manzel-majster` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Búracie a demolačné práce", url: `${baseUrl}/buracie-demolacne-prace` } },
-          ],
-        },
-        areaServed: cityName
-          ? {
-              "@type": "City",
-              name: cityName,
-              containedInPlace: {
-                "@type": "Country",
-                name: "Slovakia",
-              },
-            }
-          : {
-              "@type": "Country",
-              name: "Slovakia",
-            },
+        areaServed,
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: 4.9,
@@ -355,32 +354,21 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
           worstRating: 1,
         },
       });
-    }
-
-    // 4. Enhanced LocalBusiness Schema - city pages
-    if (cityName) {
+    } else if (cityName) {
+      // Mestské stránky bez explicitného service mappingu (napr. /stahovanie-trnava)
       schemas.push({
         "@context": "https://schema.org",
-        "@type": "MovingCompany",
-        "@id": `${baseUrl}${pathname}/#localbusiness`,
-        name: `SofoServis ${cityName}`,
-        description: `Profesionálne sťahovacie služby v meste ${cityName}`,
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: cityName,
-          addressCountry: "SK",
-        },
+        "@type": "Service",
+        "@id": `${baseUrl}${pathname}/#service`,
+        name: `Sťahovacie služby ${cityName}`,
+        description: `Profesionálne sťahovacie a vypratávacie služby v meste ${cityName} a okolí.`,
+        provider: { "@id": `${baseUrl}/#organization` },
+        serviceType: "MovingService",
         areaServed: {
           "@type": "City",
           name: cityName,
+          containedInPlace: { "@type": "Country", name: "Slovakia" },
         },
-        parentOrganization: { "@id": `${baseUrl}/#organization` },
-        telephone: "+421951735130",
-        email: "doprava@sofoservis.sk",
-        openingHours: "Mo-Sa 07:00-19:00",
-        paymentAccepted: ["Cash", "Credit Card", "Bank Transfer"],
-        priceRange: "€€",
-        currenciesAccepted: "EUR",
         aggregateRating: {
           "@type": "AggregateRating",
           ratingValue: 4.9,
@@ -420,15 +408,9 @@ function generatePageTitle(
   if (pathname === "/cennik") return "Cenník služieb - SofoServis";
   if (pathname === "/referencie") return "Referencie - SofoServis";
 
-  if (serviceData && cityName) {
-    return `${serviceData.serviceName} ${cityName} - SofoServis`;
-  }
-  if (serviceData) {
-    return `${serviceData.serviceName} - SofoServis`;
-  }
-  if (cityName) {
-    return `Sťahovacie služby ${cityName} - SofoServis`;
-  }
+  if (serviceData && cityName) return `${serviceData.serviceName} ${cityName} - SofoServis`;
+  if (serviceData) return `${serviceData.serviceName} - SofoServis`;
+  if (cityName) return `Sťahovacie služby ${cityName} - SofoServis`;
 
   return "SofoServis";
 }
@@ -441,13 +423,10 @@ function generatePageDescription(
   if (serviceData && cityName) {
     return `${serviceData.serviceDescription} v meste ${cityName}. Profesionálne služby SofoServis.`;
   }
-  if (serviceData) {
-    return serviceData.serviceDescription;
-  }
+  if (serviceData) return serviceData.serviceDescription;
   if (cityName) {
     return `Profesionálne sťahovacie služby v meste ${cityName}. Sťahovanie bytov, domov a kancelárií.`;
   }
-
   return "Profesionálne sťahovanie, vypratávanie a montáž nábytku v Bratislave a celom Slovensku";
 }
 
@@ -460,12 +439,7 @@ function generateBreadcrumbs(
   const paths = pathname.split("/").filter(Boolean);
 
   const breadcrumbs: BreadcrumbItem[] = [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Domov",
-      item: baseUrl,
-    },
+    { "@type": "ListItem", position: 1, name: "Domov", item: baseUrl },
   ];
 
   let currentPath = baseUrl;
@@ -495,11 +469,10 @@ function generateBreadcrumbs(
     breadcrumbs.push({
       "@type": "ListItem",
       position: index + 2,
-      name: name,
+      name,
       item: currentPath,
     });
   });
 
   return breadcrumbs;
 }
-
