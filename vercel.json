@@ -4,5 +4,12 @@
       "path": "/api/instagram/refresh",
       "schedule": "0 6 1 * *"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "statusCode": 301
+    }
   ]
 }
