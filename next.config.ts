@@ -142,6 +142,87 @@ const nextConfig = {
         destination: "/vypratavanie-bytov-domov",
         permanent: true,
       },
+      // Blog konsolidácia – zvyšných 15 blogov + index (jún 2026)
+      {
+        source: "/blog",
+        destination: "/stahovanie-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/blog/stahovanie-seniorov-starsich-osob",
+        destination: "/stahovanie-bytov-domov",
+        permanent: true,
+      },
+      {
+        source: "/blog/odovzdanie-bytu-po-najme-checklist",
+        destination: "/vypratavanie-bytov-domov",
+        permanent: true,
+      },
+      {
+        source: "/blog/prenajom-stahovacieho-auta-vs-firma",
+        destination: "/stahovanie-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-po-zosnulom",
+        destination: "/vypratavanie-pozostalosti",
+        permanent: true,
+      },
+      {
+        source: "/blog/stahovanie-s-domacimi-zvieratami",
+        destination: "/stahovanie-bytov-domov",
+        permanent: true,
+      },
+      {
+        source: "/blog/stahovanie-v-zime-vyhody-vyzvy",
+        destination: "/stahovanie-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/blog/stahovanie-klavira-tazkych-predmetov",
+        destination: "/stahovanie-klavira",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-pivnic-skladov-bratislava",
+        destination: "/vypratavanie-pivnic-garazi-nebytovych-priestorov",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-po-sezonnom-uskladneni-bratislava",
+        destination: "/vypratavanie-bytov-domov",
+        permanent: true,
+      },
+      {
+        source: "/blog/ako-si-vybrat-stahovaciu-firmu-10-kriterii",
+        destination: "/stahovanie-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/blog/medzinarodne-stahovanie-slovensko-2026",
+        destination: "/medzinarodne-stahovanie",
+        permanent: true,
+      },
+      {
+        source: "/blog/stahovanie-kancelarie-ako-minimalizovat-prestoj",
+        destination: "/stahovanie-kancelarii-firiem",
+        permanent: true,
+      },
+      {
+        source: "/blog/montaz-nabytku-ikea-cena",
+        destination: "/montaz-nabytku",
+        permanent: true,
+      },
+      {
+        source: "/blog/ako-sa-pripravit-na-stahovanie-checklist",
+        destination: "/stahovanie-bratislava",
+        permanent: true,
+      },
+      {
+        source: "/blog/kolko-stoji-stahovanie-bratislava-2026",
+        destination: "/stahovanie-bratislava",
+        permanent: true,
+      },
 
       {
         source: "/moving",

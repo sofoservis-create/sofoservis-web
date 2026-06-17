@@ -1,17 +1,9 @@
 import { MetadataRoute } from "next";
-import { blogPosts } from "@/lib/blog";
 
 const BASE_URL = "https://www.sofoservis.sk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const buildTime = new Date();
-
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    changeFrequency: "monthly" as const,
-    priority: 0.5,
-    lastModified: new Date(post.publishDate),
-  }));
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${BASE_URL}/`, changeFrequency: "weekly", priority: 1.0 },
@@ -130,8 +122,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/galanta`, changeFrequency: "weekly", priority: 0.65 },
     { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/hlohovec`, changeFrequency: "weekly", priority: 0.65 },
     { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/senica`, changeFrequency: "weekly", priority: 0.65 },
-
-    { url: `${BASE_URL}/blog`, changeFrequency: "weekly", priority: 0.7 },
 
     { url: `${BASE_URL}/o-nas`, changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE_URL}/cennik`, changeFrequency: "monthly", priority: 0.8 },
@@ -359,6 +349,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticRoutes.map((r) => ({ ...r, lastModified: buildTime })),
-    ...blogRoutes,
   ];
 }
