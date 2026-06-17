@@ -107,6 +107,18 @@ export default async function RootLayout({
                 'ad_personalization': 'denied',
                 'wait_for_update': 500
               });
+              try {
+                var _sc = localStorage.getItem('sofoservis-cookie-consent');
+                if (_sc) {
+                  var _sp = JSON.parse(_sc);
+                  window.gtag('consent', 'update', {
+                    'analytics_storage': _sp.analytics ? 'granted' : 'denied',
+                    'ad_storage': _sp.marketing ? 'granted' : 'denied',
+                    'ad_user_data': _sp.marketing ? 'granted' : 'denied',
+                    'ad_personalization': _sp.marketing ? 'granted' : 'denied'
+                  });
+                }
+              } catch(e) {}
             `,
           }}
         />
