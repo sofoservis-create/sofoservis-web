@@ -125,6 +125,24 @@ const nextConfig = {
       },
       // POZN: /en/junk-removal je teraz reálna stránka (premenovaná z /en/clearance),
       // takže žiadny redirect odtiaľto nie je potrebný.
+
+      // Blog → servisné stránky (301 konsolidácia, jún 2026)
+      {
+        source: "/blog/hodinovy-manzel-sluzby-cena",
+        destination: "/hodinovy-manzel-majster",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-po-rekonstrukcii-odvoz-stavebneho-odpadu",
+        destination: "/vypratavanie-po-rekonstrukcii",
+        permanent: true,
+      },
+      {
+        source: "/blog/vypratavanie-bytu-cena-2026",
+        destination: "/vypratavanie-bytov-domov",
+        permanent: true,
+      },
+
       {
         source: "/moving",
         destination: "https://www.sofoservis.sk/en/apartment-moving",
