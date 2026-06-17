@@ -541,7 +541,6 @@ export default function Navbar() {
         { href: "/cennik", label: "Cenník" },
         { href: "/o-nas", label: "O nás" },
         { href: "/kontakt", label: "Kontakt" },
-        { href: "/blog", label: "Blog" },
       ],
     },
   ];
@@ -759,7 +758,6 @@ export default function Navbar() {
       name: "INFORMÁCIE",
       links: [
         { href: "/kontakt", label: "Kontakt" },
-        { href: "/blog", label: "Blog" },
       ],
     },
   ];
