@@ -124,6 +124,10 @@ export default function CookieConsent() {
       });
     }
 
+    if (Array.isArray(window.dataLayer)) {
+      window.dataLayer.push({ event: "consent_update" });
+    }
+
     window.dispatchEvent(
       new CustomEvent("cookiePreferencesUpdated", {
         detail: prefs,
