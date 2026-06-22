@@ -1,0 +1,124 @@
+DNI: Full troubleshooting guide - 10 reasons why numbers are not swapping on your website
+Your Nimbata DNI script is installed but the phone number on your website isn't changing.
+This guide covers every known cause, from the most common to the most obscure, in the order you should check them.
+
+Start here: Visit your website and add ?gclid=test to the end of the URL.
+E.g.: https://www.yourwebsite.com/?gclid=test
+
+Number swaps > the script is working. The issue is with your real traffic conditions. Jump to check 4.
+Number does not swap > the script itself is the problem. Start at check 1.
+
+1. The script is not installed or not loading
+
+The most common reason numbers don't swap is that the script hasn't been placed on the page, or it's loading on some pages but not others.
+
+Open your browser's developer console (F12 > Console) and type nimbata.
+If you see nimbata is not defined or an error, the script is not loading on that page.
+Check that the script appears in the page source (Ctrl+U) on the page you're testing.
+Use Nimbata's built-in Website URL checker under Tracking > Tracking Code to confirm detection.
+If deployed via GTM, confirm your tag's trigger is set to All pages (or your intended scope) and fires on DOM Ready.
+
+Common causes:
+The script was added to the homepage only.
+The GTM tag has a scoped trigger.
+The WordPress plugin was deactivated during a theme or plugin update.
+
+2. There is no phone number in the page for the script to replace
+
+Nimbata's DNI script works by replacing a number that already exists in your page HTML.
+It cannot inject a number into a blank space or read a number from an href attribute alone.
+If the number is rendered dynamically after load, via JavaScript, a page builder, or a CRM widget, or is simply absent from the DOM when the script runs, nothing will swap.
+
+Right-click the phone number on your page and select Inspect.
+Is the number visible as plain text in the DOM, or does the element appear empty?
+If the number is injected dynamically, enable SPA mode in Tracking > Tracking Code so the swap logic re-runs after DOM changes.
+If the number is inside an <iframe>, the script cannot reach it, see check 7.
+Use the span tag method to give the script an explicit, format-independent target:
+<span class="nimbata_number_1"></span>
+
+Detailed guide: How to set up span tag
+
+3. The swap target doesn't match the number on your page
+
+Nimbata needs to know which number on your page to replace.
+If your swap target doesn't match the number exactly as it appears in the HTML, including spacing, dashes, and parentheses, the script silently does nothing.
+
+Go to Tracking > Tracking Code.
+Compare your swap target to the number in your page source character by character.
+Your website may display (555) 123-4567 while your swap target specifies 555-123-4567 - these do not match.
+Update your swap target to match the exact string, or switch to the span tag method to eliminate format-matching issues entirely.
+
+Detailed guide: DNI: swap target formatting rules and common mistakes
+
+4. The gclid parameter is being stripped by a redirect or plugin
+
+If ?gclid=test works but real Google Ads clicks don't swap, the gclid parameter is being removed somewhere between the ad click and the page load.
+
+Click one of your own Google Ads and check whether gclid= appears in the browser address bar once the page loads.
+If it doesn't, something is stripping it.
+
+Common causes:
+HTTP > HTTPS or www > non-www redirects that drop query strings.
+A CDN or caching plugin (Cloudflare, WP Rocket, W3 Total Cache, Varnish) stripping or ignoring query string parameters.
+A trailing-slash redirect mismatch between your ad's final URL and your actual page URL.
+
+Fix the redirect to preserve the full query string.
+Once gclid= survives to the page, swapping will work automatically.
+
+Detailed guide: DNI: caching and CDN issues (Cloudflare, WordPress caching, server cache)
+
+5. Auto-tagging is disabled in Google Ads
+
+Nimbata's Google Ads swap groups rely on Google's auto-tagging to append gclid to ad URLs.
+If auto-tagging is off, no gclid is ever sent.
+
+In Google Ads, go to Admin > Account settings > Auto-tagging and confirm the checkbox is enabled.
+
+6. The tracking source doesn't match your session
+
+If your swap group source is set to a specific channel, e.g. Online paid, the number only swaps for sessions Nimbata attributes to that channel.
+If you're testing with a direct visit and the source is set to paid search, the number won't swap.
+
+Go to Tracking > Tracking Code.
+Check the Source setting on your swap group.
+Set it to All (or remaining) digital for general testing OR
+Use ?gclid=test to simulate a paid search session.
+If you have multiple swap groups all set to All visitors, they will conflict; only one will fire unpredictably.
+Assign each swap group its correct, distinct source.
+
+Detailed guide: DNI: testing visits (Google Ads, direct, organic)
+
+7. The phone number is inside an <iframe>
+
+Nimbata's script runs in your main page's JavaScript context and cannot cross iframe boundaries.
+This affects phone numbers inside embedded contact forms (Typeform, HubSpot forms, JotForm, Calendly), click-to-call widgets, and live chat tools that display a number.
+
+Move the phone number out of the iframe and onto the main page.
+If the widget is a third-party embed you don't control, contact Nimbata support to explore alternatives.
+
+8. The tracking number has no call flow assigned
+
+Even if the script correctly swaps the number on the page, calls will not route if the tracking number has no call flow assigned.
+
+Go to Tracking > Numbers.
+Check the Call flow column for your tracking number.
+If it is blank or shows no flow, go to Tracking > Call Flows.
+Create or open a call flow.
+Assign your tracking number to it.
+
+9. A cookie consent manager is blocking the script
+
+Consent banners (OneTrust, Cookiebot, CookieYes, Axeptio, and similar) can delay or entirely block JavaScript execution until the visitor accepts cookies.
+If Nimbata is categorized as a tracking or analytics script, it will not fire for visitors who decline, and the number will not swap for those sessions.
+
+Open your site in a fresh browser session without accepting the cookie banner.
+Does the number swap?
+Open the browser console and look for blocked scripts.
+Review how your consent manager categorises the Nimbata script.
+If compliant with your privacy policy, moving it to a Functional or Necessary category will resolve this.
+
+Consult your legal team before changing cookie categorization.
+
+10. A browser cache or ad blocker is interfering
+
+Test in an incognito window with all extensions disabled to rule out browser cache, stored cookies, and ad blockers.
