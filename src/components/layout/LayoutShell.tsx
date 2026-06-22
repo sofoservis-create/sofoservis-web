@@ -6,7 +6,6 @@ import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/cookies/CookieConsent";
 import WhatsAppWidget from "@/components/widgets/WhatsAppWidget";
 import UTMCapture from "@/components/tracking/UTMCapture";
-import NimbataScript from "@/components/tracking/NimbataScript";
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -21,7 +20,6 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
       <Suspense fallback={null}>
         <UTMCapture />
       </Suspense>
-      <NimbataScript />
       <div id="root" className="min-h-screen flex flex-col">
         <Navbar />
         <WhatsAppWidget />

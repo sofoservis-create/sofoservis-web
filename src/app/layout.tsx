@@ -5,6 +5,7 @@ import { headers } from "next/headers";
 import "./globals.css";
 import LayoutShell from "@/components/layout/LayoutShell";
 import SEOProvider from "@/components/seo/SEOProvider";
+import NimbataScript from "@/components/tracking/NimbataScript";
 
 const GTM_ID = "GTM-TGLS3XP6";
 
@@ -161,6 +162,7 @@ export default async function RootLayout({
         {/* End Google Tag Manager (noscript) */}
 
         {!isBrand && <SEOProvider pathname={pathname} />}
+        <NimbataScript />
         <LayoutShell>{children}</LayoutShell>
       </body>
     </html>

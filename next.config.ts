@@ -8,7 +8,7 @@ const securityHeaders = [
     key: "Content-Security-Policy",
     value: [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://www.googletagservices.com https://googleads.g.doubleclick.net https://load.server.sofoservis.sk https://snap.licdn.com https://connect.facebook.net https://www.facebook.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://tagmanager.google.com https://www.google-analytics.com https://analytics.google.com https://www.googleadservices.com https://www.googletagservices.com https://googleads.g.doubleclick.net https://load.server.sofoservis.sk https://snap.licdn.com https://connect.facebook.net https://www.facebook.com https://cdn.dni.nimbata.com",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://tagmanager.google.com",
       "font-src 'self' https://fonts.gstatic.com",
       "img-src 'self' data: https: blob:",
