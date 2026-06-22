@@ -37,9 +37,7 @@ export default function Navbar() {
   const [expandedSubLink, setExpandedSubLink] = useState<string | null>(null);
   const [expandedSubSubLink, setExpandedSubSubLink] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showPhone, setShowPhone] = useState(false);
   const mobileNavRef = useRef<HTMLElement>(null);
-  const phoneBlockRef = useRef<HTMLDivElement>(null);
   const savedScrollY = useRef<number | null>(null);
   const navLocked = useRef(false);
   const router = useRouter();
@@ -244,7 +242,6 @@ export default function Navbar() {
 
   // Restore scroll and unlock navbar after language navigation completes
   useEffect(() => {
-    setShowPhone(false);
     if (savedScrollY.current !== null) {
       const y = savedScrollY.current;
       savedScrollY.current = null;
@@ -264,25 +261,6 @@ export default function Navbar() {
     navLocked.current = true;
     router.push(href, { scroll: false });
   }, [router]);
-
-  const handlePhoneClose = useCallback(() => {
-    setShowPhone(false);
-  }, []);
-
-  const handlePhoneToggle = useCallback(() => {
-    setShowPhone((prev) => !prev);
-  }, []);
-
-  useEffect(() => {
-    if (!showPhone) return;
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (phoneBlockRef.current && !phoneBlockRef.current.contains(e.target as Node)) {
-        handlePhoneClose();
-      }
-    };
-    document.addEventListener("click", handleOutsideClick);
-    return () => document.removeEventListener("click", handleOutsideClick);
-  }, [showPhone, handlePhoneClose]);
 
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
@@ -1199,7 +1177,7 @@ export default function Navbar() {
                   </svg>
                 </a>
 
-                <div className="flex flex-col items-end" ref={phoneBlockRef}>
+                <div className="flex flex-col items-end">
                   <div className="flex items-center gap-2">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1216,31 +1194,14 @@ export default function Navbar() {
                     >
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
-                    {showPhone ? (
-                      <a
-                        href={`tel:${t.phoneNumber.replace(/\s/g, "")}`}
-                        onClick={handleCallClick}
-                        aria-label={`${t.phoneLabel}: ${t.phoneNumber}`}
-                        className="font-bold text-lg text-primary-900 hover:text-accent-500 transition-colors whitespace-nowrap"
-                      >
-                        {t.phoneNumber}
-                      </a>
-                    ) : (
-                      <>
-                        <span className="font-bold text-lg text-primary-900 whitespace-nowrap">
-                          {t.phoneNumber.slice(0, 4)}&nbsp;***
-                        </span>
-                        <button
-                          type="button"
-                          onClick={handlePhoneToggle}
-                          aria-label={t.showNumber}
-                          aria-expanded={showPhone}
-                          className="bg-accent-400 hover:bg-accent-300 text-primary-900 px-3 py-1.5 rounded-lg text-sm font-bold whitespace-nowrap transition-colors cursor-pointer border-none"
-                        >
-                          {t.showNumber}
-                        </button>
-                      </>
-                    )}
+                    <a
+                      href={`tel:${t.phoneNumber.replace(/\s/g, "")}`}
+                      onClick={handleCallClick}
+                      aria-label={`${t.phoneLabel}: ${t.phoneNumber}`}
+                      className="font-bold text-lg text-primary-900 hover:text-accent-500 transition-colors whitespace-nowrap"
+                    >
+                      {t.phoneNumber}
+                    </a>
                   </div>
                   <div className="text-primary-900 text-sm font-semibold mt-1 whitespace-nowrap">
                     {t.businessHours}
@@ -1357,8 +1318,7 @@ export default function Navbar() {
 
             {/* Mobile Bottom Actions */}
             <div className="grid grid-cols-2 gap-3 p-4 border-t border-gray-200">
-              {showPhone ? (
-                <Link
+              <Link
                   href={`tel:${t.phoneNumber.replace(/\s/g, "")}`}
                   className="flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors"
                   onClick={handleCallClick}
@@ -1382,37 +1342,6 @@ export default function Navbar() {
                     {t.phoneNumber}
                   </span>
                 </Link>
-              ) : (
-                <button
-                  type="button"
-                  onClick={handlePhoneToggle}
-                  aria-label={t.showNumber}
-                  aria-expanded={showPhone}
-                  className="flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4 text-accent-500 flex-shrink-0"
-                    aria-hidden="true"
-                  >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
-                  <span className="whitespace-nowrap overflow-hidden">
-                    {t.phoneNumber.slice(0, 4)}&nbsp;***
-                  </span>
-                  <span className="bg-accent-400 text-primary-900 font-semibold text-xs px-2 py-0.5 rounded-md">
-                    {t.showNumber}
-                  </span>
-                </button>
-              )}
 
               <Link
                 href={isEnglish ? "/en/contact" : "/kontakt"}

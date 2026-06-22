@@ -19,7 +19,7 @@ export default function NimbataScript() {
 
   return (
     <Script
-      src="//cdn.dni.nimbata.com/895390109815.min.js"
+      src="https://cdn.dni.nimbata.com/895390109815.min.js"
       strategy="afterInteractive"
     />
   );

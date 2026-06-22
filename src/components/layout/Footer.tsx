@@ -1,7 +1,7 @@
 // src/components/layout/Footer.tsx
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -469,55 +469,24 @@ function PhoneReveal({
   phoneNumber,
   displayNumber,
   suffix,
-  isEnglish,
 }: {
   phoneNumber: string;
   displayNumber: string;
   suffix?: React.ReactNode;
   isEnglish?: boolean;
 }) {
-  const [showPhone, setShowPhone] = useState(false);
-  const blockRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!showPhone) return;
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (blockRef.current && !blockRef.current.contains(e.target as Node)) {
-        setShowPhone(false);
-      }
-    };
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [showPhone]);
-
   return (
-    <div ref={blockRef} className="flex items-center gap-2 flex-wrap">
+    <div className="flex items-center gap-2 flex-wrap">
       <div className="text-accent-500 flex-shrink-0">
         <PhoneIcon />
       </div>
-      {showPhone ? (
-        <a
-          href={`tel:${phoneNumber}`}
-          className="text-gray-300 hover:text-accent-500 transition-colors text-sm"
-        >
-          {displayNumber}
-          {suffix}
-        </a>
-      ) : (
-        <>
-          <span className="text-gray-300 text-sm font-medium">
-            {displayNumber.slice(0, 4)}&nbsp;***
-          </span>
-          <button
-            type="button"
-            onClick={() => setShowPhone(true)}
-            className="bg-accent-400 text-primary-900 font-semibold text-xs px-2 py-0.5 rounded-md"
-          >
-            {isEnglish ? "Show" : "Zobraz."}
-          </button>
-          {suffix}
-        </>
-      )}
+      <a
+        href={`tel:${phoneNumber}`}
+        className="text-gray-300 hover:text-accent-500 transition-colors text-sm"
+      >
+        {displayNumber}
+        {suffix}
+      </a>
     </div>
   );
 }
