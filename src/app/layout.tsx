@@ -95,6 +95,23 @@ export default async function RootLayout({
           type="image/avif"
           fetchPriority="high"
         />
+        {/* Nimbata anti-flash: skryje čísla pred renderom ak je gclid v URL */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(){
+                if(window.location.search.indexOf('gclid')!==-1){
+                  var s=document.createElement('style');
+                  s.id='nimbata-af';
+                  s.textContent='.nimbata_number_1{opacity:0!important;transition:opacity 0.25s ease}';
+                  document.head.appendChild(s);
+                  window.__nimbataReveal=function(){var el=document.getElementById('nimbata-af');if(el)el.remove();};
+                  setTimeout(window.__nimbataReveal,1200);
+                }
+              })();
+            `,
+          }}
+        />
         {/* Consent Mode V2 + gtag wrapper — synchronický inline skript, musí byť pred GTM */}
         <script
           dangerouslySetInnerHTML={{
