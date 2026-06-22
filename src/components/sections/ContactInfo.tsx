@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import { usePathname } from "next/navigation";
@@ -325,49 +325,19 @@ export default function ContactInfo() {
 function PhoneRevealLarge({
   phoneNumber,
   displayNumber,
-  isEnglish,
 }: {
   phoneNumber: string;
   displayNumber: string;
   isEnglish?: boolean;
 }) {
-  const [showPhone, setShowPhone] = useState(false);
-  const blockRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!showPhone) return;
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (blockRef.current && !blockRef.current.contains(e.target as Node)) {
-        setShowPhone(false);
-      }
-    };
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [showPhone]);
-
   return (
-    <div ref={blockRef} className="flex items-center gap-3">
-      {showPhone ? (
-        <a
-          href={`tel:${phoneNumber}`}
-          className="text-2xl text-accent-500 hover:underline transition-colors font-bold"
-        >
-          <span className="nimbata_number_1">{displayNumber}</span>
-        </a>
-      ) : (
-        <>
-          <span className="text-2xl text-accent-500 font-bold">
-            {displayNumber.slice(0, 4)}&nbsp;***
-          </span>
-          <button
-            type="button"
-            onClick={() => setShowPhone(true)}
-            className="bg-accent-400 text-primary-900 font-semibold text-sm px-3 py-1 rounded-lg"
-          >
-            {isEnglish ? "Show" : "Zobraz."}
-          </button>
-        </>
-      )}
+    <div className="flex items-center gap-3">
+      <a
+        href={`tel:${phoneNumber}`}
+        className="text-2xl text-accent-500 hover:underline transition-colors font-bold"
+      >
+        <span className="nimbata_number_1">{displayNumber}</span>
+      </a>
     </div>
   );
 }
