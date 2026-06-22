@@ -484,7 +484,7 @@ function PhoneReveal({
         href={`tel:${phoneNumber}`}
         className="text-gray-300 hover:text-accent-500 transition-colors text-sm"
       >
-        <span className="nimbata">{displayNumber}</span>
+        <span className="nimbata_number_1">{displayNumber}</span>
         {suffix}
       </a>
     </div>

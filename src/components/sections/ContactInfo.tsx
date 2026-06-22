@@ -352,7 +352,7 @@ function PhoneRevealLarge({
           href={`tel:${phoneNumber}`}
           className="text-2xl text-accent-500 hover:underline transition-colors font-bold"
         >
-          <span className="nimbata">{displayNumber}</span>
+          <span className="nimbata_number_1">{displayNumber}</span>
         </a>
       ) : (
         <>
