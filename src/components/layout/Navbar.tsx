@@ -733,7 +733,8 @@ export default function Navbar() {
       ],
     },
     {
-      name: "INFORMÁCIE",
+      name: "KONTAKT",
+      flat: true,
       links: [
         { href: "/kontakt", label: "Kontakt" },
       ],
@@ -764,7 +765,7 @@ export default function Navbar() {
       ],
     },
     {
-      name: "INFORMATION",
+      name: "CONTACT",
       flat: true,
       links: [
         { href: "/en/contact", label: "Contact" },
