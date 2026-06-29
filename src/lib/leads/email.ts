@@ -92,6 +92,9 @@ function buildHtml(p: Record<string, string>): string {
         <a href="${telHref}" style="background:#fff;color:#111;padding:10px 22px;border-radius:6px;text-decoration:none;font-weight:700;font-size:14px;border:2px solid #e0e0e0;display:inline-block">Zavolať</a>
       </div>
 
+      <!-- Page URL -->
+      ${p.page_url ? `<div style="font-size:12px;color:#999;margin-bottom:16px">Stránka: <a href="https://www.sofoservis.sk${p.page_url}" style="color:#999">${p.page_url}</a></div>` : ""}
+
       <!-- PPC Tracking -->
       ${hasTracking ? `
       <div style="background:#f9f9f9;border:1px solid #e0e0e0;border-radius:6px;padding:14px 18px;margin-bottom:20px">
@@ -122,7 +125,7 @@ export async function sendViaEmailJS(
     auth: { user: SMTP_USER, pass: smtpPass },
   });
 
-  const subject = `Lead: ${params.name || "?"} | ${params.phone || "?"} | ${params.service_type || "sofoservis.sk"}`;
+  const subject = `Nový dopyt: ${params.name || "?"} | ${params.phone || "?"} | ${params.service_type || "sofoservis.sk"}`;
 
   const backoff = [0, 2000, 5000];
   let lastError: string | null = null;
