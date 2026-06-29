@@ -15,12 +15,9 @@ export interface LeadRecord {
   utm_json: Record<string, string>;
   raw_payload_json: Record<string, unknown>;
   crm_status: LeadStatus;
-  trello_status: LeadStatus;
   email_status: LeadStatus;
   crm_attempt_count: number;
-  trello_attempt_count: number;
   email_attempt_count: number;
-  trello_card_id: string | null;
   last_error: string | null;
   dedupe_fingerprint: string;
 }
@@ -43,12 +40,9 @@ export async function ensureLeadsTable(): Promise<void> {
       utm_json        JSONB NOT NULL DEFAULT '{}'::jsonb,
       raw_payload_json JSONB NOT NULL DEFAULT '{}'::jsonb,
       crm_status      TEXT NOT NULL DEFAULT 'pending',
-      trello_status   TEXT NOT NULL DEFAULT 'pending',
       email_status    TEXT NOT NULL DEFAULT 'pending',
       crm_attempt_count    INTEGER NOT NULL DEFAULT 0,
-      trello_attempt_count INTEGER NOT NULL DEFAULT 0,
       email_attempt_count  INTEGER NOT NULL DEFAULT 0,
-      trello_card_id  TEXT,
       last_error      TEXT,
       dedupe_fingerprint TEXT NOT NULL DEFAULT ''
     );

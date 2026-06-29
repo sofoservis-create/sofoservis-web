@@ -3,7 +3,6 @@ import crypto from "node:crypto";
 import { query } from "@/lib/db";
 import { ensureLeadsTable, type LeadStatus } from "@/lib/leads/schema";
 import { sendToCRM, type CRMPayload } from "@/lib/leads/crm";
-import { sendToTrello } from "@/lib/leads/trello";
 import { sendViaEmailJS } from "@/lib/leads/email";
 import { resolveEmailRoute, isMontazPath } from "@/lib/leads/routing";
 
@@ -170,7 +169,6 @@ async function handlePost(req: Request) {
     // Initial statuses
     const initial = {
       crm: (isMontaz ? "skipped" : "pending") as LeadStatus,
-      trello: (isMontaz ? "skipped" : "pending") as LeadStatus,
       email: (isMontaz ? "pending" : "skipped") as LeadStatus,
     };
 
@@ -180,8 +178,8 @@ async function handlePost(req: Request) {
       `INSERT INTO leads (
          request_id, service_type, page_url, name, phone, email, description,
          utm_json, raw_payload_json,
-         crm_status, trello_status, email_status, dedupe_fingerprint
-       ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8::jsonb,$9::jsonb,$10,$11,$12,$13)
+         crm_status, email_status, dedupe_fingerprint
+       ) VALUES ($1,$2,$3,$4,$5,$6,$7,$8::jsonb,$9::jsonb,$10,$11,$12)
        ON CONFLICT (request_id) DO NOTHING
        RETURNING id`,
       [
@@ -195,7 +193,6 @@ async function handlePost(req: Request) {
         JSON.stringify(utm),
         JSON.stringify(body),
         initial.crm,
-        initial.trello,
         initial.email,
         dedupe,
       ]
@@ -209,12 +206,10 @@ async function handlePost(req: Request) {
       const existing = await safeQuery<{
         request_id: string;
         crm_status: LeadStatus;
-        trello_status: LeadStatus;
         email_status: LeadStatus;
-        trello_card_id: string | null;
       }>(
         "replay-read",
-        `SELECT request_id, crm_status, trello_status, email_status, trello_card_id
+        `SELECT request_id, crm_status, email_status
          FROM leads WHERE request_id = $1 LIMIT 1`,
         [request_id]
       );
@@ -224,7 +219,6 @@ async function handlePost(req: Request) {
         request_id: r?.request_id ?? request_id,
         idempotent_replay: true,
         crm_status: r?.crm_status ?? "unknown",
-        trello_status: r?.trello_status ?? "unknown",
         email_status: r?.email_status ?? "unknown",
       });
     } else {
@@ -271,7 +265,7 @@ async function handlePost(req: Request) {
     );
   }
 
-  // Non-montaz: CRM + Trello in parallel
+  // Non-montaz: CRM
   const crmPayload: CRMPayload = {
     name,
     phone,
@@ -283,74 +277,42 @@ async function handlePost(req: Request) {
     ...utm,
   };
 
-  const [crmRes, trelloRes] = await Promise.allSettled([
-    sendToCRM(crmPayload),
-    sendToTrello({
-      name,
-      phone,
-      email,
-      description,
-      service_type,
-      page_url,
-      request_id,
-    }),
-  ]);
-
-  const crm =
-    crmRes.status === "fulfilled"
-      ? crmRes.value
-      : { ok: false, attempts: 0, lastStatus: 0, lastError: String(crmRes.reason) };
-  const tre =
-    trelloRes.status === "fulfilled"
-      ? trelloRes.value
-      : { ok: false, attempts: 0, cardId: null, lastError: String(trelloRes.reason) };
-
-  const errors: string[] = [];
-  if (!crm.ok) errors.push(`CRM: ${crm.lastError}`);
-  if (!tre.ok) errors.push(`Trello: ${tre.lastError}`);
+  const crm = await sendToCRM(crmPayload).catch((e) => ({
+    ok: false,
+    attempts: 0,
+    lastStatus: 0,
+    lastError: String(e),
+  }));
 
   if (dbAvailable) {
     await safeQuery(
       "update-downstream",
       `UPDATE leads SET
          crm_status = $2, crm_attempt_count = $3,
-         trello_status = $4, trello_attempt_count = $5,
-         trello_card_id = $6,
-         last_error = $7
+         last_error = $4
        WHERE request_id = $1`,
       [
         request_id,
         crm.ok ? "sent" : "failed",
         crm.attempts,
-        tre.ok ? "sent" : "failed",
-        tre.attempts,
-        tre.cardId,
-        errors.length ? errors.join(" | ") : null,
+        crm.ok ? null : `CRM: ${crm.lastError}`,
       ]
     );
   }
 
   if (!crm.ok) console.error(`[lead ${request_id}] CRM FAIL`, crm);
-  if (!tre.ok) console.error(`[lead ${request_id}] Trello FAIL`, tre);
 
-  // Treat as success if EITHER:
-  //   - DB saved the lead (we can recover later), OR
-  //   - any downstream landed (Trello is the safety net for CRM cold-start).
-  // Only return ok=false when we have nothing to fall back on.
-  const ok = dbInserted || crm.ok || tre.ok;
+  const ok = dbInserted || crm.ok;
 
   return NextResponse.json(
     {
       ok,
       request_id,
       crm_status: crm.ok ? "sent" : "failed",
-      trello_status: tre.ok ? "sent" : "failed",
-      trello_card_id: tre.cardId,
       db_status: dbAvailable ? (dbInserted ? "saved" : "unknown") : "unavailable",
       soft_duplicate: isSoftDup,
-      ...(ok ? {} : { error: errors.join(" | ") || "all downstream and DB failed" }),
+      ...(ok ? {} : { error: `CRM: ${crm.lastError}` }),
     },
-    // Always 200: avoids triggering Vercel's 500 page and frontend reads `ok`.
     { status: 200 }
   );
 }
