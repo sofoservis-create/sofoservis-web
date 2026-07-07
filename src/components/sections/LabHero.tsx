@@ -786,24 +786,21 @@ export default function LabHero({
                     />
                   </div>
 
-                  {/* Social proof + urgency */}
-                  <div className="flex flex-col items-stretch gap-2 py-0.5">
-                    <div className="flex flex-row items-center justify-center gap-2">
-                      <div className="flex -space-x-1.5 flex-shrink-0">
-                        {[
-                          { src: "/images/review-avatar-1.png", alt: t.avatarFemale, z: "z-30" },
-                          { src: "/images/review-avatar-2.png", alt: t.avatarMale, z: "z-20" },
-                          { src: "/images/review-avatar-3.png", alt: t.avatarFemale, z: "z-10" },
-                        ].map((av, i) => (
-                          <div key={i} className={`w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative ${av.z}`}>
-                            <Image src={av.src} alt={av.alt} width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
-                          </div>
-                        ))}
-                      </div>
-                      <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                      <span className="text-gray-600 text-sm text-center">{t.ratingDefault}</span>
+                  {/* Social proof */}
+                  <div className="flex flex-row items-center justify-center gap-2 py-0.5">
+                    <div className="flex -space-x-1.5 flex-shrink-0">
+                      {[
+                        { src: "/images/review-avatar-1.png", alt: t.avatarFemale, z: "z-30" },
+                        { src: "/images/review-avatar-2.png", alt: t.avatarMale, z: "z-20" },
+                        { src: "/images/review-avatar-3.png", alt: t.avatarFemale, z: "z-10" },
+                      ].map((av, i) => (
+                        <div key={i} className={`w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative ${av.z}`}>
+                          <Image src={av.src} alt={av.alt} width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
+                        </div>
+                      ))}
                     </div>
-                    <p className="text-sm text-primary-700 font-medium text-center">{t.urgency}</p>
+                    <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
+                    <span className="text-gray-600 text-sm text-center">{t.ratingDefault}</span>
                   </div>
 
                   {/* Consent */}
@@ -873,6 +870,8 @@ export default function LabHero({
                       t.submit
                     )}
                   </button>
+
+                  <p className="text-sm text-primary-700 font-medium text-center">{t.urgency}</p>
                 </form>
               )}
             </div>
