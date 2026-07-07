@@ -774,17 +774,6 @@ export default function QuickContactForm({
               </div>
             )}
 
-            {lang === "sk" && (
-              <p className="text-xs text-center text-primary-700 font-medium py-0.5">
-                ⚡ Termíny sa obsadzujú rýchlo
-              </p>
-            )}
-            {lang === "en" && (
-              <p className="text-xs text-center text-primary-700 font-medium py-0.5">
-                ⚡ Slots fill up fast
-              </p>
-            )}
-
             <button
               type="submit"
               disabled={isSubmitting}
@@ -820,6 +809,10 @@ export default function QuickContactForm({
                 t.submitButton
               )}
             </button>
+
+            <p className="text-xs text-center text-primary-700 font-medium py-0.5">
+              {lang === "en" ? "⚡ Slots fill up fast" : "⚡ Termíny sa obsadzujú rýchlo"}
+            </p>
 
             <p className="text-center text-gray-600 text-xs">
               {t.afterSubmitText}
