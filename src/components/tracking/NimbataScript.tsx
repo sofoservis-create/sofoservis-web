@@ -21,6 +21,13 @@ export default function NimbataScript() {
     <Script
       src="https://cdn.dni.nimbata.com/895390109815.min.js"
       strategy="afterInteractive"
+      onLoad={() => {
+        setTimeout(() => {
+          if (typeof window.__nimbataReveal === "function") {
+            window.__nimbataReveal();
+          }
+        }, 300);
+      }}
     />
   );
 }
