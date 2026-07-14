@@ -9,6 +9,8 @@ const EXCLUDED_PATHS = [
   "/montaz-kuchyne",
 ];
 
+const MONTAZ_TEL = "tel:0952044363";
+
 export default function NimbataScript() {
   const pathname = usePathname();
 
@@ -21,15 +23,22 @@ export default function NimbataScript() {
 
     const win = window as any;
 
-    // Override __nimbataReveal so it cannot re-run swaps on this page
+    // Make __nimbataReveal a no-op so Nimbata cannot run swaps on this page
     const originalReveal = win.__nimbataReveal;
     win.__nimbataReveal = () => {};
 
-    // Remove class + restore opacity on any elements Nimbata may have tagged
     const cleanup = () => {
+      // 1. Remove class + opacity from any tagged spans
       document.querySelectorAll(".nimbata_number_1").forEach((el) => {
         el.classList.remove("nimbata_number_1");
         (el as HTMLElement).style.removeProperty("opacity");
+      });
+
+      // 2. Restore correct href on any phone <a> links that Nimbata may have swapped
+      document.querySelectorAll<HTMLAnchorElement>('a[href^="tel:"]').forEach((a) => {
+        if (a.href !== MONTAZ_TEL && a.href.startsWith("tel:+421800")) {
+          a.href = MONTAZ_TEL;
+        }
       });
     };
 
@@ -40,7 +49,6 @@ export default function NimbataScript() {
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
-      // Restore original function when leaving excluded path
       if (typeof originalReveal === "function") {
         win.__nimbataReveal = originalReveal;
       } else {
@@ -55,13 +63,6 @@ export default function NimbataScript() {
     <Script
       src="https://cdn.dni.nimbata.com/895390109815.min.js"
       strategy="afterInteractive"
-      onLoad={() => {
-        setTimeout(() => {
-          if (typeof (window as any).__nimbataReveal === "function") {
-            (window as any).__nimbataReveal();
-          }
-        }, 300);
-      }}
     />
   );
 }
