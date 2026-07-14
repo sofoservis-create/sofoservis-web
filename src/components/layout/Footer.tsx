@@ -193,6 +193,7 @@ export default function Footer() {
                 <ul className="space-y-4">
                   <li>
                     <PhoneReveal
+                      key={pathname}
                       phoneNumber={isSpecialRoute ? "0952044363" : "0951735130"}
                       displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
                       suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
@@ -203,6 +204,7 @@ export default function Footer() {
                   {isKontaktRoute && (
                     <li>
                       <PhoneReveal
+                        key={pathname + "-montaz"}
                         phoneNumber="0952044363"
                         displayNumber="0952 044 363"
                         suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
@@ -354,6 +356,7 @@ export default function Footer() {
             <ul className="space-y-4">
               <li>
                 <PhoneReveal
+                  key={pathname + "-m"}
                   phoneNumber={isSpecialRoute ? "0952044363" : "0951735130"}
                   displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
                   suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
@@ -364,6 +367,7 @@ export default function Footer() {
               {isKontaktRoute && (
                 <li>
                   <PhoneReveal
+                    key={pathname + "-m-montaz"}
                     phoneNumber="0952044363"
                     displayNumber="0952 044 363"
                     suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
