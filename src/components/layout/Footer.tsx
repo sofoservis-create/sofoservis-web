@@ -197,6 +197,7 @@ export default function Footer() {
                       displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
                       suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
                       isEnglish={isEnglish}
+                      nimbata={!isSpecialRoute}
                     />
                   </li>
                   {isKontaktRoute && (
@@ -206,6 +207,7 @@ export default function Footer() {
                         displayNumber="0952 044 363"
                         suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
                         isEnglish={isEnglish}
+                        nimbata={false}
                       />
                     </li>
                   )}
@@ -356,6 +358,7 @@ export default function Footer() {
                   displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
                   suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
                   isEnglish={isEnglish}
+                  nimbata={!isSpecialRoute}
                 />
               </li>
               {isKontaktRoute && (
@@ -365,6 +368,7 @@ export default function Footer() {
                     displayNumber="0952 044 363"
                     suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
                     isEnglish={isEnglish}
+                    nimbata={false}
                   />
                 </li>
               )}
@@ -469,11 +473,13 @@ function PhoneReveal({
   phoneNumber,
   displayNumber,
   suffix,
+  nimbata = true,
 }: {
   phoneNumber: string;
   displayNumber: string;
   suffix?: React.ReactNode;
   isEnglish?: boolean;
+  nimbata?: boolean;
 }) {
   return (
     <div className="flex items-center gap-2 flex-wrap">
@@ -484,7 +490,7 @@ function PhoneReveal({
         href={`tel:${phoneNumber}`}
         className="text-gray-300 hover:text-accent-500 transition-colors text-sm"
       >
-        <span className="nimbata_number_1">{displayNumber}</span>
+        <span className={nimbata ? "nimbata_number_1" : ""}>{displayNumber}</span>
         {suffix}
       </a>
     </div>
