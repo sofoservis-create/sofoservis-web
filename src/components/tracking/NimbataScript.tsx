@@ -21,7 +21,7 @@ export default function NimbataScript() {
   useEffect(() => {
     if (!isExcluded) return;
 
-    const win = window as any;
+    const win = window as Window & { __nimbataReveal?: () => void };
 
     // Make __nimbataReveal a no-op so Nimbata cannot run swaps on this page
     const originalReveal = win.__nimbataReveal;
@@ -52,7 +52,7 @@ export default function NimbataScript() {
       if (typeof originalReveal === "function") {
         win.__nimbataReveal = originalReveal;
       } else {
-        delete win.__nimbataReveal;
+        win.__nimbataReveal = undefined;
       }
     };
   }, [isExcluded, pathname]);
