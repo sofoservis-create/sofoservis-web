@@ -244,32 +244,13 @@ export default function CookieConsent() {
               </div>
             ) : (
               <div className="space-y-6">
-                <div className="flex items-center justify-between pr-6">
+                <div className="pr-8">
                   <h3 className="font-semibold text-primary-900 text-xl sm:text-2xl flex items-center gap-3">
                     <span className="text-2xl" role="img" aria-label="Cookie">
                       🍪
                     </span>
                     {t.settingsTitle}
                   </h3>
-                  <button
-                    onClick={handleDismiss}
-                    className="p-3 hover:bg-gray-100 rounded-full transition-colors"
-                    aria-label={t.close}
-                  >
-                    <svg
-                      className="w-6 h-6 text-gray-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
-                    </svg>
-                  </button>
                 </div>
 
                 <div className="space-y-4">
