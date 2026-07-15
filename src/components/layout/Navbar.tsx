@@ -375,7 +375,7 @@ export default function Navbar() {
               isScrolled ? "" : "shadow-lg"
             } transition-all duration-300`}
           >
-            <div className="flex items-center justify-between h-24 px-6 lg:px-8 gap-4 flex-nowrap">
+            <div className="flex items-center justify-between h-24 px-4 gap-4 flex-nowrap">
               {/* Logo */}
               <div className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
                 <Link
