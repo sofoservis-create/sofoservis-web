@@ -390,9 +390,9 @@ export default function Navbar() {
                   <Image
                     src="/images/Sofoservis_nove_logo_SVG.svg"
                     alt="SofoServis"
-                    width={181}
-                    height={77}
-                    className="h-[77px] w-auto"
+                    width={199}
+                    height={85}
+                    className="h-[85px] w-auto"
                     priority
                     unoptimized
                   />
@@ -525,10 +525,10 @@ export default function Navbar() {
             <Image
               src="/images/Sofoservis_nove_logo_SVG.svg"
               alt="SofoServis"
-              width={169}
-              height={68}
+              width={186}
+              height={97}
               className={`w-auto transition-all duration-300 ${
-                isScrolled ? "h-[58px]" : "h-[88px]"
+                isScrolled ? "h-[64px]" : "h-[97px]"
               }`}
               priority
               unoptimized
