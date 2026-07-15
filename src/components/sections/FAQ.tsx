@@ -41,7 +41,7 @@ export default function FAQ({
   const totalItems = items.length + (expandableGroup ? 1 : 0);
 
   return (
-    <section className="bg-white py-10 md:py-14" id="faq">
+    <section className="cv-auto bg-white py-10 md:py-14" id="faq">
       <Container>
         <div className="text-center mb-8">
           <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">

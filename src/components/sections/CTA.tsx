@@ -19,7 +19,7 @@ export default function CTA({
   imageSrc = "/images/sofo-bratislava-stahovanie.avif",
 }: CTAProps) {
   return (
-    <section className="pt-10 md:pt-[40px] pb-10 md:pb-[60px] bg-white overflow-hidden">
+    <section className="cv-auto pt-10 md:pt-[40px] pb-10 md:pb-[60px] bg-white overflow-hidden">
       <Container>
         <div className="w-full flex flex-col md:flex-row items-center gap-12 md:gap-16 xl:gap-24">
           {/* Image wrapper with decorative background */}

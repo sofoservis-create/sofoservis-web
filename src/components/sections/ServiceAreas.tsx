@@ -42,7 +42,7 @@ export default function ServiceAreas({
   callToActionText = "Sťahujeme aj vo vašej lokalite, získajte ponuku",
 }: ServiceAreasProps) {
   return (
-    <section className="pt-10 md:pt-[100px] pb-10 md:pb-[100px] bg-white overflow-hidden" id="oblasti">
+    <section className="cv-auto pt-10 md:pt-[100px] pb-10 md:pb-[100px] bg-white overflow-hidden" id="oblasti">
       <Container>
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">

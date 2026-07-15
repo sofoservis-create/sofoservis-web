@@ -29,7 +29,7 @@ export default function RelatedServices({
         : "grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto";
 
   return (
-    <section className="py-10 md:py-[60px] bg-white border-t border-gray-100" id="suvisiace-sluzby">
+    <section className="cv-auto py-10 md:py-[60px] bg-white border-t border-gray-100" id="suvisiace-sluzby">
       <Container>
         <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-8 text-center">
           {title}

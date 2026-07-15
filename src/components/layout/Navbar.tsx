@@ -67,14 +67,30 @@ export default function Navbar() {
 
     restore();
 
-    const observer = new MutationObserver(restore);
+    // Coalesce observer callbacks into one restore per frame: during first
+    // load (hydration, GTM injection, Nimbata swaps) the body emits dozens of
+    // mutations and running a document-wide querySelectorAll on each one
+    // blocks the main thread and makes the nav dropdown stutter.
+    let rafId: number | null = null;
+    const scheduleRestore = () => {
+      if (rafId !== null) return;
+      rafId = window.requestAnimationFrame(() => {
+        rafId = null;
+        restore();
+      });
+    };
+
+    const observer = new MutationObserver(scheduleRestore);
     observer.observe(document.body, {
       childList: true,
       subtree: true,
       characterData: true,
     });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (rafId !== null) window.cancelAnimationFrame(rafId);
+    };
   }, [pathname, shouldScrollToTop]);
 
   const routeMap: Record<string, string> = {

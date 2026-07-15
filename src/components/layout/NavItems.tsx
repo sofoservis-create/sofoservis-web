@@ -577,7 +577,7 @@ export const DesktopNavItem = React.memo(function DesktopNavItem({
           <path d="m6 9 6 6 6-6"></path>
         </svg>
       </button>
-      <div className={`border border-gray-100 w-60 absolute left-0 top-full min-w-[240px] py-2 mt-1 bg-white rounded-lg shadow-lg transition-all duration-200 ease-in-out z-50 max-h-[70vh] overflow-y-auto ${hasActiveSubLink ? "visible opacity-100 translate-y-0" : "invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0"}`}>
+      <div className={`border border-gray-100 w-60 absolute left-0 top-full min-w-[240px] py-2 mt-1 bg-white rounded-lg shadow-lg transition-[opacity,transform,visibility] duration-150 ease-out z-50 max-h-[70vh] overflow-y-auto ${hasActiveSubLink ? "visible opacity-100 translate-y-0" : "invisible opacity-0 translate-y-2 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0"}`}>
         {category.links.map((link, index) =>
           link.subLinks ? (
             <div key={index}>

@@ -142,7 +142,7 @@ export default async function RootLayout({
         />
 
         {/* Google Tag Manager – načítanie kontajnera GTM-P26DR44Q */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -154,7 +154,7 @@ export default async function RootLayout({
         {/* End Google Tag Manager */}
 
         {/* Google Tag Manager (Server-Side) */}
-        <Script id="gtm-server-side" strategy="afterInteractive">
+        <Script id="gtm-server-side" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

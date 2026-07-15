@@ -229,7 +229,7 @@ export default function Reviews({
   VideoPlayer.displayName = "VideoPlayer";
 
   return (
-    <section className=" bg-white relative">
+    <section className="cv-auto bg-white relative">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,var(--primary-200)_10%,transparent_40%)] opacity-30 pointer-events-none"></div>
       <Container>
         {showHeadline && (

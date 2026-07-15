@@ -75,7 +75,7 @@ export default function Features({
   callToActionText = "Získať nezáväznú cenovú ponuku",
 }: FeaturesProps) {
   return (
-    <section className="pt-10 md:pt-[100px] bg-white overflow-hidden" id="features">
+    <section className="cv-auto pt-10 md:pt-[100px] bg-white overflow-hidden" id="features">
       <Container>
         <div className="text-center mx-auto max-w-4xl mb-6">
           <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">

@@ -28,7 +28,7 @@ Preferred communication style: Simple, everyday language.
 
 - **Framework**: Next.js 15 (App Router) with React 19
 - **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS v3 with a custom color palette (`primary` grayscale, `accent` yellow/gold)
+- **Styling**: Tailwind CSS v3 with a custom color palette (`primary` grayscale, `accent` yellow/gold). Global CSS lives in `src/app/globals.css` (imported by `layout.tsx`); `src/styles/globals.css` is legacy/unused.
 - **Font**: Sora (Google Fonts via `next/font`)
 - **Animations**: Framer Motion for UI transitions
 - **Routing**: File-based routing via the `src/app/` directory. Each city/service has its own folder with a `page.tsx`.
