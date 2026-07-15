@@ -6,6 +6,9 @@ const EXCLUDED_PATHS = [
   "/hodinovy-manzel-majster",
   "/montaz-nabytku",
   "/montaz-kuchyne",
+  "/en/handyman-services",
+  "/en/furniture-assembly",
+  "/en/kitchen-installation",
 ];
 
 export default function NimbataScript() {
