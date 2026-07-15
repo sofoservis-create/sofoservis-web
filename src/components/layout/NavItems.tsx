@@ -559,7 +559,7 @@ export const DesktopNavItem = React.memo(function DesktopNavItem({
       className="relative group"
       onMouseLeave={() => setExpandedSubLink(null)}
     >
-      <button className="nav-link px-4 py-8 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors flex items-center gap-2 text-sm group-hover:text-accent-500">
+      <button className="nav-link px-4 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors flex items-center gap-2 text-sm group-hover:text-accent-500 whitespace-nowrap">
         <span>{category.name}</span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

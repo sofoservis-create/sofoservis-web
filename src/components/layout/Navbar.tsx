@@ -375,7 +375,7 @@ export default function Navbar() {
               isScrolled ? "" : "shadow-lg"
             } transition-all duration-300`}
           >
-            <div className="flex items-center justify-between h-24 px-4 lg:px-6">
+            <div className="flex items-center justify-between h-24 px-6 lg:px-8 gap-4 flex-nowrap">
               {/* Logo */}
               <div className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
                 <Link
@@ -417,7 +417,7 @@ export default function Navbar() {
               </nav>
 
               {/* Call to Action */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-5 flex-shrink-0">
                 <div className="flex items-center bg-gray-100 rounded-full p-0.5">
                   {isEnglish ? (
                     <>
@@ -452,7 +452,7 @@ export default function Navbar() {
 
                 <a
                   href={`tel:${t.phoneNumber.replace(/\s/g, "")}`}
-                  className="bg-accent-400 text-primary-900 px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center hover:bg-accent-300 transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+                  className="bg-accent-400 text-primary-900 px-4 py-3 rounded-xl text-sm font-bold tracking-wide uppercase flex items-center whitespace-nowrap flex-shrink-0 hover:bg-accent-300 transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-lg"
                   onClick={handleCallClick}
                 >
                   {t.callUs}
