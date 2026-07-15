@@ -3,7 +3,6 @@ import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 
 const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import Image from "next/image";
-import Dialog from "@/components/elements/Dialog";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
@@ -95,7 +94,6 @@ const LAB_HERO_TEXTS = {
     vopText: "VOP",
     submitting: "Spracovávam...",
     submit: "Získať kalkuláciu zadarmo",
-    privacyTitle: "Ochrana osobných údajov",
     mascotAlt: "Sofoservis maskot",
   },
   en: {
@@ -121,7 +119,6 @@ const LAB_HERO_TEXTS = {
     vopText: "Terms of Service",
     submitting: "Processing...",
     submit: "Get a free quote",
-    privacyTitle: "Privacy Policy",
     mascotAlt: "Sofoservis mascot",
   },
 } as const;
@@ -328,7 +325,6 @@ export default function LabHero({
     ro.observe(el);
     return () => ro.disconnect();
   }, [submitSuccess]);
-  const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const inFlightRef = useRef(false);
   const requestIdRef = useRef<string | null>(null);
 
@@ -832,15 +828,15 @@ export default function LabHero({
                       className="text-xs text-gray-600 cursor-pointer"
                     >
                       {t.consentText}{" "}
-                      <span
-                        role="button"
-                        tabIndex={0}
-                        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsPrivacyDialogOpen(true); }}
-                        onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setIsPrivacyDialogOpen(true); } }}
-                        className="text-accent-600 hover:underline focus:outline-none"
+                      <a
+                        href={lang === "en" ? "/en/privacy-policy" : "/zasady-spracovania-osobnych-udajov"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-accent-600 hover:underline"
+                        onClick={(e) => e.stopPropagation()}
                       >
                         {t.privacyLink}
-                      </span>
+                      </a>
                       {" "}{t.consentAnd}{" "}
                       <a
                         href={vopHref}
@@ -883,59 +879,6 @@ export default function LabHero({
         </div>
       </section>
 
-      <Dialog
-        isOpen={isPrivacyDialogOpen}
-        onClose={() => setIsPrivacyDialogOpen(false)}
-        title={t.privacyTitle}
-        className="w-full max-w-6xl mx-4 sm:mx-6 lg:mx-8 my-8"
-      >
-        <div className="px-2 py-4">
-          <div className="prose prose-sm max-w-none text-primary-700 space-y-6 leading-relaxed">
-            <div className="bg-accent-50 border-l-4 border-accent-500 p-4 rounded-r-lg">
-              <p className="text-primary-800 font-medium"><strong>Vážení zákazníci,</strong></p>
-              <p className="mt-2 text-primary-700">
-                týmto dokumentom by sme Vám radi vysvetlili ako, a s akým cieľom
-                používame Vaše osobné údaje a aké máte práva a možnosti v tejto oblasti.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  KTO JE ZODPOVEDNÝ ZA VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-primary-800 leading-relaxed">
-                    <strong>Sofian &ldquo;Sofo&rdquo; Hidbani – SofoServis</strong><br />
-                    Doležalová 9,<br />
-                    821 04 Bratislava,<br />
-                    SLOVENSKÁ REPUBLIKA,<br />
-                    IČO: 52332225
-                  </p>
-                  <p className="mt-3 text-primary-700">je zodpovedným prevádzkovateľom Vašich osobných údajov.</p>
-                </div>
-              </section>
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  NA AKÉ ÚČELY POUŽÍVAME VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <p className="text-primary-700 leading-relaxed">
-                  Vaše osobné údaje spracovávame v takom rozsahu, v akom to je nutné v súvislosti
-                  s poskytovaním našich servisných služieb.
-                </p>
-              </section>
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  AKO CHRÁNIME VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <p className="text-primary-700 leading-relaxed">
-                  Na ochranu Vašich osobných údajov pred neoprávneným prístupom alebo zneužitiu
-                  využívame fyzické, elektronické a procedurálne bezpečnostné opatrenia.
-                </p>
-              </section>
-            </div>
-          </div>
-        </div>
-      </Dialog>
     </>
   );
 }

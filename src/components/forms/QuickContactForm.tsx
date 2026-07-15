@@ -3,7 +3,6 @@
 
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import Dialog from "@/components/elements/Dialog";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
@@ -365,7 +364,6 @@ export default function QuickContactForm({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
-  const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   // Refs for double-submit guard and stable request_id across retries within one submit
   const inFlightRef = useRef(false);
   const requestIdRef = useRef<string | null>(null);
@@ -550,7 +548,6 @@ export default function QuickContactForm({
         "Nastala chyba pri odoslaní. Skúste to znova alebo nás kontaktujte na telefóne.",
       afterSubmitText:
         "Po odoslaní formuláru sa s Vami spojíme a radi Vám odpovieme na všetky otázky.",
-      privacyTitle: "Ochrana osobných údajov",
       closeButton: "Zavrieť",
     },
     en: {
@@ -575,7 +572,6 @@ export default function QuickContactForm({
         "An error occurred while sending. Please try again or contact us by phone.",
       afterSubmitText:
         "After submitting the form, we'll contact you and answer all your questions.",
-      privacyTitle: "Privacy Policy",
       closeButton: "Close",
     },
   };
@@ -727,24 +723,15 @@ export default function QuickContactForm({
                 className="ml-2 block text-xs text-gray-600 text-left cursor-pointer"
               >
                 {t.consent}{" "}
-                <span
-                  role="button"
-                  tabIndex={0}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    setIsPrivacyDialogOpen(true);
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setIsPrivacyDialogOpen(true);
-                    }
-                  }}
-                  className="text-accent-600 hover:underline focus:outline-none"
+                <a
+                  href={lang === "en" ? "/en/privacy-policy" : "/zasady-spracovania-osobnych-udajov"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent-600 hover:underline"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   {t.privacyPolicy}
-                </span>
+                </a>
                 {t.consentAnd}
                 <a
                   href={vopPath}
@@ -821,305 +808,6 @@ export default function QuickContactForm({
         )}
       </div>
 
-      {/* Privacy Policy Dialog - keep existing content */}
-      <Dialog
-        isOpen={isPrivacyDialogOpen}
-        onClose={() => setIsPrivacyDialogOpen(false)}
-        title={t.privacyTitle}
-        className="w-full max-w-6xl mx-4 sm:mx-6 lg:mx-8 my-8"
-      >
-        <div className="px-2 py-4">
-          {" "}
-          {/* Added padding wrapper */}
-          <div className="prose prose-sm max-w-none text-primary-700 space-y-6 leading-relaxed">
-            <div className="bg-accent-50 border-l-4 border-accent-500 p-4 rounded-r-lg">
-              <p className="text-primary-800 font-medium">
-                <strong>Vážení zákazníci,</strong>
-              </p>
-              <p className="mt-2 text-primary-700">
-                týmto dokumentom by sme Vám radi vysvetlili ako, a s akým cieľom
-                používame Vaše osobné údaje a aké máte práva a možnosti v tejto
-                oblasti.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  KTO JE ZODPOVEDNÝ ZA VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <p className="text-primary-800 leading-relaxed">
-                    <strong>Sofian &ldquo;Sofo&rdquo; Hidbani – SofoServis</strong>
-                    <br />
-                    Doležalová 9,
-                    <br />
-                    821 04 Bratislava,
-                    <br />
-                    SLOVENSKÁ REPUBLIKA,
-                    <br />
-                    IČO: 52332225
-                  </p>
-                  <p className="mt-3 text-primary-700">
-                    je zodpovedným prevádzkovateľom Vašich osobných údajov.
-                  </p>
-                </div>
-              </section>
-
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  NA AKÉ ÚČELY POUŽÍVAME VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <p className="mb-4 text-primary-700 leading-relaxed">
-                  Vaše osobné údaje spracovávame v takom rozsahu, v akom to je
-                  nutné v súvislosti s poskytovaním našich servisných služieb a
-                  zabezpečením prevádzky nášho internetového obchodu, a obzvlášť
-                  na tieto účely: (tzv. &quot;povolené účely&quot;):
-                </p>
-                <ul className="space-y-3 text-primary-700">
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      nákup a predaj tovaru a poskytovanie služieb, čím sa
-                      zabezpečuje najmä riadne plnenie zmluvných vzťahov
-                      uzatvorených s našimi zákazníkmi, komunikácia s nimi,
-                      vybavenie objednávky a doručenie tovaru, vedenie účtovnej
-                      a fakturačnej evidencie;
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      všeobecné dodržiavanie noriem, čím sa zabezpečuje
-                      dodržiavanie s právnych povinností a zabezpečenie súladu
-                      so všeobecne záväznými právnymi predpismi;
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      spory a vymáhanie pohľadávok; zahŕňa našu podporu pri
-                      riešení sporov, dodržiavaní súdnych nariadení, nariadení
-                      úradov a iných verejných orgánov, pri presadzovaní našich
-                      zmluvných dohôd a pri založení, vykonávaní alebo obrane
-                      právnych nárokov.
-                    </span>
-                  </li>
-                </ul>
-                <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                  <p className="text-primary-700 leading-relaxed">
-                    Vaše osobné údaje nebudú použité pre vykonanie
-                    automatizovaného individuálneho rozhodovania vrátane
-                    profilovania. Právny základ spracovania Vašich osobných
-                    údajov je opísaný v Článku 6 Všeobecného nariadenia o
-                    ochrane údajov. V závislosti od vyššie uvedených povolených
-                    účelov, na ktoré môžeme použiť Vaše osobné údaje, je ich
-                    spracovanie nutné buď pre plnenie podmienok zmluvy uzavretej
-                    s našou spoločnosťou, ďalej je ich spracovanie nutné pre
-                    dodržiavanie našich zákonných povinností alebo je ich
-                    spracovanie nutné na účely nášho oprávneného záujmu alebo
-                    záujmu tretej strany, ktoré sa dostanú k Vašim osobný
-                    údajom, pričom tieto záujmy neprevyšujú tie Vaše alebo
-                    neprevyšujú základné práva a slobody. Okrem toho, ich
-                    spracovanie môže byť podložené Vašim súhlasom, ktorý ste nám
-                    dali.
-                  </p>
-                </div>
-              </section>
-
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  AKÉ OSOBNÉ ÚDAJE ZBIERAME?
-                </h4>
-                <p className="mb-4 text-primary-700 leading-relaxed">
-                  Pokiaľ nie je inak dohodnuté, uchovávame len tie osobné údaje,
-                  ktoré sú potrebné vzhľadom na vybavenie Vašej objednávky,
-                  uzatvorenie servisnej alebo kúpnej zmluvy a pre dodanie
-                  objednaného tovaru, a to všetko na vyššie spomenuté účely. To
-                  zahŕňa informácie, ktoré nám sprostredkujete priamo,
-                  prostredníctvom formulára na našej internetovej stránke alebo
-                  ktoré nám poskytnete iným spôsobom. To zahŕňa najmä nasledovné
-                  kategórie údajov:
-                </p>
-                <ul className="space-y-3 text-primary-700">
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      osobné detaily, ako meno a priezvisko, doručovaciu adresu,
-                      prípadne fakturačnú adresu, telefonický a emailový
-                      kontakt, predmet objednávky, resp. iné údaje nevyhnutné
-                      pre vybavenie Vašej objednávky;
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      údaje súvisiace s prístupom a používaním našej
-                      internetovej stránky a internetového obchodu, čo
-                      predstavuje najmä údaje súvisiace s vytvorením Vášho
-                      používateľského konta a údaje nevyhnutné na komunikáciu s
-                      Vami;
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      údaje súvisiace so spormi a vymáhaním pohľadávok, čo
-                      zahŕňa údaje súvisiace s alebo vygenerované zo súdnych
-                      konaní, sporov, jednaní, výrokov, obhajoby alebo z iných
-                      súvisiacich komunikácii alebo aktivít;
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      iné osobné údaje odvodené alebo vygenerované z vyššie
-                      uvedených povolených účelov;
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      súbory cookies, krátke textové súbory generované webovým
-                      serverom a ukladané v počítači prostredníctvom
-                      prehliadača, pričom sa môže jednať o funkčné a technické
-                      cookies, analytické cookies alebo marketingové a reklamné
-                      cookies. Marketingové a reklamné cookies môžu byť
-                      spracované iba na základe Vášho súhlasu.
-                    </span>
-                  </li>
-                </ul>
-              </section>
-
-              {/* Continue with remaining sections in similar format... */}
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  AKO ZBIERAME OSOBNÉ ÚDAJE?
-                </h4>
-                <p className="text-primary-700 leading-relaxed">
-                  Vaše osobné údaje zbierame primárne priamo od Vás počas Vašej
-                  interakcie s nami prostredníctvom našej internetovej stránky
-                  alebo iným komunikačným spôsobom.
-                </p>
-              </section>
-
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  AKO CHRÁNIME VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <p className="text-primary-700 leading-relaxed">
-                  Na ochranu Vašich osobných údajov pred neoprávneným prístupom
-                  alebo zneužitiu využívame fyzické, elektronické a procedurálne
-                  bezpečnostné opatrenia, ktoré zodpovedajú technickému stavu a
-                  právnym požiadavkám na ochranu osobných údajov. Tieto
-                  bezpečnostné opatrenia zahrňujú implementáciu špecifických
-                  technológií a procedúr vytvorených na ochranu Vášho súkromia,
-                  akými sú bezpečnostné servery, protipožiarne steny a SSL
-                  šifrovanie. Budeme po celý čas striktne dodržiavať zákony a
-                  nariadenia súvisiace s dôvernosťou a bezpečnosťou osobných
-                  údajov.
-                </p>
-              </section>
-
-              <section>
-                <h4 className="text-lg font-bold text-primary-900 mb-3 pb-2 border-b border-accent-200">
-                  S KÝM ZDIEĽAME VAŠE OSOBNÉ ÚDAJE?
-                </h4>
-                <p className="mb-4 text-primary-700 leading-relaxed">
-                  Vaše osobné údaje môžeme zdieľať s:
-                </p>
-                <ul className="space-y-3 text-primary-700 mb-4">
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      Tretími stranami, ktoré spracovávajú Vaše osobné údaje v
-                      ich vlastnom mene, ale v súvislosti so službou, ktorú nám
-                      poskytujú alebo vo Vašom vlastnom mene na povolené účely.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      Poskytovateľmi služieb (tzv. sprostredkovatelia), ktorí sú
-                      usmernení spracúvať osobné údaje pre povolené účely v
-                      našom mene, a môžu konať len v súlade s našimi
-                      inštrukciami. Ak zahrnieme do procesu takéhoto
-                      poskytovateľa služby, bude naša spoločnosť kontrolovať
-                      dodržiavanie bezpečnosti a zostane naďalej zodpovednou za
-                      Vaše osobné údaje a bude používať vhodné bezpečnostné
-                      opatrenia požadované zákonom, aby zabezpečila integritu a
-                      ochranu Vašich osobných údajov.
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="flex-shrink-0 w-2 h-2 bg-accent-500 rounded-full mt-2 mr-3"></span>
-                    <span>
-                      Verejnými alebo vládnymi organizáciami akými sú regulačné
-                      orgány alebo orgány presadzujúce práva, právnymi
-                      zástupcami alebo súdmi, pokiaľ je nutné tak urobiť podľa
-                      platných zákonov alebo nariadení, alebo ak je to na ich
-                      žiadosť a je to právne povolené a potrebné na splnenie
-                      právnych povinností alebo na ustanovenie, vykonanie alebo
-                      obranu právneho nároku.
-                    </span>
-                  </li>
-                </ul>
-                <p className="text-primary-700 leading-relaxed">
-                  Inak budeme poskytovať Vaše osobné údaje výhradne len v
-                  prípade Vášho pokynu alebo len s Vaším povolením, ak to bude
-                  nutné z pohľadu zákona alebo nariadenia, alebo v prípade
-                  súdneho alebo oficiálneho vyzvania, alebo ak je prítomné
-                  podozrenie z podvodu alebo kriminálnej aktivity.
-                </p>
-              </section>
-
-              {/* Contact section with accent styling */}
-              <section className="bg-accent-50 border border-accent-200 rounded-lg p-6">
-                <h4 className="text-lg font-bold text-primary-900 mb-3">
-                  AKO SA S NAMI SKONTAKTOVAŤ
-                </h4>
-                <p className="mb-4 text-primary-700 leading-relaxed">
-                  V prípade, že budete mať akákoľvek otázky ohľadom Vašich práv
-                  alebo budete mať iné špeciálne požiadavky súvisiace s Vašimi
-                  osobnými údajmi, kontaktujte prosím na uvedených kontaktných
-                  údajoch:
-                  <a
-                    href="mailto:doprava@sofoservis.sk"
-                    className="text-accent-600 hover:text-accent-700 font-medium"
-                  >
-                    doprava@sofoservis.sk
-                  </a>
-                </p>
-
-                <div className="bg-white p-4 rounded-lg border border-accent-200">
-                  <p className="text-primary-800 font-medium">
-                    <strong>S pozdravom, Sofian &ldquo;Sofo&rdquo; Hidbani – SofoServis</strong>
-                  </p>
-                  <p className="mt-2 text-primary-700">
-                    Web:{" "}
-                    <a
-                      href="https://www.sofoservis.sk"
-                      className="text-accent-600 hover:text-accent-700"
-                    >
-                      www.sofoservis.sk
-                    </a>
-                    <br />
-                    Tel:{" "}
-                    <a
-                      href="tel:+421905771151"
-                      className="text-accent-600 hover:text-accent-700"
-                    >
-                      +421 905 771 151
-                    </a>
-                    <br />
-                    IČO: 52332225
-                  </p>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </Dialog>
     </>
   );
 }
