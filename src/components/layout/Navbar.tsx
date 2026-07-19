@@ -658,7 +658,7 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Bottom Actions */}
-            <div className="px-4 pt-4 pb-3 border-t border-gray-200 flex items-center justify-center gap-2">
+            <div className="px-4 py-3 border-t border-b border-gray-200 flex items-center justify-center gap-2">
               <div className="flex -space-x-1.5 flex-shrink-0">
                 <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-30">
                   <Image src="/images/review-avatar-1.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
