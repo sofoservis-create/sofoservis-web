@@ -626,7 +626,7 @@ export default function LabHero({
                     </svg>
                   ))}
                 </div>
-                <div className="text-white/80 text-sm text-center">{ratingText}</div>
+                <div className="text-white/80 text-xs whitespace-nowrap">{ratingText}</div>
               </div>
 
               <div className="hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center gap-6">
@@ -796,7 +796,7 @@ export default function LabHero({
                       ))}
                     </div>
                     <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                    <span className="text-gray-600 text-sm text-center">{t.ratingDefault}</span>
+                    <span className="text-gray-600 text-xs whitespace-nowrap">{t.ratingDefault}</span>
                   </div>
 
                   {/* Consent */}
