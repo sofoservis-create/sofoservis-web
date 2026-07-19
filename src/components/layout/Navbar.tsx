@@ -658,7 +658,12 @@ export default function Navbar() {
             </div>
 
             {/* Mobile Bottom Actions */}
-            <div className="grid grid-cols-2 gap-3 p-4 border-t border-gray-200">
+            <div className="px-4 pt-4 pb-1 border-t border-gray-200 text-center">
+              <p className="text-xs text-primary-500 font-medium">
+                ⭐ {isEnglish ? "500+ satisfied customers" : "500+ spokojných zákazníkov"}
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3 px-4 pb-4">
               <button
                 type="button"
                 className="flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors cursor-pointer"
