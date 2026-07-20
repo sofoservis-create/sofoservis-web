@@ -796,7 +796,7 @@ export default function LabHero({
                       ))}
                     </div>
                     <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                    <span className="text-gray-600 text-xs whitespace-nowrap">{t.ratingDefault}</span>
+                    <span className="text-gray-600 whitespace-nowrap text-[14px]">{t.ratingDefault}</span>
                   </div>
 
                   {/* Consent */}
