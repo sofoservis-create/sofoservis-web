@@ -626,7 +626,7 @@ export default function LabHero({
                     </svg>
                   ))}
                 </div>
-                <div className="text-white/80 text-xs whitespace-nowrap">{ratingText}</div>
+                <div className="text-white/80 whitespace-nowrap text-[14px]">{ratingText}</div>
               </div>
 
               <div className="hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center gap-6">
