@@ -277,10 +277,10 @@ export const navCategoriesSK: NavCategory[] = [
       name: "INFORMÁCIE",
       flat: true,
       links: [
-        { href: "/referencie", label: "Referencie" },
+        { href: "/kontakt", label: "Kontakt" },
         { href: "/cennik", label: "Cenník" },
         { href: "/o-nas", label: "O nás" },
-        { href: "/kontakt", label: "Kontakt" },
+        { href: "/referencie", label: "Referencie" },
       ],
     },
   ];
@@ -463,10 +463,10 @@ export const navCategoriesEN: NavCategory[] = [
       name: "INFORMATION",
       flat: true,
       links: [
-        { href: "/en/reviews", label: "Reviews" },
+        { href: "/en/contact", label: "Contact" },
         { href: "/en/pricing", label: "Pricing" },
         { href: "/en/about", label: "About Us" },
-        { href: "/en/contact", label: "Contact" },
+        { href: "/en/reviews", label: "Reviews" },
       ],
     },
   ];
@@ -474,10 +474,10 @@ export const navCategoriesEN: NavCategory[] = [
 export const mobileNavCategoriesSK: NavCategory[] = [
     ...navCategoriesSK.slice(0, -1),
     {
-      name: "REFERENCIE",
+      name: "KONTAKT",
       flat: true,
       links: [
-        { href: "/referencie", label: "Referencie" },
+        { href: "/kontakt", label: "Kontakt" },
       ],
     },
     {
@@ -495,10 +495,10 @@ export const mobileNavCategoriesSK: NavCategory[] = [
       ],
     },
     {
-      name: "KONTAKT",
+      name: "REFERENCIE",
       flat: true,
       links: [
-        { href: "/kontakt", label: "Kontakt" },
+        { href: "/referencie", label: "Referencie" },
       ],
     },
   ];
@@ -506,10 +506,10 @@ export const mobileNavCategoriesSK: NavCategory[] = [
 export const mobileNavCategoriesEN: NavCategory[] = [
     ...navCategoriesEN.slice(0, -1),
     {
-      name: "REVIEWS",
+      name: "CONTACT",
       flat: true,
       links: [
-        { href: "/en/reviews", label: "Reviews" },
+        { href: "/en/contact", label: "Contact" },
       ],
     },
     {
@@ -527,10 +527,10 @@ export const mobileNavCategoriesEN: NavCategory[] = [
       ],
     },
     {
-      name: "CONTACT",
+      name: "REVIEWS",
       flat: true,
       links: [
-        { href: "/en/contact", label: "Contact" },
+        { href: "/en/reviews", label: "Reviews" },
       ],
     },
   ];
