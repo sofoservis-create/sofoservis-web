@@ -757,7 +757,7 @@ export default function QuickContactForm({
                   </div>
                 </div>
                 <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                <span className="text-gray-600 whitespace-nowrap text-[14px]">{lang === "en" ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}</span>
+                <span className="text-gray-600 whitespace-nowrap text-[14px] leading-none">{lang === "en" ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}</span>
               </div>
             )}
 
