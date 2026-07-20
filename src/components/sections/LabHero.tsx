@@ -439,7 +439,7 @@ export default function LabHero({
     <>
       <section
         ref={sectionRef}
-        className="relative pt-14 pb-6 md:pt-36 md:pb-8 lg:pt-40 bg-primary-900"
+        className="relative pt-14 pb-6 md:pt-36 md:pb-8 lg:pt-40 lg:pb-10 bg-primary-900"
         aria-labelledby="hero-heading"
       >
         <div className="absolute inset-0 z-0 overflow-hidden">
