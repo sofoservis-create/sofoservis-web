@@ -98,7 +98,7 @@ export default function StahovanieBratislavaPage() {
         title: "Vypratávanie priestorov",
         description:
           "Kompletné vypratávanie nehnuteľností v Bratislave. Vhodné pri predaji, rekonštrukcii alebo dedičskom konaní.",
-        link: "/vypratavanie-bytov-domov",
+        link: "/vypratavanie/vypratavanie-bytov-domov",
       },
     ],
   };
@@ -302,7 +302,7 @@ export default function StahovanieBratislavaPage() {
         title="Ďalšie služby v Bratislave"
         services={[
           { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti od 30€/hod.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
-          { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie a odvoz nepotrebných vecí.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie a odvoz nepotrebných vecí.", href: "/vypratavanie/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Montáž nábytku", description: "Skladanie a montáž nábytku všetkých značiek.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
         ]}
       />

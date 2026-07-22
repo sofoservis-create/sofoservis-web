@@ -124,7 +124,7 @@ export default function HodinovyManzelMajsterPage() {
         title: "Záhradné a vonkajšie práce",
         description:
           "Údržba záhrady, čistenie pozemkov, drobné stavebné práce, montáž plotov, altánkov a ďalšie práce na vonkajších priestoroch.",
-        link: "/cistenie-vypratavanie-pozemkov-nehnutelnosti",
+        link: "/vypratavanie/cistenie-vypratavanie-pozemkov",
       },
       {
         image: "/icons/paint_icon.svg", // NEW ICON - For painting work
@@ -307,7 +307,7 @@ export default function HodinovyManzelMajsterPage() {
         services={[
           { title: "Montáž nábytku", description: "Profesionálna montáž a skladanie nábytku.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
           { title: "Montáž kuchyne", description: "Montáž kuchynských liniek od 120€/m.", href: "/montaz-kuchyne", icon: "/icons/kitchen_icon.svg" },
-          { title: "Vypratávanie bytov", description: "Kompletné vypratanie a odvoz nepotrebných vecí.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie bytov", description: "Kompletné vypratanie a odvoz nepotrebných vecí.", href: "/vypratavanie/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
         ]}
       />
       <FAQJsonLd items={faqSchemaItems} />

@@ -176,7 +176,7 @@ export default function BuraciePracePezinokPage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          { title: "Odvoz odpadu", description: "Likvidácia sute po búraní.", href: "/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
+          { title: "Odvoz odpadu", description: "Likvidácia sute po búraní.", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
           { title: "Búracie práce", description: "Kompletné služby búrania.", href: "/buracie-demolacne-prace", icon: "/icons/wrecking_ball_icon.svg" },
         ]}
       />

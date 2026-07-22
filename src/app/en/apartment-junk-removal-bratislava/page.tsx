@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-bratislava",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/bratislava",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov/bratislava",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-bratislava",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/bratislava",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov/bratislava",
     },
   },
 };

@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-nitra",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/nitra",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-nitra",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/nitra",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

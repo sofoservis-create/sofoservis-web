@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-samorin",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/samorin",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-samorin",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/samorin",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

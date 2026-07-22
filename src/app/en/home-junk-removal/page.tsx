@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/home-junk-removal",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       },
   },
   openGraph: {

@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/hazardous-waste-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/likvidacia-nebezpecneho-odpadu-starych-spotrebicov",
+      sk: "https://www.sofoservis.sk/vypratavanie/likvidacia-nebezpecneho-odpadu",
       en: "https://www.sofoservis.sk/en/hazardous-waste-removal",
-      "x-default": "https://www.sofoservis.sk/likvidacia-nebezpecneho-odpadu-starych-spotrebicov",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/likvidacia-nebezpecneho-odpadu",
       },
   },
   openGraph: {

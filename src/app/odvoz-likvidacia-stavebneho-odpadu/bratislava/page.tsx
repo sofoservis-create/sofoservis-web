@@ -71,25 +71,25 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
         image: "/icons/truck_icon.svg",
         title: "Rýchly odvoz sute",
         description: "Expresný odvoz stavebnej sute a odpadu v rámci všetkých mestských častí Bratislavy.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/container_icon.svg",
         title: "Pristavenie kontajnerov",
         description: "Prenájom kontajnerov rôznych veľkostí (5m³, 7m³, 10m³) pre vaše potreby.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/recycle_icon.svg",
         title: "Ekologická likvidácia",
         description: "Odpad vozíme výhradne na legálne skládky a recyklačné dvory v Bratislave.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Doklad o likvidácii",
         description: "Ku každej zákazke vystavujeme potvrdenie o legálnej likvidácii odpadu.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
     ],
   };
@@ -183,7 +183,7 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
         title="Súvisiace služby"
         services={[
           { title: "Búracie práce Bratislava", description: "Búranie priečok a interiérov.", href: "/buracie-demolacne-prace/bratislava", icon: "/icons/wrecking_ball_icon.svg" },
-          { title: "Odvoz odpadu", description: "Kompletné služby odvozu.", href: "/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
+          { title: "Odvoz odpadu", description: "Kompletné služby odvozu.", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
           { title: "Vypratávanie Bratislava", description: "Odvoz starého nábytku.", href: "/vypratavanie-bratislava", icon: "/icons/vypratavanie_icon.svg" },
         ]}
       />

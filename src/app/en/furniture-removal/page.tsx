@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/furniture-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-odvoz-stareho-nabytku",
+      sk: "https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku",
       en: "https://www.sofoservis.sk/en/furniture-removal",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-odvoz-stareho-nabytku",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku",
       },
   },
   openGraph: {

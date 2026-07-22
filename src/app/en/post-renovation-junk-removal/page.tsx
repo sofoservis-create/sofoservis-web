@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/post-renovation-junk-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-po-rekonstrukcii",
+      sk: "https://www.sofoservis.sk/vypratavanie",
       en: "https://www.sofoservis.sk/en/post-renovation-junk-removal",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-po-rekonstrukcii",
+      "x-default": "https://www.sofoservis.sk/vypratavanie",
     },
   },
 };

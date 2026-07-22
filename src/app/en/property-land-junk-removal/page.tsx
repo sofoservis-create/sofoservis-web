@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/property-land-junk-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/cistenie-vypratavanie-pozemkov-nehnutelnosti",
+      sk: "https://www.sofoservis.sk/vypratavanie/cistenie-vypratavanie-pozemkov",
       en: "https://www.sofoservis.sk/en/property-land-junk-removal",
-      "x-default": "https://www.sofoservis.sk/cistenie-vypratavanie-pozemkov-nehnutelnosti",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/cistenie-vypratavanie-pozemkov",
       },
   },
   openGraph: {

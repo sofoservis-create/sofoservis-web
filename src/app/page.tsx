@@ -163,14 +163,14 @@ export default function Home() {
               title: "Vypratávanie bytov a domov",
               description:
                 "Vypratávame byty, domy, pivnice, garáže a záhrady. Odpad zlikvidujeme ekologicky — vy nemusíte nič riešiť.",
-              link: "/vypratavanie-bytov-domov",
+              link: "/vypratavanie/vypratavanie-bytov-domov",
             },
             {
               image: "/icons/vypratavanie_icon.svg",
               title: "Vypratávanie priestorov a odvoz nábytku",
               description:
                 "Zbavíme vás starého nábytku, spotrebičov aj stavebného odpadu. Rýchlo, ekologicky a za férové ceny.",
-              link: "/vypratavanie-odvoz-stareho-nabytku",
+              link: "/vypratavanie/odvoz-stareho-nabytku",
             },
             {
               image: "/icons/repair_icon.svg",

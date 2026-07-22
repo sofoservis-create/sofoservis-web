@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/cottage-junk-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-chalupy",
+      sk: "https://www.sofoservis.sk/vypratavanie",
       en: "https://www.sofoservis.sk/en/cottage-junk-removal",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-chalupy",
+      "x-default": "https://www.sofoservis.sk/vypratavanie",
     },
   },
 };

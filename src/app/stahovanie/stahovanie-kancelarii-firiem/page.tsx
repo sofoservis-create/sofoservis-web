@@ -98,14 +98,14 @@ export default function StahovanieKancelariiPage() {
         title: "Vypratávanie starých kancelárií",
         description:
           "Kompletné vypratanie starých kancelárskych priestorov. Ekologická likvidácia starého nábytku, IT techniky a kancelárskych potrieb.",
-        link: "/vypratavanie-bytov-domov", // Consider if this link is the best fit. A link to a general vypratávanie page or a specific one for offices might be better if available.
+        link: "/vypratavanie/vypratavanie-bytov-domov", // Consider if this link is the best fit. A link to a general vypratávanie page or a specific one for offices might be better if available.
       },
       {
         image: "/icons/recycle_icon.svg", // Was: /images/icon6.webp
         title: "Odvoz kancelárskeho odpadu",
         description:
           "Odvoz a likvidácia odpadu po firemnom sťahovaní. Zabezpečíme kontajnery a ekologickú likvidáciu kartónov, obalových materiálov a odpadu.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
     ],
   };
@@ -271,7 +271,7 @@ export default function StahovanieKancelariiPage() {
         services={[
           { title: "Sťahovanie v Bratislave", description: "Lokálne sťahovanie po celej Bratislave.", href: "/stahovanie/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
-          { title: "Vypratávanie", description: "Kompletné vypratanie kancelárií a skladov.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie", description: "Kompletné vypratanie kancelárií a skladov.", href: "/vypratavanie/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
         ]}
       />
       <FAQJsonLd items={faqItems} />

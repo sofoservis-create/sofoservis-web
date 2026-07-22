@@ -17,20 +17,20 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 const vypratavanieLocations = [
-  { name: "Bratislava", href: "/vypratavanie-bratislava" },
-  { name: "Nitra", href: "/vypratavanie-nitra" },
-  { name: "Trnava", href: "/vypratavanie-trnava" },
-  { name: "Pezinok", href: "/vypratavanie-pezinok" },
-  { name: "Galanta", href: "/vypratavanie-galanta" },
-  { name: "Levice", href: "/vypratavanie-levice" },
-  { name: "Piešťany", href: "/vypratavanie-piestany" },
-  { name: "Senec", href: "/vypratavanie-senec" },
-  { name: "Senica", href: "/vypratavanie-senica" },
-  { name: "Stupava", href: "/vypratavanie-stupava" },
-  { name: "Komárno", href: "/vypratavanie-komarno" },
-  { name: "Malacky", href: "/vypratavanie-malacky" },
-  { name: "Šamorín", href: "/vypratavanie-samorin" },
-  { name: "Hlohovec", href: "/vypratavanie-hlohovec" },
+  { name: "Bratislava", href: "/vypratavanie/vypratavanie-bytov-domov/bratislava" },
+  { name: "Nitra", href: "/vypratavanie" },
+  { name: "Trnava", href: "/vypratavanie" },
+  { name: "Pezinok", href: "/vypratavanie" },
+  { name: "Galanta", href: "/vypratavanie" },
+  { name: "Levice", href: "/vypratavanie" },
+  { name: "Piešťany", href: "/vypratavanie" },
+  { name: "Senec", href: "/vypratavanie" },
+  { name: "Senica", href: "/vypratavanie" },
+  { name: "Stupava", href: "/vypratavanie" },
+  { name: "Komárno", href: "/vypratavanie" },
+  { name: "Malacky", href: "/vypratavanie" },
+  { name: "Šamorín", href: "/vypratavanie" },
+  { name: "Hlohovec", href: "/vypratavanie" },
 ];
 
 export const metadata = {
@@ -41,7 +41,7 @@ export const metadata = {
     canonical: "https://www.sofoservis.sk/vypratavanie",
     languages: {
       sk: "https://www.sofoservis.sk/vypratavanie",
-      en: "https://www.sofoservis.sk/en/clearance",
+      en: "https://www.sofoservis.sk/en/junk-removal",
       "x-default": "https://www.sofoservis.sk/vypratavanie",
     },
   },
@@ -97,56 +97,42 @@ export default function VypratavaniePage() {
         title: "Vypratávanie bytov a domov",
         description:
           "Kompletné vypratanie bytu alebo domu vrátane všetkých miestností, pivnice a podkrovia. Postaráme sa o triedenie, odvoz a ekologickú likvidáciu.",
-        link: "/vypratavanie-bytov-domov",
-      },
-      {
-        image: "/icons/briefcase_icon.svg",
-        title: "Vypratávanie kancelárií",
-        description:
-          "Efektívne vypratanie kancelárskych priestorov, firemných skladov a nebytových priestorov. Vypratáme rýchlo aj mimo pracovného času.",
-        link: "/vypratavanie-kancelarii",
+        link: "/vypratavanie/vypratavanie-bytov-domov",
       },
       {
         image: "/icons/vypratavanie_icon.svg",
         title: "Vypratávanie pivníc a garáží",
         description:
           "Špecializujeme sa na vypratávanie pivničných priestorov, garáží a skladov. Odstránime všetky nepotrebné veci a zabezpečíme čistotu.",
-        link: "/vypratavanie-pivnic-garazi-nebytovych-priestorov",
-      },
-      {
-        image: "/icons/garden_icon.svg",
-        title: "Vypratávanie chalúp",
-        description:
-          "Vypratanie chalúp, záhradných domčekov a víkendových usadlostí. Postaráme sa o kompletné vyprázdnenie priestoru vrátane záhrady.",
-        link: "/vypratavanie-chalupy",
-      },
-      {
-        image: "/icons/recycle_icon.svg",
-        title: "Vypratávanie po rekonštrukcii",
-        description:
-          "Odvoz stavebného odpadu, sutí a obalových materiálov po rekonštrukcii. Rýchle upratanie priestoru pre dokončovacie práce.",
-        link: "/vypratavanie-po-rekonstrukcii",
-      },
-      {
-        image: "/icons/document_icon.svg",
-        title: "Vypratávanie po pozostalosti",
-        description:
-          "Diskrétne a empatické vypratávanie nehnuteľností po zosnulých príbuzných. Pomôžeme roztriediť osobné veci s maximálnym rešpektom.",
-        link: "/vypratavanie-pozostalosti",
-      },
-      {
-        image: "/icons/furniture_icon.svg",
-        title: "Odvoz starého nábytku",
-        description:
-          "Rýchly odvoz starého nábytku, spotrebičov a nepotrebných vecí. Zabezpečujeme ekologickú likvidáciu alebo darovanie charitám.",
-        link: "/vypratavanie-odvoz-stareho-nabytku",
+        link: "/vypratavanie/vypratavanie-pivnic-a-garazi",
       },
       {
         image: "/icons/landscape_icon.svg",
         title: "Čistenie pozemkov a nehnuteľností",
         description:
           "Vyčistíme a vypratáme pozemky od nepotrebných vecí, stavebného odpadu a rastlinných zvyškov. Pripravíme pozemok na ďalšie využitie.",
-        link: "/cistenie-vypratavanie-pozemkov-nehnutelnosti",
+        link: "/vypratavanie/cistenie-vypratavanie-pozemkov",
+      },
+      {
+        image: "/icons/furniture_icon.svg",
+        title: "Odvoz starého nábytku",
+        description:
+          "Rýchly odvoz starého nábytku, spotrebičov a nepotrebných vecí. Zabezpečujeme ekologickú likvidáciu alebo darovanie charitám.",
+        link: "/vypratavanie/odvoz-stareho-nabytku",
+      },
+      {
+        image: "/icons/recycle_icon.svg",
+        title: "Odvoz a likvidácia stavebného odpadu",
+        description:
+          "Odvoz stavebného odpadu, sutí a obalových materiálov po rekonštrukcii. Rýchle upratanie priestoru pre dokončovacie práce.",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
+      },
+      {
+        image: "/icons/wrench_icon.svg",
+        title: "Likvidácia spotrebičov a nebezpečného odpadu",
+        description:
+          "Ekologická likvidácia starých spotrebičov, elektroniky a nebezpečného domového odpadu podľa platných predpisov.",
+        link: "/vypratavanie/likvidacia-nebezpecneho-odpadu",
       },
     ],
   };
@@ -311,7 +297,7 @@ export default function VypratavaniePage() {
         title="Súvisiace služby"
         services={[
           { title: "Sťahovanie bytov a domov", description: "Presťahujeme vás spoľahlivo a rýchlo.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
-          { title: "Odvoz stavebného odpadu", description: "Odvoz a ekologická likvidácia stavebného odpadu.", href: "/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/recycle_icon.svg" },
+          { title: "Odvoz stavebného odpadu", description: "Odvoz a ekologická likvidácia stavebného odpadu.", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/recycle_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a úpravy po vypratávaní.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
           { title: "Montáž nábytku", description: "Skladanie nového nábytku do vyprataného priestoru.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
         ]}

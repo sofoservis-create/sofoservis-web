@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-levice",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/levice",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-levice",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/levice",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

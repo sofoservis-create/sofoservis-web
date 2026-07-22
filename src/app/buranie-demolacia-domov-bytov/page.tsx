@@ -67,14 +67,14 @@ export default function BuranieDemlaciaPage() {
         title: "Vypratávanie pred demoláciou",
         description:
           "Kompletné vypratanie objektu pred demoláciou. Ekologicky zlikvidujeme všetok movitý majetok a odpady podľa platných predpisov.",
-        link: "/vypratavanie-bytov-domov",
+        link: "/vypratavanie/vypratavanie-bytov-domov",
       },
       {
         image: "/icons/truck_icon.svg", // For waste removal
         title: "Odvoz stavebného odpadu",
         description:
           "Zabezpečujeme odvoz a likvidáciu všetkého stavebného odpadu vzniknutého pri búracích prácach. Máme kontajnery rôznych veľkostí.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/safety_icon.svg", // NEW ICON - For safety and permits
@@ -88,7 +88,7 @@ export default function BuranieDemlaciaPage() {
         title: "Ekologická likvidácia materiálov",
         description:
           "Dbáme na životné prostredie - stavebný odpad dôsledne triedime, recyklujeme a ekologicky likvidujeme v súlade s environmentálnymi predpismi.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
     ],
   };
@@ -249,7 +249,7 @@ export default function BuranieDemlaciaPage() {
 
       <RelatedServices
         title="Súvisiace služby"
-        services={[{"title":"Búracie a demolačné práce","description":"Komplexné búracie práce pre byty a kancelársie.","href":"/buracie-demolacne-prace","icon":"/icons/crane_icon.svg"},{"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},{"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},{"title":"Likvidácia nebezpečného odpadu","description":"Bezpečná likvidácia starých spotrebičov a nebezpečného odpadu.","href":"/likvidacia-nebezpecneho-odpadu-starych-spotrebicov","icon":"/icons/hazmat_icon.svg"}]}
+        services={[{"title":"Búracie a demolačné práce","description":"Komplexné búracie práce pre byty a kancelársie.","href":"/buracie-demolacne-prace","icon":"/icons/crane_icon.svg"},{"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},{"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},{"title":"Likvidácia nebezpečného odpadu","description":"Bezpečná likvidácia starých spotrebičov a nebezpečného odpadu.","href":"/vypratavanie/likvidacia-nebezpecneho-odpadu","icon":"/icons/hazmat_icon.svg"}]}
       />
     </main>
   );

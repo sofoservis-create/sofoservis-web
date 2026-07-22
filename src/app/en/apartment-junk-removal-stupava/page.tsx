@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-stupava",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/stupava",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-stupava",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/stupava",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

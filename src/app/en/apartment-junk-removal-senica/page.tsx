@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-senica",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/senica",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-senica",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/senica",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

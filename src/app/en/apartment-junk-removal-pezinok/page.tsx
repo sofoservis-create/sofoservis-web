@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-pezinok",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/pezinok",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-pezinok",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/pezinok",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

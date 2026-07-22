@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/office-junk-removal",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-kancelarii",
+      sk: "https://www.sofoservis.sk/vypratavanie",
       en: "https://www.sofoservis.sk/en/office-junk-removal",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-kancelarii",
+      "x-default": "https://www.sofoservis.sk/vypratavanie",
     },
   },
 };

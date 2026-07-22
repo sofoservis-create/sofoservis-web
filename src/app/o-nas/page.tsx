@@ -68,7 +68,7 @@ const services = [
     icon: "/icons/vypratavanie_icon.svg",
     title: "Vypratávanie",
     desc: "Byty, pivnice, pozemky, garáže. Legálna a ekologická likvidácia odpadu.",
-    href: "/vypratavanie-bytov-domov",
+    href: "/vypratavanie/vypratavanie-bytov-domov",
   },
   {
     icon: "/icons/repair_icon.svg",
@@ -222,7 +222,7 @@ export default function ONasPage() {
                 Firma rástla rýchlo, možno príliš rýchlo. Keď ma moja pravá ruka okradla o viac ako 50 000 €, takmer sme skrachovali. No nevzdal som sa.
               </p>
               <p>
-                Dnes máme stabilnú firmu s troma vyškolenými tímami. <Link href="/stahovanie" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Sťahujeme</Link> byty, domy aj kancelárie. <Link href="/vypratavanie-bytov-domov" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Vypratávame</Link> priestory po zosnulých, pred rekonštrukciou aj po nej. <Link href="/montaz-nabytku" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Montujeme</Link> nábytok a kuchyne na dennej báze.
+                Dnes máme stabilnú firmu s troma vyškolenými tímami. <Link href="/stahovanie" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Sťahujeme</Link> byty, domy aj kancelárie. <Link href="/vypratavanie/vypratavanie-bytov-domov" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Vypratávame</Link> priestory po zosnulých, pred rekonštrukciou aj po nej. <Link href="/montaz-nabytku" className="font-bold text-primary-900 hover:text-accent-600 underline underline-offset-2 transition-colors">Montujeme</Link> nábytok a kuchyne na dennej báze.
               </p>
               <p className="text-primary-900 font-semibold text-xl">
                 Sťahovanie nie je o nábytku. Je o ľuďoch.

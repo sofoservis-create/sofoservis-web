@@ -81,7 +81,7 @@ export default function BuranieStienPriecokPage() {
         title: "Odvoz a likvidácia sute",
         description:
           "Kompletný odvoz búracieho odpadu a sute na oficiálne skládky. Environmentálne zodpovedné zneškodňovanie stavebného odpadu podľa platných predpisov.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/heavy_machinery_icon.svg",
@@ -226,7 +226,7 @@ export default function BuranieStienPriecokPage() {
 
       <RelatedServices
         title="Súvisiace služby"
-        services={[{"title":"Búracie a demolačné práce","description":"Komplexné búracie práce pre byty a kancelársie.","href":"/buracie-demolacne-prace","icon":"/icons/crane_icon.svg"},{"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},{"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
+        services={[{"title":"Búracie a demolačné práce","description":"Komplexné búracie práce pre byty a kancelársie.","href":"/buracie-demolacne-prace","icon":"/icons/crane_icon.svg"},{"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},{"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
       />
     </main>
   );

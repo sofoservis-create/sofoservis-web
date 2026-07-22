@@ -134,12 +134,12 @@ const nextConfig = {
       },
       {
         source: "/blog/vypratavanie-po-rekonstrukcii-odvoz-stavebneho-odpadu",
-        destination: "/vypratavanie-po-rekonstrukcii",
+        destination: "/vypratavanie",
         permanent: true,
       },
       {
         source: "/blog/vypratavanie-bytu-cena-2026",
-        destination: "/vypratavanie-bytov-domov",
+        destination: "/vypratavanie/vypratavanie-bytov-domov",
         permanent: true,
       },
       // Blog konsolidácia – zvyšných 15 blogov + index (jún 2026)
@@ -155,7 +155,7 @@ const nextConfig = {
       },
       {
         source: "/blog/odovzdanie-bytu-po-najme-checklist",
-        destination: "/vypratavanie-bytov-domov",
+        destination: "/vypratavanie/vypratavanie-bytov-domov",
         permanent: true,
       },
       {
@@ -165,7 +165,7 @@ const nextConfig = {
       },
       {
         source: "/blog/vypratavanie-po-zosnulom",
-        destination: "/vypratavanie-pozostalosti",
+        destination: "/vypratavanie",
         permanent: true,
       },
       {
@@ -185,12 +185,12 @@ const nextConfig = {
       },
       {
         source: "/blog/vypratavanie-pivnic-skladov-bratislava",
-        destination: "/vypratavanie-pivnic-garazi-nebytovych-priestorov",
+        destination: "/vypratavanie/vypratavanie-pivnic-a-garazi",
         permanent: true,
       },
       {
         source: "/blog/vypratavanie-po-sezonnom-uskladneni-bratislava",
-        destination: "/vypratavanie-bytov-domov",
+        destination: "/vypratavanie/vypratavanie-bytov-domov",
         permanent: true,
       },
       {
@@ -310,7 +310,7 @@ const nextConfig = {
       },
       {
         source: "/sluzby/vypratavanie-bytov",
-        destination: "/vypratavanie-bytov-domov",
+        destination: "/vypratavanie/vypratavanie-bytov-domov",
         permanent: true,
       },
       {
@@ -692,23 +692,23 @@ const nextConfig = {
       // Blog kanibalizácia: 3 mestské blogy → service stránky
       {
         source: "/blog/vypratavanie-bytov-senec",
-        destination: "/vypratavanie-senec",
+        destination: "/vypratavanie",
         permanent: true,
       },
       {
         source: "/blog/vypratavanie-bytov-pezinok",
-        destination: "/vypratavanie-pezinok",
+        destination: "/vypratavanie",
         permanent: true,
       },
       {
         source: "/blog/vypratavanie-bytov-malacky",
-        destination: "/vypratavanie-malacky",
+        destination: "/vypratavanie",
         permanent: true,
       },
       // Blog kanibalizácia: intra-blog konsolidácia (slabší → silnejší)
       {
         source: "/blog/kolko-stoji-vypratavanie-bytu-bratislava-2026",
-        destination: "/blog/vypratavanie-bytu-cena-2026",
+        destination: "/vypratavanie/vypratavanie-bytov-domov",
         permanent: true,
       },
       {
@@ -766,6 +766,68 @@ const nextConfig = {
       // Section 3: Hlohovec & Levice → hub (mestá zrušené)
       { source: "/stahovanie-hlohovec", destination: "/stahovanie", permanent: true },
       { source: "/stahovanie-levice", destination: "/stahovanie", permanent: true },
+
+      // === URL RESTRUCTURE (júl 2026): /vypratavanie/* nested tree ===
+
+      // Section 1: PRESUN 7 service stránok → nové /vypratavanie/[slug]
+      { source: "/vypratavanie-bytov-domov", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/bratislava", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-pivnic-garazi-nebytovych-priestorov", destination: "/vypratavanie/vypratavanie-pivnic-a-garazi", permanent: true },
+      { source: "/cistenie-vypratavanie-pozemkov-nehnutelnosti", destination: "/vypratavanie/cistenie-vypratavanie-pozemkov", permanent: true },
+      { source: "/vypratavanie-odvoz-stareho-nabytku", destination: "/vypratavanie/odvoz-stareho-nabytku", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      { source: "/likvidacia-nebezpecneho-odpadu-starych-spotrebicov", destination: "/vypratavanie/likvidacia-nebezpecneho-odpadu", permanent: true },
+
+      // Section 2: 14 mestských podstránok vypratavanie-bytov-domov → nový slug
+      { source: "/vypratavanie-bytov-domov/galanta", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/hlohovec", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/komarno", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/levice", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/malacky", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/nitra", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/pezinok", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/piestany", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/sala", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/samorin", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/senec", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/senica", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/stupava", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+      { source: "/vypratavanie-bytov-domov/trnava", destination: "/vypratavanie/vypratavanie-bytov-domov", permanent: true },
+
+      // Section 3: Podstránky Bratislava pre nábytok a pivnice
+      { source: "/vypratavanie-odvoz-stareho-nabytku/bratislava", destination: "/vypratavanie/odvoz-stareho-nabytku", permanent: true },
+      { source: "/vypratavanie-pivnic-garazi-nebytovych-priestorov/bratislava", destination: "/vypratavanie/vypratavanie-pivnic-a-garazi", permanent: true },
+
+      // Section 4: /vypratavanie-bratislava + 6 BA mestských častí → nový /bratislava slug
+      { source: "/vypratavanie-bratislava", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-dubravka", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-karlova-ves", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-nove-mesto", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-petrzalka", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-ruzinov", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+      { source: "/vypratavanie-stare-mesto", destination: "/vypratavanie/vypratavanie-bytov-domov/bratislava", permanent: true },
+
+      // Section 5: 14 flat city pages → hub /vypratavanie
+      { source: "/vypratavanie-trnava", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-pezinok", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-galanta", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-levice", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-piestany", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-senec", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-senica", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-stupava", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-komarno", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-malacky", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-samorin", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-hlohovec", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-nitra", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-sala", destination: "/vypratavanie", permanent: true },
+
+      // Section 6: 4 špeciálne typy → hub /vypratavanie
+      { source: "/vypratavanie-chalupy", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-kancelarii", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-po-rekonstrukcii", destination: "/vypratavanie", permanent: true },
+      { source: "/vypratavanie-pozostalosti", destination: "/vypratavanie", permanent: true },
     ];
   },
 };

@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-trnava",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/trnava",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-trnava",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/trnava",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

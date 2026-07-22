@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-malacky",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/malacky",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-malacky",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/malacky",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

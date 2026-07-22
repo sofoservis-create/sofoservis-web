@@ -303,7 +303,7 @@ export default function StahovaniePage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie vrátane odvozu odpadu.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie vrátane odvozu odpadu.", href: "/vypratavanie/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Montáž nábytku", description: "Demontáž pred a montáž po sťahovaní.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
           { title: "Sťahovanie v Bratislave", description: "Špeciálna stránka pre sťahovanie po celej Bratislave.", href: "/stahovanie/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a práce v domácnosti.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },

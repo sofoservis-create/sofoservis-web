@@ -54,10 +54,16 @@ const SERVICE_MAPPING: Record<string, ServiceData> = {
     serviceDescription: "Profesionálna montáž kuchynskej linky a kuchynského nábytku",
     serviceType: "FurnitureAssemblyService",
   },
-  "/vypratavanie-bytov-domov": {
+  "/vypratavanie/vypratavanie-bytov-domov": {
     serviceName: "Vypratávanie bytov a domov",
     serviceDescription:
       "Kompletné vypratanie a čistenie nehnuteľností vrátane likvidácie odpadu",
+    serviceType: "PropertyClearanceService",
+  },
+  "/vypratavanie/vypratavanie-bytov-domov/bratislava": {
+    serviceName: "Vypratávanie bytov a domov Bratislava",
+    serviceDescription:
+      "Kompletné vypratanie bytov a domov v Bratislave vrátane likvidácie odpadu",
     serviceType: "PropertyClearanceService",
   },
   "/hodinovy-manzel-majster": {
@@ -76,15 +82,20 @@ const SERVICE_MAPPING: Record<string, ServiceData> = {
       "Špecializované sťahovanie pianín, trezórov a ťažkých predmetov",
     serviceType: "HeavyItemMovingService",
   },
-  "/vypratavanie-odvoz-stareho-nabytku": {
+  "/vypratavanie/odvoz-stareho-nabytku": {
     serviceName: "Vypratávanie a odvoz starého nábytku",
     serviceDescription: "Odvoz a likvidácia starého nábytku a objemného odpadu",
     serviceType: "PropertyClearanceService",
   },
-  "/vypratavanie-pivnic-garazi-nebytovych-priestorov": {
+  "/vypratavanie/vypratavanie-pivnic-a-garazi": {
     serviceName: "Vypratávanie pivníc a garáží",
     serviceDescription: "Kompletné vypratanie pivníc, garáží a nebytových priestorov",
     serviceType: "PropertyClearanceService",
+  },
+  "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu": {
+    serviceName: "Odvoz a likvidácia stavebného odpadu",
+    serviceDescription: "Profesionálny odvoz a ekologická likvidácia stavebného odpadu",
+    serviceType: "WasteRemovalService",
   },
   "/odvoz-likvidacia-stavebneho-odpadu": {
     serviceName: "Odvoz a likvidácia stavebného odpadu",
@@ -101,12 +112,12 @@ const SERVICE_MAPPING: Record<string, ServiceData> = {
     serviceDescription: "Kompletná demolácia rodinných domov a bytových jednotiek",
     serviceType: "DemolitionService",
   },
-  "/cistenie-vypratavanie-pozemkov-nehnutelnosti": {
+  "/vypratavanie/cistenie-vypratavanie-pozemkov": {
     serviceName: "Čistenie a vypratávanie pozemkov",
     serviceDescription: "Komplexné čistenie a vypratávanie pozemkov a nehnuteľností",
     serviceType: "PropertyClearanceService",
   },
-  "/likvidacia-nebezpecneho-odpadu-starych-spotrebicov": {
+  "/vypratavanie/likvidacia-nebezpecneho-odpadu": {
     serviceName: "Likvidácia nebezpečného odpadu",
     serviceDescription: "Ekologická likvidácia nebezpečného odpadu a starých spotrebičov",
     serviceType: "WasteRemovalService",
@@ -282,7 +293,7 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Medzinárodné sťahovanie", url: `${baseUrl}/medzinarodne-stahovanie` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie ťažkých bremien", url: `${baseUrl}/stahovanie-tazkych-bremien` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sťahovanie a preprava nábytku", url: `${baseUrl}/stahovanie-preprava-nabytku` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie bytov a domov", url: `${baseUrl}/vypratavanie-bytov-domov` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie bytov a domov", url: `${baseUrl}/vypratavanie/vypratavanie-bytov-domov` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Montáž nábytku", url: `${baseUrl}/montaz-nabytku` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hodinový manžel", url: `${baseUrl}/hodinovy-manzel-majster` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Búracie a demolačné práce", url: `${baseUrl}/buracie-demolacne-prace` } },

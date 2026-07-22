@@ -95,7 +95,7 @@ export default function MontazKuchynePage() {
         title: "Vypratávanie starej kuchyne",
         description:
           "Demontáž a vypratanie starej kuchyne pred inštaláciou novej. Ekologická likvidácia starých spotrebičov a nábytku.",
-        link: "/vypratavanie-bytov-domov",
+        link: "/vypratavanie/vypratavanie-bytov-domov",
       },
       {
         image: "/icons/wrecking_ball_icon.svg", // For demolition work
@@ -109,7 +109,7 @@ export default function MontazKuchynePage() {
         title: "Odvoz stavebného odpadu",
         description:
           "Odvoz sutiny a stavebného odpadu po búracích prácach a rekonštrukcii kuchyne. Kompletné upratanie stavby.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
     ],
   };

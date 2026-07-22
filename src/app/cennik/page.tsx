@@ -308,7 +308,7 @@ export default function CennikPage() {
           {
             title: "Vypratávanie priestorov",
             description: "Vypratávanie bytov, pivníc, garáží a firemných priestorov vrátane odvozu odpadu.",
-            href: "/vypratavanie-bytov-domov",
+            href: "/vypratavanie/vypratavanie-bytov-domov",
             icon: "/icons/vypratavanie_icon.svg",
           },
           {

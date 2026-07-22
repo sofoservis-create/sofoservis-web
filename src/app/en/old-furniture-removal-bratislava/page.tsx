@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/old-furniture-removal-bratislava",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-odvoz-stareho-nabytku/bratislava",
+      sk: "https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku",
       en: "https://www.sofoservis.sk/en/old-furniture-removal-bratislava",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-odvoz-stareho-nabytku/bratislava",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku",
       },
   },
 };

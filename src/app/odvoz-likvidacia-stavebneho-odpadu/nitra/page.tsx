@@ -71,25 +71,25 @@ export default function OdvozStavebnehoOdpaduNitraPage() {
         image: "/icons/truck_icon.svg",
         title: "Rýchly odvoz sute",
         description: "Expresný odvoz stavebnej sute a odpadu v Nitre a priľahlých obciach.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/container_icon.svg",
         title: "Pristavenie kontajnerov",
         description: "Prenájom kontajnerov rôznych veľkostí pre vaše potreby.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/recycle_icon.svg",
         title: "Ekologická likvidácia",
         description: "Odpad vozíme výhradne na legálne skládky a recyklačné dvory.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Doklad o likvidácii",
         description: "Ku každej zákazke vystavujeme potvrdenie o legálnej likvidácii odpadu.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
     ],
   };
@@ -180,7 +180,7 @@ export default function OdvozStavebnehoOdpaduNitraPage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          { title: "Odvoz odpadu", description: "Kompletné služby odvozu.", href: "/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
+          { title: "Odvoz odpadu", description: "Kompletné služby odvozu.", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
           { title: "Vypratávanie Nitra", description: "Odvoz starého nábytku.", href: "/vypratavanie-nitra", icon: "/icons/vypratavanie_icon.svg" },
         ]}
       />

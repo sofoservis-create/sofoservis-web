@@ -44,17 +44,33 @@ const PLACEHOLDER_MAP: Record<string, { sk: string; en: string }> = {
     sk: "Napr. odvoz a sťahovanie ťažkého nábytku alebo strojov...",
     en: "E.g. removal and transport of heavy furniture or machinery...",
   },
-  "/vypratavanie-bytov-domov": {
+  "/vypratavanie/vypratavanie-bytov-domov": {
     sk: "Napr. vypratanie 3-izbového bytu po sťahovaní...",
     en: "E.g. clearance of a 3-bedroom apartment after moving...",
   },
-  "/vypratavanie-pivnic-garazi-nebytovych-priestorov": {
+  "/vypratavanie/vypratavanie-bytov-domov/bratislava": {
+    sk: "Napr. vypratanie 3-izbového bytu po sťahovaní...",
+    en: "E.g. clearance of a 3-bedroom apartment after moving...",
+  },
+  "/vypratavanie/vypratavanie-pivnic-a-garazi": {
     sk: "Napr. vypratanie pivnice a garáže v bytovom dome...",
     en: "E.g. clearance of cellar and garage in apartment building...",
   },
-  "/cistenie-vypratavanie-pozemkov-nehnutelnosti": {
+  "/vypratavanie/cistenie-vypratavanie-pozemkov": {
     sk: "Napr. vypratanie a čistenie záhrady alebo parcely...",
     en: "E.g. clearance and cleaning of a property or land plot...",
+  },
+  "/vypratavanie/odvoz-stareho-nabytku": {
+    sk: "Napr. odvoz starej pohovky, stola a skriní...",
+    en: "E.g. removal of old sofa, table and wardrobes...",
+  },
+  "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu": {
+    sk: "Napr. odvoz stavebného odpadu po rekonštrukcii...",
+    en: "E.g. removal of construction waste after renovation...",
+  },
+  "/vypratavanie/likvidacia-nebezpecneho-odpadu": {
+    sk: "Napr. ekologická likvidácia starých spotrebičov...",
+    en: "E.g. eco-friendly disposal of old appliances...",
   },
   "/montaz-nabytku": {
     sk: "Napr. montáž postele, skrine a písacieho stola...",

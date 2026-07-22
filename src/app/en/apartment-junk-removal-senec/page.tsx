@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-senec",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-bytov-domov/senec",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       en: "https://www.sofoservis.sk/en/apartment-junk-removal-senec",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-bytov-domov/senec",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     },
   },
 };

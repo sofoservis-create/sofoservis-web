@@ -81,7 +81,7 @@ export default function NotFound() {
                 icon: "/icons/vypratavanie_icon.svg",
                 title: "Vypratávanie",
                 description: "Byty, pivnice, pozemky, garáže. Legálna a ekologická likvidácia odpadu.",
-                href: "/vypratavanie-bytov-domov",
+                href: "/vypratavanie/vypratavanie-bytov-domov",
               },
               {
                 icon: "/icons/repair_icon.svg",

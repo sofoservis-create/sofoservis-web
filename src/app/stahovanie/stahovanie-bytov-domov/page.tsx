@@ -126,14 +126,14 @@ export default function StahovanieBytovDomovPage() {
         title: "Vypratávanie pred sťahovaním",
         description:
           "Vypratanie nepotrebných vecí pred sťahovaním. Ekologická likvidácia starého nábytku a spotrebičov, ktoré už nechcete prenášať.",
-        link: "/vypratavanie-bytov-domov",
+        link: "/vypratavanie/vypratavanie-bytov-domov",
       },
       {
         image: "/icons/recycle_icon.svg", // Was: /images/icon6.webp
         title: "Odvoz stavebného odpadu",
         description:
           "Odvoz kartónových krabíc, obalových materiálov a odpadu po sťahovaní. Kompletné upratanie po presťahovaní do nového domova.",
-        link: "/odvoz-likvidacia-stavebneho-odpadu",
+        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
     ],
   };
@@ -305,7 +305,7 @@ export default function StahovanieBytovDomovPage() {
         title="Súvisiace služby"
         services={[
           { title: "Sťahovanie v Bratislave", description: "Špeciálna stránka pre sťahovanie po celej Bratislave.", href: "/stahovanie/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
-          { title: "Vypratávanie bytov", description: "Kompletné vypratanie vrátane odvozu odpadu.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie bytov", description: "Kompletné vypratanie vrátane odvozu odpadu.", href: "/vypratavanie/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Montáž nábytku", description: "Demontáž pred a montáž po sťahovaní.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a práce v domácnosti.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
         ]}

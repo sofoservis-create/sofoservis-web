@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/estate-junk-removal-bereavement",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-pozostalosti",
+      sk: "https://www.sofoservis.sk/vypratavanie",
       en: "https://www.sofoservis.sk/en/estate-junk-removal-bereavement",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-pozostalosti",
+      "x-default": "https://www.sofoservis.sk/vypratavanie",
     },
   },
 };

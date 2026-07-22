@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/basement-junk-removal-bratislava",
     languages: {
-      sk: "https://www.sofoservis.sk/vypratavanie-pivnic-garazi-nebytovych-priestorov/bratislava",
+      sk: "https://www.sofoservis.sk/vypratavanie/vypratavanie-pivnic-a-garazi",
       en: "https://www.sofoservis.sk/en/basement-junk-removal-bratislava",
-      "x-default": "https://www.sofoservis.sk/vypratavanie-pivnic-garazi-nebytovych-priestorov/bratislava",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/vypratavanie-pivnic-a-garazi",
       },
   },
 };
