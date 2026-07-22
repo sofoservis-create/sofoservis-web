@@ -166,7 +166,7 @@ export default function DemolitionTrnavaPage() {
           title="We Serve All of Trnava"
           description="Our demolition services are available throughout Trnava"
           locations={["Trnava city center","Špačince","Bohdanovce","Bučany","Zavar","Malženice","Jaslovské Bohunice","Voderady","Zeleneč","Hrnčiarovce nad Parnou","Biely Kostol","Ružindol"]}
-          additionalText="We also serve Hlohovec, Sereď, Piešťany, and other surrounding towns."
+          additionalText="We also serve Sereď, Piešťany, and other surrounding towns."
         />
       </div>
 

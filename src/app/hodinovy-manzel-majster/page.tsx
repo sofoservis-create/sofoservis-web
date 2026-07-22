@@ -50,7 +50,6 @@ const hodinyManzealLocations = [
   { name: "Skalica" },
   { name: "Senica" },
   { name: "Piešťany" },
-  { name: "Hlohovec" },
   { name: "Dunajská Streda" },
   { name: "Galanta" },
 ];

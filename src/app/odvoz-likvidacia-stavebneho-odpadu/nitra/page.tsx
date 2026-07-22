@@ -98,7 +98,6 @@ export default function OdvozStavebnehoOdpaduNitraPage() {
     { name: "Zlaté Moravce", href: "/odvoz-likvidacia-stavebneho-odpadu/nitra" },
     { name: "Vráble", href: "/odvoz-likvidacia-stavebneho-odpadu/nitra" },
     { name: "Šaľa", href: "/odvoz-likvidacia-stavebneho-odpadu/nitra" },
-    { name: "Hlohovec", href: "/odvoz-likvidacia-stavebneho-odpadu/nitra" },
   ];
 
   return (

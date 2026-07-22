@@ -112,7 +112,7 @@ export default function MovingTrnavaPage() {
           "Dolné Lovčice",
           "Brestovany"
     ],
-    additionalText: "Hlohovec, Sereď, Piešťany, Modra, and other surrounding towns.",
+    additionalText: "Sereď, Piešťany, Modra, and other surrounding towns.",
   };
 
   const faqData = {

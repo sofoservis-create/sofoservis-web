@@ -21,7 +21,6 @@ const movingLocations = [
   { name: "Trnava", href: "/en/moving-trnava" },
   { name: "Pezinok", href: "/en/moving-pezinok" },
   { name: "Galanta", href: "/en/moving-galanta" },
-  { name: "Levice", href: "/en/moving-levice" },
   { name: "Piešťany", href: "/en/moving-piestany" },
   { name: "Senec", href: "/en/moving-senec" },
   { name: "Senica", href: "/en/moving-senica" },
@@ -29,7 +28,6 @@ const movingLocations = [
   { name: "Komárno", href: "/en/moving-komarno" },
   { name: "Malacky", href: "/en/moving-malacky" },
   { name: "Šamorín", href: "/en/moving-samorin" },
-  { name: "Hlohovec", href: "/en/moving-hlohovec" },
 ];
 
 export const metadata = {

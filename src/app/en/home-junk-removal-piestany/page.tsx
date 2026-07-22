@@ -37,7 +37,7 @@ export default function HomeJunkRemovalPiestanyPage() {
     { question: "How quickly can you arrange junk removal in Piešťany?", answer: "We can typically arrange junk removal in Piešťany within 2-5 working days. In urgent cases, we try to accommodate your schedule sooner. Contact us to discuss your specific needs." },
     { question: "Where do you take the waste from junk removal?", answer: "We transport waste to official collection yards and landfills in compliance with waste management regulations. Recyclable materials go to recycling facilities, hazardous waste to specialized disposal facilities." },
   ];
-  const nearbyTowns = ["Hlohovec", "Trnava", "Vrbové", "Nové Mesto nad Váhom", "Trebatice"];
+  const nearbyTowns = ["Trnava", "Vrbové", "Nové Mesto nad Váhom", "Trebatice"];
   return (
     <main className="bg-white">
       <link rel="preload"

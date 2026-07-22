@@ -21,7 +21,6 @@ const junkRemovalLocations = [
   { name: "Trnava", href: "/en/home-junk-removal-trnava" },
   { name: "Pezinok", href: "/en/home-junk-removal-pezinok" },
   { name: "Galanta", href: "/en/home-junk-removal-galanta" },
-  { name: "Levice", href: "/en/home-junk-removal-levice" },
   { name: "Piešťany", href: "/en/home-junk-removal-piestany" },
   { name: "Senec", href: "/en/home-junk-removal-senec" },
   { name: "Senica", href: "/en/home-junk-removal-senica" },
@@ -29,7 +28,6 @@ const junkRemovalLocations = [
   { name: "Komárno", href: "/en/home-junk-removal-komarno" },
   { name: "Malacky", href: "/en/home-junk-removal-malacky" },
   { name: "Šamorín", href: "/en/home-junk-removal-samorin" },
-  { name: "Hlohovec", href: "/en/home-junk-removal-hlohovec" },
   { name: "Šaľa", href: "/en/home-junk-removal-sala" },
 ];
 
@@ -39,7 +37,6 @@ const apartmentJunkRemovalLocations = [
   { name: "Trnava", href: "/en/apartment-junk-removal-trnava" },
   { name: "Pezinok", href: "/en/apartment-junk-removal-pezinok" },
   { name: "Galanta", href: "/en/apartment-junk-removal-galanta" },
-  { name: "Levice", href: "/en/apartment-junk-removal-levice" },
   { name: "Piešťany", href: "/en/apartment-junk-removal-piestany" },
   { name: "Senec", href: "/en/apartment-junk-removal-senec" },
   { name: "Senica", href: "/en/apartment-junk-removal-senica" },
@@ -47,7 +44,6 @@ const apartmentJunkRemovalLocations = [
   { name: "Komárno", href: "/en/apartment-junk-removal-komarno" },
   { name: "Malacky", href: "/en/apartment-junk-removal-malacky" },
   { name: "Šamorín", href: "/en/apartment-junk-removal-samorin" },
-  { name: "Hlohovec", href: "/en/apartment-junk-removal-hlohovec" },
   { name: "Šaľa", href: "/en/apartment-junk-removal-sala" },
 ];
 

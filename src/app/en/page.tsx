@@ -54,10 +54,8 @@ const enAreas = [
   { name: "Trnava", href: "/en/moving-trnava" },
   { name: "Senica", href: "/en/moving-senica" },
   { name: "Nitra", href: "/en/moving-nitra" },
-  { name: "Hlohovec", href: "/en/moving-hlohovec" },
   { name: "Piešťany", href: "/en/moving-piestany" },
   { name: "Galanta", href: "/en/moving-galanta" },
-  { name: "Levice", href: "/en/moving-levice" },
   { name: "Komárno", href: "/en/moving-komarno" },
   { name: "Šaľa", href: "/en/moving-sala" },
 ];

@@ -89,7 +89,7 @@ export default function ApartmentJunkRemovalTrnavaPage() {
         <LocationMap
           title="Apartment Junk Removal in Trnava and Surroundings"
           description="We provide professional junk removal services in Trnava and nearby areas"
-          locations={["Trnava","Hlohovec","Piešťany","Galanta","Sereď","Zavar","Modra","Smolenice"]}
+          locations={["Trnava","Piešťany","Galanta","Sereď","Zavar","Modra","Smolenice"]}
           additionalText="We also serve surrounding towns in the Trnava region."
         />
       </div>

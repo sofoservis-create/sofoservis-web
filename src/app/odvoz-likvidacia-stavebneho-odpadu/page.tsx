@@ -44,7 +44,6 @@ export const metadata = {
 const odvozStavebnehoOdpaduLocations = [
   { name: "Bratislava", href: "/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
   { name: "Galanta", href: "/odvoz-likvidacia-stavebneho-odpadu/galanta" },
-  { name: "Hlohovec", href: "/odvoz-likvidacia-stavebneho-odpadu/hlohovec" },
   { name: "Nitra", href: "/odvoz-likvidacia-stavebneho-odpadu/nitra" },
   { name: "Senec", href: "/odvoz-likvidacia-stavebneho-odpadu/senec" },
   { name: "Senica", href: "/odvoz-likvidacia-stavebneho-odpadu/senica" },

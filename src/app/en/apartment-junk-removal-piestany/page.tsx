@@ -89,7 +89,7 @@ export default function ApartmentJunkRemovalPiestanyPage() {
         <LocationMap
           title="Apartment Junk Removal in Piešťany and Surroundings"
           description="We provide professional junk removal services in Piešťany and nearby areas"
-          locations={["Piešťany","Hlohovec","Trnava","Vrbové","Ducové","Banka","Ratnovce"]}
+          locations={["Piešťany","Trnava","Vrbové","Ducové","Banka","Ratnovce"]}
           additionalText="We serve Piešťany and surrounding towns in the Trnava region."
         />
       </div>

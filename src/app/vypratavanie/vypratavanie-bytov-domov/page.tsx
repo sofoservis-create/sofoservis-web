@@ -261,8 +261,8 @@ export default function VypratavanieBytovDomovPage() {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
             {[
               "Bratislava", "Nitra", "Trnava", "Pezinok", "Senec",
-              "Malacky", "Stupava", "Galanta", "Komárno", "Levice",
-              "Piešťany", "Šaľa", "Šamorín", "Senica", "Hlohovec",
+              "Malacky", "Stupava", "Galanta", "Komárno", 
+              "Piešťany", "Šaľa", "Šamorín", "Senica", 
             ].map((city) => (
               <span
                 key={city}

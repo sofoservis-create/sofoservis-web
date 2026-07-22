@@ -172,7 +172,7 @@ export default function HandymanPiestanyPage() {
           title="Handyman Services Throughout Piešťany"
           description="We operate in all areas of Piešťany"
           locations={["Piešťany center","Banská","Kocurice","Banka","Moravany nad Váhom","Ducové","Ratnovce","Trebatice","Veselé","Krakovany","Vrbové"]}
-          additionalText="We also serve Trnava, Hlohovec, Nové Mesto nad Váhom, and other surrounding towns."
+          additionalText="We also serve Trnava, Nové Mesto nad Váhom, and other surrounding towns."
           showCallToAction={true}
         />
       </div>

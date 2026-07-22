@@ -95,7 +95,6 @@ export default function OdvozStavebnehoOdpaduTrnavaPage() {
 
   const trnavaLocations = [
     { name: "Trnava", href: "/odvoz-likvidacia-stavebneho-odpadu/trnava" },
-    { name: "Hlohovec", href: "/odvoz-likvidacia-stavebneho-odpadu/trnava" },
     { name: "Piešťany", href: "/odvoz-likvidacia-stavebneho-odpadu/trnava" },
     { name: "Galanta", href: "/odvoz-likvidacia-stavebneho-odpadu/trnava" },
     { name: "Senec", href: "/odvoz-likvidacia-stavebneho-odpadu/trnava" },

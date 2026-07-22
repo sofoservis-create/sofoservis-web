@@ -124,7 +124,7 @@ export default function StahovanieTrnavaPage() {
       "Dolné Lovčice",
       "Brestovany",
     ],
-    additionalText: "Hlohovec, Sereď, Piešťany, Modra a ďalšie okolité obce.",
+    additionalText: "Sereď, Piešťany, Modra a ďalšie okolité obce.",
   };
 
   // Data for FAQ section
@@ -134,7 +134,7 @@ export default function StahovanieTrnavaPage() {
       {
         question: "V ktorých častiach Trnavy poskytujete sťahovacie služby?",
         answer:
-          "Naše služby poskytujeme v celom meste Trnava a vo všetkých okolitých obciach. Pôsobíme tiež v širšom okolí - Hlohovec, Sereď, Piešťany, a ďalšie lokality v Trnavskom kraji.",
+          "Naše služby poskytujeme v celom meste Trnava a vo všetkých okolitých obciach. Pôsobíme tiež v širšom okolí - Sereď, Piešťany, a ďalšie lokality v Trnavskom kraji.",
       },
       {
         question: "Aká je cena sťahovania v Trnave?",

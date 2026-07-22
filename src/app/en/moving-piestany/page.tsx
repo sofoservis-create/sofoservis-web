@@ -108,7 +108,7 @@ export default function MovingPiestanyPage() {
           "Vrbové",
           "Chtelnica"
     ],
-    additionalText: "Trnava, Hlohovec, Nové Mesto nad Váhom, and other surrounding towns.",
+    additionalText: "Trnava, Nové Mesto nad Váhom, and other surrounding towns.",
   };
 
   const faqData = {

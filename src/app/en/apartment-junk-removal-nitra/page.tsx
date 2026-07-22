@@ -89,7 +89,7 @@ export default function ApartmentJunkRemovalNitraPage() {
         <LocationMap
           title="Apartment Junk Removal in Nitra and Surroundings"
           description="We provide professional junk removal services in Nitra and nearby areas"
-          locations={["Nitra","Zlaté Moravce","Šurany","Vráble","Komárno","Levice","Šaľa","Topoľčany"]}
+          locations={["Nitra","Zlaté Moravce","Šurany","Vráble","Komárno","Šaľa","Topoľčany"]}
           additionalText="We also serve surrounding towns in the Nitra region."
         />
       </div>

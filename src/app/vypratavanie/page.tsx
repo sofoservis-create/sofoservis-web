@@ -21,7 +21,6 @@ const vypratavanieLocations = [
   { name: "Trnava", href: "/vypratavanie" },
   { name: "Pezinok", href: "/vypratavanie" },
   { name: "Galanta", href: "/vypratavanie" },
-  { name: "Levice", href: "/vypratavanie" },
   { name: "Piešťany", href: "/vypratavanie" },
   { name: "Senec", href: "/vypratavanie" },
   { name: "Senica", href: "/vypratavanie" },
@@ -29,7 +28,6 @@ const vypratavanieLocations = [
   { name: "Komárno", href: "/vypratavanie" },
   { name: "Malacky", href: "/vypratavanie" },
   { name: "Šamorín", href: "/vypratavanie" },
-  { name: "Hlohovec", href: "/vypratavanie" },
 ];
 
 export const metadata = {

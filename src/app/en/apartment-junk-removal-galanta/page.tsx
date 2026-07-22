@@ -89,7 +89,7 @@ export default function ApartmentJunkRemovalGalantaPage() {
         <LocationMap
           title="Apartment Junk Removal in Galanta and Surroundings"
           description="We provide professional junk removal services in Galanta and nearby areas"
-          locations={["Galanta","Šaľa","Sereď","Hlohovec","Trnava","Sládkovičovo","Šintava"]}
+          locations={["Galanta","Šaľa","Sereď","Trnava","Sládkovičovo","Šintava"]}
           additionalText="We serve Galanta and surrounding towns in the Trnava region."
         />
       </div>

@@ -26,10 +26,8 @@ const defaultAreas: AreaItem[] = [
   { name: "Trnava", href: "/stahovanie-trnava" },
   { name: "Senica", href: "/stahovanie-senica" },
   { name: "Nitra", href: "/stahovanie-nitra" },
-  { name: "Hlohovec", href: "/stahovanie-hlohovec" },
   { name: "Piešťany", href: "/stahovanie-piestany" },
   { name: "Galanta", href: "/stahovanie-galanta" },
-  { name: "Levice", href: "/stahovanie-levice" },
   { name: "Komárno", href: "/stahovanie-komarno" },
   { name: "Šaľa", href: "/stahovanie-sala" },
 ];
