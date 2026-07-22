@@ -279,7 +279,7 @@ export default function MontazKuchynePage() {
         services={[
           { title: "Montáž nábytku", description: "Skladanie a montáž nábytku všetkých značiek.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a práce v domácnosti.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
-          { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti.", href: "/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
+          { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
         ]}
       />
       <FAQJsonLd items={faqSchemaItems} />

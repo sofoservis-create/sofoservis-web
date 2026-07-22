@@ -21,7 +21,7 @@ const allCardsSk: PricingCard[] = [
   {
     key: "stahovanie",
     title: "Sťahovanie bytov a domov",
-    href: "/stahovanie-bytov-domov",
+    href: "/stahovanie/stahovanie-bytov-domov",
     fromPrice: "od 25 €/hod",
     icon: "/icons/truck_icon.svg",
     iconAlt: "Sťahovanie",
@@ -69,7 +69,7 @@ const allCardsSk: PricingCard[] = [
   {
     key: "medzinarodne-stahovanie",
     title: "Medzinárodné sťahovanie",
-    href: "/medzinarodne-stahovanie",
+    href: "/stahovanie/medzinarodne-stahovanie",
     fromPrice: "individuálna kalkulácia",
     icon: "/icons/globe_icon.svg",
     iconAlt: "Medzinárodné sťahovanie",

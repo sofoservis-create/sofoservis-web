@@ -17,7 +17,7 @@ interface ServiceAreasProps {
 }
 
 const defaultAreas: AreaItem[] = [
-  { name: "Bratislava", href: "/stahovanie-bratislava" },
+  { name: "Bratislava", href: "/stahovanie/stahovanie-bratislava" },
   { name: "Senec", href: "/stahovanie-senec" },
   { name: "Pezinok", href: "/stahovanie-pezinok" },
   { name: "Šamorín", href: "/stahovanie-samorin" },

@@ -233,7 +233,7 @@ export default function VypratavanieKancelariiPage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          { title: "Sťahovanie kancelárií", description: "Profesionálne sťahovanie firiem a kancelárií.", href: "/stahovanie-kancelarii-firiem", icon: "/icons/briefcase_icon.svg" },
+          { title: "Sťahovanie kancelárií", description: "Profesionálne sťahovanie firiem a kancelárií.", href: "/stahovanie/stahovanie-kancelarii-firiem", icon: "/icons/briefcase_icon.svg" },
           { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie bytu alebo domu.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Odvoz stavebného odpadu", description: "Rýchly odvoz suťa a stavebného odpadu.", href: "/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/recycle_icon.svg" },
           { title: "Montáž nábytku", description: "Montáž nového nábytku do prázdneho priestoru.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },

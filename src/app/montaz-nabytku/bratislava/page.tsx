@@ -143,7 +143,7 @@ export default function MontazNabytkuBratislavaPage() {
         services={[
           { title: "Montáž kuchyne", description: "Inštalácia kuchynských liniek.", href: "/montaz-kuchyne", icon: "/icons/kitchen_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy v domácnosti.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
-          { title: "Sťahovanie bytov", description: "Kompletné sťahovacie služby.", href: "/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
+          { title: "Sťahovanie bytov", description: "Kompletné sťahovacie služby.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
         ]}
       />
       <FAQJsonLd items={faqItems} />

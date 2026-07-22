@@ -72,11 +72,11 @@ export default function Footer() {
         { href: "/kontakt", label: "Kontakt" },
       ],
       serviceLinks: [
-        { href: "/stahovanie-bytov-domov", label: "Sťahovanie bytov" },
-        { href: "/stahovanie-kancelarii-firiem", label: "Sťahovanie firiem" },
-        { href: "/medzinarodne-stahovanie", label: "Medzinárodné sťahovanie" },
+        { href: "/stahovanie/stahovanie-bytov-domov", label: "Sťahovanie bytov" },
+        { href: "/stahovanie/stahovanie-kancelarii-firiem", label: "Sťahovanie firiem" },
+        { href: "/stahovanie/medzinarodne-stahovanie", label: "Medzinárodné sťahovanie" },
         {
-          href: "/stahovanie-tazkych-bremien",
+          href: "/stahovanie/stahovanie-tazkych-bremien",
           label: "Sťahovanie ťažkých bremien",
         },
         { href: "/stahovanie-preprava-nabytku", label: "Sťahovanie nábytku" },

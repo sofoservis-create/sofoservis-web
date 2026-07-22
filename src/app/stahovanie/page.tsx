@@ -17,7 +17,7 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 const stahovanieLocations = [
-  { name: "Bratislava", href: "/stahovanie-bratislava" },
+  { name: "Bratislava", href: "/stahovanie/stahovanie-bratislava" },
   { name: "Nitra", href: "/stahovanie-nitra" },
   { name: "Trnava", href: "/stahovanie-trnava" },
   { name: "Pezinok", href: "/stahovanie-pezinok" },
@@ -97,28 +97,28 @@ export default function StahovaniePage() {
         title: "Sťahovanie bytov a domov",
         description:
           "Sťahujeme byty a rodinné domy po celom Slovensku. Postaráme sa o balenie, demontáž nábytku aj vyloženie na novom mieste.",
-        link: "/stahovanie-bytov-domov",
+        link: "/stahovanie/stahovanie-bytov-domov",
       },
       {
         image: "/icons/briefcase_icon.svg",
         title: "Sťahovanie kancelárií a firiem",
         description:
           "Firemné sťahovanie počas noci alebo víkendu – minimalizujeme prestoje a zabezpečíme plynulý presun celej kancelárie.",
-        link: "/stahovanie-kancelarii-firiem",
+        link: "/stahovanie/stahovanie-kancelarii-firiem",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Medzinárodné sťahovanie",
         description:
           "Sťahovanie domácností do zahraničia aj zo zahraničia. Komplexné riešenie s vybavením formalít a bezpečnou medzinárodnou prepravou.",
-        link: "/medzinarodne-stahovanie",
+        link: "/stahovanie/medzinarodne-stahovanie",
       },
       {
         image: "/icons/crane_icon.svg",
         title: "Sťahovanie ťažkých bremien",
         description:
           "Profesionálna manipulácia s ťažkými a nadrozmerými predmetmi. Používame špecializované vybavenie pre bezpečný presun.",
-        link: "/stahovanie-tazkych-bremien",
+        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/sofa_icon.svg",
@@ -306,7 +306,7 @@ export default function StahovaniePage() {
         services={[
           { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie vrátane odvozu odpadu.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Montáž nábytku", description: "Demontáž pred a montáž po sťahovaní.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
-          { title: "Sťahovanie v Bratislave", description: "Špeciálna stránka pre sťahovanie po celej Bratislave.", href: "/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
+          { title: "Sťahovanie v Bratislave", description: "Špeciálna stránka pre sťahovanie po celej Bratislave.", href: "/stahovanie/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a práce v domácnosti.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
         ]}
       />

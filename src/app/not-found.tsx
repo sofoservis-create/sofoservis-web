@@ -75,7 +75,7 @@ export default function NotFound() {
                 icon: "/icons/truck_icon.svg",
                 title: "Sťahovanie",
                 description: "Byty, domy, kancelárie, klavíre, trezory. Kdekoľvek na Slovensku aj do zahraničia.",
-                href: "/stahovanie-bratislava",
+                href: "/stahovanie/stahovanie-bratislava",
               },
               {
                 icon: "/icons/vypratavanie_icon.svg",

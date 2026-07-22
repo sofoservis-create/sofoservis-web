@@ -281,7 +281,7 @@ export default function VypratavanieBratislavaPage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          { title: "Sťahovanie Bratislava", description: "Profesionálne sťahovacie služby v celej Bratislave.", href: "/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
+          { title: "Sťahovanie Bratislava", description: "Profesionálne sťahovacie služby v celej Bratislave.", href: "/stahovanie/stahovanie-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Vypratávanie bytov a domov", description: "Kompletné vypratávanie domácností.", href: "/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Vypratávanie pivníc a garáží", description: "Rýchle vypratávanie pivníc, kobiek a garáží.", href: "/vypratavanie-pivnic-garazi-nebytovych-priestorov", icon: "/icons/house_icon.svg" },
           { title: "Odvoz starého nábytku", description: "Odvoz a ekologická likvidácia starého nábytku.", href: "/vypratavanie-odvoz-stareho-nabytku", icon: "/icons/recycle_icon.svg" },

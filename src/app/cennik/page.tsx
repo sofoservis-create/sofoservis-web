@@ -302,7 +302,7 @@ export default function CennikPage() {
           {
             title: "Sťahovanie bytov a domov",
             description: "Profesionálne sťahovanie bytov, domov a chalúp po celom Slovensku.",
-            href: "/stahovanie-bytov-domov",
+            href: "/stahovanie/stahovanie-bytov-domov",
             icon: "/icons/truck_icon.svg",
           },
           {
@@ -320,7 +320,7 @@ export default function CennikPage() {
           {
             title: "Medzinárodné sťahovanie",
             description: "Sťahovanie do zahraničia a zo zahraničia na Slovensko za férové ceny.",
-            href: "/medzinarodne-stahovanie",
+            href: "/stahovanie/medzinarodne-stahovanie",
             icon: "/icons/globe_icon.svg",
           },
         ]}

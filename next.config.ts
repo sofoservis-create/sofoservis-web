@@ -108,7 +108,7 @@ const nextConfig = {
       // Sťahovanie pianína → klavíra (konsolidácia kanibalizácie)
       {
         source: "/stahovanie-pianina",
-        destination: "/stahovanie-klavira",
+        destination: "/stahovanie/stahovanie-tazkych-bremien",
         permanent: true,
       },
       // EN upright-piano-moving → piano-moving (konsolidácia)
@@ -145,12 +145,12 @@ const nextConfig = {
       // Blog konsolidácia – zvyšných 15 blogov + index (jún 2026)
       {
         source: "/blog",
-        destination: "/stahovanie-bratislava",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
       {
         source: "/blog/stahovanie-seniorov-starsich-osob",
-        destination: "/stahovanie-bytov-domov",
+        destination: "/stahovanie/stahovanie-bytov-domov",
         permanent: true,
       },
       {
@@ -160,7 +160,7 @@ const nextConfig = {
       },
       {
         source: "/blog/prenajom-stahovacieho-auta-vs-firma",
-        destination: "/stahovanie-bratislava",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
       {
@@ -170,17 +170,17 @@ const nextConfig = {
       },
       {
         source: "/blog/stahovanie-s-domacimi-zvieratami",
-        destination: "/stahovanie-bytov-domov",
+        destination: "/stahovanie/stahovanie-bytov-domov",
         permanent: true,
       },
       {
         source: "/blog/stahovanie-v-zime-vyhody-vyzvy",
-        destination: "/stahovanie-bratislava",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
       {
         source: "/blog/stahovanie-klavira-tazkych-predmetov",
-        destination: "/stahovanie-klavira",
+        destination: "/stahovanie/stahovanie-tazkych-bremien",
         permanent: true,
       },
       {
@@ -195,17 +195,17 @@ const nextConfig = {
       },
       {
         source: "/blog/ako-si-vybrat-stahovaciu-firmu-10-kriterii",
-        destination: "/stahovanie-bratislava",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
       {
         source: "/blog/medzinarodne-stahovanie-slovensko-2026",
-        destination: "/medzinarodne-stahovanie",
+        destination: "/stahovanie/medzinarodne-stahovanie",
         permanent: true,
       },
       {
         source: "/blog/stahovanie-kancelarie-ako-minimalizovat-prestoj",
-        destination: "/stahovanie-kancelarii-firiem",
+        destination: "/stahovanie/stahovanie-kancelarii-firiem",
         permanent: true,
       },
       {
@@ -215,12 +215,12 @@ const nextConfig = {
       },
       {
         source: "/blog/ako-sa-pripravit-na-stahovanie-checklist",
-        destination: "/stahovanie-bratislava",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
       {
         source: "/blog/kolko-stoji-stahovanie-bratislava-2026",
-        destination: "/stahovanie-bratislava",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
 
@@ -305,7 +305,7 @@ const nextConfig = {
       },
       {
         source: "/sluzby/stahovanie-tazkych-bremien",
-        destination: "/stahovanie-tazkych-bremien",
+        destination: "/stahovanie/stahovanie-tazkych-bremien",
         permanent: true,
       },
       {
@@ -320,12 +320,12 @@ const nextConfig = {
       },
       {
         source: "/sluzby/stahovanie-firiem",
-        destination: "/stahovanie-kancelarii-firiem",
+        destination: "/stahovanie/stahovanie-kancelarii-firiem",
         permanent: true,
       },
       {
         source: "/sluzby/stahovanie-bytov",
-        destination: "/stahovanie-bytov-domov",
+        destination: "/stahovanie/stahovanie-bytov-domov",
         permanent: true,
       },
       // EN /services/* → correct English service URLs (404 fix)
@@ -713,9 +713,59 @@ const nextConfig = {
       },
       {
         source: "/blog/ako-spravne-zabalit-byt-na-stahovanie",
-        destination: "/blog/ako-sa-pripravit-na-stahovanie-checklist",
+        destination: "/stahovanie/stahovanie-bratislava",
         permanent: true,
       },
+
+      // === URL RESTRUCTURE (júl 2026): /stahovanie/* nested tree ===
+
+      // Section 1: PRESUN starých URL → nové /stahovanie/[slug] (17 stránok)
+      { source: "/stahovanie-bytov-domov", destination: "/stahovanie/stahovanie-bytov-domov", permanent: true },
+      { source: "/stahovanie-kancelarii-firiem", destination: "/stahovanie/stahovanie-kancelarii-firiem", permanent: true },
+      { source: "/stahovanie-tazkych-bremien", destination: "/stahovanie/stahovanie-tazkych-bremien", permanent: true },
+      { source: "/medzinarodne-stahovanie", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-bratislava", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      { source: "/stahovanie-trnava", destination: "/stahovanie/stahovanie-trnava", permanent: true },
+      { source: "/stahovanie-pezinok", destination: "/stahovanie/stahovanie-pezinok", permanent: true },
+      { source: "/stahovanie-senica", destination: "/stahovanie/stahovanie-senica", permanent: true },
+      { source: "/stahovanie-nitra", destination: "/stahovanie/stahovanie-nitra", permanent: true },
+      { source: "/stahovanie-komarno", destination: "/stahovanie/stahovanie-komarno", permanent: true },
+      { source: "/stahovanie-senec", destination: "/stahovanie/stahovanie-senec", permanent: true },
+      { source: "/stahovanie-piestany", destination: "/stahovanie/stahovanie-piestany", permanent: true },
+      { source: "/stahovanie-galanta", destination: "/stahovanie/stahovanie-galanta", permanent: true },
+      { source: "/stahovanie-malacky", destination: "/stahovanie/stahovanie-malacky", permanent: true },
+      { source: "/stahovanie-samorin", destination: "/stahovanie/stahovanie-samorin", permanent: true },
+      { source: "/stahovanie-sala", destination: "/stahovanie/stahovanie-sala", permanent: true },
+      { source: "/stahovanie-stupava", destination: "/stahovanie/stahovanie-stupava", permanent: true },
+
+      // Section 2: ZMAZANÉ stránky → najbližší nadradený cieľ
+      // preprava nábytku → hub
+      { source: "/stahovanie-preprava-nabytku", destination: "/stahovanie", permanent: true },
+      // ťažké bremená subtypes → nový slug ťažkých bremien
+      { source: "/stahovanie-klavira", destination: "/stahovanie/stahovanie-tazkych-bremien", permanent: true },
+      { source: "/stahovanie-strojov-zariadeni", destination: "/stahovanie/stahovanie-tazkych-bremien", permanent: true },
+      { source: "/stahovanie-trezorov", destination: "/stahovanie/stahovanie-tazkych-bremien", permanent: true },
+      // BA mestské časti → /stahovanie/stahovanie-bratislava
+      { source: "/stahovanie-petrzalka", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      { source: "/stahovanie-ruzinov", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      { source: "/stahovanie-stare-mesto", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      { source: "/stahovanie-nove-mesto", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      { source: "/stahovanie-karlova-ves", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      { source: "/stahovanie-dubravka", destination: "/stahovanie/stahovanie-bratislava", permanent: true },
+      // medzinarodne subpages wildcard + explicit na/zo
+      { source: "/medzinarodne-stahovanie/:path*", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-zo-slovenska", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-z-anglie-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-z-nemecka-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-z-rakuska-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-z-holandska-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-z-francuzska-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+      { source: "/stahovanie-z-usa-na-slovensko", destination: "/stahovanie/medzinarodne-stahovanie", permanent: true },
+
+      // Section 3: Hlohovec & Levice → hub (mestá zrušené)
+      { source: "/stahovanie-hlohovec", destination: "/stahovanie", permanent: true },
+      { source: "/stahovanie-levice", destination: "/stahovanie", permanent: true },
     ];
   },
 };

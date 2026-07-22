@@ -284,7 +284,7 @@ export default function MontazNabytkuPage() {
         services={[
           { title: "Montáž kuchyne", description: "Montáž kuchynských liniek od 120€/m.", href: "/montaz-kuchyne", icon: "/icons/kitchen_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a práce v domácnosti.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
-          { title: "Sťahovanie bytov a domov", description: "Vrátane demontáže a montáže nábytku.", href: "/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
+          { title: "Sťahovanie bytov a domov", description: "Vrátane demontáže a montáže nábytku.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
         ]}
       />
       <FAQJsonLd items={faqSchemaItems} />

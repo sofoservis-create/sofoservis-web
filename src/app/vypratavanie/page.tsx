@@ -310,7 +310,7 @@ export default function VypratavaniePage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          { title: "Sťahovanie bytov a domov", description: "Presťahujeme vás spoľahlivo a rýchlo.", href: "/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
+          { title: "Sťahovanie bytov a domov", description: "Presťahujeme vás spoľahlivo a rýchlo.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/truck_icon.svg" },
           { title: "Odvoz stavebného odpadu", description: "Odvoz a ekologická likvidácia stavebného odpadu.", href: "/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/recycle_icon.svg" },
           { title: "Hodinový manžel", description: "Drobné opravy a úpravy po vypratávaní.", href: "/hodinovy-manzel-majster", icon: "/icons/repair_icon.svg" },
           { title: "Montáž nábytku", description: "Skladanie nového nábytku do vyprataného priestoru.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },

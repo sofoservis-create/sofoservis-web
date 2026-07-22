@@ -271,7 +271,7 @@ export default function StahovaniePianinaPage() {
           {
             title: "Sťahovanie bytov a domov",
             description: "Spoľahlivé sťahovanie bytov a rodinných domov.",
-            href: "/stahovanie-bytov-domov",
+            href: "/stahovanie/stahovanie-bytov-domov",
             icon: "/icons/house_icon.svg",
           },
         ]}
