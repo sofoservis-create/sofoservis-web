@@ -16,9 +16,9 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Montáž nábytku Bratislava — IKEA, JYSK, Asko | Sofoservis",
+  title: "Montáž a skladanie nábytku Bratislava | Sofoservis",
   description:
-    "Profesionálna montáž nábytku v Bratislave ✅ IKEA, JYSK, Asko a iné značky ✅ Od 25€/hod ✅ Dostupní do 24 hodín",
+    "Profesionálna montáž nábytku v Bratislave a okolí ✅ IKEA, JYSK, Asko a iné značky ✅ Od 25€/hod. ✅ Dostupní do 24 hodín",
   alternates: {
     canonical: "https://www.sofoservis.sk/montaz-nabytku/bratislava",
     languages: {
@@ -90,7 +90,7 @@ export default function MontazNabytkuBratislavaPage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          title="Montáž nábytku v Bratislave"
+          title="Montáž a skladanie nábytku v Bratislave"
           description="Profesionálne skladanie a montáž nábytku v celej Bratislave. Ušetrite si čas a nervy, my sa postaráme o to, aby váš nový nábytok stál pevne a rovno."
           formTitle="Získať kalkuláciu"
           benefits={[]}
@@ -104,7 +104,7 @@ export default function MontazNabytkuBratislavaPage() {
       </div>
       <div className="lg:hidden">
         <Hero
-          title="Montáž nábytku v Bratislave"
+          title="Montáž a skladanie nábytku v Bratislave"
           description="Profesionálne skladanie a montáž nábytku v celej Bratislave. Ušetrite si čas a nervy, my sa postaráme o to, aby váš nový nábytok stál pevne a rovno."
           formTitle="Získať kalkuláciu"
           benefits={[]}

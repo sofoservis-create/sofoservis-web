@@ -16,9 +16,9 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Montáž kuchýň a skladanie kuchyne | Sofoservis",
+  title: "Montáž a skladanie kuchynskej linky | Sofoservis",
   description:
-    "Profesionálna montáž kuchyne od 120€/m. Demontáž od 60€/m. Výjazd od 20€. Všetky typy kuchynských liniek. Kontaktujte nás ešte dnes!",
+    "Profesionálna montáž kuchyne od 120€. Demontáž od 60€. Výjazd od 20€. Všetky typy kuchynských liniek. Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/montaz-kuchyne",
       languages: {
@@ -62,7 +62,7 @@ const faqSchemaItems = [
 export default function MontazKuchynePage() {
   // Custom data for Hero section
   const heroData = {
-    title: "Montáž a skladanie kuchyne",
+    title: "Skladanie a montáž kuchyne",
     description:
       "Profesionálne služby v oblasti montáže, skladania a inštalácie kuchynských liniek a kuchynského nábytku.",
     formTitle: "Získajte bezplatnú cenovú ponuku",

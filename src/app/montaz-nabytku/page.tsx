@@ -16,7 +16,7 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Montáž, skladanie a demontáž nábytku | Sofoservis",
+  title: "Montáž a skladanie nábytku od 25€ | Sofoservis",
   description:
     "Profesionálna montáž a demontáž nábytku. Výjazd od 25€. IKEA, Asko, Jysk a všetky typy nábytku. Rýchlo a spoľahlivo. Kontaktujte nás ešte dnes!",
   alternates: {
@@ -62,7 +62,7 @@ const faqSchemaItems = [
 export default function MontazNabytkuPage() {
   // Custom data for Hero section
   const heroData = {
-    title: "Montáž, skladanie a demontáž nábytku",
+    title: "Skladanie a montáž nábytku",
     description:
       "Profesionálne montáž a skladanie nábytku od 25€/hod. Naši skúsení odborníci sa postarajú o poskladanie nového nábytku alebo demontáž a presun existujúceho.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
