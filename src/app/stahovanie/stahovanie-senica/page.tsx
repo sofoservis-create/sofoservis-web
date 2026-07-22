@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Senica - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Senica - Aby sťahovanie nebolo trápenie | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Senici a okolí. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy v Senici a celom Záhorí.",
+    "Aby sťahovanie nebolo trápenie - v Senici a na Záhorí to zariadime za vás. Naložíme, prevezieme a vynesieme všetko opatrne. Cenu vám pošleme zdarma.",
   keywords:
     "stahovanie senica, stahovanie bytov senica, stahovacie služby senica, stahovanie firiem senica, preprava nabytku senica, stahovanie zahorie, stahovanie dom senica",
   alternates: {
@@ -34,7 +34,7 @@ export const metadata = {
 export default function StahovanieSenicaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Senica: Rýchlo a spoľahlivo",
+    title: "Lacné sťahovanie v Senici",
     description:
       "Kompletné sťahovacie služby v Senici a celom regióne Záhoria. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie.",
     formTitle: "Sťahovanie v Senici bez starostí s bezplatnou ponukou",

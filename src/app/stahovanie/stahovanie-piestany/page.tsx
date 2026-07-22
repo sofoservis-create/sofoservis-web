@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Piešťany - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Piešťany - Rýchlo a bez starostí | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Piešťanoch a okolí. Rýchlo, spoľahlivo a za výhodné ceny.",
+    "Rýchle sťahovanie v Piešťanoch bez starostí a bez poškodenia nábytku. Prídeme s autom, dekami aj vozíkmi. Povedzte termín a ozveme sa s cenou.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-piestany",
       languages: {
@@ -30,8 +30,8 @@ export const metadata = {
   keywords:
     "stahovanie piestany, stahovanie bytov piestany, stahovacie služby piestany, stahovanie firiem piestany, preprava nabytku piestany, stahovanie dom piestany, stahovanie kupele piestany",
   openGraph: {
-      title: "Sťahovanie Piešťany - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Piešťanoch a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovanie Piešťany - Rýchlo a bez starostí | Sofoservis",
+      description: "Rýchle sťahovanie v Piešťanoch bez starostí a bez poškodenia nábytku. Prídeme s autom, dekami aj vozíkmi. Povedzte termín a ozveme sa s cenou.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-piestany",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovaniePiestanyPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Piešťany: Rýchlo a spoľahlivo",
+    title: "Sťahovanie Piešťany: Rýchlo a lacno",
     description:
       "Kompletné sťahovacie služby v Piešťanoch a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
     formTitle: "Sťahovanie v Piešťanoch bez starostí s bezplatnou ponukou",

@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Galanta - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Galanta - Lacno, rýchlo a spolahlivo | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Galante a okolí. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy v Galante a celom.",
+    "Hľadáte spoľahlivé sťahovanie v Galante? Naložíme, prevezieme aj vynesieme váš nábytok rýchlo a bez poškodenia. Napíšte odkiaľ kam a pošleme vám cenu.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-galanta",
       languages: {
@@ -30,8 +30,8 @@ export const metadata = {
   keywords:
     "stahovanie galanta, stahovanie bytov galanta, stahovacie služby galanta, stahovanie firiem galanta, preprava nabytku galanta, stahovanie dom galanta",
   openGraph: {
-      title: "Sťahovanie Galanta - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Galante a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
+      title: "Sťahovanie Galanta - Lacno, rýchlo a spolahlivo | Sofoservis",
+      description: "Hľadáte spoľahlivé sťahovanie v Galante? Naložíme, prevezieme aj vynesieme váš nábytok rýchlo a bez poškodenia. Napíšte odkiaľ kam a pošleme vám cenu.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-galanta",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieGalantaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Galanta: Rýchlo a spoľahlivo",
+    title: "Sťahovanie Galanta a okolie",
     description:
       "Kompletné sťahovacie služby v Galante a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v celej Galante a priľahlých obciach.",
     formTitle: "Sťahovanie v Galante bez starostí s bezplatnou ponukou",

@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Nitra - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Nitra - Preprava nábytku Nitra a okolie | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Nitre a okolí. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy v celom meste a širšom.",
+    "Sťahovanie a preprava nábytku v Nitre a okolí. Bezpečne prenesieme spotrebiče, skrine aj krehké veci, náklad je poistený. Cenovú ponuku pošleme zdarma.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-nitra",
       languages: {
@@ -30,8 +30,8 @@ export const metadata = {
   keywords:
     "stahovanie nitra, stahovanie bytov nitra, stahovacie služby nitra, stahovanie firiem nitra, preprava nabytku nitra, stahovanie dom nitra",
   openGraph: {
-      title: "Sťahovanie Nitra - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Nitre a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
+      title: "Sťahovanie Nitra - Preprava nábytku Nitra a okolie | Sofoservis",
+      description: "Sťahovanie a preprava nábytku v Nitre a okolí. Bezpečne prenesieme spotrebiče, skrine aj krehké veci, náklad je poistený. Cenovú ponuku pošleme zdarma.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-nitra",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieNitraPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Nitra: Rýchlo a spoľahlivo",
+    title: "Sťahovanie nábytku Nitra",
     description:
       "Kompletné sťahovacie služby v Nitre a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v každej časti Nitry a okolitých obciach.",
     formTitle: "Sťahovanie v Nitre bez starostí s bezplatnou ponukou",

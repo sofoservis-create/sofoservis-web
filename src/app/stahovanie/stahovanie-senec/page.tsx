@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Senec - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Senec - Rýchlo a hladko | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Senci a okolí. Rýchlo, spoľahlivo a za výhodné ceny.",
+    "Sťahovanie v Senci a okolí – hladko, rýchlo a bez zbytočného stresu. Skúsená posádka prenesie byt, dom aj kanceláriu. Cenovú ponuku pošleme obratom.",
   keywords:
     "stahovanie senec, stahovanie bytov senec, stahovacie služby senec, stahovanie firiem senec, preprava nabytku senec, stahovanie dom senec",
   alternates: {
@@ -34,7 +34,7 @@ export const metadata = {
 export default function StahovanieSenecPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Senec: Rýchlo a spoľahlivo",
+    title: "Sťahovanie Senec",
     description:
       "Kompletné sťahovacie služby v Senci a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Presťahujeme vás v rámci Senca alebo kamkoľvek.",
     formTitle: "Sťahovanie v Senci bez starostí s bezplatnou ponukou",

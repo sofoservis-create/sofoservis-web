@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Stupava - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Stupava - Presťahujeme vašu domácnosť | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Stupave a okolí. Rýchle, spoľahlivé a cenovo výhodné sťahovanie bytov, domov, kancelárií a firiem v Stupave a blízkych.",
+    "Sťahovacia firma pre Stupavu a okolie - byty, domy aj firmy. Prídeme načas, chránime váš nábytok a držíme dohodnutú cenu. Dohodnite si obhliadku.",
   keywords:
     "stahovanie stupava, stahovanie bytov stupava, stahovacie služby stupava, stahovanie firiem stupava, preprava nabytku stupava, stahovanie dom stupava",
   alternates: {
@@ -30,8 +30,8 @@ export const metadata = {
       },
   },
   openGraph: {
-      title: "Sťahovanie Stupava - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Stupave a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovanie Stupava - Presťahujeme vašu domácnosť | Sofoservis",
+      description: "Sťahovacia firma pre Stupavu a okolie - byty, domy aj firmy. Prídeme načas, chránime váš nábytok a držíme dohodnutú cenu. Dohodnite si obhliadku.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-stupava",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieStupavaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Stupava: Rýchlo a spoľahlivo",
+    title: "Sťahovacia firma Stupava",
     description:
       "Kompletné sťahovacie služby v Stupave a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v Stupave.",
     formTitle: "Sťahovanie v Stupave bez starostí s bezplatnou ponukou",

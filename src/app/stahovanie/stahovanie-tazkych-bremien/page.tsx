@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie ťažkých bremien | Klavíry, trezory, | Sofoservis",
+  title: "Sťahovanie ťažkých bremien - Klavíre, trezory aj stroje | Sofoservis",
   description:
-    "Ponúkame profesionálne sťahovanie ťažkých bremien ✅ Klavíry, trezory, výrobné zariadenia ✅ Špeciálne techniky a vybavenie ✅ Obhliadka priestoru zadarmo.",
+    "Sťahovanie klavírov, trezorov a strojov, ktoré bežne nezdvihnete. Máme techniku aj skúsený tím na ťažké a rozmerné bremená. Náklad poistený, obhliadka zdarma.",
   keywords:
     "stahovanie tazkych bremien, sťahovanie klavíra, sťahovanie trezoru, preprava ťažkých predmetov, sťahovanie výrobných strojov, sťahovanie bankomatu, ťažké bremená, nadrozmerné predmety",
   alternates: {

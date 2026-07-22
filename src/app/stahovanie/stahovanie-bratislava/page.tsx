@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Bratislava - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Bratislava - Lacné sťahovanie bytov | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Bratislave od 30€/hod. Sťahujeme byty, domy, kancelárie a firmy v každej mestskej časti. Rýchlo a spoľahlivo.",
+    "Sťahovanie bytov, domov aj firiem v Bratislave a všetkých mestských častiach. Rýchlo, s poistením nákladu a jasným cenníkom bez prekvapení. Obhliadka zdarma.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-bratislava",
       languages: {
@@ -30,9 +30,9 @@ export const metadata = {
   keywords:
     "stahovanie bratislava, stahovanie bytov bratislava, stahovacie služby, stahovanie firiem bratislava, preprava nabytku bratislava",
   openGraph: {
-    title: "Sťahovanie Bratislava - byty, domy, nábytok a kancelárie",
+    title: "Sťahovanie Bratislava - Lacné sťahovanie bytov | Sofoservis",
     description:
-      "Profesionálne sťahovacie služby v Bratislave a okolí od 30€/hod. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
+      "Sťahovanie bytov, domov aj firiem v Bratislave a všetkých mestských častiach. Rýchlo, s poistením nákladu a jasným cenníkom bez prekvapení. Obhliadka zdarma.",
     url: "https://www.sofoservis.sk/stahovanie/stahovanie-bratislava",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -44,7 +44,7 @@ export const metadata = {
 export default function StahovanieBratislavaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Bratislava: Rýchlo a spoľahlivo",
+    title: "Sťahovacie služby v Bratislave",
     description:
       "Kompletné sťahovacie služby v Bratislave a okolí od 30€/hod. Profesionálny tím, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
     formTitle: "Sťahovanie v Bratislave bez starostí s bezplatnou ponukou",

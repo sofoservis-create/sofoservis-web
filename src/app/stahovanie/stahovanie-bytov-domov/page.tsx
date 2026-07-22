@@ -18,25 +18,24 @@ import TrustBadges from "@/components/sections/TrustBadges";
 
 const stahovanieLocations = [
   { name: "Bratislava", href: "/stahovanie/stahovanie-bratislava" },
-  { name: "Nitra", href: "/stahovanie-nitra" },
-  { name: "Trnava", href: "/stahovanie-trnava" },
-  { name: "Pezinok", href: "/stahovanie-pezinok" },
-  { name: "Galanta", href: "/stahovanie-galanta" },
-  { name: "Levice", href: "/stahovanie-levice" },
-  { name: "Piešťany", href: "/stahovanie-piestany" },
-  { name: "Senec", href: "/stahovanie-senec" },
-  { name: "Senica", href: "/stahovanie-senica" },
-  { name: "Stupava", href: "/stahovanie-stupava" },
-  { name: "Komárno", href: "/stahovanie-komarno" },
-  { name: "Malacky", href: "/stahovanie-malacky" },
-  { name: "Šamorín", href: "/stahovanie-samorin" },
-  { name: "Hlohovec", href: "/stahovanie-hlohovec" },
+  { name: "Nitra", href: "/stahovanie/stahovanie-nitra" },
+  { name: "Trnava", href: "/stahovanie/stahovanie-trnava" },
+  { name: "Pezinok", href: "/stahovanie/stahovanie-pezinok" },
+  { name: "Galanta", href: "/stahovanie/stahovanie-galanta" },
+  { name: "Piešťany", href: "/stahovanie/stahovanie-piestany" },
+  { name: "Senec", href: "/stahovanie/stahovanie-senec" },
+  { name: "Senica", href: "/stahovanie/stahovanie-senica" },
+  { name: "Stupava", href: "/stahovanie/stahovanie-stupava" },
+  { name: "Komárno", href: "/stahovanie/stahovanie-komarno" },
+  { name: "Malacky", href: "/stahovanie/stahovanie-malacky" },
+  { name: "Šamorín", href: "/stahovanie/stahovanie-samorin" },
+  { name: "Šaľa", href: "/stahovanie/stahovanie-sala" },
 ];
 
 export const metadata = {
-  title: "Sťahovanie bytov a domov - rýchlo a lacno | Sofoservis",
+  title: "Sťahovanie bytov a domov - Cena už od 60€ | Sofoservis",
   description:
-    "Profesionálne sťahovanie bytov a domov od 30€/hod. Obhliadka priestoru zadarmo. Rýchlo, spoľahlivo, spokojnosť garantovaná. Kontaktujte nás ešte dnes!",
+    "Sťahovanie bytov a domov na kľúč - od vynosenia až po montáž nábytku v novom. Vopred známa cena už od 60 €, žiadne skryté poplatky. Dohodnite si termín.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-bytov-domov",
       languages: {
@@ -48,9 +47,9 @@ export const metadata = {
   keywords:
     "stahovanie bytov, sťahovanie bytov, stahovanie bytu, stahovanie domov, stahovanie nabytku, preprava nabytku, montaz nabytku, demontaz nabytku",
   openGraph: {
-    title: "Sťahovanie bytov a domov - rýchlo a lacno | Sofoservis",
+    title: "Sťahovanie bytov a domov - Cena už od 60€ | Sofoservis",
     description:
-      "Profesionálne sťahovanie bytov a domov od 30€/hod. Obhliadka priestoru zadarmo. Rýchlo, spoľahlivo.",
+      "Sťahovanie bytov a domov na kľúč - od vynosenia až po montáž nábytku v novom. Vopred známa cena už od 60 €, žiadne skryté poplatky. Dohodnite si termín.",
     url: "https://www.sofoservis.sk/stahovanie/stahovanie-bytov-domov",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -80,7 +79,7 @@ const faqSchemaItems = [
 export default function StahovanieBytovDomovPage() {
   // Custom data for Hero section
   const heroData = {
-    title: "Sťahovanie bytov a domov",
+    title: "Sťahovanie domácností - Byty aj domy",
     description:
       "Profesionálne sťahovanie bytov a domov od 30€/hod. Šetríme váš čas, energiu a nervy vďaka skúsenému tímu, ktorý sa postará o všetko od balenia.",
     formTitle: "Získajte bezplatnú cenovú ponuku",

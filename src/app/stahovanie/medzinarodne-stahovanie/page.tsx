@@ -17,9 +17,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Medzinárodné sťahovanie do Európy | Sofoservis",
+  title: "Medzinárodné sťahovanie do / zo zahraničia | Sofoservis",
   description:
-    "Profesionálne medzinárodné sťahovanie do 16 európskych krajín a 15 hlavných miest. Rakúsko, Nemecko, Česko, Anglicko a ďalšie. Obhliadka zadarmo, férové.",
+    "Medzinárodné sťahovanie do Česka, Rakúska, Nemecka aj ďalších krajín Európy. Vybavíme dopravu, formality aj zabalenie vecí. Nezáväzná cenová ponuka zdarma.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/medzinarodne-stahovanie",
       languages: {
@@ -31,8 +31,8 @@ export const metadata = {
   keywords:
     "medzinárodné sťahovanie, sťahovanie do zahraničia, sťahovanie zo zahraničia, sťahovanie do Európy, zahraničné sťahovanie, preprava vecí do zahraničia, sťahovanie z ČR, sťahovanie do Rakúska, sťahovanie do Nemecka",
   openGraph: {
-      title: "Medzinárodné sťahovanie do Európy | Sofoservis",
-      description: "Profesionálne medzinárodné sťahovanie do 16 európskych krajín a 15 hlavných miest. Komplexné riešenie s bezpečnou prepravou. Obhliadka zadarmo.",
+      title: "Medzinárodné sťahovanie do / zo zahraničia | Sofoservis",
+      description: "Medzinárodné sťahovanie do Česka, Rakúska, Nemecka aj ďalších krajín Európy. Vybavíme dopravu, formality aj zabalenie vecí. Nezáväzná cenová ponuka zdarma.",
       url: "https://www.sofoservis.sk/stahovanie/medzinarodne-stahovanie",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -86,7 +86,7 @@ const cities = [
 
 export default function MedzinarodneStahovaniePage() {
   const heroData = {
-    title: "Medzinárodné sťahovanie",
+    title: "Medzinárodné sťahovanie po Európe",
     description:
       "Komplexné služby pre sťahovanie do a zo zahraničia s minimom starostí. Zabezpečíme profesionálny presun vašej domácnosti alebo firmy kamkoľvek v Európe — do 16 krajín a 15 hlavných miest.",
     formTitle: "Získajte bezplatnú cenovú ponuku",

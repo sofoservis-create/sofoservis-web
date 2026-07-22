@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Komárno - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Komárno - Presťahujeme vás raz dva | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Komárne a okolí. Rýchlo, spoľahlivo a za výhodné ceny.",
+    "Presťahujeme vás v Komárne raz-dva. Byt, dom aj kanceláriu. Skúsená posádka, auto aj baliaci materiál so sebou. Nezáväznú cenu pošleme obratom, len napíšte.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-komarno",
       languages: {
@@ -30,8 +30,8 @@ export const metadata = {
   keywords:
     "stahovanie komarno, stahovanie bytov komarno, stahovacie služby komarno, stahovanie firiem komarno, preprava nabytku komarno, stahovanie dom komarno",
   openGraph: {
-      title: "Sťahovanie Komárno - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Komárne a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovanie Komárno - Presťahujeme vás raz dva | Sofoservis",
+      description: "Presťahujeme vás v Komárne raz-dva. Byt, dom aj kanceláriu. Skúsená posádka, auto aj baliaci materiál so sebou. Nezáväznú cenu pošleme obratom, len napíšte.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-komarno",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieKomarnoPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Komárno: Rýchlo a spoľahlivo",
+    title: "Sťahovacie služby Komárno",
     description:
       "Kompletné sťahovacie služby v Komárne a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v celom.",
     formTitle: "Sťahovanie v Komárne bez starostí s bezplatnou ponukou",

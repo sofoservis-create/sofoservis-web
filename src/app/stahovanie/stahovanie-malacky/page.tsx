@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Malacky - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Malacky - Cenová ponuka obratom | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Malackách a okolí. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy po celých Malackách.",
+    "Sťahujete sa v Malackách či na Záhorí? Pošlite nám zoznam vecí a dostanete cenovú ponuku obratom. Rýchlo, opatrne a bez zbytočných príplatkov.",
   keywords:
     "stahovanie malacky, stahovanie bytov malacky, stahovacie služby malacky, stahovanie firiem malacky, preprava nabytku malacky, stahovanie zahorie",
   alternates: {
@@ -30,8 +30,8 @@ export const metadata = {
       },
   },
   openGraph: {
-      title: "Sťahovanie Malacky - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Malackách a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovanie Malacky - Cenová ponuka obratom | Sofoservis",
+      description: "Sťahujete sa v Malackách či na Záhorí? Pošlite nám zoznam vecí a dostanete cenovú ponuku obratom. Rýchlo, opatrne a bez zbytočných príplatkov.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-malacky",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieMalackyPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Malacky: Rýchlo a spoľahlivo",
+    title: "Sťahovacie služby v Malackách",
     description:
       "Kompletné sťahovacie služby v Malackách a na Záhorí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v celom meste aj okolí.",
     formTitle: "Sťahovanie v Malackách bez starostí s bezplatnou ponukou",

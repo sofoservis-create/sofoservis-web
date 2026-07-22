@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Trnava - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Trnava - Lacné sťahovanie bytov a domov | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Trnave a okolí. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy v celom meste a okolí.",
+    "Lacné sťahovanie bytov a domov v Trnave a okolí s prehľadným cenníkom. Prevezieme nábytok aj spotrebiče rýchlo a bez poškodenia. Cenová ponuka zdarma.",
   keywords:
     "stahovanie trnava, stahovanie bytov trnava, stahovacie služby trnava, stahovanie firiem trnava, preprava nabytku trnava",
   alternates: {
@@ -30,8 +30,8 @@ export const metadata = {
       },
   },
   openGraph: {
-      title: "Sťahovanie Trnava - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Trnave a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a firmy.",
+      title: "Sťahovanie Trnava - Lacné sťahovanie bytov a domov | Sofoservis",
+      description: "Lacné sťahovanie bytov a domov v Trnave a okolí s prehľadným cenníkom. Prevezieme nábytok aj spotrebiče rýchlo a bez poškodenia. Cenová ponuka zdarma.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-trnava",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieTrnavaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Trnava: Rýchlo a spoľahlivo",
+    title: "Lacná sťahovacia služba v Trnave",
     description:
       "Kompletné sťahovacie služby v Trnave a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v Trnave.",
     formTitle: "Sťahovanie v Trnave bez starostí s bezplatnou ponukou",

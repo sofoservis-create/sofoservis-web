@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Pezinok - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Pezinok | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Pezinku a okolí. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy, kancelárie a pivnice v celom meste aj okolí.",
+    "Sťahovanie v Pezinku a okolí - byty, domy aj pivnice. Postaráme sa o naloženie, prevoz aj vynesenie, vy sa nezapotíte. Napíšte a pripravíme cenu.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-pezinok",
       languages: {
@@ -30,8 +30,8 @@ export const metadata = {
   keywords:
     "stahovanie pezinok, stahovanie bytov pezinok, stahovacie služby pezinok, stahovanie firiem pezinok, preprava nabytku pezinok, malokarpatská oblasť stahovanie",
   openGraph: {
-      title: "Sťahovanie Pezinok - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Pezinku a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovanie Pezinok | Sofoservis",
+      description: "Sťahovanie v Pezinku a okolí - byty, domy aj pivnice. Postaráme sa o naloženie, prevoz aj vynesenie, vy sa nezapotíte. Napíšte a pripravíme cenu.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-pezinok",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovaniePezinokPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Pezinok: Rýchlo a spoľahlivo",
+    title: "Sťahovanie Pezinok a okolie",
     description:
       "Kompletné sťahovacie služby v Pezinku a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie aj pivnice.",
     formTitle: "Sťahovanie v Pezinku bez starostí s bezplatnou ponukou",

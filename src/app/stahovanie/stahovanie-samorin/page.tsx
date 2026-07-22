@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Šamorín - byty, domy, nábytok a kancelárie",
+  title: "Sťahovacie služby Šamorín a okolie | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Šamoríne a okolí. Rýchlo, spoľahlivo a za výhodné ceny.",
+    "Sťahovanie bytov a domov v Šamoríne a okolí. Zabalíme, prenesieme aj poskladáme nábytok, vy len ukážete kam. Ozvite sa a dohodneme termín aj cenu.",
   keywords:
     "stahovanie samorin, stahovanie bytov samorin, stahovacie služby samorin, stahovanie firiem samorin, preprava nabytku samorin, stahovanie dom samorin",
   alternates: {
@@ -30,8 +30,8 @@ export const metadata = {
       },
   },
   openGraph: {
-      title: "Sťahovanie Šamorín - byty, domy, nábytok a kancelárie | Sofoservis",
-      description: "Profesionálne sťahovacie služby v Šamoríne a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovacie služby Šamorín a okolie | Sofoservis",
+      description: "Sťahovanie bytov a domov v Šamoríne a okolí. Zabalíme, prenesieme aj poskladáme nábytok, vy len ukážete kam. Ozvite sa a dohodneme termín aj cenu.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-samorin",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function SamorinPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Šamorín: Rýchlo a spoľahlivo",
+    title: "Šťahovanie bytov a domov v Šamoríne",
     description:
       "Kompletné sťahovacie služby v Šamoríne a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
     formTitle: "Sťahovanie v Šamoríne bez starostí s bezplatnou ponukou",

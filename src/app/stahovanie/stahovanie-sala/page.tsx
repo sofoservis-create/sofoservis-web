@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Šaľa - byty, domy, nábytok a kancelárie",
+  title: "Sťahovanie Šaľa - Profesionálne sťahovacie služby | Sofoservis",
   description:
-    "Profesionálne sťahovacie služby v Šali a okolí. Rýchlo, spoľahlivo a za výhodné ceny.",
+    "Spoľahlivé sťahovanie v Šali a okolí za rozumnú cenu. Naložíme, odvezieme aj vynesieme byt či dom rýchlo a opatrne. Nezáväzná obhliadka a cena zdarma.",
   keywords:
     "stahovanie sala, stahovanie bytov sala, stahovacie služby sala, stahovanie firiem sala, preprava nabytku sala, stahovanie dom sala",
   alternates: {
@@ -30,8 +30,8 @@ export const metadata = {
       },
   },
   openGraph: {
-      title: "Sťahovanie Šaľa - byty, domy, nábytok a kancelárie",
-      description: "Profesionálne sťahovacie služby v Šali a okolí od 30€/hod. Rýchlo, spoľahlivo a za výhodné ceny. Sťahujeme byty, domy a kancelárie.",
+      title: "Sťahovanie Šaľa - Profesionálne sťahovacie služby | Sofoservis",
+      description: "Spoľahlivé sťahovanie v Šali a okolí za rozumnú cenu. Naložíme, odvezieme aj vynesieme byt či dom rýchlo a opatrne. Nezáväzná obhliadka a cena zdarma.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-sala",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ export const metadata = {
 export default function StahovanieSalaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Sťahovanie Šaľa: Rýchlo a spoľahlivo",
+    title: "Šaľa - spolahlivé sťahovanie",
     description:
       "Kompletné sťahovacie služby v Šali a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v celej Šali.",
     formTitle: "Sťahovanie v Šali bez starostí s bezplatnou ponukou",
