@@ -18,8 +18,6 @@ export const metadata = {
   title: "Handyman Services Galanta | Sofoservis",
   description:
     "Professional handyman services in Galanta - repairs, assembly, maintenance for homes and offices ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "handyman galanta, handyman services galanta, home repairs Galanta, furniture assembly Galanta",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-galanta",
     languages: {

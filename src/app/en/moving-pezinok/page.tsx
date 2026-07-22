@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Pezinok | Sofoservis",
   description:
     "Professional moving services in Pezinok and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving pezinok, moving services pezinok, apartment moving pezinok, house moving pezinok, office moving pezinok",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-pezinok",
     languages: {

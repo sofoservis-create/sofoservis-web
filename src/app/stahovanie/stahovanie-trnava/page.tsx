@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie Trnava - Lacné sťahovanie bytov a domov | Sofoservis",
   description:
     "Lacné sťahovanie bytov a domov v Trnave a okolí s prehľadným cenníkom. Prevezieme nábytok aj spotrebiče rýchlo a bez poškodenia. Cenová ponuka zdarma.",
-  keywords:
-    "stahovanie trnava, stahovanie bytov trnava, stahovacie služby trnava, stahovanie firiem trnava, preprava nabytku trnava",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-trnava",
       languages: {
@@ -246,6 +245,7 @@ export default function StahovanieTrnavaPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Trnava" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

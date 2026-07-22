@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Vienna — International Removals | Sofoservis",
   description:
     "Moving to Vienna from Slovakia? Bratislava is just 60 km from Vienna — one of Europe's fastest international moves.",
-  keywords:
-    "moving to vienna, moving to vienna from slovakia, moving to vienna from bratislava, international moving vienna, relocation vienna",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-vienna",
     languages: {

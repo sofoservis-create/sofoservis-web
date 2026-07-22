@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Paris — International Removals | Sofoservis",
   description:
     "Moving to Paris from Slovakia? Approximately 1,300 km from Bratislava — regular routes with 4-5 day delivery.",
-  keywords:
-    "moving to paris, moving to paris from slovakia, moving to paris from bratislava, international moving paris, relocation paris france",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-paris",
     languages: {

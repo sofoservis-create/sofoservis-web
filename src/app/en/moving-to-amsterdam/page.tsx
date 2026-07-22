@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Amsterdam — International Removals | Sofoservis",
   description:
     "Moving to Amsterdam from Slovakia? Approximately 1,200 km — regular routes with 3-5 day delivery.",
-  keywords:
-    "moving to amsterdam, moving to amsterdam from slovakia, moving to amsterdam from bratislava, international moving amsterdam, relocation amsterdam netherlands",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-amsterdam",
     languages: {

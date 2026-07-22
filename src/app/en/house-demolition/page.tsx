@@ -18,8 +18,6 @@ export const metadata = {
   title: "House & Building Demolition Services | Sofoservis",
   description:
     "We offer comprehensive house and building demolition services ✅ Affordable and fair prices ✅ Contact us today!",
-  keywords:
-    "house demolition, building demolition, demolition services, structure removal, demolition contractor, wall demolition, selective demolition, eco demolition",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/house-demolition",
     languages: {

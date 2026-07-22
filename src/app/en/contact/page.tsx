@@ -11,8 +11,6 @@ export const metadata = {
   title: "Contact Us | Sofoservis - Professional Moving Services",
   description:
     "Contact Sofoservis for affordable and professional moving services in Bratislava and throughout Slovakia. Get a free quote today!",
-  keywords:
-    "contact sofoservis, moving bratislava contact, moving services contact, moving quote, contact moving company",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/contact",
     languages: {

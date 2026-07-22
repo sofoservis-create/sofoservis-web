@@ -26,8 +26,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/buracie-prace/buranie-demolacia-domov",
       },
   },
-  keywords:
-    "búranie domov, demolácia budov, búranie starých domov, likvidácia domov, demolácia stodôl, búranie a likvidácia budov, demolačné práce, ekologická demolácia, asanácia budov, búracie práce, búranie domu cena, búranie domu svojpomocne",
 };
 
 export default function BuranieDemlaciaPage() {

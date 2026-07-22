@@ -17,8 +17,6 @@ export const metadata = {
   title: "Construction Waste Removal & Disposal | Sofoservis",
   description:
     "Professional construction waste removal and disposal services ✅ Cheap and fair prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal, rubble removal, building waste disposal, demolition waste, construction debris removal, skip hire",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal",
     languages: {

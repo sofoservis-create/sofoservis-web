@@ -18,8 +18,6 @@ export const metadata = {
   title: "Demolition Services Trnava | Sofoservis",
   description:
     "We offer comprehensive demolition services in Trnava ✅ Free site inspection ✅ Affordable and fair prices ✅ Contact us today!",
-  keywords:
-    "demolition trnava, demolition services trnava, building demolition Trnava, house demolition Trnava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-trnava",
     languages: {

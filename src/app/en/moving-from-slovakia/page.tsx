@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving — International Relocation Services | Sofoservis",
   description:
     "Moving from Slovakia abroad? Professional international moving services to Austria, Germany, UK, Switzerland, Netherlands, France, Ireland and Sweden.",
-  keywords:
-    "moving from slovakia, moving abroad from slovakia, international moving from slovakia, moving from bratislava abroad",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-from-slovakia",
     languages: {

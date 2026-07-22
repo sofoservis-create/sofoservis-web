@@ -18,8 +18,6 @@ export const metadata = {
   title: "Safe Moving Service — Vault & Safe Transport | Sofoservis",
   description:
     "Professional safe and vault moving ✅ Hydraulic jacks & motor platforms ✅ Weight categories from small safes to bank vaults ✅ Discreet service ✅ Free quote!",
-  keywords:
-    "safe moving, vault moving, moving a safe, safe transport, move heavy safe, safe movers Bratislava, vault relocation",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/safe-moving",
     languages: {

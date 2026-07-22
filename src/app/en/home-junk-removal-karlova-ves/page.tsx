@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Karlova Ves Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Karlova Ves, Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal karlova ves, house junk removal karlova ves, property junk removal karlova ves, estate junk removal karlova ves",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-karlova-ves",
     languages: {

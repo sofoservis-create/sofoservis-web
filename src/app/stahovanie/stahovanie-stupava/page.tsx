@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie Stupava - Presťahujeme vašu domácnosť | Sofoservis",
   description:
     "Sťahovacia firma pre Stupavu a okolie - byty, domy aj firmy. Prídeme načas, chránime váš nábytok a držíme dohodnutú cenu. Dohodnite si obhliadku.",
-  keywords:
-    "stahovanie stupava, stahovanie bytov stupava, stahovacie služby stupava, stahovanie firiem stupava, preprava nabytku stupava, stahovanie dom stupava",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-stupava",
       languages: {
@@ -245,6 +244,7 @@ export default function StahovanieStupavaPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Stupava" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

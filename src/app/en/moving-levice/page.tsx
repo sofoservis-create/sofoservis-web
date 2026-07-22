@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Levice | Sofoservis",
   description:
     "Professional moving services in Levice and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving levice, moving services levice, apartment moving levice, house moving levice, office moving levice",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-levice",
     languages: {

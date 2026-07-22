@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie Šaľa - Profesionálne sťahovacie služby | Sofoservis",
   description:
     "Spoľahlivé sťahovanie v Šali a okolí za rozumnú cenu. Naložíme, odvezieme aj vynesieme byt či dom rýchlo a opatrne. Nezáväzná obhliadka a cena zdarma.",
-  keywords:
-    "stahovanie sala, stahovanie bytov sala, stahovacie služby sala, stahovanie firiem sala, preprava nabytku sala, stahovanie dom sala",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-sala",
       languages: {
@@ -244,6 +243,7 @@ export default function StahovanieSalaPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Šaľa" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

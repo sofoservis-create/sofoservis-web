@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-galanta",
       },
   },
-  keywords:
-    "stahovanie galanta, stahovanie bytov galanta, stahovacie služby galanta, stahovanie firiem galanta, preprava nabytku galanta, stahovanie dom galanta",
   openGraph: {
       title: "Sťahovanie Galanta - Lacno, rýchlo a spolahlivo | Sofoservis",
       description: "Hľadáte spoľahlivé sťahovanie v Galante? Naložíme, prevezieme aj vynesieme váš nábytok rýchlo a bez poškodenia. Napíšte odkiaľ kam a pošleme vám cenu.",
@@ -249,6 +248,7 @@ export default function StahovanieGalantaPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Galanta" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

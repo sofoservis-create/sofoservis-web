@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Poland — International Removals | Sofoservis",
   description:
     "Moving to Poland from Slovakia? Kraków is only 400 km from Bratislava — 1-2 day delivery. Door-to-door removals to Warsaw, Kraków, Gdańsk and Wrocław.",
-  keywords:
-    "moving to poland, moving to poland from slovakia, moving to poland from bratislava, international moving poland, relocation warsaw krakow",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-poland",
     languages: {

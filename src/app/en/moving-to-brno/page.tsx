@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Brno — Removals to Czech Republic | Sofoservis",
   description:
     "Moving to Brno from Slovakia? Only 130 km from Bratislava — same-day or next-day delivery. Door-to-door moving service to the Czech Republic's second city.",
-  keywords:
-    "moving to brno, moving to brno from slovakia, moving to brno from bratislava, removals brno, relocation brno czech republic",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-brno",
     languages: {

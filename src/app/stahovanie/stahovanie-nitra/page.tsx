@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-nitra",
       },
   },
-  keywords:
-    "stahovanie nitra, stahovanie bytov nitra, stahovacie služby nitra, stahovanie firiem nitra, preprava nabytku nitra, stahovanie dom nitra",
   openGraph: {
       title: "Sťahovanie Nitra - Preprava nábytku Nitra a okolie | Sofoservis",
       description: "Sťahovanie a preprava nábytku v Nitre a okolí. Bezpečne prenesieme spotrebiče, skrine aj krehké veci, náklad je poistený. Cenovú ponuku pošleme zdarma.",
@@ -246,6 +245,7 @@ export default function StahovanieNitraPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Nitra" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-bratislava",
       },
   },
-  keywords:
-    "stahovanie bratislava, stahovanie bytov bratislava, stahovacie služby, stahovanie firiem bratislava, preprava nabytku bratislava",
   openGraph: {
     title: "Sťahovanie Bratislava - Lacné sťahovanie bytov | Sofoservis",
     description:
@@ -279,6 +278,7 @@ export default function StahovanieBratislavaPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Bratislava" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

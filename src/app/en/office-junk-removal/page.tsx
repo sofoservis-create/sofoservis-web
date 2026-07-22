@@ -17,8 +17,6 @@ export const metadata = {
   title: "Office Junk Removal Services | Sofoservis Slovakia",
   description:
     "Professional office junk removal services in Slovakia ✅ Fast, discreet, eco-friendly ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "office junk removal, office junk removal, commercial junk removal, office furniture removal, office equipment disposal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/office-junk-removal",
     languages: {

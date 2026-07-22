@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Stupava | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Stupava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal stupava, house junk removal stupava, home junk removal stupava, property junk removal stupava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-stupava",
     languages: {

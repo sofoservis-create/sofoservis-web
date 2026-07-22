@@ -18,8 +18,6 @@ export const metadata = {
   title: "Demolition Services Nitra | Sofoservis",
   description:
     "We offer comprehensive demolition services in Nitra ✅ Free site inspection ✅ Affordable and fair prices ✅ Contact us today!",
-  keywords:
-    "demolition nitra, demolition services nitra, building demolition Nitra, house demolition Nitra",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-nitra",
     languages: {

@@ -34,8 +34,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  keywords:
-    "wall demolition, partition removal, load-bearing wall demolition, wall removal apartment, wall demolition house, opening in wall, non-load-bearing partition removal, drywall partition removal",
 };
 
 export default function WallDemolitionPageEN() {

@@ -19,8 +19,6 @@ export const metadata: Metadata = {
   title: "Furniture Moving and Removal | Sofoservis",
   description:
     "We offer professional furniture moving and removal ✅ Cheap and fair prices ✅ Free space inspection ✅ Contact us today!",
-  keywords:
-    "furniture moving, furniture removal, furniture transportation, sofa moving, wardrobe moving, furniture assembly, furniture disassembly, large furniture moving",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/furniture-moving-removal",
     languages: {

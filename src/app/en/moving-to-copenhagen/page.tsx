@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Copenhagen — International Removals | Sofoservis",
   description:
     "Moving to Copenhagen from Slovakia? Approximately 1,100 km — 4-5 day delivery. Professional door-to-door removals with packing and furniture assembly.",
-  keywords:
-    "moving to copenhagen, moving to copenhagen from slovakia, moving to denmark from slovakia, international moving copenhagen, relocation copenhagen denmark",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-copenhagen",
     languages: {

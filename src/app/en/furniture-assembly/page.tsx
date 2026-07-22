@@ -17,8 +17,6 @@ export const metadata = {
   title: "Furniture Assembly & Disassembly Services | Sofoservis",
   description:
     "Professional furniture assembly, disassembly, and installation services ✅ Cheap and fair prices ✅ Contact us today!",
-  keywords:
-    "furniture assembly, furniture disassembly, IKEA assembly, flat pack assembly, wardrobe assembly, bed assembly, furniture installation",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/furniture-assembly",
     languages: {

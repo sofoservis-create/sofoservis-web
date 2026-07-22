@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Trnava | Sofoservis",
   description:
     "Professional home junk removal services in Trnava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal trnava, house junk removal trnava, property junk removal trnava, estate junk removal trnava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-trnava",
     languages: {

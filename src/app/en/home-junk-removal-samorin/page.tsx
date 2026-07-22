@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Šamorín | Sofoservis",
   description:
     "Professional home junk removal services in Šamorín ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal samorin, house junk removal samorin, property junk removal samorin, estate junk removal samorin",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-samorin",
     languages: {

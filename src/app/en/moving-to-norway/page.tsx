@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Norway — International Removals | Sofoservis",
   description:
     "Professional international moving from Slovakia to Norway. We handle Norwegian customs clearance and deliver to Oslo, Bergen, Stavanger, and Trondheim.",
-  keywords:
-    "moving from slovakia to norway, moving from bratislava to oslo, slovakia to norway removals, international moving slovakia norway, moving to oslo from slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-norway",
     languages: {

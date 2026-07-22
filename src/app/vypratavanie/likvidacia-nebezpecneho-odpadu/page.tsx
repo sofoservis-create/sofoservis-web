@@ -10,6 +10,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Likvidácia nebezpečného odpadu a starých spotrebičov | Sofoservis",
   description:
     "Likvidácia nebezpečného odpadu a starých spotrebičov ✅ Odvoz práčok, chladničiek, televízorov ✅ Ekologická likvidácia ✅ Kontaktujte nás ešte dnes!",
-  keywords:
-    "likvidácia spotrebičov, likvidácia nebezpečného odpadu, likvidácia starých spotrebičov, odvoz starých spotrebičov, likvidacia chladnicky, likvidácia práčky, likvidácia televízora, odvoz elektroniky",
   alternates: {
     canonical: "https://www.sofoservis.sk/vypratavanie/likvidacia-nebezpecneho-odpadu",
       languages: {
@@ -208,6 +207,7 @@ export default function LikvidaciaNebezpecnehoOdpadu() {
         />
       </div>
 
+      <ServicePriceTable variant="vypratavanie" title="Cenník likvidácie nebezpečného odpadu" />
       <ServicePricing filter={["vypratavanie", "buracie-prace", "stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

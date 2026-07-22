@@ -18,8 +18,6 @@ export const metadata = {
   title: "Handyman Services Piešťany | Sofoservis",
   description:
     "Professional handyman services in Piešťany - repairs, assembly, maintenance for homes and offices ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "handyman piestany, handyman services piestany, home repairs Piešťany, furniture assembly Piešťany",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-piestany",
     languages: {

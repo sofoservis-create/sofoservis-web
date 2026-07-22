@@ -17,8 +17,6 @@ export const metadata = {
   title: "Estate Junk Removal After Bereavement | Sofoservis Slovakia",
   description:
     "Compassionate estate junk removal services after bereavement in Slovakia ✅ Respectful, discreet team ✅ Free assessment ✅ We handle everything",
-  keywords:
-    "estate junk removal, bereavement junk removal, house junk removal after death, sympathetic house junk removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/estate-junk-removal-bereavement",
     languages: {

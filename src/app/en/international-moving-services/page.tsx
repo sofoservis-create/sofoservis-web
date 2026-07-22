@@ -19,8 +19,6 @@ export const metadata = {
   title: "International Moving Services | Sofoservis",
   description:
     "We offer professional international moving services ✅ Cheap and fair prices ✅ Free site inspection ✅ Contact us today for a quote!",
-  keywords:
-    "international moving, international moving company, international moving services, moving austria, moving belgium, moving france, moving germany, moving italy, moving spain, moving czech republic, moving poland, moving switzerland, moving united kingdom",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/international-moving-services",
     languages: {

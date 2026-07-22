@@ -21,8 +21,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/referencie",
       },
   },
-  keywords:
-    "referencie sťahovanie, referencie sťahovacie služby, spokojní zákazníci, recenzie sťahovanie, hodnotenie sťahovacích služieb, sťahovanie skúsenosti, recenzie sofoservis",
   openGraph: {
       title: "Referencie a recenzie zákazníkov | Sofoservis",
       description: "Pozrite si referencie a recenzie od spokojných zákazníkov Sofoservis. Sťahovanie, vypratávanie, montáž nábytku — tisíce spokojných zákazníkov.",

@@ -14,8 +14,6 @@ export const metadata = {
   title: "Moving, Clearance & Furniture Assembly Services Slovakia | Sofoservis",
   description:
     "We offer professional moving, property clearance, and furniture assembly services for individuals and businesses ✅ Cheap and fair prices ✅ Free space inspection.",
-  keywords:
-    "moving services Slovakia, moving Bratislava, apartment moving, office relocation, property clearance, furniture assembly, IKEA assembly, kitchen assembly, removal services Slovakia, Sofoservis",
   alternates: {
     canonical: "https://www.sofoservis.sk/en",
     languages: {

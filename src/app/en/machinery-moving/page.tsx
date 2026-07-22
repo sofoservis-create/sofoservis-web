@@ -18,8 +18,6 @@ export const metadata = {
   title: "Industrial Machinery Moving | CNC, Production | Sofoservis",
   description:
     "Professional industrial machinery moving ✅ CNC machines, production lines, ATMs ✅ Hydraulic equipment ✅ Minimal production downtime ✅ Free quote!",
-  keywords:
-    "machinery moving, CNC machine relocation, industrial equipment moving, ATM moving, production line relocation, factory machinery transport, machine movers Bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/machinery-moving",
     languages: {

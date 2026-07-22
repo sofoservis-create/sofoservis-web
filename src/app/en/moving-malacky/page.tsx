@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Malacky | Sofoservis",
   description:
     "Professional moving services in Malacky and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving malacky, moving services malacky, apartment moving malacky, house moving malacky, office moving malacky",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-malacky",
     languages: {

@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Prague — International Removals | Sofoservis",
   description:
     "Moving to Prague from Slovakia? Approximately 330 km from Bratislava. Fast 1-2 day door-to-door delivery with professional packing and furniture assembly.",
-  keywords:
-    "moving to prague, moving to prague from slovakia, moving to prague from bratislava, international moving prague, relocation prague",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-prague",
     languages: {

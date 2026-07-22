@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Šaľa — Flats & Offices | Sofoservis",
   description:
     "Professional moving services in Šaľa and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving sala, moving services sala, apartment moving sala, house moving sala, office moving sala",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-sala",
     languages: {

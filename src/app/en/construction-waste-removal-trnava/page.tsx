@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Trnava | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Trnava ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal trnava, waste disposal trnava, rubble removal Trnava, debris removal Trnava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-trnava",
     languages: {

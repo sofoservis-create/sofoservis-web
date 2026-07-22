@@ -13,6 +13,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 const stahovanieLocations = [
@@ -43,8 +44,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-bytov-domov",
       },
   },
-  keywords:
-    "stahovanie bytov, sťahovanie bytov, stahovanie bytu, stahovanie domov, stahovanie nabytku, preprava nabytku, montaz nabytku, demontaz nabytku",
   openGraph: {
     title: "Sťahovanie bytov a domov - Cena už od 60€ | Sofoservis",
     description:
@@ -183,6 +182,7 @@ export default function StahovanieBytovDomovPage() {
       <HowItWorks />
 
       {/* Service Pricing section */}
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania bytov a domov" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
 
             {/* Reviews section */}

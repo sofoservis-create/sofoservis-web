@@ -17,8 +17,6 @@ export const metadata = {
   title: "Post-Renovation Junk Removal & Waste Removal | Sofoservis",
   description:
     "Fast post-renovation junk removal and construction waste removal in Slovakia ✅ All debris removed ✅ Ecological disposal ✅ Free quote",
-  keywords:
-    "post-renovation junk removal, construction waste removal, builders waste, renovation cleanup, rubble removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/post-renovation-junk-removal",
     languages: {

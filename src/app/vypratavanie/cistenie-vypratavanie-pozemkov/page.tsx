@@ -10,6 +10,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,15 +27,13 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/vypratavanie/cistenie-vypratavanie-pozemkov",
       },
   },
-  keywords:
-    "čistenie pozemkov, čistenie pozemku, čistenie pozemkov od náletových drevín, vypratanie nehnuteľnosti, cistenie pozemkov cennik, cistenie pozemkov cena, cistenie pozemku cena, vypratanie pozemku, vypratávanie pozemkov, vypratavanie pozemkov",
 };
 
 export default function CisteniePozemkovPage() {
   const heroData = {
     title: "Čistenie a vypratávanie pozemku, nehnuteľnosti",
     description:
-      "Profesionálne čistenie a vypratávanie pozemkov od 25€/hod. Odstraňujeme náletové dreviny, odpad a nežiaducu vegetáciu. Pripravíme váš pozemok na výstavbu.",
+      "Profesionálne čistenie a vypratávanie pozemkov od 30€/hod. Odstraňujeme náletové dreviny, odpad a nežiaducu vegetáciu. Pripravíme váš pozemok na výstavbu.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -198,6 +197,7 @@ export default function CisteniePozemkovPage() {
         />
       </div>
 
+      <ServicePriceTable variant="vypratavanie" title="Cenník čistenia a vypratávania pozemkov" />
       <ServicePricing filter={["buracie-prace", "vypratavanie", "stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Czech Republic — International Removals | Sofoservis",
   description:
     "Moving to Czech Republic from Slovakia? Prague just 330 km from Bratislava — 1-2 day delivery.",
-  keywords:
-    "moving to czech republic, moving to czech republic from slovakia, moving to czech republic from bratislava, removals czech republic, relocation prague",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-czech-republic",
     languages: {

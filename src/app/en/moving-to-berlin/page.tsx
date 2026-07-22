@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Berlin — International Removals | Sofoservis",
   description:
     "Moving to Berlin from Slovakia? Approximately 690 km from Bratislava — 2-3 day delivery. Professional door-to-door removals to all Berlin districts.",
-  keywords:
-    "moving to berlin, moving to berlin from slovakia, moving to berlin from bratislava, international moving berlin, relocation berlin",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-berlin",
     languages: {

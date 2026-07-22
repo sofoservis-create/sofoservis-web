@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Frankfurt — International Removals | Sofoservis",
   description:
     "Moving to Frankfurt from Slovakia? Approximately 770 km from Bratislava — 2-3 day delivery. Professional door-to-door removals with packing.",
-  keywords:
-    "moving to frankfurt, moving to frankfurt from slovakia, moving to frankfurt from bratislava, international moving frankfurt, relocation frankfurt germany",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-frankfurt",
     languages: {

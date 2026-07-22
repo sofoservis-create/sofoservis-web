@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Bratislava | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Bratislava ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal bratislava, waste disposal bratislava, rubble removal Bratislava, debris removal Bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-bratislava",
     languages: {

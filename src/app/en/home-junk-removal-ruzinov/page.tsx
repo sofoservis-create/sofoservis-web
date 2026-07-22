@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Ružinov Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Ružinov, Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal ružinov, house junk removal ružinov, property junk removal ružinov, estate junk removal ružinov",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-ruzinov",
     languages: {

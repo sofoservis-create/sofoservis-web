@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving from Austria to Slovakia — Fast, | Sofoservis",
   description:
     "Professional moving from Austria to Slovakia. Vienna to Bratislava in under 1 hour.",
-  keywords:
-    "moving from austria to slovakia, moving from vienna to slovakia, moving from vienna to bratislava, austria to slovakia removals, international moving austria slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-from-austria-to-slovakia",
     languages: {

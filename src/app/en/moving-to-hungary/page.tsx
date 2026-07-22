@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Hungary — International Removals | Sofoservis",
   description:
     "Moving to Hungary from Slovakia? Budapest is only 200 km from Bratislava — same-day or next-day delivery.",
-  keywords:
-    "moving to hungary, moving to hungary from slovakia, moving to hungary from bratislava, international moving hungary, relocation budapest",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-hungary",
     languages: {

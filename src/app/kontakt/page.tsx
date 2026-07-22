@@ -12,8 +12,6 @@ export const metadata = {
   title: "Kontaktujte nás – sťahovacie služby | Sofoservis",
   description:
     "Kontaktujte Sofoservis pre cenovo výhodné a profesionálne sťahovacie služby v Bratislave a na celom Slovensku. Získajte bezplatnú cenovú ponuku ešte dnes!",
-  keywords:
-    "kontakt sofoservis, stahovanie bratislava kontakt, sťahovacie služby kontakt, cenová ponuka sťahovanie, kontakt sťahovacia firma",
   alternates: {
     canonical: "https://www.sofoservis.sk/kontakt",
       languages: {

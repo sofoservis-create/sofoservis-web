@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Senica | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Senica ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal senica, waste disposal senica, rubble removal Senica, debris removal Senica",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-senica",
     languages: {

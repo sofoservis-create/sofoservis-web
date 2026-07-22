@@ -18,8 +18,6 @@ export const metadata = {
   title: "Handyman Services Bratislava | Sofoservis",
   description:
     "Professional handyman services in Bratislava - repairs, assembly, maintenance for homes and offices ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "handyman bratislava, handyman services bratislava, home repairs Bratislava, furniture assembly Bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-bratislava",
     languages: {

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Dúbravka Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Dúbravka, Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal dúbravka, house junk removal dúbravka, property junk removal dúbravka, estate junk removal dúbravka",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-dubravka",
     languages: {

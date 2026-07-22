@@ -59,8 +59,6 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/en/junk-removal",
     },
   },
-  keywords:
-    "junk removal services, home junk removal, house junk removal, office junk removal, basement junk removal, estate junk removal, furniture removal, junk removal, post-renovation junk removal",
   openGraph: {
     title: "Junk Removal Services - Professional, Eco-Friendly | Sofoservis",
     description:
@@ -77,7 +75,7 @@ const faqSchemaItems = [
   {
     question: "How much does a home junk removal cost?",
     answer:
-      "The cost depends on the size of the property and volume of items. For a 1-bedroom apartment prices start from €200. The hourly rate is from €25/hr. We provide a free site inspection and a no-obligation fixed quote.",
+      "The cost depends on the size of the property and volume of items. For a 1-bedroom apartment prices start from €200. The hourly rate is from €30/hr. We provide a free site inspection and a no-obligation fixed quote.",
   },
   {
     question: "How long does a junk removal take?",

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Demolition Services Bratislava | Sofoservis",
   description:
     "We offer comprehensive demolition services in Bratislava ✅ Free site inspection ✅ Affordable and fair prices ✅ Contact us today!",
-  keywords:
-    "demolition bratislava, demolition services bratislava, building demolition Bratislava, house demolition Bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-bratislava",
     languages: {

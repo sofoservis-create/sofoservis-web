@@ -18,8 +18,6 @@ export const metadata = {
   title: "Piano Moving — Upright & Grand Piano | Sofoservis",
   description:
     "Professional piano moving service ✅ Upright pianos, grand pianos & baby grands ✅ Specialist piano dollies and skids ✅ Staircase & window hoisting ✅ Free.",
-  keywords:
-    "piano moving, upright piano moving, grand piano moving, piano transport, move a piano, piano movers Bratislava, piano relocation",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/piano-moving",
     languages: {

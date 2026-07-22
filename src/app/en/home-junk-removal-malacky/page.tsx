@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Malacky | Sofoservis",
   description:
     "Professional home junk removal services in Malacky ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal malacky, house junk removal malacky, property junk removal malacky, estate junk removal malacky",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-malacky",
     languages: {

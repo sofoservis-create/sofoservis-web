@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Ireland — International Removals | Sofoservis",
   description:
     "Professional international moving from Slovakia to Ireland. We deliver to Dublin, Cork, Galway, Limerick, and all of Ireland. Sea freight options.",
-  keywords:
-    "moving from slovakia to ireland, moving from bratislava to dublin, slovakia to ireland removals, international moving slovakia ireland, moving to dublin from slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-ireland",
     languages: {

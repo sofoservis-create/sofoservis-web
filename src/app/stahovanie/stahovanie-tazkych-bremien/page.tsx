@@ -9,6 +9,7 @@ import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie ťažkých bremien - Klavíre, trezory aj stroje | Sofoservis",
   description:
     "Sťahovanie klavírov, trezorov a strojov, ktoré bežne nezdvihnete. Máme techniku aj skúsený tím na ťažké a rozmerné bremená. Náklad poistený, obhliadka zdarma.",
-  keywords:
-    "stahovanie tazkych bremien, sťahovanie klavíra, sťahovanie trezoru, preprava ťažkých predmetov, sťahovanie výrobných strojov, sťahovanie bankomatu, ťažké bremená, nadrozmerné predmety",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-tazkych-bremien",
     languages: {
@@ -197,6 +196,7 @@ export default function StahovanieTazkychBremienPage() {
         <CTA />
       </div>
 
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania ťažkých bremien" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

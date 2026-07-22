@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-piestany",
       },
   },
-  keywords:
-    "stahovanie piestany, stahovanie bytov piestany, stahovacie služby piestany, stahovanie firiem piestany, preprava nabytku piestany, stahovanie dom piestany, stahovanie kupele piestany",
   openGraph: {
       title: "Sťahovanie Piešťany - Rýchlo a bez starostí | Sofoservis",
       description: "Rýchle sťahovanie v Piešťanoch bez starostí a bez poškodenia nábytku. Prídeme s autom, dekami aj vozíkmi. Povedzte termín a ozveme sa s cenou.",
@@ -246,6 +245,7 @@ export default function StahovaniePiestanyPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Piešťany" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

@@ -13,6 +13,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 const stahovanieLocations = [
@@ -43,8 +44,6 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/stahovanie",
     },
   },
-  keywords:
-    "stahovanie, sťahovanie, stahovanie bytov, stahovanie domov, stahovanie kancelarii, medzinarodne stahovanie, stahovanie klavira, stahovanie trezorov, stahovanie strojov, stahovanie tazkych bremien",
   openGraph: {
     title: "Sťahovanie - Lacné sťahovacie služby | Sofoservis",
     description:
@@ -193,6 +192,7 @@ export default function StahovaniePage() {
 
       <HowItWorks />
 
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
 
       <div>

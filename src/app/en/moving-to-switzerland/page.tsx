@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Switzerland — International Removals | Sofoservis",
   description:
     "Professional international moving from Slovakia to Switzerland. We handle Swiss customs clearance and deliver to Zurich, Geneva, Basel, and Bern.",
-  keywords:
-    "moving from slovakia to switzerland, moving from bratislava to zurich, slovakia to switzerland removals, international moving slovakia switzerland, moving to switzerland from slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-switzerland",
     languages: {

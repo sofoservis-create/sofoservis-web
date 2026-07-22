@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovacie služby Šamorín a okolie | Sofoservis",
   description:
     "Sťahovanie bytov a domov v Šamoríne a okolí. Zabalíme, prenesieme aj poskladáme nábytok, vy len ukážete kam. Ozvite sa a dohodneme termín aj cenu.",
-  keywords:
-    "stahovanie samorin, stahovanie bytov samorin, stahovacie služby samorin, stahovanie firiem samorin, preprava nabytku samorin, stahovanie dom samorin",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-samorin",
       languages: {
@@ -245,6 +244,7 @@ export default function SamorinPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Šamorín" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

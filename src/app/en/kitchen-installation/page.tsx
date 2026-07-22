@@ -17,8 +17,6 @@ export const metadata = {
   title: "Kitchen Installation & Assembly Services | Sofoservis",
   description:
     "Professional kitchen installation and assembly services ✅ Cheap and fair prices ✅ Contact us today!",
-  keywords:
-    "kitchen installation, kitchen assembly, IKEA kitchen assembly, kitchen fitting, worktop installation, kitchen cabinet assembly, kitchen unit installation",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/kitchen-installation",
     languages: {

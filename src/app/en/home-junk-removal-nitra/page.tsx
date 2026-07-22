@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Nitra | Sofoservis",
   description:
     "Professional home junk removal services in Nitra ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal nitra, house junk removal nitra, property junk removal nitra, estate junk removal nitra",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-nitra",
     languages: {

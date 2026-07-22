@@ -13,6 +13,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 const vypratavanieLocations = [
@@ -33,7 +34,7 @@ const vypratavanieLocations = [
 export const metadata = {
   title: "Vypratávanie – profesionálne vypratávacie | Sofoservis",
   description:
-    "Profesionálne vypratávanie bytov, domov, kancelárií, pivníc, chalúp, po rekonštrukcii a po pozostalosti od 25€/hod. Obhliadka zadarmo. Rýchlo.",
+    "Profesionálne vypratávanie bytov, domov, kancelárií, pivníc, chalúp, po rekonštrukcii a po pozostalosti od 30€/hod. Obhliadka zadarmo. Rýchlo.",
   alternates: {
     canonical: "https://www.sofoservis.sk/vypratavanie",
     languages: {
@@ -42,12 +43,10 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/vypratavanie",
     },
   },
-  keywords:
-    "vypratavanie, vypratávanie, vypratavanie bytov, vypratavanie domov, vypratavanie kancelarii, vypratavanie pivnic, vypratavanie chalup, vypratavanie po rekonstrukcii, vypratavanie pozostalosti, odvoz stareho nabytku",
   openGraph: {
     title: "Vypratávanie – profesionálne vypratávacie | Sofoservis",
     description:
-      "Profesionálne vypratávanie bytov, domov, kancelárií, pivníc a chalúp od 25€/hod. Obhliadka zadarmo. Rýchlo, spoľahlivo.",
+      "Profesionálne vypratávanie bytov, domov, kancelárií, pivníc a chalúp od 30€/hod. Obhliadka zadarmo. Rýchlo, spoľahlivo.",
     url: "https://www.sofoservis.sk/vypratavanie",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -60,7 +59,7 @@ const faqSchemaItems = [
   {
     question: "Aká je cena za vypratanie bytu alebo domu?",
     answer:
-      "Cena závisí od veľkosti priestoru a množstva vecí. Pre jednoizbový byt ceny začínajú od 200€. Hodinová sadzba je od 25€/hod. Poskytujeme nezáväznú cenovú ponuku po bezplatnej obhliadke.",
+      "Cena závisí od veľkosti priestoru a množstva vecí. Pre jednoizbový byt ceny začínajú od 200€. Hodinová sadzba je od 30€/hod. Poskytujeme nezáväznú cenovú ponuku po bezplatnej obhliadke.",
   },
   {
     question: "Ako dlho trvá vypratanie bytu alebo domu?",
@@ -180,6 +179,7 @@ export default function VypratavaniePage() {
 
       <HowItWorks />
 
+      <ServicePriceTable variant="vypratavanie" title="Cenník vypratávania" />
       <ServicePricing filter={["vypratavanie", "stahovanie", "buracie-prace"]} />
 
       <div>

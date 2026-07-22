@@ -18,7 +18,7 @@ import TrustBadges from "@/components/sections/TrustBadges";
 export const metadata = {
   title: "Hodinový manžel a majster — Bratislava a okolie | Sofoservis",
   description:
-    "Profesionálne služby hodinového manžela od 25€/hod v Bratislave a okolí ✅ Montáž nábytku, opravy a údržba domácnosti ✅ Kontaktujte nás ešte dnes!",
+    "Profesionálne služby hodinového manžela od 30€/hod v Bratislave a okolí ✅ Montáž nábytku, opravy a údržba domácnosti ✅ Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/hodinovy-manzel-majster",
       languages: {
@@ -27,12 +27,10 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster",
       },
   },
-  keywords:
-    "hodinový manžel, hodinový majster, domáce opravy, údržba bytu, drobné opravy v domácnosti, montáž nábytku, oprava kvapkajúceho kohútika, výmena batérie, drobné stavebné práce, vešanie obrazov, inštalácia svietidiel, hodinový manžel bratislava, hodinový manžel cena",
   openGraph: {
     title: "Hodinový manžel a majster — Bratislava a okolie | Sofoservis",
     description:
-      "Profesionálne služby hodinového manžela od 25€/hod v Bratislave a okolí. Montáž nábytku, opravy a údržba domácnosti.",
+      "Profesionálne služby hodinového manžela od 30€/hod v Bratislave a okolí. Montáž nábytku, opravy a údržba domácnosti.",
     url: "https://www.sofoservis.sk/hodinovy-manzel-majster",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -58,7 +56,7 @@ const faqSchemaItems = [
   {
     question: "Aká je cena hodinového manžela?",
     answer:
-      "Cena za služby hodinového manžela začína od 25€/hod. Výsledná cena závisí od rozsahu a zložitosti prác. Pre presný odhad nás kontaktujte.",
+      "Cena za služby hodinového manžela začína od 30€/hod. Výsledná cena závisí od rozsahu a zložitosti prác. Pre presný odhad nás kontaktujte.",
   },
   {
     question: "Aké práce hodinový manžel robí?",
@@ -77,7 +75,7 @@ export default function HodinovyManzelMajsterPage() {
   const heroData = {
     title: "Hodinový manžel a majster v Bratislave",
     description:
-      "Profesionálne služby hodinového manžela od 25€/hod v Bratislave a okolí. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
+      "Profesionálne služby hodinového manžela od 30€/hod v Bratislave a okolí. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -254,7 +252,7 @@ export default function HodinovyManzelMajsterPage() {
             panels: [
               {
                 title: "Čo robí hodinový manžel a prečo sa to oplatí?",
-                content: "Hodinový manžel (hodinový majster) je profesionál, ktorý sa postará o všetky drobné opravy, montáže a údržbu vašej domácnosti. Cena začína od 25€/hod, čo je zlomok toho, čo by vás stálo volanie špecialistu na každú drobnú opravu zvlášť.\n\nTipické práce: vešanie obrazov, garníž, poličiek, zrkadiel, inštalácia svietidiel, výmena vodovodnej batérie, montáž interiérových roliet… Hodinový manžel príde vybavený vlastným náradím — nemusíte si nič pripravovať.",
+                content: "Hodinový manžel (hodinový majster) je profesionál, ktorý sa postará o všetky drobné opravy, montáže a údržbu vašej domácnosti. Cena začína od 30€/hod, čo je zlomok toho, čo by vás stálo volanie špecialistu na každú drobnú opravu zvlášť.\n\nTipické práce: vešanie obrazov, garníž, poličiek, zrkadiel, inštalácia svietidiel, výmena vodovodnej batérie, montáž interiérových roliet… Hodinový manžel príde vybavený vlastným náradím — nemusíte si nič pripravovať.",
               },
               {
                 title: "Kedy sa oplatí hodinový manžel a kedy špecialista?",

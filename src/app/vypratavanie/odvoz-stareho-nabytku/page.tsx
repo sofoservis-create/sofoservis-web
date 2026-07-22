@@ -10,6 +10,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -17,9 +18,7 @@ import RelatedServices from "@/components/sections/RelatedServices";
 export const metadata = {
   title: "Odvoz a vypratávanie starého nábytku | Sofoservis",
   description:
-    "Odvoz a vypratávanie starého nábytku od 25€/hod ✅ Odvoz starých skríň, postelí, sedačiek ✅ Obhliadka zadarmo ✅ Kontaktujte nás ešte dnes!",
-  keywords:
-    "odvoz stareho nabytku, odvoz nabytku, odvoz sedacky, odvoz starych veci, vypratanie nabytku, odvoz starej sedacky, odvoz postele, odvoz skrine, odvoz pohovky",
+    "Odvoz a vypratávanie starého nábytku od 30€/hod ✅ Odvoz starých skríň, postelí, sedačiek ✅ Obhliadka zadarmo ✅ Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku",
       languages: {
@@ -30,7 +29,7 @@ export const metadata = {
   },
   openGraph: {
     title: "Odvoz a vypratávanie starého nábytku | Sofoservis",
-    description: "Odvoz a vypratávanie starého nábytku od 25€/hod. Odvoz pohoviek, skríň, postelí a ďalšieho nábytku. Obhliadka zadarmo.",
+    description: "Odvoz a vypratávanie starého nábytku od 30€/hod. Odvoz pohoviek, skríň, postelí a ďalšieho nábytku. Obhliadka zadarmo.",
     url: "https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +42,7 @@ export default function OdvozStarehoNabytku() {
   const heroData = {
     title: "Odvoz a vypratávanie starého nábytku",
     description:
-      "Profesionálny odvoz starého nábytku od 25€/hod. Zbavíme vás starých skríň, sedačiek, postelí a akéhokoľvek iného nábytku. Ekologicky a rýchlo.",
+      "Profesionálny odvoz starého nábytku od 30€/hod. Zbavíme vás starých skríň, sedačiek, postelí a akéhokoľvek iného nábytku. Ekologicky a rýchlo.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -103,7 +102,7 @@ export default function OdvozStarehoNabytku() {
             {
               question: "Koľko stojí odvoz starého nábytku?",
               answer:
-                "Cena za odvoz starého nábytku závisí od množstva a veľkosti kusov, dostupnosti (poschodie, výťah) a vzdialenosti od skládky. Hodinová sadzba je od 25€/hod (minimálne 1 hodina). Pre jednotlivé kusy sa ceny pohybujú od 20€ za malý kus (stolička, nočný stolík) do 80€ za veľké kusy (skriňa, rohová sedačka). Pri väčšom množstve nábytku (celé zariadenie bytu) môžeme dohodnúť paušálnu cenu. Kontaktujte nás pre presný cenový odhad.",
+                "Cena za odvoz starého nábytku závisí od množstva a veľkosti kusov, dostupnosti (poschodie, výťah) a vzdialenosti od skládky. Hodinová sadzba je od 30€/hod (minimálne 1 hodina). Pre jednotlivé kusy sa ceny pohybujú od 20€ za malý kus (stolička, nočný stolík) do 80€ za veľké kusy (skriňa, rohová sedačka). Pri väčšom množstve nábytku (celé zariadenie bytu) môžeme dohodnúť paušálnu cenu. Kontaktujte nás pre presný cenový odhad.",
             },
             {
               question: "Ako rýchlo viete prísť po starý nábytok?",
@@ -203,6 +202,7 @@ export default function OdvozStarehoNabytku() {
         />
       </div>
 
+      <ServicePriceTable variant="vypratavanie" title="Cenník odvozu starého nábytku" />
       <ServicePricing filter={["vypratavanie", "stahovanie", "buracie-prace"]} />
       <TrustBadges />
       <ContactFormSection />

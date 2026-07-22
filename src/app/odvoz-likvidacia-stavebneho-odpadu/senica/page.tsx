@@ -11,6 +11,7 @@ import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import LocationMap from "@/components/sections/LocationMap";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -159,6 +160,7 @@ export default function OdvozStavebnehoOdpaduSenicaPage() {
         description="Kontaktujte nás pre rýchle nacenenie a rezerváciu termínu. Odvezieme vašu suť profesionálne a legálne."
         buttonText="Získať ponuku"
       />
+      <ServicePriceTable variant="vypratavanie" title="Cenník odvozu a likvidácie stavebného odpadu – Senica" />
       <ServicePricing filter={["buracie-prace", "vypratavanie"]} />
       <TrustBadges />
       <ContactFormSection />

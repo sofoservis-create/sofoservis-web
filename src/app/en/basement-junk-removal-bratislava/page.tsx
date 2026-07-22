@@ -18,8 +18,6 @@ export const metadata = {
   title: "Basement & Garage Junk Removal Bratislava | Sofoservis",
   description:
     "Fast and affordable basement, garage, and non-residential space junk removal in Bratislava ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "basement junk removal bratislava, garage junk removal bratislava, storage junk removal bratislava, cellar junk removal bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/basement-junk-removal-bratislava",
     languages: {

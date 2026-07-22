@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Piešťany | Sofoservis",
   description:
     "Professional moving services in Piešťany and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving piestany, moving services piestany, apartment moving piestany, house moving piestany, office moving piestany",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-piestany",
     languages: {

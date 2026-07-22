@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal bratislava, house junk removal bratislava, property junk removal bratislava, estate junk removal bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-bratislava",
     languages: {

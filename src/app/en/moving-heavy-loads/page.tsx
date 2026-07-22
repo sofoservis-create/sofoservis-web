@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Heavy Loads - Piano, Safe and Others | Sofoservis",
   description:
     "We can help you move heavy loads such as a piano, safe or other items ✅ Specialized equipment ✅ Experienced team ✅ Cheap and fair prices ✅ Contact us.",
-  keywords:
-    "piano moving, safe moving, heavy loads moving, moving heavy items, moving piano, moving safe, heavy furniture moving, bulky item transport",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-heavy-loads",
     languages: {

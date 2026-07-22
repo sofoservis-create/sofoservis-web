@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Lisbon — International Removals | Sofoservis",
   description:
     "Moving to Lisbon from Slovakia? Approximately 2,700 km — regular routes with 6-9 day delivery.",
-  keywords:
-    "moving to lisbon, moving to lisbon from slovakia, moving to portugal from slovakia, international moving lisbon, relocation lisbon portugal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-lisbon",
     languages: {

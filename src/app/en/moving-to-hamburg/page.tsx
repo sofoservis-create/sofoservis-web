@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Hamburg — International Removals | Sofoservis",
   description:
     "Moving to Hamburg from Slovakia? Approximately 1,000 km from Bratislava — 3-4 day delivery. Professional door-to-door removals with packing.",
-  keywords:
-    "moving to hamburg, moving to hamburg from slovakia, moving to hamburg from bratislava, international moving hamburg, relocation hamburg germany",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-hamburg",
     languages: {

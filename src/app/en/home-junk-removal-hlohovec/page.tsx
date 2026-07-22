@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Hlohovec | Sofoservis",
   description:
     "Professional home junk removal services in Hlohovec ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal hlohovec, house junk removal hlohovec, property junk removal hlohovec, estate junk removal hlohovec",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-hlohovec",
     languages: {

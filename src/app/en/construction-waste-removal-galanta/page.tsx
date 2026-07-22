@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Galanta | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Galanta ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal galanta, waste disposal galanta, rubble removal Galanta, debris removal Galanta",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-galanta",
     languages: {

@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Oslo — International Removals | Sofoservis",
   description:
     "Moving to Oslo from Slovakia? We handle Norwegian customs clearance and deliver door-to-door to Oslo. 5-8 day delivery with full packing and furniture.",
-  keywords:
-    "moving to oslo, moving to oslo from slovakia, moving to norway from slovakia, international moving oslo, relocation oslo norway",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-oslo",
     languages: {

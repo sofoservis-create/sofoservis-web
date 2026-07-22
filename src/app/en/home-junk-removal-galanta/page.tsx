@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Galanta | Sofoservis",
   description:
     "Professional home junk removal services in Galanta ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal galanta, house junk removal galanta, property junk removal galanta, estate junk removal galanta",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-galanta",
     languages: {

@@ -1,5 +1,8 @@
+"use client";
+
 import Container from "@/components/ui/Container";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface PricingCard {
   key: string;
@@ -22,7 +25,7 @@ const allCardsSk: PricingCard[] = [
     key: "stahovanie",
     title: "Sťahovanie bytov a domov",
     href: "/stahovanie/stahovanie-bytov-domov",
-    fromPrice: "od 25 €/hod",
+    fromPrice: "od 30 €/hod",
     icon: "/icons/truck_icon.svg",
     iconAlt: "Sťahovanie",
   },
@@ -38,7 +41,7 @@ const allCardsSk: PricingCard[] = [
     key: "montaz-nabytku",
     title: "Montáž a demontáž nábytku",
     href: "/montaz-nabytku",
-    fromPrice: "od 20 €",
+    fromPrice: "výjazd od 25 €",
     icon: "/icons/wrench_icon.svg",
     iconAlt: "Montáž nábytku",
   },
@@ -54,7 +57,7 @@ const allCardsSk: PricingCard[] = [
     key: "hodinovy-manzel",
     title: "Hodinový manžel a majster",
     href: "/hodinovy-manzel-majster",
-    fromPrice: "od 25 €/hod",
+    fromPrice: "od 30 €/hod",
     icon: "/icons/repair_icon.svg",
     iconAlt: "Hodinový manžel",
   },
@@ -81,7 +84,7 @@ const allCardsEn: PricingCard[] = [
     key: "moving",
     title: "Apartment & House Moving",
     href: "/en/apartment-moving",
-    fromPrice: "from €25/hr",
+    fromPrice: "from €30/hr",
     icon: "/icons/truck_icon.svg",
     iconAlt: "Moving",
   },
@@ -97,7 +100,7 @@ const allCardsEn: PricingCard[] = [
     key: "furniture-assembly",
     title: "Furniture Assembly",
     href: "/en/furniture-assembly",
-    fromPrice: "from €20",
+    fromPrice: "call-out from €25",
     icon: "/icons/wrench_icon.svg",
     iconAlt: "Furniture Assembly",
   },
@@ -113,7 +116,7 @@ const allCardsEn: PricingCard[] = [
     key: "handyman",
     title: "Handyman Services",
     href: "/en/handyman-services",
-    fromPrice: "from €25/hr",
+    fromPrice: "from €30/hr",
     icon: "/icons/repair_icon.svg",
     iconAlt: "Handyman",
   },
@@ -135,6 +138,45 @@ const allCardsEn: PricingCard[] = [
   },
 ];
 
+/**
+ * Určí, ktorú kartu služby treba skryť na aktuálnej stránke,
+ * aby orientačné ceny nikdy neponúkali službu tej istej stránky.
+ */
+function excludedKeysForPath(pathname: string): string[] {
+  const p = pathname.replace(/\/$/, "") || "/";
+  const excluded: string[] = [];
+
+  // SK
+  if (p.startsWith("/stahovanie/medzinarodne-stahovanie") || p.startsWith("/medzinarodne-stahovanie")) {
+    excluded.push("medzinarodne-stahovanie");
+  } else if (p === "/stahovanie" || p.startsWith("/stahovanie/") || p.startsWith("/stahovanie-")) {
+    excluded.push("stahovanie");
+  }
+  if (p === "/vypratavanie" || p.startsWith("/vypratavanie/") || p.startsWith("/vypratavanie-") || p.startsWith("/odvoz-")) {
+    excluded.push("vypratavanie");
+  }
+  if (p === "/montaz-nabytku" || p.startsWith("/montaz-nabytku/")) excluded.push("montaz-nabytku");
+  if (p === "/montaz-kuchyne" || p.startsWith("/montaz-kuchyne/")) excluded.push("montaz-kuchyne");
+  if (p.startsWith("/hodinovy-manzel")) excluded.push("hodinovy-manzel");
+  if (p.startsWith("/buracie-")) excluded.push("buracie-prace");
+
+  // EN
+  if (p.startsWith("/en/international-moving") || p.startsWith("/en/moving-to-") || p.startsWith("/en/moving-from-")) {
+    excluded.push("international-moving");
+  } else if (p.startsWith("/en/moving") || p.startsWith("/en/apartment-moving") || p.startsWith("/en/office-moving") || p.startsWith("/en/piano-moving") || p.startsWith("/en/safe-moving") || p.startsWith("/en/machinery-moving")) {
+    excluded.push("moving");
+  }
+  if (p.includes("junk-removal") || p.includes("furniture-removal") || p.includes("waste-removal") || p.startsWith("/en/furniture-moving-removal")) {
+    excluded.push("clearance");
+  }
+  if (p.startsWith("/en/furniture-assembly")) excluded.push("furniture-assembly");
+  if (p.startsWith("/en/kitchen-installation")) excluded.push("kitchen-installation");
+  if (p.startsWith("/en/handyman")) excluded.push("handyman");
+  if (p.startsWith("/en/demolition") || p.includes("-demolition")) excluded.push("demolition");
+
+  return excluded;
+}
+
 const defaultTitles = {
   sk: { title: "Orientačné ceny našich služieb", subtitle: "Transparentné ceny bez skrytých poplatkov. Presná kalkulácia po bezplatnej obhliadke." },
   en: { title: "Our Service Prices", subtitle: "Transparent pricing with no hidden fees. Exact quote after a free assessment." },
@@ -146,11 +188,14 @@ export default function ServicePricing({
   filter,
   lang = "sk",
 }: ServicePricingProps) {
+  const pathname = usePathname() ?? "/";
+  const excludedKeys = excludedKeysForPath(pathname);
   const allCards = lang === "en" ? allCardsEn : allCardsSk;
   const cardMap = new Map(allCards.map((c) => [c.key, c]));
-  const cards = filter
+  const baseCards = filter
     ? filter.map((key) => cardMap.get(key)).filter((c): c is PricingCard => c !== undefined)
     : allCards;
+  const cards = baseCards.filter((c) => !excludedKeys.includes(c.key));
 
   const defaults = defaultTitles[lang];
   const resolvedTitle = title ?? defaults.title;

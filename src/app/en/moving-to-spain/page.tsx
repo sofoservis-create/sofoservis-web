@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Spain — International Removals | Sofoservis",
   description:
     "Moving to Spain from Slovakia? Approximately 2,000 km to Madrid — 5-7 day delivery.",
-  keywords:
-    "moving to spain, moving to spain from slovakia, moving to spain from bratislava, international moving spain, relocation madrid barcelona",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-spain",
     languages: {

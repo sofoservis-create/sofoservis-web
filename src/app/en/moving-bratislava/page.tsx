@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Bratislava | Sofoservis",
   description:
     "Professional moving services in Bratislava and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving bratislava, moving services bratislava, apartment moving bratislava, house moving bratislava, office moving bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-bratislava",
     languages: {

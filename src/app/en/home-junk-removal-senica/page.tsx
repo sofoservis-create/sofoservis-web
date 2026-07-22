@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Senica | Sofoservis",
   description:
     "Professional home junk removal services in Senica ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal senica, house junk removal senica, property junk removal senica, estate junk removal senica",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-senica",
     languages: {

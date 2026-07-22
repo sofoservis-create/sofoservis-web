@@ -17,8 +17,6 @@ export const metadata = {
   title: "Cottage & Rural Property Junk Removal | Sofoservis Slovakia",
   description:
     "Professional cottage, chalet and rural property junk removal in Slovakia ✅ Garden junk removal ✅ Old furniture & tools removal ✅ Free quote",
-  keywords:
-    "cottage junk removal, chalet junk removal, rural property junk removal, garden junk removal, holiday home junk removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/cottage-junk-removal",
     languages: {

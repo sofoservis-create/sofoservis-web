@@ -9,6 +9,7 @@ import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-kancelarii-firiem",
       },
   },
-  keywords:
-    "stahovanie kancelarii, stahovanie kancelárií, stahovanie firiem, stahovanie firemneho nabytku, kancelárske sťahovanie, firemné sťahovanie, sťahovanie podnikov, montáž kancelárskeho nábytku",
   openGraph: {
       title: "Sťahovanie kancelárií a firiem - Bratislava a okolie | Sofoservis",
       description: "Presťahujeme kanceláriu aj celú firmu s minimom výpadku prevádzky – kľudne cez víkend či po večeroch. Bezplatná obhliadka priestorov v Bratislave a okolí.",
@@ -247,6 +246,7 @@ export default function StahovanieKancelariiPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania kancelárií a firiem" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

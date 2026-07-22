@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Munich — International Removals | Sofoservis",
   description:
     "Moving to Munich from Slovakia? Approximately 360 km from Bratislava — 1-2 day delivery. Professional door-to-door removals with packing and furniture.",
-  keywords:
-    "moving to munich, moving to munich from slovakia, moving to munich from bratislava, international moving munich, relocation munich",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-munich",
     languages: {

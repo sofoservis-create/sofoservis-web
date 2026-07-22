@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Warsaw — International Removals | Sofoservis",
   description:
     "Moving to Warsaw from Slovakia? Approximately 660 km from Bratislava — regular routes with 2-3 day delivery.",
-  keywords:
-    "moving to warsaw, moving to warsaw from slovakia, moving to warsaw from bratislava, international moving warsaw, relocation warsaw poland",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-warsaw",
     languages: {

@@ -12,6 +12,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/montaz-kuchyne",
       },
   },
-  keywords:
-    "montáž kuchyne, montáž kuchynskej linky, skladanie kuchyne, inštalácia kuchyne, montáž pracovnej dosky, pripojenie drezu, montáž kuchynských skriniek, montáž kuchynskej linky ikea, montáž kuchyne sykora, montáž drezov, montáž doplnkov do kuchyne",
   openGraph: {
     title: "Montáž kuchýň a skladanie kuchyne | Sofoservis",
     description:
@@ -160,6 +159,7 @@ export default function MontazKuchynePage() {
       <HowItWorks />
 
       {/* Service Pricing section */}
+      <ServicePriceTable variant="montaz-kuchyne" title="Cenník montáže kuchyne" />
       <ServicePricing filter={["montaz-kuchyne", "montaz-nabytku", "hodinovy-manzel"]} />
 
             {/* Reviews section */}

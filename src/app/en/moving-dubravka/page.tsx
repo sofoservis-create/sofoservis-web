@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Dúbravka Bratislava | Sofoservis",
   description:
     "Professional moving services in Dúbravka. We move apartments from panel houses as well as family houses. Experience with walk-ups without lifts.",
-  keywords:
-    "moving dubravka, moving services dubravka, apartment moving dubravka, dubravka moving company",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-dubravka",
     languages: {

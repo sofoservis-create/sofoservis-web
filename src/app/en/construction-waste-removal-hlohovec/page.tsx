@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Hlohovec | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Hlohovec ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal hlohovec, waste disposal hlohovec, rubble removal Hlohovec, debris removal Hlohovec",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-hlohovec",
     languages: {

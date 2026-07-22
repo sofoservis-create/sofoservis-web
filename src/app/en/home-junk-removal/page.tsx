@@ -17,8 +17,6 @@ export const metadata = {
   title: "Home Junk Removal — Apartments & Houses | Sofoservis",
   description:
     "Professional junk removal services for apartments and houses ✅ Cheap and fair prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "junk removal, house junk removal, apartment junk removal, property junk removal, furniture removal, junk removal, estate junk removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal",
     languages: {

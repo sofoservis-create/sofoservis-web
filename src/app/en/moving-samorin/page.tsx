@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Šamorín | Sofoservis",
   description:
     "Professional moving services in Šamorín and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving samorin, moving services samorin, apartment moving samorin, house moving samorin, office moving samorin",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-samorin",
     languages: {

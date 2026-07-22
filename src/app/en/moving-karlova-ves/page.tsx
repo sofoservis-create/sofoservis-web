@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Karlova Ves Bratislava | Sofoservis",
   description:
     "Professional moving services in Karlova Ves. We move apartments, family houses, and offices. Experience with steep terrain and complex access. Free quote.",
-  keywords:
-    "moving karlova ves, moving services karlova ves, apartment moving karlova ves, karlova ves moving company",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-karlova-ves",
     languages: {

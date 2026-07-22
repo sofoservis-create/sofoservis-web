@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Pezinok | Sofoservis",
   description:
     "Professional home junk removal services in Pezinok ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal pezinok, house junk removal pezinok, property junk removal pezinok, estate junk removal pezinok",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-pezinok",
     languages: {

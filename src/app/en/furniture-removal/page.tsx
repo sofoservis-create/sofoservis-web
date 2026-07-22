@@ -17,8 +17,6 @@ export const metadata = {
   title: "Furniture Removal & Disposal Services | Sofoservis",
   description:
     "Professional furniture removal, clearance, and eco-friendly disposal ✅ Cheap and fair prices ✅ Contact us today!",
-  keywords:
-    "furniture removal, old furniture disposal, furniture clearance, sofa removal, furniture recycling, junk furniture removal, bulky waste removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/furniture-removal",
     languages: {

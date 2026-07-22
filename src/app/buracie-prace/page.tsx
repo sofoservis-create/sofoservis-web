@@ -27,8 +27,6 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/buracie-prace",
     },
   },
-  keywords:
-    "buracie prace, búracie prace, rucne buracie prace, buracie práce, rucne buracie prace cena, buracie prace cena, buracie prace cennik, cena buracich prac, cena buracie prace, cena za buracie prace, demolačné práce, demolacne prace",
   openGraph: {
       title: "Búracie práce — búranie a demolácia objektov | Sofoservis",
       description: "Komplexné búracie práce v Bratislave a okolí. Búranie priečok, stien a demolácia objektov. Obhliadka priestoru zadarmo. Lacné ceny.",

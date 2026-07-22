@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie Senec - Rýchlo a hladko | Sofoservis",
   description:
     "Sťahovanie v Senci a okolí – hladko, rýchlo a bez zbytočného stresu. Skúsená posádka prenesie byt, dom aj kanceláriu. Cenovú ponuku pošleme obratom.",
-  keywords:
-    "stahovanie senec, stahovanie bytov senec, stahovacie služby senec, stahovanie firiem senec, preprava nabytku senec, stahovanie dom senec",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-senec",
       languages: {
@@ -238,6 +237,7 @@ export default function StahovanieSenecPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Senec" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

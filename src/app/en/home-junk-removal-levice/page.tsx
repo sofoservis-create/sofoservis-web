@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Levice | Sofoservis",
   description:
     "Professional home junk removal services in Levice ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal levice, house junk removal levice, property junk removal levice, estate junk removal levice",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-levice",
     languages: {

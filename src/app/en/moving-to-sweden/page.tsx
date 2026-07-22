@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Sweden — International Removals | Sofoservis",
   description:
     "Professional international moving from Slovakia to Sweden. Door-to-door delivery to Stockholm, Gothenburg, Malmö, and all of Sweden.",
-  keywords:
-    "moving from slovakia to sweden, moving from bratislava to stockholm, slovakia to sweden removals, international moving slovakia sweden, moving to stockholm from slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-sweden",
     languages: {

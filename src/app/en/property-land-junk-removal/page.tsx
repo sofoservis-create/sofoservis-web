@@ -17,8 +17,6 @@ export const metadata = {
   title: "Property & Land Junk Removal Services | Sofoservis",
   description:
     "Professional property and land junk removal services ✅ Fast and affordable ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "property junk removal, land junk removal, site junk removal, overgrown land clearing, vegetation removal, plot clearing, land preparation",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/property-land-junk-removal",
     languages: {

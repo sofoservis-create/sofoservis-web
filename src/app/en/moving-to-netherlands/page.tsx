@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Netherlands — International Removals | Sofoservis",
   description:
     "Professional international moving from Slovakia to the Netherlands. Regular routes to Amsterdam, Rotterdam, The Hague, and all Dutch cities.",
-  keywords:
-    "moving from slovakia to netherlands, moving from bratislava to amsterdam, slovakia to netherlands removals, international moving slovakia netherlands, moving to holland from slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-netherlands",
     languages: {

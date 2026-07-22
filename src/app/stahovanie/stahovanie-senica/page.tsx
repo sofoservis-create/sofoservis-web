@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie Senica - Aby sťahovanie nebolo trápenie | Sofoservis",
   description:
     "Aby sťahovanie nebolo trápenie - v Senici a na Záhorí to zariadime za vás. Naložíme, prevezieme a vynesieme všetko opatrne. Cenu vám pošleme zdarma.",
-  keywords:
-    "stahovanie senica, stahovanie bytov senica, stahovacie služby senica, stahovanie firiem senica, preprava nabytku senica, stahovanie zahorie, stahovanie dom senica",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-senica",
       languages: {
@@ -237,6 +236,7 @@ export default function StahovanieSenicaPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Senica" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

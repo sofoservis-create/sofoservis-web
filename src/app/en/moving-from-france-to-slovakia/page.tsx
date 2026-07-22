@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving from France to Slovakia — International | Sofoservis",
   description:
     "Professional international moving from France to Slovakia. We cover Paris, Lyon, Marseille, Toulouse, and all French cities.",
-  keywords:
-    "moving from france to slovakia, moving from paris to slovakia, france to slovakia removals, international moving france slovakia, paris to bratislava moving",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-from-france-to-slovakia",
     languages: {

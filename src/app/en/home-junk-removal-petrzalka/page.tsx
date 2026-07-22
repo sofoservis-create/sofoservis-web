@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Petržalka Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Petržalka, Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal petržalka, house junk removal petržalka, property junk removal petržalka, estate junk removal petržalka",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-petrzalka",
     languages: {

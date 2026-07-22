@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Zurich — International Removals | Sofoservis",
   description:
     "Moving to Zurich from Slovakia? We handle Swiss customs clearance, full packing, and door-to-door delivery to Zurich.",
-  keywords:
-    "moving to zurich, moving to zurich from slovakia, moving to zurich from bratislava, international moving zurich, relocation zurich switzerland",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-zurich",
     languages: {

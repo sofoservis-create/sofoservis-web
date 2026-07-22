@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Ružinov Bratislava | Sofoservis",
   description:
     "Professional moving services in Ružinov. We move apartments, houses, and offices in one of Bratislava's most popular districts. Reliable and fast.",
-  keywords:
-    "moving ruzinov, moving services ruzinov, apartment moving ruzinov, ruzinov bratislava moving",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-ruzinov",
     languages: {

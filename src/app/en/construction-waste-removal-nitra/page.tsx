@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Nitra | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Nitra ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal nitra, waste disposal nitra, rubble removal Nitra, debris removal Nitra",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-nitra",
     languages: {

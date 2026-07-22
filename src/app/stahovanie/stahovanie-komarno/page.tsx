@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-komarno",
       },
   },
-  keywords:
-    "stahovanie komarno, stahovanie bytov komarno, stahovacie služby komarno, stahovanie firiem komarno, preprava nabytku komarno, stahovanie dom komarno",
   openGraph: {
       title: "Sťahovanie Komárno - Presťahujeme vás raz dva | Sofoservis",
       description: "Presťahujeme vás v Komárne raz-dva. Byt, dom aj kanceláriu. Skúsená posádka, auto aj baliaci materiál so sebou. Nezáväznú cenu pošleme obratom, len napíšte.",
@@ -243,6 +242,7 @@ export default function StahovanieKomarnoPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Komárno" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

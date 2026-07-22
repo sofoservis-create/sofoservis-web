@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Hlohovec | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Hlohovec ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal hlohovec, house junk removal hlohovec, home junk removal hlohovec, property junk removal hlohovec",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-hlohovec",
     languages: {

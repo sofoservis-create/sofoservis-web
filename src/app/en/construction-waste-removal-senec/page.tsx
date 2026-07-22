@@ -18,8 +18,6 @@ export const metadata = {
   title: "Construction Waste Removal Senec | Sofoservis",
   description:
     "We offer comprehensive construction waste removal and disposal services in Senec ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "construction waste removal senec, waste disposal senec, rubble removal Senec, debris removal Senec",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-senec",
     languages: {

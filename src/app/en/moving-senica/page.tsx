@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Senica | Sofoservis",
   description:
     "Professional moving services in Senica and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving senica, moving services senica, apartment moving senica, house moving senica, office moving senica",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-senica",
     languages: {

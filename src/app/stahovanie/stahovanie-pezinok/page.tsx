@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/stahovanie-pezinok",
       },
   },
-  keywords:
-    "stahovanie pezinok, stahovanie bytov pezinok, stahovacie služby pezinok, stahovanie firiem pezinok, preprava nabytku pezinok, malokarpatská oblasť stahovanie",
   openGraph: {
       title: "Sťahovanie Pezinok | Sofoservis",
       description: "Sťahovanie v Pezinku a okolí - byty, domy aj pivnice. Postaráme sa o naloženie, prevoz aj vynesenie, vy sa nezapotíte. Napíšte a pripravíme cenu.",
@@ -246,6 +245,7 @@ export default function StahovaniePezinokPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Pezinok" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

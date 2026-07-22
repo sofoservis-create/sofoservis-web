@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Malacky | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Malacky ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal malacky, house junk removal malacky, home junk removal malacky, property junk removal malacky",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-malacky",
     languages: {

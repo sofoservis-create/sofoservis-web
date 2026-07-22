@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment Moving - Cheap and Professional | Sofoservis",
   description:
     "We offer professional apartment moving services ✅ Cheap and fair prices ✅ Free space inspection ✅ Contact us today for a stress-free move!",
-  keywords:
-    "apartment moving, move apartments, residential moving, home relocation, furniture transport, furniture assembly, furniture disassembly",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-moving",
     languages: {

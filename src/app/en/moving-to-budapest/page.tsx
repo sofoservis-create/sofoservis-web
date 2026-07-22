@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Budapest — International Removals | Sofoservis",
   description:
     "Moving to Budapest from Slovakia? Only 200 km from Bratislava — fast 1-day delivery. Professional door-to-door removals with packing and furniture.",
-  keywords:
-    "moving to budapest, moving to budapest from slovakia, moving to budapest from bratislava, international moving budapest, relocation budapest",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-budapest",
     languages: {

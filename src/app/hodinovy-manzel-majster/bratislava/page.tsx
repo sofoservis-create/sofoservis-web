@@ -17,7 +17,7 @@ import TrustBadges from "@/components/sections/TrustBadges";
 export const metadata = {
   title: "Hodinový manžel Bratislava — opravy, montáž, údržba | Sofoservis",
   description:
-    "Profesionálny hodinový manžel v Bratislave od 25€/hod ✅ Montáž nábytku, vešanie obrazov, drobné opravy ✅ Dostupný do 24 hodín",
+    "Profesionálny hodinový manžel v Bratislave od 30€/hod ✅ Montáž nábytku, vešanie obrazov, drobné opravy ✅ Dostupný do 24 hodín",
   alternates: {
     canonical: "https://www.sofoservis.sk/hodinovy-manzel-majster/bratislava",
     languages: {
@@ -89,7 +89,7 @@ export default function HodinovyManzelMajsterBratislavaPage() {
       <LabHero
         narrowForm
         title="Hodinový manžel Bratislava"
-        description="Profesionálne služby hodinového manžela v Bratislave od 25€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
+        description="Profesionálne služby hodinového manžela v Bratislave od 30€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
         formTitle="Získajte cenovú ponuku"
         formSubtitle="Ozveme sa vám do 30 minút"
         benefits={[]}

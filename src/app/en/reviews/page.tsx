@@ -27,8 +27,6 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  keywords:
-    "moving reviews, moving references, satisfied customers, moving service reviews, sofoservis reviews, moving testimonials",
 };
 
 export default function ReviewsPageEN() {

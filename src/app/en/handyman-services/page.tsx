@@ -17,8 +17,6 @@ export const metadata = {
   title: "Handyman Services — Repairs & Assembly | Sofoservis",
   description:
     "Professional handyman services - repairs, assembly, maintenance for homes and offices ✅ Cheap and fair prices ✅ Contact us today!",
-  keywords:
-    "handyman services, home repairs, furniture assembly, home maintenance, odd jobs, fix it services, DIY help, property maintenance",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-services",
     languages: {

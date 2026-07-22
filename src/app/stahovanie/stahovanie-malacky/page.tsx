@@ -9,6 +9,7 @@ import Reviews from "@/components/sections/Reviews";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Sťahovanie Malacky - Cenová ponuka obratom | Sofoservis",
   description:
     "Sťahujete sa v Malackách či na Záhorí? Pošlite nám zoznam vecí a dostanete cenovú ponuku obratom. Rýchlo, opatrne a bez zbytočných príplatkov.",
-  keywords:
-    "stahovanie malacky, stahovanie bytov malacky, stahovacie služby malacky, stahovanie firiem malacky, preprava nabytku malacky, stahovanie zahorie",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-malacky",
       languages: {
@@ -247,6 +246,7 @@ export default function StahovanieMalackyPage() {
         <CTA />
       </div>
     
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania – Malacky" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
       <TrustBadges />
       <ContactFormSection />

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Nové Mesto Bratislava | Sofoservis",
   description:
     "Professional moving services in Nové Mesto Bratislava. We move apartments, offices, and businesses. Reliable team, competitive prices. Free quote.",
-  keywords:
-    "moving nove mesto, moving services nove mesto, apartment moving nove mesto, nove mesto bratislava moving",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-nove-mesto",
     languages: {

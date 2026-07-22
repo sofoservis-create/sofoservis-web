@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Komárno | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Komárno ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal komárno, house junk removal komárno, home junk removal komárno, property junk removal komárno",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-komarno",
     languages: {

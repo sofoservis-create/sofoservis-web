@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Staré Mesto Bratislava | Sofoservis",
   description:
     "Professional moving services in Staré Mesto (Old Town) Bratislava. Expert handling of historic buildings and restricted access areas. Reliable and fast.",
-  keywords:
-    "moving stare mesto, moving services stare mesto, old town bratislava moving, apartment moving old town",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-stare-mesto",
     languages: {

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Nitra — Flats & Offices | Sofoservis",
   description:
     "Professional moving services in Nitra and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving nitra, moving services nitra, apartment moving nitra, house moving nitra, office moving nitra",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-nitra",
     languages: {

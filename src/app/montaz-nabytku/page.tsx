@@ -12,6 +12,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
@@ -26,8 +27,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/montaz-nabytku",
       },
   },
-  keywords:
-    "montáž nábytku, skladanie nábytku, demontáž nábytku, montovanie nábytku, skladanie nábytku ikea, poskladanie nábytku, montáž kuchynskej linky, montáž postele, montáž skrine, montáž komody, montáž nábytku bratislava",
   openGraph: {
     title: "Montáž, skladanie a demontáž nábytku | Sofoservis",
     description:
@@ -63,7 +62,7 @@ export default function MontazNabytkuPage() {
   const heroData = {
     title: "Skladanie a montáž nábytku",
     description:
-      "Profesionálne montáž a skladanie nábytku od 25€/hod. Naši skúsení odborníci sa postarajú o poskladanie nového nábytku alebo demontáž a presun existujúceho.",
+      "Profesionálne montáž a skladanie nábytku od 30€/hod. Naši skúsení odborníci sa postarajú o poskladanie nového nábytku alebo demontáž a presun existujúceho.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -166,6 +165,7 @@ export default function MontazNabytkuPage() {
       <HowItWorks />
 
       {/* Service Pricing section */}
+      <ServicePriceTable variant="montaz-nabytku" title="Cenník montáže nábytku" />
       <ServicePricing filter={["montaz-nabytku", "montaz-kuchyne", "hodinovy-manzel"]} />
 
             {/* Reviews section */}

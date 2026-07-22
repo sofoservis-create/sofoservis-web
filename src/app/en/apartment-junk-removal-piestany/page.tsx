@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Piešťany | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Piešťany ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal piešťany, house junk removal piešťany, home junk removal piešťany, property junk removal piešťany",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-piestany",
     languages: {

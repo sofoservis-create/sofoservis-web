@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Šaľa | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Šaľa ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal šaľa, house junk removal šaľa, home junk removal šaľa, property junk removal šaľa",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-sala",
     languages: {

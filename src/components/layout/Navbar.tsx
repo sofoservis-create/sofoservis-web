@@ -5,12 +5,9 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import {
-  DesktopNavItem,
-  MobileNavItem,
+  NavItem,
   navCategoriesSK,
   navCategoriesEN,
-  mobileNavCategoriesSK,
-  mobileNavCategoriesEN,
 } from "./NavItems";
 
 export default function Navbar() {
@@ -305,7 +302,6 @@ export default function Navbar() {
 
   // Set the appropriate navigation categories based on language
   const navCategories = isEnglish ? navCategoriesEN : navCategoriesSK;
-  const mobileNavCategories = isEnglish ? mobileNavCategoriesEN : mobileNavCategoriesSK;
 
   // Text content based on language
   const texts = {
@@ -361,25 +357,23 @@ export default function Navbar() {
       // Tracking nesmie rozbiť klik na tel. odkaz
     }
   };
-
-
   return (
     <>
-      {/* Desktop Navbar - Positioned absolutely over the hero section */}
-      <div
-        className={`hidden desktop:block w-full fixed top-0 left-0 right-0 z-[100] ${
-          isScrolled ? "py-2" : "pt-6"
+      {/* Single unified navbar — one markup for mobile and desktop */}
+      <header
+        ref={mobileNavRef}
+        className={`fixed top-0 left-0 right-0 z-[100] bg-white shadow-md desktop:bg-transparent desktop:shadow-none ${
+          isScrolled ? "desktop:py-2" : "desktop:pt-6"
         } transition-all duration-300`}
       >
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 desktop:px-8">
+        <div className="desktop:container desktop:max-w-7xl desktop:mx-auto desktop:px-8">
           <nav
-            className={`bg-white rounded-xl shadow-xl ${
-              isScrolled ? "" : "shadow-lg"
-            } transition-all duration-300`}
+            className="bg-white desktop:rounded-xl desktop:shadow-xl transition-all duration-300"
+            aria-label={isEnglish ? "Main navigation" : "Hlavná navigácia"}
           >
-            <div className="flex items-center justify-between h-24 px-5 gap-3 flex-nowrap">
+            <div className="flex flex-wrap items-center justify-between px-3 desktop:flex-nowrap desktop:h-24 desktop:px-5 desktop:gap-3">
               {/* Logo */}
-              <div className="flex-shrink-0 transition-transform duration-300 hover:scale-105">
+              <div className="flex-shrink-0 transition-transform duration-300 desktop:hover:scale-105">
                 <Link
                   href={isEnglish ? "/en" : "/"}
                   className="inline-block"
@@ -394,32 +388,231 @@ export default function Navbar() {
                     alt="SofoServis"
                     width={199}
                     height={85}
-                    className="h-[85px] w-auto"
+                    className={`w-auto transition-all duration-300 ${
+                      isScrolled ? "h-[64px]" : "h-[97px]"
+                    } desktop:h-[85px]`}
                     priority
                     unoptimized
                   />
                 </Link>
               </div>
 
-              {/* Desktop Navigation */}
-              <nav
-                className="flex items-center"
-                aria-label={isEnglish ? "Main navigation" : "Hlavná navigácia"}
-              >
-                {navCategories.map((category, index) => (
-                  <DesktopNavItem
-                    key={index}
-                    category={category}
-                    expandedSubLink={expandedSubLink}
-                    setExpandedSubLink={setExpandedSubLink}
-                    expandedSubSubLink={expandedSubSubLink}
-                    setExpandedSubSubLink={setExpandedSubSubLink}
-                  />
-                ))}
-              </nav>
+              {/* Mobile header buttons */}
+              <div className="flex items-center desktop:hidden">
+                <button
+                  type="button"
+                  className="text-primary-900 p-3 mr-1 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
+                  aria-label={`${t.phoneLabel}: ${t.phoneNumber}`}
+                  onClick={() => {
+                    const num = shouldScrollToTop
+                      ? t.phoneNumber
+                      : (document.querySelector<HTMLSpanElement>(".nimbata_number_1")?.textContent?.trim() || t.phoneNumber);
+                    try {
+                      pushDataLayerEvent("call_click", {
+                        event_category: "engagement",
+                        event_label: pathname,
+                        phone_number: num,
+                        language: isEnglish ? "en" : "sk",
+                        location: "navbar_mobile_icon",
+                      });
+                    } catch {}
+                    window.location.href = `tel:${num.replace(/\s/g, "")}`;
+                  }}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-7 h-7 text-accent-500"
+                    aria-hidden="true"
+                  >
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </button>
 
-              {/* Call to Action */}
-              <div className="flex items-center gap-5 flex-shrink-0">
+                <button
+                  className="p-3 hover:bg-gray-100 rounded-full transition-colors focus:outline-none"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  aria-expanded={mobileMenuOpen}
+                  aria-controls="mobile-menu"
+                  aria-label={mobileMenuOpen ? t.close : t.menu}
+                >
+                  <svg
+                    className="w-7 h-7 text-primary-900"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      className={mobileMenuOpen ? "hidden" : "block"}
+                      d="M4 6h16M4 12h16M4 18h16"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                    <path
+                      className={mobileMenuOpen ? "block" : "hidden"}
+                      d="M6 18L18 6M6 6l12 12"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Menu — single markup; mobile accordion / desktop inline dropdowns */}
+              <div
+                id="mobile-menu"
+                className={`${mobileMenuOpen ? "block" : "hidden"} w-full order-last overflow-y-auto ${
+                  isScrolled
+                    ? "max-h-[calc(100vh-5rem)]"
+                    : "max-h-[calc(100vh-6rem)]"
+                } border-t border-gray-200 desktop:block desktop:w-auto desktop:order-none desktop:overflow-visible desktop:max-h-none desktop:border-0`}
+              >
+                <div className="desktop:flex desktop:items-center">
+                  {navCategories.map((category, index) => (
+                    <NavItem
+                      key={index}
+                      category={category}
+                      activeDropdown={activeDropdown}
+                      toggleDropdown={toggleDropdown}
+                      expandedSubLink={expandedSubLink}
+                      setExpandedSubLink={setExpandedSubLink}
+                      expandedSubSubLink={expandedSubSubLink}
+                      setExpandedSubSubLink={setExpandedSubSubLink}
+                      setMobileMenuOpen={setMobileMenuOpen}
+                    />
+                  ))}
+                </div>
+
+                {/* Mobile-only bottom actions */}
+                <div className="desktop:hidden">
+                  <div className="px-4 py-3 border-t border-b border-gray-200 flex items-center justify-center gap-2">
+                    <div className="flex -space-x-1.5 flex-shrink-0">
+                      <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-30">
+                        <Image src="/images/review-avatar-1.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-20">
+                        <Image src="/images/review-avatar-2.png" alt="Spokojný zákazník" width={24} height={24} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-10">
+                        <Image src="/images/review-avatar-3.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
+                      </div>
+                    </div>
+                    <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
+                    <span className="text-gray-600 text-xs whitespace-nowrap font-medium">
+                      {isEnglish ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-3 px-4 pb-5 pt-3">
+                    <button
+                      type="button"
+                      className="flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors cursor-pointer"
+                      onClick={() => {
+                        const num = nimbataPhone || t.phoneNumber;
+                        try {
+                          pushDataLayerEvent("call_click", {
+                            event_category: "engagement",
+                            event_label: pathname,
+                            phone_number: num,
+                            language: isEnglish ? "en" : "sk",
+                            location: "navbar_mobile_menu",
+                          });
+                        } catch {}
+                        window.location.href = `tel:${num.replace(/\s/g, "")}`;
+                      }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="w-4 h-4 text-accent-500 flex-shrink-0"
+                        aria-hidden="true"
+                      >
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                      </svg>
+                      <span className="whitespace-nowrap overflow-hidden">{nimbataPhone || t.phoneNumber}</span>
+                    </button>
+
+                    <Link
+                      href={isEnglish ? "/en/contact" : "/kontakt"}
+                      className="flex items-center justify-center gap-1 bg-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-accent-400 transition-colors shadow-sm"
+                      onClick={(e) => {
+                        handleCtaClick(e);
+                        setMobileMenuOpen(false);
+                      }}
+                    >
+                      <span className="whitespace-nowrap">{t.getQuote}</span>
+                      <svg
+                        className="w-4 h-4 flex-shrink-0"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M5 12h14m-7-7l7 7-7 7"></path>
+                      </svg>
+                    </Link>
+                  </div>
+
+                  <div className="flex justify-center py-3 border-t border-gray-200">
+                    <div className="flex items-center bg-gray-100 rounded-full p-0.5">
+                      {isEnglish ? (
+                        <>
+                          <a
+                            href={getLanguageToggleHref()}
+                            onClick={handleLangSwitch(getLanguageToggleHref())}
+                            className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide text-primary-500 hover:text-primary-800 transition-colors cursor-pointer"
+                            aria-label="Prepnúť na slovenčinu"
+                          >
+                            SK
+                          </a>
+                          <span className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide bg-accent-400 text-primary-900">
+                            EN
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <span className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide bg-accent-400 text-primary-900">
+                            SK
+                          </span>
+                          <a
+                            href={getLanguageToggleHref()}
+                            onClick={handleLangSwitch(getLanguageToggleHref())}
+                            className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide text-primary-500 hover:text-primary-800 transition-colors cursor-pointer"
+                            aria-label="Switch to English"
+                          >
+                            EN
+                          </a>
+                        </>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="text-center py-3 text-primary-900 text-lg font-medium border-t border-gray-200">
+                    {t.businessHours}
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop CTA cluster */}
+              <div className="hidden desktop:flex items-center gap-5 flex-shrink-0">
                 <div className="flex items-center bg-gray-100 rounded-full p-0.5">
                   {isEnglish ? (
                     <>
@@ -517,253 +710,7 @@ export default function Navbar() {
             </div>
           </nav>
         </div>
-      </div>
-
-      {/* Mobile Navbar */}
-      <nav ref={mobileNavRef} className="desktop:hidden fixed top-0 left-0 right-0 z-[100] bg-white shadow-md">
-        {/* Mobile Header */}
-        <div
-          className={`flex items-center justify-between px-3 border-b transition-all duration-300 ${
-            isScrolled ? "h-20" : "h-24"
-          }`}
-        >
-          {/* Logo - Made larger for mobile */}
-          <Link
-            href={isEnglish ? "/en" : "/"}
-            className="inline-block"
-            aria-label={
-              isEnglish ? "SofoServis homepage" : "SofoServis domovská stránka"
-            }
-          >
-            <Image
-              src="/images/Sofoservis_nove_logo_SVG.svg"
-              alt="SofoServis"
-              width={186}
-              height={97}
-              className={`w-auto transition-all duration-300 ${
-                isScrolled ? "h-[64px]" : "h-[97px]"
-              }`}
-              priority
-              unoptimized
-            />
-          </Link>
-
-          {/* Header Buttons */}
-          <div className="flex items-center">
-            <button
-              type="button"
-              className="text-primary-900 p-3 mr-1 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
-              aria-label={`${t.phoneLabel}: ${t.phoneNumber}`}
-              onClick={() => {
-                const num = shouldScrollToTop
-                  ? t.phoneNumber
-                  : (document.querySelector<HTMLSpanElement>(".nimbata_number_1")?.textContent?.trim() || t.phoneNumber);
-                try {
-                  pushDataLayerEvent("call_click", {
-                    event_category: "engagement",
-                    event_label: pathname,
-                    phone_number: num,
-                    language: isEnglish ? "en" : "sk",
-                    location: "navbar_mobile_icon",
-                  });
-                } catch {}
-                window.location.href = `tel:${num.replace(/\s/g, "")}`;
-              }}
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="w-7 h-7 text-accent-500"
-                aria-hidden="true"
-              >
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-            </button>
-
-            <button
-              className="p-3 hover:bg-gray-100 rounded-full transition-colors focus:outline-none"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-expanded={mobileMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label={mobileMenuOpen ? t.close : t.menu}
-            >
-              <svg
-                className="w-7 h-7 text-primary-900"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  className={mobileMenuOpen ? "hidden" : "block"}
-                  d="M4 6h16M4 12h16M4 18h16"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-                <path
-                  className={mobileMenuOpen ? "block" : "hidden"}
-                  d="M6 18L18 6M6 6l12 12"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div
-            id="mobile-menu"
-            className={`bg-white overflow-y-auto ${
-              isScrolled
-                ? "max-h-[calc(100vh-5rem)]"
-                : "max-h-[calc(100vh-6rem)]"
-            }`}
-          >
-            {/* Mobile Navigation */}
-            <div className="border-t border-gray-200">
-              {mobileNavCategories.map((category, index) => (
-                <MobileNavItem
-                  key={index}
-                  category={category}
-                  activeDropdown={activeDropdown}
-                  toggleDropdown={toggleDropdown}
-                  expandedSubLink={expandedSubLink}
-                  setExpandedSubLink={setExpandedSubLink}
-                  expandedSubSubLink={expandedSubSubLink}
-                  setExpandedSubSubLink={setExpandedSubSubLink}
-                  setMobileMenuOpen={setMobileMenuOpen}
-                />
-              ))}
-            </div>
-
-            {/* Mobile Bottom Actions */}
-            <div className="px-4 py-3 border-t border-b border-gray-200 flex items-center justify-center gap-2">
-              <div className="flex -space-x-1.5 flex-shrink-0">
-                <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-30">
-                  <Image src="/images/review-avatar-1.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
-                </div>
-                <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-20">
-                  <Image src="/images/review-avatar-2.png" alt="Spokojný zákazník" width={24} height={24} className="w-full h-full object-cover" />
-                </div>
-                <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-10">
-                  <Image src="/images/review-avatar-3.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
-                </div>
-              </div>
-              <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-              <span className="text-gray-600 text-xs whitespace-nowrap font-medium">
-                {isEnglish ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}
-              </span>
-            </div>
-            <div className="grid grid-cols-2 gap-3 px-4 pb-5">
-              <button
-                type="button"
-                className="flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors cursor-pointer"
-                onClick={() => {
-                  const num = nimbataPhone || t.phoneNumber;
-                  try {
-                    pushDataLayerEvent("call_click", {
-                      event_category: "engagement",
-                      event_label: pathname,
-                      phone_number: num,
-                      language: isEnglish ? "en" : "sk",
-                      location: "navbar_mobile_menu",
-                    });
-                  } catch {}
-                  window.location.href = `tel:${num.replace(/\s/g, "")}`;
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="w-4 h-4 text-accent-500 flex-shrink-0"
-                  aria-hidden="true"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span className="whitespace-nowrap overflow-hidden">{nimbataPhone || t.phoneNumber}</span>
-              </button>
-
-              <Link
-                href={isEnglish ? "/en/contact" : "/kontakt"}
-                className="flex items-center justify-center gap-1 bg-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-accent-400 transition-colors shadow-sm"
-                onClick={(e) => {
-                  handleCtaClick(e);
-                  setMobileMenuOpen(false);
-                }}
-              >
-                <span className="whitespace-nowrap">{t.getQuote}</span>
-                <svg
-                  className="w-4 h-4 flex-shrink-0"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M5 12h14m-7-7l7 7-7 7"></path>
-                </svg>
-              </Link>
-            </div>
-
-            <div className="flex justify-center py-3 border-t border-gray-200">
-              <div className="flex items-center bg-gray-100 rounded-full p-0.5">
-                {isEnglish ? (
-                  <>
-                    <a
-                      href={getLanguageToggleHref()}
-                      onClick={handleLangSwitch(getLanguageToggleHref())}
-                      className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide text-primary-500 hover:text-primary-800 transition-colors cursor-pointer"
-                      aria-label="Prepnúť na slovenčinu"
-                    >
-                      SK
-                    </a>
-                    <span className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide bg-accent-400 text-primary-900">
-                      EN
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    <span className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide bg-accent-400 text-primary-900">
-                      SK
-                    </span>
-                    <a
-                      href={getLanguageToggleHref()}
-                      onClick={handleLangSwitch(getLanguageToggleHref())}
-                      className="px-4 py-1.5 rounded-full text-sm font-bold uppercase tracking-wide text-primary-500 hover:text-primary-800 transition-colors cursor-pointer"
-                      aria-label="Switch to English"
-                    >
-                      EN
-                    </a>
-                  </>
-                )}
-              </div>
-            </div>
-
-            <div className="text-center py-3 text-primary-900 text-lg font-medium border-t border-gray-200">
-              {t.businessHours}
-            </div>
-          </div>
-        )}
-      </nav>
+      </header>
 
       {/* Space to prevent content from being hidden behind fixed navbar on mobile */}
       <div className={`${isScrolled ? "h-20" : "h-24"} desktop:h-0`}></div>

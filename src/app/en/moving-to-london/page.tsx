@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to London — International Removals | Sofoservis",
   description:
     "Moving to London from Slovakia? We handle post-Brexit UK customs, full packing, and door-to-door delivery to all London boroughs. 4-7 day transit.",
-  keywords:
-    "moving to london, moving to london from slovakia, moving to london from bratislava, international moving london, relocation london uk",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-london",
     languages: {

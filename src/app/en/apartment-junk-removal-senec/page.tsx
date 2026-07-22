@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Senec | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Senec ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal senec, house junk removal senec, home junk removal senec, property junk removal senec",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-senec",
     languages: {

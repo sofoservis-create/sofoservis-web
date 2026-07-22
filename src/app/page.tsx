@@ -61,8 +61,6 @@ export const metadata = {
   title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
   description:
     "Sofoservis – sťahovanie, vypratávanie a montáž nábytku. 3500+ spokojných zákazníkov. Obhliadka zadarmo. Férové ceny.",
-  keywords:
-    "sťahovanie, sťahovanie bratislava, sťahovacie služby, vypratávanie, vypratávanie bytov, montáž nábytku, montáž IKEA, montáž kuchyne, sťahovanie bytov, sťahovanie domov, sťahovanie kancelárií, vypratávanie pivníc, odvoz nábytku, sofoservis",
   alternates: {
     canonical: "https://www.sofoservis.sk",
       languages: {

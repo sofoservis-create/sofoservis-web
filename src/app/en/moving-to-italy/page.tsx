@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Italy — International Removals | Sofoservis",
   description:
     "Moving to Italy from Slovakia? Rome is approximately 1,000 km from Bratislava — 3-4 day delivery.",
-  keywords:
-    "moving to italy, moving to italy from slovakia, moving to italy from bratislava, international moving italy, relocation rome milan florence",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-italy",
     languages: {

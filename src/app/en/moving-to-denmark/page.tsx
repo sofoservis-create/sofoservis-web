@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Denmark — International Removals | Sofoservis",
   description:
     "Moving to Denmark from Slovakia? Approximately 1,300 km to Copenhagen — 3-4 day delivery.",
-  keywords:
-    "moving to denmark, moving to denmark from slovakia, moving to denmark from bratislava, international moving denmark, relocation copenhagen",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-denmark",
     languages: {

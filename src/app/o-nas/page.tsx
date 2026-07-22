@@ -18,8 +18,6 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/o-nas",
     },
   },
-  keywords:
-    "o nás sofoservis, príbeh sofoservis, zakladateľ sofoservis, sťahovacia firma bratislava, tím sofoservis",
   openGraph: {
     title: "O nás | Sofoservis – príbeh sťahovacej firmy",
     description:

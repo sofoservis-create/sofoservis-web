@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Nové Mesto Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Nové Mesto, Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal nové mesto, house junk removal nové mesto, property junk removal nové mesto, estate junk removal nové mesto",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-nove-mesto",
     languages: {

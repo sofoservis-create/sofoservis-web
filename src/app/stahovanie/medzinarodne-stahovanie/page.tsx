@@ -8,6 +8,7 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import FAQ from "@/components/sections/FAQ";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
@@ -27,8 +28,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/stahovanie/medzinarodne-stahovanie",
       },
   },
-  keywords:
-    "medzinárodné sťahovanie, sťahovanie do zahraničia, sťahovanie zo zahraničia, sťahovanie do Európy, zahraničné sťahovanie, preprava vecí do zahraničia, sťahovanie z ČR, sťahovanie do Rakúska, sťahovanie do Nemecka",
   openGraph: {
       title: "Medzinárodné sťahovanie do / zo zahraničia | Sofoservis",
       description: "Medzinárodné sťahovanie do Česka, Rakúska, Nemecka aj ďalších krajín Európy. Vybavíme dopravu, formality aj zabalenie vecí. Nezáväzná cenová ponuka zdarma.",
@@ -207,6 +206,7 @@ export default function MedzinarodneStahovaniePage() {
       <div><Clients /></div>
       <div><GoogleReviews /></div>
       <HowItWorks />
+      <ServicePriceTable variant="stahovanie" title="Cenník medzinárodného sťahovania" />
       <ServicePricing filter={["medzinarodne-stahovanie", "stahovanie", "vypratavanie"]} />
 
       <div><Reviews showHeadline={true} /></div>

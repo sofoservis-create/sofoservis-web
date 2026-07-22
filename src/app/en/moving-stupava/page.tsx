@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Stupava | Sofoservis",
   description:
     "Professional moving services in Stupava and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving stupava, moving services stupava, apartment moving stupava, house moving stupava, office moving stupava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-stupava",
     languages: {

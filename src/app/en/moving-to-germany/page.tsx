@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Germany — International Removals | Sofoservis",
   description:
     "Professional international moving from Slovakia to Germany. Regular routes to Munich, Berlin, Hamburg, Frankfurt, and all German cities.",
-  keywords:
-    "moving from slovakia to germany, moving from bratislava to munich, slovakia to germany removals, international moving slovakia germany, moving to munich from slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-germany",
     languages: {

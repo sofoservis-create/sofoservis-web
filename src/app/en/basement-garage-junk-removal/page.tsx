@@ -17,8 +17,6 @@ export const metadata = {
   title: "Basement & Garage Junk Removal Services | Sofoservis",
   description:
     "Professional basement, garage, and commercial space junk removal ✅ Fast and affordable ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "basement junk removal, garage junk removal, storage junk removal, commercial space junk removal, junk removal, cellar junk removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/basement-garage-junk-removal",
     languages: {

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Handyman Services Trnava | Sofoservis",
   description:
     "Professional handyman services in Trnava - repairs, assembly, maintenance for homes and offices ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "handyman trnava, handyman services trnava, home repairs Trnava, furniture assembly Trnava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-trnava",
     languages: {

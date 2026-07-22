@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Belgium — International Removals | Sofoservis",
   description:
     "Moving to Belgium from Slovakia? Approximately 1,000 km — 2-3 day delivery to Brussels, Antwerp, Ghent and all Belgian cities. Door-to-door EU service.",
-  keywords:
-    "moving to belgium, moving to belgium from slovakia, moving to belgium from bratislava, international moving belgium, relocation belgium",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-belgium",
     languages: {

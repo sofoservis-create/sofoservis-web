@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Stockholm — International Removals | Sofoservis",
   description:
     "Moving to Stockholm from Slovakia? Regular Scandinavian routes with 5-7 day delivery. Professional door-to-door removals with packing and furniture.",
-  keywords:
-    "moving to stockholm, moving to stockholm from slovakia, moving to sweden from slovakia, international moving stockholm, relocation stockholm sweden",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-stockholm",
     languages: {

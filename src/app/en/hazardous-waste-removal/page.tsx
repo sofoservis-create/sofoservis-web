@@ -17,8 +17,6 @@ export const metadata = {
   title: "Hazardous Waste & Appliance Removal | Sofoservis",
   description:
     "Professional hazardous waste removal and old appliance removal ✅ Cheap and fair prices ✅ Contact us today!",
-  keywords:
-    "hazardous waste removal, appliance removal, electronics recycling, old appliance removal, chemical waste removal, battery removal",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/hazardous-waste-removal",
     languages: {

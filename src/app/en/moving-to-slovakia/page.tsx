@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Slovakia — International Relocation | Sofoservis",
   description:
     "Relocating to Slovakia? We offer professional international moving services for expats moving from the UK, Germany, Austria, Netherlands and France.",
-  keywords:
-    "moving to slovakia, relocating to slovakia, international moving to slovakia, expat moving slovakia, move to bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-slovakia",
     languages: {

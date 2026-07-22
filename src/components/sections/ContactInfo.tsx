@@ -313,6 +313,41 @@ export default function ContactInfo() {
                   </p>
                 </div>
               </div>
+
+              {/* Fakturačné údaje */}
+              <div className="flex items-start space-x-4">
+                <div className="bg-accent-500 p-3 rounded-full flex-shrink-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-6 h-6 text-primary-900"
+                  >
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-lg font-semibold text-primary-800">
+                    {isEnglish ? "Billing details" : "Fakturačné údaje"}
+                  </p>
+                  <div className="text-primary-700 mt-1 space-y-0.5 text-base">
+                    <p>Sofoservices s. r. o.</p>
+                    <p>Lermontovova 3, 811 05 Bratislava</p>
+                    <p>{isEnglish ? "Company ID" : "IČO"}: 55333800</p>
+                    <p>{isEnglish ? "Tax ID" : "DIČ"}: 2121960775</p>
+                    <p>{isEnglish ? "VAT ID" : "IČ DPH"}: SK2121960775</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>

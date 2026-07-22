@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Rome — International Removals | Sofoservis",
   description:
     "Moving to Rome from Slovakia? Approximately 1,300 km — regular routes with 4-6 day delivery. Professional door-to-door removals with packing.",
-  keywords:
-    "moving to rome, moving to rome from slovakia, moving to italy from slovakia, international moving rome, relocation rome italy",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-rome",
     languages: {

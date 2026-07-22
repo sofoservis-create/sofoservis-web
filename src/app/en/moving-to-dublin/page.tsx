@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Dublin — International Removals | Sofoservis",
   description:
     "Moving to Dublin from Slovakia? Sea crossing included, 5-8 day door-to-door delivery to all Dublin areas. Professional removals with packing.",
-  keywords:
-    "moving to dublin, moving to dublin from slovakia, moving to ireland from slovakia, international moving dublin, relocation dublin ireland",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-dublin",
     languages: {

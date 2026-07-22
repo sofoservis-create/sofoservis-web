@@ -16,8 +16,6 @@ export const metadata = {
   title: "Vypratávanie bytov a domov Bratislava | Sofoservis",
   description:
     "Ponúkame profesionálne vypratávanie bytov a domov v Bratislave ✅ Lacné a férové ceny ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás ešte dnes!",
-  keywords:
-    "vypratavanie bratislava, vypratávanie bytov bratislava, vypratanie bytu bratislava, vypratanie domu bratislava, vypratanie pozostalosti bratislava, likvidacia odpadu bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov/bratislava",
       languages: {
@@ -230,7 +228,7 @@ export default function VypratavanieBytovDomovBratislavaPage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          {"title":"Vypratávanie bytov a domov","description":"Vypratávanie bytov a priestorov od 25€/hod.","href":"/vypratavanie/vypratavanie-bytov-domov","icon":"/icons/vypratavanie_icon.svg"},
+          {"title":"Vypratávanie bytov a domov","description":"Vypratávanie bytov a priestorov od 30€/hod.","href":"/vypratavanie/vypratavanie-bytov-domov","icon":"/icons/vypratavanie_icon.svg"},
           {"title":"Vypratávanie pivníc a garáží","description":"Rýchle vypratanie pivníc, kobiek a garáží.","href":"/vypratavanie/vypratavanie-pivnic-a-garazi","icon":"/icons/house_icon.svg"},
           {"title":"Sťahovanie Bratislava","description":"Profesionálne sťahovanie v celej Bratislave.","href":"/stahovanie/stahovanie-bratislava","icon":"/icons/truck_icon.svg"},
           {"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"}

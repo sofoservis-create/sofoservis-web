@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Galanta | Sofoservis",
   description:
     "Professional moving services in Galanta and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving galanta, moving services galanta, apartment moving galanta, house moving galanta, office moving galanta",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-galanta",
     languages: {

@@ -18,8 +18,6 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/o-nas",
     },
   },
-  keywords:
-    "about sofoservis, sofoservis story, moving company bratislava, sofoservis team, professional movers slovakia",
   openGraph: {
     title: "About Us | Sofoservis – Moving Company Story",
     description:

@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to the UK — International Removals | Sofoservis",
   description:
     "Professional moving from Slovakia to the United Kingdom. We handle post-Brexit customs paperwork, full packing service, and safe door-to-door delivery.",
-  keywords:
-    "moving from slovakia to uk, moving from slovakia to england, moving from bratislava to london, slovakia to uk removals, international moving slovakia uk",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-uk",
     languages: {

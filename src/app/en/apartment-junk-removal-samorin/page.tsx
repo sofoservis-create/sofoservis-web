@@ -18,8 +18,6 @@ export const metadata = {
   title: "Apartment & House Junk Removal Šamorín | Sofoservis",
   description:
     "Professional apartment and house junk removal services in Šamorín ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "apartment junk removal šamorín, house junk removal šamorín, home junk removal šamorín, property junk removal šamorín",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/apartment-junk-removal-samorin",
     languages: {

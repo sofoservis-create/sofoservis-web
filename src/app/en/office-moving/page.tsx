@@ -18,8 +18,6 @@ export const metadata = {
   title: "Office Moving - Cheap and Professional | Sofoservis",
   description:
     "We offer professional office moving services ✅ Cheap and fair prices ✅ Free space inspection ✅ Contact us today for a smooth business relocation!",
-  keywords:
-    "office moving, business relocation, corporate moving, office furniture moving, commercial moving, business moving services, professional office relocation",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/office-moving",
     languages: {

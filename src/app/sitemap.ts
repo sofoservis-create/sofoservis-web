@@ -1,246 +1,111 @@
 import { MetadataRoute } from "next";
+import fs from "fs";
+import path from "path";
 
 const BASE_URL = "https://www.sofoservis.sk";
 
+// Routes that must never appear in the sitemap even if a page exists.
+const EXCLUDED_PREFIXES = ["/editor", "/admin", "/api"];
+
+/**
+ * Recursively walk the App Router directory and collect every route that has
+ * a page.tsx. Dynamic segments ([param]) and route groups are skipped — the
+ * site uses only static routes for SEO pages.
+ */
+function collectRoutes(dir: string, urlPath = ""): string[] {
+  const routes: string[] = [];
+  let entries: fs.Dirent[];
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch {
+    return routes;
+  }
+
+  if (entries.some((e) => e.isFile() && e.name === "page.tsx")) {
+    routes.push(urlPath === "" ? "/" : urlPath);
+  }
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const name = entry.name;
+    // Skip dynamic segments, route groups, parallel/intercepted routes and private folders
+    if (
+      name.startsWith("[") ||
+      name.startsWith("(") ||
+      name.startsWith("@") ||
+      name.startsWith("_")
+    ) {
+      continue;
+    }
+    routes.push(...collectRoutes(path.join(dir, name), `${urlPath}/${name}`));
+  }
+
+  return routes;
+}
+
+function priorityFor(route: string): number {
+  if (route === "/") return 1.0;
+  const isEnglish = route === "/en" || route.startsWith("/en/");
+  const depth = route.split("/").filter(Boolean).length;
+  if (
+    route.includes("cookies") ||
+    route.includes("osobnych-udajov") ||
+    route.includes("obchodne-podmienky") ||
+    route.includes("privacy-policy") ||
+    route.includes("cookie-policy") ||
+    route.includes("terms-of-service")
+  ) {
+    return 0.2;
+  }
+  if (isEnglish) return depth <= 1 ? 0.7 : 0.55;
+  return depth <= 1 ? 0.8 : 0.7;
+}
+
+function changeFrequencyFor(
+  route: string
+): MetadataRoute.Sitemap[number]["changeFrequency"] {
+  if (
+    route.includes("cookies") ||
+    route.includes("osobnych-udajov") ||
+    route.includes("obchodne-podmienky") ||
+    route.includes("privacy-policy") ||
+    route.includes("cookie-policy") ||
+    route.includes("terms-of-service")
+  ) {
+    return "yearly";
+  }
+  if (
+    route === "/o-nas" ||
+    route === "/cennik" ||
+    route === "/referencie" ||
+    route === "/kontakt" ||
+    route === "/en/about" ||
+    route === "/en/pricing" ||
+    route === "/en/reviews" ||
+    route === "/en/contact"
+  ) {
+    return "monthly";
+  }
+  return "weekly";
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const buildTime = new Date();
+  const appDir = path.join(process.cwd(), "src", "app");
 
-  const staticRoutes: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`, changeFrequency: "weekly", priority: 1.0 },
+  const routes = collectRoutes(appDir)
+    .filter(
+      (route) =>
+        !EXCLUDED_PREFIXES.some(
+          (prefix) => route === prefix || route.startsWith(prefix + "/")
+        )
+    )
+    .sort();
 
-    { url: `${BASE_URL}/stahovanie/stahovanie-bratislava`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-bytov-domov`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-kancelarii-firiem`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE_URL}/vypratavanie/vypratavanie-bytov-domov`, changeFrequency: "weekly", priority: 0.9 },
-
-    { url: `${BASE_URL}/hodinovy-manzel-majster`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/montaz-nabytku`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/montaz-kuchyne`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-tazkych-bremien`, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE_URL}/stahovanie/medzinarodne-stahovanie`, changeFrequency: "weekly", priority: 0.8 },
-
-    { url: `${BASE_URL}/vypratavanie/cistenie-vypratavanie-pozemkov`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/vypratavanie/odvoz-stareho-nabytku`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/vypratavanie/vypratavanie-pivnic-a-garazi`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/vypratavanie/odvoz-likvidacia-stavebneho-odpadu`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/vypratavanie/likvidacia-nebezpecneho-odpadu`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/buracie-prace`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/buracie-prace/buranie-demolacia-domov`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/buracie-prace/buranie-stien-priecok`, changeFrequency: "weekly", priority: 0.7 },
-
-    { url: `${BASE_URL}/vypratavanie/vypratavanie-bytov-domov/bratislava`, changeFrequency: "weekly", priority: 0.85 },
-
-    { url: `${BASE_URL}/montaz-nabytku/bratislava`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/hodinovy-manzel-majster/bratislava`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/bratislava`, changeFrequency: "weekly", priority: 0.7 },
-
-    { url: `${BASE_URL}/stahovanie/stahovanie-nitra`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-trnava`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-senec`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-pezinok`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-malacky`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-galanta`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-piestany`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-sala`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-komarno`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-samorin`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-stupava`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/stahovanie/stahovanie-senica`, changeFrequency: "weekly", priority: 0.7 },
-
-    { url: `${BASE_URL}/buracie-demolacne-prace/pezinok`, changeFrequency: "weekly", priority: 0.65 },
-
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/nitra`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/trnava`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/senec`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/galanta`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/hlohovec`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/senica`, changeFrequency: "weekly", priority: 0.65 },
-
-    { url: `${BASE_URL}/o-nas`, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE_URL}/cennik`, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${BASE_URL}/referencie`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/kontakt`, changeFrequency: "monthly", priority: 0.7 },
-    { url: `${BASE_URL}/zasady-pouzivania-cookies`, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${BASE_URL}/zasady-spracovania-osobnych-udajov`, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${BASE_URL}/vseobecne-obchodne-podmienky`, changeFrequency: "yearly", priority: 0.3 },
-
-    { url: `${BASE_URL}/en`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/en/about`, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${BASE_URL}/en/moving-bratislava`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/apartment-moving`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/office-moving`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/furniture-assembly`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/handyman-services`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/kitchen-installation`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/international-moving-services`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/moving-heavy-loads`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/furniture-moving-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/furniture-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/home-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/basement-garage-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/construction-waste-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/hazardous-waste-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/demolition-services`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/house-demolition`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/wall-demolition`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/property-land-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-
-    { url: `${BASE_URL}/en/home-junk-removal-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/basement-junk-removal-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/old-furniture-removal-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/furniture-assembly-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/handyman-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/demolition-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/construction-waste-removal-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-
-    { url: `${BASE_URL}/en/moving-nitra`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-trnava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-senec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-pezinok`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-malacky`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-galanta`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-piestany`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-sala`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-hlohovec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-levice`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-komarno`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-samorin`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-stupava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-senica`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/handyman-trnava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/handyman-galanta`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/handyman-piestany`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/demolition-nitra`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/demolition-trnava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/demolition-pezinok`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/construction-waste-removal-nitra`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/construction-waste-removal-trnava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/construction-waste-removal-senec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/construction-waste-removal-galanta`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/construction-waste-removal-hlohovec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/construction-waste-removal-senica`, changeFrequency: "weekly", priority: 0.55 },
-
-
-    { url: `${BASE_URL}/en/moving-to-belgium`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-brno`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-czech-republic`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-denmark`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-hungary`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-poland`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-spain`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-italy`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-amsterdam`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-barcelona`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-berlin`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-brussels`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-budapest`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-copenhagen`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-dublin`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-frankfurt`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-hamburg`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-lisbon`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-london`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-munich`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-oslo`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-paris`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-prague`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-rome`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-stockholm`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-vienna`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-warsaw`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-zurich`, changeFrequency: "monthly", priority: 0.6 },
-
-
-    { url: `${BASE_URL}/en/office-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/estate-junk-removal-bereavement`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/post-renovation-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/cottage-junk-removal`, changeFrequency: "weekly", priority: 0.6 },
-
-    { url: `${BASE_URL}/en/moving-dubravka`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-karlova-ves`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-nove-mesto`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-petrzalka`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-ruzinov`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-stare-mesto`, changeFrequency: "weekly", priority: 0.6 },
-
-    { url: `${BASE_URL}/en/apartment-junk-removal-bratislava`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-trnava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-nitra`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-senec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-pezinok`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-galanta`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-sala`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-hlohovec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-senica`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-malacky`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-levice`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-komarno`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-piestany`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-samorin`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/apartment-junk-removal-stupava`, changeFrequency: "weekly", priority: 0.55 },
-
-    { url: `${BASE_URL}/en/home-junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/home-junk-removal-galanta`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-hlohovec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-komarno`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-levice`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-malacky`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-nitra`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-pezinok`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-piestany`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-samorin`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-sala`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-senec`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-senica`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-trnava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-stupava`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-dubravka`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-karlova-ves`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-nove-mesto`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-petrzalka`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-ruzinov`, changeFrequency: "weekly", priority: 0.55 },
-    { url: `${BASE_URL}/en/home-junk-removal-stare-mesto`, changeFrequency: "weekly", priority: 0.55 },
-
-    { url: `${BASE_URL}/en/pricing`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/reviews`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${BASE_URL}/en/contact`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/privacy-policy`, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${BASE_URL}/en/cookie-policy`, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${BASE_URL}/en/terms-of-service`, changeFrequency: "yearly", priority: 0.3 },
-
-    { url: `${BASE_URL}/stahovanie`, changeFrequency: "weekly", priority: 0.85 },
-    { url: `${BASE_URL}/vypratavanie`, changeFrequency: "weekly", priority: 0.85 },
-
-    { url: `${BASE_URL}/en/moving`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/junk-removal`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/en/machinery-moving`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/piano-moving`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/safe-moving`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/upright-piano-moving`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/basement-garage-junk-removal`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/property-land-junk-removal`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/en/hazardous-waste-removal`, changeFrequency: "weekly", priority: 0.6 },
-
-    { url: `${BASE_URL}/en/moving-from-slovakia`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-slovakia`, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${BASE_URL}/en/moving-to-austria`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-france`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-germany`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-ireland`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-netherlands`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-norway`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-sweden`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-switzerland`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-to-uk`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-from-austria-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-from-france-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-from-germany-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-from-netherlands-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-from-uk-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
-    { url: `${BASE_URL}/en/moving-from-usa-to-slovakia`, changeFrequency: "monthly", priority: 0.55 },
-  ];
-
-  return [
-    ...staticRoutes.map((r) => ({ ...r, lastModified: buildTime })),
-  ];
+  return routes.map((route) => ({
+    url: route === "/" ? `${BASE_URL}/` : `${BASE_URL}${route}`,
+    lastModified: buildTime,
+    changeFrequency: changeFrequencyFor(route),
+    priority: priorityFor(route),
+  }));
 }

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Petržalka Bratislava | Sofoservis",
   description:
     "Professional moving services in Petržalka. Specialist in moving from panel houses and high-rise buildings. Fast, reliable and affordable. Free quote.",
-  keywords:
-    "moving petrzalka, moving services petrzalka, apartment moving petrzalka, petrzalka bratislava moving",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-petrzalka",
     languages: {

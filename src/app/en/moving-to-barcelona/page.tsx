@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Barcelona — International Removals | Sofoservis",
   description:
     "Moving to Barcelona from Slovakia? Approximately 1,800 km — regular routes with 5-7 day delivery.",
-  keywords:
-    "moving to barcelona, moving to barcelona from slovakia, moving to spain from slovakia, international moving barcelona, relocation barcelona",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-barcelona",
     languages: {

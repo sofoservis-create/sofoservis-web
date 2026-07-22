@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving from USA to Slovakia — Intercontinental | Sofoservis",
   description:
     "Moving from the United States to Slovakia? We coordinate sea freight, customs clearance, and door-to-door delivery to Bratislava and all of Slovakia.",
-  keywords:
-    "moving from usa to slovakia, moving from america to slovakia, moving from new york to slovakia, usa to slovakia removals, intercontinental moving usa slovakia",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-from-usa-to-slovakia",
     languages: {

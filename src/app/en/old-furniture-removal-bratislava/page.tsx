@@ -18,8 +18,6 @@ export const metadata = {
   title: "Old Furniture Removal Bratislava | Sofoservis",
   description:
     "Professional old furniture removal and disposal services in Bratislava ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "old furniture removal bratislava, furniture disposal bratislava, furniture clearance bratislava, junk removal bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/old-furniture-removal-bratislava",
     languages: {

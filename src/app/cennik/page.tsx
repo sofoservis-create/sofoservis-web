@@ -13,7 +13,7 @@ import PriceListJsonLd from "@/components/seo/PriceListJsonLd";
 export const metadata = {
   title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
   description:
-    "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
+    "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 30€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!",
   alternates: {
     canonical: "https://www.sofoservis.sk/cennik",
       languages: {
@@ -22,11 +22,9 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/cennik",
       },
   },
-  keywords:
-    "cenník sťahovanie, ceny sťahovanie, cenník vypratávanie, ceny montáž nábytku, cenník sofoservis, ceny služieb bratislava",
   openGraph: {
       title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
-      description: "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 25€/hod, montáž nábytku od 25€/hod. Obhliadka zadarmo!",
+      description: "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 30€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!",
       url: "https://www.sofoservis.sk/cennik",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -155,10 +153,10 @@ export default function CennikPage() {
           { name: "Sťahovanie – 3 pracovníci (akcia)", price: 80, unitCode: "HUR" },
           { name: "Sťahovanie – každý ďalší pracovník", price: 30, unitCode: "HUR" },
           { name: "Vynáška bez výťahu", price: 15, description: "za poschodie" },
-          { name: "Sťahovanie v rámci mesta", price: 40, isMinPrice: true },
-          { name: "Sťahovanie mimo mesta", price: 0.7, unitCode: "KMT" },
+          { name: "Sťahovanie v rámci mesta", price: 55, isMinPrice: true },
+          { name: "Sťahovanie mimo mesta", price: 0.8, unitCode: "KMT" },
           { name: "Sťahovanie ťažkých bremien", price: 80, isMinPrice: true },
-          { name: "Vypratávanie – 1 pracovník", price: 25, unitCode: "HUR" },
+          { name: "Vypratávanie – 1 pracovník", price: 30, unitCode: "HUR" },
           { name: "Vypratávanie – 2 pracovníci", price: 60, unitCode: "HUR" },
           { name: "Vypratávanie – 3 pracovníci (akcia)", price: 80, unitCode: "HUR" },
           { name: "Vypratávanie – plná dodávka 17 m²", price: 200 },
@@ -166,7 +164,7 @@ export default function CennikPage() {
           { name: "Vypratávanie garáže", price: 70, isMinPrice: true },
           { name: "Vypratávanie jednoizbového bytu", price: 200, isMinPrice: true },
           { name: "Vypratávanie – každá ďalšia miestnosť", price: 60 },
-          { name: "Montáž nábytku – výjazd", price: 20, isMinPrice: true },
+          { name: "Montáž nábytku – výjazd", price: 25, isMinPrice: true },
           { name: "Montáž kuchyne", price: 120, unitCode: "MTR", isMinPrice: true },
           { name: "Demontáž kuchyne", price: 60, unitCode: "MTR", isMinPrice: true },
         ]}

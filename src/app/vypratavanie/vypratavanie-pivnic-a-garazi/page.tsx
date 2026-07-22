@@ -9,6 +9,7 @@ import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
@@ -18,8 +19,6 @@ export const metadata = {
   title: "Vypratávanie pivníc a garáží | Sofoservis",
   description:
     "Ponúkame lacné a rýchle vypratávanie pivníc, garáži, nebytových priestorov ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás ešte dnes!",
-  keywords:
-    "vypratavanie pivnic, vypratavanie priestorov, vypratanie garáže, vypratanie nebytového priestoru, vypratávanie pivníc, vypratavanie pivnic cena, vypratavanie poval, vypratávanie priestorov",
   alternates: {
     canonical: "https://www.sofoservis.sk/vypratavanie/vypratavanie-pivnic-a-garazi",
       languages: {
@@ -209,6 +208,7 @@ export default function VypratavaniePivnicGaraziPage() {
         />
       </div>
 
+      <ServicePriceTable variant="vypratavanie" title="Cenník vypratávania pivníc a garáží" />
       <ServicePricing filter={["vypratavanie", "stahovanie", "buracie-prace"]} />
       <TrustBadges />
       <ContactFormSection />

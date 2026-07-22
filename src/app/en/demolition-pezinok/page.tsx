@@ -18,8 +18,6 @@ export const metadata = {
   title: "Demolition Services Pezinok | Sofoservis",
   description:
     "We offer comprehensive demolition services in Pezinok ✅ Free site inspection ✅ Affordable and fair prices ✅ Contact us today!",
-  keywords:
-    "demolition pezinok, demolition services pezinok, building demolition Pezinok, house demolition Pezinok",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-pezinok",
     languages: {

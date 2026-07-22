@@ -26,8 +26,6 @@ export const metadata = {
         "x-default": "https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok",
       },
   },
-  keywords:
-    "búranie stien, búranie priečok, búranie nosných stien, búranie stien v byte, búranie steny v dome, vybúranie otvoru v stene, búranie nenosných priečok, búranie sadrokartónových priečok, búranie panelových stien, búranie múru v byte",
 };
 
 export default function BuranieStienPriecokPage() {

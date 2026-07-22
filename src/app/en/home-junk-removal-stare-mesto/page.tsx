@@ -18,8 +18,6 @@ export const metadata = {
   title: "Home Junk Removal Staré Mesto Bratislava | Sofoservis",
   description:
     "Professional home junk removal services in Staré Mesto, Bratislava ✅ Affordable prices ✅ Free site inspection ✅ Contact us today!",
-  keywords:
-    "home junk removal staré mesto, house junk removal staré mesto, property junk removal staré mesto, estate junk removal staré mesto",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/home-junk-removal-stare-mesto",
     languages: {

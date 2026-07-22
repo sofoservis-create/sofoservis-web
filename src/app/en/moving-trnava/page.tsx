@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Trnava | Sofoservis",
   description:
     "Professional moving services in Trnava and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving trnava, moving services trnava, apartment moving trnava, house moving trnava, office moving trnava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-trnava",
     languages: {

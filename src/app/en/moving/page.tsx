@@ -42,8 +42,6 @@ export const metadata = {
       "x-default": "https://www.sofoservis.sk/en/moving",
     },
   },
-  keywords:
-    "moving services, professional movers, apartment moving, house moving, office moving, international moving, piano moving, safe moving, heavy item moving",
   openGraph: {
     title: "Moving Services - Professional & Affordable | Sofoservis",
     description:

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Komárno | Sofoservis",
   description:
     "Professional moving services in Komárno and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving komarno, moving services komarno, apartment moving komarno, house moving komarno, office moving komarno",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-komarno",
     languages: {

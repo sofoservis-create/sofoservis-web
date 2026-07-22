@@ -28,6 +28,8 @@ export default function Footer() {
         address: "Malé Leváre 725",
         zipCity: "908 74 Malé Leváre",
         ico: "IČO: 56284497",
+        dic: "",
+        icdph: "",
       };
     }
 
@@ -36,6 +38,8 @@ export default function Footer() {
       address: "Lermontovova 3",
       zipCity: "811 05 Bratislava",
       ico: "IČO: 55333800",
+      dic: "DIČ: 2121960775",
+      icdph: "IČ DPH: SK2121960775",
     };
   };
 
@@ -48,6 +52,8 @@ export default function Footer() {
       address: companyInfo.address,
       zipCity: companyInfo.zipCity,
       ico: companyInfo.ico,
+      dic: companyInfo.dic,
+      icdph: companyInfo.icdph,
       navigation: "Navigácia",
       services: "Služby",
       contact: "Kontakt",
@@ -87,6 +93,8 @@ export default function Footer() {
       address: companyInfo.address,
       zipCity: companyInfo.zipCity,
       ico: companyInfo.ico.replace("IČO:", "Company ID:"),
+      dic: companyInfo.dic.replace("DIČ:", "Tax ID:"),
+      icdph: companyInfo.icdph.replace("IČ DPH:", "VAT ID:"),
       navigation: "Navigation",
       services: "Services",
       contact: "Contact",
@@ -142,10 +150,11 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#303030] text-white pt-6 pb-8 md:py-16">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 desktop:px-8">
-        {/* ── DESKTOP: original 3-column layout ── */}
-        <div className="hidden md:grid md:grid-cols-12 md:gap-8">
+        {/* ── Single responsive layout: mobile = logo+nav side by side, contact below;
+            desktop = 3-column grid (logo | contact | nav) via CSS order ── */}
+        <div className="flex flex-wrap gap-6 md:grid md:grid-cols-12 md:gap-8">
           {/* Logo and company info */}
-          <div className="md:col-span-4 flex flex-col items-start">
+          <div className="order-1 flex-1 min-w-0 md:order-none md:flex-none md:col-span-4 flex flex-col items-start">
             <Image
               src="/images/Sofoservis_nove_logo_SVG.svg"
               alt="SofoServis"
@@ -164,6 +173,8 @@ export default function Footer() {
                 {content.zipCity}
               </address>
               <p className="text-sm">{content.ico}</p>
+              {content.dic && <p className="text-sm">{content.dic}</p>}
+              {content.icdph && <p className="text-sm">{content.icdph}</p>}
             </div>
             <div className="flex space-x-5 mt-5">
               <SocialIcon
@@ -185,9 +196,9 @@ export default function Footer() {
           </div>
 
           {/* Contact info */}
-          <div className="md:col-span-4 flex flex-col items-center">
+          <div className="order-3 w-full mt-2 pt-6 border-t border-gray-700 md:order-none md:w-auto md:mt-0 md:pt-0 md:border-0 md:col-span-4 flex flex-col md:items-center">
             <div className="flex flex-col">
-                <h3 className="text-xl font-bold text-accent-500 mb-4 text-left">
+                <h3 className="text-lg md:text-xl font-bold text-accent-500 mb-4 text-left">
                   {content.contact}
                 </h3>
                 <ul className="space-y-4">
@@ -274,8 +285,8 @@ export default function Footer() {
           </div>
 
           {/* Navigation links */}
-          <div className="md:col-span-4 flex flex-col items-end text-right">
-            <h3 className="text-xl font-bold text-accent-500 mb-4">
+          <div className="order-2 shrink-0 w-36 md:order-none md:w-auto md:col-span-4 flex flex-col items-start md:items-end text-left md:text-right">
+            <h3 className="text-lg md:text-xl font-bold text-accent-500 mb-4">
               {content.navigation}
             </h3>
             <ul className="space-y-4">
@@ -290,151 +301,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* ── MOBILE: logo + nav side by side, kontakt full width below ── */}
-        <div className="md:hidden">
-          {/* Row 1: Logo + Navigácia */}
-          <div className="flex flex-row gap-6">
-            <div className="flex-1 min-w-0 flex flex-col items-start">
-              <Image
-                src="/images/Sofoservis_nove_logo_SVG.svg"
-                alt="SofoServis"
-                width={200}
-                height={77}
-                className="h-[77px] w-auto"
-                unoptimized
-              />
-              <div className="mt-5 text-gray-400 space-y-1.5 text-left">
-                <p className="font-semibold text-base text-accent-500">
-                  {content.companyName}
-                </p>
-                <address className="not-italic text-sm leading-relaxed">
-                  {content.address}
-                  <br />
-                  {content.zipCity}
-                </address>
-                <p className="text-sm">{content.ico}</p>
-              </div>
-              <div className="flex space-x-5 mt-5">
-                <SocialIcon
-                  href="https://www.linkedin.com/company/sofoservis"
-                  icon={<LinkedInIcon />}
-                  label={content.socialLinks.linkedin}
-                />
-                <SocialIcon
-                  href="https://www.facebook.com/SofoServis"
-                  icon={<FacebookIcon />}
-                  label={content.socialLinks.facebook}
-                />
-                <SocialIcon
-                  href="https://www.instagram.com/sofoservis"
-                  icon={<InstagramIcon />}
-                  label={content.socialLinks.instagram}
-                />
-              </div>
-            </div>
-            <div className="shrink-0 w-36">
-              <h3 className="text-lg font-bold text-accent-500 mb-4">
-                {content.navigation}
-              </h3>
-              <ul className="space-y-4">
-                {content.navigationLinks.map((link, index) => (
-                  <FooterLink
-                    key={index}
-                    href={link.href}
-                    label={link.label}
-                  />
-                ))}
-              </ul>
-            </div>
-          </div>
-
-          {/* Row 2: Kontakt full width */}
-          <div className="mt-8 pt-6 border-t border-gray-700">
-            <h3 className="text-lg font-bold text-accent-500 mb-4">
-              {content.contact}
-            </h3>
-            <ul className="space-y-4">
-              <li>
-                <PhoneReveal
-                  key={pathname + "-m"}
-                  phoneNumber={isSpecialRoute ? "0952044363" : "0951735130"}
-                  displayNumber={isSpecialRoute ? "0952 044 363" : "0951 735 130"}
-                  suffix={isKontaktRoute ? <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span> : undefined}
-                  isEnglish={isEnglish}
-                  nimbata={!isSpecialRoute}
-                />
-              </li>
-              {isKontaktRoute && (
-                <li>
-                  <PhoneReveal
-                    key={pathname + "-m-montaz"}
-                    phoneNumber="0952044363"
-                    displayNumber="0952 044 363"
-                    suffix={<span className="text-gray-300 text-xs ml-1">{isEnglish ? "(installation)" : "(montáž)"}</span>}
-                    isEnglish={isEnglish}
-                    nimbata={false}
-                  />
-                </li>
-              )}
-              <li>
-                <a
-                  href={`mailto:${isSpecialRoute ? "montaz@sofoservis.sk" : "doprava@sofoservis.sk"}`}
-                  className="text-gray-300 hover:text-accent-500 transition-colors flex items-center gap-2 group"
-                >
-                  <div className="text-accent-500 group-hover:text-accent-400 transition-colors flex-shrink-0">
-                    <EmailIcon />
-                  </div>
-                  <span className="text-sm break-all">
-                    {isSpecialRoute ? "montaz@sofoservis.sk" : "doprava@sofoservis.sk"}
-                    {isKontaktRoute && <span className="text-gray-300 text-xs ml-1">{isEnglish ? "(all services)" : "(všetky služby)"}</span>}
-                  </span>
-                </a>
-              </li>
-              {isKontaktRoute && (
-                <li>
-                  <a
-                    href="mailto:montaz@sofoservis.sk"
-                    className="text-gray-300 hover:text-accent-500 transition-colors flex items-center gap-2 group"
-                  >
-                    <div className="text-accent-500 group-hover:text-accent-400 transition-colors flex-shrink-0">
-                      <EmailIcon />
-                    </div>
-                    <span className="text-sm break-all">montaz@sofoservis.sk <span className="text-gray-300 text-xs">{isEnglish ? "(installation)" : "(montáž)"}</span></span>
-                  </a>
-                </li>
-              )}
-              <li className="text-gray-300 flex items-start gap-2">
-                <div className="text-accent-500 flex-shrink-0 mt-0.5">
-                  <LocationIcon />
-                </div>
-                <div>
-                  <span className="text-xs text-gray-400 block mb-0.5">
-                    {isEnglish ? "Warehouse / operations:" : "Sklad / prevádzka:"}
-                  </span>
-                  <a
-                    href="https://maps.google.com/?q=48.131724,17.190028"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm leading-relaxed hover:text-accent-500 transition-colors"
-                  >
-                    Závodná 53,{" "}
-                    {isEnglish
-                      ? "near the blue containers"
-                      : "pri modrých kontajneroch"}
-                  </a>
-                </div>
-              </li>
-              <li className="pt-1">
-                <p className="text-accent-500 font-semibold text-sm">
-                  {content.operatingHours}
-                </p>
-                <p className="text-gray-300 mt-1 text-sm">
-                  {content.operatingTimes}
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
 
         {/* Bottom section with copyright */}
         <div className="mt-8 pt-6 border-t border-gray-800">

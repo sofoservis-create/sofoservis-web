@@ -18,8 +18,6 @@ export const metadata = {
   title: "Furniture Assembly Bratislava | Sofoservis",
   description:
     "Professional furniture assembly services in Bratislava ✅ Affordable prices ✅ Contact us today!",
-  keywords:
-    "furniture assembly bratislava, furniture assembly service bratislava, ikea assembly bratislava, kitchen assembly bratislava",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/furniture-assembly-bratislava",
     languages: {

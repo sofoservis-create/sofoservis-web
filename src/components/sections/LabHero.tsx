@@ -6,7 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
-import QuickContactForm from "@/components/forms/QuickContactForm";
 
 interface LabHeroProps {
   title?: string;
@@ -661,8 +660,9 @@ export default function LabHero({
             );
           })()}
 
-          {/* Text content — z-[25] so it renders above the mascot (z-20) */}
-          <div className="relative z-[25]">
+          {/* Text content — z-[25] on desktop so it renders above the mascot (z-20);
+              z-0 on mobile so the form card (sibling, z-10) can overlap the mobile mascot */}
+          <div className="relative z-0 lg:z-[25]">
 
           <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
             <div
@@ -784,43 +784,22 @@ export default function LabHero({
                 </div>
                 );
               })()}
-              {/* Mobile inline form — mirrors live Hero behaviour */}
-              <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-314 * mobileMascotScale + mobileFormOffsetY}px` } : undefined}>
-                <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
-                  <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
-                    <h3 className="text-lg md:text-xl font-bold text-center">{formTitle}</h3>
-                    {formSubtitle && <p className="text-sm text-center text-primary-900/80 mt-1">{formSubtitle}</p>}
-                  </div>
-                  <div className="p-4">
-                    <QuickContactForm variant="primary" lang={lang} />
-                  </div>
-                </div>
-                {heroPills && (
-                  <div className="mt-5 grid grid-cols-3 gap-2">
-                    {heroPills.map((p) => (
-                      <div key={p.label} className="flex flex-col items-center gap-2">
-                        <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
-                          <Image src={p.icon} alt="" width={36} height={36} />
-                        </div>
-                        <span className="text-sm font-medium text-white text-center leading-tight">
-                          {p.label}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
             </div>
 
             <div className="hidden lg:block lg:w-2/5" aria-hidden="true" />
           </div>
           </div>
 
-        {/* Form card — z-10 so mascot (z-20) overlaps it */}
-        <div className="relative z-10 mt-5">
+        {/* Form card — single markup for mobile + desktop; z-10 so desktop mascot (z-20) overlaps it.
+            On mobile it is pulled up over the mobile mascot via --form-mt. */}
+        <div
+          className="relative z-10 mt-[var(--form-mt,1.25rem)] lg:mt-5"
+          style={showMascot ? ({ ["--form-mt" as string]: `${-314 * mobileMascotScale + mobileFormOffsetY}px` } as React.CSSProperties) : undefined}
+        >
           <div className={`flex flex-col lg:flex-row gap-6 lg:gap-12`}>
-          <div ref={formCardRef} className={`hidden lg:block bg-white rounded-xl shadow-2xl overflow-hidden${narrowForm ? " lg:w-3/5 w-full" : ""}`}>
-            <div className={`bg-accent-500 text-primary-900 px-6 ${narrowForm ? "py-2 text-center" : "py-3 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"}`}>
+          <div className={narrowForm ? "lg:w-3/5 w-full" : "w-full lg:w-auto lg:flex-1"}>
+          <div ref={formCardRef} className={`bg-white rounded-xl shadow-2xl overflow-hidden`}>
+            <div className={`bg-accent-500 text-primary-900 px-6 ${narrowForm ? "py-2 text-center" : "py-3 text-center sm:text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"}`}>
               <h3 className="text-lg font-bold">{formTitle}</h3>
               {formSubtitle && <p className={`text-sm text-primary-900/80 ${narrowForm ? "mt-0.5" : ""}`}>{formSubtitle}</p>}
             </div>
@@ -995,6 +974,21 @@ export default function LabHero({
                 </form>
               )}
             </div>
+          </div>
+          {heroPills && (
+            <div className="mt-5 grid grid-cols-3 gap-2 lg:hidden">
+              {heroPills.map((p) => (
+                <div key={p.label} className="flex flex-col items-center gap-2">
+                  <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
+                    <Image src={p.icon} alt="" width={36} height={36} />
+                  </div>
+                  <span className="text-sm font-medium text-white text-center leading-tight">
+                    {p.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
           </div>
           <div className="hidden lg:block lg:w-2/5" aria-hidden="true" />
           </div>

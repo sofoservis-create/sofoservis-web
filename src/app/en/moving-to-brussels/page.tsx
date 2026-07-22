@@ -17,8 +17,6 @@ export const metadata = {
   title: "Moving to Brussels — International Removals | Sofoservis",
   description:
     "Moving to Brussels from Slovakia? Regular routes with 3-4 day delivery to all Brussels communes.",
-  keywords:
-    "moving to brussels, moving to brussels from slovakia, moving to brussels from bratislava, international moving brussels, relocation brussels belgium",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-to-brussels",
     languages: {

@@ -18,8 +18,6 @@ export const metadata = {
   title: "Moving Services Hlohovec | Sofoservis",
   description:
     "Professional moving services in Hlohovec and surrounding areas. Fast, reliable, and affordable. We move apartments, houses, offices, and businesses.",
-  keywords:
-    "moving hlohovec, moving services hlohovec, apartment moving hlohovec, house moving hlohovec, office moving hlohovec",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving-hlohovec",
     languages: {
