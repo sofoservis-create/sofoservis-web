@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -126,40 +125,26 @@ export default function HandymanBratislavaPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          lang="en"
-          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={466}
-          desktopMascotScaleMultiplier={1.1}
-          desktopMascotTopOffsetPct={-0.065}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          lang="en"
-          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
-          showMascot
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotOffsetY={-45}
-          mobileFormOffsetY={32}
-          pillsVariant="hodinovy"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        backgroundImage={heroData.backgroundImage}
+        lang="en"
+        benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
+        mascotSrc="/images/mascot/montaz-mascot.svg"
+        desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={466}
+        desktopMascotScaleMultiplier={1.1}
+        desktopMascotTopOffsetPct={-0.065}
+        showMascot
+        mobileMascotSrc="/images/mascot/montaz-mascot.svg"
+        mobileMascotOffsetY={-45}
+        mobileFormOffsetY={32}
+        pillsVariant="hodinovy"
+      />
 
       <div>
         <Clients />

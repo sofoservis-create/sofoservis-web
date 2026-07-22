@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -123,37 +122,23 @@ export default function MovingFromAustriaToSlovakiaPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Moving from Austria to Slovakia"
-          description="Moving from Austria to Slovakia? With Vienna just 60 km from Bratislava, this is one of the fastest international routes we serve. Sofoservis provides professional door-to-door removals from anywhere in Austria to any address in Slovakia — often within 24 hours."
-          formTitle="Get a Free Quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          desktopMascotScaleMultiplier={1.03}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Moving from Austria to Slovakia"
-          description="Moving from Austria to Slovakia? With Vienna just 60 km from Bratislava, this is one of the fastest international routes we serve. Sofoservis provides professional door-to-door removals from anywhere in Austria to any address in Slovakia — often within 24 hours."
-          formTitle="Get a Free Quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          showMascot
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotOffsetY={-44}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Moving from Austria to Slovakia"
+        description="Moving from Austria to Slovakia? With Vienna just 60 km from Bratislava, this is one of the fastest international routes we serve. Sofoservis provides professional door-to-door removals from anywhere in Austria to any address in Slovakia — often within 24 hours."
+        formTitle="Get a Free Quote"
+        formSubtitle="Fill out the form for a no-obligation estimate"
+        benefits={[]}
+        ratingText="3500+ satisfied customers"
+        lang="en"
+        mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        desktopMascotScaleMultiplier={1.03}
+        showMascot
+        mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        mobileMascotOffsetY={-44}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

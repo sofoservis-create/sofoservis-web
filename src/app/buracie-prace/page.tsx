@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -149,32 +148,19 @@ export default function BuraciePracePage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          benefits={["Poistenie zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          desktopMascotDynamicHeight
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          benefits={["Poistenie zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
-          showMascot
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        backgroundImage={heroData.backgroundImage}
+        benefits={["Poistenie zahrnuté", "Bez skrytých poplatkov", "Záväzná cena vopred"]}
+        mascotSrc="/images/mascot/buranie-mascot.svg"
+        desktopMascotDynamicHeight
+        showMascot
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

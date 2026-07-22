@@ -141,7 +141,6 @@ export default function Navbar() {
     "/en/pricing": "/cennik",
     "/referencie": "/en/reviews",
     "/en/reviews": "/referencie",
-    "/en/wall-demolition": "/buracie-prace/buranie-stien-priecok",
     "/zasady-pouzivania-cookies": "/en/cookie-policy",
     "/en/cookie-policy": "/zasady-pouzivania-cookies",
     "/zasady-spracovania-osobnych-udajov": "/en/privacy-policy",

@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -135,49 +134,28 @@ export default function DemolitionServicesPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Demolition & Building Removal Services"
-          description="Professional demolition services for old houses, buildings, barns, and other structures. We handle the complete process from preparation through safe demolition to removal and eco-friendly disposal of construction waste."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation calculation"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          badgeText="Services available 6 days a week"
-          ratingText="Over 3500+ satisfied customers"
-          benefits={[
+      <LabHero
+        narrowForm
+        title="Demolition & Building Removal Services"
+        description="Professional demolition services for old houses, buildings, barns, and other structures. We handle the complete process from preparation through safe demolition to removal and eco-friendly disposal of construction waste."
+        formTitle="Get a free price quote"
+        formSubtitle="Fill out the form for a no-obligation calculation"
+        backgroundImage="/images/stahovanie-gauc.avif"
+        badgeText="Services available 6 days a week"
+        ratingText="Over 3500+ satisfied customers"
+        benefits={[
           "Full permits handled",
           "Safe demolition",
           "Complete waste removal",
         ]}
-          lang="en"
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          desktopMascotDynamicHeight
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Demolition & Building Removal Services"
-          description="Professional demolition services for old houses, buildings, barns, and other structures. We handle the complete process from preparation through safe demolition to removal and eco-friendly disposal of construction waste."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation calculation"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          badgeText="Services available 6 days a week"
-          ratingText="Over 3500+ satisfied customers"
-          benefits={[
-          "Full permits handled",
-          "Safe demolition",
-          "Complete waste removal",
-        ]}
-          phoneCTAText="Call us now"
-          phoneNumber="0951 735 130"
-          hoursText="6 days a week 8:00-17:00"
-          lang="en"
-          showMascot
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          pillsVariant="stahovanie"
-        />
-      </div>
+        lang="en"
+        mascotSrc="/images/mascot/buranie-mascot.svg"
+        desktopMascotDynamicHeight
+        phoneCTAText="Call us now"
+        phoneNumber="0951 735 130"
+        showMascot
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

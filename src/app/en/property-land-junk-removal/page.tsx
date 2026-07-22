@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -131,58 +130,37 @@ export default function PropertyLandJunkRemovalPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Property & Land Junk Removal Services"
-          description="Professional clearing and complete clean-up of properties from overgrown vegetation, waste, and unwanted items. We prepare your land for construction, sale, or recultivation quickly and at affordable prices."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation calculation"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          badgeText="Services available 6 days a week"
-          ratingText="Over 3500+ satisfied customers"
-          benefits={[
+      <LabHero
+        narrowForm
+        title="Property & Land Junk Removal Services"
+        description="Professional clearing and complete clean-up of properties from overgrown vegetation, waste, and unwanted items. We prepare your land for construction, sale, or recultivation quickly and at affordable prices."
+        formTitle="Get a free price quote"
+        formSubtitle="Fill out the form for a no-obligation calculation"
+        backgroundImage="/images/stahovanie-gauc.avif"
+        badgeText="Services available 6 days a week"
+        ratingText="Over 3500+ satisfied customers"
+        benefits={[
           "Free site inspection",
           "Complete land preparation",
           "Eco-friendly disposal",
         ]}
-          lang="en"
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={756}
-          desktopMascotTopOffsetPct={-0.01}
-          desktopMinHeroTextHeightPx={540}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Property & Land Junk Removal Services"
-          description="Professional clearing and complete clean-up of properties from overgrown vegetation, waste, and unwanted items. We prepare your land for construction, sale, or recultivation quickly and at affordable prices."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation calculation"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          badgeText="Services available 6 days a week"
-          ratingText="Over 3500+ satisfied customers"
-          benefits={[
-          "Free site inspection",
-          "Complete land preparation",
-          "Eco-friendly disposal",
-        ]}
-          phoneCTAText="Call us now"
-          phoneNumber="0951 735 130"
-          hoursText="6 days a week 8:00-17:00"
-          lang="en"
-          showMascot
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotOffsetY={-57}
-          mobileMascotOffsetX={-32}
-          mobileMascotScale={1.02}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+        lang="en"
+        mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        desktopMascotScaleMultiplier={1.08}
+        desktopMascotRightShiftPct={0.235}
+        desktopMascotFixedHeightPx={756}
+        desktopMascotTopOffsetPct={-0.01}
+        desktopMinHeroTextHeightPx={540}
+        phoneCTAText="Call us now"
+        phoneNumber="0951 735 130"
+        showMascot
+        mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        mobileMascotOffsetY={-57}
+        mobileMascotOffsetX={-32}
+        mobileMascotScale={1.02}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -142,37 +141,22 @@ export default function WallDemolitionPageEN() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          lang="en"
-          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          desktopMascotDynamicHeight
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          phoneCTAText="Call us now"
-          phoneNumber="0951 735 130"
-          hoursText="6 days a week 8:00-17:00"
-          lang="en"
-          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
-          showMascot
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        backgroundImage={heroData.backgroundImage}
+        lang="en"
+        benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
+        mascotSrc="/images/mascot/buranie-mascot.svg"
+        desktopMascotDynamicHeight
+        phoneCTAText="Call us now"
+        phoneNumber="0951 735 130"
+        showMascot
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

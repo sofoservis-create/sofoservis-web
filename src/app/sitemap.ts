@@ -19,25 +19,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/stahovanie/stahovanie-tazkych-bremien`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE_URL}/stahovanie/medzinarodne-stahovanie`, changeFrequency: "weekly", priority: 0.8 },
 
-<<<<<<< HEAD
     { url: `${BASE_URL}/vypratavanie/cistenie-vypratavanie-pozemkov`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/vypratavanie/odvoz-stareho-nabytku`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/vypratavanie/vypratavanie-pivnic-a-garazi`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/vypratavanie/odvoz-likvidacia-stavebneho-odpadu`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/vypratavanie/likvidacia-nebezpecneho-odpadu`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/buracie-demolacne-prace`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/buranie-demolacia-domov-bytov`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/buranie-stien-priecok`, changeFrequency: "weekly", priority: 0.7 },
-=======
-    { url: `${BASE_URL}/cistenie-vypratavanie-pozemkov-nehnutelnosti`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/vypratavanie-odvoz-stareho-nabytku`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/vypratavanie-pivnic-garazi-nebytovych-priestorov`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu`, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${BASE_URL}/likvidacia-nebezpecneho-odpadu-starych-spotrebicov`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/buracie-prace`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/buracie-prace/buranie-demolacia-domov`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/buracie-prace/buranie-stien-priecok`, changeFrequency: "weekly", priority: 0.7 },
->>>>>>> 5b80f3c6 (Task #211: Búracie práce + Hodinový manžel — URL restructure)
 
     { url: `${BASE_URL}/vypratavanie/vypratavanie-bytov-domov/bratislava`, changeFrequency: "weekly", priority: 0.85 },
 
@@ -58,50 +47,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/stahovanie/stahovanie-stupava`, changeFrequency: "weekly", priority: 0.7 },
     { url: `${BASE_URL}/stahovanie/stahovanie-senica`, changeFrequency: "weekly", priority: 0.7 },
 
-<<<<<<< HEAD
-    { url: `${BASE_URL}/hodinovy-manzel-majster/trnava`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/hodinovy-manzel-majster/galanta`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/hodinovy-manzel-majster/piestany`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/buracie-demolacne-prace/nitra`, changeFrequency: "weekly", priority: 0.65 },
-    { url: `${BASE_URL}/buracie-demolacne-prace/trnava`, changeFrequency: "weekly", priority: 0.65 },
     { url: `${BASE_URL}/buracie-demolacne-prace/pezinok`, changeFrequency: "weekly", priority: 0.65 },
-=======
-    { url: `${BASE_URL}/vypratavanie-trnava`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-pezinok`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-senica`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-nitra`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-hlohovec`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-komarno`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-levice`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-senec`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-piestany`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-galanta`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-malacky`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-samorin`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-stupava`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-sala`, changeFrequency: "weekly", priority: 0.75 },
 
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/trnava`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/nitra`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/senec`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/pezinok`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/galanta`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/sala`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/hlohovec`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/senica`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/malacky`, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/levice`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/komarno`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/piestany`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/samorin`, changeFrequency: "weekly", priority: 0.70 },
-    { url: `${BASE_URL}/vypratavanie-bytov-domov/stupava`, changeFrequency: "weekly", priority: 0.75 },
-
-    { url: `${BASE_URL}/vypratavanie-pozostalosti`, changeFrequency: "weekly", priority: 0.80 },
-    { url: `${BASE_URL}/vypratavanie-kancelarii`, changeFrequency: "weekly", priority: 0.80 },
-    { url: `${BASE_URL}/vypratavanie-po-rekonstrukcii`, changeFrequency: "weekly", priority: 0.80 },
-    { url: `${BASE_URL}/vypratavanie-chalupy`, changeFrequency: "weekly", priority: 0.75 },
-
->>>>>>> 5b80f3c6 (Task #211: Búracie práce + Hodinový manžel — URL restructure)
     { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/nitra`, changeFrequency: "weekly", priority: 0.65 },
     { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/trnava`, changeFrequency: "weekly", priority: 0.65 },
     { url: `${BASE_URL}/odvoz-likvidacia-stavebneho-odpadu/senec`, changeFrequency: "weekly", priority: 0.65 },

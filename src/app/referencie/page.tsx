@@ -1,6 +1,5 @@
 import React from "react";
 import LabHero from "@/components/sections/LabHero";
-import Hero from "@/components/sections/Hero";
 import CTA from "@/components/sections/CTA";
 import Reviews from "@/components/sections/Reviews";
 // import ReviewsShowcase from "@/components/widgets/ReviewsShowcase";
@@ -62,33 +61,22 @@ export default function ReferencePage() {
         fetchPriority="high"
       />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Referencie našich prác"
-          description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
-          benefits={["Obhliadka zdarma", "Vysoká spokojnosť zákazníkov", "Bez stresu"]}
-          ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/ok sign mascot.svgz"
-          desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={476}
-          desktopMascotScaleMultiplier={1.07}
-          desktopMascotTopOffsetPct={-0.0275}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Referencie našich prác"
-          description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          showMascot
-          mascotSrc="/images/mascot/ok sign mascot.svgz"
-          mobileMascotScale={1.07}
-          mobileMascotOffsetY={-18}
-          pillsVariant="referencie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Referencie našich prác"
+        description="Pozrite si, ako naši spokojní zákazníci hodnotia naše profesionálne sťahovacie služby. Sme hrdí na kvalitu našej práce a na pozitívnu spätnú väzbu."
+        benefits={["Obhliadka zdarma", "Vysoká spokojnosť zákazníkov", "Bez stresu"]}
+        ratingText="3500+ spokojných zákazníkov"
+        mascotSrc="/images/mascot/ok sign mascot.svgz"
+        desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={476}
+        desktopMascotScaleMultiplier={1.07}
+        desktopMascotTopOffsetPct={-0.0275}
+        showMascot
+        mobileMascotScale={1.07}
+        mobileMascotOffsetY={-18}
+        pillsVariant="referencie"
+      />
 
       {/* Clients — trust strip, sits flush under hero */}
       <div>

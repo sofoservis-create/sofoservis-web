@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -169,37 +168,23 @@ export default function OfficeMovingPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Office & Business Moving Services"
-          description="Professional services for complete office and business relocations. We minimize your business downtime with our experienced team that manages the efficient and safe transfer of your entire company."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          desktopMascotScaleMultiplier={1.03}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Office & Business Moving Services"
-          description="Professional services for complete office and business relocations. We minimize your business downtime with our experienced team that manages the efficient and safe transfer of your entire company."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          showMascot
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotOffsetY={-44}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Office & Business Moving Services"
+        description="Professional services for complete office and business relocations. We minimize your business downtime with our experienced team that manages the efficient and safe transfer of your entire company."
+        formTitle="Get a free price quote"
+        formSubtitle="Fill out the form for a no-obligation estimate"
+        benefits={[]}
+        ratingText="3500+ satisfied customers"
+        lang="en"
+        mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        desktopMascotScaleMultiplier={1.03}
+        showMascot
+        mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        mobileMascotOffsetY={-44}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       {/* Clients section */}
       <div>

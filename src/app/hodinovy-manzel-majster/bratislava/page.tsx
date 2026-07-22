@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -87,39 +86,26 @@ export default function HodinovyManzelMajsterBratislavaPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Hodinový manžel Bratislava"
-          description="Profesionálne služby hodinového manžela v Bratislave od 25€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
-          formTitle="Získajte cenovú ponuku"
-          formSubtitle="Ozveme sa vám do 30 minút"
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={384}
-          desktopMascotScaleMultiplier={1.1}
-          desktopMascotTopOffsetPct={-0.065}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Hodinový manžel Bratislava"
-          description="Profesionálne služby hodinového manžela v Bratislave od 25€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
-          formTitle="Získajte cenovú ponuku"
-          formSubtitle="Ozveme sa vám do 30 minút"
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          showMascot
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotOffsetY={-45}
-          mobileFormOffsetY={32}
-          pillsVariant="hodinovy"
-          phoneNumber="421952044363"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Hodinový manžel Bratislava"
+        description="Profesionálne služby hodinového manžela v Bratislave od 25€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
+        formTitle="Získajte cenovú ponuku"
+        formSubtitle="Ozveme sa vám do 30 minút"
+        benefits={[]}
+        ratingText="3500+ spokojných zákazníkov"
+        mascotSrc="/images/mascot/montaz-mascot.svg"
+        desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={384}
+        desktopMascotScaleMultiplier={1.1}
+        desktopMascotTopOffsetPct={-0.065}
+        showMascot
+        mobileMascotSrc="/images/mascot/montaz-mascot.svg"
+        mobileMascotOffsetY={-45}
+        mobileFormOffsetY={32}
+        pillsVariant="hodinovy"
+        phoneNumber="421952044363"
+      />
       <Clients />
       <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />

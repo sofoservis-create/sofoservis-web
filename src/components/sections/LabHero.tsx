@@ -68,7 +68,80 @@ interface LabHeroProps {
    * vertical space.
    */
   desktopDescriptionMaxWidthClass?: string;
+  /** Show the mascot on mobile (peeking behind the form). */
+  showMascot?: boolean;
+  /** Override mascot SVG path for mobile only. Defaults to mascotSrc. */
+  mobileMascotSrc?: string;
+  /** Additional vertical offset (px) for the mobile mascot. Negative = up. */
+  mobileMascotOffsetY?: number;
+  /** Additional horizontal offset (px) for the mobile mascot. Negative = left. */
+  mobileMascotOffsetX?: number;
+  /** Scale multiplier for the mobile mascot (default 1 = 630px). */
+  mobileMascotScale?: number;
+  /** Additional vertical offset (px) for the mobile form card. Positive = down. */
+  mobileFormOffsetY?: number;
+  /** Which variant of in-form trust pills to show (mobile only). Omit for none. */
+  pillsVariant?: "home" | "stahovanie" | "hodinovy" | "referencie";
+  /** Text for phone CTA button (mobile only). */
+  phoneCTAText?: string;
+  /** Phone number to display on the mobile CTA. */
+  phoneNumber?: string;
+  /** Operating hours text (accepted for backwards compatibility, unused). */
+  hoursText?: string;
 }
+
+type HeroPill = { icon: string; label: string };
+
+const HERO_PILLS: Record<"home" | "stahovanie" | "hodinovy" | "referencie", Record<"sk" | "en", HeroPill[]>> = {
+  home: {
+    sk: [
+      { icon: "/icons/truck_icon.svg", label: "Sťahovanie" },
+      { icon: "/icons/vypratavanie_icon.svg", label: "Vypratávanie" },
+      { icon: "/icons/repair_icon.svg", label: "Montáž nábytku" },
+    ],
+    en: [
+      { icon: "/icons/truck_icon.svg", label: "Moving" },
+      { icon: "/icons/vypratavanie_icon.svg", label: "Clearance" },
+      { icon: "/icons/repair_icon.svg", label: "Furniture assembly" },
+    ],
+  },
+  stahovanie: {
+    sk: [
+      { icon: "/icons/insurance_icon.svg", label: "Poistenie zahrnuté" },
+      { icon: "/icons/cash_icon.svg", label: "Bez skrytých poplatkov" },
+      { icon: "/icons/document_icon.svg", label: "Záväzná cena vopred" },
+    ],
+    en: [
+      { icon: "/icons/insurance_icon.svg", label: "Insurance included" },
+      { icon: "/icons/cash_icon.svg", label: "No hidden fees" },
+      { icon: "/icons/document_icon.svg", label: "Binding price upfront" },
+    ],
+  },
+  hodinovy: {
+    sk: [
+      { icon: "/icons/wrench_icon.svg", label: "Skúsení majstri" },
+      { icon: "/icons/cash_icon.svg", label: "Bez skrytých poplatkov" },
+      { icon: "/icons/repair_icon.svg", label: "Výjazd zdarma" },
+    ],
+    en: [
+      { icon: "/icons/wrench_icon.svg", label: "Experienced handymen" },
+      { icon: "/icons/cash_icon.svg", label: "No hidden fees" },
+      { icon: "/icons/repair_icon.svg", label: "Free callout" },
+    ],
+  },
+  referencie: {
+    sk: [
+      { icon: "/icons/house_icon.svg", label: "Obhliadka zdarma" },
+      { icon: "/icons/insurance_icon.svg", label: "Vysoká spokojnosť zákazníkov" },
+      { icon: "/icons/safety_icon.svg", label: "Bez stresu" },
+    ],
+    en: [
+      { icon: "/icons/house_icon.svg", label: "Free on-site survey" },
+      { icon: "/icons/insurance_icon.svg", label: "High customer satisfaction" },
+      { icon: "/icons/safety_icon.svg", label: "Stress-free" },
+    ],
+  },
+};
 
 const LAB_HERO_TEXTS = {
   sk: {
@@ -211,6 +284,15 @@ export default function LabHero({
   desktopMascotTopOffsetPct = 0,
   desktopMinHeroTextHeightPx,
   desktopDescriptionMaxWidthClass = "lg:max-w-md",
+  showMascot = false,
+  mobileMascotSrc,
+  mobileMascotOffsetY = 0,
+  mobileMascotOffsetX = 0,
+  mobileMascotScale = 1,
+  mobileFormOffsetY = 0,
+  pillsVariant,
+  phoneCTAText,
+  phoneNumber,
 }: LabHeroProps) {
   const desktopMascotScale = 1.1608 * desktopMascotScaleMultiplier;
   const desktopMascotRightShift = desktopMascotRightShiftPct ?? DESKTOP_MASCOT_RIGHT_SHIFT_PCT;
@@ -218,6 +300,17 @@ export default function LabHero({
   const pathname = usePathname();
   const t = LAB_HERO_TEXTS[lang];
   const vopHref = lang === "en" ? "/en/terms-of-service" : "/vseobecne-obchodne-podmienky";
+  const heroPills = pillsVariant ? HERO_PILLS[pillsVariant][lang] : null;
+  const mobileMascot = mobileMascotSrc ?? mascotSrc;
+  // Determine phone number based on pathname (same logic as Navbar)
+  const currentPhoneNumber =
+    phoneNumber ||
+    (pathname?.includes("/montaz-nabytku") ||
+    pathname?.includes("/montaz-kuchyne") ||
+    pathname?.includes("/hodinovy-manzel-majster")
+      ? "0952 044 363"
+      : "0951 735 130");
+  const mobilePhoneCTAText = phoneCTAText ?? (lang === "en" ? "Call us" : "Zavolajte nám");
 
   const cleanPath = (pathname || "").replace(/^\/en/, "") || "/";
   const segments = cleanPath.split("/");
@@ -267,6 +360,7 @@ export default function LabHero({
   const [frozenBodyHeight, setFrozenBodyHeight] = useState<number | null>(null);
   const [dynamicMascotDims, setDynamicMascotDims] = useState<{ top: number; height: number } | null>(null);
   const [mascotLoaded, setMascotLoaded] = useState(false);
+  const [mobileMascotLoaded, setMobileMascotLoaded] = useState(false);
 
   // Mascot dimensions: by default FIXED constants (stable, no "breathing").
   // Pages where hero composition varies with viewport (e.g. homepage h1 wrap)
@@ -443,7 +537,7 @@ export default function LabHero({
     <>
       <section
         ref={sectionRef}
-        className="relative pt-14 pb-6 md:pt-36 md:pb-8 lg:pt-40 lg:pb-10 bg-primary-900"
+        className="relative pt-4 pb-6 md:pt-4 md:pb-8 lg:pt-40 lg:pb-10 bg-primary-900"
         aria-labelledby="hero-heading"
       >
         <div className="absolute inset-0 z-0 overflow-hidden">
@@ -474,7 +568,7 @@ export default function LabHero({
               className="object-cover object-top md:object-center lg:[object-position:center_85%]"
             />
           )}
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, #000000b3 0% 50%, #000000a6 100%)' }} />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-900/70 to-primary-900/65 lg:bg-none lg:[background:linear-gradient(90deg,#000000b3_0%,#000000b3_50%,#000000a6_100%)]" />
         </div>
 
         {/* Non-narrowForm: mascot + glow remain at section level (preserves
@@ -583,7 +677,7 @@ export default function LabHero({
               }
 
               <div className="space-y-3 md:space-y-5 w-full lg:flex-1 lg:flex lg:flex-col">
-                <h2
+                <h1
                   id="hero-heading"
                   className="text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.1]"
                 >
@@ -591,7 +685,7 @@ export default function LabHero({
                     {title}
                     <span className="absolute -right-4 text-accent-500">.</span>
                   </span>
-                </h2>
+                </h1>
 
                 <div className={`block text-base lg:text-xl text-white/90 max-w-xl ${desktopDescriptionMaxWidthClass} leading-relaxed mx-auto lg:mx-0`}>
                   <p>{description}</p>
@@ -601,13 +695,13 @@ export default function LabHero({
               {/* Phone CTA — mobile only */}
               <div className="block lg:hidden">
                 <a
-                  href="tel:0951735130"
+                  href={`tel:${currentPhoneNumber.replace(/\s+/g, "")}`}
                   className="inline-flex items-center justify-center w-full px-6 py-3 text-base font-medium rounded-lg text-primary-900 bg-accent-500 hover:bg-accent-400 transition-colors duration-300 shadow-lg hover:shadow-xl"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  Zavolajte nám
+                  {mobilePhoneCTAText}
                 </a>
               </div>
 
@@ -630,65 +724,91 @@ export default function LabHero({
                     </svg>
                   ))}
                 </div>
-                <div className="text-white/80 whitespace-nowrap text-[14px] leading-none">{ratingText}</div>
+                <div className="text-white/80 text-sm text-center lg:text-left lg:whitespace-nowrap lg:text-[14px] lg:leading-none">{ratingText}</div>
               </div>
 
-              <div className="hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center gap-6">
+              {benefits.length > 0 && (
+              <div className="grid grid-cols-3 sm:grid-cols-none sm:flex sm:flex-wrap sm:justify-center lg:justify-start sm:items-center gap-3 sm:gap-6">
                 {benefits.map((benefit, i) => (
                   <div key={i} className="flex flex-col sm:flex-row items-center sm:items-center">
-                    <div className="p-1.5 bg-accent-500 rounded-full flex-shrink-0 mb-1 sm:mb-0 sm:mr-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-900">
+                    <div className="p-2 lg:p-1.5 bg-accent-500 rounded-full flex-shrink-0 mb-2 lg:mb-1 sm:mb-0 sm:mr-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-primary-900 w-4 h-4 lg:w-3.5 lg:h-3.5">
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
                     </div>
-                    <span className="text-white text-sm font-medium text-center sm:text-left">{benefit}</span>
+                    <span className="text-white text-xs sm:text-sm font-medium text-center sm:text-left">{benefit}</span>
                   </div>
                 ))}
               </div>
+              )}
               {/* Mobile mascot — sits below the reviews row, peeks behind the form */}
-              <div
-                className="lg:hidden relative z-0 pointer-events-none"
-                style={{ marginTop: '-6px', marginBottom: '-188px', height: '630px' }}
-              >
+              {showMascot && (() => {
+                const mascotPx = 630 * mobileMascotScale;
+                const glowPx = 423 * mobileMascotScale;
+                const bottomGapPx = 188 * mobileMascotScale;
+                return (
                 <div
-                  className="absolute"
-                  style={{ width: '630px', height: '630px', left: '50%', transform: 'translateX(calc(-50% + 19px))' }}
+                  className="lg:hidden relative z-0 pointer-events-none"
+                  style={{ marginTop: `${-6 + mobileMascotOffsetY}px`, marginBottom: `${-bottomGapPx - mobileMascotOffsetY}px`, height: `${mascotPx}px` }}
                 >
-                  {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
                   <div
-                    className="absolute left-1/2 top-1/2"
-                    style={{
-                      width: '423px',
-                      height: '423px',
-                      borderRadius: '50%',
-                      background: '#fdc70033',
-                      filter: 'blur(100px)',
-                      transform: `translate(calc(-50% - ${423 * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${423 * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
-                      zIndex: 0,
-                    }}
-                  />
-                  <Image
-                    src={mascotSrc}
-                    unoptimized={mascotSrc.endsWith(".svgz")}
-                    alt={t.mascotAlt}
-                    width={630}
-                    height={630}
-                    className="select-none relative"
-                    style={{ zIndex: 10, maxWidth: 'none', width: '630px', height: '630px' }}
-                  />
+                    className="absolute"
+                    style={{ width: `${mascotPx}px`, height: `${mascotPx}px`, left: '50%', transform: `translateX(calc(-50% + ${19 + mobileMascotOffsetX}px))` }}
+                  >
+                    {/* Glow ellipse behind mascot, offset 4% left + 5% up like desktop */}
+                    <div
+                      className="absolute left-1/2 top-1/2 transition-opacity duration-200"
+                      style={{
+                        width: `${glowPx}px`,
+                        height: `${glowPx}px`,
+                        borderRadius: '50%',
+                        background: '#fdc70033',
+                        filter: 'blur(100px)',
+                        transform: `translate(calc(-50% - ${glowPx * DESKTOP_GLOW_LEFT_PCT}px), calc(-50% - ${glowPx * (DESKTOP_GLOW_UP_PCT + 0.11)}px))`,
+                        zIndex: 0,
+                        opacity: mobileMascotLoaded ? 1 : 0,
+                      }}
+                    />
+                    <Image
+                      src={mobileMascot}
+                      unoptimized={mobileMascot.endsWith(".svgz")}
+                      alt={t.mascotAlt}
+                      width={mascotPx}
+                      height={mascotPx}
+                      priority
+                      onLoad={() => setMobileMascotLoaded(true)}
+                      className="select-none relative transition-opacity duration-200"
+                      style={{ zIndex: 10, maxWidth: 'none', width: `${mascotPx}px`, height: `${mascotPx}px`, opacity: mobileMascotLoaded ? 1 : 0 }}
+                    />
+                  </div>
                 </div>
-              </div>
+                );
+              })()}
               {/* Mobile inline form — mirrors live Hero behaviour */}
-              <div className="block lg:hidden relative z-10" style={{ marginTop: '-314px' }}>
-                <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+              <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-314 * mobileMascotScale + mobileFormOffsetY}px` } : undefined}>
+                <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
                   <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
-                    <h3 className="text-lg font-bold text-center">{formTitle}</h3>
+                    <h3 className="text-lg md:text-xl font-bold text-center">{formTitle}</h3>
                     {formSubtitle && <p className="text-sm text-center text-primary-900/80 mt-1">{formSubtitle}</p>}
                   </div>
                   <div className="p-4">
                     <QuickContactForm variant="primary" lang={lang} />
                   </div>
                 </div>
+                {heroPills && (
+                  <div className="mt-5 grid grid-cols-3 gap-2">
+                    {heroPills.map((p) => (
+                      <div key={p.label} className="flex flex-col items-center gap-2">
+                        <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
+                          <Image src={p.icon} alt="" width={36} height={36} />
+                        </div>
+                        <span className="text-sm font-medium text-white text-center leading-tight">
+                          {p.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
 

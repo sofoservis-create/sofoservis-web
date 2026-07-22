@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -131,41 +130,28 @@ export default function VypratavaniePoRekonstrukciiPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={756}
-          desktopMascotTopOffsetPct={-0.01}
-          desktopMinHeroTextHeightPx={460}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          showMascot
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotOffsetY={-57}
-          mobileMascotOffsetX={-32}
-          mobileMascotScale={1.02}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        benefits={[]}
+        ratingText="3500+ spokojných zákazníkov"
+        mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        desktopMascotScaleMultiplier={1.08}
+        desktopMascotRightShiftPct={0.235}
+        desktopMascotFixedHeightPx={756}
+        desktopMascotTopOffsetPct={-0.01}
+        desktopMinHeroTextHeightPx={460}
+        showMascot
+        mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        mobileMascotOffsetY={-57}
+        mobileMascotOffsetX={-32}
+        mobileMascotScale={1.02}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
       <div>
         <Clients />
       </div>

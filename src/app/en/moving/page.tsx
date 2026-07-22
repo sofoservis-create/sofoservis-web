@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -162,42 +161,27 @@ export default function MovingPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroTitle}
-          description={heroDescription}
-          formTitle={heroFormTitle}
-          formSubtitle={heroFormSubtitle}
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          desktopMascotScaleMultiplier={1.03}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroTitle}
-          description={heroDescription}
-          formTitle={heroFormTitle}
-          formSubtitle={heroFormSubtitle}
-          backgroundImage="/images/stahovanie-gauc.avif"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          badgeText="Services available 6 days a week"
-          lang="en"
-          phoneCTAText="Call us now"
-          phoneNumber="0951 735 130"
-          hoursText="6 days a week 8:00-17:00"
-          showMascot
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotOffsetY={-44}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroTitle}
+        description={heroDescription}
+        formTitle={heroFormTitle}
+        formSubtitle={heroFormSubtitle}
+        benefits={[]}
+        ratingText="3500+ satisfied customers"
+        lang="en"
+        mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        desktopMascotScaleMultiplier={1.03}
+        backgroundImage="/images/stahovanie-gauc.avif"
+        badgeText="Services available 6 days a week"
+        phoneCTAText="Call us now"
+        phoneNumber="0951 735 130"
+        showMascot
+        mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        mobileMascotOffsetY={-44}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

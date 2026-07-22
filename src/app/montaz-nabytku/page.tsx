@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -134,37 +133,24 @@ export default function MontazNabytkuPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          desktopMascotDynamicHeight
-          desktopMascotScaleMultiplier={1.1}
-          desktopMascotTopOffsetPct={-0.065}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          showMascot
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotOffsetY={-45}
-          mobileFormOffsetY={32}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        benefits={[]}
+        ratingText="3500+ spokojných zákazníkov"
+        mascotSrc="/images/mascot/montaz-mascot.svg"
+        desktopMascotDynamicHeight
+        desktopMascotScaleMultiplier={1.1}
+        desktopMascotTopOffsetPct={-0.065}
+        showMascot
+        mobileMascotSrc="/images/mascot/montaz-mascot.svg"
+        mobileMascotOffsetY={-45}
+        mobileFormOffsetY={32}
+        pillsVariant="stahovanie"
+      />
 
       {/* Clients section */}
       <div>

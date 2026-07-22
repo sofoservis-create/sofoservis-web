@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -67,43 +66,29 @@ export default function OfficeJunkRemovalPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Professional Office Junk Removal Services"
-          description="Fast and efficient junk removal of offices, open-space areas, and administrative buildings. We minimize downtime by working during weekends and holidays."
-          formTitle="Get a free quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          lang="en"
-          benefits={["Weekend work", "Eco-friendly disposal", "Fixed price upfront"]}
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={756}
-          desktopMascotTopOffsetPct={-0.01}
-          desktopMinHeroTextHeightPx={500}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Professional Office Junk Removal Services"
-          description="Fast and efficient junk removal of offices, open-space areas, and administrative buildings. We minimize downtime by working during weekends and holidays."
-          formTitle="Get a free quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          lang="en"
-          benefits={["Weekend work", "Eco-friendly disposal", "Fixed price upfront"]}
-          showMascot
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotOffsetY={-57}
-          mobileMascotOffsetX={-32}
-          mobileMascotScale={1.02}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Professional Office Junk Removal Services"
+        description="Fast and efficient junk removal of offices, open-space areas, and administrative buildings. We minimize downtime by working during weekends and holidays."
+        formTitle="Get a free quote"
+        formSubtitle="Fill out the form for a no-obligation estimate"
+        backgroundImage="/images/stahovanie-gauc.avif"
+        lang="en"
+        benefits={["Weekend work", "Eco-friendly disposal", "Fixed price upfront"]}
+        mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        desktopMascotScaleMultiplier={1.08}
+        desktopMascotRightShiftPct={0.235}
+        desktopMascotFixedHeightPx={756}
+        desktopMascotTopOffsetPct={-0.01}
+        desktopMinHeroTextHeightPx={500}
+        showMascot
+        mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        mobileMascotOffsetY={-57}
+        mobileMascotOffsetX={-32}
+        mobileMascotScale={1.02}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
       <div>
         <Clients />
       </div>

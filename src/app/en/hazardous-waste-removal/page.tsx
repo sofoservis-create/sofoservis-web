@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -141,35 +140,21 @@ export default function HazardousWasteRemovalPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroTitle}
-          description={heroDescription}
-          formTitle={heroFormTitle}
-          formSubtitle={heroFormSubtitle}
-          benefits={[]}
-          ratingText="Over 3500+ satisfied customers"
-          mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
-          desktopMascotDynamicHeight
-          lang="en"
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroTitle}
-          description={heroDescription}
-          formTitle={heroFormTitle}
-          formSubtitle={heroFormSubtitle}
-          benefits={[]}
-          ratingText="Over 3500+ satisfied customers"
-          showMascot
-          mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
-          mobileMascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
-          pillsVariant="stahovanie"
-          lang="en"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroTitle}
+        description={heroDescription}
+        formTitle={heroFormTitle}
+        formSubtitle={heroFormSubtitle}
+        benefits={[]}
+        ratingText="Over 3500+ satisfied customers"
+        mascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+        desktopMascotDynamicHeight
+        lang="en"
+        showMascot
+        mobileMascotSrc="/images/mascot/nosi-sakel-stolicku-mascot.svgz"
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

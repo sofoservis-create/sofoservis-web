@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -132,33 +131,20 @@ export default function BuranieStienPriecokPage() {
         href="/images/mascot/buranie-mascot.svg"
         media="(max-width: 1023px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          desktopMascotDynamicHeight
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title={heroData.title}
-          description={heroData.description}
-          formTitle={heroData.formTitle}
-          formSubtitle={heroData.formSubtitle}
-          backgroundImage={heroData.backgroundImage}
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          showMascot
-          mascotSrc="/images/mascot/buranie-mascot.svg"
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title={heroData.title}
+        description={heroData.description}
+        formTitle={heroData.formTitle}
+        formSubtitle={heroData.formSubtitle}
+        benefits={[]}
+        ratingText="3500+ spokojných zákazníkov"
+        mascotSrc="/images/mascot/buranie-mascot.svg"
+        desktopMascotDynamicHeight
+        backgroundImage={heroData.backgroundImage}
+        showMascot
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

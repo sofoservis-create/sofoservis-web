@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -132,55 +131,34 @@ export default function HandymanServicesPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Handyman Services"
-          description="Professional handyman services for fast and reliable resolution of all minor repairs, assemblies, and maintenance in your home. We help you with tasks you do not have time, tools, or skills for."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation calculation"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          badgeText="Services available 6 days a week"
-          ratingText="Over 3500+ satisfied customers"
-          benefits={[
+      <LabHero
+        narrowForm
+        title="Handyman Services"
+        description="Professional handyman services for fast and reliable resolution of all minor repairs, assemblies, and maintenance in your home. We help you with tasks you do not have time, tools, or skills for."
+        formTitle="Get a free price quote"
+        formSubtitle="Fill out the form for a no-obligation calculation"
+        backgroundImage="/images/stahovanie-gauc.avif"
+        badgeText="Services available 6 days a week"
+        ratingText="Over 3500+ satisfied customers"
+        benefits={[
           "Own professional tools",
           "Experienced technicians",
           "Fair hourly rates",
         ]}
-          lang="en"
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={466}
-          desktopMascotScaleMultiplier={1.1}
-          desktopMascotTopOffsetPct={-0.065}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Handyman Services"
-          description="Professional handyman services for fast and reliable resolution of all minor repairs, assemblies, and maintenance in your home. We help you with tasks you do not have time, tools, or skills for."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation calculation"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          badgeText="Services available 6 days a week"
-          ratingText="Over 3500+ satisfied customers"
-          benefits={[
-          "Own professional tools",
-          "Experienced technicians",
-          "Fair hourly rates",
-        ]}
-          phoneCTAText="Call us now"
-          phoneNumber="0952 044 363"
-          hoursText="6 days a week 8:00-17:00"
-          lang="en"
-          showMascot
-          mascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotSrc="/images/mascot/montaz-mascot.svg"
-          mobileMascotOffsetY={-45}
-          mobileFormOffsetY={32}
-          pillsVariant="hodinovy"
-        />
-      </div>
+        lang="en"
+        mascotSrc="/images/mascot/montaz-mascot.svg"
+        desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={466}
+        desktopMascotScaleMultiplier={1.1}
+        desktopMascotTopOffsetPct={-0.065}
+        phoneCTAText="Call us now"
+        phoneNumber="0952 044 363"
+        showMascot
+        mobileMascotSrc="/images/mascot/montaz-mascot.svg"
+        mobileMascotOffsetY={-45}
+        mobileFormOffsetY={32}
+        pillsVariant="hodinovy"
+      />
 
       <div>
         <Clients />

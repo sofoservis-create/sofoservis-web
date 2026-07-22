@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -123,37 +122,23 @@ export default function MovingFromSlovakiaToNetherlandsPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Moving from Slovakia to the Netherlands"
-          description="Relocating from Slovakia to the Netherlands? Sofoservis provides professional door-to-door international removals from anywhere in Slovakia to Amsterdam, Rotterdam, and all Dutch cities. Regular routes, competitive prices, and a fully managed experience."
-          formTitle="Get a Free Quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          desktopMascotScaleMultiplier={1.03}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Moving from Slovakia to the Netherlands"
-          description="Relocating from Slovakia to the Netherlands? Sofoservis provides professional door-to-door international removals from anywhere in Slovakia to Amsterdam, Rotterdam, and all Dutch cities. Regular routes, competitive prices, and a fully managed experience."
-          formTitle="Get a Free Quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          benefits={[]}
-          ratingText="3500+ satisfied customers"
-          lang="en"
-          showMascot
-          mascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
-          mobileMascotOffsetY={-44}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Moving from Slovakia to the Netherlands"
+        description="Relocating from Slovakia to the Netherlands? Sofoservis provides professional door-to-door international removals from anywhere in Slovakia to Amsterdam, Rotterdam, and all Dutch cities. Regular routes, competitive prices, and a fully managed experience."
+        formTitle="Get a Free Quote"
+        formSubtitle="Fill out the form for a no-obligation estimate"
+        benefits={[]}
+        ratingText="3500+ satisfied customers"
+        lang="en"
+        mascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        desktopMascotScaleMultiplier={1.03}
+        showMascot
+        mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
+        mobileMascotOffsetY={-44}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

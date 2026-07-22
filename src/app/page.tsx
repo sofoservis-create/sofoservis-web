@@ -1,6 +1,5 @@
 import dynamic from "next/dynamic";
 import LabHero from "@/components/sections/LabHero";
-import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import CTA from "@/components/sections/CTA";
@@ -108,27 +107,17 @@ export default function Home() {
         media="(min-width: 1024px)" fetchPriority="high" />
       <FAQJsonLd items={faqItems} />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
-          benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
-          ratingText="3500+ spokojných zákazníkov"
-          desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={476}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-          description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
-          benefits={[]}
-          ratingText="3500+ spokojných zákazníkov"
-          showMascot
-          pillsVariant="home"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
+        description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+        benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
+        ratingText="3500+ spokojných zákazníkov"
+        desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={476}
+        showMascot
+        pillsVariant="home"
+      />
 
       <Clients />
 

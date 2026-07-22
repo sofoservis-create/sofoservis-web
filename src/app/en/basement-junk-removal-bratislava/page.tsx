@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -55,43 +54,29 @@ export default function BasementJunkRemovalBratislavaPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Basement & Garage Junk Removal in Bratislava"
-          description="Professional and fast junk removal of basements, garages, storage rooms, attics, and other non-residential spaces in Bratislava and surrounding areas. We handle complete junk removal regardless of the level of clutter or amount of accumulated material."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation estimate in Bratislava"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          lang="en"
-          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={756}
-          desktopMascotTopOffsetPct={-0.01}
-          desktopMinHeroTextHeightPx={580}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Basement & Garage Junk Removal in Bratislava"
-          description="Professional and fast junk removal of basements, garages, storage rooms, attics, and other non-residential spaces in Bratislava and surrounding areas. We handle complete junk removal regardless of the level of clutter or amount of accumulated material."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation estimate in Bratislava"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          lang="en"
-          benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
-          showMascot
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotOffsetY={-57}
-          mobileMascotOffsetX={-32}
-          mobileMascotScale={1.02}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Basement & Garage Junk Removal in Bratislava"
+        description="Professional and fast junk removal of basements, garages, storage rooms, attics, and other non-residential spaces in Bratislava and surrounding areas. We handle complete junk removal regardless of the level of clutter or amount of accumulated material."
+        formTitle="Get a free price quote"
+        formSubtitle="Fill out the form for a no-obligation estimate in Bratislava"
+        backgroundImage="/images/stahovanie-gauc.avif"
+        lang="en"
+        benefits={["Insurance included", "No hidden fees", "Fixed price upfront"]}
+        mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        desktopMascotScaleMultiplier={1.08}
+        desktopMascotRightShiftPct={0.235}
+        desktopMascotFixedHeightPx={756}
+        desktopMascotTopOffsetPct={-0.01}
+        desktopMinHeroTextHeightPx={580}
+        showMascot
+        mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        mobileMascotOffsetY={-57}
+        mobileMascotOffsetX={-32}
+        mobileMascotScale={1.02}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

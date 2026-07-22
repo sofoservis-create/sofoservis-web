@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "@/components/sections/Hero";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -174,46 +173,31 @@ export default function JunkRemovalPage() {
         type="image/svg+xml"
         media="(min-width: 1024px)" fetchPriority="high" />
 
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Junk Removal Services"
-          description="Professional junk removal services for any property — apartments, houses, offices, basements, cottages and land. Discreet, eco-friendly, at fair prices. Our team handles everything from sorting to disposal."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          benefits={["Free site inspection", "No hidden fees", "Eco-friendly disposal"]}
-          lang="en"
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          desktopMascotScaleMultiplier={1.08}
-          desktopMascotRightShiftPct={0.235}
-          desktopMascotFixedHeightPx={756}
-          desktopMascotTopOffsetPct={-0.01}
-          desktopMinHeroTextHeightPx={540}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Junk Removal Services"
-          description="Professional junk removal services for any property — apartments, houses, offices, basements, cottages and land. Discreet, eco-friendly, at fair prices. Our team handles everything from sorting to disposal."
-          formTitle="Get a free price quote"
-          formSubtitle="Fill out the form for a no-obligation estimate"
-          backgroundImage="/images/stahovanie-gauc.avif"
-          benefits={["Free site inspection", "No hidden fees", "Eco-friendly disposal"]}
-          lang="en"
-          phoneCTAText="Call us now"
-          phoneNumber="0951 735 130"
-          hoursText="6 days a week 8:00-17:00"
-          showMascot
-          mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
-          mobileMascotOffsetY={-57}
-          mobileMascotOffsetX={-32}
-          mobileMascotScale={1.02}
-          mobileFormOffsetY={19}
-          pillsVariant="stahovanie"
-        />
-      </div>
+      <LabHero
+        narrowForm
+        title="Junk Removal Services"
+        description="Professional junk removal services for any property — apartments, houses, offices, basements, cottages and land. Discreet, eco-friendly, at fair prices. Our team handles everything from sorting to disposal."
+        formTitle="Get a free price quote"
+        formSubtitle="Fill out the form for a no-obligation estimate"
+        backgroundImage="/images/stahovanie-gauc.avif"
+        benefits={["Free site inspection", "No hidden fees", "Eco-friendly disposal"]}
+        lang="en"
+        mascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        desktopMascotScaleMultiplier={1.08}
+        desktopMascotRightShiftPct={0.235}
+        desktopMascotFixedHeightPx={756}
+        desktopMascotTopOffsetPct={-0.01}
+        desktopMinHeroTextHeightPx={540}
+        phoneCTAText="Call us now"
+        phoneNumber="0951 735 130"
+        showMascot
+        mobileMascotSrc="/images/mascot/stary-gauc-nosi-mascot.svg"
+        mobileMascotOffsetY={-57}
+        mobileMascotOffsetX={-32}
+        mobileMascotScale={1.02}
+        mobileFormOffsetY={19}
+        pillsVariant="stahovanie"
+      />
 
       <div>
         <Clients />

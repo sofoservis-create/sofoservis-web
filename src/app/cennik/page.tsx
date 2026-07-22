@@ -1,6 +1,5 @@
 import React from "react";
 import LabHero from "@/components/sections/LabHero";
-import Hero from "@/components/sections/Hero";
 import Clients from "@/components/sections/Clients";
 import GoogleReviews from "@/components/widgets/GoogleReviews";
 import FAQ from "@/components/sections/FAQ";
@@ -174,35 +173,25 @@ export default function CennikPage() {
       />
 
       {/* Hero section */}
-      <div className="hidden lg:block">
-        <LabHero
-          narrowForm
-          title="Cenník našich služieb"
-          description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
-          benefits={[
+      <LabHero
+        narrowForm
+        title="Cenník našich služieb"
+        description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
+        benefits={[
             "Transparentné ceny",
             "Bez skrytých poplatkov",
             "Obhliadka zadarmo",
           ]}
-          ratingText="3500+ spokojných zákazníkov"
-          desktopMascotDynamicHeight
-          desktopMinHeroTextHeightPx={476}
-        />
-      </div>
-      <div className="lg:hidden">
-        <Hero
-          title="Cenník našich služieb"
-          description="Transparentné a férové ceny za profesionálne sťahovacie služby, vypratávanie a montáž nábytku. Všetky ceny sú konečné bez skrytých poplatkov."
-          backgroundImage="/images/stahovanie-gauc.avif"
-          formTitle="Získajte presnú cenovú ponuku"
-          formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
-          badgeText="Obhliadka priestoru zadarmo"
-          ratingText="3500+ spokojných zákazníkov"
-          benefits={[]}
-          showMascot
-          pillsVariant="stahovanie"
-        />
-      </div>
+        ratingText="3500+ spokojných zákazníkov"
+        desktopMascotDynamicHeight
+        desktopMinHeroTextHeightPx={476}
+        backgroundImage="/images/stahovanie-gauc.avif"
+        formTitle="Získajte presnú cenovú ponuku"
+        formSubtitle="Vyplňte formulár pre nezáväznú kalkuláciu"
+        badgeText="Obhliadka priestoru zadarmo"
+        showMascot
+        pillsVariant="stahovanie"
+      />
 
       {/* Clients section */}
       <div>
