@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-nitra",
     languages: {
-      sk: "https://www.sofoservis.sk/buracie-demolacne-prace/nitra",
+      sk: "https://www.sofoservis.sk/buracie-prace",
       en: "https://www.sofoservis.sk/en/demolition-nitra",
-      "x-default": "https://www.sofoservis.sk/buracie-demolacne-prace/nitra",
+      "x-default": "https://www.sofoservis.sk/buracie-prace",
       },
   },
 };

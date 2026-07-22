@@ -115,29 +115,19 @@ export const navCategoriesSK: NavCategory[] = [
       links: [
         {
           href: "",
-          label: "Búranie / demolácie",
+          label: "Búracie práce",
           subLinks: [
-            { href: "/buracie-demolacne-prace", label: "→ Všetky búracie a demolačné práce" },
-            { href: "/buranie-demolacia-domov-bytov", label: "Búranie a demolácia domov, budov" },
-            { href: "/buranie-stien-priecok", label: "Búranie stien v dome a byte" },
+            { href: "/buracie-prace", label: "→ Všetky búracie práce" },
+            { href: "/buracie-prace/buranie-demolacia-domov", label: "Búranie a demolácia domov, budov" },
+            { href: "/buracie-prace/buranie-stien-priecok", label: "Búranie stien v dome a byte" },
           ],
         },
         {
-          href: "",
+          href: "/hodinovy-manzel-majster",
           label: "Hodinový manžel",
           subLinks: [
             { href: "/hodinovy-manzel-majster", label: "Hodinový manžel" },
-            {
-              href: "/hodinovy-manzel-majster",
-              label: "Mestá",
-              subLinksAllLabel: "",
-              subLinks: [
-                { href: "/hodinovy-manzel-majster/bratislava", label: "Bratislava" },
-                { href: "/hodinovy-manzel-majster/galanta", label: "Galanta" },
-                { href: "/hodinovy-manzel-majster/piestany", label: "Piešťany" },
-                { href: "/hodinovy-manzel-majster/trnava", label: "Trnava" },
-              ],
-            },
+            { href: "/hodinovy-manzel-majster/bratislava", label: "Bratislava" },
           ],
         },
       ],
@@ -309,21 +299,11 @@ export const navCategoriesEN: NavCategory[] = [
           ],
         },
         {
-          href: "",
+          href: "/en/handyman-services",
           label: "Handyman Services",
           subLinks: [
             { href: "/en/handyman-services", label: "Handyman Services" },
-            {
-              href: "/en/handyman-services",
-              label: "Cities",
-              subLinksAllLabel: "",
-              subLinks: [
-                { href: "/en/handyman-bratislava", label: "Bratislava" },
-                { href: "/en/handyman-galanta", label: "Galanta" },
-                { href: "/en/handyman-piestany", label: "Piešťany" },
-                { href: "/en/handyman-trnava", label: "Trnava" },
-              ],
-            },
+            { href: "/en/handyman-bratislava", label: "Bratislava" },
           ],
         },
       ],

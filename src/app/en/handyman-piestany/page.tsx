@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-piestany",
     languages: {
-      sk: "https://www.sofoservis.sk/hodinovy-manzel-majster/piestany",
+      sk: "https://www.sofoservis.sk/hodinovy-manzel-majster",
       en: "https://www.sofoservis.sk/en/handyman-piestany",
-      "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster/piestany",
+      "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster",
       },
   },
 };

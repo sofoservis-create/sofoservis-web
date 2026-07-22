@@ -102,7 +102,7 @@ export default function MontazKuchynePage() {
         title: "Búranie stien pri rekonštrukcii",
         description:
           "Búranie priečok a úprava priestoru pre novú kuchyňu. Profesionálne búranie s ohľadom na rozvody a bezpečnosť.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/truck_icon.svg", // For waste removal

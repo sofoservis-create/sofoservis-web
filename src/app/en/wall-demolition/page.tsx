@@ -21,9 +21,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/wall-demolition",
     languages: {
-      sk: "https://www.sofoservis.sk/buranie-stien-priecok",
+      sk: "https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok",
       en: "https://www.sofoservis.sk/en/wall-demolition",
-      "x-default": "https://www.sofoservis.sk/buranie-stien-priecok",
+      "x-default": "https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok",
       },
   },
   openGraph: {

@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-trnava",
     languages: {
-      sk: "https://www.sofoservis.sk/hodinovy-manzel-majster/trnava",
+      sk: "https://www.sofoservis.sk/hodinovy-manzel-majster",
       en: "https://www.sofoservis.sk/en/handyman-trnava",
-      "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster/trnava",
+      "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster",
       },
   },
 };

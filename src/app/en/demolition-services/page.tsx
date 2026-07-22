@@ -23,9 +23,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-services",
     languages: {
-      sk: "https://www.sofoservis.sk/buracie-demolacne-prace",
+      sk: "https://www.sofoservis.sk/buracie-prace",
       en: "https://www.sofoservis.sk/en/demolition-services",
-      "x-default": "https://www.sofoservis.sk/buracie-demolacne-prace",
+      "x-default": "https://www.sofoservis.sk/buracie-prace",
       },
   },
   openGraph: {

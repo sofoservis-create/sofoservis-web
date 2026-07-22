@@ -17,23 +17,23 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
-  title: "Búracie a demolačné práce od profesionálov | Sofoservis",
+  title: "Búracie práce — búranie a demolácia objektov | Sofoservis",
   description:
-    "Ponúkame komplexné služby v oblasti búracích a demolačných prác ✅ Obhliadka priestoru zadarmo ✅ Lacné a férové ceny ✅ Kontaktujte nás ešte dnes!",
+    "Ponúkame komplexné búracie práce v Bratislave a okolí ✅ Búranie priečok, stien, bytových jadier a demolácia objektov ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás!",
   alternates: {
-    canonical: "https://www.sofoservis.sk/buracie-demolacne-prace",
+    canonical: "https://www.sofoservis.sk/buracie-prace",
     languages: {
-      sk: "https://www.sofoservis.sk/buracie-demolacne-prace",
+      sk: "https://www.sofoservis.sk/buracie-prace",
       en: "https://www.sofoservis.sk/en/demolition-services",
-      "x-default": "https://www.sofoservis.sk/buracie-demolacne-prace",
+      "x-default": "https://www.sofoservis.sk/buracie-prace",
     },
   },
   keywords:
     "buracie prace, búracie prace, rucne buracie prace, buracie práce, rucne buracie prace cena, buracie prace cena, buracie prace cennik, cena buracich prac, cena buracie prace, cena za buracie prace, demolačné práce, demolacne prace",
   openGraph: {
-      title: "Búracie a demolačné práce od profesionálov | Sofoservis",
-      description: "Komplexné búracie a demolačné práce v Bratislave a okolí. Bouranie priečok, stien a objektov. Obhliadka priestoru zadarmo. Lacné ceny.",
-      url: "https://www.sofoservis.sk/buracie-demolacne-prace",
+      title: "Búracie práce — búranie a demolácia objektov | Sofoservis",
+      description: "Komplexné búracie práce v Bratislave a okolí. Búranie priečok, stien a demolácia objektov. Obhliadka priestoru zadarmo. Lacné ceny.",
+      url: "https://www.sofoservis.sk/buracie-prace",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
       locale: "sk_SK",
@@ -41,67 +41,65 @@ export const metadata = {
     },
   };
 
-export default function BuracieDemlacnePracePage() {
-  // Custom data for Hero section
+export default function BuraciePracePage() {
   const heroData = {
-    title: "Búracie a demolačné práce od profesionálov",
+    title: "Búracie práce — búranie a demolácia objektov",
     description:
-      "Profesionálne a spoľahlivé služby v oblasti búracích a demolačných prác. Realizujeme búranie a demoláciu bytových jadier, priečok, nosných stien, podláh.",
+      "Profesionálne a spoľahlivé búracie práce. Realizujeme búranie a demoláciu bytových jadier, priečok, nosných stien, podláh a celých objektov.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
   };
 
   const buracieLocations = [
-    { name: "Bratislava", href: "/buracie-demolacne-prace/bratislava" },
-    { name: "Nitra", href: "/buracie-demolacne-prace/nitra" },
-    { name: "Pezinok", href: "/buracie-demolacne-prace/pezinok" },
-    { name: "Trnava", href: "/buracie-demolacne-prace/trnava" },
+    { name: "Bratislava", href: "/buracie-prace" },
+    { name: "Nitra", href: "/buracie-prace" },
+    { name: "Pezinok", href: "/buracie-prace" },
+    { name: "Trnava", href: "/buracie-prace" },
   ];
-  // Custom data for Features section
 
   const featuresData = {
-    title: "Komplexné búracie a demolačné služby",
+    title: "Komplexné búracie služby",
     description:
-      "Ponúkame široké spektrum búracích a demolačných služieb pre interiéry aj exteriéry, od drobných búracích prác až po kompletné demolácie objektov.",
+      "Ponúkame široké spektrum búracích služieb pre interiéry aj exteriéry, od drobných búracích prác až po kompletné demolácie objektov.",
     features: [
       {
-        image: "/icons/wrecking_ball_icon.svg", // For demolition/breaking work
+        image: "/icons/wrecking_ball_icon.svg",
         title: "Búranie bytových jadier a priečok",
         description:
           "Odborné búranie bytových jadier a nenosných priečok pri rekonštrukciách bytov. Pracujeme šetrne s ohľadom na minimalizáciu prachu a hluku, kladieme dôraz na bezpečnosť a čistotu.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
-        image: "/icons/hammer_icon.svg", // For breaking/demolition work
+        image: "/icons/hammer_icon.svg",
         title: "Búranie nosných stien a konštrukcií",
         description:
           "Bezpečné búranie nosných stien a konštrukcií pod dohľadom statika. Zabezpečíme kompletnú dokumentáciu a potrebné povolenia pre búranie nosných častí budov.",
-        link: "/buranie-demolacia-domov-bytov",
+        link: "/buracie-prace/buranie-demolacia-domov",
       },
       {
-        image: "/icons/hazmat_icon.svg", // For floor removal/surface work
+        image: "/icons/hazmat_icon.svg",
         title: "Vybúranie podláh a povrchov",
         description:
           "Presné vybúranie starých podláh, dlažieb, poterov a povrchov. Pripravíme váš priestor na položenie nových podláh alebo realizáciu nových povrchových úprav.",
-        link: "/buracie-demolacne-prace",
+        link: "/buracie-prace",
       },
       {
-        image: "/icons/plumbing_icon.svg", // For bathroom/kitchen demolition
+        image: "/icons/plumbing_icon.svg",
         title: "Demolácia kúpeľní a kuchýň",
         description:
           "Komplexná demolácia kúpeľní a kuchýň, vrátane odstránenia obkladov, dlažby, sanity a rozvodov. Priestor pripravíme pre novú modernú kúpeľňu alebo kuchyňu.",
-        link: "/buracie-demolacne-prace",
+        link: "/buracie-prace",
       },
       {
-        image: "/icons/house_icon.svg", // For building demolition
+        image: "/icons/house_icon.svg",
         title: "Demolácia budov a objektov",
         description:
           "Profesionálna demolácia celých objektov, vrátane rodinných domov, garáží, hospodárskych budov, starých prístreškov a iných stavieb. Zabezpečíme všetky potrebné povolenia.",
-        link: "/buranie-demolacia-domov-bytov",
+        link: "/buracie-prace/buranie-demolacia-domov",
       },
       {
-        image: "/icons/container_icon.svg", // For waste removal/container services
+        image: "/icons/container_icon.svg",
         title: "Odvoz a likvidácia stavebného odpadu",
         description:
           "Ekologická likvidácia a odvoz všetkého stavebného odpadu vzniknutého pri búracích prácach. Zabezpečíme pristavenie kontajnerov a oficiálne doklady o likvidácii odpadu.",
@@ -110,7 +108,6 @@ export default function BuracieDemlacnePracePage() {
     ],
   };
 
-  // FAQ Data
   const faqItems = [
     {
       question: "Ako postupujú búracie práce v bytoch?",
@@ -141,7 +138,6 @@ export default function BuracieDemlacnePracePage() {
 
   return (
     <main className="bg-white">
-      {/* Hero section */}
       <link rel="preload"
         href="/images/mascot/buranie-mascot.svg"
         as="image"
@@ -180,25 +176,20 @@ export default function BuracieDemlacnePracePage() {
         />
       </div>
 
-      {/* Clients section */}
       <div>
         <Clients />
       </div>
 
-      {/* Google Reviews section */}
       <div>
         <GoogleReviews />
       </div>
 
-      {/* Ako to funguje section */}
       <HowItWorks />
 
-            {/* Reviews section */}
       <div>
         <Reviews showHeadline={true} />
       </div>
 
-      {/* Features section */}
       <div>
         <Features
           title={featuresData.title}
@@ -207,33 +198,30 @@ export default function BuracieDemlacnePracePage() {
         />
       </div>
 
-      {/* Instagram Feed section */}
       <div>
         <InstagramFeed />
       </div>
 
       <div className="md:mb-[-100px]">
         <LocationMap
-          title="Búracie a demolačné práce po celom Slovensku"
-          description="Naše služby poskytujeme v nasledujúcich mestách a regiónech."
+          title="Búracie práce po celom Slovensku"
+          description="Naše služby poskytujeme v nasledujúcich mestách a regiónoch."
           locations={buracieLocations}
-          additionalText="Poskytujeme profesionálne búracie a demolačné práce s plnou zodpovednosťou za váš majetok."
+          additionalText="Poskytujeme profesionálne búracie práce s plnou zodpovednosťou za váš majetok."
           supporText="Búrame vo všetkých regiónoch:"
         />
       </div>
 
-      {/* Google Reviews section */}
       <div>
         <GoogleReviews showReviewsShowcase={false} />
       </div>
 
-      {/* FAQ section */}
       <div>
         <FAQ
-          title="Často kladené otázky o búracích a demolačných prácach"
+          title="Často kladené otázky o búracích prácach"
           items={faqItems}
           expandableGroup={{
-            label: "Všetko o búracích a demolačných prácach",
+            label: "Všetko o búracích prácach",
             panels: [
               {
                 title: "Nosné steny vs. priečky — kedy potrebujete projekt?",
@@ -261,11 +249,10 @@ export default function BuracieDemlacnePracePage() {
       </div>
       <FAQJsonLd items={faqItems} />
 
-      {/* CTA section */}
       <div>
         <CTA
           title="Potrebujete profesionálne búracie práce?"
-          description="Zverte búracie a demolačné práce do rúk odborníkov s dlhoročnými skúsenosťami. Pracujeme bezpečne, rýchlo a s ohľadom na minimalizáciu prašnosti a hluku. Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku."
+          description="Zverte búracie práce do rúk odborníkov s dlhoročnými skúsenosťami. Pracujeme bezpečne, rýchlo a s ohľadom na minimalizáciu prašnosti a hluku. Kontaktujte nás pre bezplatnú konzultáciu a cenovú ponuku."
           buttonText="Získať bezplatnú ponuku"
         />
       </div>
@@ -276,7 +263,12 @@ export default function BuracieDemlacnePracePage() {
 
       <RelatedServices
         title="Súvisiace služby"
-        services={[{"title":"Búracie a demolačné práce","description":"Komplexné búracie práce pre byty a kancelársie.","href":"/buracie-demolacne-prace","icon":"/icons/crane_icon.svg"},{"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},{"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},{"title":"Likvidácia nebezpečného odpadu","description":"Bezpečná likvidácia starých spotrebičov a nebezpečného odpadu.","href":"/vypratavanie/likvidacia-nebezpecneho-odpadu","icon":"/icons/hazmat_icon.svg"}]}
+        services={[
+          {"title":"Búranie domov a budov","description":"Komplexná demolácia domov, garáží a hospodárskych stavieb.","href":"/buracie-prace/buranie-demolacia-domov","icon":"/icons/crane_icon.svg"},
+          {"title":"Búranie stien a priečok","description":"Búranie nosných a nenosných stien v bytoch a domoch.","href":"/buracie-prace/buranie-stien-priecok","icon":"/icons/hammer_icon.svg"},
+          {"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},
+          {"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},
+        ]}
       />
     </main>
   );

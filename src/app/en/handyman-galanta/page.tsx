@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/handyman-galanta",
     languages: {
-      sk: "https://www.sofoservis.sk/hodinovy-manzel-majster/galanta",
+      sk: "https://www.sofoservis.sk/hodinovy-manzel-majster",
       en: "https://www.sofoservis.sk/en/handyman-galanta",
-      "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster/galanta",
+      "x-default": "https://www.sofoservis.sk/hodinovy-manzel-majster",
       },
   },
 };

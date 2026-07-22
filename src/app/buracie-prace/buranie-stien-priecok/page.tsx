@@ -16,15 +16,15 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 
 export const metadata = {
-  title: "Búranie nosných stien, priečok v dome a byte | Sofoservis",
+  title: "Búranie stien a priečok v dome a byte | Sofoservis",
   description:
-    "Ponúkame komplexné služby v oblasti búrania nosných stien, priečok v dome alebo byte ✅ Lacné a férové ceny ✅ Kontaktujte nás ešte dnes!",
+    "Ponúkame komplexné búranie stien a priečok v dome alebo byte ✅ Lacné a férové ceny ✅ Kontaktujte nás ešte dnes!",
   alternates: {
-    canonical: "https://www.sofoservis.sk/buranie-stien-priecok",
+    canonical: "https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok",
       languages: {
-        sk: "https://www.sofoservis.sk/buranie-stien-priecok",
+        sk: "https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok",
         en: "https://www.sofoservis.sk/en/wall-demolition",
-        "x-default": "https://www.sofoservis.sk/buranie-stien-priecok",
+        "x-default": "https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok",
       },
   },
   keywords:
@@ -32,19 +32,17 @@ export const metadata = {
 };
 
 export default function BuranieStienPriecokPage() {
-  // Custom data for Hero section
   const heroData = {
-    title: "Búranie nosných stien, priečok v dome a byte",
+    title: "Búranie stien a priečok v dome a byte",
     description:
-      "Profesionálne služby v oblasti búrania a odstraňovania nosných stien, nenosných priečok a vytvárania otvorov v stenách. Zabezpečíme statický posudok.",
+      "Profesionálne búranie a odstraňovanie nosných stien, nenosných priečok a vytváranie otvorov v stenách. Zabezpečíme statický posudok.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/sofoservis-zamestnanci-hero.avif",
   };
 
-  // Custom data for Features section
   const featuresData = {
-    title: "Komplexné služby búrania stien a priečok",
+    title: "Komplexné búranie stien a priečok",
     description:
       "Ponúkame profesionálne riešenia pre všetky typy búracích prác v bytoch a domoch s dôrazom na bezpečnosť a kvalitu.",
     features: [
@@ -53,28 +51,28 @@ export default function BuranieStienPriecokPage() {
         title: "Búranie nosných stien",
         description:
           "Profesionálne búranie nosných stien s projektom statika a všetkými potrebnými povoleniami. Zabezpečujeme náhradnú konštrukciu pre zachovanie stability budovy.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/hammer_icon.svg",
         title: "Búranie priečok a deliacich stien",
         description:
           "Rýchle a čisté búranie priečok v bytoch a domoch. Používame presné techniky pre minimálne poškodenie okolitých plôch a rýchle dokončenie práce.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/safety_icon.svg",
         title: "Bezpečnostné opatrenia",
         description:
           "Dôsledné dodržiavanie bezpečnostných predpisov a ochrana okolitých priestorov. Všetci naši pracovníci majú certifikáty pre búracie práce.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Povolenia a projektová dokumentácia",
         description:
           "Vybavíme všetky potrebné povolenia, projektovú dokumentáciu a posudky statika. Zaistíme súlad s platnými predpismi a normami.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/container_icon.svg",
@@ -88,7 +86,7 @@ export default function BuranieStienPriecokPage() {
         title: "Špecializované vybavenie",
         description:
           "Moderné búracie nástroje a ochranné pomôcky pre efektívnu a bezpečnú prácu. Máme vybavenie pre všetky typy stavebných materiálov.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
     ],
   };
@@ -125,7 +123,6 @@ export default function BuranieStienPriecokPage() {
           ];
   return (
     <main className="bg-white">
-      {/* Mascot preload — desktop + mobile */}
       <link rel="preload"
         as="image"
         href="/images/mascot/buranie-mascot.svg"
@@ -135,7 +132,6 @@ export default function BuranieStienPriecokPage() {
         href="/images/mascot/buranie-mascot.svg"
         media="(max-width: 1023px)" fetchPriority="high" />
 
-      {/* Hero — desktop (LabHero) */}
       <div className="hidden lg:block">
         <LabHero
           narrowForm
@@ -149,7 +145,6 @@ export default function BuranieStienPriecokPage() {
           desktopMascotDynamicHeight
         />
       </div>
-      {/* Hero — mobile */}
       <div className="lg:hidden">
         <Hero
           title={heroData.title}
@@ -165,25 +160,20 @@ export default function BuranieStienPriecokPage() {
         />
       </div>
 
-      {/* Clients section */}
       <div>
         <Clients />
       </div>
 
-      {/* Google Reviews section */}
       <div>
         <GoogleReviews />
       </div>
 
-      {/* Ako to funguje section */}
       <HowItWorks />
 
-            {/* Reviews section */}
       <div>
         <Reviews showHeadline={true} />
       </div>
 
-      {/* Features section */}
       <div>
         <Features
           title={featuresData.title}
@@ -192,17 +182,14 @@ export default function BuranieStienPriecokPage() {
         />
       </div>
 
-      {/* Instagram Feed section */}
       <div>
         <InstagramFeed />
       </div>
 
-      {/* Google Reviews section */}
       <div>
         <GoogleReviews showReviewsShowcase={false} />
       </div>
 
-      {/* FAQ section */}
       <div>
         <FAQ
           title="Často kladené otázky o búraní stien a priečok"
@@ -211,7 +198,6 @@ export default function BuranieStienPriecokPage() {
       </div>
       <FAQJsonLd items={faqItems} />
 
-      {/* CTA section */}
       <div>
         <CTA
           title="Potrebujete odborne vybúrať stenu alebo priečku?"
@@ -226,7 +212,12 @@ export default function BuranieStienPriecokPage() {
 
       <RelatedServices
         title="Súvisiace služby"
-        services={[{"title":"Búracie a demolačné práce","description":"Komplexné búracie práce pre byty a kancelársie.","href":"/buracie-demolacne-prace","icon":"/icons/crane_icon.svg"},{"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},{"title":"Hodinový manžel","description":"Drobné opravy, inštalácie a domáce práce.","href":"/hodinovy-manzel-majster","icon":"/icons/repair_icon.svg"},{"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"}]}
+        services={[
+          {"title":"Búracie práce","description":"Komplexné búracie práce pre byty a kancelárie.","href":"/buracie-prace","icon":"/icons/crane_icon.svg"},
+          {"title":"Búranie domov a budov","description":"Demolácia domov, garáží a hospodárskych stavieb.","href":"/buracie-prace/buranie-demolacia-domov","icon":"/icons/wrecking_ball_icon.svg"},
+          {"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},
+          {"title":"Montáž nábytku","description":"Profesionálna montáž a demontáž nábytku.","href":"/montaz-nabytku","icon":"/icons/wrench_icon.svg"},
+        ]}
       />
     </main>
   );

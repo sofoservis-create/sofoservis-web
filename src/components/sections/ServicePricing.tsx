@@ -61,7 +61,7 @@ const allCardsSk: PricingCard[] = [
   {
     key: "buracie-prace",
     title: "Búracie a demolačné práce",
-    href: "/buracie-demolacne-prace",
+    href: "/buracie-prace",
     fromPrice: "od 15 €/m²",
     icon: "/icons/hammer_icon.svg",
     iconAlt: "Búracie práce",

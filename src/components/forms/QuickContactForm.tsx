@@ -168,15 +168,15 @@ const PLACEHOLDER_MAP: Record<string, { sk: string; en: string }> = {
     en: "E.g. demolition of partition walls and tiles...",
   },
   // SK missing routes
-  "/buranie-stien-priecok": {
+  "/buracie-prace/buranie-stien-priecok": {
     sk: "Napr. búranie priečky medzi izbami, 3-izbový byt...",
     en: "E.g. demolition of a partition wall between rooms, 3-bedroom apartment...",
   },
-  "/buracie-demolacne-prace": {
+  "/buracie-prace": {
     sk: "Napr. búracie práce pri rekonštrukcii bytu...",
     en: "E.g. demolition works during apartment renovation...",
   },
-  "/buranie-demolacia-domov-bytov": {
+  "/buracie-prace/buranie-demolacia-domov": {
     sk: "Napr. demolácia rodinného domu alebo bytu...",
     en: "E.g. demolition of a family house or apartment...",
   },

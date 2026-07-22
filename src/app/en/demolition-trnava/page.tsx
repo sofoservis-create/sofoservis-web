@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-trnava",
     languages: {
-      sk: "https://www.sofoservis.sk/buracie-demolacne-prace/trnava",
+      sk: "https://www.sofoservis.sk/buracie-prace",
       en: "https://www.sofoservis.sk/en/demolition-trnava",
-      "x-default": "https://www.sofoservis.sk/buracie-demolacne-prace/trnava",
+      "x-default": "https://www.sofoservis.sk/buracie-prace",
       },
   },
 };

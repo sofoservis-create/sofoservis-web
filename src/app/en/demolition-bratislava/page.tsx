@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-bratislava",
     languages: {
-      sk: "https://www.sofoservis.sk/buracie-demolacne-prace/bratislava",
+      sk: "https://www.sofoservis.sk/buracie-prace",
       en: "https://www.sofoservis.sk/en/demolition-bratislava",
-      "x-default": "https://www.sofoservis.sk/buracie-demolacne-prace/bratislava",
+      "x-default": "https://www.sofoservis.sk/buracie-prace",
       },
   },
 };

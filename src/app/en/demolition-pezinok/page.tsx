@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/demolition-pezinok",
     languages: {
-      sk: "https://www.sofoservis.sk/buracie-demolacne-prace/pezinok",
+      sk: "https://www.sofoservis.sk/buracie-prace",
       en: "https://www.sofoservis.sk/en/demolition-pezinok",
-      "x-default": "https://www.sofoservis.sk/buracie-demolacne-prace/pezinok",
+      "x-default": "https://www.sofoservis.sk/buracie-prace",
       },
   },
 };

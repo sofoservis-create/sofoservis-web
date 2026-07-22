@@ -38,8 +38,8 @@ const SERVICE_MAPPING: Record<string, ServiceData> = {
     serviceDescription: "Sťahovanie do zahraničia a zo zahraničia na Slovensko",
     serviceType: "InternationalMovingService",
   },
-  "/buracie-demolacne-prace": {
-    serviceName: "Búracie a demolačné práce",
+  "/buracie-prace": {
+    serviceName: "Búracie práce",
     serviceDescription:
       "Profesionálne búranie a demolácia objektov s povoleniami a odvozom sute",
     serviceType: "DemolitionService",
@@ -102,14 +102,14 @@ const SERVICE_MAPPING: Record<string, ServiceData> = {
     serviceDescription: "Profesionálny odvoz a ekologická likvidácia stavebného odpadu",
     serviceType: "WasteRemovalService",
   },
-  "/buranie-stien-priecok": {
+  "/buracie-prace/buranie-stien-priecok": {
     serviceName: "Búranie stien a priečok",
     serviceDescription: "Búranie vnútorných stien a priečok s odvozom materiálu",
     serviceType: "DemolitionService",
   },
-  "/buranie-demolacia-domov-bytov": {
-    serviceName: "Búranie a demolácia domov a bytov",
-    serviceDescription: "Kompletná demolácia rodinných domov a bytových jednotiek",
+  "/buracie-prace/buranie-demolacia-domov": {
+    serviceName: "Búranie a demolácia domov a budov",
+    serviceDescription: "Kompletná demolácia rodinných domov a budov",
     serviceType: "DemolitionService",
   },
   "/vypratavanie/cistenie-vypratavanie-pozemkov": {
@@ -296,7 +296,7 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Vypratávanie bytov a domov", url: `${baseUrl}/vypratavanie/vypratavanie-bytov-domov` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Montáž nábytku", url: `${baseUrl}/montaz-nabytku` } },
             { "@type": "Offer", itemOffered: { "@type": "Service", name: "Hodinový manžel", url: `${baseUrl}/hodinovy-manzel-majster` } },
-            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Búracie a demolačné práce", url: `${baseUrl}/buracie-demolacne-prace` } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Búracie práce", url: `${baseUrl}/buracie-prace` } },
           ],
         },
       });

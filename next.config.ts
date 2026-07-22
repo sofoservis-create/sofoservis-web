@@ -828,6 +828,21 @@ const nextConfig = {
       { source: "/vypratavanie-kancelarii", destination: "/vypratavanie", permanent: true },
       { source: "/vypratavanie-po-rekonstrukcii", destination: "/vypratavanie", permanent: true },
       { source: "/vypratavanie-pozostalosti", destination: "/vypratavanie", permanent: true },
+
+      // === URL RESTRUCTURE (júl 2026): /buracie-prace/* nested tree ===
+      // Staré flat URLs → nová hierarchia /buracie-prace/*
+      { source: "/buracie-demolacne-prace", destination: "/buracie-prace", permanent: true },
+      { source: "/buracie-demolacne-prace/bratislava", destination: "/buracie-prace", permanent: true },
+      { source: "/buracie-demolacne-prace/nitra", destination: "/buracie-prace", permanent: true },
+      { source: "/buracie-demolacne-prace/pezinok", destination: "/buracie-prace", permanent: true },
+      { source: "/buracie-demolacne-prace/trnava", destination: "/buracie-prace", permanent: true },
+      { source: "/buranie-demolacia-domov-bytov", destination: "/buracie-prace/buranie-demolacia-domov", permanent: true },
+      { source: "/buranie-stien-priecok", destination: "/buracie-prace/buranie-stien-priecok", permanent: true },
+
+      // === Hodinový manžel — zrušené mestské podstránky (júl 2026) ===
+      { source: "/hodinovy-manzel-majster/galanta", destination: "/hodinovy-manzel-majster", permanent: true },
+      { source: "/hodinovy-manzel-majster/piestany", destination: "/hodinovy-manzel-majster", permanent: true },
+      { source: "/hodinovy-manzel-majster/trnava", destination: "/hodinovy-manzel-majster", permanent: true },
     ];
   },
 };

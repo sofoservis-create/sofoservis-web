@@ -90,7 +90,7 @@ export default function StahovanieTrnavaPage() {
         title: "Búracie a demolačné práce v Trnave",
         description:
           "Ponúkame profesionálne búracie a demolačné práce v Trnave. Špecializujeme sa na búranie stien, priečok a kompletnú demoláciu budov s následným odvozom sute.",
-        link: "/buracie-demolacne-prace", // Real URL from project
+        link: "/buracie-prace",
       },
       {
         image: "/icons/container_icon.svg", // Perfect for construction waste removal

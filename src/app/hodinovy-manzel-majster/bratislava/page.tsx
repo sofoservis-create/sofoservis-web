@@ -16,9 +16,9 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Hodinový manžel Bratislava — opravy, montáž | Sofoservis",
+  title: "Hodinový manžel Bratislava — opravy, montáž, údržba | Sofoservis",
   description:
-    "Profesionálny hodinový manžel v Bratislave — montáž nábytku, vešanie obrazov, drobné opravy ✅ Od 25€/hod ✅ Dostupný do 24h",
+    "Profesionálny hodinový manžel v Bratislave od 25€/hod ✅ Montáž nábytku, vešanie obrazov, drobné opravy ✅ Dostupný do 24 hodín",
   alternates: {
     canonical: "https://www.sofoservis.sk/hodinovy-manzel-majster/bratislava",
     languages: {
@@ -90,8 +90,8 @@ export default function HodinovyManzelMajsterBratislavaPage() {
       <div className="hidden lg:block">
         <LabHero
           narrowForm
-          title="Hodinový manžel v Bratislave"
-          description="Profesionálne služby hodinového manžela v Bratislave a okolí. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
+          title="Hodinový manžel Bratislava"
+          description="Profesionálne služby hodinového manžela v Bratislave od 25€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
           formTitle="Získajte cenovú ponuku"
           formSubtitle="Ozveme sa vám do 30 minút"
           benefits={[]}
@@ -105,8 +105,8 @@ export default function HodinovyManzelMajsterBratislavaPage() {
       </div>
       <div className="lg:hidden">
         <Hero
-          title="Hodinový manžel v Bratislave"
-          description="Profesionálne služby hodinového manžela v Bratislave a okolí. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
+          title="Hodinový manžel Bratislava"
+          description="Profesionálne služby hodinového manžela v Bratislave od 25€/hod. Opravy, montáže a údržba vašej domácnosti rýchlo, kvalitne a za férovú cenu."
           formTitle="Získajte cenovú ponuku"
           formSubtitle="Ozveme sa vám do 30 minút"
           benefits={[]}

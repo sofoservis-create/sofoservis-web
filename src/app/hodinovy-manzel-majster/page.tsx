@@ -17,9 +17,9 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Hodinový manžel, majster a kutil | Sofoservis",
+  title: "Hodinový manžel a majster — Bratislava a okolie | Sofoservis",
   description:
-    "Profesionálne služby hodinového manžela od 25€/hod. Opravy, skladanie a údržba bytov a domov. Rýchlo, spoľahlivo. Kontaktujte nás ešte dnes!",
+    "Profesionálne služby hodinového manžela od 25€/hod v Bratislave a okolí ✅ Montáž nábytku, opravy a údržba domácnosti ✅ Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/hodinovy-manzel-majster",
       languages: {
@@ -31,9 +31,9 @@ export const metadata = {
   keywords:
     "hodinový manžel, hodinový majster, domáce opravy, údržba bytu, drobné opravy v domácnosti, montáž nábytku, oprava kvapkajúceho kohútika, výmena batérie, drobné stavebné práce, vešanie obrazov, inštalácia svietidiel, hodinový manžel bratislava, hodinový manžel cena",
   openGraph: {
-    title: "Hodinový manžel, majster a kutil | Sofoservis",
+    title: "Hodinový manžel a majster — Bratislava a okolie | Sofoservis",
     description:
-      "Profesionálne služby hodinového manžela od 25€/hod. Opravy, skladanie a údržba bytov a domov.",
+      "Profesionálne služby hodinového manžela od 25€/hod v Bratislave a okolí. Montáž nábytku, opravy a údržba domácnosti.",
     url: "https://www.sofoservis.sk/hodinovy-manzel-majster",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -45,15 +45,15 @@ export const metadata = {
 const hodinyManzealLocations = [
   { name: "Bratislava", href: "/hodinovy-manzel-majster/bratislava" },
   { name: "Senec" },
-  { name: "Trnava", href: "/hodinovy-manzel-majster/trnava" },
+  { name: "Trnava" },
   { name: "Malacky" },
   { name: "Pezinok" },
   { name: "Skalica" },
   { name: "Senica" },
-  { name: "Piešťany", href: "/hodinovy-manzel-majster/piestany" },
+  { name: "Piešťany" },
   { name: "Hlohovec" },
   { name: "Dunajská Streda" },
-  { name: "Galanta", href: "/hodinovy-manzel-majster/galanta" },
+  { name: "Galanta" },
 ];
 
 const faqSchemaItems = [
@@ -77,9 +77,9 @@ const faqSchemaItems = [
 export default function HodinovyManzelMajsterPage() {
   // Custom data for Hero section
   const heroData = {
-    title: "Hodinový manžel a majster",
+    title: "Hodinový manžel a majster v Bratislave",
     description:
-      "Profesionálne služby hodinového manžela od 25€/hod. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
+      "Profesionálne služby hodinového manžela od 25€/hod v Bratislave a okolí. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",

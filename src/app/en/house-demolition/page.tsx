@@ -24,9 +24,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/house-demolition",
     languages: {
-      sk: "https://www.sofoservis.sk/buranie-demolacia-domov-bytov",
+      sk: "https://www.sofoservis.sk/buracie-prace/buranie-demolacia-domov",
       en: "https://www.sofoservis.sk/en/house-demolition",
-      "x-default": "https://www.sofoservis.sk/buranie-demolacia-domov-bytov",
+      "x-default": "https://www.sofoservis.sk/buracie-prace/buranie-demolacia-domov",
     },
   },
   openGraph: {

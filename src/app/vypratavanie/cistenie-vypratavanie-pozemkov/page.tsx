@@ -79,7 +79,7 @@ export default function CisteniePozemkovPage() {
         title: "Búranie a demolácia",
         description:
           "Bouranie starých stavieb, altánkov, garáží alebo iných konštrukcií na pozemku. Kompletná demolácia s odvozom materiálu.",
-        link: "/buranie-demolacia-domov-bytov",
+        link: "/buracie-prace/buranie-demolacia-domov",
       },
       {
         image: "/icons/house_icon.svg",
@@ -222,7 +222,7 @@ export default function CisteniePozemkovPage() {
           {"title":"Vypratávanie bytov a domov","description":"Kompletné vypratanie bytu alebo domu.","href":"/vypratavanie/vypratavanie-bytov-domov","icon":"/icons/vypratavanie_icon.svg"},
           {"title":"Vypratávanie pivníc a garáží","description":"Rýchle vypratanie pivníc, kobiek a garáží.","href":"/vypratavanie/vypratavanie-pivnic-a-garazi","icon":"/icons/house_icon.svg"},
           {"title":"Odvoz stavebného odpadu","description":"Rýchly odvoz suťa, podláh a stavebného odpadu.","href":"/vypratavanie/odvoz-likvidacia-stavebneho-odpadu","icon":"/icons/recycle_icon.svg"},
-          {"title":"Búranie a demolácia","description":"Profesionálne búranie stien, predelov a objektov.","href":"/buranie-demolacia-domov-bytov","icon":"/icons/crane_icon.svg"}
+          {"title":"Búranie a demolácia","description":"Profesionálne búranie stien, predelov a objektov.","href":"/buracie-prace","icon":"/icons/crane_icon.svg"}
         ]}
       />
     </main>
