@@ -284,7 +284,7 @@ export default function HeavyLoadsMovingPage() {
           title="Specialist Heavy Item Moving Services"
           services={[
             { title: "Piano & Grand Piano Moving", description: "Specialist transport of pianos, uprights and grands.", href: "/en/piano-moving", icon: "/icons/crane_icon.svg" },
-            { title: "Upright Piano Moving", description: "Dedicated page for upright piano (pianino) moving.", href: "/en/upright-piano-moving", icon: "/icons/crane_icon.svg" },
+            { title: "Upright Piano Moving", description: "Dedicated page for upright piano (pianino) moving.", href: "/en/piano-moving", icon: "/icons/crane_icon.svg" },
             { title: "Safe & Vault Moving", description: "Professional moving of safes and vaults of all weights.", href: "/en/safe-moving", icon: "/icons/safe_icon.svg" },
             { title: "Industrial Machinery Moving", description: "CNC machines, production lines, ATMs and more.", href: "/en/machinery-moving", icon: "/icons/heavy_machinery_icon.svg" },
           ]}

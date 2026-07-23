@@ -32,7 +32,7 @@ const allCardsSk: PricingCard[] = [
   {
     key: "vypratavanie",
     title: "Vypratávanie bytov a priestorov",
-    href: "/vypratavanie-bratislava",
+    href: "/vypratavanie/vypratavanie-bytov-domov/bratislava",
     fromPrice: "od 60 €",
     icon: "/icons/vypratavanie_icon.svg",
     iconAlt: "Vypratávanie",

@@ -74,7 +74,7 @@ export default function SamorinPage() {
         title: "Preprava nábytku v Šamoríne",
         description:
           "Bezpečná preprava nábytku a ťažkých predmetov v Šamoríne. Používame špecializované techniki a zariadenia pre bezpečné manipulovanie s vašimi cennými kusmi.",
-        link: "/stahovanie-preprava-nabytku", // Real URL from project
+        link: "/stahovanie", // Real URL from project
       },
       {
         image: "/icons/globe_icon.svg", // Perfect for international moving

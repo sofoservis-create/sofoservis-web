@@ -234,7 +234,7 @@ export default function PianoMovingPage() {
           {
             title: "Upright Piano Moving",
             description: "Dedicated page for upright piano (pianino) moving.",
-            href: "/en/upright-piano-moving",
+            href: "/en/piano-moving",
             icon: "/icons/crane_icon.svg",
           },
           {

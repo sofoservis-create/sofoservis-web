@@ -172,7 +172,7 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
         services={[
           { title: "Búracie práce Bratislava", description: "Búranie priečok a interiérov.", href: "/buracie-prace", icon: "/icons/wrecking_ball_icon.svg" },
           { title: "Odvoz odpadu", description: "Kompletné služby odvozu.", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
-          { title: "Vypratávanie Bratislava", description: "Odvoz starého nábytku.", href: "/vypratavanie-bratislava", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie Bratislava", description: "Odvoz starého nábytku.", href: "/vypratavanie/vypratavanie-bytov-domov/bratislava", icon: "/icons/vypratavanie_icon.svg" },
         ]}
       />
     </main>

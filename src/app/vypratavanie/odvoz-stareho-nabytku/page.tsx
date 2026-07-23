@@ -93,7 +93,7 @@ export default function OdvozStarehoNabytku() {
         title: "Búranie stien a predelov",
         description:
           "Búrame priečky, sádrokartónové steny a iné konštrukcie v rámci rekonštrukcie. Skúsený tím s potrebným vybavením.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
     ],
   };

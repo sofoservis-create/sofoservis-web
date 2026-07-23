@@ -85,7 +85,7 @@ export default function Footer() {
           href: "/stahovanie/stahovanie-tazkych-bremien",
           label: "Sťahovanie ťažkých bremien",
         },
-        { href: "/stahovanie-preprava-nabytku", label: "Sťahovanie nábytku" },
+        { href: "/stahovanie", label: "Sťahovanie nábytku" },
       ],
     },
     en: {

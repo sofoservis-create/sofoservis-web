@@ -136,14 +136,14 @@ export default function Home() {
               title: "Sťahovanie bytov a domov",
               description:
                 "Sťahujeme byty, domy aj väčšie nehnuteľnosti po celom Slovensku. Rýchlo, bez stresu a s dôrazom na bezpečnosť vašich vecí.",
-              link: "/stahovanie-bytov-domov",
+              link: "/stahovanie/stahovanie-bytov-domov",
             },
             {
               image: "/icons/briefcase_icon.svg",
               title: "Sťahovanie kancelárií a firiem",
               description:
                 "Firemné sťahovanie počas noci alebo víkendu — minimalizujeme prestoje a postaráme sa o celú organizáciu.",
-              link: "/stahovanie-kancelarii-firiem",
+              link: "/stahovanie/stahovanie-kancelarii-firiem",
             },
             {
               image: "/icons/house_icon.svg",

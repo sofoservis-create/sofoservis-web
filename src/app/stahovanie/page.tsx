@@ -122,28 +122,28 @@ export default function StahovaniePage() {
         title: "Sťahovanie klavíra a pianína",
         description:
           "Špeciálna technika a skúsení pracovníci pre bezpečné sťahovanie klavírov a pianín bez rizika poškodenia nástroja.",
-        link: "/stahovanie-klavira",
+        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/safe_icon.svg",
         title: "Sťahovanie trezorov",
         description:
           "Bezpečný presun trezorov a sejfov akejkoľvek veľkosti. Disponujeme potrebnou technikou aj skúsenosťami.",
-        link: "/stahovanie-trezorov",
+        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/heavy_machinery_icon.svg",
         title: "Sťahovanie strojov a zariadení",
         description:
           "Presun priemyselných strojov, výrobných zariadení a techniky. Komplexné riešenie vrátane odbornej manipulácie.",
-        link: "/stahovanie-strojov-zariadeni",
+        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Príprava nábytku na sťahovanie",
         description:
           "Profesionálna demontáž nábytku pred sťahovaním a opätovná montáž v novom domove. Rýchlo a bez poškodenia.",
-        link: "/stahovanie-preprava-nabytku",
+        link: "/stahovanie",
       },
     ],
   };

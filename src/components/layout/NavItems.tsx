@@ -158,7 +158,7 @@ export const navCategoriesEN: NavCategory[] = [
           subLinksAllLabel: "→ All heavy load services",
           subLinks: [
             { href: "/en/piano-moving", label: "Piano Moving" },
-            { href: "/en/upright-piano-moving", label: "Upright Piano Moving" },
+            { href: "/en/piano-moving", label: "Upright Piano Moving" },
             { href: "/en/machinery-moving", label: "Machinery Moving" },
             { href: "/en/safe-moving", label: "Safe Moving" },
           ],

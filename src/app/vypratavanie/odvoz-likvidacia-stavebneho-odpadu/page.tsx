@@ -79,7 +79,7 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
         title: "Búranie stien a odvoz",
         description:
           "Kombinácia búracích prác a odvozu odpadu na jednom mieste. Zbúrame priečky a odveziéme všetok materiál v jednej zákazke.",
-        link: "/buranie-stien-priecok",
+        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/house_icon.svg",
@@ -215,7 +215,7 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          {"title":"Búranie stien a priečok","description":"Búranie sadrokartónu, murovaných priečok a stien.","href":"/buranie-stien-priecok","icon":"/icons/crane_icon.svg"},
+          {"title":"Búranie stien a priečok","description":"Búranie sadrokartónu, murovaných priečok a stien.","href":"/buracie-prace/buranie-stien-priecok","icon":"/icons/crane_icon.svg"},
           {"title":"Vypratávanie bytov a domov","description":"Kompletné vypratanie bytu alebo domu.","href":"/vypratavanie/vypratavanie-bytov-domov","icon":"/icons/vypratavanie_icon.svg"},
           {"title":"Odvoz starého nábytku","description":"Odvoz a ekologická likvidácia starého nábytku.","href":"/vypratavanie/odvoz-stareho-nabytku","icon":"/icons/furniture_icon.svg"},
           {"title":"Likvidácia nebezpečného odpadu","description":"Ekologická likvidácia starých spotrebičov a chémie.","href":"/vypratavanie/likvidacia-nebezpecneho-odpadu","icon":"/icons/recycle_icon.svg"}

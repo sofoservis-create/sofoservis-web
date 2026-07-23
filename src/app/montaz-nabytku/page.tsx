@@ -93,14 +93,14 @@ export default function MontazNabytkuPage() {
         title: "Sťahovanie nábytku",
         description:
           "Profesionálna demontáž nábytku pred sťahovaním a následná montáž na novom mieste. Bezpečná preprava a inštalácia.",
-        link: "/stahovanie-preprava-nabytku",
+        link: "/stahovanie",
       },
       {
         image: "/icons/truck_icon.svg", // For moving services
         title: "Sťahovanie bytov a domov",
         description:
           "Kompletné sťahovacie služby vrátane demontáže a montáže nábytku. Presťahujeme váš domov s kompletným servisom.",
-        link: "/stahovanie-bytov-domov",
+        link: "/stahovanie/stahovanie-bytov-domov",
       },
       {
         image: "/icons/curtain_icon.svg", // NEW ICON - For curtains and blinds

@@ -168,7 +168,7 @@ export default function OdvozStavebnehoOdpaduTrnavaPage() {
         title="Súvisiace služby"
         services={[
           { title: "Odvoz odpadu", description: "Kompletné služby odvozu.", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", icon: "/icons/truck_icon.svg" },
-          { title: "Vypratávanie Trnava", description: "Odvoz starého nábytku.", href: "/vypratavanie-trnava", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Vypratávanie Trnava", description: "Odvoz starého nábytku.", href: "/vypratavanie", icon: "/icons/vypratavanie_icon.svg" },
         ]}
       />
     </main>

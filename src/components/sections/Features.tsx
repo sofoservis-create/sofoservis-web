@@ -33,42 +33,42 @@ export default function Features({
       title: "Komplexné sťahovacie služby",
       description:
         "Nech sa vaša cesta z bodu A do B uskutoční bez stresu! S našimi službami sťahovanie premeníte na hladký a bezpečný zážitok.",
-      link: "/stahovanie-bytov-domov",
+      link: "/stahovanie/stahovanie-bytov-domov",
     },
     {
       image: "/icons/calendar_icon.svg",
       title: "Sťahovanie 6 dní v týždni",
       description:
         "Jediná sťahovacia spoločnosť v Bratislave, ktorá vám ponúka flexibilitu kedykoľvek a kdekoľvek. Sťahujeme bez ohľadu na rozsah – od malých batožín po veľké náklady, vždy s garantovanou bezpečnosťou.",
-      link: "/stahovanie-kancelarii-firiem",
+      link: "/stahovanie/stahovanie-kancelarii-firiem",
     },
     {
       image: "/icons/house_icon.svg",
       title: "Sťahovanie pre domácnosti v Bratislave",
       description:
         "Špecializujeme sa na lokálne sťahovanie po Bratislave a celom Slovensku. Presťahujeme vás do ktoréhoľvek bratislavského okresu, ako aj do okolitých regiónov (Trnava, Senec, Pezinok a ďalšie).",
-      link: "/stahovanie-preprava-nabytku",
+      link: "/stahovanie",
     },
     {
       image: "/icons/globe_icon.svg",
       title: "Diaľkové sťahovanie",
       description:
         "Presťahujeme vás z Bratislavy kamkoľvek v Európe – do Prahy, Viedne, Berlína či iných miest. S dôrazom na presné termíny a bezpečné balenie vám pomôžeme zabydlieť sa v novom dome čo najrýchlejšie.",
-      link: "/medzinarodne-stahovanie",
+      link: "/stahovanie/medzinarodne-stahovanie",
     },
     {
       image: "/icons/briefcase_icon.svg",
       title: "Firemné a kancelárske sťahovanie",
       description:
         "Minimalizujeme prestoje vašej firmy! Sťahujeme počas noci, víkendov či sviatkov a postaráme sa o kompletnú organizáciu – od profesionálneho balenia až po rozbalenie. Váš tím bude druhý deň pripravený na prácu.",
-      link: "/stahovanie-kancelarii-firiem",
+      link: "/stahovanie/stahovanie-kancelarii-firiem",
     },
     {
       image: "/icons/packing_box_icon.svg",
       title: "Sťahovanie malých nákladov",
       description:
         "Potrebujete presťahovať pár vecí alebo opustiť malý byt? S našou službou sťahovanie malých nákladov nemusíte zdvihnúť ani prst. Postaráme sa o všetko!",
-      link: "/stahovanie-tazkych-bremien",
+      link: "/stahovanie/stahovanie-tazkych-bremien",
     },
   ],
   showCallToAction = true,

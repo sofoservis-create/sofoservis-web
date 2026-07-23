@@ -18,18 +18,18 @@ interface ServiceAreasProps {
 
 const defaultAreas: AreaItem[] = [
   { name: "Bratislava", href: "/stahovanie/stahovanie-bratislava" },
-  { name: "Senec", href: "/stahovanie-senec" },
-  { name: "Pezinok", href: "/stahovanie-pezinok" },
-  { name: "Šamorín", href: "/stahovanie-samorin" },
-  { name: "Malacky", href: "/stahovanie-malacky" },
-  { name: "Stupava", href: "/stahovanie-stupava" },
-  { name: "Trnava", href: "/stahovanie-trnava" },
-  { name: "Senica", href: "/stahovanie-senica" },
-  { name: "Nitra", href: "/stahovanie-nitra" },
-  { name: "Piešťany", href: "/stahovanie-piestany" },
-  { name: "Galanta", href: "/stahovanie-galanta" },
-  { name: "Komárno", href: "/stahovanie-komarno" },
-  { name: "Šaľa", href: "/stahovanie-sala" },
+  { name: "Senec", href: "/stahovanie/stahovanie-senec" },
+  { name: "Pezinok", href: "/stahovanie/stahovanie-pezinok" },
+  { name: "Šamorín", href: "/stahovanie/stahovanie-samorin" },
+  { name: "Malacky", href: "/stahovanie/stahovanie-malacky" },
+  { name: "Stupava", href: "/stahovanie/stahovanie-stupava" },
+  { name: "Trnava", href: "/stahovanie/stahovanie-trnava" },
+  { name: "Senica", href: "/stahovanie/stahovanie-senica" },
+  { name: "Nitra", href: "/stahovanie/stahovanie-nitra" },
+  { name: "Piešťany", href: "/stahovanie/stahovanie-piestany" },
+  { name: "Galanta", href: "/stahovanie/stahovanie-galanta" },
+  { name: "Komárno", href: "/stahovanie/stahovanie-komarno" },
+  { name: "Šaľa", href: "/stahovanie/stahovanie-sala" },
 ];
 
 export default function ServiceAreas({

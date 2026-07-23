@@ -65,7 +65,7 @@ export default function StahovanieSenicaPage() {
         title: "Preprava nábytku v Senici",
         description:
           "Bezpečná preprava nábytku a ťažkých predmetov v Senici. Používame špecializované techniki a zariadenia pre bezpečné manipulovanie s vašimi cennými kusmi.",
-        link: "/stahovanie-preprava-nabytku", // Real URL from project
+        link: "/stahovanie", // Real URL from project
       },
       {
         image: "/icons/globe_icon.svg", // Perfect for international moving
