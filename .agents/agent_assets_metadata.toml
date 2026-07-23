@@ -17,3 +17,9 @@ id = "FbjUQ4hWqQGqq-JxtjV1P"
 uri = "file://screenshots/mascot-side-by-side-labeled.jpg"
 type = "image"
 title = "Cennik vs Homepage – mascot side-by-side"
+
+[[outputs]]
+id = "6eHWxdkHa3E0JbznGLK34"
+uri = "file://audit/AUDIT-sofoservis-2026-07-22.md"
+type = "text"
+title = "AUDIT sofoservis.sk — 22. júl 2026"
