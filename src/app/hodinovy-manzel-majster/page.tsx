@@ -13,6 +13,7 @@ import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
@@ -177,6 +178,9 @@ export default function HodinovyManzelMajsterPage() {
 
       {/* Ako to funguje section */}
       <HowItWorks />
+
+      {/* Cenník section */}
+      <ServicePriceTable variant="handyman" title="Cenník hodinového manžela" />
 
       {/* Service Pricing section */}
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku", "montaz-kuchyne"]} />

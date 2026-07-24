@@ -5,7 +5,8 @@ export type PriceTableVariant =
   | "stahovanie"
   | "vypratavanie"
   | "montaz-nabytku"
-  | "montaz-kuchyne";
+  | "montaz-kuchyne"
+  | "handyman";
 
 interface PriceItem {
   label: string;
@@ -47,6 +48,12 @@ const tables: Record<PriceTableVariant, PriceItem[]> = {
   "montaz-kuchyne": [
     { label: "Montáž", price: "od 120€/m" },
     { label: "Demontáž", price: "od 60€/m" },
+    { label: "Výjazd", price: "od 25€" },
+  ],
+  handyman: [
+    { label: "Obhliadka", price: "zadarmo" },
+    { label: "1 pracovník", price: "30€/hod" },
+    { label: "2 pracovníci", price: "60€/hod" },
     { label: "Výjazd", price: "od 25€" },
   ],
 };

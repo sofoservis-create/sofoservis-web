@@ -12,6 +12,7 @@ import LocationMap from "@/components/sections/LocationMap";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
 import ServicePricing from "@/components/sections/ServicePricing";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
@@ -109,6 +110,7 @@ export default function HodinovyManzelMajsterBratislavaPage() {
       <Clients />
       <GoogleReviews title="Recenzie našich klientov" />
       <Reviews showHeadline={true} />
+      <ServicePriceTable variant="handyman" title="Cenník hodinového manžela" />
       <ServicePricing filter={["hodinovy-manzel", "montaz-nabytku", "montaz-kuchyne"]} />
       <Features title="Čo všetko vybaví náš majster?" description="Široká škála služieb pre vašu domácnosť v Bratislave." features={features} />
       <LocationMap
