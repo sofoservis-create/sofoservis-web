@@ -15,9 +15,9 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Hodinový manžel Bratislava — opravy, montáž, údržba | Sofoservis",
+  title: "Hodinový manžel Bratislava - Domáci majster | Sofoservis",
   description:
-    "Profesionálny hodinový manžel v Bratislave od 30€/hod ✅ Montáž nábytku, vešanie obrazov, drobné opravy ✅ Dostupný do 24 hodín",
+    "Hodinový manžel v Bratislave vrátane Petržalky a Ružinova – montáž nábytku, vešanie, drobné opravy. Od 30 €/hod, dostupný do 24 hodín. Napíšte, čo treba.",
   alternates: {
     canonical: "https://www.sofoservis.sk/hodinovy-manzel-majster/bratislava",
     languages: {
@@ -38,7 +38,7 @@ export default function HodinovyManzelMajsterBratislavaPage() {
     {
       question: "Koľko stojí hodinový manžel v Bratislave?",
       answer:
-        "Cena začína od 25€ za hodinu práce. Minimálna objednávka je 1 hodina, následne účtujeme v 30-minútových intervaloch. Doprava v rámci Bratislavy je od 25€.",
+        "Cena začína od 30€/hod. Minimálna objednávka je 1 hodina, následne účtujeme v 30-minútových intervaloch. Doprava v rámci Bratislavy je od 25€.",
     },
     {
       question: "Ako rýchlo príde hodinový manžel v Bratislave?",

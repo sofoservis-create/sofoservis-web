@@ -39,7 +39,7 @@ export default function MontazNabytkuBratislavaPage() {
     {
       question: "Koľko stojí montáž nábytku v Bratislave?",
       answer:
-        "Cena práce je 25€ na hodinu na jedného pracovníka. Pri zložitejších kusoch ako sú veľké šatníkové skrine alebo kuchyne vám radi vypracujeme fixnú cenovú ponuku.",
+        "Cena práce je 30€/hod na jedného pracovníka. Pri zložitejších kusoch ako sú veľké šatníkové skrine alebo kuchyne vám radi vypracujeme fixnú cenovú ponuku.",
     },
     {
       question: "Montujete aj nábytok z IKEA (PAX, METOD)?",

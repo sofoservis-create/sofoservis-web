@@ -18,7 +18,7 @@ import TrustBadges from "@/components/sections/TrustBadges";
 export const metadata = {
   title: "Montáž a skladanie kuchynskej linky | Sofoservis",
   description:
-    "Profesionálna montáž kuchyne od 120€. Demontáž od 60€. Výjazd od 20€. Všetky typy kuchynských liniek. Kontaktujte nás ešte dnes!",
+    "Profesionálna montáž kuchyne od 120€/m. Demontáž od 60€/m. Výjazd od 25€. Všetky typy kuchynských liniek. Kontaktujte nás ešte dnes!",
   alternates: {
     canonical: "https://www.sofoservis.sk/montaz-kuchyne",
       languages: {
@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     title: "Montáž kuchýň a skladanie kuchyne | Sofoservis",
     description:
-      "Profesionálna montáž kuchyne od 120€/m. Demontáž od 60€/m. Výjazd od 20€. Všetky typy kuchynských liniek.",
+      "Profesionálna montáž kuchyne od 120€/m. Demontáž od 60€/m. Výjazd od 25€. Všetky typy kuchynských liniek.",
     url: "https://www.sofoservis.sk/montaz-kuchyne",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ const faqSchemaItems = [
   {
     question: "Aká je cena za montáž kuchyne?",
     answer:
-      "Montáž kuchyne stojí od 120€/bežný meter. Demontáž od 60€/m. Výjazd od 20€. Cena závisí od dĺžky kuchyne a zložitosti montáže.",
+      "Montáž kuchyne stojí od 120€/bežný meter. Demontáž od 60€/m. Výjazd od 25€. Cena závisí od dĺžky kuchyne a zložitosti montáže.",
   },
   {
     question: "Ako dlho trvá montáž kuchyne?",

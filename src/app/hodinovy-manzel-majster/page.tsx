@@ -16,9 +16,9 @@ import ServicePricing from "@/components/sections/ServicePricing";
 import TrustBadges from "@/components/sections/TrustBadges";
 
 export const metadata = {
-  title: "Hodinový manžel a majster — Bratislava a okolie | Sofoservis",
+  title: "Hodinový manžel - domáci majster | Sofoservis",
   description:
-    "Profesionálne služby hodinového manžela od 30€/hod v Bratislave a okolí ✅ Montáž nábytku, opravy a údržba domácnosti ✅ Kontaktujte nás ešte dnes!",
+    "Hodinový manžel a domáci majster od 30 €/hod – montáž nábytku, drobné opravy, vŕtanie aj voda. Prehľadný cenník a rýchly nástup. Objednajte si majstra.",
   alternates: {
     canonical: "https://www.sofoservis.sk/hodinovy-manzel-majster",
       languages: {
@@ -28,9 +28,9 @@ export const metadata = {
       },
   },
   openGraph: {
-    title: "Hodinový manžel a majster — Bratislava a okolie | Sofoservis",
+    title: "Hodinový manžel - domáci majster | Sofoservis",
     description:
-      "Profesionálne služby hodinového manžela od 30€/hod v Bratislave a okolí. Montáž nábytku, opravy a údržba domácnosti.",
+      "Hodinový manžel a domáci majster od 30 €/hod – montáž nábytku, drobné opravy, vŕtanie aj voda. Prehľadný cenník a rýchly nástup.",
     url: "https://www.sofoservis.sk/hodinovy-manzel-majster",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -73,7 +73,7 @@ const faqSchemaItems = [
 export default function HodinovyManzelMajsterPage() {
   // Custom data for Hero section
   const heroData = {
-    title: "Hodinový manžel a majster v Bratislave",
+    title: "Hodinový manžel a domáci majster",
     description:
       "Profesionálne služby hodinového manžela od 30€/hod v Bratislave a okolí. Rýchle a spoľahlivé opravy, montáže a údržba vo vašej domácnosti.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
