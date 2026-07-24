@@ -21,9 +21,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-nitra",
     languages: {
-      sk: "https://www.sofoservis.sk/odvoz-likvidacia-stavebneho-odpadu/nitra",
+      sk: "https://www.sofoservis.sk/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       en: "https://www.sofoservis.sk/en/construction-waste-removal-nitra",
-      "x-default": "https://www.sofoservis.sk/odvoz-likvidacia-stavebneho-odpadu/nitra",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
   },
 };

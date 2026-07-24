@@ -21,9 +21,9 @@ export const metadata = {
   alternates: {
     canonical: "https://www.sofoservis.sk/en/construction-waste-removal-hlohovec",
     languages: {
-      sk: "https://www.sofoservis.sk/odvoz-likvidacia-stavebneho-odpadu/hlohovec",
+      sk: "https://www.sofoservis.sk/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       en: "https://www.sofoservis.sk/en/construction-waste-removal-hlohovec",
-      "x-default": "https://www.sofoservis.sk/odvoz-likvidacia-stavebneho-odpadu/hlohovec",
+      "x-default": "https://www.sofoservis.sk/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
   },
 };

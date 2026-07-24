@@ -273,6 +273,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/hodinovy-manzel-majster/hlohovec",
+        destination: "/hodinovy-manzel-majster",
+        permanent: true,
+      },
+      {
         source: "/hodinovy-manzel-majster/nitra",
         destination: "/hodinovy-manzel-majster",
         permanent: true,
@@ -776,6 +781,14 @@ const nextConfig = {
       { source: "/cistenie-vypratavanie-pozemkov-nehnutelnosti", destination: "/vypratavanie/cistenie-vypratavanie-pozemkov", permanent: true },
       { source: "/vypratavanie-odvoz-stareho-nabytku", destination: "/vypratavanie/odvoz-stareho-nabytku", permanent: true },
       { source: "/odvoz-likvidacia-stavebneho-odpadu", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      // Migrácia city-clustra odvoz-likvidacia na nový strom + zrušenie 6 mestských podstránok
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/bratislava", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/galanta", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/nitra", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/senec", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/senica", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/trnava", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
+      { source: "/odvoz-likvidacia-stavebneho-odpadu/hlohovec", destination: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu", permanent: true },
       { source: "/likvidacia-nebezpecneho-odpadu-starych-spotrebicov", destination: "/vypratavanie/likvidacia-nebezpecneho-odpadu", permanent: true },
 
       // Section 2: 14 mestských podstránok vypratavanie-bytov-domov → nový slug
