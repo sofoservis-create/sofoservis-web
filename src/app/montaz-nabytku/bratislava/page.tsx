@@ -104,7 +104,7 @@ export default function MontazNabytkuBratislavaPage() {
         mobileMascotOffsetY={-45}
         mobileFormOffsetY={32}
         pillsVariant="stahovanie"
-        phoneNumber="421952044363"
+        phoneNumber="+421952044363"
       />
       <Clients />
       <GoogleReviews title="Recenzie našich klientov" />
