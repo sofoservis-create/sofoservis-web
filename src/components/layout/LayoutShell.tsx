@@ -7,6 +7,7 @@ import CookieConsent from "@/components/cookies/CookieConsent";
 import WhatsAppWidget from "@/components/widgets/WhatsAppWidget";
 import StickyMobileCta from "@/components/StickyMobileCta";
 import UTMCapture from "@/components/tracking/UTMCapture";
+import NimbataSwapKeeper from "@/components/tracking/NimbataSwapKeeper";
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -29,6 +30,7 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
         <CookieConsent />
       </div>
       <StickyMobileCta />
+      <NimbataSwapKeeper />
     </>
   );
 }

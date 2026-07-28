@@ -6,6 +6,7 @@ const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffec
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import QuickContactForm from "@/components/forms/QuickContactForm";
+import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 
 const MASCOT_ASPECT = 1080 / 1080;
 const GLOW_HALF_WIDTH = 271;
@@ -184,11 +185,7 @@ export default function Hero({
   // Determine phone number based on pathname (same logic as Navbar)
   const currentPhoneNumber =
     phoneNumber ||
-    (pathname?.includes("/montaz-nabytku") ||
-    pathname?.includes("/montaz-kuchyne") ||
-    pathname?.includes("/hodinovy-manzel-majster")
-      ? "0952 044 363"
-      : "0951 735 130");
+    (isNimbataExcludedPath(pathname) ? "0952 044 363" : "0951 735 130");
   return (
     <section
       className="relative pt-4 pb-6 md:pt-4 md:pb-8 lg:pt-40 bg-primary-900 overflow-hidden"

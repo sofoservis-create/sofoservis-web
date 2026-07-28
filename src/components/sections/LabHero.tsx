@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
+import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 
 interface LabHeroProps {
   title?: string;
@@ -304,11 +305,7 @@ export default function LabHero({
   // Determine phone number based on pathname (same logic as Navbar)
   const currentPhoneNumber =
     phoneNumber ||
-    (pathname?.includes("/montaz-nabytku") ||
-    pathname?.includes("/montaz-kuchyne") ||
-    pathname?.includes("/hodinovy-manzel-majster")
-      ? "0952 044 363"
-      : "0951 735 130");
+    (isNimbataExcludedPath(pathname) ? "0952 044 363" : "0951 735 130");
   const mobilePhoneCTAText = phoneCTAText ?? (lang === "en" ? "Call us" : "Zavolajte nám");
 
   const cleanPath = (pathname || "").replace(/^\/en/, "") || "/";
