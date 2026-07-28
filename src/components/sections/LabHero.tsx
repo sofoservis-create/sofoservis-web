@@ -705,7 +705,7 @@ export default function LabHero({
                 </a>
               </div>
 
-              <div className="flex flex-row items-center justify-center lg:justify-start gap-3">
+              <div className="hidden lg:flex flex-row items-center justify-center lg:justify-start gap-3">
                 <div className="flex -space-x-2 flex-shrink-0">
                   {[
                     { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka Sofoservis" },
@@ -804,6 +804,29 @@ export default function LabHero({
               {formSubtitle && <p className={`text-sm text-primary-900/80 ${narrowForm ? "mt-0.5" : ""}`}>{formSubtitle}</p>}
             </div>
 
+            {/* Trust pill — mobile only, sits inside the white card respecting rounded corners */}
+            <div className="lg:hidden flex flex-row items-center justify-center gap-3 px-4 pt-3 pb-2 border-b border-gray-100">
+              <div className="flex -space-x-2 flex-shrink-0">
+                {[
+                  { src: "/images/review-avatar-1.png", alt: t.avatarFemale },
+                  { src: "/images/review-avatar-2.png", alt: t.avatarMale },
+                  { src: "/images/review-avatar-3.png", alt: t.avatarFemale },
+                ].map((av, i) => (
+                  <div key={i} className={`w-8 h-8 rounded-full overflow-hidden ring-2 ring-white relative ${i === 0 ? 'z-30' : i === 1 ? 'z-20' : 'z-10'}`}>
+                    <Image src={av.src} alt={av.alt} width={32} height={32} className="w-full h-full object-cover" sizes="32px" />
+                  </div>
+                ))}
+              </div>
+              <div className="flex items-center gap-0.5">
+                {[1,2,3,4,5].map((i) => (
+                  <svg key={i} className="w-4 h-4 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              <span className="text-gray-600 text-sm whitespace-nowrap">{ratingText}</span>
+            </div>
+
             <div
               ref={formBodyRef}
               className={narrowForm ? "p-3 md:p-4" : "p-4 md:p-5"}
@@ -883,23 +906,6 @@ export default function LabHero({
                       required
                       className={`${inputClass} resize-none`}
                     />
-                  </div>
-
-                  {/* Social proof */}
-                  <div className="flex flex-row items-center justify-center gap-2 py-0.5">
-                    <div className="flex -space-x-1.5 flex-shrink-0">
-                      {[
-                        { src: "/images/review-avatar-1.png", alt: t.avatarFemale, z: "z-30" },
-                        { src: "/images/review-avatar-2.png", alt: t.avatarMale, z: "z-20" },
-                        { src: "/images/review-avatar-3.png", alt: t.avatarFemale, z: "z-10" },
-                      ].map((av, i) => (
-                        <div key={i} className={`w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative ${av.z}`}>
-                          <Image src={av.src} alt={av.alt} width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
-                        </div>
-                      ))}
-                    </div>
-                    <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
-                    <span className="text-gray-600 whitespace-nowrap text-[14px] leading-none">{t.ratingDefault}</span>
                   </div>
 
                   {/* Consent */}
