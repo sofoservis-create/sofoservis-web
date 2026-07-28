@@ -24,6 +24,7 @@ export default function WhatsAppWidget() {
   const label = isEnglish ? "We're Online" : "Sme Online";
 
   const [aboveBar, setAboveBar] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -39,6 +40,13 @@ export default function WhatsAppWidget() {
     };
   }, []);
 
+  useEffect(() => {
+    const check = () => setMenuOpen(document.body.classList.contains("mobile-menu-open"));
+    const observer = new MutationObserver(check);
+    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <a
       href={waUrl}
@@ -47,7 +55,7 @@ export default function WhatsAppWidget() {
       aria-label={label}
       className={`fixed right-5 z-[1000] flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
         aboveBar ? "bottom-[76px]" : "bottom-5"
-      }`}
+      } ${menuOpen ? "pointer-events-none opacity-0 translate-y-4" : ""}`}
       style={{ backgroundColor: "#4CAF72" }}
     >
       <svg
