@@ -105,10 +105,11 @@ export default function StickyMobileCta() {
         {/* Primary CTA — solid accent, arrow icon */}
         <Link
           href="/kontakt"
-          className="flex-1 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-4 rounded-xl text-sm font-bold whitespace-nowrap bg-accent-500 text-primary-900 transition-opacity hover:opacity-90"
+          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-bold whitespace-nowrap bg-accent-500 text-primary-900 transition-opacity hover:opacity-90"
         >
           Cenová ponuka
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 flex-shrink-0">
+          {/* Arrow hidden on very narrow screens (<360px) so the label never wraps */}
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 flex-shrink-0 hidden min-[360px]:block">
             <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
           </svg>
         </Link>
@@ -123,10 +124,21 @@ export default function StickyMobileCta() {
           onClick={() => {
             window.location.href = `tel:${BUSINESS.phone}`;
           }}
-          className="flex-none flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-4 rounded-xl text-sm font-bold whitespace-nowrap bg-white border-2 border-accent-500 text-primary-900 transition-colors hover:bg-accent-50"
+          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-bold whitespace-nowrap bg-white ring-2 ring-inset ring-accent-500 text-primary-900 transition-colors hover:bg-accent-50"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0">
-            <path fillRule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clipRule="evenodd" />
+          {/* Same outline phone icon as the mobile header (Navbar), accent colour */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-4 h-4 text-accent-500 flex-shrink-0"
+            aria-hidden="true"
+          >
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
           Zavolať
         </button>
