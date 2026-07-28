@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 export default function WhatsAppWidget() {
@@ -23,13 +23,31 @@ export default function WhatsAppWidget() {
   const waUrl = `https://wa.me/${phoneNumber}`;
   const label = isEnglish ? "We're Online" : "Sme Online";
 
+  const [aboveBar, setAboveBar] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const isMobile = window.innerWidth < 1024;
+      setAboveBar(isMobile && window.scrollY > 600);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    onScroll();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
   return (
     <a
       href={waUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="fixed bottom-5 right-5 z-[1000] flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-transform duration-200 hover:scale-105 hover:shadow-xl"
+      className={`fixed right-5 z-[1000] flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+        aboveBar ? "bottom-[76px]" : "bottom-5"
+      }`}
       style={{ backgroundColor: "#4CAF72" }}
     >
       <svg

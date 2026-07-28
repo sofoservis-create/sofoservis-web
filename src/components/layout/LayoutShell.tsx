@@ -5,6 +5,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsent from "@/components/cookies/CookieConsent";
 import WhatsAppWidget from "@/components/widgets/WhatsAppWidget";
+import StickyMobileCta from "@/components/StickyMobileCta";
 import UTMCapture from "@/components/tracking/UTMCapture";
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
@@ -27,6 +28,7 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
         <Footer />
         <CookieConsent />
       </div>
+      <StickyMobileCta />
     </>
   );
 }
