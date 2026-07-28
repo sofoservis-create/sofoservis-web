@@ -23,9 +23,20 @@ restoration can land either side of mount. `wheel`/`touchmove`/`keydown` are nev
 restoration, so they are the only trustworthy signal of real user intent.
 
 **How to apply:** Keep an `armed` flag in the effect. `scroll` updates visibility only once armed;
-the input listeners set `armed` and run one update. Remove all four listeners on cleanup. For
+the input listeners set `armed` and run one update. Remove all listeners on cleanup. For
 mobile-only elements `touchmove` is the one that matters; include `wheel`/`keydown` for desktop and
 for e2e runs driving `page.mouse.wheel`.
+
+Four follow-on holes that a code review caught after the basic arming worked:
+- **bfcache**: back/forward restores the page with its old React state — the element returns
+  already visible with zero events. Listen for `pageshow` and on `e.persisted` disarm + hide.
+- **keydown must be filtered** to scroll-intent keys (arrows, PageUp/Down, Home/End, Space):
+  arming on any key lets Tab or typing reveal the element at a restored offset.
+- **SPA navigation**: a globally-mounted component never remounts, so `armed` survives route
+  changes and the router's programmatic scroll restore can reveal it. Key the effect on
+  `usePathname()` so each navigation disarms and hides.
+- **Hidden-but-focusable**: an off-screen `translate-y-full` bar keeps its links in the tab
+  order. Set `inert={!visible}` (React 19 supports the boolean prop) alongside `aria-hidden`.
 
 **Verifying:** A test that scrolls with `window.scrollTo` will NOT catch a regression here, because
 it bypasses user-input events entirely — it can even mask the bug by never arming the flag. The
