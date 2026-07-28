@@ -13,4 +13,12 @@ description: How to keep fixed phone numbers safe from Nimbata call-tracking swa
 
 **Perf caveat:** A body-wide observer fires on EVERY DOM mutation — during first load (hydration, GTM injection, Nimbata swaps) that is dozens of callbacks, each doing a document-wide `querySelectorAll`, which blocks the main thread and made the nav dropdown stutter. The observer callback must stay coalesced via `requestAnimationFrame` (one restore per frame, cancel on cleanup). Restores still land within a frame — verified by e2e swap simulation (textOk/hrefOk true).
 
+**Nimbata only swaps on the registered domain — localhost cannot reproduce DNI bugs:** The
+`NimbataScript` component has no hostname gating, so it is tempting to assume the script behaves
+identically everywhere. It does not: the swap is gated on Nimbata's CDN side by registered domain,
+so on `127.0.0.1`/`localhost` the original number renders and no cloning happens. A page that loads
+clean on `127.0.0.1` while erroring in the preview is the signature of a DNI-related bug, not proof
+the bug is gone. Always reproduce and verify against `$REPLIT_DEV_DOMAIN`. Quick tell: compare the
+rendered phone number between the two — if they differ, Nimbata is active on that load.
+
 **CTA buttons must NOT be `<a href="tel:">`:** Nimbata clones ALL `<a href^="tel:">` elements on the page, not just the phone number display. The CTA "Zavolaj/Call Us" button was an `<a href="tel:">` — Nimbata cloned it, React updated its hidden original, and after SK→EN navigation the DOM showed the Nimbata clone with stale "ZAVOLAJ" text. Fix: change any interactive button with `href="tel:"` to `<button type="button">` with `onClick={() => { window.location.href = 'tel:...'; }}`. `<button>` elements are never targeted by Nimbata.
