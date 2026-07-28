@@ -793,8 +793,8 @@ export default function LabHero({
         {/* Form card — single markup for mobile + desktop; z-10 so desktop mascot (z-20) overlaps it.
             On mobile it is pulled up over the mobile mascot via --form-mt. */}
         <div
-          className="relative z-10 mt-[var(--form-mt,1.25rem)] lg:mt-5"
-          style={showMascot ? ({ ["--form-mt" as string]: `${-314 * mobileMascotScale + mobileFormOffsetY}px` } as React.CSSProperties) : undefined}
+          className="relative z-10 mt-[var(--form-mt,1.25rem)] lg:mt-14"
+          style={showMascot ? ({ ["--form-mt" as string]: `${-251 * mobileMascotScale + mobileFormOffsetY}px` } as React.CSSProperties) : undefined}
         >
           <div className={`flex flex-col lg:flex-row gap-6 lg:gap-12`}>
           <div className={narrowForm ? "lg:w-3/5 w-full" : "w-full lg:w-auto lg:flex-1"}>

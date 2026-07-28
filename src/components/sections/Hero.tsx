@@ -441,7 +441,7 @@ export default function Hero({
             })()}
 
             {/* Mobile Form - below benefits bar on mobile */}
-            <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-314 * mobileMascotScale + mobileFormOffsetY}px` } : undefined}>
+            <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-251 * mobileMascotScale + mobileFormOffsetY}px` } : undefined}>
               <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
                 <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
                   <h3 className="text-lg md:text-xl font-bold text-center">
@@ -475,7 +475,7 @@ export default function Hero({
           </div>
 
           {/* Form Section - Right side */}
-          <div className="w-full lg:w-2/5 order-2 lg:order-2 -mt-2 lg:mt-0 hidden lg:block">
+          <div className="w-full lg:w-2/5 order-2 lg:order-2 -mt-2 lg:mt-14 hidden lg:block">
             <div ref={formCardRef} className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
               {/* Form header with accent background */}
               <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
