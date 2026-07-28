@@ -148,7 +148,7 @@ export default function Footer() {
     pathname === "/en/";
 
   return (
-    <footer className="relative bg-[#303030] text-white pt-6 pb-24 md:py-16">
+    <footer className="relative bg-[#303030] text-white pt-6 pb-32 md:py-16">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 desktop:px-8">
         {/* ── Single responsive layout: mobile = logo+nav side by side, contact below;
             desktop = 3-column grid (logo | contact | nav) via CSS order ── */}
