@@ -7,12 +7,40 @@ export default function StickyMobileCta() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    // The bar must be hidden on page load, then appear only once the visitor has
+    // actually scrolled past 600px. We cannot simply check window.scrollY on mount:
+    // browsers restore the previous scroll offset on refresh (history.scrollRestoration
+    // is "auto"), so reloading deep in the page would land at scrollY > 600 and show
+    // the bar immediately. Scroll restoration also emits a synthetic scroll event, so
+    // the scroll listener alone is not enough to tell it apart from a real scroll.
+    //
+    // Instead we arm on the first genuine user-input event. wheel/touchmove/keydown are
+    // never produced by scroll restoration, so until one fires the bar stays hidden.
+    let armed = false;
+
+    const update = () => setVisible(window.scrollY > 600);
+
     const onScroll = () => {
-      setVisible(window.scrollY > 600);
+      if (armed) update();
     };
+
+    const arm = () => {
+      if (armed) return;
+      armed = true;
+      update();
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("wheel", arm, { passive: true });
+    window.addEventListener("touchmove", arm, { passive: true });
+    window.addEventListener("keydown", arm);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("wheel", arm);
+      window.removeEventListener("touchmove", arm);
+      window.removeEventListener("keydown", arm);
+    };
   }, []);
 
   return (
