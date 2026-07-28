@@ -17,17 +17,16 @@ export default function StickyMobileCta() {
 
   return (
     <div
+      aria-hidden={!visible}
       className={`lg:hidden fixed bottom-0 inset-x-0 z-40 transition-transform duration-300 ${
-        visible ? "translate-y-0" : "translate-y-full"
+        visible ? "translate-y-0" : "translate-y-full pointer-events-none"
       }`}
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
     >
-      <div className="flex items-center gap-3 bg-white border-t border-gray-200 shadow-[0_-2px_12px_rgba(0,0,0,0.08)] px-4 py-3">
-        {/* Primary CTA — filled navy pill */}
+      <div className="flex items-center gap-3 bg-white/95 backdrop-blur border-t border-gray-200 shadow-[0_-2px_12px_rgba(0,0,0,0.08)] px-4 py-2.5 pb-[calc(0.625rem+env(safe-area-inset-bottom))]">
+        {/* Primary CTA — filled accent pill */}
         <Link
           href="/kontakt"
-          className="flex-1 flex items-center justify-center gap-1.5 py-3 px-4 rounded-full text-sm font-semibold text-white transition-opacity hover:opacity-90"
-          style={{ backgroundColor: "#0A2463" }}
+          className="flex-1 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-4 rounded-full text-sm font-semibold bg-accent text-primary-900 transition-opacity hover:opacity-90"
         >
           Cenová ponuka
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 flex-shrink-0">
@@ -38,7 +37,7 @@ export default function StickyMobileCta() {
         {/* Secondary CTA — outlined pill with phone icon */}
         <a
           href={`tel:${BUSINESS.phone}`}
-          className="flex-1 flex items-center justify-center gap-1.5 py-3 px-4 rounded-full text-sm font-semibold border-2 transition-colors hover:bg-gray-50"
+          className="flex-1 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-4 rounded-full text-sm font-semibold border-2 transition-colors hover:bg-gray-50"
           style={{ borderColor: "#0A2463", color: "#0A2463" }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 flex-shrink-0">
