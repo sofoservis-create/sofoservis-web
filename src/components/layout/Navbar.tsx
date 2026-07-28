@@ -502,10 +502,10 @@ export default function Navbar() {
                       {isEnglish ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}
                     </span>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 px-4 pb-5 pt-3">
+                  <div className="px-4 pb-5 pt-3">
                     <button
                       type="button"
-                      className="flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors cursor-pointer"
+                      className="w-full flex items-center justify-center gap-2 bg-white border border-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-gray-50 transition-colors cursor-pointer"
                       onClick={() => {
                         const num = nimbataPhone || t.phoneNumber;
                         try {
@@ -538,28 +538,6 @@ export default function Navbar() {
                       <span className="whitespace-nowrap overflow-hidden">{nimbataPhone || t.phoneNumber}</span>
                     </button>
 
-                    <Link
-                      href={isEnglish ? "/en/contact" : "/kontakt"}
-                      className="flex items-center justify-center gap-1 bg-accent-500 text-primary-900 py-3 px-3 font-medium rounded-md text-sm sm:text-base hover:bg-accent-400 transition-colors shadow-sm"
-                      onClick={(e) => {
-                        handleCtaClick(e);
-                        setMobileMenuOpen(false);
-                      }}
-                    >
-                      <span className="whitespace-nowrap">{t.getQuote}</span>
-                      <svg
-                        className="w-4 h-4 flex-shrink-0"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path d="M5 12h14m-7-7l7 7-7 7"></path>
-                      </svg>
-                    </Link>
                   </div>
 
                   <div className="flex justify-center py-3 border-t border-gray-200">
