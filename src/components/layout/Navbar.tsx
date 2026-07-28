@@ -206,28 +206,6 @@ export default function Navbar() {
     return isEnglish ? "/" : "/en";
   };
 
-  const handleCtaClick: React.MouseEventHandler<HTMLAnchorElement> = (
-    event
-  ) => {
-    // GTM event pre klik na tlačidlo "Zavolaj" / "Call us" v navbare
-    try {
-      pushDataLayerEvent("call_click", {
-        event_category: "engagement",
-        event_label: pathname,
-        language: isEnglish ? "en" : "sk",
-        location: "navbar_cta",
-      });
-    } catch {
-      // nechceme blokovať klik ani scroll pri chybe trackingu
-    }
-
-    if (shouldScrollToTop) {
-      event.preventDefault();
-      if (typeof window !== "undefined") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    }
-  };
 
   // Handle scroll for desktop navbar styling
   useEffect(() => {
