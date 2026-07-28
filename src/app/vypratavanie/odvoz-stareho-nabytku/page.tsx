@@ -152,7 +152,6 @@ export default function OdvozStarehoNabytku() {
         mobileMascotOffsetY={-57}
         mobileMascotOffsetX={-32}
         mobileMascotScale={1.02}
-        mobileFormOffsetY={19}
         pillsVariant="stahovanie"
       />
 

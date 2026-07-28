@@ -102,7 +102,6 @@ export default function MontazNabytkuBratislavaPage() {
         showMascot
         mobileMascotSrc="/images/mascot/montaz-mascot.svg"
         mobileMascotOffsetY={-45}
-        mobileFormOffsetY={32}
         pillsVariant="stahovanie"
         phoneNumber="+421952044363"
       />

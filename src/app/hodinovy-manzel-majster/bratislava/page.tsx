@@ -103,7 +103,6 @@ export default function HodinovyManzelMajsterBratislavaPage() {
         showMascot
         mobileMascotSrc="/images/mascot/montaz-mascot.svg"
         mobileMascotOffsetY={-45}
-        mobileFormOffsetY={32}
         pillsVariant="hodinovy"
         phoneNumber="421952044363"
       />

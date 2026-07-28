@@ -197,7 +197,6 @@ export default function StahovanieBratislavaPage() {
         showMascot
         mobileMascotSrc="/images/mascot/2holding boxes mascot.svgz"
         mobileMascotOffsetY={-44}
-        mobileFormOffsetY={19}
         pillsVariant="stahovanie"
       />
 

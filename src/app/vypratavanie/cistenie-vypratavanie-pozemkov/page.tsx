@@ -147,7 +147,6 @@ export default function CisteniePozemkovPage() {
         mobileMascotOffsetY={-57}
         mobileMascotOffsetX={-32}
         mobileMascotScale={1.02}
-        mobileFormOffsetY={19}
         pillsVariant="stahovanie"
       />
 

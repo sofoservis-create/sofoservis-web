@@ -131,7 +131,6 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
         mobileMascotSrc="/images/mascot/buranie-mascot.svg"
         mobileMascotOffsetY={-24}
         mobileMascotScale={0.847}
-        mobileFormOffsetY={39}
         pillsVariant="stahovanie"
       />
       <Clients />
