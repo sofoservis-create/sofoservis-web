@@ -288,7 +288,7 @@ export default function LabHero({
   mobileMascotOffsetY = 0,
   mobileMascotOffsetX = 0,
   mobileMascotScale = 1,
-  mobileFormOffsetY = 0,
+  mobileFormOffsetY = 95,
   pillsVariant,
   phoneCTAText,
   phoneNumber,
