@@ -105,7 +105,7 @@ export default function StickyMobileCta() {
         {/* Primary CTA — solid accent, arrow icon */}
         <Link
           href="/kontakt"
-          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-bold whitespace-nowrap bg-accent-500 text-primary-900 transition-opacity hover:opacity-90"
+          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-black whitespace-nowrap bg-accent-500 text-primary-900 transition-opacity hover:opacity-90"
         >
           Cenová ponuka
           {/* Arrow hidden on very narrow screens (<360px) so the label never wraps */}
@@ -124,7 +124,7 @@ export default function StickyMobileCta() {
           onClick={() => {
             window.location.href = `tel:${BUSINESS.phone}`;
           }}
-          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-bold whitespace-nowrap bg-white ring-2 ring-inset ring-accent-500 text-primary-900 transition-colors hover:bg-accent-50"
+          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-1.5 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-black whitespace-nowrap bg-white ring-2 ring-inset ring-accent-500 text-primary-900 transition-colors hover:bg-accent-50"
         >
           {/* Same outline phone icon as the mobile header (Navbar), accent colour */}
           <svg
