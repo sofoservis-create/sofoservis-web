@@ -1,0 +1,28 @@
+Task: Add a sticky mobile CTA bar to my website
+
+Implement a persistent bottom call-to-action bar on mobile with these exact behaviors:
+
+Behavior requirements:
+
+Fixed to the bottom of the viewport, full width, only visible on screens below 1024px (hide on desktop).
+Hidden on page load. It slides up into view only after the user scrolls more than 600px down the page, and slides back down when they scroll above 600px. Use a 300ms CSS transform transition (translateY(100%) ↔ translateY(0)) — don't mount/unmount it, just toggle classes. Add pointer-events: none and aria-hidden="true" while hidden.
+Use a passive scroll listener and run the check once on load too.
+Respect iPhone safe areas: bottom padding must be calc(0.625rem + env(safe-area-inset-bottom)).
+Visual requirements:
+
+Bar: semi-transparent white background (rgba(255,255,255,0.95)) with backdrop-filter: blur, a 1px top border in light gray, and a soft upward shadow (0 -4px 16px rgba(0,0,0,0.08)).
+Two buttons side by side, each flex: 1, minimum height 48px (tap target), rounded corners (~12px), bold text, small icon:
+Primary button — text: [YOUR CTA TEXT, e.g. "Get a Quote"], solid background in my brand color [#YOUR_PRIMARY_HEX], white text, arrow icon, links to [/your-contact-page].
+Secondary button — text: [e.g. "Call Us"], white background, 2px border and text in [#YOUR_PRIMARY_HEX], phone icon, href tel:[YOUR PHONE NUMBER].
+Use inline SVG icons (arrow-right and phone), no icon library needed.
+z-index around 40 so it sits above content but below modals.
+Implementation notes:
+
+If this is a React/Next.js project: create it as a single client component ("use client") called StickyMobileCta, with useState(false) for visibility and a useEffect that adds/removes the scroll listener (setVisible(window.scrollY > 600)). Render it once in the root layout so it appears on every page.
+If this is a plain HTML/CSS/JS site: add the bar's HTML just before </body> on each page (or in the shared footer include), the styles in the global stylesheet, and a small script that toggles a .visible class on scroll.
+Pull the phone number and brand color from wherever the site already centralizes them (config/CSS variables) instead of hardcoding, if such a place exists.
+Acceptance criteria:
+
+On mobile: invisible at top of page, slides up smoothly after scrolling ~600px, slides away when scrolling back up.
+Tapping the call button opens the phone dialer; the primary button navigates to the contact page.
+Never visible on desktop (≥1024px). No layout shift, no overlap with the home-indicator area on iPhones.
