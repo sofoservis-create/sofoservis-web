@@ -242,8 +242,7 @@ export default function Navbar() {
 
   // Signal burger state to other widgets (e.g. WhatsAppWidget hides itself)
   useEffect(() => {
-    document.body.classList.toggle("mobile-menu-open", mobileMenuOpen);
-    return () => document.body.classList.remove("mobile-menu-open");
+    window.dispatchEvent(new CustomEvent("burgermenu", { detail: { open: mobileMenuOpen } }));
   }, [mobileMenuOpen]);
 
   // Close mobile menu when clicking outside

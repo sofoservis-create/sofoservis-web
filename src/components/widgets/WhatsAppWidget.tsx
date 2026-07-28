@@ -41,10 +41,9 @@ export default function WhatsAppWidget() {
   }, []);
 
   useEffect(() => {
-    const check = () => setMenuOpen(document.body.classList.contains("mobile-menu-open"));
-    const observer = new MutationObserver(check);
-    observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-    return () => observer.disconnect();
+    const handler = (e: Event) => setMenuOpen((e as CustomEvent<{ open: boolean }>).detail.open);
+    window.addEventListener("burgermenu", handler);
+    return () => window.removeEventListener("burgermenu", handler);
   }, []);
 
   return (
