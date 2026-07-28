@@ -3,21 +3,16 @@ import React from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import { usePathname } from "next/navigation";
+import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 import ReviewBadge from "@/components/widgets/ReviewBadge";
 
 export default function ContactInfo() {
   const pathname = usePathname();
   const isEnglish = pathname?.startsWith("/en") || false;
 
-  const phoneNumber =
-    pathname?.includes("/montaz-nabytku") ||
-    pathname?.includes("/montaz-kuchyne") ||
-    pathname?.includes("/hodinovy-manzel-majster") ||
-    pathname?.includes("/en/furniture-assembly") ||
-    pathname?.includes("/en/kitchen-installation") ||
-    pathname?.includes("/en/handyman-services")
-      ? "0952 044 363"
-      : "0951 735 130";
+  const phoneNumber = isNimbataExcludedPath(pathname)
+    ? "0952 044 363"
+    : "0951 735 130";
 
   const isKontaktRoute =
     pathname === "/kontakt" || pathname === "/en/contact";

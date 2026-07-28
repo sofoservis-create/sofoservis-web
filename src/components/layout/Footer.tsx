@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 import CookieSettings from "@/components/cookies/CookieSettings";
 
 export default function Footer() {
@@ -132,13 +133,7 @@ export default function Footer() {
   // Set language-specific content
   const content = isEnglish ? t.en : t.sk;
 
-  const isSpecialRoute =
-    pathname?.includes("/montaz-nabytku") ||
-    pathname?.includes("/montaz-kuchyne") ||
-    pathname?.includes("/hodinovy-manzel-majster") ||
-    pathname?.includes("/en/furniture-assembly") ||
-    pathname?.includes("/en/kitchen-installation") ||
-    pathname?.includes("/en/handyman");
+  const isSpecialRoute = isNimbataExcludedPath(pathname);
 
   const isKontaktRoute =
     pathname === "/kontakt" ||

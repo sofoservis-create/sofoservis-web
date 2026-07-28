@@ -3,17 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
-
-/** Pages where the Nimbata DNI script is not loaded and a dedicated campaign
- *  number is used instead — must stay in sync with NimbataScript/Navbar. */
-const NIMBATA_EXCLUDED_BASES = [
-  "/montaz-nabytku",
-  "/montaz-kuchyne",
-  "/hodinovy-manzel-majster",
-  "/en/furniture-assembly",
-  "/en/kitchen-installation",
-  "/en/handyman-services",
-];
+import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 
 /** Keys that express scroll intent. Arming on any keydown would let an
  *  unrelated key press (Tab, typing) reveal the bar at a restored offset. */
@@ -31,16 +21,17 @@ const SCROLL_INTENT_KEYS = new Set([
 export default function StickyMobileCta() {
   const [visible, setVisible] = useState(false);
   const pathname = usePathname();
-  // Ref to the dedicated Nimbata span rendered as a sibling of the bar.
-  // It sits outside the `inert` wrapper so Nimbata's script always sees it —
-  // the existing .nimbata_number_1 spans live inside the desktop Navbar which
-  // is display:none on mobile and therefore skipped by Nimbata's DOM walker.
+  // Ref to the dedicated Nimbata span rendered as a sibling of the bar
+  // (outside the `inert` wrapper). Nimbata's DNI walks ALL text nodes —
+  // hidden or not — but only once per full page load, and spans re-rendered
+  // by client-side navigation revert to the raw number. This span stays
+  // mounted with constant text, so it is the one place the swapped tracking
+  // number reliably survives route changes (Navbar reads it too, via
+  // findNimbataSwappedNumber).
   const nimbataRef = useRef<HTMLSpanElement>(null);
 
   const isEnglish = pathname?.startsWith("/en") ?? false;
-  const isNimbataExcluded = NIMBATA_EXCLUDED_BASES.some((base) =>
-    pathname?.startsWith(base),
-  );
+  const isNimbataExcluded = isNimbataExcludedPath(pathname);
   const fallbackNumber = isNimbataExcluded ? "0952 044 363" : "0951 735 130";
 
   const handleCall = () => {
@@ -125,16 +116,21 @@ export default function StickyMobileCta() {
 
   return (
     <>
-      {!isNimbataExcluded && (
-        <span
-          ref={nimbataRef}
-          className="nimbata_number_1"
-          aria-hidden="true"
-          style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", opacity: 0, pointerEvents: "none" }}
-        >
-          {fallbackNumber}
-        </span>
-      )}
+      {/* Always mounted with the constant Nimbata target number: the DNI
+          script swaps text only once per full page load, so unmounting or
+          re-rendering this span's text on client-side navigation would lose
+          the swapped tracking number. The text is a constant literal, so
+          React never touches it after mount and Nimbata's injected anchor
+          survives all route changes. On excluded campaign pages handleCall
+          ignores this span entirely. */}
+      <span
+        ref={nimbataRef}
+        className="nimbata_number_1"
+        aria-hidden="true"
+        style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", opacity: 0, pointerEvents: "none" }}
+      >
+        0951 735 130
+      </span>
       <div
       aria-hidden={!visible}
       // `inert` removes the off-screen bar's Link/button from the tab order —

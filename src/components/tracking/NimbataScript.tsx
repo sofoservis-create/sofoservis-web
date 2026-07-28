@@ -1,24 +1,12 @@
 "use client";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
-
-const EXCLUDED_PATHS = [
-  "/hodinovy-manzel-majster",
-  "/montaz-nabytku",
-  "/montaz-kuchyne",
-  "/en/handyman-services",
-  "/en/furniture-assembly",
-  "/en/kitchen-installation",
-];
+import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 
 export default function NimbataScript() {
   const pathname = usePathname();
 
-  const isExcluded = EXCLUDED_PATHS.some(
-    (p) => pathname === p || pathname.startsWith(p + "/")
-  );
-
-  if (isExcluded) return null;
+  if (isNimbataExcludedPath(pathname)) return null;
 
   return (
     <Script

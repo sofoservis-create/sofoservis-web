@@ -5,6 +5,10 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import {
+  isNimbataExcludedPath,
+  findNimbataSwappedNumber,
+} from "@/lib/nimbataExclusions";
+import {
   NavItem,
   navCategoriesSK,
   navCategoriesEN,
@@ -26,18 +30,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const isEnglish = pathname?.startsWith("/en") || false;
 
-  const shouldScrollToTop = useMemo(() => {
-    if (!pathname) return false;
-    const bases = [
-      "/montaz-nabytku",
-      "/montaz-kuchyne",
-      "/hodinovy-manzel-majster",
-      "/en/furniture-assembly",
-      "/en/kitchen-installation",
-      "/en/handyman-services",
-    ];
-    return bases.some((base) => pathname.startsWith(base));
-  }, [pathname]);
+  const shouldScrollToTop = useMemo(
+    () => isNimbataExcludedPath(pathname),
+    [pathname]
+  );
 
   useEffect(() => {
     if (!shouldScrollToTop) return;
@@ -249,16 +245,17 @@ export default function Navbar() {
     }
   }, [pathname]);
 
-  // Read Nimbata-swapped number from the always-visible desktop span when burger menu opens.
+  // Read the Nimbata-swapped number when the burger menu opens. Scans all
+  // .nimbata_number_1 spans (not just the first) because spans re-rendered by
+  // client-side navigation revert to the raw number — only the persistent
+  // sticky-bar span reliably keeps the swap.
   // Excluded routes (shouldScrollToTop) keep the hardcoded special number.
   useEffect(() => {
     if (!mobileMenuOpen || shouldScrollToTop) {
       setNimbataPhone(null);
       return;
     }
-    const span = document.querySelector<HTMLSpanElement>(".nimbata_number_1");
-    const num = span?.textContent?.trim() || null;
-    setNimbataPhone(num);
+    setNimbataPhone(findNimbataSwappedNumber());
   }, [mobileMenuOpen, shouldScrollToTop]);
 
   // Language switch — locks navbar height and saves scroll before navigating
@@ -281,36 +278,23 @@ export default function Navbar() {
   const texts = {
     sk: {
       callUs: "Zavolaj",
-      showNumber: "Zobraz.",
-      phoneNumber:
-        pathname?.includes("/montaz-nabytku") ||
-        pathname?.includes("/montaz-kuchyne") ||
-        pathname?.includes("/hodinovy-manzel-majster")
-          ? "0952 044 363"
-          : "0951 735 130",
+      phoneNumber: isNimbataExcludedPath(pathname)
+        ? "0952 044 363"
+        : "0951 735 130",
       businessHours: "6 dní v týždni 8:00 - 17:00",
       phoneLabel: "Zavolajte nám",
       menu: "Menu",
       close: "Zavrieť",
-      getQuote: "ZÍSKAŤ PONUKU",
     },
     en: {
       callUs: "Call Us",
-      showNumber: "Show",
-      phoneNumber:
-        pathname?.includes("/montaz-nabytku") ||
-        pathname?.includes("/montaz-kuchyne") ||
-        pathname?.includes("/hodinovy-manzel-majster") ||
-        pathname?.includes("/en/furniture-assembly") ||
-        pathname?.includes("/en/kitchen-installation") ||
-        pathname?.includes("/en/handyman-services")
-          ? "0952 044 363"
-          : "0951 735 130",
+      phoneNumber: isNimbataExcludedPath(pathname)
+        ? "0952 044 363"
+        : "0951 735 130",
       businessHours: "6 dní v týždni 8:00 - 17:00",
       phoneLabel: "Call us now",
       menu: "Menu",
       close: "Close",
-      getQuote: "GET A QUOTE",
     },
   };
 
@@ -380,7 +364,7 @@ export default function Navbar() {
                   onClick={() => {
                     const num = shouldScrollToTop
                       ? t.phoneNumber
-                      : (document.querySelector<HTMLSpanElement>(".nimbata_number_1")?.textContent?.trim() || t.phoneNumber);
+                      : findNimbataSwappedNumber() || t.phoneNumber;
                     try {
                       pushDataLayerEvent("call_click", {
                         event_category: "engagement",
