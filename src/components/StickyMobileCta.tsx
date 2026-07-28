@@ -1,8 +1,19 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BUSINESS } from "@/lib/business";
+import { pushDataLayerEvent } from "@/lib/gtm";
+
+/** Pages where the Nimbata DNI script is not loaded and a dedicated campaign
+ *  number is used instead — must stay in sync with NimbataScript/Navbar. */
+const NIMBATA_EXCLUDED_BASES = [
+  "/montaz-nabytku",
+  "/montaz-kuchyne",
+  "/hodinovy-manzel-majster",
+  "/en/furniture-assembly",
+  "/en/kitchen-installation",
+  "/en/handyman-services",
+];
 
 /** Keys that express scroll intent. Arming on any keydown would let an
  *  unrelated key press (Tab, typing) reveal the bar at a restored offset. */
@@ -20,6 +31,36 @@ const SCROLL_INTENT_KEYS = new Set([
 export default function StickyMobileCta() {
   const [visible, setVisible] = useState(false);
   const pathname = usePathname();
+  // Ref to the dedicated Nimbata span rendered as a sibling of the bar.
+  // It sits outside the `inert` wrapper so Nimbata's script always sees it —
+  // the existing .nimbata_number_1 spans live inside the desktop Navbar which
+  // is display:none on mobile and therefore skipped by Nimbata's DOM walker.
+  const nimbataRef = useRef<HTMLSpanElement>(null);
+
+  const isEnglish = pathname?.startsWith("/en") ?? false;
+  const isNimbataExcluded = NIMBATA_EXCLUDED_BASES.some((base) =>
+    pathname?.startsWith(base),
+  );
+  const fallbackNumber = isNimbataExcluded ? "0952 044 363" : "0951 735 130";
+
+  const handleCall = () => {
+    // Read from our own Nimbata span (always in the DOM, never inert).
+    // Falls back to the static number when Nimbata hasn't swapped yet or the
+    // page is an excluded campaign page.
+    const num = isNimbataExcluded
+      ? fallbackNumber
+      : nimbataRef.current?.textContent?.trim() || fallbackNumber;
+    try {
+      pushDataLayerEvent("call_click", {
+        event_category: "engagement",
+        event_label: pathname,
+        phone_number: num,
+        language: isEnglish ? "en" : "sk",
+        location: "sticky_bar",
+      });
+    } catch {}
+    window.location.href = `tel:${num.replace(/\s/g, "")}`;
+  };
 
   useEffect(() => {
     // The bar must be hidden on page load, then appear only once the visitor has
@@ -83,7 +124,18 @@ export default function StickyMobileCta() {
   }, [pathname]);
 
   return (
-    <div
+    <>
+      {!isNimbataExcluded && (
+        <span
+          ref={nimbataRef}
+          className="nimbata_number_1"
+          aria-hidden="true"
+          style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", opacity: 0, pointerEvents: "none" }}
+        >
+          {fallbackNumber}
+        </span>
+      )}
+      <div
       aria-hidden={!visible}
       // `inert` removes the off-screen bar's Link/button from the tab order —
       // without it they stay keyboard-focusable while visually hidden.
@@ -132,10 +184,8 @@ export default function StickyMobileCta() {
             hydration. <button> is never targeted by Nimbata. */}
         <button
           type="button"
-          aria-label={`Zavolať ${BUSINESS.phone}`}
-          onClick={() => {
-            window.location.href = `tel:${BUSINESS.phone}`;
-          }}
+          aria-label={`Zavolať ${fallbackNumber}`}
+          onClick={handleCall}
           className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-2 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl whitespace-nowrap bg-white ring-2 ring-inset ring-accent-500 text-primary-900 transition-colors hover:bg-accent-50 text-[18px] font-bold"
         >
           {/* Same outline phone icon as the mobile header (Navbar), accent colour */}
@@ -156,5 +206,6 @@ export default function StickyMobileCta() {
         </button>
       </div>
     </div>
+    </>
   );
 }

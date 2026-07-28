@@ -174,8 +174,11 @@ export default function CookieConsent() {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 pb-24 sm:pb-20">
-        <div className="relative bg-white shadow-2xl rounded-2xl mx-auto max-w-4xl">
+      {/* pointer-events-none: the wrapper's transparent padding (pb-24) overlaps
+          the sticky CTA bar below it and would swallow its taps — only the card
+          itself may capture clicks. */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 p-4 pb-24 sm:pb-20 pointer-events-none">
+        <div className="relative bg-white shadow-2xl rounded-2xl mx-auto max-w-4xl pointer-events-auto">
           {/* × close button */}
           <button
             onClick={handleDismiss}
