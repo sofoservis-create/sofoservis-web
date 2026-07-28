@@ -105,11 +105,12 @@ export default function StickyMobileCta() {
         {/* Primary CTA — solid accent, arrow icon */}
         <Link
           href="/kontakt"
-          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-2 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-black whitespace-nowrap bg-accent-500 text-primary-900 transition-opacity hover:opacity-90"
+          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-2 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl whitespace-nowrap bg-accent-500 transition-opacity hover:opacity-90 text-[18px] font-bold text-[#000000]"
         >
           Cenová ponuka
           {/* Stroke arrow (2.5), same style as the header CTA.
-              Hidden on very narrow screens (<360px) so the label never wraps. */}
+              Hidden below 390px — with the 18px label there is no room for it
+              on narrower screens and it would overflow the button. */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -118,7 +119,7 @@ export default function StickyMobileCta() {
             strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="w-4 h-4 flex-shrink-0 hidden min-[360px]:block"
+            className="w-4 h-4 flex-shrink-0 hidden min-[390px]:block"
             aria-hidden="true"
           >
             <path d="M5 12h14m-7-7l7 7-7 7"></path>
@@ -135,7 +136,7 @@ export default function StickyMobileCta() {
           onClick={() => {
             window.location.href = `tel:${BUSINESS.phone}`;
           }}
-          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-2 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl text-sm font-black whitespace-nowrap bg-white ring-2 ring-inset ring-accent-500 text-primary-900 transition-colors hover:bg-accent-50"
+          className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-2 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl whitespace-nowrap bg-white ring-2 ring-inset ring-accent-500 text-primary-900 transition-colors hover:bg-accent-50 text-[18px] font-bold"
         >
           {/* Same outline phone icon as the mobile header (Navbar), accent colour */}
           <svg
