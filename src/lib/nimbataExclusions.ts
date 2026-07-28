@@ -43,7 +43,17 @@ export function findNimbataSwappedNumber(): string | null {
   const spans = document.querySelectorAll<HTMLElement>(".nimbata_number_1");
   for (const span of Array.from(spans)) {
     const text = span.textContent?.trim();
-    if (text && text !== NIMBATA_TARGET_NUMBER) return text;
+    if (!text || text === NIMBATA_TARGET_NUMBER) continue;
+    // Only trust a genuine Nimbata swap, not just "different text" — pages
+    // like /kontakt legitimately render other numbers too. A swap leaves a
+    // marker: an injected <a data-nimbata> inside the span (bare-span case,
+    // e.g. the persistent sticky-bar span) or a cloned wrapping anchor.
+    if (
+      span.querySelector("a[data-nimbata]") ||
+      span.closest("a[data-nimbata]")
+    ) {
+      return text;
+    }
   }
   return null;
 }

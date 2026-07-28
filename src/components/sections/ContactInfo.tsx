@@ -3,7 +3,10 @@ import React from "react";
 import Image from "next/image";
 import Container from "@/components/ui/Container";
 import { usePathname } from "next/navigation";
-import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
+import {
+  isNimbataExcludedPath,
+  NIMBATA_TARGET_NUMBER,
+} from "@/lib/nimbataExclusions";
 import ReviewBadge from "@/components/widgets/ReviewBadge";
 
 export default function ContactInfo() {
@@ -366,7 +369,12 @@ function PhoneRevealLarge({
         href={`tel:${phoneNumber}`}
         className="text-2xl text-accent-500 hover:underline transition-colors font-bold"
       >
-        <span className="nimbata_number_1">{displayNumber}</span>
+        {/* The nimbata_number_1 class belongs only on the main tracked number.
+            The montáž number (0952) is never swapped by Nimbata — marking it
+            would hide it via anti-flash CSS and confuse swapped-number readers. */}
+        <span className={displayNumber === NIMBATA_TARGET_NUMBER ? "nimbata_number_1" : undefined}>
+          {displayNumber}
+        </span>
       </a>
     </div>
   );
