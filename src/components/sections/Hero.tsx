@@ -364,7 +364,7 @@ export default function Hero({
 
             {/* Benefits Bar - 3 benefits, above form on mobile */}
             {benefits.length > 0 && (
-            <div className="grid grid-cols-3 sm:grid-cols-none sm:flex sm:flex-wrap sm:justify-center lg:justify-start sm:items-center gap-3 sm:gap-6">
+            <div className="hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center lg:gap-6">
               {benefits.map((benefit, index) => (
                 <div
                   key={index}

@@ -16,8 +16,6 @@ interface LabHeroProps {
   formSubtitle?: string;
   ratingText?: string;
   benefits?: string[];
-  /** Hide the benefits checkmark row on mobile/tablet (below lg); desktop unchanged. */
-  hideBenefitsOnMobile?: boolean;
   narrowForm?: boolean;
   hideBadge?: boolean;
   badgeText?: string;
@@ -272,7 +270,6 @@ export default function LabHero({
   formSubtitle = "Vyplňte formulár a získajte nezáväznú ponuku ešte dnes",
   ratingText = "3500+ spokojných zákazníkov",
   benefits = ["Sťahovanie", "Vypratávanie", "Montáž nábytku"],
-  hideBenefitsOnMobile = false,
   narrowForm = false,
   hideBadge = false,
   badgeText,
@@ -727,14 +724,9 @@ export default function LabHero({
                 <div className="text-white/80 text-sm text-center lg:text-left lg:whitespace-nowrap lg:text-[14px] lg:leading-none">{ratingText}</div>
               </div>
 
+              {/* Benefits row — desktop only; hidden on mobile (trust pills shown below form instead) */}
               {benefits.length > 0 && (
-              <div
-                className={
-                  hideBenefitsOnMobile
-                    ? "hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center lg:gap-6"
-                    : "grid grid-cols-3 sm:grid-cols-none sm:flex sm:flex-wrap sm:justify-center lg:justify-start sm:items-center gap-3 sm:gap-6"
-                }
-              >
+              <div className="hidden lg:flex lg:flex-wrap lg:justify-start lg:items-center lg:gap-6">
                 {benefits.map((benefit, i) => (
                   <div key={i} className="flex flex-col sm:flex-row items-center sm:items-center">
                     <div className="p-2 lg:p-1.5 bg-accent-500 rounded-full flex-shrink-0 mb-2 lg:mb-1 sm:mb-0 sm:mr-2">
