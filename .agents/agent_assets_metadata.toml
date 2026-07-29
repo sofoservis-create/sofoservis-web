@@ -23,3 +23,9 @@ id = "6eHWxdkHa3E0JbznGLK34"
 uri = "file://audit/AUDIT-sofoservis-2026-07-22.md"
 type = "text"
 title = "AUDIT sofoservis.sk — 22. júl 2026"
+
+[[outputs]]
+id = "3IqN79YSGI94WQxwyUqtV"
+uri = "file://export/google-reviews-carousel.zip"
+type = "unspecified"
+title = "Google Reviews Carousel (kód na stiahnutie)"
