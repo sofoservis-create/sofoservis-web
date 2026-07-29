@@ -1,4 +1,5 @@
 // src/components/seo/SEOProvider.tsx
+import { getGoogleRating } from "@/lib/googleRating";
 
 interface ServiceData {
   serviceName: string;
@@ -218,7 +219,8 @@ const CITY_MAPPING: Record<string, string> = {
   "vypratavanie-dubravka": "Dúbravka",
 };
 
-export default function SEOProvider({ pathname }: { pathname: string }) {
+export default async function SEOProvider({ pathname }: { pathname: string }) {
+  const { ratingValue, reviewCount } = await getGoogleRating();
   const structuredData = (() => {
     const baseUrl = "https://www.sofoservis.sk";
     const isHomePage = pathname === "/";
@@ -279,8 +281,8 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
         ],
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: 4.9,
-          reviewCount: 500,
+          ratingValue,
+          reviewCount,
           bestRating: 5,
           worstRating: 1,
         },
@@ -359,8 +361,8 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
         areaServed,
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: 4.9,
-          reviewCount: 500,
+          ratingValue,
+          reviewCount,
           bestRating: 5,
           worstRating: 1,
         },
@@ -382,8 +384,8 @@ export default function SEOProvider({ pathname }: { pathname: string }) {
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: 4.9,
-          reviewCount: 500,
+          ratingValue,
+          reviewCount,
           bestRating: 5,
           worstRating: 1,
         },

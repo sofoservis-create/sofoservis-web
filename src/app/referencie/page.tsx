@@ -36,10 +36,7 @@ export default function ReferencePage() {
   return (
     <main className="bg-white">
       {/* JSON-LD AggregateRating + Review schema pre hviezdičky v Google výsledkoch */}
-      <ReviewAggregateJsonLd
-        ratingValue={4.9}
-        reviewCount={500}
-      />
+      <ReviewAggregateJsonLd />
 
       {/* Preload hero mascot SVG for instant paint with other hero elements */}
       <link
