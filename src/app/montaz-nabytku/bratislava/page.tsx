@@ -18,7 +18,7 @@ import TrustBadges from "@/components/sections/TrustBadges";
 export const metadata = {
   title: "Montáž a skladanie nábytku Bratislava | Sofoservis",
   description:
-    "Profesionálna montáž nábytku v Bratislave a okolí ✅ IKEA, JYSK, Asko a iné značky ✅ Od 30€/hod. ✅ Dostupní do 24 hodín",
+    "Profesionálna montáž nábytku v Bratislave a okolí ✅ IKEA, JYSK, Asko a iné značky ✅ Od 25€/hod. ✅ Dostupní do 24 hodín",
   alternates: {
     canonical: "https://www.sofoservis.sk/montaz-nabytku/bratislava",
     languages: {
@@ -39,7 +39,7 @@ export default function MontazNabytkuBratislavaPage() {
     {
       question: "Koľko stojí montáž nábytku v Bratislave?",
       answer:
-        "Cena práce je 30€/hod na jedného pracovníka. Pri zložitejších kusoch ako sú veľké šatníkové skrine alebo kuchyne vám radi vypracujeme fixnú cenovú ponuku.",
+        "Cena práce je 25€/hod na jedného pracovníka. Pri zložitejších kusoch ako sú veľké šatníkové skrine alebo kuchyne vám radi vypracujeme fixnú cenovú ponuku.",
     },
     {
       question: "Montujete aj nábytok z IKEA (PAX, METOD)?",

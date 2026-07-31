@@ -62,7 +62,7 @@ export default function MontazNabytkuPage() {
   const heroData = {
     title: "Skladanie a montáž nábytku",
     description:
-      "Profesionálne montáž a skladanie nábytku od 30€/hod. Naši skúsení odborníci sa postarajú o poskladanie nového nábytku alebo demontáž a presun existujúceho.",
+      "Profesionálne montáž a skladanie nábytku od 25€/hod. Naši skúsení odborníci sa postarajú o poskladanie nového nábytku alebo demontáž a presun existujúceho.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
