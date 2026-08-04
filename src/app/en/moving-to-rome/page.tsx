@@ -65,19 +65,16 @@ export default function MovingToRomePage() {
         image: "/icons/truck_icon.svg",
         title: "4-6 Day Delivery to Rome",
         description: "Regular departures ensure delivery from Slovakia to Rome within 4-6 business days.",
-        link: "/en/moving-to-rome",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Rome Municipios",
         description: "We deliver throughout Rome and the wider metropolitan area.",
-        link: "/en/moving-to-rome",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Expert packing for safe long-distance delivery to Rome.",
-        link: "/en/moving-to-rome",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -89,13 +86,11 @@ export default function MovingToRomePage() {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured throughout the journey to Rome.",
-        link: "/en/moving-to-rome",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description: "EU-to-EU move — no customs paperwork required.",
-        link: "/en/moving-to-rome",
       },
     ],
   };

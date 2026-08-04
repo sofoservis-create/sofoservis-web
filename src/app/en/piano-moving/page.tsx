@@ -49,42 +49,36 @@ export default function PianoMovingPage() {
         title: "Upright Piano",
         description:
           "Upright pianos typically weigh 200–300 kg. We use specialist piano dollies with height adjustment and soft straps to protect both the instrument and your floors. On staircases we fit piano skids for a controlled descent or ascent.",
-        link: "/en/piano-moving",
       },
       {
         image: "/icons/crane_icon.svg",
         title: "Grand & Baby Grand Piano",
         description:
           "Grand pianos are the most challenging to move — some concert grands weigh over 500 kg. We disassemble the pedal lyre and lid, wrap the instrument in protective blankets, and transport it on a specialist grand piano board.",
-        link: "/en/piano-moving",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Packing & Protection",
         description:
           "Before any move we wrap the piano in thick furniture blankets and stretch wrap, secure the keys to prevent slamming, and brace the action mechanism against vibration.",
-        link: "/en/piano-moving",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Window & Balcony Hoisting",
         description:
           "When stairwells are too narrow or a lift can't accommodate the instrument, we hoist the piano through a window or balcony using a façade-mounted moving lift — safer than forcing it through unsuitable spaces.",
-        link: "/en/piano-moving",
       },
       {
         image: "/icons/house_icon.svg",
         title: "Placement at the New Location",
         description:
           "After delivery we carefully unwrap the piano and position it exactly where you want it. We advise keeping it away from radiators and damp walls to protect the soundboard.",
-        link: "/en/piano-moving",
       },
       {
         image: "/icons/furniture_icon.svg",
         title: "Tuning Referral After the Move",
         description:
           "Every piano needs to acclimatise and be tuned after relocation. On request we can refer you to an experienced piano tuner so your instrument is performance-ready as soon as possible.",
-        link: "/en/piano-moving",
       },
     ],
   };
@@ -234,7 +228,6 @@ export default function PianoMovingPage() {
           {
             title: "Upright Piano Moving",
             description: "Dedicated page for upright piano (pianino) moving.",
-            href: "/en/piano-moving",
             icon: "/icons/crane_icon.svg",
           },
           {

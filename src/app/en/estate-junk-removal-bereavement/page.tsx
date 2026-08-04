@@ -105,13 +105,11 @@ export default function EstateJunkRemovalBereavementPage() {
               image: "/icons/house_icon.svg",
               title: "Sorting Personal Items",
               description: "We carefully sort personal belongings, documents, and photos to hand over to the family. Nothing valuable is disposed of without your knowledge.",
-              link: "/en/estate-junk-removal-bereavement",
             },
             {
               image: "/icons/vypratavanie_icon.svg",
               title: "Discreet & Gentle Approach",
               description: "The entire process is handled with maximum empathy. We give you time for decisions and never rush the process.",
-              link: "/en/estate-junk-removal-bereavement",
             },
             {
               image: "/icons/furniture_icon.svg",
@@ -129,7 +127,6 @@ export default function EstateJunkRemovalBereavementPage() {
               image: "/icons/landscape_icon.svg",
               title: "Final Space Cleaning",
               description: "After junk removal, we can perform basic cleaning and disinfection of the space according to your requirements.",
-              link: "/en/estate-junk-removal-bereavement",
             },
             {
               image: "/icons/truck_icon.svg",

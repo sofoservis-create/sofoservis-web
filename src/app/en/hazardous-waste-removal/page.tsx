@@ -93,14 +93,12 @@ export default function HazardousWasteRemovalPage() {
         title: "Old Appliance Removal",
         description:
           "Professional removal and eco-friendly removal of fridges, washing machines, TVs, computers, and other electrical appliances according to EU directives.",
-        link: "/en/hazardous-waste-removal",
       },
       {
         image: "/icons/hazmat_icon.svg",
         title: "Hazardous Substance Removal",
         description:
           "Safe removal of chemicals, paints, solvents, oils, batteries, and other hazardous materials in compliance with environmental regulations.",
-        link: "/en/hazardous-waste-removal",
       },
       {
         image: "/icons/truck_icon.svg",
@@ -114,7 +112,6 @@ export default function HazardousWasteRemovalPage() {
         title: "Eco-Friendly Recycling",
         description:
           "We maximize recycling of materials - metals, plastics, and other appliance components are processed at authorized facilities.",
-        link: "/en/hazardous-waste-removal",
       },
     ],
   };

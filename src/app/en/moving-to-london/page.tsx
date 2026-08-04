@@ -66,35 +66,30 @@ export default function MovingToLondonPage() {
         title: "Post-Brexit Customs Handled",
         description:
           "We manage all UK customs documentation including Transfer of Residence relief applications.",
-        link: "/en/moving-to-london",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "4-7 Day Delivery to London",
         description:
           "Regular departures ensure reliable 4-7 day delivery from Slovakia to London.",
-        link: "/en/moving-to-london",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All 33 London Boroughs",
         description:
           "We deliver throughout Greater London — every borough, no exceptions.",
-        link: "/en/moving-to-london",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing using materials suitable for long international journeys.",
-        link: "/en/moving-to-london",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "All belongings are insured for the full journey including the Channel crossing.",
-        link: "/en/moving-to-london",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -169,7 +164,7 @@ export default function MovingToLondonPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to the UK", description: "Full Slovakia-to-UK coverage.", href: "/en/moving-to-uk", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to London", description: "Dedicated Bratislava–London route page.", href: "/en/moving-to-london", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to London", description: "Dedicated Bratislava–London route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

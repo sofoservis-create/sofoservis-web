@@ -60,31 +60,26 @@ export default function MovingToBrnoPage() {
         image: "/icons/truck_icon.svg",
         title: "Same-Day or Next-Day Delivery",
         description: "At only 130 km, most Bratislava–Brno moves are completed within a single working day.",
-        link: "/en/moving-to-brno",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Brno Districts Covered",
         description: "We deliver to all Brno districts and the surrounding metropolitan region.",
-        link: "/en/moving-to-brno",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Czech Republic and Slovakia are both EU members — seamless border crossing.",
-        link: "/en/moving-to-brno",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Professional packing and unpacking available for the Bratislava–Brno route.",
-        link: "/en/moving-to-brno",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured during the short journey to Brno.",
-        link: "/en/moving-to-brno",
       },
       {
         image: "/icons/furniture_icon.svg",

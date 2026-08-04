@@ -66,21 +66,18 @@ export default function MovingToDublinPage() {
         title: "Sea Crossing Fully Included",
         description:
           "We manage road transport from Slovakia, the ferry to Ireland, and final delivery to Dublin.",
-        link: "/en/moving-to-dublin",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Dublin Postal Districts",
         description:
           "We deliver to all Dublin postal districts and County Dublin areas.",
-        link: "/en/moving-to-dublin",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing including materials suited for sea transit.",
-        link: "/en/moving-to-dublin",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToDublinPage() {
         title: "Fully Insured Transport",
         description:
           "All belongings are insured for the full journey including the sea crossing.",
-        link: "/en/moving-to-dublin",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs (EU–EU)",
         description:
           "Both Slovakia and Ireland are EU members — no customs declarations needed.",
-        link: "/en/moving-to-dublin",
       },
     ],
   };
@@ -169,7 +164,7 @@ export default function MovingToDublinPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Ireland", description: "Full Slovakia-to-Ireland coverage.", href: "/en/moving-to-ireland", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Dublin", description: "Dedicated Bratislava–Dublin route page.", href: "/en/moving-to-dublin", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Dublin", description: "Dedicated Bratislava–Dublin route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

@@ -66,35 +66,30 @@ export default function MovingFromFranceToSlovakiaPage() {
         title: "France–Slovakia Route Specialists",
         description:
           "We operate regular departures between France and Slovakia, offering consistent transit times and competitive pricing.",
-        link: "/en/moving-from-france-to-slovakia",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Nationwide French Collection",
         description:
           "We collect from Paris, Lyon, Marseille, Bordeaux, Lille, Strasbourg, and all other French cities.",
-        link: "/en/moving-from-france-to-slovakia",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing Service",
         description:
           "Expert packing using materials suited for long international journeys to keep your belongings safe.",
-        link: "/en/moving-from-france-to-slovakia",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport paperwork so your relocation runs smoothly.",
-        link: "/en/moving-from-france-to-slovakia",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "All items are insured during transport for peace of mind.",
-        link: "/en/moving-from-france-to-slovakia",
       },
       {
         image: "/icons/furniture_icon.svg",

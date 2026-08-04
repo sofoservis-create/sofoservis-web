@@ -66,35 +66,30 @@ export default function MovingFromUSAToSlovakiaPage() {
         title: "Sea Freight Coordination",
         description:
           "We arrange FCL (full container) or LCL (groupage) sea freight from any US port to Europe and onwards to Slovakia.",
-        link: "/en/moving-from-usa-to-slovakia",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Full Customs Management",
         description:
           "Our experienced team handles all EU customs clearance and Transfer of Residence relief applications on your behalf.",
-        link: "/en/moving-from-usa-to-slovakia",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "US Packing Coordination",
         description:
           "We work with partner packing companies in the USA to ensure your belongings are properly packed for ocean transit.",
-        link: "/en/moving-from-usa-to-slovakia",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Door-to-Door Delivery in Slovakia",
         description:
           "From port arrival in Europe to final delivery at your new Slovak address — we handle the complete final leg.",
-        link: "/en/moving-from-usa-to-slovakia",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Marine and Transit Insurance",
         description:
           "We arrange comprehensive marine insurance for your shipment covering the entire USA-to-Slovakia journey.",
-        link: "/en/moving-from-usa-to-slovakia",
       },
       {
         image: "/icons/furniture_icon.svg",

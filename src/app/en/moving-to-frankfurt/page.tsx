@@ -65,19 +65,16 @@ export default function MovingToFrankfurtPage() {
         image: "/icons/truck_icon.svg",
         title: "2-3 Day Delivery to Frankfurt",
         description: "Scheduled departures ensure consistent delivery within 2-3 business days.",
-        link: "/en/moving-to-frankfurt",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Frankfurt Districts",
         description: "We deliver throughout Frankfurt and the Rhine-Main region.",
-        link: "/en/moving-to-frankfurt",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Professional packing for safe delivery to Frankfurt.",
-        link: "/en/moving-to-frankfurt",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -89,13 +86,11 @@ export default function MovingToFrankfurtPage() {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All items insured throughout the journey to Frankfurt.",
-        link: "/en/moving-to-frankfurt",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description: "EU-to-EU move — no customs declarations required.",
-        link: "/en/moving-to-frankfurt",
       },
     ],
   };

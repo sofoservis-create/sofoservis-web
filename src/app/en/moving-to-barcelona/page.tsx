@@ -66,21 +66,18 @@ export default function MovingToBarcelonaPage() {
         title: "5-7 Day Delivery to Barcelona",
         description:
           "Regular departures from Slovakia ensure delivery to Barcelona within 5-7 business days.",
-        link: "/en/moving-to-barcelona",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Barcelona Districts",
         description:
           "We deliver to all Barcelona districts and the wider metropolitan area.",
-        link: "/en/moving-to-barcelona",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Expert packing for safe long-distance delivery to Barcelona.",
-        link: "/en/moving-to-barcelona",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToBarcelonaPage() {
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the journey to Barcelona.",
-        link: "/en/moving-to-barcelona",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description:
           "EU-to-EU move — no customs paperwork required.",
-        link: "/en/moving-to-barcelona",
       },
     ],
   };

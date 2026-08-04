@@ -65,19 +65,16 @@ export default function MovingToCopenhagenPage() {
         image: "/icons/truck_icon.svg",
         title: "4-5 Day Delivery to Copenhagen",
         description: "Scheduled departures ensure delivery from Slovakia within 4-5 business days.",
-        link: "/en/moving-to-copenhagen",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Copenhagen Districts",
         description: "We deliver throughout Copenhagen and the Capital Region of Denmark.",
-        link: "/en/moving-to-copenhagen",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Expert packing for safe long-distance delivery to Copenhagen.",
-        link: "/en/moving-to-copenhagen",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -89,13 +86,11 @@ export default function MovingToCopenhagenPage() {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings insured throughout the journey to Copenhagen.",
-        link: "/en/moving-to-copenhagen",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description: "EU-to-EU move — no customs paperwork required.",
-        link: "/en/moving-to-copenhagen",
       },
     ],
   };

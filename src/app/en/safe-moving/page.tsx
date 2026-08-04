@@ -49,42 +49,36 @@ export default function SafeMovingPage() {
         title: "Small safes (up to 100 kg)",
         description:
           "Wall-mounted and freestanding safes up to 100 kg can usually be relocated by hand with a specialist trolley. Quick and cost-effective — suitable for homes.",
-        link: "/en/safe-moving",
       },
       {
         image: "/icons/safe_icon.svg",
         title: "Medium safes (100–500 kg)",
         description:
           "Safes in this weight range require hydraulic equipment and powered trolleys. The process involves correctly securing the safe, lifting it and moving it in a controlled manner to its new position or into the vehicle.",
-        link: "/en/safe-moving",
       },
       {
         image: "/icons/safe_icon.svg",
         title: "Heavy safes (500 kg – 2 tonnes)",
         description:
           "For safes above 500 kg we deploy specialist motor platforms and hydraulic jacks. We always verify floor load capacity and building structure before the move.",
-        link: "/en/safe-moving",
       },
       {
         image: "/icons/crane_icon.svg",
         title: "Bank & archive vaults (2+ tonnes)",
         description:
           "Very heavy safes, bank vault doors or archive boxes require heavy machinery including cranes. Every job in this category is planned individually with a detailed relocation plan.",
-        link: "/en/safe-moving",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Discreet transport",
         description:
           "We understand that moving a safe is a sensitive matter. Our crew is bound by confidentiality and the entire operation is conducted discreetly. We can also work outside business hours if required.",
-        link: "/en/safe-moving",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Installation & anchoring",
         description:
           "After delivering the safe to its new location we also handle installation and anchoring to the wall or floor where required. We hand over a fully secured and functional safe.",
-        link: "/en/safe-moving",
       },
     ],
   };

@@ -60,31 +60,26 @@ export default function MovingToDenmarkPage() {
         image: "/icons/truck_icon.svg",
         title: "3-4 Day Delivery to Denmark",
         description: "Scheduled departures ensure reliable 3-4 day delivery from Slovakia to Denmark.",
-        link: "/en/moving-to-denmark",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Danish Cities",
         description: "Copenhagen, Aarhus, Odense, Aalborg, and all other Danish destinations.",
-        link: "/en/moving-to-denmark",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Denmark and Slovakia are both EU members — no customs formalities.",
-        link: "/en/moving-to-denmark",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Quality packing materials and expert techniques for this long-distance route.",
-        link: "/en/moving-to-denmark",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured throughout the journey to Denmark.",
-        link: "/en/moving-to-denmark",
       },
       {
         image: "/icons/furniture_icon.svg",

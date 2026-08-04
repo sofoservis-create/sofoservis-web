@@ -75,7 +75,6 @@ export default function PropertyLandJunkRemovalPage() {
         title: "Land Clearing & Preparation",
         description:
           "Complete clearing of land from overgrown vegetation, unwanted trees, and waste. We prepare your property for construction or recultivation.",
-        link: "/en/property-land-junk-removal",
       },
       {
         image: "/icons/vypratavanie_icon.svg",
@@ -240,7 +239,7 @@ export default function PropertyLandJunkRemovalPage() {
 
       <RelatedServices
           title="Related Services"
-          services={[{"title":"Property & Land Junk Removal","description":"Full junk removal of properties, land and overgrown areas.","href":"/en/property-land-junk-removal","icon":"/icons/landscape_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Hazardous Waste Removal","description":"Safe and legal disposal of hazardous materials and old appliances.","href":"/en/hazardous-waste-removal","icon":"/icons/hazmat_icon.svg"},{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
+          services={[{"title":"Property & Land Junk Removal","description":"Full junk removal of properties, land and overgrown areas.","icon":"/icons/landscape_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Hazardous Waste Removal","description":"Safe and legal disposal of hazardous materials and old appliances.","href":"/en/hazardous-waste-removal","icon":"/icons/hazmat_icon.svg"},{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
         />
       <ServicePricing filter={["junk removal", "moving", "demolition"]} lang="en" />
       <TrustBadges lang="en" />

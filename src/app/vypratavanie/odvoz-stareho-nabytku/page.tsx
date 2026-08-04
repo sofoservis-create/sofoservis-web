@@ -58,14 +58,12 @@ export default function OdvozStarehoNabytku() {
         title: "Odvoz starého nábytku",
         description:
           "Odveziemy staré skrine, postele, gauče, stoly, stoličky a akýkoľvek iný nábytok. Rozoberieme veľké kusy priamo u vás a odnesieme ich.",
-        link: "/vypratavanie/odvoz-stareho-nabytku",
       },
       {
         image: "/icons/recycle_icon.svg",
         title: "Ekologická likvidácia",
         description:
           "Všetok odvezený nábytok a spotrebiče spracovávame ekologicky. Funkčné kusy darujeme, ostatné recyklujeme podľa platných predpisov.",
-        link: "/vypratavanie/odvoz-stareho-nabytku",
       },
       {
         image: "/icons/house_icon.svg",

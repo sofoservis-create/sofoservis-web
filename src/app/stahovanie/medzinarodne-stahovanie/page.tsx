@@ -14,7 +14,6 @@ import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import ContactFormSection from "@/components/sections/ContactFormSection";
 import RelatedServices from "@/components/sections/RelatedServices";
-import Link from "next/link";
 
 export const metadata = {
   title: "Medzinárodné sťahovanie do / zo zahraničia | Sofoservis",
@@ -40,46 +39,46 @@ export const metadata = {
   };
 
 const countries = [
-  { name: "Rakúsko", nameGen: "Rakúska", href: "/stahovanie/medzinarodne-stahovanie", distance: "60 km" },
-  { name: "Maďarsko", nameGen: "Maďarska", href: "/stahovanie/medzinarodne-stahovanie", distance: "200 km" },
-  { name: "Česká republika", nameGen: "Českej republiky", href: "/stahovanie/medzinarodne-stahovanie", distance: "130–330 km" },
-  { name: "Poľsko", nameGen: "Poľska", href: "/stahovanie/medzinarodne-stahovanie", distance: "280–650 km" },
-  { name: "Nemecko", nameGen: "Nemecka", href: "/stahovanie/medzinarodne-stahovanie", distance: "620–1 100 km" },
-  { name: "Taliansko", nameGen: "Talianska", href: "/stahovanie/medzinarodne-stahovanie", distance: "850–1 350 km" },
-  { name: "Švajčiarsko", nameGen: "Švajčiarska", href: "/stahovanie/medzinarodne-stahovanie", distance: "950–1 200 km" },
-  { name: "Holandsko", nameGen: "Holandska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 250 km" },
-  { name: "Belgicko", nameGen: "Belgicka", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 350 km" },
-  { name: "Dánsko", nameGen: "Dánska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 350 km" },
-  { name: "Francúzsko", nameGen: "Francúzska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 200–1 400 km" },
-  { name: "Anglicko (UK)", nameGen: "Anglicka (UK)", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 500 km" },
-  { name: "Švédsko", nameGen: "Švédska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 650–1 700 km" },
-  { name: "Španielsko", nameGen: "Španielska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 700–2 100 km" },
-  { name: "Nórsko", nameGen: "Nórska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 800 km" },
-  { name: "Írsko", nameGen: "Írska", href: "/stahovanie/medzinarodne-stahovanie", distance: "1 900 km + loď" },
+  { name: "Rakúsko", nameGen: "Rakúska", distance: "60 km" },
+  { name: "Maďarsko", nameGen: "Maďarska", distance: "200 km" },
+  { name: "Česká republika", nameGen: "Českej republiky", distance: "130–330 km" },
+  { name: "Poľsko", nameGen: "Poľska", distance: "280–650 km" },
+  { name: "Nemecko", nameGen: "Nemecka", distance: "620–1 100 km" },
+  { name: "Taliansko", nameGen: "Talianska", distance: "850–1 350 km" },
+  { name: "Švajčiarsko", nameGen: "Švajčiarska", distance: "950–1 200 km" },
+  { name: "Holandsko", nameGen: "Holandska", distance: "1 250 km" },
+  { name: "Belgicko", nameGen: "Belgicka", distance: "1 350 km" },
+  { name: "Dánsko", nameGen: "Dánska", distance: "1 350 km" },
+  { name: "Francúzsko", nameGen: "Francúzska", distance: "1 200–1 400 km" },
+  { name: "Anglicko (UK)", nameGen: "Anglicka (UK)", distance: "1 500 km" },
+  { name: "Švédsko", nameGen: "Švédska", distance: "1 650–1 700 km" },
+  { name: "Španielsko", nameGen: "Španielska", distance: "1 700–2 100 km" },
+  { name: "Nórsko", nameGen: "Nórska", distance: "1 800 km" },
+  { name: "Írsko", nameGen: "Írska", distance: "1 900 km + loď" },
 ];
 
 const cities = [
-  { name: "Viedeň", nameGen: "Viedne", href: "/stahovanie/medzinarodne-stahovanie", country: "Rakúsko", distance: "60 km" },
-  { name: "Brno", nameGen: "Brna", href: "/stahovanie/medzinarodne-stahovanie", country: "Česká republika", distance: "130 km" },
-  { name: "Budapešť", nameGen: "Budapešti", href: "/stahovanie/medzinarodne-stahovanie", country: "Maďarsko", distance: "200 km" },
-  { name: "Praha", nameGen: "Prahy", href: "/stahovanie/medzinarodne-stahovanie", country: "Česká republika", distance: "330 km" },
-  { name: "Varšava", nameGen: "Varšavy", href: "/stahovanie/medzinarodne-stahovanie", country: "Poľsko", distance: "650 km" },
-  { name: "Mníchov", nameGen: "Mníchova", href: "/stahovanie/medzinarodne-stahovanie", country: "Nemecko", distance: "620 km" },
-  { name: "Zürich", nameGen: "Zürichu", href: "/stahovanie/medzinarodne-stahovanie", country: "Švajčiarsko", distance: "950 km" },
-  { name: "Berlín", nameGen: "Berlína", href: "/stahovanie/medzinarodne-stahovanie", country: "Nemecko", distance: "900 km" },
-  { name: "Frankfurt", nameGen: "Frankfurtu", href: "/stahovanie/medzinarodne-stahovanie", country: "Nemecko", distance: "900 km" },
-  { name: "Amsterdam", nameGen: "Amsterdamu", href: "/stahovanie/medzinarodne-stahovanie", country: "Holandsko", distance: "1 250 km" },
-  { name: "Brusel", nameGen: "Bruselu", href: "/stahovanie/medzinarodne-stahovanie", country: "Belgicko", distance: "1 350 km" },
-  { name: "Hamburg", nameGen: "Hamburgu", href: "/stahovanie/medzinarodne-stahovanie", country: "Nemecko", distance: "1 100 km" },
-  { name: "Paríž", nameGen: "Paríža", href: "/stahovanie/medzinarodne-stahovanie", country: "Francúzsko", distance: "1 400 km" },
-  { name: "Dublin", nameGen: "Dublinu", href: "/stahovanie/medzinarodne-stahovanie", country: "Írsko", distance: "1 900 km + loď" },
-  { name: "Londýn", nameGen: "Londýna", href: "/stahovanie/medzinarodne-stahovanie", country: "UK", distance: "1 500 km" },
-  { name: "Barcelona", nameGen: "Barcelony", href: "/stahovanie/medzinarodne-stahovanie", country: "Španielsko", distance: "1 850 km" },
-  { name: "Rím", nameGen: "Ríma", href: "/stahovanie/medzinarodne-stahovanie", country: "Taliansko", distance: "1 350 km" },
-  { name: "Lisabon", nameGen: "Lisabonu", href: "/stahovanie/medzinarodne-stahovanie", country: "Portugalsko", distance: "2 800 km" },
-  { name: "Štokholm", nameGen: "Štokholmu", href: "/stahovanie/medzinarodne-stahovanie", country: "Švédsko", distance: "1 700 km" },
-  { name: "Oslo", nameGen: "Osla", href: "/stahovanie/medzinarodne-stahovanie", country: "Nórsko", distance: "1 800 km" },
-  { name: "Kodaň", nameGen: "Kodane", href: "/stahovanie/medzinarodne-stahovanie", country: "Dánsko", distance: "1 350 km" },
+  { name: "Viedeň", nameGen: "Viedne", country: "Rakúsko", distance: "60 km" },
+  { name: "Brno", nameGen: "Brna", country: "Česká republika", distance: "130 km" },
+  { name: "Budapešť", nameGen: "Budapešti", country: "Maďarsko", distance: "200 km" },
+  { name: "Praha", nameGen: "Prahy", country: "Česká republika", distance: "330 km" },
+  { name: "Varšava", nameGen: "Varšavy", country: "Poľsko", distance: "650 km" },
+  { name: "Mníchov", nameGen: "Mníchova", country: "Nemecko", distance: "620 km" },
+  { name: "Zürich", nameGen: "Zürichu", country: "Švajčiarsko", distance: "950 km" },
+  { name: "Berlín", nameGen: "Berlína", country: "Nemecko", distance: "900 km" },
+  { name: "Frankfurt", nameGen: "Frankfurtu", country: "Nemecko", distance: "900 km" },
+  { name: "Amsterdam", nameGen: "Amsterdamu", country: "Holandsko", distance: "1 250 km" },
+  { name: "Brusel", nameGen: "Bruselu", country: "Belgicko", distance: "1 350 km" },
+  { name: "Hamburg", nameGen: "Hamburgu", country: "Nemecko", distance: "1 100 km" },
+  { name: "Paríž", nameGen: "Paríža", country: "Francúzsko", distance: "1 400 km" },
+  { name: "Dublin", nameGen: "Dublinu", country: "Írsko", distance: "1 900 km + loď" },
+  { name: "Londýn", nameGen: "Londýna", country: "UK", distance: "1 500 km" },
+  { name: "Barcelona", nameGen: "Barcelony", country: "Španielsko", distance: "1 850 km" },
+  { name: "Rím", nameGen: "Ríma", country: "Taliansko", distance: "1 350 km" },
+  { name: "Lisabon", nameGen: "Lisabonu", country: "Portugalsko", distance: "2 800 km" },
+  { name: "Štokholm", nameGen: "Štokholmu", country: "Švédsko", distance: "1 700 km" },
+  { name: "Oslo", nameGen: "Osla", country: "Nórsko", distance: "1 800 km" },
+  { name: "Kodaň", nameGen: "Kodane", country: "Dánsko", distance: "1 350 km" },
 ];
 
 export default function MedzinarodneStahovaniePage() {
@@ -116,28 +115,24 @@ export default function MedzinarodneStahovaniePage() {
         title: "Sťahovanie po celej Európe",
         description:
           "Poskytujeme služby sťahovania do všetkých krajín Európskej únie aj mimo nej. Špecializujeme sa na trasy do Česka, Rakúska, Nemecka a ďalších krajín.",
-        link: "/stahovanie/medzinarodne-stahovanie",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Colné a právne formality",
         description:
           "Zabezpečujeme všetky potrebné dokumenty, colné vyhlásenia a povolenia pre medzinárodný presun. Poradíme s právnymi požiadavkami cieľovej krajiny.",
-        link: "/stahovanie/medzinarodne-stahovanie",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Špecializované balenie pre dlhé trasy",
         description:
           "Používame zosilnené balenie a ochranu pre medzinárodné trasy. Každý predmet je individuálne chránený proti poškodeniu počas dlhej prepravy.",
-        link: "/stahovanie/medzinarodne-stahovanie",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Poistenie a bezpečnosť",
         description:
           "Komplexné poistenie prepravovaného majetku počas celej medzinárodnej prepravy. Poskytujeme finančnú ochranu a záruky bezpečnosti.",
-        link: "/stahovanie/medzinarodne-stahovanie",
       },
     ],
   };
@@ -242,18 +237,15 @@ export default function MedzinarodneStahovaniePage() {
               </summary>
               <ul className="border-t border-gray-200 divide-y divide-gray-100">
                 {countries.map((country) => (
-                  <li key={country.href}>
-                    <Link
-                      href={country.href}
-                      className="flex items-baseline justify-between gap-4 px-5 py-3 hover:bg-gray-50 transition-colors group/item"
-                    >
-                      <span className="font-medium text-gray-900 group-hover/item:text-blue-600">
+                  <li key={country.name}>
+                    <div className="flex items-baseline justify-between gap-4 px-5 py-3">
+                      <span className="font-medium text-gray-900">
                         Sťahovanie do {country.nameGen}
                       </span>
                       <span className="text-sm text-gray-500 whitespace-nowrap">
                         z Bratislavy: {country.distance}
                       </span>
-                    </Link>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -286,18 +278,15 @@ export default function MedzinarodneStahovaniePage() {
               </summary>
               <ul className="border-t border-gray-200 divide-y divide-gray-100">
                 {cities.map((city) => (
-                  <li key={city.href}>
-                    <Link
-                      href={city.href}
-                      className="flex items-baseline justify-between gap-4 px-5 py-3 hover:bg-gray-50 transition-colors group/item"
-                    >
-                      <span className="font-medium text-gray-900 group-hover/item:text-blue-600">
+                  <li key={city.name}>
+                    <div className="flex items-baseline justify-between gap-4 px-5 py-3">
+                      <span className="font-medium text-gray-900">
                         Sťahovanie do {city.nameGen}
                       </span>
                       <span className="text-sm text-gray-400 whitespace-nowrap">
                         {city.country} · {city.distance}
                       </span>
-                    </Link>
+                    </div>
                   </li>
                 ))}
               </ul>
@@ -349,8 +338,8 @@ export default function MedzinarodneStahovaniePage() {
       <RelatedServices
         title="Súvisiace služby"
         services={[
-          {"title":"Sťahovanie na Slovensko","description":"Vraciate sa na Slovensko zo zahraničia? Prehľad všetkých trás.","href":"/stahovanie/medzinarodne-stahovanie","icon":"/icons/globe_icon.svg"},
-          {"title":"Sťahovanie zo Slovenska","description":"Odchádzate zo Slovenska do zahraničia? Pozrite všetky trasy.","href":"/stahovanie/medzinarodne-stahovanie","icon":"/icons/globe_icon.svg"},
+          {"title":"Sťahovanie na Slovensko","description":"Vraciate sa na Slovensko zo zahraničia? Prehľad všetkých trás.","icon":"/icons/globe_icon.svg"},
+          {"title":"Sťahovanie zo Slovenska","description":"Odchádzate zo Slovenska do zahraničia? Pozrite všetky trasy.","icon":"/icons/globe_icon.svg"},
           {"title":"Sťahovanie bytov a domov","description":"Spoľahlivé sťahovanie bytov a rodinných domov.","href":"/stahovanie/stahovanie-bytov-domov","icon":"/icons/house_icon.svg"},
           {"title":"Sťahovanie kancelárií","description":"Rýchle sťahovanie firiem s minimálnym prestojom.","href":"/stahovanie/stahovanie-kancelarii-firiem","icon":"/icons/briefcase_icon.svg"},
         ]}

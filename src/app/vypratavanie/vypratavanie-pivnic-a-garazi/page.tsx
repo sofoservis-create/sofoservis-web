@@ -58,14 +58,12 @@ export default function VypratavaniePivnicGaraziPage() {
         title: "Vypratávanie pivničných priestorov",
         description:
           "Kompletné vypratanie pivníc vrátane starého nábytku, spotrebičov, konzerv a iných predmetov. Postaráme sa o dezinfekciu a vyčistenie priestoru.",
-        link: "/vypratavanie/vypratavanie-pivnic-a-garazi",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Vypratávanie garáží a dielní",
         description:
           "Vyčistíme garáže, dielne a technické miestnosti od starých nástrojov, náhradných dielov, pneumatík a ropných produktov s ich bezpečnou likvidáciou.",
-        link: "/vypratavanie/vypratavanie-pivnic-a-garazi",
       },
       {
         image: "/icons/briefcase_icon.svg",

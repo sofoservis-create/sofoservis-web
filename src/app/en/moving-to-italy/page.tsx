@@ -60,31 +60,26 @@ export default function MovingToItalyPage() {
         image: "/icons/truck_icon.svg",
         title: "3-4 Day Delivery to Italy",
         description: "Regular routes from Slovakia to Italy — 3-4 day delivery depending on destination.",
-        link: "/en/moving-to-italy",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Italian Regions",
         description: "Rome, Milan, Turin, Florence, Venice, Naples, and all other Italian destinations.",
-        link: "/en/moving-to-italy",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Italy and Slovakia are both EU members — no customs paperwork required.",
-        link: "/en/moving-to-italy",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Expert packing for safe delivery across the Alps to Italy.",
-        link: "/en/moving-to-italy",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured throughout the full journey to Italy.",
-        link: "/en/moving-to-italy",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -158,7 +153,7 @@ export default function MovingToItalyPage() {
         title="Related Services"
         services={[
           { title: "Moving to Rome", description: "Dedicated Rome route page.", href: "/en/moving-to-rome", icon: "/icons/globe_icon.svg" },
-          { title: "Moving to Milan", description: "Also moving to Milan?", href: "/en/moving-to-milan", icon: "/icons/globe_icon.svg" },
+          { title: "Moving to Milan", description: "Also moving to Milan?", icon: "/icons/globe_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

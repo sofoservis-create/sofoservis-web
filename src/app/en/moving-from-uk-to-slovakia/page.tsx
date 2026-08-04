@@ -66,35 +66,30 @@ export default function MovingFromUKToSlovakiaPage() {
         title: "Post-Brexit Customs Expertise",
         description:
           "Full guidance and preparation of all UK-to-EU customs documentation. We ensure your belongings enter Slovakia without delays or unexpected charges.",
-        link: "/en/moving-from-uk-to-slovakia",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Door-to-Door Service",
         description:
           "We collect from your UK address and deliver directly to your new home in Slovakia. No depots, no hassle.",
-        link: "/en/moving-from-uk-to-slovakia",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "Our trained packers protect all your items using high-quality materials suitable for long international journeys.",
-        link: "/en/moving-from-uk-to-slovakia",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "All your belongings are insured throughout the entire journey from the UK to Slovakia.",
-        link: "/en/moving-from-uk-to-slovakia",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Nationwide UK Collection",
         description:
           "We collect from London, Manchester, Birmingham, Edinburgh, and anywhere else in the UK.",
-        link: "/en/moving-from-uk-to-slovakia",
       },
       {
         image: "/icons/furniture_icon.svg",

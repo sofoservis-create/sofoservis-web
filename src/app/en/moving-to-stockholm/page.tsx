@@ -65,19 +65,16 @@ export default function MovingToStockholmPage() {
         image: "/icons/truck_icon.svg",
         title: "5-7 Day Delivery to Stockholm",
         description: "Regular Scandinavian departures ensure delivery within 5-7 business days.",
-        link: "/en/moving-to-stockholm",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Stockholm Areas",
         description: "We deliver throughout Stockholm and the wider Stockholm County.",
-        link: "/en/moving-to-stockholm",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Expert packing for safe long-distance Scandinavian delivery.",
-        link: "/en/moving-to-stockholm",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -89,13 +86,11 @@ export default function MovingToStockholmPage() {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings insured throughout the journey to Stockholm.",
-        link: "/en/moving-to-stockholm",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description: "EU-to-EU move — no customs paperwork required.",
-        link: "/en/moving-to-stockholm",
       },
     ],
   };

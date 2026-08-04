@@ -6,7 +6,9 @@ import Container from "@/components/ui/Container";
 interface ServiceItem {
   title: string;
   description: string;
-  href: string;
+  /** Omit when no dedicated page exists — the item then renders as plain,
+   *  non-clickable content instead of linking back to the current page. */
+  href?: string;
   icon: string;
 }
 
@@ -35,32 +37,64 @@ export default function RelatedServices({
           {title}
         </h3>
         <div className={gridClass}>
-          {services.map((service, i) => (
-            <Link
-              key={i}
-              href={service.href}
-              className="group flex gap-4 items-start p-5 bg-white rounded-xl border border-gray-200 hover:border-accent-500 hover:shadow-md transition-all duration-200 h-full"
-            >
-              <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-lg bg-accent-50 group-hover:bg-accent-500 transition-colors duration-200">
-                <Image
-                  src={service.icon}
-                  alt={service.title}
-                  width={40}
-                  height={40}
-                  sizes="40px"
-                  className="w-10 h-10"
-                />
-              </div>
-              <div className="flex flex-col flex-1">
-                <h3 className="font-semibold text-primary-900 group-hover:text-accent-600 transition-colors duration-200 mb-1">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-primary-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </Link>
-          ))}
+          {services.map((service, i) => {
+            const inner = (
+              <>
+                <div
+                  className={`flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-lg bg-accent-50${
+                    service.href
+                      ? " group-hover:bg-accent-500 transition-colors duration-200"
+                      : ""
+                  }`}
+                >
+                  <Image
+                    src={service.icon}
+                    alt={service.title}
+                    width={40}
+                    height={40}
+                    sizes="40px"
+                    className="w-10 h-10"
+                  />
+                </div>
+                <div className="flex flex-col flex-1">
+                  <h3
+                    className={`font-semibold text-primary-900 mb-1${
+                      service.href
+                        ? " group-hover:text-accent-600 transition-colors duration-200"
+                        : ""
+                    }`}
+                  >
+                    {service.title}
+                  </h3>
+                  <p className="text-sm text-primary-600 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              </>
+            );
+
+            // No destination — render the same card, just not clickable.
+            if (!service.href) {
+              return (
+                <div
+                  key={i}
+                  className="flex gap-4 items-start p-5 bg-white rounded-xl border border-gray-200 h-full"
+                >
+                  {inner}
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={i}
+                href={service.href}
+                className="group flex gap-4 items-start p-5 bg-white rounded-xl border border-gray-200 hover:border-accent-500 hover:shadow-md transition-all duration-200 h-full"
+              >
+                {inner}
+              </Link>
+            );
+          })}
         </div>
       </Container>
     </section>

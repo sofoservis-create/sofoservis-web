@@ -66,35 +66,30 @@ export default function MovingFromSlovakiaToFrancePage() {
         title: "Regular Slovakia–France Departures",
         description:
           "We operate scheduled services between Slovakia and France, keeping transit times and prices competitive.",
-        link: "/en/moving-to-france",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Delivery Throughout France",
         description:
           "We deliver to Paris, Lyon, Marseille, Bordeaux, Toulouse, Strasbourg, Lille, and all French cities.",
-        link: "/en/moving-to-france",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "We use quality materials suited for long international journeys to keep your items safe.",
-        link: "/en/moving-to-france",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport paperwork so your relocation runs without delays.",
-        link: "/en/moving-to-france",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "All items are insured during transport for complete peace of mind.",
-        link: "/en/moving-to-france",
       },
       {
         image: "/icons/furniture_icon.svg",

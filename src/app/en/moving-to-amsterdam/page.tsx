@@ -66,21 +66,18 @@ export default function MovingToAmsterdamPage() {
         title: "3-5 Day Delivery to Amsterdam",
         description:
           "Scheduled departures ensure reliable delivery from Slovakia to Amsterdam within 3-5 business days.",
-        link: "/en/moving-to-amsterdam",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Amsterdam Areas",
         description:
           "We deliver throughout Amsterdam and the wider metropolitan region.",
-        link: "/en/moving-to-amsterdam",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Quality packing materials and expert techniques for long-distance delivery.",
-        link: "/en/moving-to-amsterdam",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToAmsterdamPage() {
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the journey to Amsterdam.",
-        link: "/en/moving-to-amsterdam",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description:
           "EU-to-EU move — no customs formalities required.",
-        link: "/en/moving-to-amsterdam",
       },
     ],
   };
@@ -169,7 +164,7 @@ export default function MovingToAmsterdamPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Netherlands", description: "Full Slovakia-to-Netherlands coverage.", href: "/en/moving-to-netherlands", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Amsterdam", description: "Dedicated Bratislava–Amsterdam route page.", href: "/en/moving-to-amsterdam", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Amsterdam", description: "Dedicated Bratislava–Amsterdam route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

@@ -105,7 +105,6 @@ export default function OfficeJunkRemovalPage() {
               image: "/icons/briefcase_icon.svg",
               title: "Office Furniture & Equipment",
               description: "We remove desks, chairs, cabinets, and shelving. We ensure ecological disposal or donation of functional pieces.",
-              link: "/en/office-junk-removal",
             },
             {
               image: "/icons/recycle_icon.svg",
@@ -117,19 +116,16 @@ export default function OfficeJunkRemovalPage() {
               image: "/icons/house_icon.svg",
               title: "Archives & Documents",
               description: "We help with removal of archive materials. On request, we can arrange secure document shredding.",
-              link: "/en/office-junk-removal",
             },
             {
               image: "/icons/truck_icon.svg",
               title: "Fast & Flexible Scheduling",
               description: "We work during weekends and holidays to minimize disruption. We plan the project according to your business needs.",
-              link: "/en/office-junk-removal",
             },
             {
               image: "/icons/vypratavanie_icon.svg",
               title: "Final Cleaning",
               description: "After junk removal, we perform final cleaning so the space is ready for the next tenant or renovation.",
-              link: "/en/office-junk-removal",
             },
             {
               image: "/icons/landscape_icon.svg",

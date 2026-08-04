@@ -66,35 +66,30 @@ export default function MovingFromGermanyToSlovakiaPage() {
         title: "Regular Routes from Germany",
         description:
           "We run regular scheduled services between Germany and Slovakia, minimising waiting times and keeping costs low.",
-        link: "/en/moving-from-germany-to-slovakia",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Nationwide German Collection",
         description:
           "We collect from Munich, Berlin, Hamburg, Frankfurt, Cologne, Stuttgart, and everywhere else in Germany.",
-        link: "/en/moving-from-germany-to-slovakia",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing Service",
         description:
           "Our team can professionally pack your entire household using materials designed for long-distance moves.",
-        link: "/en/moving-from-germany-to-slovakia",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport documentation so you can focus on settling into your new Slovak home.",
-        link: "/en/moving-from-germany-to-slovakia",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "All belongings are insured throughout the entire journey from Germany to Slovakia.",
-        link: "/en/moving-from-germany-to-slovakia",
       },
       {
         image: "/icons/furniture_icon.svg",

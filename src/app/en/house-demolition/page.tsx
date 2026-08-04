@@ -57,7 +57,6 @@ export default function HouseDemolitionPage() {
         title: "Complete Building Demolition",
         description:
           "Complete demolition of family houses, apartment buildings, and industrial structures. We use modern technologies and procedures for controlled demolition.",
-        link: "/en/house-demolition",
       },
       {
         image: "/icons/hammer_icon.svg",
@@ -85,7 +84,6 @@ export default function HouseDemolitionPage() {
         title: "Permits & Safety",
         description:
           "We arrange all necessary building permits, structural assessments, and strictly follow safety protocols during all demolition work.",
-        link: "/en/house-demolition",
       },
       {
         image: "/icons/recycle_icon.svg",

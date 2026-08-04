@@ -66,21 +66,18 @@ export default function MovingToPraguePage() {
         title: "1-2 Day Delivery to Prague",
         description:
           "Regular departures from Slovakia ensure delivery to Prague within 1-2 business days.",
-        link: "/en/moving-to-prague",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Prague Districts Covered",
         description:
           "We deliver to all Prague districts and the surrounding metropolitan area.",
-        link: "/en/moving-to-prague",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing using quality materials for safe delivery to Prague.",
-        link: "/en/moving-to-prague",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToPraguePage() {
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the journey from Slovakia to Prague.",
-        link: "/en/moving-to-prague",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description:
           "EU-to-EU move — no customs paperwork required.",
-        link: "/en/moving-to-prague",
       },
     ],
   };
@@ -168,7 +163,7 @@ export default function MovingToPraguePage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving Bratislava to Prague", description: "Dedicated Bratislava–Prague route page.", href: "/en/moving-to-prague", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Prague", description: "Dedicated Bratislava–Prague route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Moving from Slovakia", description: "Overview of all routes from Slovakia abroad.", href: "/en/moving-from-slovakia", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

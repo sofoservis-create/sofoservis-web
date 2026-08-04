@@ -60,31 +60,26 @@ export default function MovingToCzechRepublicPage() {
         image: "/icons/truck_icon.svg",
         title: "1-2 Day Delivery",
         description: "Prague in 1-2 days, Brno often in a single day from Bratislava.",
-        link: "/en/moving-to-czech-republic",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Czech Cities",
         description: "Prague, Brno, Ostrava, Plzeň, Olomouc, and all other Czech destinations.",
-        link: "/en/moving-to-czech-republic",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Czech Republic and Slovakia are both EU members — no customs paperwork.",
-        link: "/en/moving-to-czech-republic",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Professional packing and careful handling for all your belongings.",
-        link: "/en/moving-to-czech-republic",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured throughout the journey.",
-        link: "/en/moving-to-czech-republic",
       },
       {
         image: "/icons/furniture_icon.svg",

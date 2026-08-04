@@ -107,21 +107,18 @@ export default function HeavyLoadsMovingPage() {
         title: "Specialized Moving Techniques",
         description:
           "For moving, we use advanced techniques such as hydraulic platforms, special jacks, pulley systems, and scaffolding constructions for the safe movement of heavy loads.",
-        link: "/en/moving-heavy-loads",
       },
       {
         image: "/icons/hazmat_icon.svg", // Perfect for difficult access solutions
         title: "Solutions for Difficult Access",
         description:
           "We have experience with moving items in spaces with limited access. If needed, we can provide a crane, lowering items through balconies, or specialized scaffolding.",
-        link: "/en/moving-heavy-loads",
       },
       {
         image: "/icons/insurance_icon.svg", // Perfect for insurance services
         title: "Oversized Item Insurance",
         description:
           "All heavy items are fully insured during transport. We prioritize maximum safety and take responsibility for secure handling and transportation.",
-        link: "/en/moving-heavy-loads",
       },
     ],
   };

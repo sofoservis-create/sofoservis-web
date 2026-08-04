@@ -88,7 +88,6 @@ export default function OfficeMovingPage() {
         title: "Planning & Coordination",
         description:
           "We prepare a detailed moving schedule that minimizes your company's downtime. We coordinate the entire process including logistics and communication.",
-        link: "/en/office-moving",
       },
       {
         image: "/icons/wrench_icon.svg", // Perfect for furniture assembly
@@ -116,7 +115,6 @@ export default function OfficeMovingPage() {
         title: "Document & Archive Moving",
         description:
           "We systematically pack, label, and organize documents and archives. We ensure all documents remain organized and easily accessible after relocation.",
-        link: "/en/office-moving",
       },
       {
         image: "/icons/recycle_icon.svg", // Perfect for disposal services

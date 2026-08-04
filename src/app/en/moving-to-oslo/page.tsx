@@ -65,31 +65,26 @@ export default function MovingToOsloPage() {
         image: "/icons/document_icon.svg",
         title: "Norwegian Customs Handled",
         description: "We prepare all Norwegian customs documentation and guide you through the import process.",
-        link: "/en/moving-to-oslo",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "5-8 Day Delivery to Oslo",
         description: "Regular departures ensure delivery from Slovakia to Oslo within 5-8 business days.",
-        link: "/en/moving-to-oslo",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Oslo Areas",
         description: "We deliver throughout Oslo and the wider metropolitan region.",
-        link: "/en/moving-to-oslo",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Quality packing for safe delivery to Oslo.",
-        link: "/en/moving-to-oslo",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description: "All belongings insured throughout the journey to Oslo.",
-        link: "/en/moving-to-oslo",
       },
       {
         image: "/icons/furniture_icon.svg",

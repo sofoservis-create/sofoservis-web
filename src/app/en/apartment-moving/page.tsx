@@ -86,7 +86,6 @@ export default function ApartmentMovingPage() {
         title: "Property Packing & Protection",
         description:
           "We professionally pack your belongings using quality packing materials. Sensitive items receive special protection to prevent damage during transport.",
-        link: "/en/apartment-moving",
       },
       {
         image: "/icons/wrench_icon.svg", // Perfect for furniture assembly
@@ -114,7 +113,6 @@ export default function ApartmentMovingPage() {
         title: "Apartment Building Specialists",
         description:
           "We specialize in moving within apartment buildings. We efficiently handle narrow staircases, small elevators, and other obstacles typical for apartment buildings.",
-        link: "/en/apartment-moving",
       },
       {
         image: "/icons/vypratavanie_icon.svg", // Perfect for furniture disposal

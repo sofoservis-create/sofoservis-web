@@ -48,7 +48,6 @@ export default function BuranieDemlaciaPage() {
         title: "Demolácia celých budov",
         description:
           "Kompletná demolácia rodinných domov, bytových domov a priemyselných objektov. Používame moderné technológie a postupy pre kontrolovanú demoláciu.",
-        link: "/buracie-prace/buranie-demolacia-domov",
       },
       {
         image: "/icons/hammer_icon.svg",
@@ -76,7 +75,6 @@ export default function BuranieDemlaciaPage() {
         title: "Povolenia a bezpečnosť",
         description:
           "Zabezpečujeme všetky potrebné stavebné povolenia, statické posudky a dodržiavame prísne bezpečnostné protokoly pri všetkých demolačných prácach.",
-        link: "/buracie-prace/buranie-demolacia-domov",
       },
       {
         image: "/icons/recycle_icon.svg",

@@ -77,7 +77,6 @@ export default function HomeJunkRemovalPage() {
         title: "Complete Home Junk Removal",
         description:
           "We clear entire apartments or houses including all rooms, basements, and attics. We sort items and handle disposal or donation.",
-        link: "/en/home-junk-removal",
       },
       {
         image: "/icons/vypratavanie_icon.svg",
@@ -244,7 +243,7 @@ export default function HomeJunkRemovalPage() {
 
       <RelatedServices
           title="Related Services"
-          services={[{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"},{"title":"Old Furniture Removal","description":"Fast pickup and eco-friendly disposal of old furniture.","href":"/en/furniture-removal","icon":"/icons/truck_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Hazardous Waste Removal","description":"Safe and legal disposal of hazardous materials and old appliances.","href":"/en/hazardous-waste-removal","icon":"/icons/hazmat_icon.svg"}]}
+          services={[{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","icon":"/icons/vypratavanie_icon.svg"},{"title":"Old Furniture Removal","description":"Fast pickup and eco-friendly disposal of old furniture.","href":"/en/furniture-removal","icon":"/icons/truck_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Hazardous Waste Removal","description":"Safe and legal disposal of hazardous materials and old appliances.","href":"/en/hazardous-waste-removal","icon":"/icons/hazmat_icon.svg"}]}
         />
       <ServicePricing filter={["junk removal", "moving", "demolition"]} lang="en" />
       <TrustBadges lang="en" />

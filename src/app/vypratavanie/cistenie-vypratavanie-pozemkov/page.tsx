@@ -49,7 +49,6 @@ export default function CisteniePozemkovPage() {
         title: "Čistenie a úprava pozemkov",
         description:
           "Kompletné vyčistenie pozemkov od náletových drevín, nežiaducej vegetácie a odpadu. Pripravíme váš pozemok na výstavbu alebo rekultiváciu.",
-        link: "/vypratavanie/cistenie-vypratavanie-pozemkov",
       },
       {
         image: "/icons/vypratavanie_icon.svg",

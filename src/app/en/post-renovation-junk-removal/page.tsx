@@ -117,13 +117,11 @@ export default function PostRenovationJunkRemovalPage() {
               image: "/icons/vypratavanie_icon.svg",
               title: "Final Site Cleanup",
               description: "After waste removal, we perform basic cleanup — sweeping and removing dust and construction residue.",
-              link: "/en/post-renovation-junk-removal",
             },
             {
               image: "/icons/truck_icon.svg",
               title: "Fast Turnaround",
               description: "We want you to enjoy your new space. We can often arrange pickup within 24-48 hours of booking.",
-              link: "/en/post-renovation-junk-removal",
             },
             {
               image: "/icons/recycle_icon.svg",

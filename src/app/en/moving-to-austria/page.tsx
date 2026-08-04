@@ -66,21 +66,18 @@ export default function MovingFromSlovakiaToAustriaPage() {
         title: "Fast Bratislava–Vienna Service",
         description:
           "The short distance between Bratislava and Vienna allows for very fast turnaround, often same-day or next-day.",
-        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Delivery Throughout Austria",
         description:
           "We deliver to Vienna, Graz, Linz, Salzburg, Innsbruck, Klagenfurt, and all other Austrian destinations.",
-        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "We professionally pack your belongings to ensure everything arrives safely at your new Austrian home.",
-        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingFromSlovakiaToAustriaPage() {
         title: "Fully Insured Transport",
         description:
           "Your belongings are covered by transport insurance for the entire journey.",
-        link: "/en/moving-to-austria",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs Hassle",
         description:
           "EU-to-EU move — no customs declarations required. A smooth, straightforward relocation.",
-        link: "/en/moving-to-austria",
       },
     ],
   };

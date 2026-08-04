@@ -60,31 +60,26 @@ export default function MovingToBelgiumPage() {
         image: "/icons/truck_icon.svg",
         title: "2-3 Day Delivery to Belgium",
         description: "Scheduled departures ensure reliable 2-3 day delivery from Slovakia to Belgium.",
-        link: "/en/moving-to-belgium",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Belgian Cities",
         description: "Brussels, Antwerp, Ghent, Bruges, Liège, and all other Belgian destinations.",
-        link: "/en/moving-to-belgium",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Belgium and Slovakia are both EU members — no customs formalities for personal goods.",
-        link: "/en/moving-to-belgium",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Quality packing materials and expert techniques for long-distance delivery.",
-        link: "/en/moving-to-belgium",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured throughout the journey to Belgium.",
-        link: "/en/moving-to-belgium",
       },
       {
         image: "/icons/furniture_icon.svg",

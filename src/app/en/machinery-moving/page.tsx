@@ -49,42 +49,36 @@ export default function MachineryMovingPage() {
         title: "CNC Machines & Machining Centres",
         description:
           "CNC machines are sensitive to shocks and improper handling. Before disassembly we document the machine's condition and lock all moving parts securely.",
-        link: "/en/machinery-moving",
       },
       {
         image: "/icons/heavy_machinery_icon.svg",
         title: "Production Lines & Automated Equipment",
         description:
           "Relocating a production line requires coordination with your technicians and electricians. We plan the job so the line is back in operation at the new site as quickly as possible — including weekend and shutdown moves.",
-        link: "/en/machinery-moving",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "ATMs & Financial Equipment",
         description:
           "ATM relocation demands discretion, security measures and coordination with the bank or leasing company. We have experience moving ATMs into spaces with restricted access.",
-        link: "/en/machinery-moving",
       },
       {
         image: "/icons/crane_icon.svg",
         title: "Printing & Reprographic Machines",
         description:
           "Offset printing presses, cutters and other reprographic equipment can weigh several tonnes and have tight geometric alignment requirements. After relocation we can arrange levelling and re-calibration.",
-        link: "/en/machinery-moving",
       },
       {
         image: "/icons/heavy_machinery_icon.svg",
         title: "Industrial Presses & Hydraulic Equipment",
         description:
           "Hydraulic presses, press brakes and other heavy industrial machinery are relocated using hydraulic cylinders and heavy-duty platforms. Loads of several tens of tonnes are within our capability.",
-        link: "/en/machinery-moving",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Industrial HVAC & Air Handling Units",
         description:
           "Large industrial air conditioning and air handling units on rooftops or in plant rooms are another area where we assist with safe disassembly and relocation.",
-        link: "/en/machinery-moving",
       },
     ],
   };

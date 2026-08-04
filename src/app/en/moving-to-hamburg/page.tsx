@@ -65,19 +65,16 @@ export default function MovingToHamburgPage() {
         image: "/icons/truck_icon.svg",
         title: "3-4 Day Delivery to Hamburg",
         description: "Scheduled departures ensure delivery from Slovakia to Hamburg within 3-4 business days.",
-        link: "/en/moving-to-hamburg",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Hamburg Boroughs",
         description: "We deliver to all Hamburg boroughs and residential districts.",
-        link: "/en/moving-to-hamburg",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Professional packing for safe delivery to Hamburg.",
-        link: "/en/moving-to-hamburg",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -89,13 +86,11 @@ export default function MovingToHamburgPage() {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All items insured throughout the journey to Hamburg.",
-        link: "/en/moving-to-hamburg",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description: "EU-to-EU move — no customs declarations required.",
-        link: "/en/moving-to-hamburg",
       },
     ],
   };

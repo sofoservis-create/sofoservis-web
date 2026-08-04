@@ -19,6 +19,9 @@ export interface FAQProps {
   items?: FAQItem[];
   showCallToAction?: boolean;
   callToActionText?: string;
+  /** Override the CTA destination. Useful on pages that already contain a
+   *  contact form so the button scrolls to it instead of navigating away. */
+  callToActionHref?: string;
   expandableGroup?: FAQExpandableGroup;
 }
 
@@ -28,6 +31,7 @@ export default function FAQ({
   items = [],
   showCallToAction = true,
   callToActionText = "Máte ďalšie otázky? Získajte nezáväznú ponuku",
+  callToActionHref,
   expandableGroup,
 }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -170,7 +174,7 @@ export default function FAQ({
 
         {showCallToAction && (items.length > 0 || expandableGroup) && (
           <div className="mt-8">
-            <CallToAction text={callToActionText} />
+            <CallToAction text={callToActionText} href={callToActionHref} />
           </div>
         )}
       </Container>

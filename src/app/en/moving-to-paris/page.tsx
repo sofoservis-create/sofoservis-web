@@ -66,21 +66,18 @@ export default function MovingToParis() {
         title: "4-5 Day Delivery to Paris",
         description:
           "Regular departures ensure reliable delivery from Slovakia to Paris within 4-5 business days.",
-        link: "/en/moving-to-paris",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Paris Arrondissements",
         description:
           "We deliver to all 20 arrondissements and the wider Île-de-France region.",
-        link: "/en/moving-to-paris",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Expert packing for safe long-distance delivery to Paris.",
-        link: "/en/moving-to-paris",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToParis() {
         title: "Insured Transport",
         description:
           "All items are insured throughout the journey to Paris.",
-        link: "/en/moving-to-paris",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description:
           "EU-to-EU move — no customs paperwork required.",
-        link: "/en/moving-to-paris",
       },
     ],
   };
@@ -169,7 +164,7 @@ export default function MovingToParis() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to France", description: "Full Slovakia-to-France coverage.", href: "/en/moving-to-france", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Paris", description: "Dedicated Bratislava–Paris route page.", href: "/en/moving-to-paris", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Paris", description: "Dedicated Bratislava–Paris route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

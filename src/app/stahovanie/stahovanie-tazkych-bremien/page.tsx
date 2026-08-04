@@ -57,21 +57,18 @@ export default function StahovanieTazkychBremienPage() {
         title: "Sťahovanie pianín a klavírov",
         description:
           "Špecializovaný presun pianín, klavírov a krídel. Špeciálne klavírne vozíky, lyže a ochranné obaly pre bezpečnú manipuláciu s týmito cennými nástrojmi. Vrátane sťahovania cez okno a balkón.",
-        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/safe_icon.svg",
         title: "Sťahovanie trezorov a sejfov",
         description:
           "Odborný presun trezorov a sejfov každej hmotnosti. Hydraulické zdviháky a motorové plošiny pre bezpečnú a diskrétnu prepravu — od malých domácich sejfov po bankové trezory.",
-        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/heavy_machinery_icon.svg",
         title: "Sťahovanie strojov a zariadení",
         description:
           "Presun priemyselných strojov, CNC zariadení, výrobných liniek a bankomátov. Plánujeme zákazky na mieru s cieľom minimalizovať prestoje výroby.",
-        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -85,14 +82,12 @@ export default function StahovanieTazkychBremienPage() {
         title: "Umelecké diela a starožitnosti",
         description:
           "Špeciálna preprava umeleckých diel, sôch, starožitností a iných hodnotných predmetov vyžadujúcich mimoriadnu opatrnosť a ochranu.",
-        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Špeciálna prepravná technika",
         description:
           "Využívame špeciálne vozidlá, hydraulické zdvíhacie zariadenia, sťahovacie výťahy a ďalšie profesionálne vybavenie pre bezpečný transport ťažkých bremien.",
-        link: "/stahovanie/stahovanie-tazkych-bremien",
       },
     ],
   };
@@ -206,19 +201,16 @@ export default function StahovanieTazkychBremienPage() {
           {
             title: "Sťahovanie klavíra",
             description: "Špeciálna preprava klavírov, pianín a krídel.",
-            href: "/stahovanie/stahovanie-tazkych-bremien",
             icon: "/icons/crane_icon.svg",
           },
           {
             title: "Sťahovanie trezorov",
             description: "Bezpečná preprava trezorov a sejfov každej hmotnosti.",
-            href: "/stahovanie/stahovanie-tazkych-bremien",
             icon: "/icons/safe_icon.svg",
           },
           {
             title: "Sťahovanie strojov a zariadení",
             description: "Presun CNC strojov, výrobných liniek a bankomátov.",
-            href: "/stahovanie/stahovanie-tazkych-bremien",
             icon: "/icons/heavy_machinery_icon.svg",
           },
           {

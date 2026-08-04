@@ -60,31 +60,26 @@ export default function MovingToHungaryPage() {
         image: "/icons/truck_icon.svg",
         title: "Same-Day Delivery to Budapest",
         description: "At only 200 km, Budapest deliveries are often completed on the same day.",
-        link: "/en/moving-to-hungary",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Hungarian Cities",
         description: "Budapest, Debrecen, Miskolc, Pécs, Győr, Szeged, and all other Hungarian destinations.",
-        link: "/en/moving-to-hungary",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Hungary and Slovakia are both EU members — no customs paperwork.",
-        link: "/en/moving-to-hungary",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Professional packing available for moves to all Hungarian destinations.",
-        link: "/en/moving-to-hungary",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All items are insured throughout the journey.",
-        link: "/en/moving-to-hungary",
       },
       {
         image: "/icons/furniture_icon.svg",

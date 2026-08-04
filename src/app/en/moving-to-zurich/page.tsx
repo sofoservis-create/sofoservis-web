@@ -66,35 +66,30 @@ export default function MovingToZurichPage() {
         title: "Swiss Customs Fully Managed",
         description:
           "We prepare all Swiss customs documentation and guide you through the import process.",
-        link: "/en/moving-to-zurich",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "2-4 Day Delivery to Zurich",
         description:
           "Regular departures ensure delivery from Slovakia to Zurich within 2-4 business days.",
-        link: "/en/moving-to-zurich",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Zurich Areas",
         description:
           "We deliver throughout Zurich city and the wider canton.",
-        link: "/en/moving-to-zurich",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "Quality packing materials and expert techniques for safe delivery.",
-        link: "/en/moving-to-zurich",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "All belongings are insured throughout the entire journey to Zurich.",
-        link: "/en/moving-to-zurich",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -169,7 +164,7 @@ export default function MovingToZurichPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Switzerland", description: "Full Slovakia-to-Switzerland coverage.", href: "/en/moving-to-switzerland", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Zurich", description: "Dedicated Bratislava–Zurich route page.", href: "/en/moving-to-zurich", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Zurich", description: "Dedicated Bratislava–Zurich route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

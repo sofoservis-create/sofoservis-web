@@ -60,31 +60,26 @@ export default function MovingToPolandPage() {
         image: "/icons/truck_icon.svg",
         title: "1-2 Day Delivery to Poland",
         description: "Kraków in 1 day, Warsaw in 1-2 days from Slovakia.",
-        link: "/en/moving-to-poland",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Polish Cities",
         description: "Warsaw, Kraków, Gdańsk, Wrocław, Poznań, and all other Polish destinations.",
-        link: "/en/moving-to-poland",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Poland and Slovakia are both EU members — seamless border crossing.",
-        link: "/en/moving-to-poland",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Professional packing and careful handling for all your belongings.",
-        link: "/en/moving-to-poland",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All items are insured throughout the journey to Poland.",
-        link: "/en/moving-to-poland",
       },
       {
         image: "/icons/furniture_icon.svg",

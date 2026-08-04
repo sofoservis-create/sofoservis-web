@@ -78,14 +78,12 @@ export default function BasementGarageJunkRemovalPage() {
         title: "Basement Junk Removal",
         description:
           "Complete basement junk removal including old furniture, appliances, and other items. We handle disinfection and thorough cleaning of the space.",
-        link: "/en/basement-garage-junk-removal",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Garage & Workshop Junk Removal",
         description:
           "We clear garages, workshops, and technical rooms of old tools, spare parts, tires, and oil products with safe disposal.",
-        link: "/en/basement-garage-junk-removal",
       },
       {
         image: "/icons/briefcase_icon.svg",
@@ -246,7 +244,7 @@ export default function BasementGarageJunkRemovalPage() {
 
       <RelatedServices
           title="Related Services"
-          services={[{"title":"Basement & Garage Junk Removal","description":"Professional basement and garage cleanouts.","href":"/en/basement-garage-junk-removal","icon":"/icons/house_icon.svg"},{"title":"Old Furniture Removal","description":"Fast pickup and eco-friendly disposal of old furniture.","href":"/en/furniture-removal","icon":"/icons/truck_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
+          services={[{"title":"Basement & Garage Junk Removal","description":"Professional basement and garage cleanouts.","icon":"/icons/house_icon.svg"},{"title":"Old Furniture Removal","description":"Fast pickup and eco-friendly disposal of old furniture.","href":"/en/furniture-removal","icon":"/icons/truck_icon.svg"},{"title":"Construction Waste Removal","description":"Quick removal of construction debris, rubble and building waste.","href":"/en/construction-waste-removal","icon":"/icons/recycle_icon.svg"},{"title":"Home Junk Removal","description":"Complete home junk removal — we remove everything you no longer need.","href":"/en/home-junk-removal","icon":"/icons/vypratavanie_icon.svg"}]}
         />
       <ServicePricing filter={["junk removal", "moving", "demolition"]} lang="en" />
       <TrustBadges lang="en" />

@@ -48,28 +48,24 @@ export default function BuranieStienPriecokPage() {
         title: "Búranie nosných stien",
         description:
           "Profesionálne búranie nosných stien s projektom statika a všetkými potrebnými povoleniami. Zabezpečujeme náhradnú konštrukciu pre zachovanie stability budovy.",
-        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/hammer_icon.svg",
         title: "Búranie priečok a deliacich stien",
         description:
           "Rýchle a čisté búranie priečok v bytoch a domoch. Používame presné techniky pre minimálne poškodenie okolitých plôch a rýchle dokončenie práce.",
-        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/safety_icon.svg",
         title: "Bezpečnostné opatrenia",
         description:
           "Dôsledné dodržiavanie bezpečnostných predpisov a ochrana okolitých priestorov. Všetci naši pracovníci majú certifikáty pre búracie práce.",
-        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Povolenia a projektová dokumentácia",
         description:
           "Vybavíme všetky potrebné povolenia, projektovú dokumentáciu a posudky statika. Zaistíme súlad s platnými predpismi a normami.",
-        link: "/buracie-prace/buranie-stien-priecok",
       },
       {
         image: "/icons/container_icon.svg",
@@ -83,7 +79,6 @@ export default function BuranieStienPriecokPage() {
         title: "Špecializované vybavenie",
         description:
           "Moderné búracie nástroje a ochranné pomôcky pre efektívnu a bezpečnú prácu. Máme vybavenie pre všetky typy stavebných materiálov.",
-        link: "/buracie-prace/buranie-stien-priecok",
       },
     ],
   };

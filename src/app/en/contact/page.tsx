@@ -88,7 +88,7 @@ export default function ContactPageEN() {
       <ContactInfo />
 
       {/* Contact Form Section */}
-      <section className="pt-6 md:pt-10 pb-10 md:pb-14">
+      <section id="contact-form" className="pt-6 md:pt-10 pb-10 md:pb-14">
         <Container>
           <div className="md:hidden bg-accent-500/10 rounded-xl p-5 flex items-center gap-4 mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-accent-500 flex-shrink-0">
@@ -125,6 +125,7 @@ export default function ContactPageEN() {
         title={faqData.title}
         items={faqData.items}
         subtitle="Found the answer to your question? If not, do not hesitate to contact us."
+        callToActionHref="#contact-form"
       />
 
       {/* CTA Section */}
@@ -133,7 +134,7 @@ export default function ContactPageEN() {
           title="Need help?"
           description="Our experts are ready to help you with all your needs. Contact us today for a free quote."
           buttonText="Get a free quote"
-          buttonLink="/en/contact"
+          buttonLink="#contact-form"
         />
       </section>
     </main>

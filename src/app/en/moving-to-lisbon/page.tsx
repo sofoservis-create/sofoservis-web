@@ -65,19 +65,16 @@ export default function MovingToLisbonPage() {
         image: "/icons/truck_icon.svg",
         title: "6-9 Day Delivery to Lisbon",
         description: "Regular departures ensure reliable delivery from Slovakia to Lisbon within 6-9 business days.",
-        link: "/en/moving-to-lisbon",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Greater Lisbon Area",
         description: "We deliver throughout the Lisbon metropolitan area and surrounding municipalities.",
-        link: "/en/moving-to-lisbon",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Expert packing for safe very long-distance delivery to Lisbon.",
-        link: "/en/moving-to-lisbon",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -89,13 +86,11 @@ export default function MovingToLisbonPage() {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings insured throughout the entire journey to Lisbon.",
-        link: "/en/moving-to-lisbon",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description: "EU-to-EU move — no customs formalities required.",
-        link: "/en/moving-to-lisbon",
       },
     ],
   };

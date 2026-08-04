@@ -66,35 +66,30 @@ export default function MovingFromNetherlandsToSlovakiaPage() {
         title: "Regular Netherlands–Slovakia Routes",
         description:
           "We run scheduled services between the Netherlands and Slovakia, keeping transit times short and prices competitive.",
-        link: "/en/moving-from-netherlands-to-slovakia",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Nationwide Dutch Collection",
         description:
           "We collect from Amsterdam, Rotterdam, The Hague, Utrecht, Eindhoven, and all Dutch cities.",
-        link: "/en/moving-from-netherlands-to-slovakia",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing using materials suited for long-distance international transport.",
-        link: "/en/moving-from-netherlands-to-slovakia",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Managed",
         description:
           "We handle all transport paperwork so your move proceeds without delays.",
-        link: "/en/moving-from-netherlands-to-slovakia",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "Your belongings are covered by transport insurance throughout the entire journey.",
-        link: "/en/moving-from-netherlands-to-slovakia",
       },
       {
         image: "/icons/furniture_icon.svg",

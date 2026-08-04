@@ -66,35 +66,30 @@ export default function MovingFromSlovakiaToSwedenPage() {
         title: "Regular Slovakia–Sweden Routes",
         description:
           "We operate scheduled departures to Sweden, ensuring consistent transit times and competitive pricing.",
-        link: "/en/moving-to-sweden",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Delivery Throughout Sweden",
         description:
           "We deliver to Stockholm, Gothenburg, Malmö, Uppsala, and all other Swedish destinations.",
-        link: "/en/moving-to-sweden",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "We pack all your items using materials suited for long Scandinavian routes.",
-        link: "/en/moving-to-sweden",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport paperwork for a seamless relocation.",
-        link: "/en/moving-to-sweden",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the entire journey to Sweden.",
-        link: "/en/moving-to-sweden",
       },
       {
         image: "/icons/furniture_icon.svg",

@@ -86,28 +86,24 @@ export default function WallDemolitionPageEN() {
         title: "Load-Bearing Wall Demolition",
         description:
           "Professional demolition of load-bearing walls with structural engineering projects and all necessary permits. We ensure replacement structures to maintain building stability.",
-        link: "/en/wall-demolition",
       },
       {
         image: "/icons/hammer_icon.svg",
         title: "Partition & Dividing Wall Removal",
         description:
           "Fast and clean partition removal in apartments and houses. We use precise techniques to minimize damage to surrounding surfaces and ensure quick completion.",
-        link: "/en/wall-demolition",
       },
       {
         image: "/icons/safety_icon.svg",
         title: "Safety Measures",
         description:
           "Strict compliance with safety regulations and protection of surrounding spaces. All our workers are certified for demolition work.",
-        link: "/en/wall-demolition",
       },
       {
         image: "/icons/document_icon.svg",
         title: "Permits & Project Documentation",
         description:
           "We handle all necessary permits, project documentation, and structural assessments. We ensure compliance with all applicable regulations and standards.",
-        link: "/en/wall-demolition",
       },
       {
         image: "/icons/container_icon.svg",
@@ -121,7 +117,6 @@ export default function WallDemolitionPageEN() {
         title: "Specialized Equipment",
         description:
           "Modern demolition tools and protective equipment for efficient and safe work. We have equipment for all types of building materials.",
-        link: "/en/wall-demolition",
       },
     ],
   };

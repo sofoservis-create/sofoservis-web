@@ -66,35 +66,30 @@ export default function MovingFromSlovakiaToNorwayPage() {
         title: "Norwegian Customs Expertise",
         description:
           "We prepare all Norwegian customs documentation and guide you through the import process step by step.",
-        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Door-to-Door Delivery",
         description:
           "We collect from your Slovak address and deliver directly to Oslo, Bergen, Stavanger, or anywhere in Norway.",
-        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "Quality packing materials and expert techniques for long Scandinavian routes.",
-        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Norwegian Destinations",
         description:
           "We deliver throughout Norway — from Oslo to the far north.",
-        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "Your belongings are insured for the complete journey from Slovakia to Norway.",
-        link: "/en/moving-to-norway",
       },
       {
         image: "/icons/furniture_icon.svg",

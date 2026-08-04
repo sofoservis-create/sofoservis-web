@@ -79,28 +79,24 @@ export default function ConstructionWasteRemovalPage() {
         title: "Construction Rubble Removal",
         description:
           "Fast and efficient removal of construction rubble after renovation or demolition. Our vehicles are equipped for transporting heavy construction materials.",
-        link: "/en/construction-waste-removal",
       },
       {
         image: "/icons/recycle_icon.svg",
         title: "Eco-Friendly Waste Disposal",
         description:
           "We ensure eco-friendly disposal of construction waste including rubble, bricks, concrete, plaster, and other building materials in compliance with environmental regulations.",
-        link: "/en/construction-waste-removal",
       },
       {
         image: "/icons/crane_icon.svg",
         title: "Waste Loading & Carrying",
         description:
           "Our workers handle complete loading and carrying of construction waste, including removal from upper floors, basements, or hard-to-reach locations.",
-        link: "/en/construction-waste-removal",
       },
       {
         image: "/icons/container_icon.svg",
         title: "Container Delivery",
         description:
           "We offer container delivery in various sizes for construction waste directly to your address. Containers are available for short-term and long-term rental.",
-        link: "/en/construction-waste-removal",
       },
       {
         image: "/icons/wrecking_ball_icon.svg",
@@ -114,7 +110,6 @@ export default function ConstructionWasteRemovalPage() {
         title: "Disposal Documentation",
         description:
           "We provide complete disposal documentation for every construction waste removal, which you may need for building authority or environmental inspections.",
-        link: "/en/construction-waste-removal",
       },
     ],
   };

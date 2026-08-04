@@ -66,21 +66,18 @@ export default function MovingToWarsawPage() {
         title: "2-3 Day Delivery to Warsaw",
         description:
           "Scheduled departures ensure reliable delivery from Slovakia to Warsaw within 2-3 business days.",
-        link: "/en/moving-to-warsaw",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Warsaw Districts",
         description:
           "We deliver throughout Warsaw and the greater metropolitan area.",
-        link: "/en/moving-to-warsaw",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing using quality materials for safe delivery.",
-        link: "/en/moving-to-warsaw",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToWarsawPage() {
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the journey to Warsaw.",
-        link: "/en/moving-to-warsaw",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description:
           "EU-to-EU move — no customs formalities required.",
-        link: "/en/moving-to-warsaw",
       },
     ],
   };
@@ -168,7 +163,7 @@ export default function MovingToWarsawPage() {
       <RelatedServices
         title="Related Services"
         services={[
-          { title: "Moving Bratislava to Warsaw", description: "Dedicated Bratislava–Warsaw route page.", href: "/en/moving-to-warsaw", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Warsaw", description: "Dedicated Bratislava–Warsaw route page.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Moving from Slovakia", description: "Overview of all routes from Slovakia abroad.", href: "/en/moving-from-slovakia", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },

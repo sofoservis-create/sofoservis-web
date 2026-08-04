@@ -86,21 +86,18 @@ export default function FurnitureRemovalPage() {
         title: "Old Furniture Removal",
         description:
           "Professional removal of old furniture directly from your home. We handle safe transport and loading of all items without damaging your property.",
-        link: "/en/furniture-removal",
       },
       {
         image: "/icons/recycle_icon.svg",
         title: "Eco-Friendly Disposal",
         description:
           "Environmentally responsible disposal of old furniture in compliance with legislation. We sort materials and deliver them to authorized collection centers.",
-        link: "/en/furniture-removal",
       },
       {
         image: "/icons/sofa_icon.svg",
         title: "Sofa & Large Furniture Removal",
         description:
           "Specialized removal of large furniture items such as sofas, couches, armchairs, and corner suites. We have equipment for safe handling of bulky items.",
-        link: "/en/furniture-removal",
       },
       {
         image: "/icons/appliance_icon.svg",

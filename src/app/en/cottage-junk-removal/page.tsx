@@ -135,7 +135,6 @@ export default function CottageJunkRemovalPage() {
               image: "/icons/truck_icon.svg",
               title: "Hard-to-Reach Locations",
               description: "Cottages are often in remote areas. We have the right equipment for mountain roads and rural tracks.",
-              link: "/en/cottage-junk-removal",
             },
           ]}
           callToActionText="Get a Free Quote"

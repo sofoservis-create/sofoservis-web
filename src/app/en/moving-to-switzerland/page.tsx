@@ -66,35 +66,30 @@ export default function MovingFromSlovakiaToSwitzerlandPage() {
         title: "Swiss Customs Expertise",
         description:
           "We prepare all Swiss customs documentation and guide you through the import process for a hassle-free relocation.",
-        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/truck_icon.svg",
         title: "Door-to-Door Delivery",
         description:
           "We collect from your Slovak address and deliver directly to Zurich, Geneva, Basel, Bern, or anywhere in Switzerland.",
-        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "We use quality materials to protect all your belongings during international transport.",
-        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Swiss Destinations",
         description:
           "We deliver throughout all Swiss cantons — German, French, and Italian-speaking regions.",
-        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Fully Insured Transport",
         description:
           "Your belongings are insured for the entire journey from Slovakia to Switzerland.",
-        link: "/en/moving-to-switzerland",
       },
       {
         image: "/icons/furniture_icon.svg",

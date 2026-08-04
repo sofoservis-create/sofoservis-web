@@ -60,31 +60,26 @@ export default function MovingToSpainPage() {
         image: "/icons/truck_icon.svg",
         title: "5-7 Day Delivery to Spain",
         description: "Regular routes from Slovakia to Spain — 5-7 day delivery depending on destination.",
-        link: "/en/moving-to-spain",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Spanish Regions",
         description: "Madrid, Barcelona, Valencia, Seville, Malaga, and all other Spanish destinations.",
-        link: "/en/moving-to-spain",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs — EU to EU",
         description: "Spain and Slovakia are both EU members — no customs paperwork required.",
-        link: "/en/moving-to-spain",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description: "Reinforced packing for this long-distance route across Europe.",
-        link: "/en/moving-to-spain",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description: "All belongings are insured throughout the full journey to Spain.",
-        link: "/en/moving-to-spain",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -158,7 +153,7 @@ export default function MovingToSpainPage() {
         title="Related Services"
         services={[
           { title: "Moving to Barcelona", description: "Dedicated Barcelona route page.", href: "/en/moving-to-barcelona", icon: "/icons/globe_icon.svg" },
-          { title: "Moving to Madrid", description: "Also moving to Madrid?", href: "/en/moving-to-madrid", icon: "/icons/globe_icon.svg" },
+          { title: "Moving to Madrid", description: "Also moving to Madrid?", icon: "/icons/globe_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

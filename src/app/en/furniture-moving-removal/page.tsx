@@ -72,14 +72,12 @@ export default function FurnitureMovingRemovalPage() {
         title: "Sofa and Couch Transportation",
         description:
           "Safe moving of sofas, couches and lounge sets. We use special protective covers and wrap your upholstered furniture to prevent any dirt or damage during transportation.",
-        link: "/en/furniture-moving-removal",
       },
       {
         image: "/icons/furniture_icon.svg", // Perfect for wardrobe and cabinet moving
         title: "Wardrobe and Cabinet Moving",
         description:
           "Professional disassembly and reassembly of wardrobes, shelves, dressers, and other furniture. We carefully label all parts for trouble-free assembly at the new location.",
-        link: "/en/furniture-moving-removal",
       },
       {
         image: "/icons/artwork_icon.svg", // Perfect for antique and valuable furniture
@@ -100,14 +98,12 @@ export default function FurnitureMovingRemovalPage() {
         title: "Furniture Rearrangement Within Premises",
         description:
           "We help you rearrange furniture within apartments, houses, or offices during renovation, painting, or space reorganization.",
-        link: "/en/furniture-moving-removal",
       },
       {
         image: "/icons/packing_box_icon.svg", // Perfect for packing and protection
         title: "Furniture Packing and Protection",
         description:
           "Professional furniture packing using protective films, cardboard, foam materials, and special transport packaging for maximum protection.",
-        link: "/en/furniture-moving-removal",
       },
     ],
   };

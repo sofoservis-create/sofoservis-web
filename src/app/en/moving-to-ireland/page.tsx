@@ -66,35 +66,30 @@ export default function MovingFromSlovakiaToIrelandPage() {
         title: "Regular Slovakia–Ireland Service",
         description:
           "We operate scheduled departures between Slovakia and Ireland including the sea crossing, keeping the process seamless.",
-        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "Delivery Throughout Ireland",
         description:
           "We deliver to Dublin, Cork, Galway, Limerick, and all other Irish destinations.",
-        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Professional Packing",
         description:
           "Expert packing using materials suited for long international journeys including sea transit.",
-        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/document_icon.svg",
         title: "All Documentation Handled",
         description:
           "We manage all transport and ferry documentation for a hassle-free move.",
-        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the entire journey including the sea crossing.",
-        link: "/en/moving-to-ireland",
       },
       {
         image: "/icons/furniture_icon.svg",

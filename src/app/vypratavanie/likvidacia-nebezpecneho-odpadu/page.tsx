@@ -58,21 +58,18 @@ export default function LikvidaciaNebezpecnehoOdpadu() {
         title: "Likvidácia starých spotrebičov",
         description:
           "Odvoz a ekologická likvidácia práčok, chladničiek, mrazničiek, umývačiek riadu a iných veľkých spotrebičov. Bezplatné alebo za symbolický poplatok.",
-        link: "/vypratavanie/likvidacia-nebezpecneho-odpadu",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Likvidácia elektroodpadu",
         description:
           "Odvoz a recyklácia počítačov, televízorov, monitorov, tlačiarní a iného elektroodpadu na autorizovaných zberných miestach.",
-        link: "/vypratavanie/likvidacia-nebezpecneho-odpadu",
       },
       {
         image: "/icons/vypratavanie_icon.svg",
         title: "Likvidácia nebezpečného odpadu",
         description:
           "Bezpečná manipulácia a likvidácia chemikálií, starých farieb, riedidiel, pesticídov, batérií a iného nebezpečného domového odpadu.",
-        link: "/vypratavanie/likvidacia-nebezpecneho-odpadu",
       },
       {
         image: "/icons/house_icon.svg",

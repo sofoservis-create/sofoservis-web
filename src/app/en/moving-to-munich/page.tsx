@@ -66,21 +66,18 @@ export default function MovingToMunichPage() {
         title: "1-2 Day Delivery to Munich",
         description:
           "Regular departures from Slovakia ensure delivery to Munich within 1-2 business days.",
-        link: "/en/moving-to-munich",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All Munich Areas Covered",
         description:
           "We deliver to all Munich districts and the wider metropolitan area.",
-        link: "/en/moving-to-munich",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "Professional packing using quality materials for safe delivery.",
-        link: "/en/moving-to-munich",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToMunichPage() {
         title: "Insured Transport",
         description:
           "All belongings are insured throughout the journey to Munich.",
-        link: "/en/moving-to-munich",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs",
         description:
           "EU-to-EU move — no customs declarations required.",
-        link: "/en/moving-to-munich",
       },
     ],
   };
@@ -169,7 +164,7 @@ export default function MovingToMunichPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Germany", description: "Full Slovakia-to-Germany coverage.", href: "/en/moving-to-germany", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Munich", description: "Dedicated Bratislava–Munich route page.", href: "/en/moving-to-munich", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Munich", description: "Dedicated Bratislava–Munich route page.", icon: "/icons/truck_icon.svg" },
           { title: "Moving to Berlin", description: "Relocating to Berlin from Slovakia.", href: "/en/moving-to-berlin", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

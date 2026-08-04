@@ -66,21 +66,18 @@ export default function MovingToViennaPage() {
         title: "Same-Day Service Available",
         description:
           "The 60 km between Bratislava and Vienna means we can often deliver the same day or next day after collection.",
-        link: "/en/moving-to-vienna",
       },
       {
         image: "/icons/globe_icon.svg",
         title: "All 23 Vienna Districts",
         description:
           "We deliver to every Vienna district — city centre to outer residential areas — with no additional zone charges.",
-        link: "/en/moving-to-vienna",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Full Packing Service",
         description:
           "We professionally pack and protect all your items so they arrive safely at your new Vienna address.",
-        link: "/en/moving-to-vienna",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -94,14 +91,12 @@ export default function MovingToViennaPage() {
         title: "Fully Insured Transport",
         description:
           "All your belongings are insured throughout the journey to Vienna.",
-        link: "/en/moving-to-vienna",
       },
       {
         image: "/icons/document_icon.svg",
         title: "No Customs Hassle",
         description:
           "EU-to-EU move — no customs declarations required. A smooth, quick relocation.",
-        link: "/en/moving-to-vienna",
       },
     ],
   };
@@ -169,7 +164,7 @@ export default function MovingToViennaPage() {
         title="Related Services"
         services={[
           { title: "Moving from Slovakia to Austria", description: "Full country-to-country coverage.", href: "/en/moving-to-austria", icon: "/icons/globe_icon.svg" },
-          { title: "Moving Bratislava to Vienna", description: "City-to-city Bratislava–Vienna route.", href: "/en/moving-to-vienna", icon: "/icons/truck_icon.svg" },
+          { title: "Moving Bratislava to Vienna", description: "City-to-city Bratislava–Vienna route.", icon: "/icons/truck_icon.svg" },
           { title: "International Moving Services", description: "All international routes and destinations.", href: "/en/international-moving-services", icon: "/icons/globe_icon.svg" },
           { title: "Furniture Assembly", description: "Expert assembly and disassembly of all furniture.", href: "/en/furniture-assembly", icon: "/icons/wrench_icon.svg" },
         ]}

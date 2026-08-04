@@ -89,7 +89,7 @@ export default function ContactPage() {
       <ContactInfo />
 
       {/* Contact Form Section */}
-      <section className="pt-6 md:pt-10 pb-10 md:pb-14">
+      <section id="kontaktny-formular" className="pt-6 md:pt-10 pb-10 md:pb-14">
         <Container>
           <div className="md:hidden bg-accent-500/10 rounded-xl p-5 flex items-center gap-4 mb-8">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8 text-accent-500 flex-shrink-0">
@@ -127,6 +127,7 @@ export default function ContactPage() {
         title={faqData.title}
         items={faqData.items}
         subtitle="Našli ste odpoveď na vašu otázku? Ak nie, neváhajte nás kontaktovať."
+        callToActionHref="#kontaktny-formular"
       />
 
       {/* CTA Section */}
@@ -135,7 +136,7 @@ export default function ContactPage() {
           title="Potrebujete pomoc?"
           description="Naši odborníci sú pripravení pomôcť vám so všetkými vašimi potrebami. Kontaktujte nás ešte dnes pre bezplatnú cenovú ponuku."
           buttonText="Získať nezáväznú ponuku"
-          buttonLink="/kontakt"
+          buttonLink="#kontaktny-formular"
         />
       </section>
     </main>
