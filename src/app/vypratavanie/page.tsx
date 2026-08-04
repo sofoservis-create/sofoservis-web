@@ -18,17 +18,17 @@ import TrustBadges from "@/components/sections/TrustBadges";
 
 const vypratavanieLocations = [
   { name: "Bratislava", href: "/vypratavanie/vypratavanie-bytov-domov/bratislava" },
-  { name: "Nitra", href: "/vypratavanie" },
-  { name: "Trnava", href: "/vypratavanie" },
-  { name: "Pezinok", href: "/vypratavanie" },
-  { name: "Galanta", href: "/vypratavanie" },
-  { name: "Piešťany", href: "/vypratavanie" },
-  { name: "Senec", href: "/vypratavanie" },
-  { name: "Senica", href: "/vypratavanie" },
-  { name: "Stupava", href: "/vypratavanie" },
-  { name: "Komárno", href: "/vypratavanie" },
-  { name: "Malacky", href: "/vypratavanie" },
-  { name: "Šamorín", href: "/vypratavanie" },
+  { name: "Nitra" },
+  { name: "Trnava" },
+  { name: "Pezinok" },
+  { name: "Galanta" },
+  { name: "Piešťany" },
+  { name: "Senec" },
+  { name: "Senica" },
+  { name: "Stupava" },
+  { name: "Komárno" },
+  { name: "Malacky" },
+  { name: "Šamorín" },
 ];
 
 export const metadata = {

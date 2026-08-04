@@ -95,13 +95,13 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
   };
 
   const bratislavaDistricts = [
-    { name: "Staré Mesto", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
-    { name: "Ružinov", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
-    { name: "Petržalka", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
-    { name: "Nové Mesto", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
-    { name: "Dúbravka", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
-    { name: "Karlova Ves", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
-    { name: "Rača", href: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava" },
+    { name: "Staré Mesto" },
+    { name: "Ružinov" },
+    { name: "Petržalka" },
+    { name: "Nové Mesto" },
+    { name: "Dúbravka" },
+    { name: "Karlova Ves" },
+    { name: "Rača" },
   ];
 
   return (

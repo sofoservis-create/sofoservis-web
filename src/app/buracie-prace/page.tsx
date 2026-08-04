@@ -49,10 +49,10 @@ export default function BuraciePracePage() {
   };
 
   const buracieLocations = [
-    { name: "Bratislava", href: "/buracie-prace" },
-    { name: "Nitra", href: "/buracie-prace" },
-    { name: "Pezinok", href: "/buracie-prace" },
-    { name: "Trnava", href: "/buracie-prace" },
+    { name: "Bratislava" },
+    { name: "Nitra" },
+    { name: "Pezinok" },
+    { name: "Trnava" },
   ];
 
   const featuresData = {

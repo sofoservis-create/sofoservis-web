@@ -107,12 +107,12 @@ export default function StahovanieBratislavaPage() {
     description:
       "Naše služby poskytujeme vo všetkých mestských častiach Bratislavy aj v okolitých obciach pre komplexné sťahovanie domácností a firiem.",
     locations: [
-      { name: "Staré Mesto", href: "/stahovanie/stahovanie-bratislava" },
-      { name: "Ružinov", href: "/stahovanie/stahovanie-bratislava" },
-      { name: "Nové Mesto", href: "/stahovanie/stahovanie-bratislava" },
-      { name: "Petržalka", href: "/stahovanie/stahovanie-bratislava" },
-      { name: "Karlova Ves", href: "/stahovanie/stahovanie-bratislava" },
-      { name: "Dúbravka", href: "/stahovanie/stahovanie-bratislava" },
+      { name: "Staré Mesto" },
+      { name: "Ružinov" },
+      { name: "Nové Mesto" },
+      { name: "Petržalka" },
+      { name: "Karlova Ves" },
+      { name: "Dúbravka" },
       "Rača",
       "Vrakuňa",
       "Podunajské Biskupice",
