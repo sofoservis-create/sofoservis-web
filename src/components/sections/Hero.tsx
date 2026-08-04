@@ -437,42 +437,16 @@ export default function Hero({
               );
             })()}
 
-            {/* Mobile Form - below benefits bar on mobile */}
-            <div className={`block lg:hidden${showMascot ? ' relative z-10' : ''}`} style={showMascot ? { marginTop: `${-251 * mobileMascotScale + mobileFormOffsetY}px` } : undefined}>
-              <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
-                <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
-                  <h3 className="text-lg md:text-xl font-bold text-center">
-                    {formTitle}
-                  </h3>
-                  {formSubtitle && (
-                    <p className="text-sm text-center text-primary-900/80 mt-1">
-                      {formSubtitle}
-                    </p>
-                  )}
-                </div>
-                <div className="p-4">
-                  <QuickContactForm variant="primary" lang={lang} />
-                </div>
-              </div>
-              {heroPills && (
-                <div className="mt-5 grid grid-cols-3 gap-2">
-                  {heroPills.map((p) => (
-                    <div key={p.label} className="flex flex-col items-center gap-2">
-                      <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
-                        <Image src={p.icon} alt="" width={36} height={36} />
-                      </div>
-                      <span className="text-sm font-medium text-white text-center leading-tight">
-                        {p.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
 
-          {/* Form Section - Right side */}
-          <div className="w-full lg:w-2/5 order-2 lg:order-2 -mt-2 lg:mt-14 hidden lg:block">
+          {/* Form Section — single markup for mobile + desktop (one <h3> in the HTML).
+              Desktop: right column. Mobile: stacked below the text column.
+              With a mascot it is pulled up over the mobile mascot via --form-mt,
+              set as a CSS variable so lg:mt-14 can still win on desktop. */}
+          <div
+            className={`w-full lg:w-2/5 order-2 lg:order-2 mt-[var(--form-mt,-0.5rem)] lg:mt-14${showMascot ? " relative z-10" : ""}`}
+            style={showMascot ? ({ ["--form-mt" as string]: `${-251 * mobileMascotScale + mobileFormOffsetY}px` } as React.CSSProperties) : undefined}
+          >
             <div ref={formCardRef} className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:shadow-accent-500/25 hover:shadow-xl">
               {/* Form header with accent background */}
               <div className="bg-accent-500 text-primary-900 py-2.5 px-6">
@@ -491,6 +465,22 @@ export default function Hero({
                 <QuickContactForm variant="primary" lang={lang} />
               </div>
             </div>
+
+            {/* Trust pills — mobile only, below the form */}
+            {heroPills && (
+              <div className="mt-5 grid grid-cols-3 gap-2 lg:hidden">
+                {heroPills.map((p) => (
+                  <div key={p.label} className="flex flex-col items-center gap-2">
+                    <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
+                      <Image src={p.icon} alt="" width={36} height={36} />
+                    </div>
+                    <span className="text-sm font-medium text-white text-center leading-tight">
+                      {p.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>

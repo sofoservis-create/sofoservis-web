@@ -1,135 +1,247 @@
 # SofoServis
 
-> SofoServis (Sofoservices s. r. o.) je slovenská firma so sídlom v Bratislave poskytujúca profesionálne sťahovacie, vypratávacie, montážne a demolačné služby. Pôsobíme v Bratislave, okolí a na celom Slovensku, vrátane medzinárodných sťahovaní do/zo zahraničia. Kontakt: doprava@sofoservis.sk | +421 951 735 130 | Lermontovova 3, Bratislava | Po–So 07:00–19:00
+> SofoServis (Sofoservices s. r. o.) je slovenská firma so sídlom v Bratislave, ktorá poskytuje profesionálne sťahovacie, vypratávacie, montážne a búracie služby. Pôsobíme v Bratislave, okolí a na celom Slovensku, vrátane medzinárodných sťahovaní do a zo zahraničia. Web je dvojjazyčný: slovenské stránky sú v koreni, anglická verzia pod /en/.
+
+Kontakt: doprava@sofoservis.sk | +421 951 735 130 | Lermontovova 3, Bratislava | Po–So 07:00–19:00
 
 ## Hlavné stránky
 
-- [Domovská stránka](https://www.sofoservis.sk/): Prehľad všetkých služieb, cenník, recenzie, kontakt
-- [O nás](https://www.sofoservis.sk/o-nas): O firme SofoServis, tím, história
-- [Cenník](https://www.sofoservis.sk/cennik): Aktuálny cenník sťahovania, vypratávania a montáže
-- [Kontakt](https://www.sofoservis.sk/kontakt): Kontaktný formulár, adresa, telefón, mapa
-- [Referencie](https://www.sofoservis.sk/referencie): Recenzie a referencie zákazníkov
+- [Sťahovanie, vypratávanie a montáž nábytku](https://www.sofoservis.sk/): Sofoservis – sťahovanie, vypratávanie a montáž nábytku. 3500+ spokojných zákazníkov. Obhliadka zadarmo. Férové ceny.
+- [Cenník – Sťahovanie, Vypratávanie, Montáž](https://www.sofoservis.sk/cennik): Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 30€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!
+- [Kontaktujte nás – sťahovacie služby](https://www.sofoservis.sk/kontakt): Kontaktujte Sofoservis pre cenovo výhodné a profesionálne sťahovacie služby v Bratislave a na celom Slovensku. Získajte bezplatnú cenovú ponuku ešte dnes!
+- [O nás](https://www.sofoservis.sk/o-nas): Spoznajte príbeh Sofoservisu – od žltej dodávky v roku 2018 po firmu s 6 autami a 3500+ spokojnými zákazníkmi. Sťahujeme príbehy, nie len nábytok.
+- [Referencie a recenzie zákazníkov](https://www.sofoservis.sk/referencie): Pozrite si referencie a recenzie od spokojných zákazníkov. 3500+ úspešných sťahovaní, vypratávaní a montáží nábytku v Bratislave a okolí.
 
-## Sťahovacie služby
+## Sťahovanie – hlavné služby
 
-- [Sťahovanie bytov a domov](https://www.sofoservis.sk/stahovanie-bytov-domov): Kompletné sťahovanie domácností vrátane balenia a vybalenia
-- [Sťahovanie kancelárií a firiem](https://www.sofoservis.sk/stahovanie-kancelarii-firiem): Firemné sťahovanie s minimálnym výpadkom prevádzky
-- [Sťahovanie a preprava nábytku](https://www.sofoservis.sk/stahovanie-preprava-nabytku): Bezpečná preprava nábytku všetkých typov
-- [Sťahovanie ťažkých bremien](https://www.sofoservis.sk/stahovanie-tazkych-bremien): Špeciálne sťahovanie pianín, trezórov, ťažkých predmetov
-- [Sťahovanie klavíra a pianína](https://www.sofoservis.sk/stahovanie-klavira): Odborné sťahovanie hudobných nástrojov
-- [Medzinárodné sťahovanie](https://www.sofoservis.sk/medzinarodne-stahovanie): Sťahovanie do zahraničia a zo zahraničia
-- [Sťahovanie na Slovensko](https://www.sofoservis.sk/stahovanie-na-slovensko): Import – sťahovanie zo zahraničia na Slovensko
-- [Sťahovanie zo Slovenska](https://www.sofoservis.sk/stahovanie-zo-slovenska): Export – sťahovanie zo Slovenska do zahraničia
+- [Sťahovanie - Lacné sťahovacie služby](https://www.sofoservis.sk/stahovanie): Lacné a profesionálne sťahovanie bytov, domov aj firiem od 30 €/hod. Zabalíme, prenesieme aj zmontujeme nábytok. Obhliadka a cenová ponuka zdarma.
+- [Medzinárodné sťahovanie do / zo zahraničia](https://www.sofoservis.sk/stahovanie/medzinarodne-stahovanie): Medzinárodné sťahovanie do Česka, Rakúska, Nemecka aj ďalších krajín Európy. Vybavíme dopravu, formality aj zabalenie vecí. Nezáväzná cenová ponuka zdarma.
+- [Sťahovanie bytov a domov - Cena už od 60€](https://www.sofoservis.sk/stahovanie/stahovanie-bytov-domov): Sťahovanie bytov a domov na kľúč - od vynosenia až po montáž nábytku v novom. Vopred známa cena už od 60 €, žiadne skryté poplatky. Dohodnite si termín.
+- [Sťahovanie kancelárií a firiem - Bratislava a okolie](https://www.sofoservis.sk/stahovanie/stahovanie-kancelarii-firiem): Presťahujeme kanceláriu aj celú firmu s minimom výpadku prevádzky – kľudne cez víkend či po večeroch. Bezplatná obhliadka priestorov v Bratislave a okolí.
+- [Sťahovanie ťažkých bremien - Klavíre, trezory aj stroje](https://www.sofoservis.sk/stahovanie/stahovanie-tazkych-bremien): Sťahovanie klavírov, trezorov a strojov, ktoré bežne nezdvihnete. Máme techniku aj skúsený tím na ťažké a rozmerné bremená. Náklad poistený, obhliadka zdarma.
 
-## Vypratávacie služby
+## Sťahovanie – mestá
 
-- [Vypratávanie bytov a domov](https://www.sofoservis.sk/vypratavanie-bytov-domov): Kompletné vypratanie a čistenie nehnuteľností
-- [Vypratávanie a odvoz starého nábytku](https://www.sofoservis.sk/vypratavanie-odvoz-stareho-nabytku): Odvoz a likvidácia starého nábytku
-- [Vypratávanie pivníc a garáží](https://www.sofoservis.sk/vypratavanie-pivnic-garazi-nebytovych-priestorov): Vypratanie nebytových priestorov
-- [Vypratávanie pozostalosti](https://www.sofoservis.sk/vypratavanie-pozostalosti): Citlivé vypratávanie po zosnulom
-- [Vypratávanie kancelárií](https://www.sofoservis.sk/vypratavanie-kancelarii): Vypratanie kancelárskych priestorov
-- [Vypratávanie po rekonštrukcii](https://www.sofoservis.sk/vypratavanie-po-rekonstrukcii): Čistenie a odvoz stavebného odpadu po rekonštrukcii
-- [Vypratávanie chalupy](https://www.sofoservis.sk/vypratavanie-chalupy): Vypratávanie rekreačných nehnuteľností
-- [Čistenie pozemkov](https://www.sofoservis.sk/cistenie-vypratavanie-pozemkov-nehnutelnosti): Čistenie pozemkov a nehnuteľností
+- [Sťahovanie Bratislava - Lacné sťahovanie bytov](https://www.sofoservis.sk/stahovanie/stahovanie-bratislava)
+- [Sťahovanie Galanta - Lacno, rýchlo a spolahlivo](https://www.sofoservis.sk/stahovanie/stahovanie-galanta)
+- [Sťahovanie Komárno - Presťahujeme vás raz dva](https://www.sofoservis.sk/stahovanie/stahovanie-komarno)
+- [Sťahovanie Malacky - Cenová ponuka obratom](https://www.sofoservis.sk/stahovanie/stahovanie-malacky)
+- [Sťahovanie Nitra - Preprava nábytku Nitra a okolie](https://www.sofoservis.sk/stahovanie/stahovanie-nitra)
+- [Sťahovanie Pezinok](https://www.sofoservis.sk/stahovanie/stahovanie-pezinok)
+- [Sťahovanie Piešťany - Rýchlo a bez starostí](https://www.sofoservis.sk/stahovanie/stahovanie-piestany)
+- [Sťahovanie Šaľa - Profesionálne sťahovacie služby](https://www.sofoservis.sk/stahovanie/stahovanie-sala)
+- [Sťahovacie služby Šamorín a okolie](https://www.sofoservis.sk/stahovanie/stahovanie-samorin)
+- [Sťahovanie Senec - Rýchlo a hladko](https://www.sofoservis.sk/stahovanie/stahovanie-senec)
+- [Sťahovanie Senica - Aby sťahovanie nebolo trápenie](https://www.sofoservis.sk/stahovanie/stahovanie-senica)
+- [Sťahovanie Stupava - Presťahujeme vašu domácnosť](https://www.sofoservis.sk/stahovanie/stahovanie-stupava)
+- [Sťahovanie Trnava - Lacné sťahovanie bytov a domov](https://www.sofoservis.sk/stahovanie/stahovanie-trnava)
 
-## Montážne služby
+## Vypratávanie a odvoz odpadu
 
-- [Montáž nábytku](https://www.sofoservis.sk/montaz-nabytku): Profesionálna montáž všetkých typov nábytku vrátane IKEA
-- [Montáž kuchyne](https://www.sofoservis.sk/montaz-kuchyne): Montáž kuchynskej linky a kuchynského nábytku
-- [Hodinový manžel a majster](https://www.sofoservis.sk/hodinovy-manzel-majster): Drobné opravy, údržba, inštalácie v domácnosti
+- [Vypratávanie – profesionálne vypratávacie](https://www.sofoservis.sk/vypratavanie): Profesionálne vypratávanie bytov, domov, kancelárií, pivníc, chalúp, po rekonštrukcii a po pozostalosti od 30€/hod. Obhliadka zadarmo. Rýchlo.
+- [Čistenie a vypratávanie pozemku, nehnuteľnosti](https://www.sofoservis.sk/vypratavanie/cistenie-vypratavanie-pozemkov): Ponúkame lacné a rýchle čistenie a vypratávanie pozemku, nehnuteľností ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás ešte dnes!
+- [Likvidácia nebezpečného odpadu a starých spotrebičov](https://www.sofoservis.sk/vypratavanie/likvidacia-nebezpecneho-odpadu): Likvidácia nebezpečného odpadu a starých spotrebičov ✅ Odvoz práčok, chladničiek, televízorov ✅ Ekologická likvidácia ✅ Kontaktujte nás ešte dnes!
+- [Odvoz a likvidácia stavebného odpadu](https://www.sofoservis.sk/vypratavanie/odvoz-likvidacia-stavebneho-odpadu): Ponúkame lacný odvoz a likvidáciu stavebného odpadu ✅ Odvoz sutí, obkladov a starých podláh ✅ Obhliadka zadarmo ✅ Kontaktujte nás ešte dnes!
+- [Odvoz stavebného odpadu Bratislava — rýchlo](https://www.sofoservis.sk/vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava): Profesionálny odvoz a likvidácia stavebného odpadu v Bratislave ✅ Rýchle pristavenie kontajnera ✅ Férové ceny ✅ Odvoz sute a odpadu po rekonštrukcii
+- [Odvoz a vypratávanie starého nábytku](https://www.sofoservis.sk/vypratavanie/odvoz-stareho-nabytku): Odvoz a vypratávanie starého nábytku od 30€/hod ✅ Odvoz starých skríň, postelí, sedačiek ✅ Obhliadka zadarmo ✅ Kontaktujte nás ešte dnes!
+- [Vypratávanie bytov a domov](https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov): Profesionálne vypratávanie bytov a domov od 30€/hod. Jednoizbový byt od 200€. Obhliadka zadarmo. Rýchlo, spoľahlivo, spokojnosť garantovaná.
+- [Vypratávanie bytov a domov Bratislava](https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov/bratislava): Ponúkame profesionálne vypratávanie bytov a domov v Bratislave ✅ Lacné a férové ceny ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás ešte dnes!
+- [Vypratávanie pivníc a garáží](https://www.sofoservis.sk/vypratavanie/vypratavanie-pivnic-a-garazi): Ponúkame lacné a rýchle vypratávanie pivníc, garáži, nebytových priestorov ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás ešte dnes!
 
-## Demolačné a odpadové služby
+## Montáž a hodinový manžel
 
-- [Búracie a demolačné práce](https://www.sofoservis.sk/buracie-demolacne-prace): Búranie a demolácia s odvozom materiálu
-- [Búranie stien a priečok](https://www.sofoservis.sk/buranie-stien-priecok): Búranie vnútorných stien
-- [Búranie a demolácia domov](https://www.sofoservis.sk/buranie-demolacia-domov-bytov): Demolácia rodinných domov a bytov
-- [Odvoz stavebného odpadu](https://www.sofoservis.sk/odvoz-likvidacia-stavebneho-odpadu): Odvoz a ekologická likvidácia stavebného odpadu
-- [Likvidácia nebezpečného odpadu](https://www.sofoservis.sk/likvidacia-nebezpecneho-odpadu-starych-spotrebicov): Likvidácia starých spotrebičov a nebezpečného odpadu
+- [Hodinový manžel - domáci majster](https://www.sofoservis.sk/hodinovy-manzel-majster): Hodinový manžel a domáci majster od 30 €/hod – montáž nábytku, drobné opravy, vŕtanie aj voda. Prehľadný cenník a rýchly nástup. Objednajte si majstra.
+- [Montáž a skladanie kuchynskej linky](https://www.sofoservis.sk/montaz-kuchyne): Profesionálna montáž kuchyne od 120€/m. Demontáž od 60€/m. Výjazd od 25€. Všetky typy kuchynských liniek. Kontaktujte nás ešte dnes!
+- [Montáž a skladanie nábytku od 25€](https://www.sofoservis.sk/montaz-nabytku): Profesionálna montáž a demontáž nábytku. Výjazd od 25€. IKEA, Asko, Jysk a všetky typy nábytku. Rýchlo a spoľahlivo. Kontaktujte nás ešte dnes!
+- [Hodinový manžel Bratislava - Domáci majster](https://www.sofoservis.sk/hodinovy-manzel-majster/bratislava): Hodinový manžel v Bratislave vrátane Petržalky a Ružinova – montáž nábytku, vešanie, drobné opravy. Od 30 €/hod, dostupný do 24 hodín. Napíšte, čo treba.
+- [Montáž a skladanie nábytku Bratislava](https://www.sofoservis.sk/montaz-nabytku/bratislava): Profesionálna montáž nábytku v Bratislave a okolí ✅ IKEA, JYSK, Asko a iné značky ✅ Od 25€/hod. ✅ Dostupní do 24 hodín
 
-## Sťahovanie v Bratislave – mestské časti
+## Búracie a demolačné práce
 
-- [Sťahovanie Bratislava](https://www.sofoservis.sk/stahovanie-bratislava): Sťahovanie v Bratislave
-- [Sťahovanie Petržalka](https://www.sofoservis.sk/stahovanie-petrzalka)
-- [Sťahovanie Ružinov](https://www.sofoservis.sk/stahovanie-ruzinov)
-- [Sťahovanie Staré Mesto](https://www.sofoservis.sk/stahovanie-stare-mesto)
-- [Sťahovanie Nové Mesto](https://www.sofoservis.sk/stahovanie-nove-mesto)
-- [Sťahovanie Karlova Ves](https://www.sofoservis.sk/stahovanie-karlova-ves)
-- [Sťahovanie Dúbravka](https://www.sofoservis.sk/stahovanie-dubravka)
-
-## Sťahovanie – mestá na Slovensku
-
-- [Sťahovanie Trnava](https://www.sofoservis.sk/stahovanie-trnava)
-- [Sťahovanie Nitra](https://www.sofoservis.sk/stahovanie-nitra)
-- [Sťahovanie Senec](https://www.sofoservis.sk/stahovanie-senec)
-- [Sťahovanie Pezinok](https://www.sofoservis.sk/stahovanie-pezinok)
-- [Sťahovanie Malacky](https://www.sofoservis.sk/stahovanie-malacky)
-- [Sťahovanie Galanta](https://www.sofoservis.sk/stahovanie-galanta)
-- [Sťahovanie Piešťany](https://www.sofoservis.sk/stahovanie-piestany)
-- [Sťahovanie Šaľa](https://www.sofoservis.sk/stahovanie-sala)
-- [Sťahovanie Hlohovec](https://www.sofoservis.sk/stahovanie-hlohovec)
-- [Sťahovanie Senica](https://www.sofoservis.sk/stahovanie-senica)
-- [Sťahovanie Stupava](https://www.sofoservis.sk/stahovanie-stupava)
-- [Sťahovanie Komárno](https://www.sofoservis.sk/stahovanie-komarno)
-- [Sťahovanie Šamorín](https://www.sofoservis.sk/stahovanie-samorin)
-- [Sťahovanie Levice](https://www.sofoservis.sk/stahovanie-levice)
-
-## Medzinárodné sťahovanie – krajiny
-
-- [Sťahovanie Rakúsko](https://www.sofoservis.sk/medzinarodne-stahovanie/rakusko)
-- [Sťahovanie Česká republika](https://www.sofoservis.sk/medzinarodne-stahovanie/ceska-republika)
-- [Sťahovanie Nemecko](https://www.sofoservis.sk/medzinarodne-stahovanie/nemecko)
-- [Sťahovanie Anglicko](https://www.sofoservis.sk/medzinarodne-stahovanie/anglicko)
-- [Sťahovanie Švajčiarsko](https://www.sofoservis.sk/medzinarodne-stahovanie/svajciarsko)
-- [Sťahovanie Holandsko](https://www.sofoservis.sk/medzinarodne-stahovanie/holandsko)
-- [Sťahovanie Belgicko](https://www.sofoservis.sk/medzinarodne-stahovanie/belgicko)
-- [Sťahovanie Francúzsko](https://www.sofoservis.sk/medzinarodne-stahovanie/francuzsko)
-- [Sťahovanie Maďarsko](https://www.sofoservis.sk/medzinarodne-stahovanie/madarsko)
-- [Sťahovanie Poľsko](https://www.sofoservis.sk/medzinarodne-stahovanie/polsko)
-- [Sťahovanie Taliansko](https://www.sofoservis.sk/medzinarodne-stahovanie/taliansko)
-- [Sťahovanie Španielsko](https://www.sofoservis.sk/medzinarodne-stahovanie/spanielsko)
-- [Sťahovanie Nórsko](https://www.sofoservis.sk/medzinarodne-stahovanie/norsko)
-- [Sťahovanie Švédsko](https://www.sofoservis.sk/medzinarodne-stahovanie/svedsko)
-- [Sťahovanie Dánsko](https://www.sofoservis.sk/medzinarodne-stahovanie/dansko)
-- [Sťahovanie Írsko](https://www.sofoservis.sk/medzinarodne-stahovanie/irsko)
-
-## Medzinárodné sťahovanie – mestá
-
-- [Sťahovanie Viedeň](https://www.sofoservis.sk/medzinarodne-stahovanie/vieden)
-- [Sťahovanie Praha](https://www.sofoservis.sk/medzinarodne-stahovanie/praha)
-- [Sťahovanie Budapešť](https://www.sofoservis.sk/medzinarodne-stahovanie/budapest)
-- [Sťahovanie Mníchov](https://www.sofoservis.sk/medzinarodne-stahovanie/mnichov)
-- [Sťahovanie Berlín](https://www.sofoservis.sk/medzinarodne-stahovanie/berlin)
-- [Sťahovanie Frankfurt](https://www.sofoservis.sk/medzinarodne-stahovanie/frankfurt)
-- [Sťahovanie Hamburg](https://www.sofoservis.sk/medzinarodne-stahovanie/hamburg)
-- [Sťahovanie Zürich](https://www.sofoservis.sk/medzinarodne-stahovanie/zurich)
-- [Sťahovanie Londýn](https://www.sofoservis.sk/medzinarodne-stahovanie/londyn)
-- [Sťahovanie Amsterdam](https://www.sofoservis.sk/medzinarodne-stahovanie/amsterdam)
-- [Sťahovanie Brusel](https://www.sofoservis.sk/medzinarodne-stahovanie/brusel)
-- [Sťahovanie Paríž](https://www.sofoservis.sk/medzinarodne-stahovanie/pariz)
-- [Sťahovanie Dublin](https://www.sofoservis.sk/medzinarodne-stahovanie/dublin)
-- [Sťahovanie Varšava](https://www.sofoservis.sk/medzinarodne-stahovanie/varsava)
-- [Sťahovanie Brno](https://www.sofoservis.sk/medzinarodne-stahovanie/brno)
-
-## Anglická jazyková verzia
-
-- [Homepage EN](https://www.sofoservis.sk/en): English version – moving, junk removal and assembly services Slovakia
-- [Moving Bratislava EN](https://www.sofoservis.sk/en/moving-bratislava)
-- [International Moving EN](https://www.sofoservis.sk/en/international-moving-services)
-- [Furniture Assembly EN](https://www.sofoservis.sk/en/furniture-assembly)
-- [Handyman Services EN](https://www.sofoservis.sk/en/handyman-services)
-- [Demolition Services EN](https://www.sofoservis.sk/en/demolition-services)
-- [Junk Removal EN](https://www.sofoservis.sk/en/junk-removal)
-
-## Blog
-
-- [Blog](https://www.sofoservis.sk/blog): Články o sťahovaní, cenách a tipoch
-- [Hodinový manžel – cena a služby](https://www.sofoservis.sk/blog/hodinovy-manzel-sluzby-cena)
-- [Cena sťahovania bytu 2026](https://www.sofoservis.sk/blog/cena-stahovania-bytu)
-- [Sťahovanie kancelárie – cena](https://www.sofoservis.sk/blog/cena-stahovania-kancelarie)
-- [Montáž nábytku IKEA – cena 2026](https://www.sofoservis.sk/blog/montaz-nabytku-ikea-cena)
+- [Búracie práce — búranie a demolácia objektov](https://www.sofoservis.sk/buracie-prace): Ponúkame komplexné búracie práce v Bratislave a okolí ✅ Búranie priečok, stien, bytových jadier a demolácia objektov ✅ Obhliadka priestoru zadarmo ✅ Kontaktujte nás!
+- [Búranie a demolácia domov a budov](https://www.sofoservis.sk/buracie-prace/buranie-demolacia-domov): Ponúkame komplexné služby búrania a demolácie starých domov, budov alebo stodôl ✅ Lacné a férové ceny ✅ Kontaktujte nás ešte dnes!
+- [Búranie stien a priečok v dome a byte](https://www.sofoservis.sk/buracie-prace/buranie-stien-priecok): Ponúkame komplexné búranie stien a priečok v dome alebo byte ✅ Lacné a férové ceny ✅ Kontaktujte nás ešte dnes!
 
 ## Právne dokumenty
 
-- [Zásady používania cookies](https://www.sofoservis.sk/zasady-pouzivania-cookies)
-- [Ochrana osobných údajov](https://www.sofoservis.sk/zasady-spracovania-osobnych-udajov)
-- [Všeobecné obchodné podmienky](https://www.sofoservis.sk/vseobecne-obchodne-podmienky)
+- [Všeobecné obchodné podmienky | VOP](https://www.sofoservis.sk/vseobecne-obchodne-podmienky)
+- [Zásady používania súborov cookies](https://www.sofoservis.sk/zasady-pouzivania-cookies)
+- [Zásady spracovania osobných údajov | GDPR](https://www.sofoservis.sk/zasady-spracovania-osobnych-udajov)
+
+## English – main pages
+
+- [Moving, Clearance & Furniture Assembly Services Slovakia](https://www.sofoservis.sk/en): We offer professional moving, property clearance, and furniture assembly services for individuals and businesses ✅ Cheap and fair prices ✅ Free space inspection.
+- [About Us](https://www.sofoservis.sk/en/about): Meet the team behind Sofoservis – from a single yellow van in 2018 to a professional company with 6 trucks and 3,500+ happy customers in Slovakia.
+- [Contact Us](https://www.sofoservis.sk/en/contact): Contact Sofoservis for affordable and professional moving services in Bratislava and throughout Slovakia. Get a free quote today!
+- [Service Pricing - Moving, Clearance, Assembly](https://www.sofoservis.sk/en/pricing): Transparent prices for our services. Moving from €30/hr, clearance from €30/hr, furniture assembly from €30/hr. Free inspection!
+- [Reviews & References](https://www.sofoservis.sk/en/reviews): See reviews and references from our completed moving projects ✅ Free site inspection ✅ Contact us today!
+
+## English – moving services
+
+- [Apartment Moving - Cheap and Professional](https://www.sofoservis.sk/en/apartment-moving): We offer professional apartment moving services ✅ Cheap and fair prices ✅ Free space inspection ✅ Contact us today for a stress-free move!
+- [Furniture Moving and Removal](https://www.sofoservis.sk/en/furniture-moving-removal): We offer professional furniture moving and removal ✅ Cheap and fair prices ✅ Free space inspection ✅ Contact us today!
+- [Industrial Machinery Moving | CNC, Production](https://www.sofoservis.sk/en/machinery-moving): Professional industrial machinery moving ✅ CNC machines, production lines, ATMs ✅ Hydraulic equipment ✅ Minimal production downtime ✅ Free quote!
+- [Moving Services - Professional & Affordable](https://www.sofoservis.sk/en/moving): Professional moving services for apartments, houses, offices and international relocations from €30/hr. Free site inspection. Fast, reliable.
+- [Moving Heavy Loads - Piano, Safe and Others](https://www.sofoservis.sk/en/moving-heavy-loads): We can help you move heavy loads such as a piano, safe or other items ✅ Specialized equipment ✅ Experienced team ✅ Cheap and fair prices ✅ Contact us.
+- [Office Moving - Cheap and Professional](https://www.sofoservis.sk/en/office-moving): We offer professional office moving services ✅ Cheap and fair prices ✅ Free space inspection ✅ Contact us today for a smooth business relocation!
+- [Piano Moving — Upright & Grand Piano](https://www.sofoservis.sk/en/piano-moving): Professional piano moving service ✅ Upright pianos, grand pianos & baby grands ✅ Specialist piano dollies and skids ✅ Staircase & window hoisting ✅ Free.
+- [Safe Moving Service — Vault & Safe Transport](https://www.sofoservis.sk/en/safe-moving): Professional safe and vault moving ✅ Hydraulic jacks & motor platforms ✅ Weight categories from small safes to bank vaults ✅ Discreet service ✅ Free quote!
+
+## English – moving by city (Slovakia)
+
+- [Moving Services Bratislava](https://www.sofoservis.sk/en/moving-bratislava)
+- [Moving Services Dúbravka Bratislava](https://www.sofoservis.sk/en/moving-dubravka)
+- [Moving Services Galanta](https://www.sofoservis.sk/en/moving-galanta)
+- [Moving Services Hlohovec](https://www.sofoservis.sk/en/moving-hlohovec)
+- [Moving Services Karlova Ves Bratislava](https://www.sofoservis.sk/en/moving-karlova-ves)
+- [Moving Services Komárno](https://www.sofoservis.sk/en/moving-komarno)
+- [Moving Services Levice](https://www.sofoservis.sk/en/moving-levice)
+- [Moving Services Malacky](https://www.sofoservis.sk/en/moving-malacky)
+- [Moving Services Nitra — Flats & Offices](https://www.sofoservis.sk/en/moving-nitra)
+- [Moving Services Nové Mesto Bratislava](https://www.sofoservis.sk/en/moving-nove-mesto)
+- [Moving Services Petržalka Bratislava](https://www.sofoservis.sk/en/moving-petrzalka)
+- [Moving Services Pezinok](https://www.sofoservis.sk/en/moving-pezinok)
+- [Moving Services Piešťany](https://www.sofoservis.sk/en/moving-piestany)
+- [Moving Services Ružinov Bratislava](https://www.sofoservis.sk/en/moving-ruzinov)
+- [Moving Services Šaľa — Flats & Offices](https://www.sofoservis.sk/en/moving-sala)
+- [Moving Services Šamorín](https://www.sofoservis.sk/en/moving-samorin)
+- [Moving Services Senec — Flats & Offices](https://www.sofoservis.sk/en/moving-senec)
+- [Moving Services Senica](https://www.sofoservis.sk/en/moving-senica)
+- [Moving Services Staré Mesto Bratislava](https://www.sofoservis.sk/en/moving-stare-mesto)
+- [Moving Services Stupava](https://www.sofoservis.sk/en/moving-stupava)
+- [Moving Services Trnava](https://www.sofoservis.sk/en/moving-trnava)
+
+## English – international moving
+
+- [International Moving Services](https://www.sofoservis.sk/en/international-moving-services)
+- [Moving from Austria to Slovakia — Fast](https://www.sofoservis.sk/en/moving-from-austria-to-slovakia)
+- [Moving from France to Slovakia — International](https://www.sofoservis.sk/en/moving-from-france-to-slovakia)
+- [Moving from Germany to Slovakia](https://www.sofoservis.sk/en/moving-from-germany-to-slovakia)
+- [Moving from Netherlands to Slovakia](https://www.sofoservis.sk/en/moving-from-netherlands-to-slovakia)
+- [Moving — International Relocation Services](https://www.sofoservis.sk/en/moving-from-slovakia)
+- [Moving from UK to Slovakia](https://www.sofoservis.sk/en/moving-from-uk-to-slovakia)
+- [Moving from USA to Slovakia — Intercontinental](https://www.sofoservis.sk/en/moving-from-usa-to-slovakia)
+- [Moving to Amsterdam — International Removals](https://www.sofoservis.sk/en/moving-to-amsterdam)
+- [Moving to Austria — Fast, Affordable Removals](https://www.sofoservis.sk/en/moving-to-austria)
+- [Moving to Barcelona — International Removals](https://www.sofoservis.sk/en/moving-to-barcelona)
+- [Moving to Belgium — International Removals](https://www.sofoservis.sk/en/moving-to-belgium)
+- [Moving to Berlin — International Removals](https://www.sofoservis.sk/en/moving-to-berlin)
+- [Moving to Brno — Removals to Czech Republic](https://www.sofoservis.sk/en/moving-to-brno)
+- [Moving to Brussels — International Removals](https://www.sofoservis.sk/en/moving-to-brussels)
+- [Moving to Budapest — International Removals](https://www.sofoservis.sk/en/moving-to-budapest)
+- [Moving to Copenhagen — International Removals](https://www.sofoservis.sk/en/moving-to-copenhagen)
+- [Moving to Czech Republic — International Removals](https://www.sofoservis.sk/en/moving-to-czech-republic)
+- [Moving to Denmark — International Removals](https://www.sofoservis.sk/en/moving-to-denmark)
+- [Moving to Dublin — International Removals](https://www.sofoservis.sk/en/moving-to-dublin)
+- [Moving to France — International Removals](https://www.sofoservis.sk/en/moving-to-france)
+- [Moving to Frankfurt — International Removals](https://www.sofoservis.sk/en/moving-to-frankfurt)
+- [Moving to Germany — International Removals](https://www.sofoservis.sk/en/moving-to-germany)
+- [Moving to Hamburg — International Removals](https://www.sofoservis.sk/en/moving-to-hamburg)
+- [Moving to Hungary — International Removals](https://www.sofoservis.sk/en/moving-to-hungary)
+- [Moving to Ireland — International Removals](https://www.sofoservis.sk/en/moving-to-ireland)
+- [Moving to Italy — International Removals](https://www.sofoservis.sk/en/moving-to-italy)
+- [Moving to Lisbon — International Removals](https://www.sofoservis.sk/en/moving-to-lisbon)
+- [Moving to London — International Removals](https://www.sofoservis.sk/en/moving-to-london)
+- [Moving to Munich — International Removals](https://www.sofoservis.sk/en/moving-to-munich)
+- [Moving to Netherlands — International Removals](https://www.sofoservis.sk/en/moving-to-netherlands)
+- [Moving to Norway — International Removals](https://www.sofoservis.sk/en/moving-to-norway)
+- [Moving to Oslo — International Removals](https://www.sofoservis.sk/en/moving-to-oslo)
+- [Moving to Paris — International Removals](https://www.sofoservis.sk/en/moving-to-paris)
+- [Moving to Poland — International Removals](https://www.sofoservis.sk/en/moving-to-poland)
+- [Moving to Prague — International Removals](https://www.sofoservis.sk/en/moving-to-prague)
+- [Moving to Rome — International Removals](https://www.sofoservis.sk/en/moving-to-rome)
+- [Moving to Slovakia — International Relocation](https://www.sofoservis.sk/en/moving-to-slovakia)
+- [Moving to Spain — International Removals](https://www.sofoservis.sk/en/moving-to-spain)
+- [Moving to Stockholm — International Removals](https://www.sofoservis.sk/en/moving-to-stockholm)
+- [Moving to Sweden — International Removals](https://www.sofoservis.sk/en/moving-to-sweden)
+- [Moving to Switzerland — International Removals](https://www.sofoservis.sk/en/moving-to-switzerland)
+- [Moving to the UK — International Removals](https://www.sofoservis.sk/en/moving-to-uk)
+- [Moving to Vienna — International Removals](https://www.sofoservis.sk/en/moving-to-vienna)
+- [Moving to Warsaw — International Removals](https://www.sofoservis.sk/en/moving-to-warsaw)
+- [Moving to Zurich — International Removals](https://www.sofoservis.sk/en/moving-to-zurich)
+
+## English – junk & waste removal
+
+- [Apartment & House Junk Removal Bratislava](https://www.sofoservis.sk/en/apartment-junk-removal-bratislava)
+- [Apartment & House Junk Removal Galanta](https://www.sofoservis.sk/en/apartment-junk-removal-galanta)
+- [Apartment & House Junk Removal Hlohovec](https://www.sofoservis.sk/en/apartment-junk-removal-hlohovec)
+- [Apartment & House Junk Removal Komárno](https://www.sofoservis.sk/en/apartment-junk-removal-komarno)
+- [Apartment & House Junk Removal Levice](https://www.sofoservis.sk/en/apartment-junk-removal-levice)
+- [Apartment & House Junk Removal Malacky](https://www.sofoservis.sk/en/apartment-junk-removal-malacky)
+- [Apartment & House Junk Removal Nitra](https://www.sofoservis.sk/en/apartment-junk-removal-nitra)
+- [Apartment & House Junk Removal Pezinok](https://www.sofoservis.sk/en/apartment-junk-removal-pezinok)
+- [Apartment & House Junk Removal Piešťany](https://www.sofoservis.sk/en/apartment-junk-removal-piestany)
+- [Apartment & House Junk Removal Šaľa](https://www.sofoservis.sk/en/apartment-junk-removal-sala)
+- [Apartment & House Junk Removal Šamorín](https://www.sofoservis.sk/en/apartment-junk-removal-samorin)
+- [Apartment & House Junk Removal Senec](https://www.sofoservis.sk/en/apartment-junk-removal-senec)
+- [Apartment & House Junk Removal Senica](https://www.sofoservis.sk/en/apartment-junk-removal-senica)
+- [Apartment & House Junk Removal Stupava](https://www.sofoservis.sk/en/apartment-junk-removal-stupava)
+- [Apartment & House Junk Removal Trnava](https://www.sofoservis.sk/en/apartment-junk-removal-trnava)
+- [Basement & Garage Junk Removal Services](https://www.sofoservis.sk/en/basement-garage-junk-removal)
+- [Basement & Garage Junk Removal Bratislava](https://www.sofoservis.sk/en/basement-junk-removal-bratislava)
+- [Construction Waste Removal & Disposal](https://www.sofoservis.sk/en/construction-waste-removal)
+- [Construction Waste Removal Bratislava](https://www.sofoservis.sk/en/construction-waste-removal-bratislava)
+- [Construction Waste Removal Galanta](https://www.sofoservis.sk/en/construction-waste-removal-galanta)
+- [Construction Waste Removal Hlohovec](https://www.sofoservis.sk/en/construction-waste-removal-hlohovec)
+- [Construction Waste Removal Nitra](https://www.sofoservis.sk/en/construction-waste-removal-nitra)
+- [Construction Waste Removal Senec](https://www.sofoservis.sk/en/construction-waste-removal-senec)
+- [Construction Waste Removal Senica](https://www.sofoservis.sk/en/construction-waste-removal-senica)
+- [Construction Waste Removal Trnava](https://www.sofoservis.sk/en/construction-waste-removal-trnava)
+- [Cottage & Rural Property Junk Removal](https://www.sofoservis.sk/en/cottage-junk-removal)
+- [Estate Junk Removal After Bereavement](https://www.sofoservis.sk/en/estate-junk-removal-bereavement)
+- [Furniture Removal & Disposal Services](https://www.sofoservis.sk/en/furniture-removal)
+- [Hazardous Waste & Appliance Removal](https://www.sofoservis.sk/en/hazardous-waste-removal)
+- [Home Junk Removal — Apartments & Houses](https://www.sofoservis.sk/en/home-junk-removal)
+- [Home Junk Removal Bratislava](https://www.sofoservis.sk/en/home-junk-removal-bratislava)
+- [Home Junk Removal Dúbravka Bratislava](https://www.sofoservis.sk/en/home-junk-removal-dubravka)
+- [Home Junk Removal Galanta](https://www.sofoservis.sk/en/home-junk-removal-galanta)
+- [Home Junk Removal Hlohovec](https://www.sofoservis.sk/en/home-junk-removal-hlohovec)
+- [Home Junk Removal Karlova Ves Bratislava](https://www.sofoservis.sk/en/home-junk-removal-karlova-ves)
+- [Home Junk Removal Komárno](https://www.sofoservis.sk/en/home-junk-removal-komarno)
+- [Home Junk Removal Levice](https://www.sofoservis.sk/en/home-junk-removal-levice)
+- [Home Junk Removal Malacky](https://www.sofoservis.sk/en/home-junk-removal-malacky)
+- [Home Junk Removal Nitra](https://www.sofoservis.sk/en/home-junk-removal-nitra)
+- [Home Junk Removal Nové Mesto Bratislava](https://www.sofoservis.sk/en/home-junk-removal-nove-mesto)
+- [Home Junk Removal Petržalka Bratislava](https://www.sofoservis.sk/en/home-junk-removal-petrzalka)
+- [Home Junk Removal Pezinok](https://www.sofoservis.sk/en/home-junk-removal-pezinok)
+- [Home Junk Removal Piešťany](https://www.sofoservis.sk/en/home-junk-removal-piestany)
+- [Home Junk Removal Ružinov Bratislava](https://www.sofoservis.sk/en/home-junk-removal-ruzinov)
+- [Home Junk Removal Šaľa](https://www.sofoservis.sk/en/home-junk-removal-sala)
+- [Home Junk Removal Šamorín](https://www.sofoservis.sk/en/home-junk-removal-samorin)
+- [Home Junk Removal Senec](https://www.sofoservis.sk/en/home-junk-removal-senec)
+- [Home Junk Removal Senica](https://www.sofoservis.sk/en/home-junk-removal-senica)
+- [Home Junk Removal Staré Mesto Bratislava](https://www.sofoservis.sk/en/home-junk-removal-stare-mesto)
+- [Home Junk Removal Stupava](https://www.sofoservis.sk/en/home-junk-removal-stupava)
+- [Home Junk Removal Trnava](https://www.sofoservis.sk/en/home-junk-removal-trnava)
+- [Junk Removal Services - Professional, Eco-Friendly](https://www.sofoservis.sk/en/junk-removal)
+- [Office Junk Removal Services](https://www.sofoservis.sk/en/office-junk-removal)
+- [Old Furniture Removal Bratislava](https://www.sofoservis.sk/en/old-furniture-removal-bratislava)
+- [Post-Renovation Junk Removal & Waste Removal](https://www.sofoservis.sk/en/post-renovation-junk-removal)
+- [Property & Land Junk Removal Services](https://www.sofoservis.sk/en/property-land-junk-removal)
+
+## English – furniture assembly & handyman
+
+- [Furniture Assembly & Disassembly Services](https://www.sofoservis.sk/en/furniture-assembly)
+- [Furniture Assembly Bratislava](https://www.sofoservis.sk/en/furniture-assembly-bratislava)
+- [Handyman Services Bratislava](https://www.sofoservis.sk/en/handyman-bratislava)
+- [Handyman Services Galanta](https://www.sofoservis.sk/en/handyman-galanta)
+- [Handyman Services Piešťany](https://www.sofoservis.sk/en/handyman-piestany)
+- [Handyman Services — Repairs & Assembly](https://www.sofoservis.sk/en/handyman-services)
+- [Handyman Services Trnava](https://www.sofoservis.sk/en/handyman-trnava)
+- [Kitchen Installation & Assembly Services](https://www.sofoservis.sk/en/kitchen-installation)
+
+## English – demolition
+
+- [Demolition Services Bratislava](https://www.sofoservis.sk/en/demolition-bratislava)
+- [Demolition Services Nitra](https://www.sofoservis.sk/en/demolition-nitra)
+- [Demolition Services Pezinok](https://www.sofoservis.sk/en/demolition-pezinok)
+- [Demolition & Building Removal Services](https://www.sofoservis.sk/en/demolition-services)
+- [Demolition Services Trnava](https://www.sofoservis.sk/en/demolition-trnava)
+- [House & Building Demolition Services](https://www.sofoservis.sk/en/house-demolition)
+- [Wall & Partition Demolition Services](https://www.sofoservis.sk/en/wall-demolition)
+
+## English – legal
+
+- [Cookie Policy](https://www.sofoservis.sk/en/cookie-policy)
+- [Privacy Policy | GDPR](https://www.sofoservis.sk/en/privacy-policy)
+- [Terms of Service](https://www.sofoservis.sk/en/terms-of-service)
