@@ -324,54 +324,56 @@ export const navCategoriesEN: NavCategory[] = [
 
 interface NavItemProps {
   category: NavCategory;
-  activeDropdown: string | null;
-  toggleDropdown: (name: string) => void;
-  expandedSubLink: string | null;
-  setExpandedSubLink: React.Dispatch<React.SetStateAction<string | null>>;
-  expandedSubSubLink: string | null;
-  setExpandedSubSubLink: React.Dispatch<React.SetStateAction<string | null>>;
   setMobileMenuOpen: (open: boolean) => void;
 }
 
+// Chevron SVG used across all levels
+function Chevron({ className }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  );
+}
+
 // Unified navigation item — single markup for mobile (accordion) and desktop (hover dropdown).
-// All submenu links are always rendered in the DOM; visibility is toggled via CSS classes.
+// All submenu links are always rendered in the DOM.
+// Level 1: <details> — mobile accordion + desktop CSS hover.
+// Level 2 & 3: <details> — works natively without JavaScript.
 export const NavItem = React.memo(function NavItem({
   category,
-  activeDropdown,
-  toggleDropdown,
-  expandedSubLink,
-  setExpandedSubLink,
-  expandedSubSubLink,
-  setExpandedSubSubLink,
   setMobileMenuOpen,
 }: NavItemProps) {
-  const hasActiveSubLink = category.links.some(
-    (l) => l.subLinks && expandedSubLink === category.name + "-" + l.label
-  );
-  const isOpen = activeDropdown === category.name;
   const closeMobile = () => setMobileMenuOpen(false);
 
+  // Desktop panel base styles (position, size, shadow)
   const panelDesktop =
     "desktop:block desktop:absolute desktop:left-0 desktop:top-full desktop:w-60 desktop:min-w-[240px] desktop:bg-white desktop:border desktop:border-gray-100 desktop:rounded-lg desktop:shadow-lg desktop:py-2 desktop:mt-1 desktop:z-50 desktop:max-h-[70vh] desktop:overflow-y-auto desktop:transition-[opacity,transform,visibility] desktop:duration-150 desktop:ease-out";
-  const panelVisibility = hasActiveSubLink
-    ? "desktop:visible desktop:opacity-100 desktop:translate-y-0"
-    : "desktop:invisible desktop:opacity-0 desktop:translate-y-2 desktop:group-hover:visible desktop:group-hover:opacity-100 desktop:group-hover:translate-y-0";
 
+  // Desktop panel visibility — hover shows it; also shown when <details> is open (keyboard/click)
+  const panelVisibility =
+    "desktop:invisible desktop:opacity-0 desktop:translate-y-2 desktop:group-hover:visible desktop:group-hover:opacity-100 desktop:group-hover:translate-y-0 desktop:group-open:visible desktop:group-open:opacity-100 desktop:group-open:translate-y-0";
+
+  // ── Flat category (INFORMÁCIE / INFORMATION) ──────────────────────────────
   if (category.flat) {
     return (
-      <div
-        className="desktop:relative group"
-        onMouseLeave={() => setExpandedSubLink(null)}
-      >
-        <button
-          type="button"
-          className="hidden desktop:flex nav-link px-3 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors items-center gap-1.5 text-sm group-hover:text-accent-500 whitespace-nowrap"
-        >
+      <details className="desktop:relative group" onMouseLeave={() => {}}>
+        <summary className="hidden desktop:flex list-none nav-link px-3 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors items-center gap-1.5 text-sm group-hover:text-accent-500 whitespace-nowrap cursor-pointer">
           <span>{category.name}</span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true">
-            <path d="m6 9 6 6 6-6"></path>
-          </svg>
-        </button>
+          <Chevron className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 group-open:rotate-180" />
+        </summary>
         <div className={`block ${panelDesktop} ${panelVisibility}`}>
           {category.links.map((link, index) => (
             <Link
@@ -385,72 +387,99 @@ export const NavItem = React.memo(function NavItem({
             </Link>
           ))}
         </div>
-      </div>
+      </details>
     );
   }
 
+  // ── Regular category (with accordion on mobile, hover on desktop) ─────────
   return (
-    <div
-      className="border-b border-gray-200 desktop:border-0 desktop:relative group"
-      onMouseLeave={() => setExpandedSubLink(null)}
-    >
-      <button
-        type="button"
-        onClick={() => toggleDropdown(category.name)}
-        aria-expanded={isOpen}
-        className="nav-link w-full flex justify-between items-center py-5 px-5 text-left text-primary-900 font-bold uppercase text-base desktop:w-auto desktop:h-24 desktop:py-0 desktop:px-3 desktop:justify-start desktop:gap-1.5 desktop:text-primary-700 desktop:text-sm desktop:tracking-wide desktop:hover:text-accent-500 desktop:group-hover:text-accent-500 transition-colors whitespace-nowrap"
-      >
+    <details className="border-b border-gray-200 desktop:border-0 desktop:relative group">
+      {/* Level 1 summary — category name */}
+      <summary className="list-none nav-link w-full flex justify-between items-center py-5 px-5 text-left text-primary-900 font-bold uppercase text-base desktop:w-auto desktop:h-24 desktop:py-0 desktop:px-3 desktop:justify-start desktop:gap-1.5 desktop:text-primary-700 desktop:text-sm desktop:tracking-wide desktop:hover:text-accent-500 desktop:group-hover:text-accent-500 transition-colors whitespace-nowrap cursor-pointer">
         <span className="desktop:hidden">{category.mobileName ?? category.name}</span>
         <span className="hidden desktop:inline">{category.name}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={`w-6 h-6 text-accent-500 desktop:w-4 desktop:h-4 desktop:text-current transition-transform duration-200 desktop:group-hover:rotate-180 ${isOpen ? "rotate-180 desktop:rotate-0" : ""}`} aria-hidden="true">
-          <path d="m6 9 6 6 6-6"></path>
-        </svg>
-      </button>
+        <Chevron className="w-6 h-6 text-accent-500 desktop:w-4 desktop:h-4 desktop:text-current transition-transform duration-200 desktop:group-hover:rotate-180 group-open:rotate-180 desktop:group-open:rotate-0" />
+      </summary>
 
-      <div className={`${isOpen ? "block" : "hidden"} bg-gray-50 py-3 desktop:bg-white desktop:py-2 ${panelDesktop} ${panelVisibility}`}>
+      {/* Level 1 panel */}
+      <div className={`bg-gray-50 py-3 desktop:bg-white desktop:py-2 ${panelDesktop} ${panelVisibility}`}>
         {category.links.map((link, index) =>
           link.subLinks ? (
-            <div key={index}>
-              <button
-                type="button"
-                onClick={() => { const key = category.name + "-" + link.label; setExpandedSubLink(expandedSubLink === key ? null : key); }}
-                aria-expanded={expandedSubLink === category.name + "-" + link.label}
-                className="w-full flex justify-between items-center text-left px-8 py-3 text-primary-700 text-base font-semibold border-t border-gray-200 mt-1 desktop:px-5 desktop:py-2.5 desktop:font-medium desktop:border-gray-100 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors"
-              >
+            // ── Level 2: expandable sub-section (e.g. "Mestá") ──────────────
+            // Uses <details> so it works without JavaScript
+            <details key={index} className="group/sub">
+              <summary className="list-none w-full flex justify-between items-center text-left px-8 py-3 text-primary-700 text-base font-semibold border-t border-gray-200 mt-1 desktop:px-5 desktop:py-2.5 desktop:font-medium desktop:border-gray-100 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors cursor-pointer">
                 <span>{link.label}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`flex-shrink-0 transition-transform duration-200 ${expandedSubLink === category.name + "-" + link.label ? "rotate-180" : ""}`}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="flex-shrink-0 transition-transform duration-200 group-open/sub:rotate-180"
+                  aria-hidden="true"
+                >
                   <path d="m6 9 6 6 6-6" />
                 </svg>
-              </button>
-              <div className={`${expandedSubLink === category.name + "-" + link.label ? "block" : "hidden"} bg-white desktop:bg-gray-50 desktop:pb-1`}>
+              </summary>
+
+              {/* Level 2 panel */}
+              <div className="bg-white desktop:bg-gray-50 desktop:pb-1">
                 {link.subLinks.map((sub, si) =>
                   sub.subLinks ? (
-                    <div key={si}>
-                      <button
-                        type="button"
-                        onClick={() => { const key = category.name + "-" + sub.label; setExpandedSubSubLink(expandedSubSubLink === key ? null : key); }}
-                        aria-expanded={expandedSubSubLink === category.name + "-" + sub.label}
-                        className="w-full flex justify-between items-center text-left pl-12 pr-8 py-2.5 text-primary-700 text-sm font-medium border-t border-gray-100 desktop:border-0 desktop:pl-8 desktop:pr-5 desktop:py-2 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors"
-                      >
+                    // ── Level 3: expandable sub-sub-section ────────────────
+                    // Uses <details> so it works without JavaScript
+                    <details key={si} className="group/subsub">
+                      <summary className="list-none w-full flex justify-between items-center text-left pl-12 pr-8 py-2.5 text-primary-700 text-sm font-medium border-t border-gray-100 desktop:border-0 desktop:pl-8 desktop:pr-5 desktop:py-2 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors cursor-pointer">
                         <span>{sub.label}</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`flex-shrink-0 transition-transform duration-200 ${expandedSubSubLink === category.name + "-" + sub.label ? "rotate-180" : ""}`}>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="flex-shrink-0 transition-transform duration-200 group-open/subsub:rotate-180"
+                          aria-hidden="true"
+                        >
                           <path d="m6 9 6 6 6-6" />
                         </svg>
-                      </button>
-                      <div className={`${expandedSubSubLink === category.name + "-" + sub.label ? "block" : "hidden"} bg-gray-50 desktop:bg-white`}>
+                      </summary>
+
+                      {/* Level 3 panel */}
+                      <div className="bg-gray-50 desktop:bg-white">
                         {sub.subLinksAllLabel !== "" && (
-                          <Link href={sub.href} className="block pl-14 pr-8 py-2 text-primary-700 text-xs font-semibold border-b border-gray-200 desktop:pl-10 desktop:pr-5 desktop:py-1.5 desktop:border-gray-100 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors" onClick={closeMobile} prefetch={false}>
+                          <Link
+                            href={sub.href}
+                            className="block pl-14 pr-8 py-2 text-primary-700 text-xs font-semibold border-b border-gray-200 desktop:pl-10 desktop:pr-5 desktop:py-1.5 desktop:border-gray-100 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors"
+                            onClick={closeMobile}
+                            prefetch={false}
+                          >
                             {sub.subLinksAllLabel ?? "→ Všetky mestské časti"}
                           </Link>
                         )}
                         {sub.subLinks.map((subsub, ssi) => (
-                          <Link key={ssi} href={subsub.href} className="block pl-16 pr-8 py-2 text-primary-600 text-xs font-medium desktop:pl-12 desktop:pr-5 desktop:py-1.5 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors" onClick={closeMobile} prefetch={false}>
+                          <Link
+                            key={ssi}
+                            href={subsub.href}
+                            className="block pl-16 pr-8 py-2 text-primary-600 text-xs font-medium desktop:pl-12 desktop:pr-5 desktop:py-1.5 desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors"
+                            onClick={closeMobile}
+                            prefetch={false}
+                          >
                             {subsub.label}
                           </Link>
                         ))}
                       </div>
-                    </div>
+                    </details>
                   ) : (
+                    // Plain sub-link (no further nesting)
                     <Link
                       key={si}
                       href={sub.href}
@@ -463,8 +492,9 @@ export const NavItem = React.memo(function NavItem({
                   )
                 )}
               </div>
-            </div>
+            </details>
           ) : (
+            // Plain link (no sub-levels)
             <Link
               key={index}
               href={link.href}
@@ -477,6 +507,6 @@ export const NavItem = React.memo(function NavItem({
           )
         )}
       </div>
-    </div>
+    </details>
   );
 });

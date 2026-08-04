@@ -16,9 +16,6 @@ import {
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [expandedSubLink, setExpandedSubLink] = useState<string | null>(null);
-  const [expandedSubSubLink, setExpandedSubSubLink] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [nimbataPhone, setNimbataPhone] = useState<string | null>(null);
   const mobileNavRef = useRef<HTMLElement>(null);
@@ -266,9 +263,6 @@ export default function Navbar() {
     router.push(href, { scroll: false });
   }, [router]);
 
-  const toggleDropdown = useCallback((name: string) => {
-    setActiveDropdown((prev) => (prev === name ? null : name));
-  }, []);
 
 
   // Set the appropriate navigation categories based on language
@@ -439,12 +433,6 @@ export default function Navbar() {
                     <NavItem
                       key={index}
                       category={category}
-                      activeDropdown={activeDropdown}
-                      toggleDropdown={toggleDropdown}
-                      expandedSubLink={expandedSubLink}
-                      setExpandedSubLink={setExpandedSubLink}
-                      expandedSubSubLink={expandedSubSubLink}
-                      setExpandedSubSubLink={setExpandedSubSubLink}
                       setMobileMenuOpen={setMobileMenuOpen}
                     />
                   ))}
