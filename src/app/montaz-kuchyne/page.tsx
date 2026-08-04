@@ -79,14 +79,12 @@ export default function MontazKuchynePage() {
         title: "Montáž kuchynských liniek",
         description:
           "Kompletná montáž kuchynských liniek vrátane skriniek, pracovných dosiek, drezu a všetkých komponentov. Presná inštalácia podľa dodaného plánu s funkčným výsledkom.",
-        link: "/montaz-kuchyne",
       },
       {
         image: "/icons/appliance_icon.svg", // For appliance installation
         title: "Inštalácia kuchynských spotrebičov",
         description:
           "Odborné osadenie vstavaných rúr, varných dosiek, digestorov, umývačiek riadu a chladničiek do pripravených otvorov v kuchynských skrinkách.",
-        link: "/montaz-kuchyne",
       },
       {
         image: "/icons/vypratavanie_icon.svg", // For clearing out old kitchen

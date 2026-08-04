@@ -79,14 +79,12 @@ export default function BuraciePracePage() {
         title: "Vybúranie podláh a povrchov",
         description:
           "Presné vybúranie starých podláh, dlažieb, poterov a povrchov. Pripravíme váš priestor na položenie nových podláh alebo realizáciu nových povrchových úprav.",
-        link: "/buracie-prace",
       },
       {
         image: "/icons/plumbing_icon.svg",
         title: "Demolácia kúpeľní a kuchýň",
         description:
           "Komplexná demolácia kúpeľní a kuchýň, vrátane odstránenia obkladov, dlažby, sanity a rozvodov. Priestor pripravíme pre novú modernú kúpeľňu alebo kuchyňu.",
-        link: "/buracie-prace",
       },
       {
         image: "/icons/house_icon.svg",

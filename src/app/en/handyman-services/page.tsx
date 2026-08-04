@@ -76,7 +76,6 @@ export default function HandymanServicesPage() {
         title: "Repairs & Maintenance",
         description:
           "Home repairs and maintenance - faucet replacement, tap repair, shelf mounting, painting, drilling holes, and other small jobs.",
-        link: "/en/handyman-services",
       },
       {
         image: "/icons/furniture_icon.svg",
@@ -90,7 +89,6 @@ export default function HandymanServicesPage() {
         title: "Electrical Work",
         description:
           "Basic electrical work: switch replacement, socket replacement, light fitting, chandelier connection, and doorbell installation.",
-        link: "/en/handyman-services",
       },
       {
         image: "/icons/curtain_icon.svg",
@@ -111,7 +109,6 @@ export default function HandymanServicesPage() {
         title: "Painting & Finishing Work",
         description:
           "Room painting, wood staining, post-renovation finishing work, caulking, silicone application, and other surface treatments.",
-        link: "/en/handyman-services",
       },
     ],
   };

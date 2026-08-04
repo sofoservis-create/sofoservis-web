@@ -77,7 +77,6 @@ export default function VypratavanieBytovDomovPage() {
         title: "Kompletné vypratanie bytu alebo domu",
         description:
           "Vypratáme celý byt alebo dom vrátane všetkých miestností, pivnice a podkrovia. Postaráme sa o triedenie vecí a ich následné zneškodnenie alebo darovanie.",
-        link: "/vypratavanie/vypratavanie-bytov-domov",
       },
       {
         image: "/icons/vypratavanie_icon.svg",

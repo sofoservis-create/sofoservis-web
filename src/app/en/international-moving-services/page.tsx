@@ -91,21 +91,18 @@ export default function InternationalMovingServicesPage() {
         title: "Customs Formalities and Documentation",
         description:
           "We'll help you prepare all necessary documents for smooth border crossing and customs clearance. Our experienced staff knows what permits and documents are required.",
-        link: "/en/international-moving-services",
       },
       {
         image: "/icons/packing_box_icon.svg",
         title: "Packing and Protection for Long Routes",
         description:
           "For international moving, we use specially reinforced packaging and protective materials that ensure the safety of your belongings even on long routes across multiple countries.",
-        link: "/en/international-moving-services",
       },
       {
         image: "/icons/insurance_icon.svg",
         title: "Insurance for International Transport",
         description:
           "Complete insurance of your property during the entire route of international transport. We guarantee safe transport and financial coverage in case of unforeseen events.",
-        link: "/en/international-moving-services",
       },
     ],
   };

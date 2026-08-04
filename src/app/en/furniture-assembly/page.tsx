@@ -78,7 +78,6 @@ export default function FurnitureAssemblyPage() {
         title: "Furniture Assembly & Installation",
         description:
           "Expert assembly of furniture from IKEA, JYSK, Asko, and other brands. We assemble any type of furniture according to instructions quickly and precisely.",
-        link: "/en/furniture-assembly",
       },
       {
         image: "/icons/kitchen_icon.svg",
@@ -106,7 +105,6 @@ export default function FurnitureAssemblyPage() {
         title: "Curtain Rod & Blind Installation",
         description:
           "Professional installation of curtain rods, hanging systems, and blinds. We ensure proper mounting to all types of walls with appropriate fixings.",
-        link: "/en/furniture-assembly",
       },
       {
         image: "/icons/repair_icon.svg",

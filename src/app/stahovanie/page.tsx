@@ -143,7 +143,6 @@ export default function StahovaniePage() {
         title: "Príprava nábytku na sťahovanie",
         description:
           "Profesionálna demontáž nábytku pred sťahovaním a opätovná montáž v novom domove. Rýchlo a bez poškodenia.",
-        link: "/stahovanie",
       },
     ],
   };

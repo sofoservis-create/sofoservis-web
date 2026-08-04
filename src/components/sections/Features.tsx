@@ -10,7 +10,9 @@ interface FeatureItem {
   image: string;
   title: string;
   description: string;
-  link: string;
+  /** Omit when no dedicated page exists — the card then renders as plain,
+   *  non-clickable content instead of linking back to the current page. */
+  link?: string;
 }
 
 // Define props interface for Features component
@@ -134,11 +136,8 @@ export default function Features({
 }
 
 function FeatureCard({ image, title, description, link }: FeatureItem) {
-  return (
-    <Link
-      href={link}
-      className="group flex flex-col relative transition duration-300 max-w-sm cursor-pointer hover:scale-105 h-full w-full"
-    >
+  const content = (
+    <>
       <div className="relative aspect-square overflow-hidden rounded-xl w-48 h-48 mx-auto mb-4 flex items-center justify-center">
         <Image
           src={image}
@@ -151,7 +150,11 @@ function FeatureCard({ image, title, description, link }: FeatureItem) {
       </div>
 
       <div className="flex flex-col flex-1 text-center">
-        <h3 className="text-xl font-semibold text-primary-900 group-hover:text-accent-500 transition-colors duration-200 mb-3">
+        <h3
+          className={`text-xl font-semibold text-primary-900 mb-3${
+            link ? " group-hover:text-accent-500 transition-colors duration-200" : ""
+          }`}
+        >
           {title}
         </h3>
 
@@ -159,6 +162,24 @@ function FeatureCard({ image, title, description, link }: FeatureItem) {
           {description}
         </p>
       </div>
+    </>
+  );
+
+  // No destination — render the same card, just not clickable.
+  if (!link) {
+    return (
+      <div className="flex flex-col relative max-w-sm h-full w-full">
+        {content}
+      </div>
+    );
+  }
+
+  return (
+    <Link
+      href={link}
+      className="group flex flex-col relative transition duration-300 max-w-sm cursor-pointer hover:scale-105 h-full w-full"
+    >
+      {content}
     </Link>
   );
 }

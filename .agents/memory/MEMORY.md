@@ -4,3 +4,4 @@
 - [First-load perf decisions](perf-first-load.md) — GTM stays lazyOnload (watch GA4 volume), below-fold sections keep `cv-auto`; long-task metrics in this container are noisy.
 - [Scroll-triggered UI on reload](scroll-triggered-ui-on-reload.md) — never decide "hidden until scrolled past N" from scrollY on mount; scroll restoration (and its synthetic scroll event) reveals it — arm on wheel/touchmove/keydown.
 - [Testing subagent output](testing-subagent-verbatim.md) — the e2e subagent summarizes numbers away unless the plan demands verbatim `KEY=<json>` lines and calls a report without them a failed test.
+- [Internal link audits](internal-link-audits.md) — crawls must retry 5xx (known intermittent hook bug) or they report false dead links; the real defect is self-referential links, and dedup hides its scale.

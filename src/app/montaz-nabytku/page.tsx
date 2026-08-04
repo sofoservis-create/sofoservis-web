@@ -79,7 +79,6 @@ export default function MontazNabytkuPage() {
         title: "Montáž a skladanie nábytku",
         description:
           "Odborná montáž nábytku z IKEA, JYSK, Asko a iných značiek. Poskladáme akýkoľvek typ nábytku podľa návodu rýchlo a presne s vlastným náradím.",
-        link: "/montaz-nabytku",
       },
       {
         image: "/icons/kitchen_icon.svg", // NEW ICON - For kitchen assembly
@@ -107,7 +106,6 @@ export default function MontazNabytkuPage() {
         title: "Montáž garniží a závesných systémov",
         description:
           "Profesionálna montáž garniží, závesných systémov a roliet. Zabezpečíme správne upevnenie do rôznych typov stien so všetkými kotviacimi prvkami.",
-        link: "/montaz-nabytku",
       },
       {
         image: "/icons/repair_icon.svg", // NEW ICON - For repairs and adjustments

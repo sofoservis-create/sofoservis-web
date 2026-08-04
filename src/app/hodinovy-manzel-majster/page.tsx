@@ -93,7 +93,6 @@ export default function HodinovyManzelMajsterPage() {
         title: "Drobné opravy a údržba",
         description:
           "Opravy a údržba v domácnosti - výmena batérií, oprava kohútikov, montáž políc, maľovanie, vŕtanie otvorov a ďalšie drobné práce.",
-        link: "/hodinovy-manzel-majster",
       },
       {
         image: "/icons/furniture_icon.svg", // For furniture assembly
@@ -107,7 +106,6 @@ export default function HodinovyManzelMajsterPage() {
         title: "Elektrické práce",
         description:
           "Základné elektrické práce - výmena vypínačov, zásuviek, svetiel, pripojenie lustrov, inštalácia zvoničiek a jednoduchých elektrických zariadení.",
-        link: "/hodinovy-manzel-majster",
       },
       {
         image: "/icons/curtain_icon.svg", // For hanging systems
@@ -128,7 +126,6 @@ export default function HodinovyManzelMajsterPage() {
         title: "Maľovanie a dokončovacie práce",
         description:
           "Maľovanie miestností, natieranie dreva, dokončovacie práce po rekonštrukcii, tmely, silikóny a ďalšie úpravy povrchov.",
-        link: "/hodinovy-manzel-majster",
       },
     ],
   };

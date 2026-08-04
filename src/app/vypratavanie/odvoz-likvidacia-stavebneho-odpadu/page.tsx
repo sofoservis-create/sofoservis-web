@@ -58,21 +58,18 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
         title: "Odvoz sute a demolačného odpadu",
         description:
           "Rýchly odvoz betónovej sute, tehál, vápennej omietky a ostatného demolačného odpadu. Disponujeme vozidlami rôznych kapacít.",
-        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/recycle_icon.svg",
         title: "Odvoz obkladov a dlažby",
         description:
           "Odvoz starých obkladačiek, dlažby, parkiet a laminátových podláh po rekonštrukcii kúpeľne, kuchyne alebo iných priestorov.",
-        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/wrench_icon.svg",
         title: "Odvoz sadrokartónu a izolácií",
         description:
           "Ekologický odvoz a recyklácia sadrokartónových dosiek, minerálnej vlny, polystyrénu a iných izolačných materiálov.",
-        link: "/vypratavanie/odvoz-likvidacia-stavebneho-odpadu",
       },
       {
         image: "/icons/wrecking_ball_icon.svg",

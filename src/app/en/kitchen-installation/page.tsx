@@ -78,14 +78,12 @@ export default function KitchenInstallationPage() {
         title: "Kitchen Unit Installation",
         description:
           "Complete kitchen unit installation including cabinets, worktops, sink, and all components. Precise installation according to the supplied plan.",
-        link: "/en/kitchen-installation",
       },
       {
         image: "/icons/appliance_icon.svg",
         title: "Appliance Fitting",
         description:
           "Expert fitting of built-in ovens, hobs, extractor hoods, dishwashers, and fridges into prepared openings in kitchen cabinets.",
-        link: "/en/kitchen-installation",
       },
       {
         image: "/icons/vypratavanie_icon.svg",

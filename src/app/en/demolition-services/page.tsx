@@ -79,14 +79,12 @@ export default function DemolitionServicesPage() {
         title: "Complete Building Demolition",
         description:
           "Complete demolition of family houses, apartment buildings, and industrial structures. We use modern technologies and procedures for controlled demolition.",
-        link: "/en/demolition-services",
       },
       {
         image: "/icons/hammer_icon.svg",
         title: "Wall & Partition Removal",
         description:
           "Professional removal of load-bearing and non-load-bearing walls in apartments and houses. We arrange all necessary permits and structural assessments.",
-        link: "/en/demolition-services",
       },
       {
         image: "/icons/vypratavanie_icon.svg",
@@ -107,7 +105,6 @@ export default function DemolitionServicesPage() {
         title: "Permits & Safety",
         description:
           "We arrange all necessary building permits, structural assessments, and follow strict safety protocols for all demolition work.",
-        link: "/en/demolition-services",
       },
       {
         image: "/icons/recycle_icon.svg",
