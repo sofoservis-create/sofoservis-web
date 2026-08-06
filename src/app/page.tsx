@@ -58,7 +58,7 @@ const faqItems = [
 ];
 
 export const metadata = {
-  title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
+  title: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
   description:
     "Sofoservis – sťahovanie, vypratávanie a montáž nábytku. 3500+ spokojných zákazníkov. Obhliadka zadarmo. Férové ceny.",
   alternates: {
@@ -71,7 +71,7 @@ export const metadata = {
   },
   robots: "index, follow",
   openGraph: {
-    title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
+    title: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
     description:
       "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3500+ spokojných zákazníkov.",
     url: "https://www.sofoservis.sk",
@@ -82,7 +82,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sťahovanie, vypratávanie a montáž nábytku | Sofoservis",
+    title: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
     description:
       "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3500+ spokojných zákazníkov.",
     images: ["https://www.sofoservis.sk/images/og-logo.png"],
