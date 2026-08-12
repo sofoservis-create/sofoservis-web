@@ -23,12 +23,13 @@ export default function WhatsAppWidget() {
   const waUrl = `https://wa.me/${phoneNumber}`;
   const label = isEnglish ? "We're Online" : "Sme Online";
 
+  // Mobile: move above sticky CTA bar after scroll
   const [aboveBar, setAboveBar] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      const isMobile = window.innerWidth < 1024;
+      const isMobile = window.innerWidth < 1256;
       setAboveBar(isMobile && window.scrollY > 600);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -41,22 +42,14 @@ export default function WhatsAppWidget() {
   }, []);
 
   useEffect(() => {
-    const handler = (e: Event) => setMenuOpen((e as CustomEvent<{ open: boolean }>).detail.open);
+    const handler = (e: Event) =>
+      setMenuOpen((e as CustomEvent<{ open: boolean }>).detail.open);
     window.addEventListener("burgermenu", handler);
     return () => window.removeEventListener("burgermenu", handler);
   }, []);
 
-  return (
-    <a
-      href={waUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className={`fixed right-5 z-[1000] flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-        aboveBar ? "bottom-[76px]" : "bottom-5"
-      } ${menuOpen ? "pointer-events-none opacity-0 translate-y-4" : ""}`}
-      style={{ backgroundColor: "#4CAF72" }}
-    >
+  const buttonContent = (
+    <>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 448 512"
@@ -74,6 +67,47 @@ export default function WhatsAppWidget() {
         style={{ backgroundColor: "#e53e3e" }}
         aria-hidden="true"
       />
-    </a>
+    </>
+  );
+
+  return (
+    <>
+      {/* ── Desktop: right edge aligned with navbar content ── */}
+      <div
+        className={`hidden desktop:block fixed inset-x-0 bottom-5 z-[1000] pointer-events-none transition-all duration-300 ${
+          menuOpen ? "opacity-0" : ""
+        }`}
+      >
+        {/* Mirror navbar outer container: max-w-7xl centered, px-8 outer + px-5 inner */}
+        <div className="container max-w-7xl mx-auto px-8">
+          <div className="flex justify-end px-5">
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="pointer-events-auto relative flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              style={{ backgroundColor: "#4CAF72" }}
+            >
+              {buttonContent}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Mobile: original fixed bottom-right behaviour ── */}
+      <a
+        href={waUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={label}
+        className={`desktop:hidden fixed right-5 z-[1000] flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+          aboveBar ? "bottom-[76px]" : "bottom-5"
+        } ${menuOpen ? "pointer-events-none opacity-0 translate-y-4" : ""}`}
+        style={{ backgroundColor: "#4CAF72" }}
+      >
+        {buttonContent}
+      </a>
+    </>
   );
 }
