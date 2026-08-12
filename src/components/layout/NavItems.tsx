@@ -26,6 +26,8 @@ export interface NavCategory {
   mobileName?: string;
   links: NavLink[];
   flat?: boolean;
+  /** Renders as a plain direct link row on mobile only; completely hidden on desktop. */
+  mobileDirectHref?: string;
 }
 
   // Navigation categories for Slovak
@@ -131,6 +133,11 @@ export const navCategoriesSK: NavCategory[] = [
           ],
         },
       ],
+    },
+    {
+      name: "CENNÍK",
+      mobileDirectHref: "/cennik",
+      links: [],
     },
     {
       name: "INFORMÁCIE",
@@ -481,6 +488,20 @@ export const NavItem = React.memo(function NavItem({
   // still render closed <details> contents.
   const panelVisibility =
     "desktop:invisible desktop:opacity-0 desktop:translate-y-2 desktop:group-hover:visible desktop:group-hover:opacity-100 desktop:group-hover:translate-y-0 desktop:group-open:visible desktop:group-open:opacity-100 desktop:group-open:translate-y-0";
+
+  // ── Mobile-only direct link (e.g. CENNÍK) — hidden on desktop ────────────
+  if (category.mobileDirectHref) {
+    return (
+      <Link
+        href={category.mobileDirectHref}
+        onClick={closeMobile}
+        prefetch={false}
+        className="desktop:hidden block border-b border-gray-200 w-full py-5 px-5 text-left text-primary-900 font-bold uppercase text-base transition-colors hover:text-accent-500"
+      >
+        {category.name}
+      </Link>
+    );
+  }
 
   // ── Flat category (INFORMÁCIE / INFORMATION) ──────────────────────────────
   if (category.flat) {
