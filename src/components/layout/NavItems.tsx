@@ -488,7 +488,7 @@ export const NavItem = React.memo(function NavItem({
       <details
         ref={detailsRef}
         {...openState}
-        className="desktop:relative group"
+        className="border-b border-gray-200 desktop:border-0 desktop:relative group"
         onPointerEnter={handlePointerEnter}
         onPointerLeave={handlePointerLeave}
         onToggle={handleToggle}
@@ -497,12 +497,12 @@ export const NavItem = React.memo(function NavItem({
         <summary
           ref={summaryRef}
           onClick={handleSummaryClick}
-          className="hidden desktop:flex list-none nav-link px-3 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors items-center gap-1.5 text-sm group-hover:text-accent-500 whitespace-nowrap cursor-pointer"
+          className="list-none nav-link w-full flex justify-between items-center py-5 px-5 text-left text-primary-900 font-bold uppercase text-base desktop:w-auto desktop:h-24 desktop:py-0 desktop:px-3 desktop:justify-start desktop:gap-1.5 desktop:text-primary-700 desktop:text-sm desktop:tracking-wide desktop:hover:text-accent-500 desktop:group-hover:text-accent-500 transition-colors whitespace-nowrap cursor-pointer"
         >
           <span>{category.name}</span>
-          <Chevron className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 group-open:rotate-180" />
+          <Chevron className="w-6 h-6 text-accent-500 desktop:w-4 desktop:h-4 desktop:text-current transition-transform duration-200 desktop:group-hover:rotate-180 group-open:rotate-180 desktop:group-open:rotate-0" />
         </summary>
-        <div className={`block ${panelDesktop} ${panelVisibility}`}>
+        <div className={`bg-gray-50 py-3 desktop:bg-white desktop:py-2 ${panelDesktop} ${panelVisibility}`}>
           {category.links.map((link, index) => (
             <Link
               key={index}
