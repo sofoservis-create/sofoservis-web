@@ -29,3 +29,10 @@ id = "3IqN79YSGI94WQxwyUqtV"
 uri = "file://export/google-reviews-carousel.zip"
 type = "unspecified"
 title = "Google Reviews Carousel (kód na stiahnutie)"
+
+[[outputs]]
+id = "7TOI0RtdvSs4gB6B-c3Lr"
+uri = "file://public/whatsapp-widget-implementation.md"
+type = "text"
+title = "WhatsApp Widget — implementačný guide"
+description = "Kompletný Next.js implementačný guide pre WhatsApp floating button"
