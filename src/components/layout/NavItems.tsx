@@ -358,6 +358,32 @@ export const NavItem = React.memo(function NavItem({
 }: NavItemProps) {
   const closeMobile = () => setMobileMenuOpen(false);
 
+  const detailsRef = React.useRef<HTMLDetailsElement>(null);
+
+  const isDesktop = () =>
+    typeof window !== "undefined" && window.innerWidth >= 1256;
+
+  // On desktop the panel is driven purely by :hover. A mouse click would latch
+  // the native <details> open, and `group-open:` would then keep it visible
+  // forever — so every category the user clicked stayed expanded at once.
+  // e.detail === 0 means the click came from the keyboard (Enter/Space), which
+  // must keep toggling so the menu stays accessible without a mouse.
+  const handleSummaryClick = (e: React.MouseEvent<HTMLElement>) => {
+    if (isDesktop() && e.detail > 0) e.preventDefault();
+  };
+
+  // Leaving the category on desktop clears it and any sub-sections that were
+  // expanded inside it, so it reopens in a clean state next time.
+  const handleMouseLeave = () => {
+    if (!isDesktop()) return;
+    const el = detailsRef.current;
+    if (!el) return;
+    el.open = false;
+    el.querySelectorAll<HTMLDetailsElement>("details[open]").forEach((d) => {
+      d.open = false;
+    });
+  };
+
   // Desktop panel base styles (position, size, shadow)
   const panelDesktop =
     "desktop:block desktop:absolute desktop:left-0 desktop:top-full desktop:w-60 desktop:min-w-[240px] desktop:bg-white desktop:border desktop:border-gray-100 desktop:rounded-lg desktop:shadow-lg desktop:py-2 desktop:mt-1 desktop:z-50 desktop:max-h-[70vh] desktop:overflow-y-auto desktop:transition-[opacity,transform,visibility] desktop:duration-150 desktop:ease-out";
@@ -369,8 +395,15 @@ export const NavItem = React.memo(function NavItem({
   // ── Flat category (INFORMÁCIE / INFORMATION) ──────────────────────────────
   if (category.flat) {
     return (
-      <details className="desktop:relative group" onMouseLeave={() => {}}>
-        <summary className="hidden desktop:flex list-none nav-link px-3 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors items-center gap-1.5 text-sm group-hover:text-accent-500 whitespace-nowrap cursor-pointer">
+      <details
+        ref={detailsRef}
+        className="desktop:relative group"
+        onMouseLeave={handleMouseLeave}
+      >
+        <summary
+          onClick={handleSummaryClick}
+          className="hidden desktop:flex list-none nav-link px-3 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors items-center gap-1.5 text-sm group-hover:text-accent-500 whitespace-nowrap cursor-pointer"
+        >
           <span>{category.name}</span>
           <Chevron className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 group-open:rotate-180" />
         </summary>
@@ -393,9 +426,16 @@ export const NavItem = React.memo(function NavItem({
 
   // ── Regular category (with accordion on mobile, hover on desktop) ─────────
   return (
-    <details className="border-b border-gray-200 desktop:border-0 desktop:relative group">
+    <details
+      ref={detailsRef}
+      className="border-b border-gray-200 desktop:border-0 desktop:relative group"
+      onMouseLeave={handleMouseLeave}
+    >
       {/* Level 1 summary — category name */}
-      <summary className="list-none nav-link w-full flex justify-between items-center py-5 px-5 text-left text-primary-900 font-bold uppercase text-base desktop:w-auto desktop:h-24 desktop:py-0 desktop:px-3 desktop:justify-start desktop:gap-1.5 desktop:text-primary-700 desktop:text-sm desktop:tracking-wide desktop:hover:text-accent-500 desktop:group-hover:text-accent-500 transition-colors whitespace-nowrap cursor-pointer">
+      <summary
+        onClick={handleSummaryClick}
+        className="list-none nav-link w-full flex justify-between items-center py-5 px-5 text-left text-primary-900 font-bold uppercase text-base desktop:w-auto desktop:h-24 desktop:py-0 desktop:px-3 desktop:justify-start desktop:gap-1.5 desktop:text-primary-700 desktop:text-sm desktop:tracking-wide desktop:hover:text-accent-500 desktop:group-hover:text-accent-500 transition-colors whitespace-nowrap cursor-pointer"
+      >
         <span className="desktop:hidden">{category.mobileName ?? category.name}</span>
         <span className="hidden desktop:inline">{category.name}</span>
         <Chevron className="w-6 h-6 text-accent-500 desktop:w-4 desktop:h-4 desktop:text-current transition-transform duration-200 desktop:group-hover:rotate-180 group-open:rotate-180 desktop:group-open:rotate-0" />
