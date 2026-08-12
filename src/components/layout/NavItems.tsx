@@ -325,7 +325,28 @@ export const navCategoriesEN: NavCategory[] = [
 interface NavItemProps {
   category: NavCategory;
   setMobileMenuOpen: (open: boolean) => void;
+  /** Position in the navbar — identifies this category to the shared open state. */
+  index: number;
+  /** Desktop only: whether this category's dropdown is the open one. */
+  isOpen: boolean;
+  onOpenChange: (index: number, open: boolean) => void;
+  /**
+   * Above the breakpoint the element is a controlled dropdown; below it stays
+   * uncontrolled so the native mobile accordion is untouched. Owned by Navbar
+   * so every category switches mode in the same render.
+   */
+  isDesktop: boolean;
 }
+
+/** Matches the custom `desktop` Tailwind breakpoint (1256px), not the default `lg`. */
+export const DESKTOP_QUERY = "(min-width: 1256px)";
+
+/**
+ * Grace period before a dropdown closes on mouse-out. Covers the few pixels of
+ * gap between the category label and the panel below it, and stops the menu
+ * flickering when the pointer sweeps across neighbouring categories.
+ */
+const CLOSE_DELAY_MS = 150;
 
 // Chevron SVG used across all levels
 function Chevron({ className }: { className?: string }) {
@@ -355,40 +376,109 @@ function Chevron({ className }: { className?: string }) {
 export const NavItem = React.memo(function NavItem({
   category,
   setMobileMenuOpen,
+  index,
+  isOpen,
+  onOpenChange,
+  isDesktop,
 }: NavItemProps) {
   const closeMobile = () => setMobileMenuOpen(false);
 
   const detailsRef = React.useRef<HTMLDetailsElement>(null);
+  const summaryRef = React.useRef<HTMLElement>(null);
+  const closeTimer = React.useRef<number | null>(null);
 
-  const isDesktop = () =>
-    typeof window !== "undefined" && window.innerWidth >= 1256;
+  const cancelClose = React.useCallback(() => {
+    if (closeTimer.current === null) return;
+    window.clearTimeout(closeTimer.current);
+    closeTimer.current = null;
+  }, []);
 
-  // On desktop the panel is driven purely by :hover. A mouse click would latch
-  // the native <details> open, and `group-open:` would then keep it visible
-  // forever — so every category the user clicked stayed expanded at once.
-  // e.detail === 0 means the click came from the keyboard (Enter/Space), which
-  // must keep toggling so the menu stays accessible without a mouse.
+  React.useEffect(() => cancelClose, [cancelClose]);
+
+  // Crossing the breakpoint swaps this element between a controlled desktop
+  // dropdown and the uncontrolled mobile accordion. Drop any pending close and
+  // clear an `open` left behind by the other mode, so neither mode inherits
+  // state the user set in the other one.
+  React.useEffect(() => {
+    cancelClose();
+    if (isDesktop && detailsRef.current) detailsRef.current.open = false;
+  }, [isDesktop, cancelClose]);
+
+  // Which device is driving the menu right now. Read from the pointer event
+  // rather than a `(hover: hover)` media query: that query describes the
+  // *primary* input, so a touchscreen laptop claims hover it may not be using
+  // and a tablet with a mouse attached denies hover it does have.
+  const pointerType = React.useRef<string>("mouse");
+
+  // Why the dropdown is opened for real instead of only styled open:
+  // browsers hide the contents of a closed <details> via
+  // `::details-content { content-visibility: hidden }`, which skips the whole
+  // subtree. No amount of CSS on the panel itself can override that, so hover
+  // styling alone never rendered it and only a genuine `open` does.
+  const handlePointerEnter = (e: React.PointerEvent<HTMLDetailsElement>) => {
+    pointerType.current = e.pointerType;
+    if (!isDesktop || e.pointerType !== "mouse") return;
+    cancelClose();
+    if (!isOpen) onOpenChange(index, true);
+  };
+
+  const handlePointerLeave = (e: React.PointerEvent<HTMLDetailsElement>) => {
+    if (!isDesktop || e.pointerType !== "mouse") return;
+    cancelClose();
+    closeTimer.current = window.setTimeout(() => {
+      closeTimer.current = null;
+      onOpenChange(index, false);
+    }, CLOSE_DELAY_MS);
+  };
+
+  // Keyboard activation arrives as a click with `detail === 0`; let the native
+  // toggle run and mirror it into state. A real mouse click is suppressed
+  // because hover already governs the panel — letting it through would latch
+  // the dropdown open and leave every clicked category stacked on screen.
+  // Touch and pen have no hover to govern it, so there a tap toggles directly.
   const handleSummaryClick = (e: React.MouseEvent<HTMLElement>) => {
-    if (isDesktop() && e.detail > 0) e.preventDefault();
+    if (!isDesktop || e.detail === 0) return;
+    e.preventDefault();
+    if (pointerType.current !== "mouse") onOpenChange(index, !isOpen);
   };
 
-  // Leaving the category on desktop clears it and any sub-sections that were
-  // expanded inside it, so it reopens in a clean state next time.
-  const handleMouseLeave = () => {
-    if (!isDesktop()) return;
-    const el = detailsRef.current;
-    if (!el) return;
-    el.open = false;
-    el.querySelectorAll<HTMLDetailsElement>("details[open]").forEach((d) => {
-      d.open = false;
-    });
+  // `toggle` does not bubble, but guard against nested sub-section <details>
+  // being mistaken for this category.
+  const handleToggle = (e: React.SyntheticEvent<HTMLDetailsElement>) => {
+    if (!isDesktop || e.target !== detailsRef.current) return;
+    const next = e.currentTarget.open;
+    if (next !== isOpen) onOpenChange(index, next);
   };
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLDetailsElement>) => {
+    if (e.key !== "Escape" || !isDesktop || !isOpen) return;
+    onOpenChange(index, false);
+    summaryRef.current?.focus();
+  };
+
+  // A closed panel must reopen clean, so collapse any sub-sections that were
+  // expanded inside it (for example the city list).
+  React.useEffect(() => {
+    if (isOpen) return;
+    detailsRef.current
+      ?.querySelectorAll<HTMLDetailsElement>("details[open]")
+      .forEach((sub) => {
+        sub.open = false;
+      });
+  }, [isOpen]);
+
+  // Below the breakpoint the element stays uncontrolled so the mobile accordion
+  // keeps its native behaviour untouched.
+  const openState = isDesktop ? { open: isOpen } : {};
 
   // Desktop panel base styles (position, size, shadow)
   const panelDesktop =
     "desktop:block desktop:absolute desktop:left-0 desktop:top-full desktop:w-60 desktop:min-w-[240px] desktop:bg-white desktop:border desktop:border-gray-100 desktop:rounded-lg desktop:shadow-lg desktop:py-2 desktop:mt-1 desktop:z-50 desktop:max-h-[70vh] desktop:overflow-y-auto desktop:transition-[opacity,transform,visibility] desktop:duration-150 desktop:ease-out";
 
-  // Desktop panel visibility — hover shows it; also shown when <details> is open (keyboard/click)
+  // Desktop panel visibility. `group-open:` is what actually reveals the panel,
+  // since the browser only renders <details> contents once it is genuinely open.
+  // The `group-hover:` variants are kept as a no-JS fallback for engines that
+  // still render closed <details> contents.
   const panelVisibility =
     "desktop:invisible desktop:opacity-0 desktop:translate-y-2 desktop:group-hover:visible desktop:group-hover:opacity-100 desktop:group-hover:translate-y-0 desktop:group-open:visible desktop:group-open:opacity-100 desktop:group-open:translate-y-0";
 
@@ -397,10 +487,15 @@ export const NavItem = React.memo(function NavItem({
     return (
       <details
         ref={detailsRef}
+        {...openState}
         className="desktop:relative group"
-        onMouseLeave={handleMouseLeave}
+        onPointerEnter={handlePointerEnter}
+        onPointerLeave={handlePointerLeave}
+        onToggle={handleToggle}
+        onKeyDown={handleKeyDown}
       >
         <summary
+          ref={summaryRef}
           onClick={handleSummaryClick}
           className="hidden desktop:flex list-none nav-link px-3 h-24 text-primary-700 font-bold tracking-wide uppercase hover:text-accent-500 transition-colors items-center gap-1.5 text-sm group-hover:text-accent-500 whitespace-nowrap cursor-pointer"
         >
@@ -428,11 +523,16 @@ export const NavItem = React.memo(function NavItem({
   return (
     <details
       ref={detailsRef}
+      {...openState}
       className="border-b border-gray-200 desktop:border-0 desktop:relative group"
-      onMouseLeave={handleMouseLeave}
+      onPointerEnter={handlePointerEnter}
+      onPointerLeave={handlePointerLeave}
+      onToggle={handleToggle}
+      onKeyDown={handleKeyDown}
     >
       {/* Level 1 summary — category name */}
       <summary
+        ref={summaryRef}
         onClick={handleSummaryClick}
         className="list-none nav-link w-full flex justify-between items-center py-5 px-5 text-left text-primary-900 font-bold uppercase text-base desktop:w-auto desktop:h-24 desktop:py-0 desktop:px-3 desktop:justify-start desktop:gap-1.5 desktop:text-primary-700 desktop:text-sm desktop:tracking-wide desktop:hover:text-accent-500 desktop:group-hover:text-accent-500 transition-colors whitespace-nowrap cursor-pointer"
       >

@@ -12,11 +12,17 @@ import {
   NavItem,
   navCategoriesSK,
   navCategoriesEN,
+  DESKTOP_QUERY,
 } from "./NavItems";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  // Desktop only: index of the category whose dropdown is open, or null.
+  // Held here rather than per item so opening one always closes the others.
+  const [openCategory, setOpenCategory] = useState<number | null>(null);
+  // Starts false so the server render and the first client render agree.
+  const [isDesktop, setIsDesktop] = useState(false);
   const [nimbataPhone, setNimbataPhone] = useState<string | null>(null);
   const mobileNavRef = useRef<HTMLElement>(null);
   const savedScrollY = useRef<number | null>(null);
@@ -199,6 +205,34 @@ export default function Navbar() {
     return isEnglish ? "/" : "/en";
   };
 
+
+  // Stable identity so React.memo on NavItem still pays off — only the items
+  // whose open state actually changed re-render.
+  const handleCategoryOpenChange = useCallback((index: number, open: boolean) => {
+    setOpenCategory((current) =>
+      open ? index : current === index ? null : current
+    );
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia(DESKTOP_QUERY);
+    const sync = () => setIsDesktop(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  // Following a link inside a dropdown should not leave it hanging open.
+  useEffect(() => {
+    setOpenCategory(null);
+  }, [pathname]);
+
+  // Desktop dropdowns are controlled, the mobile accordion is not. Carrying a
+  // selection across the breakpoint would revive a category the user already
+  // closed in the other mode, so each crossing starts closed.
+  useEffect(() => {
+    setOpenCategory(null);
+  }, [isDesktop]);
 
   // Handle scroll for desktop navbar styling
   useEffect(() => {
@@ -432,8 +466,12 @@ export default function Navbar() {
                   {navCategories.map((category, index) => (
                     <NavItem
                       key={index}
+                      index={index}
                       category={category}
                       setMobileMenuOpen={setMobileMenuOpen}
+                      isOpen={openCategory === index}
+                      onOpenChange={handleCategoryOpenChange}
+                      isDesktop={isDesktop}
                     />
                   ))}
                 </div>
