@@ -352,7 +352,7 @@ export default function Navbar() {
           isScrolled ? "desktop:py-2" : "desktop:pt-6"
         } transition-all duration-300`}
       >
-        <div className="desktop:container desktop:max-w-7xl desktop:mx-auto desktop:px-8">
+        <div className="desktop:container desktop:max-w-7xl desktop:mx-auto desktop:px-5">
           <nav
             className="bg-white desktop:rounded-xl desktop:shadow-xl transition-all duration-300"
             aria-label={isEnglish ? "Main navigation" : "Hlavná navigácia"}
@@ -574,7 +574,7 @@ export default function Navbar() {
               </div>
 
               {/* Desktop CTA cluster */}
-              <div className="hidden desktop:flex items-center gap-5 flex-shrink-0">
+              <div className="hidden desktop:flex items-center gap-3 flex-shrink-0">
                 <div className="flex items-center bg-gray-100 rounded-full p-0.5">
                   {isEnglish ? (
                     <>
