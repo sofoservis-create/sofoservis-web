@@ -19,6 +19,8 @@ interface NavLink {
   label: string;
   subLinks?: NavSubLink[];
   subLinksAllLabel?: string;
+  /** Hide this link in the mobile accordion (still visible in the desktop dropdown). */
+  mobileHidden?: boolean;
 }
 
 export interface NavCategory {
@@ -144,7 +146,7 @@ export const navCategoriesSK: NavCategory[] = [
       flat: true,
       links: [
         { href: "/kontakt", label: "Kontakt" },
-        { href: "/cennik", label: "Cenník" },
+        { href: "/cennik", label: "Cenník", mobileHidden: true },
         { href: "/o-nas", label: "O nás" },
         { href: "/referencie", label: "Referencie" },
       ],
@@ -528,7 +530,7 @@ export const NavItem = React.memo(function NavItem({
             <Link
               key={index}
               href={link.href}
-              className="block px-5 py-5 text-primary-900 font-bold uppercase text-base border-b border-gray-200 desktop:border-0 desktop:py-2.5 desktop:text-primary-700 desktop:font-medium desktop:normal-case desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors"
+              className={`${link.mobileHidden ? "hidden desktop:block" : "block"} px-5 py-5 text-primary-900 font-bold uppercase text-base border-b border-gray-200 desktop:border-0 desktop:py-2.5 desktop:text-primary-700 desktop:font-medium desktop:normal-case desktop:hover:bg-accent-400 desktop:hover:text-primary-900 transition-colors`}
               onClick={closeMobile}
               prefetch={false}
             >
