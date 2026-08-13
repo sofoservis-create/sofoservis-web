@@ -21,7 +21,7 @@ export default function WhatsAppWidget() {
 
   const phoneNumber = isSpecialRoute ? "421952044363" : "421951735130";
   const waUrl = `https://wa.me/${phoneNumber}`;
-  const label = isEnglish ? "We're Online" : "Sme Online";
+  const label = isEnglish ? "WhatsApp" : "WhatsApp";
 
   // Mobile: move above sticky CTA bar after scroll
   const [aboveBar, setAboveBar] = useState(false);
