@@ -567,9 +567,7 @@ export default function Navbar() {
                     </div>
                   </div>
 
-                  <div className="text-center py-3 text-primary-900 text-lg font-medium border-t border-gray-200">
-                    {t.businessHours}
-                  </div>
+
                 </div>
               </div>
 
