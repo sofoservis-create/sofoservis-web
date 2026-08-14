@@ -103,7 +103,7 @@ export default function WhatsAppWidget() {
         aria-label={label}
         className={`desktop:hidden fixed right-5 z-[1000] flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl ${
           aboveBar ? "bottom-[76px]" : "bottom-5"
-        } ${menuOpen ? "pointer-events-none opacity-0 translate-y-4" : ""}`}
+        }`}
         style={{ backgroundColor: "#4CAF72" }}
       >
         {buttonContent}

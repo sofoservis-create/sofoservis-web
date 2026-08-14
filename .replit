@@ -39,3 +39,7 @@ timeoutMs = 120000
 NEXT_PUBLIC_GOOGLE_PLACE_ID = "ChIJj9SG7AKJbEcRhBqUCB_mDKE"
 
 [userenv.development]
+
+[[ports]]
+localPort = 5000
+externalPort = 80
