@@ -318,11 +318,16 @@ export const navCategoriesEN: NavCategory[] = [
       ],
     },
     {
+      name: "PRICING",
+      mobileDirectHref: "/en/pricing",
+      links: [],
+    },
+    {
       name: "INFORMATION",
       flat: true,
       links: [
         { href: "/en/contact", label: "Contact" },
-        { href: "/en/pricing", label: "Pricing" },
+        { href: "/en/pricing", label: "Pricing", mobileHidden: true },
         { href: "/en/about", label: "About Us" },
         { href: "/en/reviews", label: "Reviews" },
       ],
