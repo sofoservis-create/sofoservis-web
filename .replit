@@ -43,3 +43,7 @@ NEXT_PUBLIC_GOOGLE_PLACE_ID = "ChIJj9SG7AKJbEcRhBqUCB_mDKE"
 [[ports]]
 localPort = 5000
 externalPort = 80
+
+[[ports]]
+localPort = 23636
+externalPort = 3000
