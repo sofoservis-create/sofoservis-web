@@ -88,17 +88,6 @@ export default function NimbataSwapKeeper() {
         });
     };
 
-    // Signal to Nimbata that the SPA navigated to a new page.
-    // __nimbataReveal is the same hook called on initial load; calling it
-    // again on route change may update Nimbata's internal "Call Page" URL
-    // from the landing page to the current pathname. This is a best-effort
-    // attempt — results depend on Nimbata's internal session handling.
-    const revealTimer = window.setTimeout(() => {
-      if (typeof (window as unknown as Record<string, unknown>).__nimbataReveal === "function") {
-        (window as unknown as Record<string, () => void>).__nimbataReveal();
-      }
-    }, 100);
-
     // Retry a few times: the swap lands ~1-2s after a full load, and some
     // sections mount late. All passes are idempotent no-ops once applied.
     const timers = [0, 300, 1000, 3000].map((ms) =>
@@ -106,7 +95,6 @@ export default function NimbataSwapKeeper() {
     );
     return () => {
       cancelled = true;
-      window.clearTimeout(revealTimer);
       timers.forEach((t) => window.clearTimeout(t));
     };
   }, [pathname]);
