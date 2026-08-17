@@ -43,3 +43,10 @@ uri = "file://tmp_export/zasady-pouzivania-cookies.tsx"
 type = "unspecified"
 title = "zasady-pouzivania-cookies.tsx"
 description = "Zdrojový kód stránky /zasady-pouzivania-cookies"
+
+[[outputs]]
+id = "7n_NZ_G_85lxgnLJm2I-w"
+uri = "file://tmp_export/sofoservis-audit-report.md"
+type = "text"
+title = "sofoservis-audit-report.md"
+description = "Technický audit: externé skripty, GTM/consent, cache, obrázky, JS bundle, preconnect"
