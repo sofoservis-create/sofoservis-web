@@ -36,3 +36,10 @@ uri = "file://public/whatsapp-widget-implementation.md"
 type = "text"
 title = "WhatsApp Widget — implementačný guide"
 description = "Kompletný Next.js implementačný guide pre WhatsApp floating button"
+
+[[outputs]]
+id = "e3lZLEDK9gt-ufXTjkFXR"
+uri = "file://tmp_export/zasady-pouzivania-cookies.tsx"
+type = "unspecified"
+title = "zasady-pouzivania-cookies.tsx"
+description = "Zdrojový kód stránky /zasady-pouzivania-cookies"
