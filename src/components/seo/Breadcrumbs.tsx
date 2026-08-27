@@ -32,7 +32,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
       aria-label={pathname.startsWith("/en") ? "Breadcrumb" : "Navigačná cesta"}
       className={
         isHero
-          ? "border-b border-gray-100 bg-white lg:absolute lg:left-0 lg:right-0 lg:top-28 lg:z-30 lg:border-0 lg:bg-transparent"
+          ? "border-b border-gray-100 bg-white lg:relative lg:z-30 lg:border-0 lg:bg-transparent"
           : "relative z-10 border-b border-gray-100 bg-white/95 backdrop-blur-sm desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
       }
     >
