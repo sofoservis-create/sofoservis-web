@@ -46,7 +46,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
         <ol
           className={
             isHero
-              ? "mx-auto flex w-fit max-w-full min-w-0 items-center justify-start gap-2 overflow-x-auto whitespace-nowrap rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-[11px] text-primary-600 shadow-md backdrop-blur-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:text-xs lg:mx-0"
+              ? "mx-auto flex w-fit max-w-full min-w-0 items-center justify-start gap-2 overflow-x-auto whitespace-nowrap rounded-full bg-white px-3.5 py-2 text-[13px] font-medium text-primary-600 shadow-[0_2px_10px_rgba(0,0,0,0.18)] ring-1 ring-black/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0"
               : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           }
         >
@@ -55,13 +55,20 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
             const itemPath = toPathname(item.item);
 
             return (
-              <li key={`${item.item}-${item.position}`} className="flex min-w-0 items-center gap-2">
+              <li
+                key={`${item.item}-${item.position}`}
+                className={
+                  isCurrent
+                    ? "flex min-w-0 shrink items-center gap-2"
+                    : "flex shrink-0 items-center gap-2"
+                }
+              >
                 {index > 0 && (
                   <svg
                     aria-hidden="true"
                     className={
                       isHero
-                        ? "h-3 w-3 shrink-0 text-primary-300"
+                        ? "h-3.5 w-3.5 shrink-0 text-primary-400"
                         : "h-3 w-3 shrink-0 text-gray-400"
                     }
                     fill="none"
@@ -77,7 +84,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                     aria-current="page"
                     className={
                       isHero
-                        ? "max-w-[16rem] truncate font-semibold text-primary-900"
+                        ? "min-w-[6rem] truncate font-semibold text-primary-900"
                         : "max-w-[16rem] truncate font-semibold text-primary-900"
                     }
                   >
@@ -88,7 +95,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                     href={itemPath}
                     className={
                       isHero
-                        ? "shrink-0 rounded-sm text-primary-600 transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                        ? "-mx-0.5 shrink-0 rounded-sm px-0.5 py-1 text-primary-600 underline-offset-2 transition-colors hover:text-primary-900 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                         : "shrink-0 rounded-sm transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
                     }
                   >
