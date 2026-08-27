@@ -32,21 +32,21 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
       aria-label={pathname.startsWith("/en") ? "Breadcrumb" : "Drobečková navigácia"}
       className={
         isHero
-          ? "w-full min-w-0 overflow-hidden"
+          ? "-mx-4 w-[calc(100%+2rem)] min-w-0 border-b border-gray-100 bg-white sm:-mx-6 sm:w-[calc(100%+3rem)] lg:relative lg:mx-0 lg:w-full lg:border-0 lg:bg-transparent"
           : "relative z-10 border-b border-gray-100 bg-white/95 backdrop-blur-sm desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
       }
     >
       <div
         className={
           isHero
-            ? "w-full min-w-0"
+            ? "w-full min-w-0 px-4 py-3 sm:px-6 lg:px-0 lg:py-0"
             : "container mx-auto max-w-7xl px-4 py-3 desktop:px-8"
         }
       >
         <ol
           className={
             isHero
-              ? "mx-auto flex w-fit max-w-full min-w-0 items-center justify-start gap-2 overflow-x-auto whitespace-nowrap rounded-full bg-white px-3.5 py-2 text-[13px] font-medium text-primary-600 shadow-[0_2px_10px_rgba(0,0,0,0.18)] ring-1 ring-black/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:mx-0"
+              ? "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs font-semibold text-primary-500 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:w-fit lg:max-w-full lg:rounded-full lg:bg-white lg:px-3.5 lg:py-2 lg:text-[13px] lg:font-medium lg:text-primary-600 lg:shadow-[0_2px_10px_rgba(0,0,0,0.18)] lg:ring-1 lg:ring-black/5"
               : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           }
         >
@@ -68,7 +68,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                     aria-hidden="true"
                     className={
                       isHero
-                        ? "h-3.5 w-3.5 shrink-0 text-primary-400"
+                        ? "h-3.5 w-3.5 shrink-0 text-primary-300 lg:text-primary-400"
                         : "h-3 w-3 shrink-0 text-gray-400"
                     }
                     fill="none"
@@ -95,7 +95,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                     href={itemPath}
                     className={
                       isHero
-                        ? "-mx-0.5 shrink-0 rounded-sm px-0.5 py-1 text-primary-600 underline-offset-2 transition-colors hover:text-primary-900 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                        ? "-mx-0.5 shrink-0 rounded-sm px-0.5 py-1 text-primary-500 underline-offset-2 transition-colors hover:text-primary-900 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-offset-2 focus-visible:ring-offset-white lg:text-primary-600"
                         : "shrink-0 rounded-sm transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
                     }
                   >
