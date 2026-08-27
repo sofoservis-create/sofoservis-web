@@ -8,6 +8,7 @@ import WhatsAppWidget from "@/components/widgets/WhatsAppWidget";
 import StickyMobileCta from "@/components/StickyMobileCta";
 import UTMCapture from "@/components/tracking/UTMCapture";
 import NimbataSwapKeeper from "@/components/tracking/NimbataSwapKeeper";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -25,7 +26,10 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
       <div id="root" className="min-h-screen flex flex-col">
         <Navbar />
         <WhatsAppWidget />
-        <div className="flex-1">{children}</div>
+        <div className="flex-1">
+          <Breadcrumbs />
+          {children}
+        </div>
         <Footer />
         <CookieConsent />
       </div>
