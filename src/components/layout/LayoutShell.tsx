@@ -10,9 +10,21 @@ import UTMCapture from "@/components/tracking/UTMCapture";
 import NimbataSwapKeeper from "@/components/tracking/NimbataSwapKeeper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 
+const STANDALONE_BREADCRUMB_PATHS = new Set([
+  "/kontakt",
+  "/en/contact",
+  "/zasady-pouzivania-cookies",
+  "/en/cookie-policy",
+  "/zasady-spracovania-osobnych-udajov",
+  "/en/privacy-policy",
+  "/vseobecne-obchodne-podmienky",
+  "/en/terms-of-service",
+]);
+
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isBrand = pathname.startsWith("/brand");
+  const isStandaloneBreadcrumbPage = STANDALONE_BREADCRUMB_PATHS.has(pathname);
 
   if (isBrand) {
     return <>{children}</>;
@@ -27,7 +39,7 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
         <Navbar />
         <WhatsAppWidget />
         <div className="flex-1">
-          <Breadcrumbs />
+          {isStandaloneBreadcrumbPage && <Breadcrumbs />}
           {children}
         </div>
         <Footer />

@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
 import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
 
 interface LabHeroProps {
   title?: string;
@@ -666,6 +667,8 @@ export default function LabHero({
               className="w-full lg:w-3/5 space-y-3 md:space-y-5 text-center lg:text-left lg:min-h-[var(--hero-text-min-h,0px)] lg:flex lg:flex-col lg:items-start"
               style={desktopMinHeroTextHeightPx ? ({ ["--hero-text-min-h" as string]: `${desktopMinHeroTextHeightPx}px` } as React.CSSProperties) : undefined}
             >
+              <Breadcrumbs variant="hero" />
+
               {(hideBadge && !badgeText)
                 ? <div ref={badgeRef} className="h-0 w-0 overflow-hidden" aria-hidden="true" />
                 : <div ref={badgeRef} className="inline-flex w-fit items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0% lg:self-start mx-auto lg:mx-0">

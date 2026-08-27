@@ -12,7 +12,11 @@ function toPathname(url: string): string {
   }
 }
 
-export default function Breadcrumbs() {
+interface BreadcrumbsProps {
+  variant?: "standalone" | "hero";
+}
+
+export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps) {
   const pathname = usePathname();
 
   if (!pathname || pathname === "/" || pathname === "/en") {
@@ -21,13 +25,31 @@ export default function Breadcrumbs() {
 
   const items = generateBreadcrumbs(pathname);
 
+  const isHero = variant === "hero";
+
   return (
     <nav
       aria-label={pathname.startsWith("/en") ? "Breadcrumb" : "Drobečková navigácia"}
-      className="relative z-10 border-b border-gray-100 bg-white/95 backdrop-blur-sm desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
+      className={
+        isHero
+          ? "w-full min-w-0 overflow-hidden"
+          : "relative z-10 border-b border-gray-100 bg-white/95 backdrop-blur-sm desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
+      }
     >
-      <div className="container mx-auto max-w-7xl px-4 py-3 desktop:px-8">
-        <ol className="flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      <div
+        className={
+          isHero
+            ? "w-full min-w-0"
+            : "container mx-auto max-w-7xl px-4 py-3 desktop:px-8"
+        }
+      >
+        <ol
+          className={
+            isHero
+              ? "flex w-fit max-w-full min-w-0 items-center justify-start gap-2 overflow-x-auto whitespace-nowrap rounded-lg border border-white/10 bg-primary-900/45 px-3 py-2 text-[11px] text-white/70 shadow-sm backdrop-blur-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:text-xs"
+              : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          }
+        >
           {items.map((item, index) => {
             const isCurrent = index === items.length - 1;
             const itemPath = toPathname(item.item);
@@ -37,7 +59,7 @@ export default function Breadcrumbs() {
                 {index > 0 && (
                   <svg
                     aria-hidden="true"
-                    className="h-3 w-3 shrink-0 text-gray-400"
+                    className={isHero ? "h-3 w-3 shrink-0 text-white/35" : "h-3 w-3 shrink-0 text-gray-400"}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -47,13 +69,24 @@ export default function Breadcrumbs() {
                   </svg>
                 )}
                 {isCurrent ? (
-                  <span aria-current="page" className="max-w-[16rem] truncate font-semibold text-primary-900">
+                  <span
+                    aria-current="page"
+                    className={
+                      isHero
+                        ? "max-w-[16rem] truncate font-semibold text-white"
+                        : "max-w-[16rem] truncate font-semibold text-primary-900"
+                    }
+                  >
                     {item.name}
                   </span>
                 ) : (
                   <Link
                     href={itemPath}
-                    className="shrink-0 rounded-sm transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
+                    className={
+                      isHero
+                        ? "shrink-0 rounded-sm transition-colors hover:text-accent-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-900"
+                        : "shrink-0 rounded-sm transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
+                    }
                   >
                     {item.name}
                   </Link>

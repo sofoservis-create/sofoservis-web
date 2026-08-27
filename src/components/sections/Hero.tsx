@@ -6,6 +6,7 @@ const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffec
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import QuickContactForm from "@/components/forms/QuickContactForm";
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 
 const MASCOT_ASPECT = 1080 / 1080;
@@ -275,6 +276,8 @@ export default function Hero({
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
           {/* Hero Content - Left side */}
           <div className="w-full lg:w-3/5 order-1 lg:order-1 space-y-3 md:space-y-5 text-center lg:text-left">
+            <Breadcrumbs variant="hero" />
+
             {/* Badge for attention */}
             <div ref={badgeRef} className="inline-flex items-center py-1.5 px-4 rounded-full bg-accent-500/20 text-accent-500 font-medium text-sm mb-1 md:mb-0%">
               <span className="mr-2">✓</span> {badgeText}
