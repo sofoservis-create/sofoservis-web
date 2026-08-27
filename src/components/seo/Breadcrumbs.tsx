@@ -46,7 +46,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
         <ol
           className={
             isHero
-              ? "flex w-fit max-w-full min-w-0 items-center justify-start gap-2 overflow-x-auto whitespace-nowrap rounded-lg border border-white/10 bg-primary-900/45 px-3 py-2 text-[11px] text-white/70 shadow-sm backdrop-blur-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:text-xs"
+              ? "mx-auto flex w-fit max-w-full min-w-0 items-center justify-start gap-2 overflow-x-auto whitespace-nowrap rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-[11px] text-primary-600 shadow-md backdrop-blur-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:text-xs lg:mx-0"
               : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           }
         >
@@ -59,7 +59,11 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                 {index > 0 && (
                   <svg
                     aria-hidden="true"
-                    className={isHero ? "h-3 w-3 shrink-0 text-white/35" : "h-3 w-3 shrink-0 text-gray-400"}
+                    className={
+                      isHero
+                        ? "h-3 w-3 shrink-0 text-primary-300"
+                        : "h-3 w-3 shrink-0 text-gray-400"
+                    }
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -73,7 +77,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                     aria-current="page"
                     className={
                       isHero
-                        ? "max-w-[16rem] truncate font-semibold text-white"
+                        ? "max-w-[16rem] truncate font-semibold text-primary-900"
                         : "max-w-[16rem] truncate font-semibold text-primary-900"
                     }
                   >
@@ -84,7 +88,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
                     href={itemPath}
                     className={
                       isHero
-                        ? "shrink-0 rounded-sm transition-colors hover:text-accent-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-900"
+                        ? "shrink-0 rounded-sm text-primary-600 transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                         : "shrink-0 rounded-sm transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
                     }
                   >
