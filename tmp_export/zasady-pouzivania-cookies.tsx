@@ -8,11 +8,11 @@ export const metadata = {
     "Podrobné informácie o používaní cookies na webovej stránke SofoServis. Ako používame súbory cookies a ako ich môžete spravovať.",
   alternates: {
     canonical: "https://www.sofoservis.sk/zasady-pouzivania-cookies",
-      languages: {
-        sk: "https://www.sofoservis.sk/zasady-pouzivania-cookies",
-        en: "https://www.sofoservis.sk/en/cookie-policy",
-        "x-default": "https://www.sofoservis.sk/zasady-pouzivania-cookies",
-      },
+    languages: {
+      sk: "https://www.sofoservis.sk/zasady-pouzivania-cookies",
+      en: "https://www.sofoservis.sk/en/cookie-policy",
+      "x-default": "https://www.sofoservis.sk/zasady-pouzivania-cookies",
+    },
   },
 };
 
