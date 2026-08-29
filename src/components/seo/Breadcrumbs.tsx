@@ -39,7 +39,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
       <div
         className={
           isHero
-            ? "container mx-auto max-w-7xl px-4 py-3 lg:px-8 lg:py-1"
+              ? "container mx-auto max-w-7xl px-4 py-3 lg:px-0 lg:py-1"
             : "container mx-auto max-w-7xl px-4 py-3 desktop:px-8"
         }
       >
