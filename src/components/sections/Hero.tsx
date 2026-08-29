@@ -190,7 +190,7 @@ export default function Hero({
     (isNimbataExcludedPath(pathname) ? "0952 044 363" : "0951 735 130");
   return (
     <section
-      className="relative pt-4 pb-6 md:pt-4 md:pb-8 lg:pt-40 bg-primary-900 overflow-hidden"
+      className="relative pt-4 pb-6 md:pt-4 md:pb-8 lg:pt-[136px] bg-primary-900 overflow-hidden"
       aria-labelledby="hero-heading"
     >
       {/* Background image with optimization */}
