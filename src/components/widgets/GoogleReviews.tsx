@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import Container from "@/components/ui/Container";
 import ReviewsShowcase from "./ReviewsShowcase";
 import ReviewCarousel from "./ReviewCarousel";
+import GoogleRatingMark from "./GoogleRatingMark";
 import { getGoogleReviewsData } from "@/lib/googleRating";
 
 interface GoogleReviewsProps {
@@ -30,6 +31,13 @@ export default async function GoogleReviews({
           <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-2">
             {title}
           </h3>
+          <GoogleRatingMark
+            lang={lang}
+            initialRating={ratingValue}
+            initialReviewCount={reviewCount}
+            showReviewCount
+            theme="light"
+          />
           {subtitle && (
             <p className="text-lg text-primary-600/90 max-w-2xl mx-auto">
               {subtitle}

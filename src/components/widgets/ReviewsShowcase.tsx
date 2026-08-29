@@ -2,6 +2,7 @@ import React from "react";
 import { headers } from "next/headers";
 import ReviewBadge from "./ReviewBadge";
 import ReviewCarousel from "./ReviewCarousel";
+import GoogleRatingMark from "./GoogleRatingMark";
 import type { StaticReview } from "@/data/staticReviews";
 import { getGoogleReviewsData } from "@/lib/googleRating";
 
@@ -51,6 +52,15 @@ export default async function ReviewsShowcase({
               </p>
             </div>
           )}
+          <div className="mb-5 flex justify-center">
+            <GoogleRatingMark
+              lang={resolvedLang}
+              initialRating={ratingValue}
+              initialReviewCount={reviewCount}
+              showReviewCount
+              theme="light"
+            />
+          </div>
 
           <div className="w-full mx-auto min-h-[230px] flex items-center justify-center">
             <ReviewCarousel reviews={reviews} lang={resolvedLang} />

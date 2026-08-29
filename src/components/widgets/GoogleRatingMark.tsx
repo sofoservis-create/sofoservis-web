@@ -4,6 +4,10 @@ import { useEffect, useState } from "react";
 
 interface GoogleRatingMarkProps {
   lang?: "sk" | "en";
+  initialRating?: number;
+  initialReviewCount?: number;
+  showReviewCount?: boolean;
+  theme?: "dark" | "light";
 }
 
 const DEFAULT_RATING = 5;
@@ -52,17 +56,39 @@ function Star({ filled = true }: { filled?: boolean }) {
   );
 }
 
-export default function GoogleRatingMark({ lang = "sk" }: GoogleRatingMarkProps) {
-  const [rating, setRating] = useState(DEFAULT_RATING);
+export default function GoogleRatingMark({
+  lang = "sk",
+  initialRating = DEFAULT_RATING,
+  initialReviewCount,
+  showReviewCount = false,
+  theme = "dark",
+}: GoogleRatingMarkProps) {
+  const [rating, setRating] = useState(initialRating);
+  const [reviewCount, setReviewCount] = useState(initialReviewCount);
 
   useEffect(() => {
+    if (
+      initialRating > 0 &&
+      (!showReviewCount ||
+        (typeof initialReviewCount === "number" && initialReviewCount > 0))
+    ) {
+      return;
+    }
+
     let cancelled = false;
 
     fetch("/api/reviews")
       .then((response) => (response.ok ? response.json() : null))
-      .then((data: { rating?: number } | null) => {
+      .then((data: { rating?: number; totalReviews?: number } | null) => {
         if (!cancelled && typeof data?.rating === "number" && data.rating > 0) {
           setRating(data.rating);
+        }
+        if (
+          !cancelled &&
+          typeof data?.totalReviews === "number" &&
+          data.totalReviews > 0
+        ) {
+          setReviewCount(data.totalReviews);
         }
       })
       .catch(() => {
@@ -72,28 +98,62 @@ export default function GoogleRatingMark({ lang = "sk" }: GoogleRatingMarkProps)
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [initialRating, initialReviewCount, showReviewCount]);
 
   const ratingLabel =
     lang === "en"
       ? `Google rating ${rating.toFixed(1)} out of 5`
       : `Hodnotenie na Google ${rating.toFixed(1)} z 5`;
+  const formattedRating =
+    lang === "sk" ? rating.toFixed(1).replace(".", ",") : rating.toFixed(1);
+  const reviewCountLabel =
+    reviewCount === undefined
+      ? ""
+      : lang === "en"
+        ? ` (${reviewCount} Google reviews)`
+        : ` (${reviewCount} hodnotení na Google)`;
+  const isLight = theme === "light";
 
   return (
     <div
-      className="inline-flex items-center gap-1.5"
-      aria-label={ratingLabel}
-      title={ratingLabel}
+      className={`inline-flex flex-wrap items-center justify-center ${
+        isLight ? "gap-x-2 gap-y-1.5 md:gap-x-3 md:gap-y-2" : "gap-1.5"
+      }`}
+      aria-label={`${ratingLabel}${showReviewCount ? reviewCountLabel : ""}`}
+      title={`${ratingLabel}${showReviewCount ? reviewCountLabel : ""}`}
     >
-      <span className="text-white text-sm font-semibold tabular-nums">
-        {rating.toFixed(1)}
+      {isLight && <GoogleLogo size={29} />}
+      <span
+        className={`font-semibold tabular-nums ${
+          isLight
+            ? "text-2xl md:text-3xl font-bold text-primary-900"
+            : "text-sm text-white"
+        }`}
+      >
+        {formattedRating}
       </span>
-      <GoogleLogo />
-      <span className="flex items-center gap-0.5" aria-hidden="true">
+      {!isLight && <GoogleLogo size={20} />}
+      <span
+        className={`flex items-center ${
+          isLight ? "gap-0.5 md:gap-1" : "gap-0.5"
+        }`}
+        aria-hidden="true"
+      >
         {[1, 2, 3, 4, 5].map((star) => (
-          <Star key={star} filled={star <= Math.round(rating)} />
+          <span key={star} className={isLight ? "scale-125 md:scale-150" : ""}>
+            <Star key={star} filled={star <= Math.round(rating)} />
+          </span>
         ))}
       </span>
+      {showReviewCount && reviewCount !== undefined && (
+        <span
+          className={`text-base md:text-lg ${
+            isLight ? "text-primary-900" : "text-white/80"
+          }`}
+        >
+          {reviewCountLabel}
+        </span>
+      )}
     </div>
   );
 }
