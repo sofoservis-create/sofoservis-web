@@ -32,7 +32,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
       aria-label={pathname.startsWith("/en") ? "Breadcrumb" : "Navigačná cesta"}
       className={
         isHero
-          ? "border-b border-gray-100 bg-white lg:relative lg:z-30 lg:border-0 lg:bg-transparent"
+            ? "relative z-30 border-0 bg-transparent"
           : "relative z-10 border-b border-gray-100 bg-white/95 backdrop-blur-sm desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
       }
     >
@@ -46,7 +46,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
         <ol
           className={
             isHero
-              ? "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs font-semibold text-gray-500 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden lg:w-fit lg:max-w-full lg:rounded-full lg:bg-white/90 lg:px-3 lg:py-2 lg:shadow-sm lg:ring-1 lg:ring-black/5 lg:backdrop-blur-sm"
+              ? "flex w-fit min-w-0 max-w-full items-center gap-2 overflow-x-auto whitespace-nowrap rounded-full bg-white/90 px-3 py-2 text-xs font-semibold text-gray-500 shadow-sm ring-1 ring-black/5 backdrop-blur-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           }
         >
