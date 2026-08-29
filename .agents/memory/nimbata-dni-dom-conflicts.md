@@ -13,12 +13,15 @@ description: How to keep fixed phone numbers safe from Nimbata call-tracking swa
 
 **Perf caveat:** A body-wide observer fires on EVERY DOM mutation — during first load (hydration, GTM injection, Nimbata swaps) that is dozens of callbacks, each doing a document-wide `querySelectorAll`, which blocks the main thread and made the nav dropdown stutter. The observer callback must stay coalesced via `requestAnimationFrame` (one restore per frame, cancel on cleanup). Restores still land within a frame — verified by e2e swap simulation (textOk/hrefOk true).
 
-**The swap CAN fire in the dev workspace — verified live (July 2026):** Do not assume Nimbata
-only swaps on the production domain. E2e runs against the local dev server saw the real script
-swap all targets to a pool number (`+421 800 601 47x`). Whether it fires depends on Nimbata's
-server-side attribution decision for the visit, not on a hard domain gate — so a non-swapping
-load proves nothing either way. When testing swap-dependent logic, either wait for a real swap
-or simulate one with the script's exact mutation (innerHTML anchor injection, see below).
+**Development loading rule:** Do not load the external Nimbata DNI script in the Next.js development preview. In production, load it only with `lazyOnload`, never `afterInteractive`.
+
+**Why:** The script rewrites React-owned phone-number nodes. In development, Fast Refresh and hydration can race those mutations, producing `Invalid hook call` and hydration runtime failures even though the server continues returning HTTP 200. Delaying it to `lazyOnload` prevents the hydration crash in production; excluding it from development also removes the Fast Refresh conflict.
+
+**How to apply:** Keep preview/development on the original phone number and preserve Nimbata only in production. If a preview-only runtime error returns, compare a tracked route with an excluded campaign route before changing React code; errors that occur only on the tracked route implicate the DNI mutation boundary.
+
+**The swap can fire on development domains if the script is manually enabled:** Nimbata has no
+reliable production-domain gate. When testing swap-dependent logic, simulate the script's exact
+mutation (innerHTML anchor injection, see below) rather than enabling the live script in preview.
 
 **How the DNI script actually works (from unpacking the CDN bundle):**
 - It does NOT select by the `nimbata_number_1` class. It TreeWalks ALL text nodes under
