@@ -109,12 +109,13 @@ export default function GoogleRatingMark({
       : `Hodnotenie na Google ${rating.toFixed(1)} z 5`;
   const formattedRating =
     lang === "sk" ? rating.toFixed(1).replace(".", ",") : rating.toFixed(1);
-  const reviewCountLabel =
+  const reviewCountText =
     reviewCount === undefined
       ? ""
       : lang === "en"
-        ? ` (${reviewCount} Google reviews)`
-        : ` (${reviewCount} hodnotení na Google)`;
+        ? `${reviewCount} Google reviews`
+        : `${reviewCount} hodnotení na Google`;
+  const reviewCountLabel = reviewCountText ? ` (${reviewCountText})` : "";
   const isLight = theme === "light";
   const isCompact = compact && isLight;
 
@@ -122,15 +123,19 @@ export default function GoogleRatingMark({
     <div
       className={`inline-flex flex-wrap items-center justify-center ${
         isCompact
-          ? "gap-x-1.5 gap-y-1"
+          ? "gap-y-1"
           : isLight
-            ? "gap-x-2 gap-y-1.5 md:gap-x-3 md:gap-y-2"
+            ? "gap-y-1.5 md:gap-y-2"
             : "gap-1.5"
       }`}
       aria-label={`${ratingLabel}${showReviewCount ? reviewCountLabel : ""}`}
       title={`${ratingLabel}${showReviewCount ? reviewCountLabel : ""}`}
     >
-      {isLight && <GoogleLogo size={isCompact ? 20 : 29} />}
+      {isLight && (
+        <span className={isCompact ? "mr-1" : "mr-1.5 md:mr-2"}>
+          <GoogleLogo size={isCompact ? 20 : 29} />
+        </span>
+      )}
       <span
         className={`font-semibold tabular-nums ${
           isCompact
@@ -138,14 +143,18 @@ export default function GoogleRatingMark({
             : isLight
             ? "text-2xl md:text-3xl font-bold text-primary-900"
             : "text-sm text-white"
-        }`}
+        } ${isLight ? (isCompact ? "mr-1" : "mr-2") : ""}`}
       >
         {formattedRating}
       </span>
       {!isLight && <GoogleLogo size={20} />}
       <span
         className={`flex items-center ${
-          isCompact ? "gap-0.5" : isLight ? "gap-0.5 md:gap-1" : "gap-0.5"
+          isCompact
+            ? "gap-0.5 mr-1"
+            : isLight
+              ? "gap-0.5 md:gap-1 mr-2"
+              : "gap-0.5"
         }`}
         aria-hidden="true"
       >
@@ -167,7 +176,7 @@ export default function GoogleRatingMark({
             isLight ? "text-primary-900" : "text-white/80"
           }`}
         >
-          {reviewCountLabel}
+          ({reviewCountText})
         </span>
       )}
     </div>
