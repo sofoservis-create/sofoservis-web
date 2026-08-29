@@ -1,0 +1,285 @@
+13:41:17.507 Running build in Washington, D.C., USA (East) – iad1 (Turbo Build Machine)
+13:41:17.508 Build machine configuration: 30 cores, 60 GB
+13:41:17.653 Cloning github.com/sofoservis-create/sofoservis-web (Branch: main, Commit: 8ea8e76)
+13:41:22.143 Cloning completed: 4.490s
+13:41:22.259 Restored build cache from previous deployment (Ed9yYcxrFRLSiRWGX3m1ji9Yqw8Y)
+13:41:22.512 Running "vercel build"
+13:41:22.525 Vercel CLI 59.3.0
+13:41:23.184 Installing dependencies...
+13:41:24.492 
+13:41:24.492 up to date in 1s
+13:41:24.493 
+13:41:24.493 157 packages are looking for funding
+13:41:24.493   run `npm fund` for details
+13:41:24.493 npm warn allow-scripts 3 packages have install scripts not yet covered by allowScripts:
+13:41:24.494 npm warn allow-scripts   sharp@0.32.6 (install: node-gyp rebuild)
+13:41:24.494 npm warn allow-scripts   onnxruntime-node@1.17.3 (postinstall: node ./script/install)
+13:41:24.494 npm warn allow-scripts   sharp@0.33.5 (install: node install/check)
+13:41:24.494 npm warn allow-scripts
+13:41:24.494 npm warn allow-scripts Run `npm approve-scripts --allow-scripts-pending` to review, or `npm approve-scripts <pkg>` to allow.
+13:41:24.539 Detected Next.js version: 15.1.9
+13:41:24.539 Running "npm run build"
+13:41:24.623 
+13:41:24.624 > sofoservis@0.1.0 build
+13:41:24.624 > NEXT_DIST_DIR=.next-build next build
+13:41:24.624 
+13:41:25.288 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+13:41:25.288 This information is used to shape Next.js' roadmap and prioritize features.
+13:41:25.288 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+13:41:25.288 https://nextjs.org/telemetry
+13:41:25.288 
+13:41:25.344    ▲ Next.js 15.1.9
+13:41:25.345 
+13:41:25.371    Creating an optimized production build ...
+13:41:39.191  ✓ Compiled successfully
+13:41:39.194    Linting and checking validity of types ...
+13:41:42.631 
+13:41:42.631 ./src/components/sections/Hero.tsx
+13:41:42.631 205:14  Warning: Unused eslint-disable directive (no problems were reported from '@next/next/no-img-element').
+13:41:42.631 
+13:41:42.631 ./src/components/sections/LabHero.tsx
+13:41:42.631 549:16  Warning: Unused eslint-disable directive (no problems were reported from '@next/next/no-img-element').
+13:41:42.631 
+13:41:42.631 ./src/components/sections/ServicePricing.tsx
+13:41:42.631 226:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+13:41:42.631 
+13:41:42.631 ./src/components/sections/TrustBadges.tsx
+13:41:42.631 52:17  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+13:41:42.631 
+13:41:42.631 ./src/components/ui/ZoomableImage.tsx
+13:41:42.632 62:13  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+13:41:42.632 
+13:41:42.632 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+13:41:43.707    Collecting page data ...
+13:41:46.195    Generating static pages (0/205) ...
+13:41:46.690    Generating static pages (51/205) 
+13:41:46.960    Generating static pages (102/205) 
+13:41:46.973    Generating static pages (153/205) 
+13:41:47.875  ✓ Generating static pages (205/205)
+13:41:48.250    Finalizing page optimization ...
+13:41:48.250    Collecting build traces ...
+13:41:50.531 
+13:41:50.539 Route (app)                                                      Size     First Load JS
+13:41:50.539 ┌ ƒ /                                                            2.21 kB         149 kB
+13:41:50.539 ├ ƒ /_not-found                                                  174 B           106 kB
+13:41:50.539 ├ ○ /api/instagram                                               174 B           106 kB
+13:41:50.539 ├ ƒ /api/instagram/refresh                                       174 B           106 kB
+13:41:50.539 ├ ƒ /api/lead                                                    174 B           106 kB
+13:41:50.540 ├ ○ /api/reviews                                                 174 B           106 kB
+13:41:50.540 ├ ƒ /brand                                                       9.86 kB         124 kB
+13:41:50.540 ├ ƒ /buracie-prace                                               156 B           151 kB
+13:41:50.540 ├ ƒ /buracie-prace/buranie-demolacia-domov                       156 B           151 kB
+13:41:50.540 ├ ƒ /buracie-prace/buranie-stien-priecok                         156 B           151 kB
+13:41:50.540 ├ ƒ /cennik                                                      1.74 kB         146 kB
+13:41:50.540 ├ ƒ /en                                                          1.75 kB         149 kB
+13:41:50.540 ├ ƒ /en/about                                                    148 B           131 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-bratislava                        156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-galanta                           155 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-hlohovec                          156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-komarno                           156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-levice                            155 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-malacky                           155 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-nitra                             156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-pezinok                           156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-piestany                          156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-sala                              156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-samorin                           156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-senec                             156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-senica                            156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-stupava                           156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-junk-removal-trnava                            156 B           151 kB
+13:41:50.540 ├ ƒ /en/apartment-moving                                         156 B           151 kB
+13:41:50.540 ├ ƒ /en/basement-garage-junk-removal                             155 B           151 kB
+13:41:50.540 ├ ƒ /en/basement-junk-removal-bratislava                         156 B           151 kB
+13:41:50.540 ├ ƒ /en/construction-waste-removal                               156 B           151 kB
+13:41:50.540 ├ ƒ /en/construction-waste-removal-bratislava                    156 B           151 kB
+13:41:50.540 ├ ƒ /en/construction-waste-removal-galanta                       156 B           151 kB
+13:41:50.540 ├ ƒ /en/construction-waste-removal-hlohovec                      156 B           151 kB
+13:41:50.541 ├ ƒ /en/construction-waste-removal-nitra                         155 B           151 kB
+13:41:50.541 ├ ƒ /en/construction-waste-removal-senec                         156 B           151 kB
+13:41:50.541 ├ ƒ /en/construction-waste-removal-senica                        156 B           151 kB
+13:41:50.541 ├ ƒ /en/construction-waste-removal-trnava                        156 B           151 kB
+13:41:50.541 ├ ƒ /en/contact                                                  143 B           130 kB
+13:41:50.541 ├ ƒ /en/cookie-policy                                            174 B           106 kB
+13:41:50.541 ├ ƒ /en/cottage-junk-removal                                     156 B           151 kB
+13:41:50.541 ├ ƒ /en/demolition-bratislava                                    156 B           151 kB
+13:41:50.541 ├ ƒ /en/demolition-nitra                                         156 B           151 kB
+13:41:50.541 ├ ƒ /en/demolition-pezinok                                       156 B           151 kB
+13:41:50.541 ├ ƒ /en/demolition-services                                      155 B           151 kB
+13:41:50.541 ├ ƒ /en/demolition-trnava                                        154 B           151 kB
+13:41:50.541 ├ ƒ /en/estate-junk-removal-bereavement                          156 B           151 kB
+13:41:50.541 ├ ƒ /en/furniture-assembly                                       156 B           151 kB
+13:41:50.541 ├ ƒ /en/furniture-assembly-bratislava                            156 B           151 kB
+13:41:50.541 ├ ƒ /en/furniture-moving-removal                                 156 B           151 kB
+13:41:50.541 ├ ƒ /en/furniture-removal                                        155 B           151 kB
+13:41:50.541 ├ ƒ /en/handyman-bratislava                                      156 B           151 kB
+13:41:50.541 ├ ƒ /en/handyman-galanta                                         156 B           151 kB
+13:41:50.541 ├ ƒ /en/handyman-piestany                                        155 B           151 kB
+13:41:50.541 ├ ƒ /en/handyman-services                                        155 B           151 kB
+13:41:50.541 ├ ƒ /en/handyman-trnava                                          156 B           151 kB
+13:41:50.541 ├ ƒ /en/hazardous-waste-removal                                  156 B           151 kB
+13:41:50.541 ├ ƒ /en/home-junk-removal                                        156 B           151 kB
+13:41:50.541 ├ ƒ /en/home-junk-removal-bratislava                             156 B           151 kB
+13:41:50.541 ├ ƒ /en/home-junk-removal-dubravka                               156 B           151 kB
+13:41:50.541 ├ ƒ /en/home-junk-removal-galanta                                156 B           151 kB
+13:41:50.541 ├ ƒ /en/home-junk-removal-hlohovec                               156 B           151 kB
+13:41:50.541 ├ ƒ /en/home-junk-removal-karlova-ves                            156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-komarno                                156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-levice                                 155 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-malacky                                156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-nitra                                  156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-nove-mesto                             156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-petrzalka                              156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-pezinok                                156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-piestany                               156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-ruzinov                                156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-sala                                   156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-samorin                                155 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-senec                                  156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-senica                                 156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-stare-mesto                            156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-stupava                                156 B           151 kB
+13:41:50.542 ├ ƒ /en/home-junk-removal-trnava                                 156 B           151 kB
+13:41:50.542 ├ ƒ /en/house-demolition                                         156 B           151 kB
+13:41:50.542 ├ ƒ /en/international-moving-services                            156 B           151 kB
+13:41:50.542 ├ ƒ /en/junk-removal                                             155 B           151 kB
+13:41:50.542 ├ ƒ /en/kitchen-installation                                     156 B           151 kB
+13:41:50.542 ├ ƒ /en/machinery-moving                                         156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving                                                   156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-bratislava                                        156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-dubravka                                          156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-austria-to-slovakia                          156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-france-to-slovakia                           155 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-germany-to-slovakia                          156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-netherlands-to-slovakia                      155 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-slovakia                                     156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-uk-to-slovakia                               156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-from-usa-to-slovakia                              156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-galanta                                           155 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-heavy-loads                                       156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-hlohovec                                          156 B           151 kB
+13:41:50.542 ├ ƒ /en/moving-karlova-ves                                       156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-komarno                                           156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-levice                                            156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-malacky                                           156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-nitra                                             156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-nove-mesto                                        156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-petrzalka                                         155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-pezinok                                           156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-piestany                                          156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-ruzinov                                           155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-sala                                              156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-samorin                                           156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-senec                                             156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-senica                                            156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-stare-mesto                                       156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-stupava                                           155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-amsterdam                                      156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-austria                                        156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-barcelona                                      155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-belgium                                        156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-berlin                                         156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-brno                                           155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-brussels                                       156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-budapest                                       155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-copenhagen                                     156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-czech-republic                                 156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-denmark                                        155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-dublin                                         155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-france                                         155 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-frankfurt                                      156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-germany                                        156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-hamburg                                        156 B           151 kB
+13:41:50.543 ├ ƒ /en/moving-to-hungary                                        155 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-ireland                                        156 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-italy                                          156 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-lisbon                                         156 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-london                                         156 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-munich                                         156 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-netherlands                                    155 B           151 kB
+13:41:50.544 ├ ƒ /en/moving-to-norway                                         155 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-oslo                                           156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-paris                                          156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-poland                                         156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-prague                                         156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-rome                                           156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-slovakia                                       156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-spain                                          156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-stockholm                                      156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-sweden                                         155 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-switzerland                                    156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-uk                                             156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-vienna                                         156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-warsaw                                         156 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-to-zurich                                         155 B           151 kB
+13:41:50.545 ├ ƒ /en/moving-trnava                                            155 B           151 kB
+13:41:50.545 ├ ƒ /en/office-junk-removal                                      156 B           151 kB
+13:41:50.545 ├ ƒ /en/office-moving                                            155 B           151 kB
+13:41:50.545 ├ ƒ /en/old-furniture-removal-bratislava                         156 B           151 kB
+13:41:50.545 ├ ƒ /en/piano-moving                                             156 B           151 kB
+13:41:50.545 ├ ƒ /en/post-renovation-junk-removal                             155 B           151 kB
+13:41:50.545 ├ ƒ /en/pricing                                                  1.74 kB         146 kB
+13:41:50.545 ├ ƒ /en/privacy-policy                                           174 B           106 kB
+13:41:50.545 ├ ƒ /en/property-land-junk-removal                               156 B           151 kB
+13:41:50.545 ├ ƒ /en/reviews                                                  236 B           140 kB
+13:41:50.545 ├ ƒ /en/safe-moving                                              156 B           151 kB
+13:41:50.545 ├ ƒ /en/terms-of-service                                         174 B           106 kB
+13:41:50.545 ├ ƒ /en/wall-demolition                                          155 B           151 kB
+13:41:50.545 ├ ƒ /hodinovy-manzel-majster                                     156 B           151 kB
+13:41:50.545 ├ ƒ /hodinovy-manzel-majster/bratislava                          156 B           151 kB
+13:41:50.545 ├ ƒ /kontakt                                                     143 B           130 kB
+13:41:50.545 ├ ƒ /montaz-kuchyne                                              155 B           151 kB
+13:41:50.545 ├ ƒ /montaz-nabytku                                              156 B           151 kB
+13:41:50.545 ├ ƒ /montaz-nabytku/bratislava                                   156 B           151 kB
+13:41:50.545 ├ ƒ /o-nas                                                       148 B           131 kB
+13:41:50.545 ├ ƒ /referencie                                                  242 B           147 kB
+13:41:50.545 ├ ○ /sitemap.xml                                                 0 B                0 B
+13:41:50.545 ├ ƒ /stahovanie                                                  156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/medzinarodne-stahovanie                          156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-bratislava                            156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-bytov-domov                           156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-galanta                               156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-kancelarii-firiem                     156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-komarno                               156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-malacky                               156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-nitra                                 156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-pezinok                               156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-piestany                              155 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-sala                                  156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-samorin                               156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-senec                                 156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-senica                                156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-stupava                               156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-tazkych-bremien                       156 B           151 kB
+13:41:50.545 ├ ƒ /stahovanie/stahovanie-trnava                                156 B           151 kB
+13:41:50.545 ├ ƒ /vseobecne-obchodne-podmienky                                174 B           106 kB
+13:41:50.545 ├ ƒ /vypratavanie                                                156 B           151 kB
+13:41:50.545 ├ ƒ /vypratavanie/cistenie-vypratavanie-pozemkov                 156 B           151 kB
+13:41:50.546 ├ ƒ /vypratavanie/likvidacia-nebezpecneho-odpadu                 156 B           151 kB
+13:41:50.546 ├ ƒ /vypratavanie/odvoz-likvidacia-stavebneho-odpadu             156 B           151 kB
+13:41:50.546 ├ ƒ /vypratavanie/odvoz-likvidacia-stavebneho-odpadu/bratislava  156 B           151 kB
+13:41:50.546 ├ ƒ /vypratavanie/odvoz-stareho-nabytku                          156 B           151 kB
+13:41:50.546 ├ ƒ /vypratavanie/vypratavanie-bytov-domov                       156 B           151 kB
+13:41:50.546 ├ ƒ /vypratavanie/vypratavanie-bytov-domov/bratislava            1.75 kB         149 kB
+13:41:50.546 ├ ƒ /vypratavanie/vypratavanie-pivnic-a-garazi                   156 B           151 kB
+13:41:50.546 ├ ƒ /zasady-pouzivania-cookies                                   174 B           106 kB
+13:41:50.546 └ ƒ /zasady-spracovania-osobnych-udajov                          174 B           106 kB
+13:41:50.546 + First Load JS shared by all                                    106 kB
+13:41:50.546   ├ chunks/1517-554c165051f44b78.js                              50.7 kB
+13:41:50.546   ├ chunks/4bd1b696-8253311ee26bde99.js                          52.9 kB
+13:41:50.546   └ other shared chunks (total)                                  1.91 kB
+13:41:50.546 
+13:41:50.546 
+13:41:50.546 ƒ Middleware                                                     32.1 kB
+13:41:50.546 
+13:41:50.547 ○  (Static)   prerendered as static content
+13:41:50.547 ƒ  (Dynamic)  server-rendered on demand
+13:41:50.547 
+13:41:50.635 Error: The file "/vercel/path0/.next/routes-manifest.json" couldn't be found. This is usually caused by one of the following:
+13:41:50.635 
+13:41:50.635 1. The "Output Directory" setting in your project is misconfigured. Ensure it matches your Next.js "distDir" configuration (defaults to ".next").
+13:41:50.635 
+13:41:50.635 2. If using Turborepo, ensure your task outputs include the Next.js build directory. Add ".next/**" (or your custom distDir) to the "outputs" array in turbo.json for the build task.
+13:41:50.635 
+13:41:50.635 3. The build command did not complete successfully. Check the build logs above for errors.
+13:41:50.635 Learn More: https://err.sh/vercel/vercel/now-next-routes-manifest
