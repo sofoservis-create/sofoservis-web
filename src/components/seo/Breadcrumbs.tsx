@@ -46,7 +46,7 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
         <ol
           className={
             isHero
-              ? "flex w-fit min-w-0 max-w-full items-center gap-2 overflow-x-auto whitespace-nowrap rounded-full bg-white/90 px-3 py-2 text-xs font-semibold text-gray-500 shadow-sm ring-1 ring-black/5 backdrop-blur-sm [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              ? "flex w-fit min-w-0 max-w-full items-center gap-2 overflow-x-auto whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-semibold text-gray-500 shadow-sm ring-1 ring-black/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           }
         >
