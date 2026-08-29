@@ -318,7 +318,7 @@ export default function Hero({
             </div>
 
             {/* Customer avatars + Google rating */}
-            <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2">
+            <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:justify-start">
               <div className="flex -space-x-2 flex-shrink-0">
                 <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/30 relative z-30">
                   <Image

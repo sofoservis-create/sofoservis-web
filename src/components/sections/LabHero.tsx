@@ -706,7 +706,7 @@ export default function LabHero({
                 </a>
               </div>
 
-              <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2">
+              <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:justify-start">
                 <div className="flex -space-x-2 flex-shrink-0">
                   {[
                     { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka Sofoservis" },
