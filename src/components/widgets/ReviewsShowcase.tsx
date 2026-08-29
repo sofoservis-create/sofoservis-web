@@ -1,52 +1,41 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import React from "react";
+import { headers } from "next/headers";
 import ReviewBadge from "./ReviewBadge";
 import ReviewCarousel from "./ReviewCarousel";
-
-interface Review {
-  author_name: string;
-  profile_photo_url?: string;
-  rating: number;
-  text: string;
-  relative_time_description: string;
-  time: number;
-}
+import type { StaticReview } from "@/data/staticReviews";
+import { getGoogleReviewsData } from "@/lib/googleRating";
 
 interface ReviewsShowcaseProps {
   variant?: "default" | "full";
   title?: string;
+  lang?: "sk" | "en";
+  ratingValue?: number;
+  reviewCount?: number;
+  reviews?: StaticReview[];
 }
 
-export default function ReviewsShowcase({
+export default async function ReviewsShowcase({
   variant = "default",
   title,
+  lang,
+  ratingValue,
+  reviewCount,
+  reviews,
 }: ReviewsShowcaseProps) {
-  const pathname = usePathname();
-  const isEnglish = pathname?.startsWith("/en") || false;
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [loading, setLoading] = useState(variant === "full");
+  const resolvedLang =
+    lang ??
+    (((await headers()).get("x-pathname") || "/").startsWith("/en")
+      ? "en"
+      : "sk");
 
-  useEffect(() => {
-    if (variant !== "full") return;
+  if (ratingValue === undefined || reviewCount === undefined || reviews === undefined) {
+    const googleData = await getGoogleReviewsData();
+    ratingValue ??= googleData.ratingValue;
+    reviewCount ??= googleData.reviewCount;
+    reviews ??= googleData.reviews;
+  }
 
-    setLoading(true);
-    async function fetchReviews() {
-      try {
-        const res = await fetch("/api/reviews");
-        if (res.ok) {
-          const data = await res.json();
-          setReviews(data.reviews || []);
-        }
-      } catch (error) {
-        console.error("Failed to fetch reviews:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchReviews();
-  }, [variant]);
+  const isEnglish = resolvedLang === "en";
 
   if (variant === "full") {
     return (
@@ -64,13 +53,7 @@ export default function ReviewsShowcase({
           )}
 
           <div className="w-full mx-auto min-h-[230px] flex items-center justify-center">
-            {loading ? (
-              <div className="flex items-center justify-center py-8">
-                <div className="w-8 h-8 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" />
-              </div>
-            ) : (
-              <ReviewCarousel reviews={reviews} lang={isEnglish ? "en" : "sk"} />
-            )}
+            <ReviewCarousel reviews={reviews} lang={resolvedLang} />
           </div>
         </div>
       </section>
@@ -95,8 +78,12 @@ export default function ReviewsShowcase({
           <div className="flex flex-row gap-4 justify-center">
             <ReviewBadge
               platform="google"
-              rating={4.9}
-              reviewCount={isEnglish ? "Based on 350+ reviews" : "Na základe 350+ recenzií"}
+              rating={ratingValue}
+              reviewCount={
+                isEnglish
+                  ? `${reviewCount} Google reviews`
+                  : `${reviewCount} hodnotení na Google`
+              }
             />
             <ReviewBadge
               platform="facebook"

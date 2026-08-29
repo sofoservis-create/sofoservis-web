@@ -1,9 +1,9 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
+import React from "react";
+import { headers } from "next/headers";
 import Container from "@/components/ui/Container";
 import ReviewsShowcase from "./ReviewsShowcase";
 import ReviewCarousel from "./ReviewCarousel";
+import { getGoogleReviewsData } from "@/lib/googleRating";
 
 interface GoogleReviewsProps {
   title?: string;
@@ -12,47 +12,16 @@ interface GoogleReviewsProps {
   showCarousel?: boolean;
 }
 
-interface Review {
-  author_name: string;
-  profile_photo_url?: string;
-  rating: number;
-  text: string;
-  relative_time_description: string;
-  time: number;
-}
-
-export default function GoogleReviews({
+export default async function GoogleReviews({
   title = "Pridajte sa k naším spokojným klientom",
   subtitle = "  ",
   showReviewsShowcase = true,
   showCarousel,
 }: GoogleReviewsProps) {
   const effectiveShowCarousel = showCarousel ?? !showReviewsShowcase;
-  const pathname = usePathname();
-  const lang = pathname?.startsWith("/en") ? "en" : "sk";
-  const [reviews, setReviews] = useState<Review[]>([]);
-  const [loading, setLoading] = useState(effectiveShowCarousel);
-
-  useEffect(() => {
-    if (!effectiveShowCarousel) return;
-
-    setLoading(true);
-    async function fetchReviews() {
-      try {
-        const res = await fetch("/api/reviews");
-        if (res.ok) {
-          const data = await res.json();
-          setReviews(data.reviews || []);
-        }
-      } catch (error) {
-        console.error("Failed to fetch reviews:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchReviews();
-  }, [effectiveShowCarousel]);
+  const pathname = (await headers()).get("x-pathname") || "/";
+  const lang = pathname.startsWith("/en") ? "en" : "sk";
+  const { reviews, ratingValue, reviewCount } = await getGoogleReviewsData();
 
   return (
     <section className="pt-6 pb-0 md:pt-8 md:pb-0 bg-white overflow-hidden" id="reviews">
@@ -70,19 +39,18 @@ export default function GoogleReviews({
 
         {showReviewsShowcase && (
           <div className="mb-0">
-            <ReviewsShowcase />
+            <ReviewsShowcase
+              lang={lang}
+              ratingValue={ratingValue}
+              reviewCount={reviewCount}
+              reviews={reviews}
+            />
           </div>
         )}
 
         {effectiveShowCarousel && (
           <div className="min-h-[230px] flex items-center justify-center">
-            {loading ? (
-              <div className="flex items-center justify-center py-8">
-                <div className="w-8 h-8 border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin" />
-              </div>
-            ) : (
-              <ReviewCarousel reviews={reviews} lang={lang as "sk" | "en"} />
-            )}
+            <ReviewCarousel reviews={reviews} lang={lang} />
           </div>
         )}
       </Container>
