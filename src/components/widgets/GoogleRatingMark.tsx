@@ -8,6 +8,7 @@ interface GoogleRatingMarkProps {
   initialReviewCount?: number;
   showReviewCount?: boolean;
   theme?: "dark" | "light";
+  compact?: boolean;
 }
 
 const DEFAULT_RATING = 5;
@@ -41,11 +42,11 @@ function GoogleLogo({ size = 20 }: { size?: number }) {
   );
 }
 
-function Star({ filled = true }: { filled?: boolean }) {
+function Star({ filled = true, size = 17 }: { filled?: boolean; size?: number }) {
   return (
     <svg
-      width={17}
-      height={17}
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
       fill={filled ? "#F4B400" : "#D1D5DB"}
       aria-hidden="true"
@@ -58,16 +59,18 @@ function Star({ filled = true }: { filled?: boolean }) {
 
 export default function GoogleRatingMark({
   lang = "sk",
-  initialRating = DEFAULT_RATING,
+  initialRating,
   initialReviewCount,
   showReviewCount = false,
   theme = "dark",
+  compact = false,
 }: GoogleRatingMarkProps) {
-  const [rating, setRating] = useState(initialRating);
+  const [rating, setRating] = useState(initialRating ?? DEFAULT_RATING);
   const [reviewCount, setReviewCount] = useState(initialReviewCount);
 
   useEffect(() => {
     if (
+      typeof initialRating === "number" &&
       initialRating > 0 &&
       (!showReviewCount ||
         (typeof initialReviewCount === "number" && initialReviewCount > 0))
@@ -113,19 +116,26 @@ export default function GoogleRatingMark({
         ? ` (${reviewCount} Google reviews)`
         : ` (${reviewCount} hodnotení na Google)`;
   const isLight = theme === "light";
+  const isCompact = compact && isLight;
 
   return (
     <div
       className={`inline-flex flex-wrap items-center justify-center ${
-        isLight ? "gap-x-2 gap-y-1.5 md:gap-x-3 md:gap-y-2" : "gap-1.5"
+        isCompact
+          ? "gap-x-1.5 gap-y-1"
+          : isLight
+            ? "gap-x-2 gap-y-1.5 md:gap-x-3 md:gap-y-2"
+            : "gap-1.5"
       }`}
       aria-label={`${ratingLabel}${showReviewCount ? reviewCountLabel : ""}`}
       title={`${ratingLabel}${showReviewCount ? reviewCountLabel : ""}`}
     >
-      {isLight && <GoogleLogo size={29} />}
+      {isLight && <GoogleLogo size={isCompact ? 20 : 29} />}
       <span
         className={`font-semibold tabular-nums ${
-          isLight
+          isCompact
+            ? "text-base font-bold text-primary-900"
+            : isLight
             ? "text-2xl md:text-3xl font-bold text-primary-900"
             : "text-sm text-white"
         }`}
@@ -135,13 +145,19 @@ export default function GoogleRatingMark({
       {!isLight && <GoogleLogo size={20} />}
       <span
         className={`flex items-center ${
-          isLight ? "gap-0.5 md:gap-1" : "gap-0.5"
+          isCompact ? "gap-0.5" : isLight ? "gap-0.5 md:gap-1" : "gap-0.5"
         }`}
         aria-hidden="true"
       >
         {[1, 2, 3, 4, 5].map((star) => (
-          <span key={star} className={isLight ? "scale-125 md:scale-150" : ""}>
-            <Star key={star} filled={star <= Math.round(rating)} />
+          <span
+            key={star}
+            className={isLight && !isCompact ? "scale-125 md:scale-150" : ""}
+          >
+            <Star
+              filled={star <= Math.round(rating)}
+              size={isCompact ? 14 : 17}
+            />
           </span>
         ))}
       </span>

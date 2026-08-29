@@ -8,6 +8,7 @@ import {
   isNimbataExcludedPath,
   findNimbataSwappedNumber,
 } from "@/lib/nimbataExclusions";
+import GoogleRatingMark from "@/components/widgets/GoogleRatingMark";
 import {
   NavItem,
   navCategoriesSK,
@@ -490,7 +491,11 @@ export default function Navbar() {
                         <Image src="/images/review-avatar-3.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
                       </div>
                     </div>
-                    <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
+                     <GoogleRatingMark
+                       lang={isEnglish ? "en" : "sk"}
+                       theme="light"
+                       compact
+                     />
                     <span className="text-gray-600 text-xs whitespace-nowrap font-medium">
                       {isEnglish ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}
                     </span>
