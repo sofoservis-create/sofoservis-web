@@ -107,8 +107,7 @@ export default function GoogleRatingMark({
     lang === "en"
       ? `Google rating ${rating.toFixed(1)} out of 5`
       : `Hodnotenie na Google ${rating.toFixed(1)} z 5`;
-  const formattedRating =
-    lang === "sk" ? rating.toFixed(1).replace(".", ",") : rating.toFixed(1);
+  const formattedRating = rating.toFixed(1);
   const reviewCountText =
     reviewCount === undefined
       ? ""
