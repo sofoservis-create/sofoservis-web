@@ -370,13 +370,6 @@ export default function InternationalMovingServicesPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="Reviews from Our Clients"
-        />
-      </div>
-
       {/* FAQ section */}
       <div>
         <FAQ

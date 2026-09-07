@@ -150,10 +150,6 @@ export default function StahovanieTazkychBremienPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o sťahovaní ťažkých bremien"
           items={[

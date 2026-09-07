@@ -255,9 +255,6 @@ export default function JunkRemovalPage() {
         </div>
       </section>
 
-      <div>
-        <GoogleReviews showReviewsShowcase={false} title="What our customers say about us" />
-      </div>
 
       <div>
         <FAQ

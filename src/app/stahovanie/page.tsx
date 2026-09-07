@@ -220,10 +220,6 @@ export default function StahovaniePage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o sťahovaní"
           items={[

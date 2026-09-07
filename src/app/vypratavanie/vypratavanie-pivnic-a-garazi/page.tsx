@@ -187,10 +187,6 @@ export default function VypratavaniePivnicGaraziPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o vypratávaní pivníc, garáží a nebytových priestorov"
           items={faqItems}

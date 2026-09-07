@@ -114,9 +114,6 @@ export default function HomeJunkRemovalNitraPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews showReviewsShowcase={false} title="Customer Reviews" />
-      </div>
 
       <div>
         <FAQ

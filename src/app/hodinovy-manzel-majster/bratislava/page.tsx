@@ -119,7 +119,6 @@ export default function HodinovyManzelMajsterBratislavaPage() {
         additionalText="Prídeme za vami aj do okolitých obcí ako Stupava, Ivanka pri Dunaji či Dunajská Lužná."
       />
       <InstagramFeed />
-      <GoogleReviews showReviewsShowcase={false} />
       <FAQ title="Často kladené otázky — Bratislava" items={faqItems} />
       <CTA
         title="Potrebujete pomocníka v Bratislave?"

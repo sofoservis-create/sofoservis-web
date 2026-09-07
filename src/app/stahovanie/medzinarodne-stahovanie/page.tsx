@@ -296,8 +296,6 @@ export default function MedzinarodneStahovaniePage() {
       </section>
 
       <div><InstagramFeed /></div>
-      <div><GoogleReviews showReviewsShowcase={false} /></div>
-
       <div>
         <FAQ
           title="Často kladené otázky o medzinárodnom sťahovaní"

@@ -167,10 +167,6 @@ export default function BuranieDemlaciaPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o búraní a demolácii"
           items={faqItems}

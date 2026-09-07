@@ -173,13 +173,6 @@ export default function FurnitureMovingRemovalPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What Our Customers Say"
-        />
-      </div>
-
       {/* FAQ section */}
       <div>
         <FAQ

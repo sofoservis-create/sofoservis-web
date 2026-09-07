@@ -141,9 +141,6 @@ export default function OfficeJunkRemovalPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
       <div>
-        <GoogleReviews showReviewsShowcase={false} title="Customer Reviews" />
-      </div>
-      <div>
         <FAQ
           title="Frequently Asked Questions About Office Junk Removal"
           items={faqItems}

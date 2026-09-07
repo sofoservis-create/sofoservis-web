@@ -71,7 +71,7 @@ function ReviewCard({ review, lang = "sk" }: { review: Review; lang?: "sk" | "en
     shouldTruncate && !expanded ? review.text.slice(0, 200) + "..." : review.text;
 
   return (
-    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5 flex flex-col gap-3 min-w-[300px] max-w-[350px] w-[350px] flex-shrink-0 h-full">
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5 flex flex-col gap-3 min-w-[calc(100vw-4rem)] sm:min-w-[300px] max-w-[350px] w-[calc(100vw-4rem)] sm:w-[350px] flex-shrink-0 h-full">
       <div className="flex items-center gap-3">
         {review.profile_photo_url ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -181,16 +181,24 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
 
   return (
     <div
-      className="relative w-full max-w-5xl mx-auto px-4"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      className="relative w-full max-w-5xl mx-auto px-6 sm:px-10"
+      onPointerEnter={(event) => {
+        if (event.pointerType === "mouse") setIsPaused(true);
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType === "mouse") setIsPaused(false);
+      }}
+      onFocusCapture={() => setIsPaused(true)}
+      onBlurCapture={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) setIsPaused(false);
+      }}
     >
       <div className="overflow-hidden">
         <div
           ref={trackRef}
           className="flex transition-transform duration-500 ease-in-out gap-4"
           style={{
-            transform: `translateX(calc(-${currentIndex} * (350px + 16px)))`,
+            transform: `translateX(calc(-${currentIndex} * (min(350px, calc(100vw - 4rem)) + 16px)))`,
           }}
         >
           {reviews.map((review, index) => (
@@ -203,8 +211,8 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
         <>
           <button
             onClick={goPrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors border border-gray-200 z-10"
-            aria-label="Previous review"
+            className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors border border-gray-200 z-10"
+            aria-label={lang === "en" ? "Previous review" : "Predchádzajúca recenzia"}
           >
             <svg
               width={20}
@@ -221,8 +229,8 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
           </button>
           <button
             onClick={goNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors border border-gray-200 z-10"
-            aria-label="Next review"
+            className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-50 transition-colors border border-gray-200 z-10"
+            aria-label={lang === "en" ? "Next review" : "Nasledujúca recenzia"}
           >
             <svg
               width={20}
@@ -248,7 +256,11 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
             className={`w-2.5 h-2.5 rounded-full transition-colors ${
               index === currentIndex ? "bg-blue-600" : "bg-gray-300"
             }`}
-            aria-label={`Go to review ${index + 1}`}
+            aria-label={
+              lang === "en"
+                ? `Go to review ${index + 1}`
+                : `Prejsť na recenziu ${index + 1}`
+            }
           />
         ))}
       </div>

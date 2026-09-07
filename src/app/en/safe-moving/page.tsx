@@ -175,12 +175,6 @@ export default function SafeMovingPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What customers say about our safe moving service"
-        />
-      </div>
 
       <div>
         <FAQ

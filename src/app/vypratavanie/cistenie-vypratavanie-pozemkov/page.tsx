@@ -176,10 +176,6 @@ export default function CisteniePozemkovPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o čistení a vypratávaní pozemkov"
           items={faqItems}

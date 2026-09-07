@@ -185,10 +185,6 @@ export default function MontazNabytkuPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
       {/* FAQ section */}
       <div>
         <FAQ

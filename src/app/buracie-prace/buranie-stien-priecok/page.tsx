@@ -166,10 +166,6 @@ export default function BuranieStienPriecokPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o búraní stien a priečok"
           items={faqItems}

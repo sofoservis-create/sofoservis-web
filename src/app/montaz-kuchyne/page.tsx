@@ -180,10 +180,6 @@ export default function MontazKuchynePage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
       {/* FAQ section */}
       <div>
         <FAQ

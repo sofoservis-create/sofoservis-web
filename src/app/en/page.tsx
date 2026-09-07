@@ -256,14 +256,6 @@ export default function HomeEN() {
         />
       </section>
 
-      <section className="py-8 md:py-12">
-        <GoogleReviews
-          title="Verified reviews from real customers"
-          showReviewsShowcase={false}
-          showCarousel={true}
-        />
-      </section>
-
       <CTA
         title="We Help Non-Profits Grow with 20% Off Our Services"
         description="We support good causes. Non-profit organisations get special terms and discounted prices on all our services. Get in touch."

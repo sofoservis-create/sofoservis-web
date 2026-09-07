@@ -178,10 +178,6 @@ export default function VypratavanieBytovDomovPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o vypratávaní bytov a domov"
           items={[

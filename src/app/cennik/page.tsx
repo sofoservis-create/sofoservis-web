@@ -240,7 +240,7 @@ export default function CennikPage() {
 
       {/* Google Reviews section */}
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
+        <GoogleReviews showReviewsShowcase={false} showCarousel={true} />
       </div>
 
       {/* FAQ section */}

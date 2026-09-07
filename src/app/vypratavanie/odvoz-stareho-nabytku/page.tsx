@@ -180,10 +180,6 @@ export default function OdvozStarehoNabytku() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o odvoze starého nábytku"
           items={faqItems}

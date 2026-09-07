@@ -210,6 +210,7 @@ export default function PricingPageEN() {
       <div>
         <GoogleReviews
           showReviewsShowcase={false}
+          showCarousel={true}
           title="What our customers say about us"
         />
       </div>

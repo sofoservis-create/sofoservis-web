@@ -208,10 +208,6 @@ export default function VypratavaniePage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o vypratávaní"
           items={[

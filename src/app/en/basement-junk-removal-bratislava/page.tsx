@@ -117,9 +117,6 @@ export default function BasementJunkRemovalBratislavaPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews title="Customer Feedback" showReviewsShowcase={false} />
-      </div>
 
       <div>
         <FAQ

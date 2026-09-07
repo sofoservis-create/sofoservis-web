@@ -186,14 +186,6 @@ export default function Home() {
         />
       </section>
 
-      <section className="py-8 md:py-12">
-        <GoogleReviews
-          title="Overené recenzie od skutočných zákazníkov"
-          showReviewsShowcase={false}
-          showCarousel={true}
-        />
-      </section>
-
       <CTA />
 
       <ContactFormSection />

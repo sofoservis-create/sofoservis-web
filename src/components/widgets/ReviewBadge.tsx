@@ -78,8 +78,7 @@ export default function ReviewBadge({
 
   return (
     <div
-      className="flex flex-col items-center bg-white rounded-lg shadow-md border border-gray-100"
-      style={{ padding: "11.5px 18.4px", minWidth: "161px" }}
+      className="flex flex-col items-center bg-white rounded-lg shadow-md border border-gray-100 min-w-0 w-[calc(50vw-1.5rem)] max-w-[161px] px-2 sm:px-[18.4px] py-[11.5px]"
     >
       <div className="flex items-center gap-1.5 mb-1">
         {platform === "google" ? (

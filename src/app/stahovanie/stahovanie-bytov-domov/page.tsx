@@ -214,9 +214,6 @@ export default function StahovanieBytovDomovPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
 
       {/* FAQ section */}
       <div>

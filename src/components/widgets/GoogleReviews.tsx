@@ -19,7 +19,7 @@ export default async function GoogleReviews({
   showReviewsShowcase = true,
   showCarousel,
 }: GoogleReviewsProps) {
-  const effectiveShowCarousel = showCarousel ?? !showReviewsShowcase;
+  const effectiveShowCarousel = showCarousel ?? true;
   const pathname = (await headers()).get("x-pathname") || "/";
   const lang = pathname.startsWith("/en") ? "en" : "sk";
   const { reviews, ratingValue, reviewCount } = await getGoogleReviewsData();
@@ -46,7 +46,7 @@ export default async function GoogleReviews({
         </div>
 
         {showReviewsShowcase && (
-          <div className="mb-0">
+          <div className={effectiveShowCarousel ? "mb-8 md:mb-10" : "pb-[72px] md:pb-[78px]"}>
             <ReviewsShowcase
               lang={lang}
               ratingValue={ratingValue}
@@ -57,7 +57,7 @@ export default async function GoogleReviews({
         )}
 
         {effectiveShowCarousel && (
-          <div className="min-h-[230px] flex items-center justify-center">
+          <div className="min-h-[230px] pb-10 md:pb-12 flex items-center justify-center">
             <ReviewCarousel reviews={reviews} lang={lang} />
           </div>
         )}

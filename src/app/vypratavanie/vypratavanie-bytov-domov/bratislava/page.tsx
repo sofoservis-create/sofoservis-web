@@ -204,10 +204,6 @@ export default function VypratavanieBytovDomovBratislavaPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o vypratávaní bytov a domov v Bratislave"
           items={faqItems}

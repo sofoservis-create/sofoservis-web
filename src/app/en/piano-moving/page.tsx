@@ -175,12 +175,6 @@ export default function PianoMovingPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What customers say about our piano moving service"
-        />
-      </div>
 
       <div>
         <FAQ

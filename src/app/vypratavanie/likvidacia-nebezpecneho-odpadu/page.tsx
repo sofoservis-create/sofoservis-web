@@ -184,10 +184,6 @@ export default function LikvidaciaNebezpecnehoOdpadu() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o likvidácii spotrebičov a nebezpečného odpadu"
           items={faqItems}

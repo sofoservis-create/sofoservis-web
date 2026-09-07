@@ -133,7 +133,6 @@ export default function MovingToBelgiumPage() {
         />
       </div>
       <div><InstagramFeed title="Follow Us on Instagram" /></div>
-      <div><GoogleReviews showReviewsShowcase={false} title="Reviews from Our Clients" /></div>
       <div>
         <FAQ
           title="FAQ — Moving to Belgium from Slovakia"

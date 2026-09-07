@@ -175,12 +175,6 @@ export default function MachineryMovingPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What customers say about our machinery moving service"
-        />
-      </div>
 
       <div>
         <FAQ

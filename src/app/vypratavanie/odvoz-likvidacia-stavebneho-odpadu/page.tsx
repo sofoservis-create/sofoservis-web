@@ -184,10 +184,6 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o odvoze a likvidácii stavebného odpadu"
           items={faqItems}

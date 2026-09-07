@@ -222,12 +222,6 @@ export default function HeavyLoadsMovingPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What customers say about our heavy item moving services"
-        />
-      </div>
 
       {/* FAQ section */}
       <div>

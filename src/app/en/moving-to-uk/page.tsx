@@ -158,12 +158,6 @@ export default function MovingFromSlovakiaToUKPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="Reviews from Our Clients"
-        />
-      </div>
 
       <div>
         <FAQ

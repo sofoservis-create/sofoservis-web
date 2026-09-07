@@ -185,13 +185,6 @@ export default function FurnitureAssemblyPage() {
       </div>
 
       <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What our customers say about us"
-        />
-      </div>
-
-      <div>
         <FAQ
           title="Frequently Asked Questions About Furniture Assembly"
           items={[

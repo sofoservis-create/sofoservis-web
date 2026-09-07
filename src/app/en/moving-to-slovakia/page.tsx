@@ -163,12 +163,6 @@ export default function MovingToSlovakiaPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="Reviews from Expats Who Moved to Slovakia"
-        />
-      </div>
 
       <div>
         <FAQ

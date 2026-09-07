@@ -186,12 +186,6 @@ export default function PropertyLandJunkRemovalPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What our customers say about us"
-        />
-      </div>
 
       <div>
         <FAQ

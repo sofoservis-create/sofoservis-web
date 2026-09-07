@@ -71,38 +71,36 @@ export default async function ReviewsShowcase({
   }
 
   return (
-    <section className="bg-white pt-0 pb-[72px] md:pb-[78px]">
-      <div className="container mx-auto px-0 sm:px-6 lg:px-8 max-w-7xl">
-        {title && (
-          <div className="text-center mb-4">
-            <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-3">
-              {title}
-            </h3>
-            <p className="text-lg text-primary-600/90 max-w-2xl mx-auto">
-              {isEnglish ? "What our clients say about us" : "Čo o nás hovoria naši klienti"}
-            </p>
-          </div>
-        )}
+    <div className="w-full">
+      {title && (
+        <div className="text-center mb-4">
+          <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-3">
+            {title}
+          </h3>
+          <p className="text-lg text-primary-600/90 max-w-2xl mx-auto">
+            {isEnglish ? "What our clients say about us" : "Čo o nás hovoria naši klienti"}
+          </p>
+        </div>
+      )}
 
-        <div className="flex justify-center w-full">
-          <div className="flex flex-row gap-4 justify-center">
-            <ReviewBadge
-              platform="google"
-              rating={ratingValue}
-              reviewCount={
-                isEnglish
-                  ? `${reviewCount} Google reviews`
-                  : `${reviewCount} hodnotení na Google`
-              }
-            />
-            <ReviewBadge
-              platform="facebook"
-              rating={4.9}
-              reviewCount={isEnglish ? "Based on 150+ reviews" : "Na základe 150+ recenzií"}
-            />
-          </div>
+      <div className="flex justify-center w-full">
+        <div className="flex flex-row gap-3 sm:gap-4 justify-center max-w-full">
+          <ReviewBadge
+            platform="google"
+            rating={ratingValue}
+            reviewCount={
+              isEnglish
+                ? `${reviewCount} Google reviews`
+                : `${reviewCount} hodnotení na Google`
+            }
+          />
+          <ReviewBadge
+            platform="facebook"
+            rating={4.9}
+            reviewCount={isEnglish ? "Based on 150+ reviews" : "Na základe 150+ recenzií"}
+          />
         </div>
       </div>
-    </section>
+    </div>
   );
 }

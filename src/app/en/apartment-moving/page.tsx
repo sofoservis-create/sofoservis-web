@@ -223,12 +223,6 @@ export default function ApartmentMovingPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What our customers say about us"
-        />
-      </div>
 
       {/* FAQ section */}
       <div>

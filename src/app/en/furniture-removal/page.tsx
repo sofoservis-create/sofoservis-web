@@ -189,13 +189,6 @@ export default function FurnitureRemovalPage() {
       </div>
 
       <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What our customers say about us"
-        />
-      </div>
-
-      <div>
         <FAQ
           title="Frequently Asked Questions About Furniture Removal"
           subtitle="Answers to the most common questions about our removal and disposal services"

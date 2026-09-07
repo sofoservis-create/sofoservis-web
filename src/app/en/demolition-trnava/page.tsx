@@ -172,12 +172,6 @@ export default function DemolitionTrnavaPage() {
         <InstagramFeed title="Follow Us on Instagram" />
       </div>
 
-      <div>
-        <GoogleReviews
-          title="Customer Reviews"
-          showReviewsShowcase={false}
-        />
-      </div>
 
       <div>
         <FAQ

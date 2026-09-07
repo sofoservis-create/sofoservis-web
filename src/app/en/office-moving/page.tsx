@@ -225,13 +225,6 @@ export default function OfficeMovingPage() {
       </div>
 
       {/* Google Reviews section */}
-      <div>
-        <GoogleReviews
-          showReviewsShowcase={false}
-          title="What businesses say about our services"
-        />
-      </div>
-
       {/* FAQ section */}
       <div>
         <FAQ

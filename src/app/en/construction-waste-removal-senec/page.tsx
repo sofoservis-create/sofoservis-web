@@ -178,10 +178,6 @@ export default function ConstructionWasteRemovalSenecPage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} title="Customer Reviews" />
-      </div>
-
-      <div>
         <FAQ
           title="Frequently Asked Questions About Construction Waste Removal in Senec"
           items={[

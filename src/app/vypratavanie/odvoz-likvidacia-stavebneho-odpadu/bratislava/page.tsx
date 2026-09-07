@@ -151,7 +151,6 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
         />
       </div>
       <InstagramFeed />
-      <GoogleReviews showReviewsShowcase={false} />
       <FAQ
         title="Často kladené otázky o odvoze odpadu v Bratislave"
         items={faqItems}

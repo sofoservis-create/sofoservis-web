@@ -195,10 +195,6 @@ export default function BuraciePracePage() {
       </div>
 
       <div>
-        <GoogleReviews showReviewsShowcase={false} />
-      </div>
-
-      <div>
         <FAQ
           title="Často kladené otázky o búracích prácach"
           items={faqItems}
