@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect, useLayoutEffect } from "react";
 
 const useIsomorphicLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
@@ -18,6 +19,7 @@ interface LabHeroProps {
   formSubtitle?: string;
   ratingText?: string;
   benefits?: string[];
+  benefitLinks?: string[];
   narrowForm?: boolean;
   hideBadge?: boolean;
   badgeText?: string;
@@ -92,14 +94,14 @@ interface LabHeroProps {
   hoursText?: string;
 }
 
-type HeroPill = { icon: string; label: string };
+type HeroPill = { icon: string; label: string; href?: string };
 
 const HERO_PILLS: Record<"home" | "stahovanie" | "hodinovy" | "referencie", Record<"sk" | "en", HeroPill[]>> = {
   home: {
     sk: [
-      { icon: "/icons/truck_icon.svg", label: "Sťahovanie" },
-      { icon: "/icons/vypratavanie_icon.svg", label: "Vypratávanie" },
-      { icon: "/icons/repair_icon.svg", label: "Montáž nábytku" },
+      { icon: "/icons/truck_icon.svg", label: "Sťahovanie", href: "/stahovanie" },
+      { icon: "/icons/vypratavanie_icon.svg", label: "Vypratávanie", href: "/vypratavanie" },
+      { icon: "/icons/repair_icon.svg", label: "Montáž nábytku", href: "/montaz-nabytku" },
     ],
     en: [
       { icon: "/icons/truck_icon.svg", label: "Moving" },
@@ -272,6 +274,7 @@ export default function LabHero({
   formSubtitle = "Vyplňte formulár a získajte nezáväznú ponuku ešte dnes",
   ratingText = "3500+ spokojných zákazníkov",
   benefits = ["Sťahovanie", "Vypratávanie", "Montáž nábytku"],
+  benefitLinks,
   narrowForm = false,
   hideBadge = false,
   badgeText,
@@ -732,7 +735,16 @@ export default function LabHero({
                         <path d="M20 6 9 17l-5-5" />
                       </svg>
                     </div>
-                    <span className="text-white text-xs sm:text-sm font-medium text-center sm:text-left">{benefit}</span>
+                    {benefitLinks?.[i] ? (
+                      <Link
+                        href={benefitLinks[i]}
+                        className="rounded-sm text-white text-xs sm:text-sm font-medium text-center sm:text-left transition-colors hover:text-accent-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-900"
+                      >
+                        {benefit}
+                      </Link>
+                    ) : (
+                      <span className="text-white text-xs sm:text-sm font-medium text-center sm:text-left">{benefit}</span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -978,9 +990,18 @@ export default function LabHero({
                   <div className="w-14 h-14 rounded-full bg-accent-500 flex items-center justify-center">
                     <Image src={p.icon} alt="" width={36} height={36} />
                   </div>
-                  <span className="text-sm font-medium text-white text-center leading-tight">
-                    {p.label}
-                  </span>
+                  {p.href ? (
+                    <Link
+                      href={p.href}
+                      className="rounded-sm text-sm font-medium text-white text-center leading-tight transition-colors hover:text-accent-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-900"
+                    >
+                      {p.label}
+                    </Link>
+                  ) : (
+                    <span className="text-sm font-medium text-white text-center leading-tight">
+                      {p.label}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

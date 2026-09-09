@@ -18,7 +18,7 @@ interface FeatureItem {
 // Define props interface for Features component
 export interface FeaturesProps {
   title?: string;
-  description?: string;
+  description?: React.ReactNode;
   features?: FeatureItem[];
   showCallToAction?: boolean;
   callToActionText?: string;

@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Link from "next/link";
 import LabHero from "@/components/sections/LabHero";
 import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
@@ -110,6 +111,7 @@ export default function Home() {
         title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
         description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
         benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
+        benefitLinks={["/stahovanie", "/vypratavanie", "/montaz-nabytku"]}
         ratingText="3500+ spokojných zákazníkov"
         desktopMascotDynamicHeight
         desktopMinHeroTextHeightPx={476}
@@ -129,7 +131,23 @@ export default function Home() {
 
       <Features
           title="Prečo si vybrať Sofoservis"
-          description="Komplexné služby pod jednou strechou — sťahovanie, vypratávanie aj montáž nábytku."
+          description={
+            <>
+              Komplexné služby pod jednou strechou -{" "}
+              <Link href="/stahovanie" className="rounded-sm font-medium underline decoration-primary-300 underline-offset-4 transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500">
+                sťahovanie
+              </Link>
+              ,{" "}
+              <Link href="/vypratavanie" className="rounded-sm font-medium underline decoration-primary-300 underline-offset-4 transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500">
+                vypratávanie
+              </Link>
+              {" "}aj{" "}
+              <Link href="/montaz-nabytku" className="rounded-sm font-medium underline decoration-primary-300 underline-offset-4 transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500">
+                montáž nábytku
+              </Link>
+              .
+            </>
+          }
           features={[
             {
               image: "/icons/truck_icon.svg",
@@ -142,14 +160,14 @@ export default function Home() {
               image: "/icons/briefcase_icon.svg",
               title: "Sťahovanie kancelárií a firiem",
               description:
-                "Firemné sťahovanie počas noci alebo víkendu — minimalizujeme prestoje a postaráme sa o celú organizáciu.",
+                "Firemné sťahovanie počas noci alebo víkendu - minimalizujeme prestoje a postaráme sa o celú organizáciu.",
               link: "/stahovanie/stahovanie-kancelarii-firiem",
             },
             {
               image: "/icons/house_icon.svg",
               title: "Vypratávanie bytov a domov",
               description:
-                "Vypratávame byty, domy, pivnice, garáže a záhrady. Odpad zlikvidujeme ekologicky — vy nemusíte nič riešiť.",
+                "Vypratávame byty, domy, pivnice, garáže a záhrady. Odpad zlikvidujeme ekologicky - vy nemusíte nič riešiť.",
               link: "/vypratavanie/vypratavanie-bytov-domov",
             },
             {
@@ -163,7 +181,7 @@ export default function Home() {
               image: "/icons/repair_icon.svg",
               title: "Montáž nábytku IKEA",
               description:
-                "Montujeme nábytok IKEA — skrine PAX, postele, policové systémy aj ostatné série. Precízne a podľa návodu.",
+                "Montujeme nábytok IKEA - skrine PAX, postele, policové systémy aj ostatné série. Precízne a podľa návodu.",
               link: "/montaz-nabytku",
             },
             {
