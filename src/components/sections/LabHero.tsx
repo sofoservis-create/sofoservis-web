@@ -104,9 +104,9 @@ const HERO_PILLS: Record<"home" | "stahovanie" | "hodinovy" | "referencie", Reco
       { icon: "/icons/repair_icon.svg", label: "Montáž nábytku", href: "/montaz-nabytku" },
     ],
     en: [
-      { icon: "/icons/truck_icon.svg", label: "Moving" },
-      { icon: "/icons/vypratavanie_icon.svg", label: "Clearance" },
-      { icon: "/icons/repair_icon.svg", label: "Furniture assembly" },
+      { icon: "/icons/truck_icon.svg", label: "Moving", href: "/en/moving" },
+      { icon: "/icons/vypratavanie_icon.svg", label: "Clearance", href: "/en/junk-removal" },
+      { icon: "/icons/repair_icon.svg", label: "Furniture assembly", href: "/en/furniture-assembly" },
     ],
   },
   stahovanie: {
