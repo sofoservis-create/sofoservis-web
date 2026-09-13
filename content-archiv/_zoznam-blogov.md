@@ -20,3 +20,4 @@ Exportované: 2026-06-17
 16. Cena vypratávania bytu 2026 — čo ovplyvňuje sumu a ako ušetriť — https://www.sofoservis.sk/blog/vypratavanie-bytu-cena-2026
 17. Ako sa pripraviť na sťahovanie 2026 — checklist a tipy na balenie — https://www.sofoservis.sk/blog/ako-sa-pripravit-na-stahovanie-checklist
 18. Koľko stojí sťahovanie v Bratislave 2026 — https://www.sofoservis.sk/blog/kolko-stoji-stahovanie-bratislava-2026
+19. Preprava chladničky naležato alebo zvislo: ako na to správne — https://www.sofoservis.sk/blog/preprava-chladnicky-nalezato-alebo-zvislo-ako-prevazat-spravne

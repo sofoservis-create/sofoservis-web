@@ -145,12 +145,8 @@ const nextConfig = {
         destination: "/vypratavanie/vypratavanie-bytov-domov",
         permanent: true,
       },
-      // Blog konsolidácia – zvyšných 15 blogov + index (jún 2026)
-      {
-        source: "/blog",
-        destination: "/stahovanie/stahovanie-bratislava",
-        permanent: true,
-      },
+      // Blog konsolidácia – 15 starších článkov (jún 2026).
+      // /blog je opäť aktívny index nových článkov.
       {
         source: "/blog/stahovanie-seniorov-starsich-osob",
         destination: "/stahovanie/stahovanie-bytov-domov",

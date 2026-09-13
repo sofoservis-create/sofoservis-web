@@ -72,6 +72,7 @@ export default function Footer() {
       },
       navigationLinks: [
         { href: "/", label: "Domov" },
+        { href: "/blog", label: "Blog" },
         { href: "/stahovanie", label: "Sťahovanie" },
         { href: "/vypratavanie", label: "Vypratávanie" },
         { href: "/montaz-nabytku", label: "Montáž nábytku" },

@@ -145,6 +145,7 @@ export const navCategoriesSK: NavCategory[] = [
       name: "INFORMÁCIE",
       flat: true,
       links: [
+        { href: "/blog", label: "Blog" },
         { href: "/kontakt", label: "Kontakt" },
         { href: "/cennik", label: "Cenník", mobileHidden: true },
         { href: "/o-nas", label: "O nás" },

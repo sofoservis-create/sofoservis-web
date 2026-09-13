@@ -6,6 +6,7 @@ import {
   getServiceData,
 } from "@/lib/breadcrumbs";
 import type { ServiceData } from "@/lib/breadcrumbs";
+import { blogArticles } from "@/lib/blog/articles";
 
 interface StructuredDataSchema {
   "@context": string;
@@ -21,6 +22,9 @@ export default async function SEOProvider({ pathname }: { pathname: string }) {
     const baseUrl = "https://www.sofoservis.sk";
     const isHomePage = pathname === "/";
     const isEnglishPage = pathname.startsWith("/en");
+    const blogArticle = pathname.startsWith("/blog/")
+      ? blogArticles.find((article) => `/blog/${article.slug}` === pathname)
+      : undefined;
 
     const cityName = getCityName(pathname);
     const serviceData = getServiceData(pathname);
@@ -39,8 +43,8 @@ export default async function SEOProvider({ pathname }: { pathname: string }) {
         logo: {
           "@type": "ImageObject",
           url: `${baseUrl}/images/og-logo.png`,
-          width: 300,
-          height: 80,
+          width: 1200,
+          height: 630,
         },
         description:
           "Profesionálne sťahovanie, vypratávanie a montáž nábytku v Bratislave a celom Slovensku",
@@ -107,14 +111,22 @@ export default async function SEOProvider({ pathname }: { pathname: string }) {
     }
 
     // 2. WebPage — všetky stránky
-    const pageTitle = generatePageTitle(pathname, serviceData, cityName);
+    const pageTitle =
+      blogArticle?.title ??
+      generatePageTitle(pathname, serviceData, cityName);
+    const pageDescription =
+      blogArticle?.description ??
+      generatePageDescription(pathname, serviceData, cityName);
+    const pageId = pathname.startsWith("/blog")
+      ? `${baseUrl}${pathname}#webpage`
+      : `${baseUrl}${pathname}/#webpage`;
     schemas.push({
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "@id": `${baseUrl}${pathname}/#webpage`,
+      "@id": pageId,
       url: `${baseUrl}${pathname}`,
       name: pageTitle,
-      description: generatePageDescription(pathname, serviceData, cityName),
+      description: pageDescription,
       isPartOf: { "@id": `${baseUrl}/#website` },
       about: { "@id": `${baseUrl}/#organization` },
       inLanguage: isEnglishPage ? "en-US" : "sk-SK",
@@ -209,6 +221,7 @@ function generatePageTitle(
   if (pathname === "/kontakt") return "Kontakt - SofoServis";
   if (pathname === "/cennik") return "Cenník služieb - SofoServis";
   if (pathname === "/referencie") return "Referencie - SofoServis";
+  if (pathname === "/blog") return "Blog - SofoServis";
 
   if (serviceData && cityName) return `${serviceData.serviceName} ${cityName} - SofoServis`;
   if (serviceData) return `${serviceData.serviceName} - SofoServis`;
@@ -228,6 +241,9 @@ function generatePageDescription(
   if (serviceData) return serviceData.serviceDescription;
   if (cityName) {
     return `Profesionálne sťahovacie služby v meste ${cityName}. Sťahovanie bytov, domov a kancelárií.`;
+  }
+  if (pathname === "/blog") {
+    return "Praktické rady zo sťahovania, prepravy a vypratávania od Sofoservisu.";
   }
   return "Profesionálne sťahovanie, vypratávanie a montáž nábytku v Bratislave a celom Slovensku";
 }

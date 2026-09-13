@@ -3,6 +3,7 @@ interface BlogPostingJsonLdProps {
   description: string;
   publishDate: string;
   slug: string;
+  image?: string;
 }
 
 export default function BlogPostingJsonLd({
@@ -10,8 +11,12 @@ export default function BlogPostingJsonLd({
   description,
   publishDate,
   slug,
+  image,
 }: BlogPostingJsonLdProps) {
   const url = `https://www.sofoservis.sk/blog/${slug}`;
+  const imageUrl = image
+    ? new URL(image, "https://www.sofoservis.sk").toString()
+    : undefined;
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -21,24 +26,27 @@ export default function BlogPostingJsonLd({
     dateModified: publishDate,
     inLanguage: "sk-SK",
     url: url,
+    ...(imageUrl ? { image: imageUrl } : {}),
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": url,
+      "@id": `${url}#webpage`,
     },
     author: {
       "@type": "Organization",
+      "@id": "https://www.sofoservis.sk/#organization",
       name: "SofoServis",
       url: "https://www.sofoservis.sk",
     },
     publisher: {
       "@type": "Organization",
+      "@id": "https://www.sofoservis.sk/#organization",
       name: "SofoServis",
       url: "https://www.sofoservis.sk",
       logo: {
         "@type": "ImageObject",
         url: "https://www.sofoservis.sk/images/og-logo.png",
-        width: 300,
-        height: 80,
+        width: 1200,
+        height: 630,
       },
     },
   };

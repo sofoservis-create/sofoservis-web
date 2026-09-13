@@ -6,3 +6,4 @@
 - [Testing subagent output](testing-subagent-verbatim.md) — the e2e subagent summarizes numbers away unless the plan demands verbatim `KEY=<json>` lines and calls a report without them a failed test.
 - [`<details>` dropdowns & pointer detection](details-element-dropdowns.md) — closed `<details>` never paints its contents (content-visibility), so hover-only CSS fails; and `(hover: hover)` is false in headless Chromium — use `pointerType`.
 - [Internal link audits](internal-link-audits.md) — crawls must retry 5xx (known intermittent hook bug) or they report false dead links; the real defect is self-referential links, and dedup hides its scale.
+- [DOCX article imports](docx-article-imports.md) — text extraction omits comments and hyperlink targets; inspect the OOXML relationships before implementing supplied articles.

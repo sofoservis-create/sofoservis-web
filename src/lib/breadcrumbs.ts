@@ -226,6 +226,8 @@ const PAGE_NAMES_SK: Record<string, string> = {
   referencie: "Referencie",
   "o-nas": "O nás",
   blog: "Blog",
+  "preprava-chladnicky-nalezato-alebo-zvislo-ako-prevazat-spravne":
+    "Preprava chladničky naležato alebo zvislo: ako na to správne",
   "zasady-pouzivania-cookies": "Zásady používania cookies",
   "zasady-spracovania-osobnych-udajov": "Ochrana osobných údajov",
   "vseobecne-obchodne-podmienky": "Všeobecné obchodné podmienky",
