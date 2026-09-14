@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
+// Replit preview beží v iframe z inej domény, takže X-Frame-Options: SAMEORIGIN
+// by náhľad zablokoval. V developmente ho preto vynechávame; v produkcii ostáva.
+const isDev = process.env.NODE_ENV !== "production";
+
 const securityHeaders = [
-  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  ...(isDev ? [] : [{ key: "X-Frame-Options", value: "SAMEORIGIN" }]),
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
