@@ -106,7 +106,7 @@ export default function BlogArticle({ article }: { article: BlogArticleData }) {
               {article.title}
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-[#52605a]">
-              {article.description}
+              {article.summary}
             </p>
             <div className="mt-8 flex items-center gap-3 text-sm text-[#5d6963]">
               <span className="h-2 w-2 rounded-full bg-[#a7621d]" />

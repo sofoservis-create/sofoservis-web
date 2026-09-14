@@ -22,6 +22,7 @@ export type BlogArticleData = {
   slug: string;
   title: string;
   description: string;
+  summary: string;
   datePublished: string;
   readingTime: string;
   category: string;
@@ -90,6 +91,8 @@ export const refrigeratorArticle: BlogArticleData = {
   title: "Preprava chladničky naležato alebo zvislo: ako na to správne",
   description:
     "Preprava chladničky naležato alebo zvislo? ✅ Zistite, ktorá poloha je bezpečnejšia, ako chladničku pripraviť na prevoz a ako dlho ju nechať odstáť. Čítajte viac",
+  summary:
+    "Preprava chladničky naležato alebo zvislo? Zistite, ktorá poloha je bezpečnejšia, ako chladničku pripraviť na prevoz a ako dlho ju nechať odstáť. Čítajte viac",
   datePublished: "2026-09-13",
   readingTime: "7 min čítania",
   category: "Praktické rady",

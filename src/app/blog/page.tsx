@@ -47,7 +47,7 @@ export default function BlogPage() {
               <div className="p-7 md:p-9">
                 <p className="text-xs font-bold uppercase tracking-[.18em] text-[#78400b]">{article.category} · {article.readingTime}</p>
                 <h2 className="mt-4 max-w-2xl font-[var(--font-sora)] text-2xl font-semibold leading-tight tracking-[-.03em] md:text-4xl">{article.title}</h2>
-                <p className="mt-4 max-w-xl leading-7 text-[#69766f]">{article.description}</p>
+                <p className="mt-4 max-w-xl leading-7 text-[#69766f]">{article.summary}</p>
                 <span className="mt-7 inline-flex items-center gap-2 font-bold text-[#78400b]">Prečítať článok <span aria-hidden="true">→</span></span>
               </div>
             </Link>
