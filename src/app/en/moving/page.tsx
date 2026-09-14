@@ -33,7 +33,7 @@ const movingLocations = [
 export const metadata = {
   title: "Moving Services - Professional & Affordable | Sofoservis",
   description:
-    "Professional moving services for apartments, houses, offices and international relocations from €30/hr. Free site inspection. Fast, reliable.",
+    "Professional moving services for apartments, houses, offices and international relocations from €35/hr. Free site inspection. Fast, reliable.",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/moving",
     languages: {
@@ -45,7 +45,7 @@ export const metadata = {
   openGraph: {
     title: "Moving Services - Professional & Affordable | Sofoservis",
     description:
-      "Professional moving services for apartments, houses, offices and international relocations from €30/hr. Free inspection. Fast, reliable.",
+      "Professional moving services for apartments, houses, offices and international relocations from €35/hr. Free inspection. Fast, reliable.",
     url: "https://www.sofoservis.sk/en/moving",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -58,7 +58,7 @@ const faqSchemaItems = [
   {
     question: "How much does moving cost?",
     answer:
-      "The hourly rate starts from €30/hr for 2 workers. For a 2-bedroom apartment in Bratislava the typical price is €200–€350. The final cost depends on distance, floor level, volume of belongings and whether furniture disassembly is needed.",
+      "The hourly rate for 2 workers is €70/hr. For a 2-bedroom apartment in Bratislava the typical price is €200–€350. The final cost depends on distance, floor level, volume of belongings and whether furniture disassembly is needed.",
   },
   {
     question: "Do you offer weekend moving services?",
@@ -228,7 +228,7 @@ export default function MovingPage() {
             {
               question: "How much does moving an apartment or house cost?",
               answer:
-                "The hourly rate starts from €30/hr for 2 workers. For a 2-bedroom apartment in Bratislava the typical price is €200–€350, for a 3–4 bedroom apartment €350–€600. Family houses are priced individually. We always provide a clear, fixed quote upfront.",
+                "The hourly rate for 2 workers is €70/hr. For a 2-bedroom apartment in Bratislava the typical price is €200–€350, for a 3–4 bedroom apartment €350–€600. Family houses are priced individually. We always provide a clear, fixed quote upfront.",
             },
             {
               question: "How long does a move take?",

@@ -13,7 +13,7 @@ import PriceListJsonLd from "@/components/seo/PriceListJsonLd";
 export const metadata = {
   title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
   description:
-    "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 30€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!",
+    "Transparentné ceny za naše služby. Sťahovanie od 35€/hod, vypratávanie od 35€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!",
   alternates: {
     canonical: "https://www.sofoservis.sk/cennik",
       languages: {
@@ -24,7 +24,7 @@ export const metadata = {
   },
   openGraph: {
       title: "Cenník – Sťahovanie, Vypratávanie, Montáž | Sofoservis",
-      description: "Transparentné ceny za naše služby. Sťahovanie od 30€/hod, vypratávanie od 30€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!",
+      description: "Transparentné ceny za naše služby. Sťahovanie od 35€/hod, vypratávanie od 35€/hod, montáž nábytku od 30€/hod. Obhliadka zadarmo!",
       url: "https://www.sofoservis.sk/cennik",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -86,17 +86,13 @@ export default function CennikPage() {
       title: "SŤAHOVANIE",
       items: [
         { label: "Obhliadka", price: "zadarmo" },
-        { label: "1 pracovník", price: "30€/hod" },
-        { label: "2 pracovníci", price: "60€/hod" },
-        {
-          label: "3 pracovníci - AKCIA",
-          price: "80€/hod",
-          isHighlighted: true,
-        },
-        { label: "Každý ďalší", price: "30€/hod" },
+        { label: "1 pracovník", price: "35€/hod" },
+        { label: "2 pracovníci", price: "70€/hod" },
+        { label: "3 pracovníci", price: "90€/hod" },
+        { label: "Každý ďalší", price: "+30€/hod" },
         { label: "Vynáška bez výťahu", price: "15€/poschodie" },
-        { label: "Sťahovanie v rámci mesta", price: "od 55€" },
-        { label: "Sťahovanie mimo mesta", price: "0.80€/Km" },
+        { label: "Sťahovanie v rámci mesta", price: "od 60€" },
+        { label: "Sťahovanie mimo mesta", price: "0,90€/km" },
         { label: "Medzinárodné sťahovanie", price: "dohodou" },
         { label: "Sťahovanie bremien", price: "od 80€" },
         { label: "Sťahovanie skladov", price: "dohodou" },
@@ -108,13 +104,9 @@ export default function CennikPage() {
       title: "VYPRATÁVANIE",
       items: [
         { label: "Obhliadka", price: "zadarmo" },
-        { label: "1 pracovník", price: "30€/hod" },
-        { label: "2 pracovníci", price: "60€/hod" },
-        {
-          label: "3 pracovníci - AKCIA",
-          price: "80€/hod",
-          isHighlighted: true,
-        },
+        { label: "1 pracovník", price: "35€/hod" },
+        { label: "2 pracovníci", price: "70€/hod" },
+        { label: "3 pracovníci", price: "90€/hod" },
         { label: "Plná dodávka 17 m2", price: "200€" },
         { label: "Pivnica klasik (kobka)", price: "od 60€" },
         { label: "Väčšia pivnica", price: "dohodou" },
@@ -148,17 +140,17 @@ export default function CennikPage() {
       {/* JSON-LD Service + OfferCatalog schema pre rich snippets s cenami v Google */}
       <PriceListJsonLd
         offers={[
-          { name: "Sťahovanie – 1 pracovník", price: 30, unitCode: "HUR" },
-          { name: "Sťahovanie – 2 pracovníci", price: 60, unitCode: "HUR" },
-          { name: "Sťahovanie – 3 pracovníci (akcia)", price: 80, unitCode: "HUR" },
+          { name: "Sťahovanie – 1 pracovník", price: 35, unitCode: "HUR" },
+          { name: "Sťahovanie – 2 pracovníci", price: 70, unitCode: "HUR" },
+          { name: "Sťahovanie – 3 pracovníci", price: 90, unitCode: "HUR" },
           { name: "Sťahovanie – každý ďalší pracovník", price: 30, unitCode: "HUR" },
           { name: "Vynáška bez výťahu", price: 15, description: "za poschodie" },
-          { name: "Sťahovanie v rámci mesta", price: 55, isMinPrice: true },
-          { name: "Sťahovanie mimo mesta", price: 0.8, unitCode: "KMT" },
+          { name: "Sťahovanie v rámci mesta", price: 60, isMinPrice: true },
+          { name: "Sťahovanie mimo mesta", price: 0.9, unitCode: "KMT" },
           { name: "Sťahovanie ťažkých bremien", price: 80, isMinPrice: true },
-          { name: "Vypratávanie – 1 pracovník", price: 30, unitCode: "HUR" },
-          { name: "Vypratávanie – 2 pracovníci", price: 60, unitCode: "HUR" },
-          { name: "Vypratávanie – 3 pracovníci (akcia)", price: 80, unitCode: "HUR" },
+          { name: "Vypratávanie – 1 pracovník", price: 35, unitCode: "HUR" },
+          { name: "Vypratávanie – 2 pracovníci", price: 70, unitCode: "HUR" },
+          { name: "Vypratávanie – 3 pracovníci", price: 90, unitCode: "HUR" },
           { name: "Vypratávanie – plná dodávka 17 m²", price: 200 },
           { name: "Vypratávanie pivnice", price: 60, isMinPrice: true },
           { name: "Vypratávanie garáže", price: 70, isMinPrice: true },
@@ -264,14 +256,14 @@ export default function CennikPage() {
                 "Áno, naše služby poskytujeme 6 dní v týždni vrátane soboty od 8:00 do 17:00. Nedeľa je podľa dohody. Za prácu počas soboty neúčtujeme žiadny príplatok.",
             },
             {
-              question: "Čo zahŕňa akciová cena pre 3 pracovníkov?",
+              question: "Koľko stojí práca 3 pracovníkov?",
               answer:
-                "Akciová cena 80€/hod pre 3 pracovníkov je našou najobľúbenejšou možnosťou, ktorá poskytuje vynikajúci pomer ceny a výkonu. Pri štandardnom účtovaní by 3 pracovníci stáli 90€/hod (3 × 30€), takže ušetríte 10€ za každú hodinu.",
+                "Práca 3 pracovníkov pri sťahovaní aj vypratávaní stojí 90€/hod. Presnú celkovú cenu určíme podľa rozsahu práce pri bezplatnej obhliadke.",
             },
             {
               question: "Ako sa počítajú cestovné náklady?",
               answer:
-                "Pre sťahovanie v rámci mesta účtujeme paušálnu sumu od 55€. Pre vzdialenejšie destinácie účtujeme 0,80€ za kilometer. Presná cena cestovného sa určí pri obhliadke na základe konkrétnej trasy.",
+                "Pre sťahovanie v rámci mesta účtujeme paušálnu sumu od 60€. Pre vzdialenejšie destinácie účtujeme 0,90€ za kilometer. Presná cena cestovného sa určí pri obhliadke na základe konkrétnej trasy.",
             },
           ]}
         />

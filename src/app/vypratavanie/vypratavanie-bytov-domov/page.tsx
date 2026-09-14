@@ -18,7 +18,7 @@ import FAQJsonLd from "@/components/seo/FAQJsonLd";
 export const metadata = {
   title: "Vypratávanie bytov a domov | Sofoservis",
   description:
-    "Profesionálne vypratávanie bytov a domov od 30€/hod. Jednoizbový byt od 200€. Obhliadka zadarmo. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
+    "Profesionálne vypratávanie bytov a domov od 35€/hod. Jednoizbový byt od 200€. Obhliadka zadarmo. Rýchlo, spoľahlivo, spokojnosť garantovaná.",
   alternates: {
     canonical: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
       languages: {
@@ -30,7 +30,7 @@ export const metadata = {
   openGraph: {
     title: "Vypratávanie bytov a domov | Sofoservis",
     description:
-      "Profesionálne vypratávanie bytov a domov od 30€/hod. Jednoizbový byt od 200€. Obhliadka zadarmo.",
+      "Profesionálne vypratávanie bytov a domov od 35€/hod. Jednoizbový byt od 200€. Obhliadka zadarmo.",
     url: "https://www.sofoservis.sk/vypratavanie/vypratavanie-bytov-domov",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -43,7 +43,7 @@ const faqSchemaItems = [
   {
     question: "Aká je cena za vypratanie bytu alebo domu?",
     answer:
-      "Cena závisí od veľkosti priestoru a množstva vecí. Pre štandardný jednoizbový byt ceny začínajú od 200€. Hodinová sadzba je od 30€/hod. Poskytujeme nezáväznú cenovú ponuku po bezplatnej obhliadke.",
+      "Cena závisí od veľkosti priestoru a množstva vecí. Pre štandardný jednoizbový byt ceny začínajú od 200€. Hodinová sadzba je od 35€/hod. Poskytujeme nezáväznú cenovú ponuku po bezplatnej obhliadke.",
   },
   {
     question: "Ako dlho trvá vypratanie bytu alebo domu?",

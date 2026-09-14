@@ -12,7 +12,7 @@ import RelatedServices from "@/components/sections/RelatedServices";
 export const metadata = {
   title: "Service Pricing - Moving, Clearance, Assembly | Sofoservis",
   description:
-    "Transparent prices for our services. Moving from €30/hr, clearance from €30/hr, furniture assembly from €30/hr. Free inspection!",
+    "Transparent prices for our services. Moving from €35/hr, clearance from €35/hr, furniture assembly from €30/hr. Free inspection!",
   alternates: {
     canonical: "https://www.sofoservis.sk/en/pricing",
     languages: {
@@ -81,17 +81,13 @@ export default function PricingPageEN() {
       title: "MOVING",
       items: [
         { label: "Site inspection", price: "free" },
-        { label: "1 worker", price: "€30/hr" },
-        { label: "2 workers", price: "€60/hr" },
-        {
-          label: "3 workers - PROMO",
-          price: "€80/hr",
-          isHighlighted: true,
-        },
-        { label: "Each additional", price: "€17/hr" },
+        { label: "1 worker", price: "€35/hr" },
+        { label: "2 workers", price: "€70/hr" },
+        { label: "3 workers", price: "€90/hr" },
+        { label: "Each additional", price: "+€30/hr" },
         { label: "Carry without elevator", price: "€15/floor" },
-        { label: "Moving within city", price: "from €40" },
-        { label: "Moving outside city", price: "€0.80/km" },
+        { label: "Moving within city", price: "from €60" },
+        { label: "Moving outside city", price: "€0.90/km" },
         { label: "International moving", price: "by agreement" },
         { label: "Heavy item moving", price: "from €80" },
         { label: "Warehouse moving", price: "by agreement" },
@@ -103,13 +99,9 @@ export default function PricingPageEN() {
       title: "CLEARANCE",
       items: [
         { label: "Site inspection", price: "free" },
-        { label: "1 worker", price: "€30/hr" },
-        { label: "2 workers", price: "€60/hr" },
-        {
-          label: "3 workers - PROMO",
-          price: "€80/hr",
-          isHighlighted: true,
-        },
+        { label: "1 worker", price: "€35/hr" },
+        { label: "2 workers", price: "€70/hr" },
+        { label: "3 workers", price: "€90/hr" },
         { label: "Full van 17 m²", price: "€200" },
         { label: "Standard cellar", price: "from €60" },
         { label: "Larger cellar", price: "by agreement" },
@@ -235,14 +227,14 @@ export default function PricingPageEN() {
                 "Yes, we provide our services 6 days a week including Saturday from 8:00 to 17:00. Sunday is available by arrangement. There is no extra charge for Saturday work.",
             },
             {
-              question: "What does the promotional price for 3 workers include?",
+              question: "How much do 3 workers cost?",
               answer:
-                "The promotional price of €80/hr for 3 workers is our most popular option, offering excellent value for money. At standard rates, 3 workers would cost €90/hr (3 × €30), so you save €10 for every hour.",
+                "Three workers cost €90/hr for both moving and clearance services. We determine the exact total price based on the scope of work during a free site inspection.",
             },
             {
               question: "How are travel costs calculated?",
               answer:
-                "For moves within the city, we charge a flat rate from €55. For longer distances, we charge €0.80 per kilometer. The exact travel cost is determined during the inspection based on the specific route.",
+                "For moves within the city, we charge a flat rate from €60. For longer distances, we charge €0.90 per kilometer. The exact travel cost is determined during the inspection based on the specific route.",
             },
           ]}
           callToActionText="Have questions about pricing? Get in touch"

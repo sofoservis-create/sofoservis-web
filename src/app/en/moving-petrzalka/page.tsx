@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: "What is the cost of moving in Petržalka?",
     answer:
-      "Our hourly rates start from €25 per worker. Moving within Petržalka or to other parts of Bratislava starts from €40. For a standard 2-bedroom flat move, we usually recommend 3 workers.",
+      "Our hourly rates start from €35 per worker. Moving within Petržalka or to other parts of Bratislava starts from €60. For a standard 2-bedroom flat move, we usually recommend 3 workers.",
   },
   {
     question: "How do you handle parking for the moving truck in Petržalka?",
@@ -175,7 +175,7 @@ export default function MovingPetrzalkaPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Apartment Moving", description: "Reliable moving of apartments and family houses.", href: "/en/apartment-moving", icon: "/icons/house_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Petržalka from €30/hour.", href: "/en/home-junk-removal-petrzalka", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Petržalka from €35/hour.", href: "/en/home-junk-removal-petrzalka", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Removal", description: "Old furniture pickup and ecological disposal.", href: "/en/furniture-removal", icon: "/icons/recycle_icon.svg" },
         ]}
       />

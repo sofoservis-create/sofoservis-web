@@ -44,7 +44,7 @@ export default function StahovanieBratislavaPage() {
   const heroData = {
     title: "Sťahovacie služby v Bratislave",
     description:
-      "Kompletné sťahovacie služby v Bratislave a okolí od 30€/hod. Profesionálny tím, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
+      "Kompletné sťahovacie služby v Bratislave a okolí od 35€/hod. Profesionálny tím, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy.",
     formTitle: "Sťahovanie v Bratislave bez starostí s bezplatnou ponukou",
     formSubtitle: "Vyplňte formulár nižšie pre rýchlu fixnú cenu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -253,7 +253,7 @@ export default function StahovanieBratislavaPage() {
               },
               {
                 title: "Čo ovplyvňuje cenu sťahovania v Bratislave?",
-                content: "Cena sťahovania v Bratislave závisí od viacerých faktorov. Základná hodinová sadzba začína od 30€/hod, no výsledná suma sa odvíja od: počtu pracovníkov (štandardne 2, pri väčších zákazkách 3 alebo viac), objemu a hmotnosti vecí, vzdialenosti medzi starým a novým miestom, prístupových podmienok (poschodie, výťah, parkovanie), potreby demontáže a montáže nábytku a požiadavky na baliaci materiál.\n\nPre presný cenový odhad odporúčame vyplniť kontaktný formulár alebo nám zavolať. Bezplatnú obhliadku robíme priamo u vás, aby sme vedeli pripraviť reálnu cenovú ponuku bez skrytých poplatkov.",
+                content: "Cena sťahovania v Bratislave závisí od viacerých faktorov. Základná hodinová sadzba začína od 35€/hod, no výsledná suma sa odvíja od: počtu pracovníkov (štandardne 2, pri väčších zákazkách 3 alebo viac), objemu a hmotnosti vecí, vzdialenosti medzi starým a novým miestom, prístupových podmienok (poschodie, výťah, parkovanie), potreby demontáže a montáže nábytku a požiadavky na baliaci materiál.\n\nPre presný cenový odhad odporúčame vyplniť kontaktný formulár alebo nám zavolať. Bezplatnú obhliadku robíme priamo u vás, aby sme vedeli pripraviť reálnu cenovú ponuku bez skrytých poplatkov.",
               },
               {
                 title: "Mestské časti Bratislavy a špeciality sťahovania",
@@ -286,7 +286,7 @@ export default function StahovanieBratislavaPage() {
       <RelatedServices
         title="Ďalšie služby v Bratislave"
         services={[
-          { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti od 30€/hod.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
+          { title: "Sťahovanie bytov a domov", description: "Profesionálne sťahovanie pre domácnosti od 35€/hod.", href: "/stahovanie/stahovanie-bytov-domov", icon: "/icons/house_icon.svg" },
           { title: "Vypratávanie bytov a domov", description: "Kompletné vypratanie a odvoz nepotrebných vecí.", href: "/vypratavanie/vypratavanie-bytov-domov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Montáž nábytku", description: "Skladanie a montáž nábytku všetkých značiek.", href: "/montaz-nabytku", icon: "/icons/wrench_icon.svg" },
         ]}

@@ -60,7 +60,7 @@ const faqSchemaItems = [
   {
     question: "Aká je aproximná cena za sťahovanie 2-izbového bytu?",
     answer:
-      "Cena za sťahovanie 2-izbového bytu sa štandardne pohybuje od 200€ do 350€, v závislosti od množstva nábytku, vzdialenosti a prístupových podmienok. Hodinová sadzba začína od 30€/hod.",
+      "Cena za sťahovanie 2-izbového bytu sa štandardne pohybuje od 200€ do 350€, v závislosti od množstva nábytku, vzdialenosti a prístupových podmienok. Hodinová sadzba začína od 35€/hod.",
   },
   {
     question: "Ako dlho trvá sťahovanie priemerného 3-izbového bytu?",
@@ -79,7 +79,7 @@ export default function StahovanieBytovDomovPage() {
   const heroData = {
     title: "Sťahovanie domácností - Byty aj domy",
     description:
-      "Profesionálne sťahovanie bytov a domov od 30€/hod. Šetríme váš čas, energiu a nervy vďaka skúsenému tímu, ktorý sa postará o všetko od balenia.",
+      "Profesionálne sťahovanie bytov a domov od 35€/hod. Šetríme váš čas, energiu a nervy vďaka skúsenému tímu, ktorý sa postará o všetko od balenia.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú cenovú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -263,7 +263,7 @@ export default function StahovanieBytovDomovPage() {
               },
               {
                 title: "Čo ovplyvňuje cenu sťahovania bytu alebo domu?",
-                content: "Hodinová sadzba pri sťahovaní začína od 30€/hod pre 2 pracovníkov. Na celkovú cenu vplývajú: vzdialenosť medzi starým a novým bytom (v rámci Bratislavy účtujeme cestovné paušálne), poschodie a existencia výťahu, celkový objem vecí, požiadavka na demontáž/montáž nábytku a potreba baliaceho materiálu.\n\nPre 2-izbový byt v Bratislave s výťahom je bežná cena 200-350€. Pre 3-4-izbový byt 350-600€. Rodinné domy sa cenia individuálne podľa obsahu.",
+                content: "Hodinová sadzba pri sťahovaní pre 2 pracovníkov je 70€/hod. Na celkovú cenu vplývajú: vzdialenosť medzi starým a novým bytom (v rámci Bratislavy účtujeme cestovné paušálne), poschodie a existencia výťahu, celkový objem vecí, požiadavka na demontáž/montáž nábytku a potreba baliaceho materiálu.\n\nPre 2-izbový byt v Bratislave s výťahom je bežná cena 200-350€. Pre 3-4-izbový byt 350-600€. Rodinné domy sa cenia individuálne podľa obsahu.",
               },
               {
                 title: "Záruka a zodpovednosť za váš majetok",

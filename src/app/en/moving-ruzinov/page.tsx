@@ -37,7 +37,7 @@ const faqItems = [
   {
     question: "What is the price for moving in Ružinov?",
     answer:
-      "Our rates start from €30/hour per worker. Moving within Ružinov or to other parts of Bratislava starts from €40. For a standard 2-bedroom apartment move, 3 workers are usually the most efficient choice.",
+      "Our rates start from €35/hour per worker. Moving within Ružinov or to other parts of Bratislava starts from €60. For a standard 2-bedroom apartment move, 3 workers are usually the most efficient choice.",
   },
   {
     question: "Can you help with office moving in Ružinov?",
@@ -175,7 +175,7 @@ export default function MovingRuzinovPage() {
         services={[
           { title: "Moving Bratislava", description: "Professional moving across all of Bratislava.", href: "/en/moving-bratislava", icon: "/icons/truck_icon.svg" },
           { title: "Apartment Moving", description: "Reliable moving of apartments and family houses.", href: "/en/apartment-moving", icon: "/icons/house_icon.svg" },
-          { title: "Home Clearance", description: "Property clearance in Ružinov from €30/hour.", href: "/en/home-junk-removal-ruzinov", icon: "/icons/vypratavanie_icon.svg" },
+          { title: "Home Clearance", description: "Property clearance in Ružinov from €35/hour.", href: "/en/home-junk-removal-ruzinov", icon: "/icons/vypratavanie_icon.svg" },
           { title: "Furniture Removal", description: "Old furniture pickup and ecological disposal.", href: "/en/furniture-removal", icon: "/icons/recycle_icon.svg" },
         ]}
       />

@@ -33,7 +33,7 @@ export default function CisteniePozemkovPage() {
   const heroData = {
     title: "Čistenie a vypratávanie pozemku, nehnuteľnosti",
     description:
-      "Profesionálne čistenie a vypratávanie pozemkov od 30€/hod. Odstraňujeme náletové dreviny, odpad a nežiaducu vegetáciu. Pripravíme váš pozemok na výstavbu.",
+      "Profesionálne čistenie a vypratávanie pozemkov od 35€/hod. Odstraňujeme náletové dreviny, odpad a nežiaducu vegetáciu. Pripravíme váš pozemok na výstavbu.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",

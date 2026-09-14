@@ -75,7 +75,7 @@ const faqSchemaItems = [
   {
     question: "How much does a home junk removal cost?",
     answer:
-      "The cost depends on the size of the property and volume of items. For a 1-bedroom apartment prices start from €200. The hourly rate is from €30/hr. We provide a free site inspection and a no-obligation fixed quote.",
+      "The cost depends on the size of the property and volume of items. For a 1-bedroom apartment prices start from €200. The hourly rate is from €35/hr. We provide a free site inspection and a no-obligation fixed quote.",
   },
   {
     question: "How long does a junk removal take?",

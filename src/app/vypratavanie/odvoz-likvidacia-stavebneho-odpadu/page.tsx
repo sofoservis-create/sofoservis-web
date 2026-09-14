@@ -42,7 +42,7 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
   const heroData = {
     title: "Odvoz a likvidácia stavebného odpadu",
     description:
-      "Rýchly odvoz a ekologická likvidácia stavebného odpadu od 30€/hod. Odvezieme suť, staré obklady, dlažbu, sadrokartón a akýkoľvek stavebný materiál.",
+      "Rýchly odvoz a ekologická likvidácia stavebného odpadu od 35€/hod. Odvezieme suť, staré obklady, dlažbu, sadrokartón a akýkoľvek stavebný materiál.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -99,7 +99,7 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
             {
               question: "Koľko stojí odvoz stavebného odpadu?",
               answer:
-                "Cena za odvoz stavebného odpadu závisí od množstva odpadu, jeho druhu a vzdialenosti od skládky. Hodinová sadzba je od 30€/hod. Pre orientáciu: odvoz jednej auto-tačky (około 5m³) suče vyjde od 100€ do 200€ vrátane práce a poplatkov za skládku. Väčšie množstvá stavebného odpadu (od 10m³) vieme odvoziéme kontajnerovými vozidlami za výhodnejšie ceny. Kontaktujte nás pre presný cenový odhad podľa vašej konkrétnej situácie.",
+                "Cena za odvoz stavebného odpadu závisí od množstva odpadu, jeho druhu a vzdialenosti od skládky. Hodinová sadzba je od 35€/hod. Pre orientáciu: odvoz jednej auto-tačky (około 5m³) suče vyjde od 100€ do 200€ vrátane práce a poplatkov za skládku. Väčšie množstvá stavebného odpadu (od 10m³) vieme odvoziéme kontajnerovými vozidlami za výhodnejšie ceny. Kontaktujte nás pre presný cenový odhad podľa vašej konkrétnej situácie.",
             },
             {
               question: "Aké typy stavebného odpadu odvágate?",

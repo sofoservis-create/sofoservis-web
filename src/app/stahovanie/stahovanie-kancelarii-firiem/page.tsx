@@ -51,7 +51,7 @@ export default function StahovanieKancelariiPage() {
   const heroData = {
     title: "Presťahujeme vašu kanceláriu aj celú firmu",
     description:
-      "Profesionálne sťahovanie kancelárií a firiem od 30€/hod. Minimalizujeme výpadky vašej prevádzky vďaka skúsenému tímu, ktorý sa postará o efektívny presun.",
+      "Profesionálne sťahovanie kancelárií a firiem od 35€/hod. Minimalizujeme výpadky vašej prevádzky vďaka skúsenému tímu, ktorý sa postará o efektívny presun.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
