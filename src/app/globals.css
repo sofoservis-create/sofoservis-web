@@ -33,6 +33,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.blog-shell {
+  font-family: var(--font-sora), "Sora", system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+.blog-shell ::selection {
+  color: #171717;
+  background: #f4d80c;
+}
+
+.blog-shell a,
+.blog-shell button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.article-prose > :first-child {
+  margin-top: 0;
+}
+
 /* Perf: below-the-fold sections render lazily as the user scrolls near them */
 .cv-auto {
   content-visibility: auto;

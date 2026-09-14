@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useId, useState } from "react";
 import Link from "next/link";
 import type { FAQItem, InlineContent } from "@/lib/blog/articles";
 
@@ -10,7 +10,7 @@ function Answer({ content }: { content: InlineContent }) {
       <Link
         key={index}
         href={part.href}
-        className="font-semibold text-[#78400b] underline decoration-[#a7621d] underline-offset-4"
+        className="rounded-sm font-semibold text-[#675500] underline decoration-[#c9b208] decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717]"
       >
         {part.text}
       </Link>
@@ -22,8 +22,9 @@ function Answer({ content }: { content: InlineContent }) {
 
 export default function FAQAccordion({ items }: { items: FAQItem[] }) {
   const [open, setOpen] = useState<number | null>(null);
+  const instanceId = useId();
   return (
-    <div className="divide-y divide-[#d8ddd7] rounded-2xl border border-[#d8ddd7] bg-[#f8faf7]">
+    <div className="divide-y-2 divide-[#171717]/10 rounded-2xl border-2 border-[#171717] bg-[#fff] shadow-[4px_4px_0_#f4d80c]">
       {items.map(({ question, answer }, index) => {
         const isOpen = open === index;
         return (
@@ -31,24 +32,23 @@ export default function FAQAccordion({ items }: { items: FAQItem[] }) {
             <button
               type="button"
               aria-expanded={isOpen}
-              aria-controls={`faq-answer-${index}`}
-              id={`faq-question-${index}`}
+              aria-controls={`${instanceId}-faq-answer-${index}`}
+              id={`${instanceId}-faq-question-${index}`}
               onClick={() => setOpen(isOpen ? null : index)}
-              className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left font-semibold text-[#27332e] transition-colors hover:bg-[#edf3ed] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#78400b] md:px-7"
+              className="flex w-full items-center justify-between gap-6 px-5 py-5 text-left font-semibold text-[#171717] transition-colors hover:bg-[#fff9c7] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#171717] md:px-7"
             >
               <span>{question}</span>
-              <span className="text-2xl font-light text-[#c47f28]" aria-hidden="true">{isOpen ? "−" : "+"}</span>
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#f4d80c] text-xl font-bold leading-none text-[#171717]" aria-hidden="true">{isOpen ? "−" : "+"}</span>
             </button>
-            {isOpen && (
-              <div
-                id={`faq-answer-${index}`}
-                role="region"
-                aria-labelledby={`faq-question-${index}`}
-                className="px-5 pb-6 pr-12 text-[0.98rem] leading-7 text-[#52605a] md:px-7 md:pr-16"
-              >
-                <Answer content={answer} />
-              </div>
-            )}
+            <div
+              id={`${instanceId}-faq-answer-${index}`}
+              role="region"
+              aria-labelledby={`${instanceId}-faq-question-${index}`}
+              hidden={!isOpen}
+              className="px-5 pb-6 pr-12 text-[0.98rem] leading-7 text-[#454545] md:px-7 md:pr-16"
+            >
+              <Answer content={answer} />
+            </div>
           </div>
         );
       })}

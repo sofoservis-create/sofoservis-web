@@ -31,6 +31,7 @@ export type BlogArticleData = {
   imageWidth: number;
   imageHeight: number;
   imageSourceUrl: string;
+  imageSourceLabel: string;
   intro: string;
   toc: { id: string; label: string }[];
   blocks: ArticleBlock[];
@@ -102,6 +103,8 @@ export const refrigeratorArticle: BlogArticleData = {
   imageHeight: 1365,
   imageSourceUrl:
     "https://unsplash.com/photos/a-kitchen-with-white-cabinets-and-stainless-steel-appliances-ln0Y-eVnrBc",
+  imageSourceLabel:
+    "unsplash.com/photos/a-kitchen-with-white-cabinets-and-stainless-steel-appliances-ln0Y-eVnrBc",
   intro:
     "Stručná odpoveď na to, ako prevážať chladničku, je zvislo. Zhodujú sa na tom veľkí výrobcovia. Preprava chladničky naležato je skôr núdzové riešenie než rovnocenná možnosť. Ak sa z nejakého dôvodu nemôžete prevozu naležato vyhnúť, rozhoduje strana, na ktorú spotrebič položíte, a čas, ktorý mu dáte odstáť pred zapojením. Práve v tom sa výrobcovia rozchádzajú, takže jedna univerzálna rada pre všetky chladničky neexistuje a najlepšou možnosťou je vždy držať sa pokynov uvedených v manuáli.",
   toc: [

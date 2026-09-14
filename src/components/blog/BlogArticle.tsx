@@ -9,7 +9,54 @@ import type {
 } from "@/lib/blog/articles";
 
 const articleLinkClass =
-  "font-semibold text-[#78400b] underline decoration-[#a7621d] underline-offset-4 transition-colors hover:text-[#5f3006] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#78400b] focus-visible:ring-offset-2";
+  "rounded-sm font-semibold text-[#675500] underline decoration-[#c9b208] decoration-2 underline-offset-4 transition-colors hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2";
+
+function formatPublishedDate(date: string) {
+  const [year, month, day] = date.split("-");
+  return `${Number(day)}. ${Number(month)}. ${year}`;
+}
+
+function ArticleContents({
+  items,
+  mobile = false,
+}: {
+  items: BlogArticleData["toc"];
+  mobile?: boolean;
+}) {
+  const links = (
+    <nav aria-label="Obsah článku" className={mobile ? "mt-4 grid gap-2" : "space-y-3"}>
+      {items.map((item, index) => (
+        <a
+          key={item.id}
+          href={`#${item.id}`}
+          className={`rounded-lg font-semibold text-[#404040] transition-colors hover:bg-[#fef9c3] hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] ${
+            mobile ? "flex min-h-11 items-center gap-3 border border-primary-200 bg-white px-3 py-2.5" : "block px-3 py-2"
+          }`}
+        >
+          <span className="text-xs font-bold text-[#756605]">{String(index + 1).padStart(2, "0")}</span>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  );
+
+  if (!mobile) return links;
+
+  return (
+    <details className="group mb-10 rounded-2xl border-2 border-[#171717] bg-[#fef9c3] p-4 shadow-[4px_4px_0_#171717] lg:hidden">
+      <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 font-bold text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] [&::-webkit-details-marker]:hidden">
+        Obsah článku
+        <span
+          aria-hidden="true"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-[#171717] text-lg text-[#f4d80c] transition-transform group-open:rotate-45"
+        >
+          +
+        </span>
+      </summary>
+      {links}
+    </details>
+  );
+}
 
 function RichText({ content }: { content: InlineContent }) {
   if (typeof content === "string") return content;
@@ -45,13 +92,13 @@ function CTA({
   label: string;
 }) {
   return (
-    <aside className="my-10 border-l-4 border-[#a7621d] bg-[#eef4ed] px-6 py-6 md:px-8">
-      <p className="max-w-2xl text-lg leading-8 text-[#27332e]">
+    <aside className="my-10 rounded-r-2xl border-l-8 border-[#f4d80c] bg-[#fff9c7] px-6 py-6 shadow-[4px_4px_0_#171717] md:px-8">
+      <p className="max-w-2xl text-lg font-medium leading-8 text-[#171717]">
         <RichText content={content} />
       </p>
       <Link
         href="/kontakt"
-        className="mt-5 inline-flex min-h-11 items-center rounded-full bg-[#78400b] px-6 py-3 text-sm font-bold text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#78400b] focus-visible:ring-offset-2"
+        className="mt-5 inline-flex min-h-11 items-center rounded-full bg-[#171717] px-6 py-3 text-sm font-bold text-[#f4d80c] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
       >
         {label}
       </Link>
@@ -90,30 +137,31 @@ function ContentBlock({ block }: { block: ArticleBlock }) {
 
 export default function BlogArticle({ article }: { article: BlogArticleData }) {
   return (
-    <main className="bg-[#fbfcf9] text-[#27332e]">
-      <section className="border-b border-[#e2e8e1] bg-[#edf3ed]">
+    <main className="blog-shell bg-[#faf9f6] text-[#171717]">
+      <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c]">
         <div className="pt-[112px] desktop:pt-[136px]">
           <Breadcrumbs variant="hero" />
         </div>
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-8 sm:px-6 md:grid-cols-[1.03fr_.97fr] md:items-end md:px-8 md:pb-20 md:pt-14">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-8 sm:px-6 md:px-8 md:pb-20 md:pt-14 lg:grid-cols-[1.03fr_.97fr] lg:items-end">
           <div>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#78400b]">
+            <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#171717]">
               {article.category}
               <span className="mx-2 text-[#6d7972]">/</span>
               {article.readingTime}
             </p>
-            <h1 className="max-w-4xl font-[var(--font-sora)] text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#26332d] md:text-6xl">
+            <h1 className="max-w-4xl font-[var(--font-sora)] text-4xl font-bold leading-[1.02] tracking-[-0.05em] text-[#171717] md:text-6xl">
               {article.title}
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-[#52605a]">
+            <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-[#302f1b]">
               {article.summary}
             </p>
-            <div className="mt-8 flex items-center gap-3 text-sm text-[#5d6963]">
-              <span className="h-2 w-2 rounded-full bg-[#a7621d]" />
-              Praktické skúsenosti zo sťahovania od roku 2018
+            <div className="mt-8 flex items-center gap-3 text-sm text-[#404040]">
+              <span className="h-2 w-2 rounded-full bg-[#171717]" />
+              Praktické skúsenosti zo sťahovania od roku 2018 ·{" "}
+              <time dateTime={article.datePublished}>{formatPublishedDate(article.datePublished)}</time>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_rgba(39,51,46,.14)]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem] border-2 border-[#171717] shadow-[8px_8px_0_#171717]">
             <Image
               src={article.image}
               alt={article.imageAlt}
@@ -123,59 +171,50 @@ export default function BlogArticle({ article }: { article: BlogArticleData }) {
               sizes="(max-width: 768px) 100vw, 48vw"
             />
           </div>
-          <p className="text-xs leading-5 text-[#5d6963] md:col-start-2">
+          <p className="min-w-0 break-words text-xs leading-5 text-[#404040] lg:col-start-2">
             Zdroj fotografie:{" "}
             <a
               href={article.imageSourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-[#78400b] underline underline-offset-4"
+              className="break-all rounded-sm font-semibold text-[#171717] underline decoration-[#756605] underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717]"
             >
-              unsplash.com/photos/a-kitchen-with-white-cabinets-and-stainless-steel-appliances-ln0Y-eVnrBc
+              {article.imageSourceLabel}
             </a>
           </p>
         </div>
       </section>
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 md:grid-cols-[minmax(0,760px)_220px] md:px-8 md:py-20">
-        <article className="min-w-0">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 md:px-8 md:py-20 lg:grid-cols-[minmax(0,760px)_240px] lg:justify-between">
+        <article className="article-prose min-w-0">
+          <ArticleContents items={article.toc} mobile />
           <p className="article-lead">{article.intro}</p>
           {article.blocks.map((block, index) => (
             <ContentBlock key={`${block.type}-${index}`} block={block} />
           ))}
           <Link
             href="/kontakt"
-            className="mt-4 inline-flex min-h-11 items-center rounded-full bg-[#27332e] px-7 py-3.5 font-bold text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#27332e] focus-visible:ring-offset-2"
+            className="mt-4 inline-flex min-h-11 items-center rounded-full bg-[#171717] px-7 py-3.5 font-bold text-[#f4d80c] transition-transform hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] focus-visible:ring-offset-2"
           >
             Dohodnúť termín
           </Link>
         </article>
-        <aside className="hidden md:block">
-          <div className="sticky top-28 border-l border-[#d8ddd7] pl-6 text-sm text-[#5d6963]">
-            <p className="mb-4 font-bold uppercase tracking-[.16em] text-[#78400b]">
+        <aside className="hidden lg:block">
+          <div className="sticky top-28 rounded-2xl border-2 border-[#171717] bg-white p-4 text-sm shadow-[4px_4px_0_#f4d80c]">
+            <p className="px-3 pb-2 pt-1 font-bold uppercase tracking-[.16em] text-[#675500]">
               V článku
             </p>
-            <nav aria-label="Obsah článku" className="space-y-3">
-              {article.toc.map((item) => (
-                <a
-                  key={item.id}
-                  href={`#${item.id}`}
-                  className="block rounded-sm transition-colors hover:text-[#78400b] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#78400b]"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
+            <ArticleContents items={article.toc} />
           </div>
         </aside>
       </div>
       <style>{`
-        article h2{scroll-margin-top:9rem;margin-top:3.5rem;margin-bottom:1.25rem;font-family:var(--font-sora);font-size:clamp(1.65rem,3vw,2.25rem);font-weight:600;line-height:1.2;letter-spacing:-.03em;color:#27332e}
-        article h3{scroll-margin-top:9rem;margin-top:3rem;margin-bottom:1.1rem;font-family:var(--font-sora);font-size:1.45rem;font-weight:600;line-height:1.3}
-        article p{margin-top:1.15rem;font-size:1.05rem;line-height:1.9;color:#52605a}
-        article p.article-lead{font-size:clamp(1.25rem,2.4vw,1.5rem);line-height:1.7;color:#35443d}
-        article ul{margin:1.25rem 0 1.5rem;padding-left:1.5rem;list-style:none}
-        article li{position:relative;margin:.8rem 0;padding-left:1.4rem;color:#52605a;font-size:1.05rem;line-height:1.8}
-        article li:before{content:"";position:absolute;left:0;top:.85em;width:.45rem;height:.45rem;border-radius:50%;background:#a7621d}
+         article h2{scroll-margin-top:9rem;margin-top:3.5rem;margin-bottom:1.25rem;font-family:var(--font-sora);font-size:clamp(1.65rem,3vw,2.25rem);font-weight:700;line-height:1.12;letter-spacing:-.04em;color:#171717}
+         article h3{scroll-margin-top:9rem;margin-top:3rem;margin-bottom:1.1rem;font-family:var(--font-sora);font-size:1.45rem;font-weight:700;line-height:1.25;color:#171717}
+         article p{margin-top:1.15rem;font-size:1.05rem;line-height:1.85;color:#454545}
+         article p.article-lead{font-size:clamp(1.25rem,2.4vw,1.5rem);line-height:1.65;color:#262626;font-weight:500}
+         article ul{margin:1.25rem 0 1.5rem;padding-left:1.5rem;list-style:none}
+         article li{position:relative;margin:.8rem 0;padding-left:1.4rem;color:#454545;font-size:1.05rem;line-height:1.8}
+         article li:before{content:"";position:absolute;left:0;top:.85em;width:.55rem;height:.55rem;border-radius:50%;background:#f4d80c;border:2px solid #171717}
       `}</style>
     </main>
   );
