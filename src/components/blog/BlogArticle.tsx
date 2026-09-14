@@ -30,11 +30,15 @@ function ArticleContents({
           key={item.id}
           href={`#${item.id}`}
           className={`rounded-lg font-semibold text-[#404040] transition-colors hover:bg-[#fef9c3] hover:text-[#171717] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#171717] ${
-            mobile ? "flex min-h-11 items-center gap-3 border border-primary-200 bg-white px-3 py-2.5" : "block px-3 py-2"
+            mobile
+              ? "flex min-h-11 items-start gap-3 border border-primary-200 bg-white px-3 py-2.5"
+              : "flex items-start gap-3 px-3 py-2"
           }`}
         >
-          <span className="text-xs font-bold text-[#756605]">{String(index + 1).padStart(2, "0")}</span>
-          {item.label}
+          <span className="w-6 shrink-0 pt-0.5 text-xs font-bold text-[#756605]">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+          <span className="min-w-0">{item.label}</span>
         </a>
       ))}
     </nav>
@@ -138,13 +142,11 @@ function ContentBlock({ block }: { block: ArticleBlock }) {
 export default function BlogArticle({ article }: { article: BlogArticleData }) {
   return (
     <main className="blog-shell bg-[#faf9f6] text-[#171717]">
-      <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c]">
-        <div className="pt-[112px] desktop:pt-[136px]">
-          <Breadcrumbs variant="hero" />
-        </div>
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 pb-14 pt-8 sm:px-6 md:px-8 md:pb-20 md:pt-14 lg:grid-cols-[1.03fr_.97fr] lg:items-end">
-          <div>
-            <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-[#171717]">
+      <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c] pb-14 pt-4 md:pb-20 desktop:pt-40">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:px-8 lg:grid-cols-[1.03fr_.97fr] lg:items-end">
+          <div className="min-w-0">
+            <Breadcrumbs variant="hero" />
+            <p className="mb-5 mt-8 text-xs font-bold uppercase tracking-[0.22em] text-[#171717] md:mt-12">
               {article.category}
               <span className="mx-2 text-[#6d7972]">/</span>
               {article.readingTime}

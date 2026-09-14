@@ -39,14 +39,14 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
       <div
         className={
           isHero
-              ? "container mx-auto max-w-7xl px-4 py-3 lg:px-0 lg:py-1"
+              ? "container mx-auto min-w-0 max-w-7xl px-4 py-3 lg:px-0 lg:py-1"
             : "container mx-auto max-w-7xl px-4 py-3 desktop:px-8"
         }
       >
         <ol
           className={
             isHero
-              ? "flex w-fit min-w-0 max-w-full items-center gap-2 overflow-x-auto whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-semibold text-gray-500 shadow-sm ring-1 ring-black/5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              ? "flex w-full min-w-0 max-w-full items-center gap-2 overflow-hidden whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-semibold text-gray-500 shadow-sm ring-1 ring-black/5 sm:w-fit [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
               : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           }
         >
@@ -57,14 +57,16 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
             return (
               <li
                 key={`${item.item}-${item.position}`}
-                className="flex min-w-0 shrink-0 items-center gap-2"
+                className={`flex min-w-0 items-center gap-2 ${
+                  isCurrent ? "flex-1 overflow-hidden" : "shrink-0"
+                }`}
               >
                 {isCurrent ? (
                   <span
                     aria-current="page"
                     className={
                       isHero
-                        ? "max-w-[18rem] truncate text-primary-900"
+                        ? "min-w-0 max-w-[18rem] truncate text-primary-900"
                         : "max-w-[16rem] truncate font-semibold text-primary-900"
                     }
                   >

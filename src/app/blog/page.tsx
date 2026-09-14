@@ -27,14 +27,12 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <main className="blog-shell bg-[#faf9f6] text-[#171717]">
-      <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c]">
+      <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c] pb-16 pt-4 md:pb-24 desktop:pt-40">
         <div aria-hidden="true" className="absolute -right-20 top-20 h-72 w-72 rounded-full border-[32px] border-[#171717]/10" />
-        <div className="pt-[112px] desktop:pt-[136px]">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
           <Breadcrumbs variant="hero" />
-        </div>
-        <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-14 sm:px-6 md:px-8 md:pb-24 md:pt-24">
           <div className="max-w-4xl">
-            <p className="text-xs font-bold uppercase tracking-[.22em] text-[#171717]">SofoServis / blog</p>
+            <p className="mt-8 text-xs font-bold uppercase tracking-[.22em] text-[#171717] md:mt-12">SofoServis / blog</p>
             <h1 className="mt-5 max-w-4xl font-[var(--font-sora)] text-5xl font-bold leading-[.98] tracking-[-.06em] md:text-8xl">Praktické rady. Menej stresu.</h1>
             <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-[#302f1b] md:text-xl">Skúsenosti z terénu, ktoré vám pomôžu pripraviť sťahovanie, prevoz aj vypratávanie tak, aby vás nič nezaskočilo.</p>
           </div>

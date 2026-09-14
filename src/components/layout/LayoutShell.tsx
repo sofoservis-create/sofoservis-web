@@ -11,8 +11,6 @@ import NimbataSwapKeeper from "@/components/tracking/NimbataSwapKeeper";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 
 const STANDALONE_BREADCRUMB_PATHS = new Set([
-  "/kontakt",
-  "/en/contact",
   "/zasady-pouzivania-cookies",
   "/en/cookie-policy",
   "/zasady-spracovania-osobnych-udajov",
