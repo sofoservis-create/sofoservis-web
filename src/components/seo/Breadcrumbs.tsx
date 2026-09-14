@@ -16,10 +16,24 @@ interface BreadcrumbsProps {
   variant?: "standalone" | "hero";
 }
 
+const HERO_BREADCRUMB_PATHS = new Set([
+  "/kontakt",
+  "/en/contact",
+  "/blog",
+  "/cennik",
+]);
+
 export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps) {
   const pathname = usePathname();
 
   if (!pathname || pathname === "/" || pathname === "/en") {
+    return null;
+  }
+
+  const hasHeroBreadcrumb =
+    HERO_BREADCRUMB_PATHS.has(pathname) || pathname.startsWith("/blog/");
+
+  if (variant === "standalone" && hasHeroBreadcrumb) {
     return null;
   }
 
