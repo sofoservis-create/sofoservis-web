@@ -32,7 +32,7 @@ export type BlogArticleData = {
   imageHeight: number;
   imageSourceUrl: string;
   imageSourceLabel: string;
-  intro: string;
+  intro: string[];
   toc: { id: string; label: string }[];
   blocks: ArticleBlock[];
   faq: FAQItem[];
@@ -105,8 +105,12 @@ export const refrigeratorArticle: BlogArticleData = {
     "https://unsplash.com/photos/a-kitchen-with-white-cabinets-and-stainless-steel-appliances-ln0Y-eVnrBc",
   imageSourceLabel:
     "unsplash.com/photos/a-kitchen-with-white-cabinets-and-stainless-steel-appliances-ln0Y-eVnrBc",
-  intro:
-    "Stručná odpoveď na to, ako prevážať chladničku, je zvislo. Zhodujú sa na tom veľkí výrobcovia. Preprava chladničky naležato je skôr núdzové riešenie než rovnocenná možnosť. Ak sa z nejakého dôvodu nemôžete prevozu naležato vyhnúť, rozhoduje strana, na ktorú spotrebič položíte, a čas, ktorý mu dáte odstáť pred zapojením. Práve v tom sa výrobcovia rozchádzajú, takže jedna univerzálna rada pre všetky chladničky neexistuje a najlepšou možnosťou je vždy držať sa pokynov uvedených v manuáli.",
+  intro: [
+    "Stručná odpoveď na to, ako prevážať chladničku, je zvislo. Zhodujú sa na tom veľkí výrobcovia.",
+    "Preprava chladničky naležato je skôr núdzové riešenie než rovnocenná možnosť.",
+    "Ak sa z nejakého dôvodu nemôžete prevozu naležato vyhnúť, rozhoduje strana, na ktorú spotrebič položíte, a čas, ktorý mu dáte odstáť pred zapojením.",
+    "Práve v tom sa výrobcovia rozchádzajú, takže jedna univerzálna rada pre všetky chladničky neexistuje a najlepšou možnosťou je vždy držať sa pokynov uvedených v manuáli.",
+  ],
   toc: [
     { id: "odporucania-vyrobcov", label: "Výber polohy" },
     { id: "priprava-spotrebica", label: "Príprava spotrebiča" },

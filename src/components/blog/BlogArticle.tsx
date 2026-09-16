@@ -187,10 +187,14 @@ export default function BlogArticle({ article }: { article: BlogArticleData }) {
           </p>
         </div>
       </section>
-      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 md:px-8 md:py-20 lg:grid-cols-[minmax(0,760px)_240px] lg:justify-between">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-12 sm:px-6 md:px-8 md:py-20 lg:max-w-none lg:grid-cols-[minmax(0,1fr)_280px] lg:px-12 xl:px-16">
         <article className="article-prose min-w-0">
           <ArticleContents items={article.toc} mobile />
-          <p className="article-lead">{article.intro}</p>
+          {article.intro.map((paragraph) => (
+            <p key={paragraph} className="article-lead">
+              {paragraph}
+            </p>
+          ))}
           {article.blocks.map((block, index) => (
             <ContentBlock key={`${block.type}-${index}`} block={block} />
           ))}
