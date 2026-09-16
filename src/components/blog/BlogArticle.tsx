@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import ContactFormSection from "@/components/sections/ContactFormSection";
 import FAQAccordion from "./FAQAccordion";
 import type {
   ArticleBlock,
@@ -209,6 +210,7 @@ export default function BlogArticle({ article }: { article: BlogArticleData }) {
           </div>
         </aside>
       </div>
+      <ContactFormSection />
       <style>{`
          article h2{scroll-margin-top:9rem;margin-top:3.5rem;margin-bottom:1.25rem;font-family:var(--font-sora);font-size:clamp(1.65rem,3vw,2.25rem);font-weight:700;line-height:1.12;letter-spacing:-.04em;color:#171717}
          article h3{scroll-margin-top:9rem;margin-top:3rem;margin-bottom:1.1rem;font-family:var(--font-sora);font-size:1.45rem;font-weight:700;line-height:1.25;color:#171717}
