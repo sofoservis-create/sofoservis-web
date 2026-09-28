@@ -1,0 +1,46 @@
+Jasné. Toto je **návrh správania**, nie opis toho, čo už teraz celé funguje. Kód ani Neon tabuľku som zatiaľ nemenil.
+
+### 1. Formulár a UTM údaje
+
+Hero formulár aj ostatné formuláre budú používať spoločný `ContactForm`. Pri odoslaní pošlú na `/api/lead` údaje dopytu a uloženú atribúciu:
+
+- `first_utm_term` — hodnota zachytená pri prvej návšteve,
+- `last_utm_term` — hodnota z poslednej zaznamenanej kampane,
+- spolu s ostatnými UTM údajmi a `request_id`.
+
+Ak zákazník prejde na inú stránku bez UTM parametrov, zachytené hodnoty sa tým nestratia. Pri opakovaní *toho istého odoslania* zostane `request_id` rovnaké.
+
+### 2. Kontrola a uloženie do Neon
+
+Server skontroluje povinné údaje, súhlas a kontakt. Na zápis použije **iba `LEADS_DATABASE_URL`**.
+
+Existujúca tabuľka `leads` sa rozšíri bez mazania záznamov o:
+
+- pôvodný payload dopytu,
+- počet skutočných pokusov o doručenie do CRM,
+- príznak možného duplikátu.
+
+Oba stĺpce `first_utm_term` a `last_utm_term` v tabuľke už existujú. Existujúci unikátny kľúč na `request_id` zabráni druhému vloženiu toho istého odoslania. Iný dopyt s podobným kontaktom a obsahom do piatich minút sa **uloží**, iba dostane príznak možného duplikátu.
+
+### 3. Doručenie do CRM
+
+**Všetky typy služieb idú iba do CRM; žiadna e-mailová vetva.** Server vykoná najviac šesť časovo ohraničených pokusov s krátkymi rastúcimi prestávkami. Každý pokus odošle rovnaké `request_id` a rovnaké UTM údaje.
+
+CRM potvrdilo, že opakovaný POST s tým istým `request_id` nevytvorí ďalší lead. Úspech preto vyhodnotíme podľa úspešnej odpovede CRM, nie podľa toho, či vráti práve `200` alebo `201`, ani podľa príznaku `duplicate`. Počet pokusov a konečný stav sa zapíšu do databázy.
+
+### 4. Čo uvidí zákazník pri zlyhaní
+
+| Databáza | CRM | Výsledok |
+|---|---|---|
+| Uložené | Doručené | Potvrdenie úspešného odoslania |
+| Uložené | Zlyhalo | Jasná správa: dopyt je uložený, **nie je potvrdené doručenie do CRM**; v DB zostáva na dohľadanie |
+| Zlyhala | Doručené | Potvrdenie doručenia do CRM, bez tvrdenia o uložení v DB |
+| Zlyhala | Zlyhalo | Chyba; formulár nesmie predstierať úspech |
+
+Po vyčerpaní pokusov sa **nebude spúšťať automatické neskoršie odosielanie** z databázy.
+
+### 5. Hranice tejto úpravy
+
+Táto zmena nedoplní UTM údaje spätne do už vytvorených CRM leadov. Podľa odpovede CRM by na to bol potrebný samostatný aktualizačný endpoint; opakovaný POST s novými UTM hodnotami ich neaktualizuje. Tiež bude treba osobitne overiť, či živý Vercel používa správne `LEADS_DATABASE_URL` — nastavenie pracovného prostredia to samo nepotvrdzuje.
+
+Písomný návrh je v `docs/superpowers/specs/2026-09-28-leads-db-first-crm-design.md`. **Neon schému zmením až po vašom výslovnom schválení**, keďže ide o existujúcu databázu.
