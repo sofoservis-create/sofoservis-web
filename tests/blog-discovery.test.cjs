@@ -58,8 +58,9 @@ test("empty renders nothing; 1/2/3 cards have one H2, descriptive H3 links and r
     assert.equal((html.match(/<article\b/g) || []).length, count);
     assert.equal((html.match(/loading="lazy"/g) || []).length, count);
     assert.equal((html.match(/sizes="/g) || []).length, count);
+    assert.equal((html.match(/<a\b/g) || []).length, count + 1, "one large article link per card plus blog index");
     assert.match(html, /href="\/blog"/);
-    assert.match(html, /aspect-\[16\/9\]/);
+    assert.doesNotMatch(html, /<a\b[^>]*>(?:(?!<\/a>)[\s\S])*<a\b/, "no nested article links");
     assert.doesNotMatch(html, /nofollow|Čítajte viac/);
     for (const article of articles) assert.ok(html.includes(`href="/blog/${article.slug}"`));
   }

@@ -5,6 +5,14 @@ const ts = require("typescript");
 const React = require("react");
 const { renderToStaticMarkup } = require("react-dom/server");
 
+// Node does not process CSS modules. Stable tokens let browser fixtures map
+// these names onto the real Next-generated class names from the live widget.
+require.extensions[".css"] = (module) => {
+  module.exports = new Proxy({}, {
+    get: (_, name) => name === "__esModule" ? false : `discovery-test-${name}`,
+  });
+};
+
 // Isolated-process loader keeps these small tests dependency-free.
 for (const extension of [".ts", ".tsx"]) {
   require.extensions[extension] = (module, filename) => {

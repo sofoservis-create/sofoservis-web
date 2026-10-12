@@ -9,3 +9,4 @@
 - [DOCX article imports](docx-article-imports.md) — text extraction omits comments and hyperlink targets; inspect the OOXML relationships before implementing supplied articles.
 - [Preview CSS after HMR](preview-css-after-hmr.md) — screenshots can briefly mix new markup with stale Tailwind CSS; verify computed styles before changing correct responsive code.
 - [Article discovery intent](article-discovery-intent.md) — prioritize enquiries and genuine topical connections; discovery is not a promise of rankings.
+- [Text enlargement](text-enlargement-layouts.md) — test enlarged text separately from narrow viewports; compact thumbnail columns can leave titles too little room.
