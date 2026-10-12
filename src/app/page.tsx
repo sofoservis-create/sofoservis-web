@@ -5,6 +5,8 @@ import Clients from "@/components/sections/Clients";
 import Features from "@/components/sections/Features";
 import CTA from "@/components/sections/CTA";
 import ContactFormSection from "@/components/sections/ContactFormSection";
+import ArticleDiscovery from "@/components/sections/ArticleDiscovery";
+import { selectDiscoveryArticles } from "@/lib/blog/discovery";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
@@ -207,6 +209,7 @@ export default function Home() {
       <CTA />
 
       <ContactFormSection />
+      <ArticleDiscovery articles={selectDiscoveryArticles()} />
 
       <div className="pb-12 md:pb-20">
         <InstagramFeed />

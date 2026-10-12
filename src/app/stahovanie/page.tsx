@@ -10,6 +10,8 @@ import CTA from "@/components/sections/CTA";
 import InstagramFeed from "@/components/widgets/InstagramFeed";
 import LocationMap from "@/components/sections/LocationMap";
 import ContactFormSection from "@/components/sections/ContactFormSection";
+import ArticleDiscovery from "@/components/sections/ArticleDiscovery";
+import { selectDiscoveryArticles } from "@/lib/blog/discovery";
 import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import ServicePricing from "@/components/sections/ServicePricing";
@@ -279,6 +281,7 @@ export default function StahovaniePage() {
 
       <TrustBadges />
       <ContactFormSection />
+      <ArticleDiscovery articles={selectDiscoveryArticles("stahovanie")} />
 
       <RelatedServices
         title="Súvisiace služby"

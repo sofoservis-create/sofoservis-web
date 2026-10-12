@@ -8,3 +8,4 @@
 - [Internal link audits](internal-link-audits.md) — crawls must retry 5xx (known intermittent hook bug) or they report false dead links; the real defect is self-referential links, and dedup hides its scale.
 - [DOCX article imports](docx-article-imports.md) — text extraction omits comments and hyperlink targets; inspect the OOXML relationships before implementing supplied articles.
 - [Preview CSS after HMR](preview-css-after-hmr.md) — screenshots can briefly mix new markup with stale Tailwind CSS; verify computed styles before changing correct responsive code.
+- [Article discovery intent](article-discovery-intent.md) — prioritize enquiries and genuine topical connections; discovery is not a promise of rankings.

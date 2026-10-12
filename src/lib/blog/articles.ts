@@ -18,11 +18,18 @@ export type ArticleBlock =
   | { type: "cta"; content: InlineContent; label: string }
   | { type: "faq"; items: FAQItem[] };
 
+export type BlogService = "stahovanie" | "vypratavanie" | "montaz-nabytku";
+
 export type BlogArticleData = {
   slug: string;
   title: string;
   description: string;
   summary: string;
+  /** Optional concise discovery copy; does not replace article or SEO descriptions. */
+  cardExcerpt?: string;
+  /** Explicit topical relevance for the supported Slovak service pages. */
+  relevantServices: readonly BlogService[];
+  /** Genuine publication date in YYYY-MM-DD format. */
   datePublished: string;
   readingTime: string;
   category: string;
@@ -94,6 +101,9 @@ export const refrigeratorArticle: BlogArticleData = {
     "Preprava chladničky naležato alebo zvislo? ✅ Zistite, ktorá poloha je bezpečnejšia, ako chladničku pripraviť na prevoz a ako dlho ju nechať odstáť. Čítajte viac",
   summary:
     "Preprava chladničky naležato alebo zvislo? Zistite, ktorá poloha je bezpečnejšia, ako chladničku pripraviť na prevoz a ako dlho ju nechať odstáť. Čítajte viac",
+  cardExcerpt:
+    "Ako chladničku pripraviť na prevoz, zvoliť bezpečnú polohu a určiť čas odstátia podľa pokynov výrobcu.",
+  relevantServices: ["stahovanie"],
   datePublished: "2026-09-13",
   readingTime: "7 min čítania",
   category: "Praktické rady",
@@ -380,4 +390,5 @@ export const refrigeratorArticle: BlogArticleData = {
   ],
 };
 
+/** Published articles only; drafts must not be added to this shared registry. */
 export const blogArticles: BlogArticleData[] = [refrigeratorArticle];
