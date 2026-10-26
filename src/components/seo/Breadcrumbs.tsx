@@ -14,6 +14,8 @@ function toPathname(url: string): string {
 
 interface BreadcrumbsProps {
   variant?: "standalone" | "hero";
+  /** Farba textu podľa pozadia: "dark" pre tmavé foto-hero, "light" pre svetlé (blog, právne stránky). */
+  tone?: "dark" | "light";
 }
 
 const HERO_BREADCRUMB_PATHS = new Set([
@@ -23,7 +25,20 @@ const HERO_BREADCRUMB_PATHS = new Set([
   "/cennik",
 ]);
 
-export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps) {
+const TONES = {
+  dark: {
+    list: "text-white/70",
+    link: "hover:text-accent-500 focus-visible:ring-accent-500 focus-visible:ring-offset-primary-900",
+    current: "text-white",
+  },
+  light: {
+    list: "text-primary-600",
+    link: "hover:text-primary-900 hover:underline underline-offset-4 focus-visible:ring-primary-900",
+    current: "text-primary-900",
+  },
+};
+
+export default function Breadcrumbs({ variant = "standalone", tone }: BreadcrumbsProps) {
   const pathname = usePathname();
 
   if (!pathname || pathname === "/" || pathname === "/en") {
@@ -40,79 +55,40 @@ export default function Breadcrumbs({ variant = "standalone" }: BreadcrumbsProps
   const items = generateBreadcrumbs(pathname);
 
   const isHero = variant === "hero";
+  const colors = TONES[tone ?? (isHero ? "dark" : "light")];
 
+  // Rovnaký vzhľad ako na JumboClean: obyčajný text s lomítkami, ktorý sa na úzkom mobile zalomí.
+  // Položky sú inline, takže zarovnanie (na stred / vľavo) preberajú od rodiča a dlhý názov sa zalomí ako bežný text.
+  // py-2.5 na odkazoch zväčšuje plochu na ťuknutie na 44 px bez zmeny výšky riadku.
   return (
     <nav
       aria-label={pathname.startsWith("/en") ? "Breadcrumb" : "Navigačná cesta"}
       className={
         isHero
-            ? "relative z-30 border-0 bg-transparent"
-          : "relative z-10 border-b border-gray-100 bg-white/95 backdrop-blur-sm desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
+          ? "relative z-30"
+          : "relative z-10 bg-white desktop:absolute desktop:inset-x-0 desktop:top-[120px]"
       }
     >
-      <div
-        className={
-          isHero
-              ? "container mx-auto min-w-0 max-w-7xl px-4 py-3 lg:px-0 lg:py-1"
-            : "container mx-auto max-w-7xl px-4 py-3 desktop:px-8"
-        }
-      >
-        <ol
-          className={
-            isHero
-              ? "flex w-full min-w-0 max-w-full items-center gap-2 overflow-hidden whitespace-nowrap rounded-full bg-white px-3 py-2 text-xs font-semibold text-gray-500 shadow-sm ring-1 ring-black/5 sm:w-fit [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              : "flex min-w-0 items-center gap-2 overflow-x-auto whitespace-nowrap text-xs text-primary-600 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          }
-        >
+      <div className={isHero ? "min-w-0" : "container mx-auto max-w-7xl px-4 py-0.5 desktop:px-8"}>
+        <ol className={`py-2.5 text-sm leading-6 ${colors.list}`}>
           {items.map((item, index) => {
             const isCurrent = index === items.length - 1;
             const itemPath = toPathname(item.item);
 
             return (
-              <li
-                key={`${item.item}-${item.position}`}
-                className={`flex min-w-0 items-center gap-2 ${
-                  isCurrent ? "flex-1 overflow-hidden" : "shrink-0"
-                }`}
-              >
+              <li key={`${item.item}-${item.position}`} className="inline">
+                {index > 0 && <span aria-hidden="true" className="mx-1.5">/</span>}
                 {isCurrent ? (
-                  <span
-                    aria-current="page"
-                    className={
-                      isHero
-                        ? "min-w-0 max-w-[18rem] truncate text-primary-900"
-                        : "max-w-[16rem] truncate font-semibold text-primary-900"
-                    }
-                  >
+                  <span aria-current="page" className={colors.current}>
                     {item.name}
                   </span>
                 ) : (
                   <Link
                     href={itemPath}
-                    className={
-                      isHero
-                          ? "shrink-0 rounded-sm transition-colors hover:text-accent-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
-                        : "shrink-0 rounded-sm transition-colors hover:text-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2"
-                    }
+                    className={`rounded-sm py-2.5 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${colors.link}`}
                   >
                     {item.name}
                   </Link>
-                )}
-                {!isCurrent && (
-                  <svg
-                    aria-hidden="true"
-                    className={
-                      isHero
-                        ? "h-3.5 w-3.5 shrink-0 text-gray-300"
-                        : "h-3 w-3 shrink-0 text-gray-400"
-                    }
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={isHero ? 2.5 : 2}
-                  >
-                    <path d="m9 5 7 7-7 7" />
-                  </svg>
                 )}
               </li>
             );

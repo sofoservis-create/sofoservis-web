@@ -146,7 +146,7 @@ export default function BlogArticle({ article }: { article: BlogArticleData }) {
       <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c] pb-14 pt-4 md:pb-20 desktop:pt-40">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 md:px-8 lg:grid-cols-[1.03fr_.97fr] lg:items-end">
           <div className="min-w-0">
-            <Breadcrumbs variant="hero" />
+            <Breadcrumbs variant="hero" tone="light" />
             <p className="mb-5 mt-8 text-xs font-bold uppercase tracking-[0.22em] text-[#171717] md:mt-12">
               {article.category}
               <span className="mx-2 text-[#6d7972]">/</span>

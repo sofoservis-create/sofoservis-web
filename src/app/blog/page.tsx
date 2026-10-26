@@ -30,7 +30,7 @@ export default function BlogPage() {
       <section className="relative overflow-hidden border-b-4 border-[#171717] bg-[#f4d80c] pb-16 pt-4 md:pb-24 desktop:pt-40">
         <div aria-hidden="true" className="absolute -right-20 top-20 h-72 w-72 rounded-full border-[32px] border-[#171717]/10" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
-          <Breadcrumbs variant="hero" />
+          <Breadcrumbs variant="hero" tone="light" />
           <div className="max-w-4xl">
             <p className="mt-8 text-xs font-bold uppercase tracking-[.22em] text-[#171717] md:mt-12">SofoServis / blog</p>
             <h1 className="mt-5 max-w-4xl font-[var(--font-sora)] text-5xl font-bold leading-[.98] tracking-[-.06em] md:text-8xl">Praktické rady. Menej stresu.</h1>
