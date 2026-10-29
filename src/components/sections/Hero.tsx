@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import QuickContactForm from "@/components/forms/QuickContactForm";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import GoogleRatingMark from "@/components/widgets/GoogleRatingMark";
+import GoogleReviewerAvatars from "@/components/widgets/GoogleReviewerAvatars";
 import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 
 const MASCOT_ASPECT = 1080 / 1080;
@@ -319,38 +320,7 @@ export default function Hero({
 
             {/* Customer avatars + Google rating */}
             <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:justify-start">
-              <div className="flex -space-x-2 flex-shrink-0">
-                <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/30 relative z-30">
-                  <Image
-                    src="/images/review-avatar-1.png"
-                    alt="Spokojná zákazníčka Sofoservis"
-                    width={36}
-                    height={36}
-                    className="w-full h-full object-cover"
-                    sizes="36px"
-                  />
-                </div>
-                <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/30 relative z-20">
-                  <Image
-                    src="/images/review-avatar-2.png"
-                    alt="Spokojný zákazník Sofoservis"
-                    width={36}
-                    height={36}
-                    className="w-full h-full object-cover"
-                    sizes="36px"
-                  />
-                </div>
-                <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/30 relative z-10">
-                  <Image
-                    src="/images/review-avatar-3.png"
-                    alt="Spokojná zákazníčka Sofoservis recenzie"
-                    width={36}
-                    height={36}
-                    className="w-full h-full object-cover"
-                    sizes="36px"
-                  />
-                </div>
-              </div>
+              <GoogleReviewerAvatars size={36} />
               <GoogleRatingMark lang={lang} />
               <div className="text-white/80 text-sm text-center lg:text-left">{ratingText}</div>
             </div>

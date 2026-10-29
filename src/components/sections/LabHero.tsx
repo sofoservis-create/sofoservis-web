@@ -10,6 +10,7 @@ import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
 import { isNimbataExcludedPath } from "@/lib/nimbataExclusions";
 import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import GoogleRatingMark from "@/components/widgets/GoogleRatingMark";
+import GoogleReviewerAvatars from "@/components/widgets/GoogleReviewerAvatars";
 
 interface LabHeroProps {
   title?: string;
@@ -165,8 +166,8 @@ const LAB_HERO_TEXTS = {
     avatarMale: "Spokojný zákazník",
     ratingDefault: "3500+ spokojných zákazníkov",
     urgency: "⚡ Termíny sa obsadzujú rýchlo",
-    consentText: "Odoslaním tohto formulára súhlasím so",
-    privacyLink: "spracovaním osobných údajov",
+    consentText: "Odoslaním dopytu beriete na vedomie",
+    privacyLink: "spracovanie osobných údajov",
     consentAnd: "a",
     vopText: "VOP",
     submitting: "Spracovávam...",
@@ -190,7 +191,7 @@ const LAB_HERO_TEXTS = {
     avatarMale: "Satisfied customer",
     ratingDefault: "3500+ satisfied customers",
     urgency: "⚡ Slots are filling up fast",
-    consentText: "By submitting this form, I agree to the",
+    consentText: "By submitting your inquiry, you acknowledge the",
     privacyLink: "processing of personal data",
     consentAnd: "and",
     vopText: "Terms of Service",
@@ -348,7 +349,7 @@ export default function LabHero({
     dynamicPlaceholder = cityName ? base.replace(/\.\.\.$/, ` ${cityConnector}...`) : base;
   }
 
-  const [formData, setFormData] = useState({ name: "", phone: "", email: "", description: "", consent: false });
+  const [formData, setFormData] = useState({ name: "", phone: "", email: "", description: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
@@ -487,7 +488,6 @@ export default function LabHero({
         phone: formData.phone,
         email: formData.email,
         description: formData.description,
-        consent: formData.consent,
         service_type: serviceType,
         page_url: pathname,
         ...utmFlat,
@@ -521,7 +521,7 @@ export default function LabHero({
       }
 
       setSubmitSuccess(true);
-      setFormData({ name: "", phone: "", email: "", description: "", consent: false });
+      setFormData({ name: "", phone: "", email: "", description: "" });
     } catch (error) {
       console.error("Form error:", error);
       requestIdRef.current = null;
@@ -710,17 +710,7 @@ export default function LabHero({
               </div>
 
               <div className="flex w-full flex-row flex-wrap items-center justify-center gap-x-3 gap-y-2 lg:justify-start">
-                <div className="flex -space-x-2 flex-shrink-0">
-                  {[
-                    { src: "/images/review-avatar-1.png", alt: "Spokojná zákazníčka Sofoservis" },
-                    { src: "/images/review-avatar-2.png", alt: "Spokojný zákazník Sofoservis" },
-                    { src: "/images/review-avatar-3.png", alt: "Spokojná zákazníčka Sofoservis recenzie" },
-                  ].map((av, i) => (
-                    <div key={i} className={`w-9 h-9 rounded-full overflow-hidden ring-2 ring-white/30 relative ${i === 0 ? 'z-30' : i === 1 ? 'z-20' : 'z-10'}`}>
-                      <Image src={av.src} alt={av.alt} width={36} height={36} className="w-full h-full object-cover" sizes="36px" />
-                    </div>
-                  ))}
-                </div>
+                <GoogleReviewerAvatars size={36} />
                 <GoogleRatingMark lang={lang} />
                 <div className="text-white/80 text-sm text-center lg:whitespace-nowrap lg:text-[14px] lg:leading-none">{ratingText}</div>
               </div>
@@ -895,68 +885,9 @@ export default function LabHero({
 
                   {/* Social proof */}
                   <div className="flex flex-row items-center justify-center gap-2 py-0.5">
-                    <div className="flex -space-x-1.5 flex-shrink-0">
-                      {[
-                        { src: "/images/review-avatar-1.png", alt: t.avatarFemale, z: "z-30" },
-                        { src: "/images/review-avatar-2.png", alt: t.avatarMale, z: "z-20" },
-                        { src: "/images/review-avatar-3.png", alt: t.avatarFemale, z: "z-10" },
-                      ].map((av, i) => (
-                        <div key={i} className={`w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative ${av.z}`}>
-                          <Image src={av.src} alt={av.alt} width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
-                        </div>
-                      ))}
-                    </div>
+                    <GoogleReviewerAvatars size={24} ringClassName="ring-1 ring-white" spaceClassName="-space-x-1.5" />
                     <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
                     <span className="text-gray-600 whitespace-nowrap text-[14px] leading-none">{t.ratingDefault}</span>
-                  </div>
-
-                  {/* Consent */}
-                  <div className="flex items-center gap-2">
-                    <input
-                      type="checkbox"
-                      id="lab-consent"
-                      name="consent"
-                      checked={formData.consent}
-                      onChange={handleChange}
-                      required
-                      className="h-5 w-5 cursor-pointer shrink-0 appearance-none rounded border-2 border-gray-500 bg-white checked:bg-[#f4d80c] checked:border-[#f4d80c] focus:outline-none focus:ring-2 focus:ring-[#f4d80c]/50"
-                      style={{
-                        backgroundImage: formData.consent
-                          ? `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23111' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")`
-                          : "none",
-                        backgroundSize: "100% 100%",
-                        backgroundPosition: "center",
-                        backgroundRepeat: "no-repeat",
-                      }}
-                    />
-                    <label
-                      htmlFor="lab-consent"
-                      onClick={(e) => {
-                        if (e.target === e.currentTarget) {
-                          setFormData((prev) => ({ ...prev, consent: !prev.consent }));
-                        }
-                      }}
-                      className="text-xs text-gray-600 cursor-pointer"
-                    >
-                      {t.consentText}{" "}
-                      <a
-                        href={lang === "en" ? "/en/privacy-policy" : "/zasady-spracovania-osobnych-udajov"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-accent-600 hover:underline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {t.privacyLink}
-                      </a>
-                      {" "}{t.consentAnd}{" "}
-                      <a
-                        href={vopHref}
-                        className="text-accent-600 hover:underline"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {t.vopText}
-                      </a>
-                    </label>
                   </div>
 
                   {/* Full-width CTA */}
@@ -977,6 +908,23 @@ export default function LabHero({
                       t.submit
                     )}
                   </button>
+
+                  <p className="text-xs text-center text-gray-600">
+                    {t.consentText}{" "}
+                    <a
+                      href={lang === "en" ? "/en/privacy-policy" : "/zasady-spracovania-osobnych-udajov"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-gray-900"
+                    >
+                      {t.privacyLink}
+                    </a>
+                    {" "}{t.consentAnd}{" "}
+                    <a href={vopHref} className="underline hover:text-gray-900">
+                      {t.vopText}
+                    </a>
+                    .
+                  </p>
 
                   <p className="text-sm text-primary-700 font-medium text-center">{t.urgency}</p>
                 </form>

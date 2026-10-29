@@ -2,7 +2,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import Image from "next/image";
+import GoogleReviewerAvatars from "@/components/widgets/GoogleReviewerAvatars";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
 import { getUTMAttribution, flattenUTMForEmail } from "@/lib/utm";
@@ -20,7 +20,6 @@ export interface QuickFormData {
   phone: string;
   email: string;
   description: string;
-  consent: boolean;
 }
 
 // EmailJS sending now happens server-side via /api/lead.
@@ -374,7 +373,6 @@ export default function QuickContactForm({
     phone: "",
     email: "",
     description: "",
-    consent: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -479,7 +477,6 @@ export default function QuickContactForm({
         phone: formData.phone,
         email: formData.email,
         description: formData.description,
-        consent: formData.consent,
         service_type: serviceType,
         page_url: pathname,
         ...utmFlat,
@@ -523,7 +520,6 @@ export default function QuickContactForm({
         phone: "",
         email: "",
         description: "",
-        consent: false,
       });
     } catch (error) {
       console.error("Lead submit error:", error);
@@ -552,8 +548,8 @@ export default function QuickContactForm({
       description: "Popíšte čo potrebujete",
       descriptionPlaceholder:
         "Napr. sťahovanie 2-izbového bytu, vypratanie bytu...",
-      consent: "Odoslaním tohto formulára súhlasím so",
-      privacyPolicy: "spracovaním osobných údajov",
+      consent: "Odoslaním dopytu beriete na vedomie",
+      privacyPolicy: "spracovanie osobných údajov",
       vop: "VOP",
       consentAnd: " a ",
       submitButton: "Získať kalkuláciu zadarmo",
@@ -576,7 +572,7 @@ export default function QuickContactForm({
       description: "Describe what you need",
       descriptionPlaceholder:
         "E.g. moving a 2-bedroom apartment, flat clearance...",
-      consent: "By submitting this form, I agree to the",
+      consent: "By submitting your inquiry, you acknowledge the",
       privacyPolicy: "processing of personal data",
       vop: "Terms of Service",
       consentAnd: " and ",
@@ -706,72 +702,9 @@ export default function QuickContactForm({
               ></textarea>
             </div>
 
-            <div className="flex items-center pt-1">
-              <input
-                type="checkbox"
-                id="consent"
-                name="consent"
-                checked={formData.consent}
-                onChange={handleChange}
-                required
-                className="h-5 w-5 cursor-pointer shrink-0 appearance-none rounded border-2 border-gray-500 bg-white checked:bg-[#f4d80c] checked:border-[#f4d80c] focus:outline-none focus:ring-2 focus:ring-[#f4d80c]/50"
-                style={{
-                  backgroundImage: formData.consent
-                    ? `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='%23111' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e")`
-                    : "none",
-                  backgroundSize: "100% 100%",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              />
-              <label
-                htmlFor="consent"
-                onClick={(e) => {
-                  // Only handle clicks on the label itself, not on child elements (span)
-                  if (e.target === e.currentTarget) {
-                    // Manually toggle the checkbox state
-                    setFormData((prev) => ({
-                      ...prev,
-                      consent: !prev.consent,
-                    }));
-                  }
-                }}
-                className="ml-2 block text-xs text-gray-600 text-left cursor-pointer"
-              >
-                {t.consent}{" "}
-                <a
-                  href={lang === "en" ? "/en/privacy-policy" : "/zasady-spracovania-osobnych-udajov"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent-600 hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {t.privacyPolicy}
-                </a>
-                {t.consentAnd}
-                <a
-                  href={vopPath}
-                  className="text-accent-600 hover:underline"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  {t.vop}
-                </a>
-              </label>
-            </div>
-
             {showRating && (
               <div className="flex flex-row items-center justify-center gap-2 py-1">
-                <div className="flex -space-x-1.5 flex-shrink-0">
-                  <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-30">
-                    <Image src="/images/review-avatar-1.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
-                  </div>
-                  <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-20">
-                    <Image src="/images/review-avatar-2.png" alt="Spokojný zákazník" width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
-                  </div>
-                  <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-10">
-                    <Image src="/images/review-avatar-3.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" sizes="24px" />
-                  </div>
-                </div>
+                <GoogleReviewerAvatars size={24} ringClassName="ring-1 ring-white" spaceClassName="-space-x-1.5" />
                 <span className="text-yellow-500 text-base leading-none flex-shrink-0">★★★★★</span>
                 <span className="text-gray-600 whitespace-nowrap text-[14px] leading-none">{lang === "en" ? "3500+ satisfied customers" : "3500+ spokojných zákazníkov"}</span>
               </div>
@@ -812,6 +745,23 @@ export default function QuickContactForm({
                 t.submitButton
               )}
             </button>
+
+            <p className="text-xs text-center text-gray-600">
+              {t.consent}{" "}
+              <a
+                href={lang === "en" ? "/en/privacy-policy" : "/zasady-spracovania-osobnych-udajov"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-gray-900"
+              >
+                {t.privacyPolicy}
+              </a>
+              {t.consentAnd}
+              <a href={vopPath} className="underline hover:text-gray-900">
+                {t.vop}
+              </a>
+              .
+            </p>
 
             <p className="text-xs text-center text-primary-700 font-medium py-0.5">
               {lang === "en" ? "⚡ Slots fill up fast" : "⚡ Termíny sa obsadzujú rýchlo"}
