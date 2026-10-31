@@ -64,14 +64,16 @@ function InitialsAvatar({ name }: { name: string }) {
   );
 }
 
-function ReviewCard({ review, lang = "sk" }: { review: Review; lang?: "sk" | "en" }) {
+function ReviewCard({ review, lang = "sk", width }: { review: Review; lang?: "sk" | "en"; width?: number }) {
   const [expanded, setExpanded] = useState(false);
   const shouldTruncate = review.text.length > 200;
   const displayText =
     shouldTruncate && !expanded ? review.text.slice(0, 200) + "..." : review.text;
 
   return (
-    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5 flex flex-col gap-3 min-w-[calc(100vw-4rem)] sm:min-w-[300px] max-w-[350px] w-[calc(100vw-4rem)] sm:w-[350px] flex-shrink-0 h-full">
+    <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5 flex flex-col gap-3 min-w-[calc(100vw-4rem)] sm:min-w-[300px] max-w-[350px] w-[calc(100vw-4rem)] sm:w-[350px] flex-shrink-0 h-full"
+      style={width ? { width: `${width}px`, minWidth: `${width}px`, maxWidth: `${width}px` } : undefined}
+    >
       <div className="flex items-center gap-3">
         {review.profile_photo_url ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -149,27 +151,57 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const trackRef = useRef<HTMLDivElement>(null);
 
+  const [cardWidth, setCardWidth] = useState<number | undefined>(undefined);
+  const [visibleCount, setVisibleCount] = useState(1);
+  const GAP = 16;
+
   const totalSlides = reviews.length;
+
+  // Size cards from the viewport so a whole number of cards fills it:
+  // 5 on wide desktop, 3 on desktop, 2 on tablet, 1 on mobile.
+  useEffect(() => {
+    const measure = () => {
+      const viewport = trackRef.current?.parentElement?.clientWidth;
+      if (!viewport) return;
+      const count = viewport >= 1100 ? 5 : viewport >= 900 ? 3 : viewport >= 620 ? 2 : 1;
+      if (count === 1) {
+        setCardWidth(undefined);
+      } else {
+        setCardWidth((viewport - (count - 1) * GAP) / count);
+      }
+      setVisibleCount(count);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [totalSlides]);
+
+  const maxIndex = Math.max(0, totalSlides - visibleCount);
+  const positionCount = maxIndex + 1;
+
+  useEffect(() => {
+    setCurrentIndex((i) => Math.min(i, maxIndex));
+  }, [maxIndex]);
 
   const goTo = useCallback(
     (index: number) => {
       if (totalSlides === 0) return;
-      setCurrentIndex(((index % totalSlides) + totalSlides) % totalSlides);
+      setCurrentIndex(((index % positionCount) + positionCount) % positionCount);
     },
-    [totalSlides]
+    [totalSlides, positionCount]
   );
 
   const goNext = useCallback(() => goTo(currentIndex + 1), [currentIndex, goTo]);
   const goPrev = useCallback(() => goTo(currentIndex - 1), [currentIndex, goTo]);
 
   useEffect(() => {
-    if (isPaused || totalSlides <= 1) return;
+    if (isPaused || positionCount <= 1) return;
 
     intervalRef.current = setInterval(goNext, 4000);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [isPaused, goNext, totalSlides]);
+  }, [isPaused, goNext, positionCount]);
 
   if (!reviews || reviews.length === 0) {
     return (
@@ -181,7 +213,7 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
 
   return (
     <div
-      className="relative w-full max-w-5xl mx-auto px-6 sm:px-10"
+      className="relative w-full max-w-5xl lg:max-w-7xl mx-auto px-6 sm:px-10"
       onPointerEnter={(event) => {
         if (event.pointerType === "mouse") setIsPaused(true);
       }}
@@ -198,16 +230,16 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
           ref={trackRef}
           className="flex transition-transform duration-500 ease-in-out gap-4"
           style={{
-            transform: `translateX(calc(-${currentIndex} * (min(350px, calc(100vw - 4rem)) + 16px)))`,
+            transform: `translateX(calc(-${currentIndex} * (${cardWidth !== undefined ? `${cardWidth}px` : "min(350px, calc(100vw - 4rem))"} + ${GAP}px)))`,
           }}
         >
           {reviews.map((review, index) => (
-            <ReviewCard key={`${review.author_name}-${index}`} review={review} lang={lang} />
+            <ReviewCard key={`${review.author_name}-${index}`} review={review} lang={lang} width={cardWidth} />
           ))}
         </div>
       </div>
 
-      {totalSlides > 1 && (
+      {totalSlides > visibleCount && (
         <>
           <button
             onClick={goPrev}
@@ -248,8 +280,8 @@ export default function ReviewCarousel({ reviews, lang = "sk" }: ReviewCarouselP
         </>
       )}
 
-      <div className="flex justify-center gap-2 mt-4">
-        {reviews.map((_, index) => (
+      <div className={`flex justify-center gap-2 mt-4 ${positionCount <= 1 ? "hidden" : ""}`}>
+        {Array.from({ length: positionCount }).map((_, index) => (
           <button
             key={index}
             onClick={() => goTo(index)}
