@@ -9,6 +9,7 @@ import {
   findNimbataSwappedNumber,
 } from "@/lib/nimbataExclusions";
 import GoogleRatingMark from "@/components/widgets/GoogleRatingMark";
+import GoogleReviewerAvatars from "@/components/widgets/GoogleReviewerAvatars";
 import {
   NavItem,
   navCategoriesSK,
@@ -480,17 +481,7 @@ export default function Navbar() {
                 {/* Mobile-only bottom actions */}
                 <div className="desktop:hidden">
                    <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 border-t border-b border-gray-200 px-4 py-4">
-                    <div className="flex -space-x-1.5 flex-shrink-0">
-                      <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-30">
-                        <Image src="/images/review-avatar-1.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-20">
-                        <Image src="/images/review-avatar-2.png" alt="Spokojný zákazník" width={24} height={24} className="w-full h-full object-cover" />
-                      </div>
-                      <div className="w-6 h-6 rounded-full overflow-hidden ring-1 ring-white relative z-10">
-                        <Image src="/images/review-avatar-3.png" alt="Spokojná zákazníčka" width={24} height={24} className="w-full h-full object-cover" />
-                      </div>
-                    </div>
+                    <GoogleReviewerAvatars size={24} ringClassName="ring-1 ring-white" spaceClassName="-space-x-1.5" />
                      <GoogleRatingMark
                        lang={isEnglish ? "en" : "sk"}
                        theme="light"

@@ -8,6 +8,7 @@ import {
   NIMBATA_TARGET_NUMBER,
 } from "@/lib/nimbataExclusions";
 import ReviewBadge from "@/components/widgets/ReviewBadge";
+import GoogleReviewerAvatars from "@/components/widgets/GoogleReviewerAvatars";
 
 export default function ContactInfo() {
   const pathname = usePathname();
@@ -55,38 +56,7 @@ export default function ContactInfo() {
             </h2>
 
             <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
-              <div className="flex -space-x-2 flex-shrink-0">
-                <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white relative z-30">
-                  <Image
-                    src="/images/review-avatar-1.png"
-                    alt="Spokojná zákazníčka Sofoservis"
-                    width={36}
-                    height={36}
-                    className="w-full h-full object-cover"
-                    sizes="36px"
-                  />
-                </div>
-                <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white relative z-20">
-                  <Image
-                    src="/images/review-avatar-2.png"
-                    alt="Spokojný zákazník Sofoservis"
-                    width={36}
-                    height={36}
-                    className="w-full h-full object-cover"
-                    sizes="36px"
-                  />
-                </div>
-                <div className="w-9 h-9 rounded-full overflow-hidden ring-2 ring-white relative z-10">
-                  <Image
-                    src="/images/review-avatar-3.png"
-                    alt="Spokojná zákazníčka Sofoservis recenzie"
-                    width={36}
-                    height={36}
-                    className="w-full h-full object-cover"
-                    sizes="36px"
-                  />
-                </div>
-              </div>
+              <GoogleReviewerAvatars size={36} ringClassName="ring-2 ring-white" />
               <p className="text-sm text-gray-600">
                 {isEnglish ? "3500+ happy customers" : "3500+ spokojných zákazníkov"}
               </p>
