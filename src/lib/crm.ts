@@ -1,6 +1,6 @@
 import { getUTMAttribution, UTMData } from "@/lib/utm";
 
-const CRM_ENDPOINT = "https://sofoservis-crm.replit.app/api/website-lead";
+const CRM_ENDPOINT = "https://app.sofoservis.sk/api/website-lead";
 
 function clean(value: string | undefined | null): string {
   if (!value || value === "(none)") return "";

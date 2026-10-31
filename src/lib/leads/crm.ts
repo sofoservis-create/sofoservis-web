@@ -1,6 +1,6 @@
 const CRM_ENDPOINT =
   process.env.CRM_ENDPOINT_URL ||
-  "https://sofoservis-crm.replit.app/api/website-lead";
+  "https://app.sofoservis.sk/api/website-lead";
 
 // Test-only override: shrink the backoff schedule so failure scenarios don't
 // hang the test for ~57s. Set to "1" in dev when you want fast failure tests.
