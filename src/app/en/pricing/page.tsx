@@ -159,7 +159,7 @@ export default function PricingPageEN() {
         <Clients />
       </div>
 
-      <section className="pt-10 md:pt-[100px] bg-white overflow-hidden" id="pricing">
+      <section className="pt-12 md:pt-16 lg:pt-20 bg-white overflow-hidden" id="pricing">
         <Container>
           <div className="text-center mx-auto max-w-4xl mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">

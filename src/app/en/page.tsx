@@ -247,7 +247,7 @@ export default function HomeEN() {
         callToActionText="We also operate in your area — get a quote"
       />
 
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 lg:py-20">
         <FAQ
           title="Frequently Asked Questions"
           subtitle="Find answers to the most common questions about moving, clearance and furniture assembly"

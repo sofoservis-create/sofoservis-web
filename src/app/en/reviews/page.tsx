@@ -64,7 +64,7 @@ export default function ReviewsPageEN() {
         />
       </div>
 
-      <section className="py-[80px]">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-6 text-center">
             Sofoservis on TV
@@ -90,7 +90,7 @@ export default function ReviewsPageEN() {
         </div>
       </section>
 
-      <div className="pt-10 md:pt-[100px]">
+      <div className="pt-12 md:pt-16 lg:pt-20">
         <Reviews callToActionText="Get a Quote" />
       </div>
 

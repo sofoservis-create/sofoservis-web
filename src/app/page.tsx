@@ -198,7 +198,7 @@ export default function Home() {
 
       <ServiceAreas />
 
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 lg:py-20">
         <FAQ
           title="Často kladené otázky"
           subtitle="Nájdite odpovede na najčastejšie otázky o sťahovaní, vypratávaní a montáži nábytku"

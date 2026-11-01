@@ -29,7 +29,7 @@ export default function LocationMap({
 }: LocationMapProps) {
   return (
     <section
-      className="pt-10 md:pt-[100px] pb-10 md:pb-[100px] bg-white overflow-hidden"
+      className="py-12 md:py-16 lg:py-20 bg-white overflow-hidden"
       id="locations"
     >
       <Container>

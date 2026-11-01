@@ -189,7 +189,7 @@ export default function CennikPage() {
       </div>
 
       {/* NEW Pricing Section - replaces existing Pricing component */}
-      <section className="pt-10 md:pt-[100px] pb-10 md:pb-[80px] bg-white overflow-hidden" id="cennik">
+      <section className="py-12 md:py-16 lg:py-20 bg-white overflow-hidden" id="cennik">
         <Container>
           <div className="text-center mx-auto max-w-4xl mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">

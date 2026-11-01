@@ -89,7 +89,7 @@ export default function ReferencePage() {
       </div>
 
       {/* Vimeo video reference */}
-      <section className="pt-10 md:pt-[100px] pb-10 md:pb-[100px]">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="max-w-5xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Sofoservis v Inkognite
@@ -116,7 +116,7 @@ export default function ReferencePage() {
       </section>
 
       {/* Written Reviews */}
-      <div className="pt-10 md:pt-[100px]">
+      <div className="pt-12 md:pt-16 lg:pt-20">
         <Reviews />
       </div>
 

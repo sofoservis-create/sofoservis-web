@@ -204,7 +204,7 @@ export default function ServicePricing({
   const ctaNote = lang === "en" ? "Exact price depends on scope — free assessment included." : "Presná cena závisí od rozsahu — obhliadka zadarmo.";
 
   return (
-    <section className="pt-10 md:pt-[60px] pb-6 md:pb-8 bg-gray-50">
+    <section className="pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 bg-gray-50">
       <Container>
         <div className="text-center mb-8 md:mb-10">
           <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">

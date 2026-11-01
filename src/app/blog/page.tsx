@@ -42,7 +42,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:px-8 md:py-20">
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 lg:py-20 sm:px-6 md:px-8">
         <div className="mb-8 flex items-end justify-between gap-5">
           <div><p className="text-xs font-bold uppercase tracking-[.2em] text-[#666]">Vyberte si tému</p><h2 className="mt-2 font-[var(--font-sora)] text-3xl font-bold tracking-[-.04em] md:text-4xl">Čo práve riešite?</h2></div>
           <span className="hidden text-sm font-semibold text-[#666] md:block">{blogArticles.length} článok</span>

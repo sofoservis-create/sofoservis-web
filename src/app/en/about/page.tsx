@@ -206,7 +206,7 @@ export default function AboutPageEN() {
       />
 
       {/* Founder Story */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
             <div className="w-full lg:w-2/5 flex flex-col sm:flex-row lg:flex-col gap-4">
@@ -269,7 +269,7 @@ export default function AboutPageEN() {
       </section>
 
       {/* Services strip */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-primary-900 text-center mb-10">
             What we do
@@ -296,7 +296,7 @@ export default function AboutPageEN() {
       </section>
 
       {/* Stats */}
-      <section className="py-12 md:py-16 bg-primary-900">
+      <section className="py-12 md:py-16 lg:py-20 bg-primary-900">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((s) => (
@@ -312,7 +312,7 @@ export default function AboutPageEN() {
       </section>
 
       {/* Then vs Now */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-primary-900 text-center mb-10">
             Then and now
@@ -352,7 +352,7 @@ export default function AboutPageEN() {
       </section>
 
       {/* Values */}
-      <section className="py-16 md:py-20 bg-gray-50">
+      <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-primary-900 mb-3">
@@ -380,7 +380,7 @@ export default function AboutPageEN() {
       </section>
 
       {/* Reality Expo */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <Image

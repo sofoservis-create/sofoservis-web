@@ -23,7 +23,7 @@ export default function ContactFormSection({
       : "Vyplňte formulár a ozveme sa vám do 24 hodín s presnou kalkuláciou.";
 
   return (
-    <div className="cv-auto bg-gray-50 pt-6 pb-10 md:pt-8 md:pb-[80px] px-4">
+    <div className="cv-auto bg-gray-50 pt-6 md:pt-8 pb-12 md:pb-16 lg:pb-20 px-4">
       <div className="max-w-2xl lg:max-w-5xl mx-auto">
         <Image
           src={`${FORM_MASCOT}.webp`}

@@ -90,9 +90,9 @@ export default function HowItWorks({
   ];
 
   return (
-    <section className="cv-auto pt-10 md:pt-[60px] pb-10 md:pb-[60px] bg-gray-50 overflow-hidden">
+    <section className="cv-auto py-12 md:py-16 lg:py-20 bg-gray-50 overflow-hidden">
       <Container>
-        <div className="text-center mb-12">
+        <div className="text-center mb-10 md:mb-12">
           <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             {resolvedTitle}
           </h3>
@@ -102,13 +102,13 @@ export default function HowItWorks({
         </div>
 
         <div className="relative max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-7 md:gap-6">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="relative flex flex-col items-center text-center rounded-3xl bg-white px-6 pt-10 pb-7 shadow-sm"
+                className="relative flex flex-row items-center gap-4 text-left rounded-3xl bg-white p-4 pt-6 shadow-sm md:flex-col md:items-center md:gap-0 md:text-center md:px-6 md:pt-10 md:pb-7"
               >
-                <span className="absolute -top-5 left-1/2 -translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-accent-500 text-lg font-bold text-primary-900 shadow-md">
+                <span className="absolute -top-4 left-4 flex h-8 w-8 items-center justify-center rounded-full bg-accent-500 text-base font-bold text-primary-900 shadow-md md:-top-5 md:left-1/2 md:h-10 md:w-10 md:-translate-x-1/2 md:text-lg">
                   {index + 1}
                 </span>
                 <Image
@@ -116,14 +116,15 @@ export default function HowItWorks({
                   alt={mascots[index].alt}
                   width={400}
                   height={400}
-                  sizes="(min-width: 640px) 160px, 144px"
-                  className="mb-4 h-auto w-36 sm:w-40"
+                  sizes="(min-width: 1024px) 160px, (min-width: 768px) 144px, 96px"
+                  className="h-auto w-24 shrink-0 md:mb-4 md:w-36 lg:w-40"
                 />
-                <h3 className="text-xl font-bold text-primary-900 mb-3">
+                <div className="min-w-0">
+                <h3 className="text-lg md:text-xl font-bold text-primary-900 mb-1 md:mb-3">
                   {step.heading}
                 </h3>
                 {step.body && (
-                  <p className="text-primary-600 leading-relaxed">{step.body}</p>
+                  <p className="text-sm md:text-base text-primary-600 leading-relaxed">{step.body}</p>
                 )}
                 {(step.detail1 || step.detail2) && (
                   <div className="space-y-2">
@@ -177,6 +178,7 @@ export default function HowItWorks({
                     )}
                   </div>
                 )}
+                </div>
               </div>
             ))}
           </div>

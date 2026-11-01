@@ -72,7 +72,7 @@ export default function ServicePriceTable({
   const items = tables[variant];
 
   return (
-    <section className="pt-10 md:pt-[60px] pb-6 md:pb-8 bg-white">
+    <section className="pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 bg-white">
       <Container>
         <div className="text-center mb-8 md:mb-10">
           <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
