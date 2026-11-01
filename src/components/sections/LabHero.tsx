@@ -796,7 +796,7 @@ export default function LabHero({
         >
           <div className={`flex flex-col lg:flex-row gap-6 lg:gap-12`}>
           <div className={narrowForm ? "lg:w-3/5 w-full" : "w-full lg:w-auto lg:flex-1"}>
-          <div ref={formCardRef} className={`bg-white rounded-xl shadow-2xl overflow-hidden`}>
+          <div ref={formCardRef} data-lead-form className={`scroll-mt-28 bg-white rounded-xl shadow-2xl overflow-hidden`}>
             <div className={`bg-accent-500 text-primary-900 px-6 ${narrowForm ? "py-2 text-center" : "py-3 text-center sm:text-left flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1"}`}>
               <h3 className="text-lg font-bold">{formTitle}</h3>
               {formSubtitle && <p className={`text-sm text-primary-900/80 ${narrowForm ? "mt-0.5" : ""}`}>{formSubtitle}</p>}

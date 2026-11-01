@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { MOBILE_CTA_VISIBILITY_EVENT } from "@/components/StickyMobileCta";
 import { usePathname } from "next/navigation";
 
 export default function WhatsAppWidget() {
@@ -27,18 +28,12 @@ export default function WhatsAppWidget() {
   const [aboveBar, setAboveBar] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
+  // Follows the sticky CTA bar exactly (it also hides while a form is on screen).
   useEffect(() => {
-    const onScroll = () => {
-      const isMobile = window.innerWidth < 1256;
-      setAboveBar(isMobile && window.scrollY > 600);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll, { passive: true });
-    onScroll();
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
+    const onBar = (e: Event) =>
+      setAboveBar(Boolean((e as CustomEvent<boolean>).detail) && window.innerWidth < 1256);
+    window.addEventListener(MOBILE_CTA_VISIBILITY_EVENT, onBar);
+    return () => window.removeEventListener(MOBILE_CTA_VISIBILITY_EVENT, onBar);
   }, []);
 
   useEffect(() => {

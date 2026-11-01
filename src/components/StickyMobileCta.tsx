@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, type MouseEvent } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
@@ -18,8 +18,26 @@ const SCROLL_INTENT_KEYS = new Set([
   "Spacebar",
 ]);
 
+const FORM_SELECTOR = "[data-lead-form]";
+/** Window event fired whenever the bar shows/hides – WhatsAppWidget lifts above it. */
+export const MOBILE_CTA_VISIBILITY_EVENT = "mobile-cta-visibility";
+
+/** The lead form on the current page that is closest to the viewport (visible ones only). */
+function nearestForm(): HTMLElement | null {
+  const forms = Array.from(document.querySelectorAll<HTMLElement>(FORM_SELECTOR)).filter(
+    (el) => el.offsetParent !== null,
+  );
+  if (!forms.length) return null;
+  return forms.reduce((best, el) =>
+    Math.abs(el.getBoundingClientRect().top) < Math.abs(best.getBoundingClientRect().top) ? el : best,
+  );
+}
+
 export default function StickyMobileCta() {
-  const [visible, setVisible] = useState(false);
+  const [scrolledVisible, setVisible] = useState(false);
+  // Hidden while a lead form is on screen, so the bar never covers its submit button.
+  const [formInView, setFormInView] = useState(false);
+  const visible = scrolledVisible && !formInView;
   const pathname = usePathname();
   // Ref to the dedicated Nimbata span rendered as a sibling of the bar
   // (outside the `inert` wrapper). Nimbata's DNI walks ALL text nodes —
@@ -114,6 +132,55 @@ export default function StickyMobileCta() {
     // route cannot reveal it without a fresh user gesture.
   }, [pathname]);
 
+  // Re-observe the forms of each page after client-side navigation.
+  useEffect(() => {
+    setFormInView(false);
+    const inView = new Set<Element>();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) inView.add(e.target);
+          else inView.delete(e.target);
+        }
+        setFormInView(inView.size > 0);
+      },
+      { threshold: 0.15 },
+    );
+    const timer = window.setTimeout(() => {
+      document.querySelectorAll(FORM_SELECTOR).forEach((el) => observer.observe(el));
+    }, 300);
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, [pathname]);
+
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent(MOBILE_CTA_VISIBILITY_EVENT, { detail: visible }));
+  }, [visible]);
+
+  // "Cenová ponuka": scroll to the form on this page; only pages without a
+  // form fall through to the /kontakt link.
+  const handleQuote = (e: MouseEvent<HTMLAnchorElement>) => {
+    const form = nearestForm();
+    try {
+      pushDataLayerEvent("sticky_cta_click", {
+        event_category: "engagement",
+        event_label: pathname,
+        cta: "quote",
+        target: form ? "inline_form" : "kontakt",
+        language: isEnglish ? "en" : "sk",
+      });
+    } catch {}
+    if (!form) return;
+    e.preventDefault();
+    form.scrollIntoView({ behavior: "smooth", block: "start" });
+    form.classList.remove("lead-form-highlight");
+    void form.offsetWidth; // restart the animation on repeated taps
+    form.classList.add("lead-form-highlight");
+    window.setTimeout(() => form.classList.remove("lead-form-highlight"), 2600);
+  };
+
   return (
     <>
       {/* Always mounted with the constant Nimbata target number: the DNI
@@ -153,6 +220,7 @@ export default function StickyMobileCta() {
         {/* Primary CTA — solid accent, arrow icon */}
         <Link
           href="/kontakt"
+          onClick={handleQuote}
           className="flex-1 basis-0 min-w-0 flex items-center justify-center gap-2 min-h-[48px] py-3 px-2 min-[360px]:px-4 rounded-xl whitespace-nowrap bg-accent-500 transition-opacity hover:opacity-90 text-[18px] font-bold text-[#000000]"
         >
           Cenová ponuka

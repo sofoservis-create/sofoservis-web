@@ -594,7 +594,7 @@ export default function QuickContactForm({
 
   return (
     <>
-      <div className={`w-full text-left ${className}`}>
+      <div data-lead-form className={`scroll-mt-28 w-full text-left ${className}`}>
         {submitSuccess ? (
           <div className="form-submission-success bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 mb-2">
             <div className="flex">
