@@ -159,7 +159,7 @@ export default function VypratavanieBytovDomovPage() {
         <GoogleReviews />
       </div>
 
-      <HowItWorks />
+      <HowItWorks workMascot="kreslo" />
 
       <div>
         <Reviews showHeadline={true} />

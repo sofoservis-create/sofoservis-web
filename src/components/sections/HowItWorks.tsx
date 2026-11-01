@@ -1,15 +1,21 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
+
+const MASCOT_DIR = "/images/mascot/pozy";
 
 interface HowItWorksProps {
   title?: string;
   subtitle?: string;
   lang?: string;
+  /** Póza maskota pre 3. krok „Vykonáme prácu“ (predvolene nesie krabice). */
+  workMascot?: "krabice" | "kreslo";
 }
 
 export default function HowItWorks({
   title,
   subtitle,
   lang,
+  workMascot = "krabice",
 }: HowItWorksProps) {
   const isEn = lang === "en";
 
@@ -26,8 +32,8 @@ export default function HowItWorks({
         {
           heading: "Contact us",
           body: "Call us or fill in the form on our website. We respond quickly.",
-          detail1: "Free site inspection for larger jobs",
-          detail2: "Or quick agreement on date and price",
+          detail1: null,
+          detail2: null,
         },
         {
           heading: "Inspection or appointment",
@@ -63,6 +69,26 @@ export default function HowItWorks({
         },
       ];
 
+  const mascots = [
+    {
+      src: `${MASCOT_DIR}/sofoservis-maskot-telefon.webp`,
+      alt: isEn ? "Sofoservis gorilla mascot on the phone" : "Maskot Sofoservis – gorila telefonuje",
+    },
+    {
+      src: `${MASCOT_DIR}/sofoservis-maskot-ok.webp`,
+      alt: isEn ? "Sofoservis gorilla mascot showing OK" : "Maskot Sofoservis – gorila ukazuje OK",
+    },
+    workMascot === "kreslo"
+      ? {
+          src: `${MASCOT_DIR}/sofoservis-maskot-kreslo.webp`,
+          alt: isEn ? "Sofoservis gorilla mascot carrying an old armchair" : "Maskot Sofoservis – gorila nesie staré kreslo",
+        }
+      : {
+          src: `${MASCOT_DIR}/sofoservis-maskot-krabice.webp`,
+          alt: isEn ? "Sofoservis gorilla mascot carrying boxes" : "Maskot Sofoservis – gorila nesie krabice",
+        },
+  ];
+
   return (
     <section className="cv-auto pt-10 md:pt-[60px] pb-10 md:pb-[60px] bg-gray-50 overflow-hidden">
       <Container>
@@ -76,17 +102,23 @@ export default function HowItWorks({
         </div>
 
         <div className="relative max-w-5xl mx-auto">
-          <div
-            className="hidden md:block absolute top-10 left-[calc(16.666%+2rem)] right-[calc(16.666%+2rem)] h-0.5 bg-gray-200"
-            aria-hidden="true"
-          />
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
             {steps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center text-center">
-                <div className="relative z-10 w-20 h-20 rounded-full bg-accent-500 flex items-center justify-center mb-6 shadow-md">
-                  <span className="text-2xl font-bold text-primary-900">{index + 1}</span>
-                </div>
+              <div
+                key={index}
+                className="relative flex flex-col items-center text-center rounded-3xl bg-white px-6 pt-10 pb-7 shadow-sm"
+              >
+                <span className="absolute -top-5 left-1/2 -translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-accent-500 text-lg font-bold text-primary-900 shadow-md">
+                  {index + 1}
+                </span>
+                <Image
+                  src={mascots[index].src}
+                  alt={mascots[index].alt}
+                  width={400}
+                  height={400}
+                  sizes="(min-width: 640px) 160px, 144px"
+                  className="mb-4 h-auto w-36 sm:w-40"
+                />
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
                   {step.heading}
                 </h3>

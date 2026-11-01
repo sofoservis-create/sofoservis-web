@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import CallToAction from "@/components/elements/CallToAction";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 
 export interface FAQItem {
@@ -48,6 +49,14 @@ export default function FAQ({
     <section className="cv-auto bg-white py-10 md:py-14" id="faq">
       <Container>
         <div className="text-center mb-8">
+          <Image
+            src="/images/mascot/pozy/sofoservis-maskot-otazky.webp"
+            alt=""
+            width={400}
+            height={400}
+            sizes="(min-width: 768px) 144px, 112px"
+            className="mx-auto mb-2 h-auto w-28 md:w-36"
+          />
           <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             {title}
           </h3>

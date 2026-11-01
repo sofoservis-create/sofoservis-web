@@ -1,5 +1,8 @@
 "use client";
+import Image from "next/image";
 import QuickContactForm from "@/components/forms/QuickContactForm";
+
+const FORM_MASCOT = "/images/mascot/pozy/sofoservis-maskot-formular";
 
 interface ContactFormSectionProps {
   lang?: "sk" | "en";
@@ -21,7 +24,15 @@ export default function ContactFormSection({
 
   return (
     <div className="cv-auto bg-gray-50 pt-6 pb-10 md:pt-8 md:pb-[80px] px-4">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl lg:max-w-5xl mx-auto">
+        <Image
+          src={`${FORM_MASCOT}.webp`}
+          alt=""
+          width={400}
+          height={400}
+          sizes="128px"
+          className="lg:hidden mx-auto mb-2 h-auto w-32"
+        />
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold text-primary-900 mb-3">
             {title || defaultTitle}
@@ -30,8 +41,18 @@ export default function ContactFormSection({
             {subtitle || defaultSubtitle}
           </p>
         </div>
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
-          <QuickContactForm variant="white" lang={lang} />
+        <div className="lg:flex lg:items-center lg:gap-10">
+          <Image
+            src={`${FORM_MASCOT}-768.webp`}
+            alt=""
+            width={768}
+            height={768}
+            sizes="288px"
+            className="hidden lg:block w-72 h-auto shrink-0"
+          />
+          <div className="lg:flex-1 bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+            <QuickContactForm variant="white" lang={lang} />
+          </div>
         </div>
       </div>
     </div>
