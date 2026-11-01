@@ -165,7 +165,7 @@ export default function OdvozLikvidaciaStavebnehoodpadu() {
         <GoogleReviews />
       </div>
 
-      <HowItWorks />
+      <HowItWorks workMascot="kreslo" />
 
       <div>
         <Reviews showHeadline={true} />

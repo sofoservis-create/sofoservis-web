@@ -178,7 +178,7 @@ export default function VypratavaniePage() {
         <GoogleReviews />
       </div>
 
-      <HowItWorks />
+      <HowItWorks workMascot="kreslo" />
 
       <ServicePriceTable variant="vypratavanie" title="Cenník vypratávania" />
       <ServicePricing filter={["vypratavanie", "stahovanie", "buracie-prace"]} />

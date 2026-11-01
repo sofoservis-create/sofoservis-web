@@ -201,7 +201,7 @@ export default function JunkRemovalPage() {
         <GoogleReviews title="Join our satisfied customers" />
       </div>
 
-      <HowItWorks lang="en" />
+      <HowItWorks lang="en" workMascot="kreslo" />
 
       <ServicePricing filter={["junk removal", "moving", "construction-waste"]} lang="en" />
 

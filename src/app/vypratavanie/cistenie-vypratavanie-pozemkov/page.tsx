@@ -157,7 +157,7 @@ export default function CisteniePozemkovPage() {
         <GoogleReviews />
       </div>
 
-      <HowItWorks />
+      <HowItWorks workMascot="kreslo" />
 
       <div>
         <Reviews showHeadline={true} />

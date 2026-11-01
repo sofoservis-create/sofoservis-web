@@ -135,7 +135,7 @@ export default function OdvozStavebnehoOdpaduBratislavaPage() {
       />
       <Clients />
       <GoogleReviews />
-      <HowItWorks />
+      <HowItWorks workMascot="kreslo" />
       <Reviews showHeadline={true} />
       <Features
         title={featuresData.title}

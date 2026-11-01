@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 import GoogleReviewerAvatars from "@/components/widgets/GoogleReviewerAvatars";
 import { usePathname } from "next/navigation";
 import { pushDataLayerEvent } from "@/lib/gtm";
@@ -597,6 +598,14 @@ export default function QuickContactForm({
       <div data-lead-form className={`scroll-mt-28 w-full text-left ${className}`}>
         {submitSuccess ? (
           <div className="form-submission-success bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 mb-2">
+            <Image
+              src="/images/mascot/pozy/sofoservis-maskot-palec-hore.webp"
+              alt=""
+              width={400}
+              height={400}
+              sizes="128px"
+              className="mx-auto mb-3 h-auto w-32"
+            />
             <div className="flex">
               <svg
                 className="h-5 w-5 text-green-500 mr-2"

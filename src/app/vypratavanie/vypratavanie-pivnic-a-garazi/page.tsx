@@ -168,7 +168,7 @@ export default function VypratavaniePivnicGaraziPage() {
         <GoogleReviews />
       </div>
 
-      <HowItWorks />
+      <HowItWorks workMascot="kreslo" />
 
       <div>
         <Reviews showHeadline={true} />
