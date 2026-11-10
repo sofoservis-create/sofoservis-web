@@ -105,7 +105,7 @@ export default function VypratavaniePivnicGaraziPage() {
             {
               question: "Koľko stojí vypratávanie pivnice alebo garáže?",
               answer:
-                "Cena za vypratávanie pivnice alebo garáže sa odvíja od niekoľkých faktorov: veľkosť priestoru, množstvo odpadu, prístupové podmienky a typ odpadu. Pre štandardnú pivnicu (do 15m²) sa ceny pohybujú od 150€ do 300€, pre garáž od 200€ do 400€. Cena zahŕňa prácu, odvoz a likvidáciu bežného odpadu. Pri špeciálnych typoch odpadu (chemikálie, stavebný odpad, elektronika) môžu byť účtované dodatočné poplatky za likvidáciu. Najlepšie je využiť našu bezplatnú obhliadku, po ktorej dostanete presnú cenovú ponuku bez skrytých poplatkov.",
+                "Cena za vypratávanie pivnice alebo garáže sa odvíja od niekoľkých faktorov: veľkosť priestoru, množstvo odpadu, prístupové podmienky a typ odpadu. Pre štandardnú pivnicu (do 15m²) sa ceny pohybujú od 100€ do 300€, pre garáž od 100€ do 400€. Cena zahŕňa prácu, odvoz a likvidáciu bežného odpadu. Pri špeciálnych typoch odpadu (chemikálie, stavebný odpad, elektronika) môžu byť účtované dodatočné poplatky za likvidáciu. Najlepšie je využiť našu bezplatnú obhliadku, po ktorej dostanete presnú cenovú ponuku bez skrytých poplatkov.",
             },
             {
               question:

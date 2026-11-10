@@ -61,7 +61,7 @@ const faqSchemaItems = [
   {
     question: "Aká je cena za vypratanie bytu alebo domu?",
     answer:
-      "Cena závisí od veľkosti priestoru a množstva vecí. Pre jednoizbový byt ceny začínajú od 200€. Hodinová sadzba je od 35€/hod. Poskytujeme nezáväznú cenovú ponuku po bezplatnej obhliadke.",
+      "Cena závisí od veľkosti priestoru a množstva vecí. Pre jednoizbový byt ceny začínajú od 400€. Hodinová sadzba je od 35€/hod. Poskytujeme nezáväznú cenovú ponuku po bezplatnej obhliadke.",
   },
   {
     question: "Ako dlho trvá vypratanie bytu alebo domu?",
@@ -216,7 +216,7 @@ export default function VypratavaniePage() {
             {
               question: "Aká je cena za vypratanie bytu alebo domu?",
               answer:
-                "Cena závisí od viacerých faktorov: veľkosť priestoru, množstvo vecí, dostupnosť (poschodie, výťah) a typ odpadu. Pre jednoizbový byt ceny začínajú od 200€, pre 2-izbový byt 350–500€, pre rodinný dom 600–1500€. Poskytujeme bezplatnú obhliadku a jasnú cenovú ponuku vopred.",
+                "Cena závisí od viacerých faktorov: veľkosť priestoru, množstvo vecí, dostupnosť (poschodie, výťah) a typ odpadu. Pre jednoizbový byt ceny začínajú od 400€, pre 2-izbový byt 350–500€, pre rodinný dom 600–1500€. Poskytujeme bezplatnú obhliadku a jasnú cenovú ponuku vopred.",
             },
             {
               question: "Ako dlho trvá vypratanie bytu?",
@@ -252,7 +252,7 @@ export default function VypratavaniePage() {
               },
               {
                 title: "Cena vypratávania — čo ovplyvňuje sumu?",
-                content: "Cena závisí od: veľkosti priestoru, množstva a typu vecí, prístupnosti (poschodie, výťah), druhu odpadu a požiadaviek na doplnkové služby.\n\nOrientačné ceny: jednoizbový byt od 200€, dvojizbový byt 350–500€, rodinný dom 600–1500€. Cena zahŕňa prácu, odvoz a ekologickú likvidáciu bežného domového odpadu. Bezplatnú cenovú ponuku vám pripravíme po obhliadke.",
+                content: "Cena závisí od: veľkosti priestoru, množstva a typu vecí, prístupnosti (poschodie, výťah), druhu odpadu a požiadaviek na doplnkové služby.\n\nOrientačné ceny: jednoizbový byt od 400€, dvojizbový byt 350–500€, rodinný dom 600–1500€. Cena zahŕňa prácu, odvoz a ekologickú likvidáciu bežného domového odpadu. Bezplatnú cenovú ponuku vám pripravíme po obhliadke.",
               },
               {
                 title: "Ekologická likvidácia odpadu po vypratávaní",
