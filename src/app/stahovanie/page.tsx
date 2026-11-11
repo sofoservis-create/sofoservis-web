@@ -35,9 +35,9 @@ const stahovanieLocations = [
 ];
 
 export const metadata = {
-  title: "Sťahovanie - Lacné sťahovacie služby | Sofoservis",
+  title: "Sťahovacie služby - cenník, typy sťahovania a mestá | Sofoservis",
   description:
-    "Lacné a profesionálne sťahovanie bytov, domov aj firiem od 35 €/hod. Zabalíme, prenesieme aj zmontujeme nábytok. Obhliadka a cenová ponuka zdarma.",
+    "Prehľad sťahovacích služieb Sofoservis: sťahovanie bytov, domov, kancelárií, ťažkých bremien a medzinárodné sťahovanie. Cenník od 35 €/hod a 13 miest, kde sťahujeme.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie",
     languages: {
@@ -47,9 +47,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Sťahovanie - Lacné sťahovacie služby | Sofoservis",
+    title: "Sťahovacie služby - cenník, typy sťahovania a mestá | Sofoservis",
     description:
-      "Lacné a profesionálne sťahovanie bytov, domov aj firiem od 35 €/hod. Zabalíme, prenesieme aj zmontujeme nábytok. Obhliadka a cenová ponuka zdarma.",
+      "Prehľad sťahovacích služieb Sofoservis: sťahovanie bytov, domov, kancelárií, ťažkých bremien a medzinárodné sťahovanie. Cenník od 35 €/hod a 13 miest, kde sťahujeme.",
     url: "https://www.sofoservis.sk/stahovanie",
     siteName: "Sofoservis",
     images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -78,9 +78,9 @@ const faqSchemaItems = [
 
 export default function StahovaniePage() {
   const heroData = {
-    title: "Profesionálne sťahovacie služby",
+    title: "Sťahovacie služby Sofoservis - od bytu po celú firmu",
     description:
-      "Profesionálne sťahovacie služby pre domácnosti aj firmy. Sťahujeme byty, domy, kancelárie, klavíry, trezory, stroje a ťažké bremená – rýchlo a bezpečne.",
+      "Vyberte si typ sťahovania alebo mesto. Sťahujeme byty, domy, kancelárie, klavíry, trezory aj stroje, v Bratislave a v 12 ďalších mestách na západnom Slovensku. Ceny nájdete v cenníku sťahovania nižšie.",
     formTitle: "Získajte bezplatnú cenovú ponuku",
     formSubtitle: "Vyplňte formulár pre nezáväznú cenovú kalkuláciu",
     backgroundImage: "/images/stahovanie-gauc.avif",
@@ -192,7 +192,7 @@ export default function StahovaniePage() {
 
       <HowItWorks />
 
-      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania" />
+      <ServicePriceTable variant="stahovanie" title="Cenník sťahovania" headingLevel="h2" />
       <ServicePricing filter={["stahovanie", "vypratavanie", "medzinarodne-stahovanie"]} />
 
       <div>
@@ -214,6 +214,7 @@ export default function StahovaniePage() {
       <div className="md:mb-[-100px]">
         <LocationMap
           title="Sťahovanie po celom Slovensku"
+          headingLevel="h2"
           description="Naše sťahovacie služby poskytujeme v nasledujúcich mestách a regiónoch."
           locations={stahovanieLocations}
           additionalText="Poskytujeme profesionálne sťahovacie služby s plnou zodpovednosťou za váš majetok."
@@ -224,6 +225,7 @@ export default function StahovaniePage() {
       <div>
         <FAQ
           title="Často kladené otázky o sťahovaní"
+          headingLevel="h2"
           items={[
             {
               question: "Koľko stojí sťahovanie bytu alebo domu?",

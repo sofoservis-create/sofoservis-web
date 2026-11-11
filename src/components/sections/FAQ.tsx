@@ -23,6 +23,8 @@ export interface FAQProps {
    *  contact form so the button scrolls to it instead of navigating away. */
   callToActionHref?: string;
   expandableGroup?: FAQExpandableGroup;
+  /** Heading tag for the section title (default h3). */
+  headingLevel?: "h2" | "h3";
 }
 
 export default function FAQ({
@@ -33,6 +35,7 @@ export default function FAQ({
   callToActionText = "Máte ďalšie otázky? Získajte nezáväznú ponuku",
   callToActionHref,
   expandableGroup,
+  headingLevel: Heading = "h3",
 }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [groupOpen, setGroupOpen] = useState(false);
@@ -48,9 +51,9 @@ export default function FAQ({
     <section className="cv-auto bg-white py-12 md:py-16 lg:py-20" id="faq">
       <Container>
         <div className="text-center mb-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
+          <Heading className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             {title}
-          </h3>
+          </Heading>
           {subtitle && (
             <p className="text-lg text-primary-600 max-w-2xl mx-auto">
               {subtitle}

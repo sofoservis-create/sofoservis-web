@@ -9,6 +9,7 @@ import ArticleDiscovery from "@/components/sections/ArticleDiscovery";
 import { selectDiscoveryArticles } from "@/lib/blog/discovery";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
+import Container from "@/components/ui/Container";
 
 // Code-split heavy below-fold client components (preserve SSR for SEO,
 // only defer hydration JS from the initial bundle).
@@ -61,9 +62,9 @@ const faqItems = [
 ];
 
 export const metadata = {
-  title: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
+  title: "Sofoservis | Sťahovanie Bratislava, vypratávanie a montáž",
   description:
-    "Sofoservis – sťahovanie, vypratávanie a montáž nábytku. 3500+ spokojných zákazníkov. Obhliadka zadarmo. Férové ceny.",
+    "Sťahovacia služba v Bratislave a okolí - sťahovanie bytov, domov a firiem, vypratávanie a montáž nábytku. 3500+ zákazníkov, obhliadka zadarmo, férové ceny.",
   alternates: {
     canonical: "https://www.sofoservis.sk",
       languages: {
@@ -74,7 +75,7 @@ export const metadata = {
   },
   robots: "index, follow",
   openGraph: {
-    title: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
+    title: "Sofoservis | Sťahovanie Bratislava, vypratávanie a montáž",
     description:
       "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3500+ spokojných zákazníkov.",
     url: "https://www.sofoservis.sk",
@@ -85,7 +86,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sofoservis | Sťahovanie, vypratávanie a montáž nábytku",
+    title: "Sofoservis | Sťahovanie Bratislava, vypratávanie a montáž",
     description:
       "Najlepšie hodnotená spoločnosť na sťahovanie, vypratávanie a montáž nábytku v Bratislave. 3500+ spokojných zákazníkov.",
     images: ["https://www.sofoservis.sk/images/og-logo.png"],
@@ -110,8 +111,8 @@ export default function Home() {
 
       <LabHero
         narrowForm
-        title="Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením"
-        description="Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
+        title="Sťahovanie Bratislava a okolie - sťahovacia služba s najlepším hodnotením"
+        description="Sofoservis je najlepšie hodnotená sťahovacia firma v Bratislave. Lacné a spoľahlivé sťahovanie bytov, domov a firiem už od 35 €/hod, k tomu vypratávanie a montáž nábytku. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií."
         benefits={["Sťahovanie", "Vypratávanie", "Montáž nábytku"]}
         benefitLinks={["/stahovanie", "/vypratavanie", "/montaz-nabytku"]}
         ratingText="3500+ spokojných zákazníkov"
@@ -129,6 +130,39 @@ export default function Home() {
 
       <section className="pt-4 pb-8 md:pt-6 md:pb-12">
         <Reviews showHeadline={true} />
+      </section>
+
+      <section className="pt-12 md:pt-16 lg:pt-20 bg-white" id="stahovacie-sluzby-bratislava">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <h2 className="text-center text-3xl md:text-4xl font-bold text-primary-900 mb-6">
+              Sťahovacie služby v Bratislave
+            </h2>
+            <div className="space-y-4 text-lg leading-relaxed text-primary-600/90">
+              <p>
+                Sťahujeme byty, rodinné domy, kancelárie aj celé firmy v Bratislave a okolí. Prídeme s vlastným autom, baliacim materiálom a skúsenou posádkou, nábytok rozložíme, prenesieme a v novom zložíme. Náklad je poistený a cenu poznáte vopred.
+              </p>
+              <p>
+                Najčastejšie riešime sťahovanie bytov a domov a sťahovanie kancelárií a firiem, pri ktorom sa prispôsobíme prevádzke a sťahujeme aj cez víkend. Zvládneme aj{" "}
+                <Link href="/stahovanie/stahovanie-tazkych-bremien" className="rounded-sm font-medium underline decoration-primary-300 underline-offset-4 transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500">
+                  ťažké bremená
+                </Link>
+                {" "}ako klavíry či trezory a{" "}
+                <Link href="/stahovanie/medzinarodne-stahovanie" className="rounded-sm font-medium underline decoration-primary-300 underline-offset-4 transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500">
+                  medzinárodné sťahovanie
+                </Link>
+                {" "}do Česka, Rakúska a ďalších krajín.
+              </p>
+              <p>
+                Sťahovanie v Bratislave pokrývame vo všetkých mestských častiach, pôsobíme aj v Trnave, Senci, Pezinku a ďalších mestách. Pozrite si{" "}
+                <Link href="/cennik" className="rounded-sm font-medium underline decoration-primary-300 underline-offset-4 transition-colors hover:text-primary-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-500">
+                  cenník sťahovania
+                </Link>
+                {" "}alebo všetky sťahovacie služby a napíšte nám, odkiaľ kam sa sťahujete. Obhliadka a cenová ponuka sú zdarma.
+              </p>
+            </div>
+          </div>
+        </Container>
       </section>
 
       <Features

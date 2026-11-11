@@ -16,6 +16,8 @@ interface LocationMapProps {
   showCallToAction?: boolean;
   callToActionText?: string;
   supporText?: string; // Keep the original typo for consistency
+  /** Heading tag for the section title (default h3). */
+  headingLevel?: "h2" | "h3";
 }
 
 export default function LocationMap({
@@ -26,6 +28,7 @@ export default function LocationMap({
   showCallToAction = true,
   callToActionText = "Sťahujeme aj vo vašej lokalite, získajte ponuku", // Slovak default
   supporText = "Pôsobíme aj mimo Bratislavy:", // Slovak default
+  headingLevel: Heading = "h3",
 }: LocationMapProps) {
   return (
     <section
@@ -34,9 +37,9 @@ export default function LocationMap({
     >
       <Container>
         <div className="text-center mb-12">
-          <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
+          <Heading className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             {title}
-          </h3>
+          </Heading>
           <p className="text-lg text-primary-600/90 max-w-2xl mx-auto">
             {description}
           </p>

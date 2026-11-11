@@ -16,9 +16,9 @@ import RelatedServices from "@/components/sections/RelatedServices";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 
 export const metadata = {
-  title: "Sťahovanie Trnava - Lacné sťahovanie bytov a domov | Sofoservis",
+  title: "Sťahovanie Trnava - sťahovacia služba v Trnave a okolí | Sofoservis",
   description:
-    "Lacné sťahovanie bytov a domov v Trnave a okolí s prehľadným cenníkom. Prevezieme nábytok aj spotrebiče rýchlo a bez poškodenia. Cenová ponuka zdarma.",
+    "Sťahovanie bytov, domov a firiem v Trnave a okolí. Prehľadný cenník, poistený náklad, cenová ponuka zdarma. Sťahovacia firma Sofoservis pre Trnavu.",
   alternates: {
     canonical: "https://www.sofoservis.sk/stahovanie/stahovanie-trnava",
       languages: {
@@ -28,8 +28,8 @@ export const metadata = {
       },
   },
   openGraph: {
-      title: "Sťahovanie Trnava - Lacné sťahovanie bytov a domov | Sofoservis",
-      description: "Lacné sťahovanie bytov a domov v Trnave a okolí s prehľadným cenníkom. Prevezieme nábytok aj spotrebiče rýchlo a bez poškodenia. Cenová ponuka zdarma.",
+      title: "Sťahovanie Trnava - sťahovacia služba v Trnave a okolí | Sofoservis",
+      description: "Sťahovanie bytov, domov a firiem v Trnave a okolí. Prehľadný cenník, poistený náklad, cenová ponuka zdarma. Sťahovacia firma Sofoservis pre Trnavu.",
       url: "https://www.sofoservis.sk/stahovanie/stahovanie-trnava",
       siteName: "Sofoservis",
       images: [{ url: "/images/og-logo.png", width: 1200, height: 630 }],
@@ -41,7 +41,7 @@ export const metadata = {
 export default function StahovanieTrnavaPage() {
   // Data for Hero section
   const heroData = {
-    title: "Lacná sťahovacia služba v Trnave",
+    title: "Sťahovanie Trnava - sťahovacia služba pre Trnavu a okolie",
     description:
       "Kompletné sťahovacie služby v Trnave a okolí. Profesionálny tím, výhodné ceny, spokojnosť garantovaná. Sťahujeme byty, domy, kancelárie a firmy v Trnave.",
     formTitle: "Sťahovanie v Trnave bez starostí s bezplatnou ponukou",
@@ -181,6 +181,7 @@ export default function StahovanieTrnavaPage() {
       <LabHero
         narrowForm
         title={heroData.title}
+        backgroundImageAlt="Sťahovanie Trnava - Sofoservis"
         description={heroData.description}
         formTitle={heroData.formTitle}
         formSubtitle={heroData.formSubtitle}

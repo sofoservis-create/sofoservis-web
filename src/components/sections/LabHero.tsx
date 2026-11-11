@@ -16,6 +16,8 @@ interface LabHeroProps {
   title?: string;
   description?: string;
   backgroundImage?: string;
+  /** Alt text of the hero background image (defaults to one derived from the title). */
+  backgroundImageAlt?: string;
   formTitle?: string;
   formSubtitle?: string;
   ratingText?: string;
@@ -271,6 +273,7 @@ export default function LabHero({
   title = "Sťahovanie, vypratávanie a montáž nábytku – s najlepším hodnotením",
   description = "Sofoservis je najlepšie hodnotená spoločnosť svojho druhu. Viac ako 3500 spokojných zákazníkov a stovky 5-hviezdičkových recenzií.",
   backgroundImage = "/images/sofoservis-zamestnanci-hero.avif",
+  backgroundImageAlt,
   formTitle = "Dohodnite si kalkuláciu úplne zadarmo",
   formSubtitle = "Vyplňte formulár a získajte nezáväznú ponuku ešte dnes",
   ratingText = "3500+ spokojných zákazníkov",
@@ -552,7 +555,7 @@ export default function LabHero({
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={backgroundImage}
-                alt={`Sťahovacie služby - ${title}`}
+                alt={backgroundImageAlt ?? `Sťahovacie služby - ${title}`}
                 fetchPriority="high"
                 decoding="async"
                 className="absolute inset-0 w-full h-full object-cover object-top md:object-center lg:[object-position:center_85%]"
@@ -561,7 +564,7 @@ export default function LabHero({
           ) : (
             <Image
               src={backgroundImage}
-              alt={`Sťahovacie služby - ${title}`}
+              alt={backgroundImageAlt ?? `Sťahovacie služby - ${title}`}
               fill
               priority
               quality={65}

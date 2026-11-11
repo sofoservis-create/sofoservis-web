@@ -61,12 +61,15 @@ interface ServicePriceTableProps {
   variant: PriceTableVariant;
   title: string;
   subtitle?: string;
+  /** Heading tag for the section title (default h3). */
+  headingLevel?: "h2" | "h3";
 }
 
 export default function ServicePriceTable({
   variant,
   title,
   subtitle,
+  headingLevel: Heading = "h3",
 }: ServicePriceTableProps) {
   const items = tables[variant];
 
@@ -74,9 +77,9 @@ export default function ServicePriceTable({
     <section className="pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 bg-white">
       <Container>
         <div className="text-center mb-8 md:mb-10">
-          <h3 className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
+          <Heading className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             {title}
-          </h3>
+          </Heading>
           <p className="text-lg text-primary-600/90 max-w-2xl mx-auto">
             {subtitle ??
               "Transparentné ceny bez skrytých poplatkov. Presná kalkulácia po bezplatnej obhliadke."}
