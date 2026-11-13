@@ -28,9 +28,11 @@ import { NextResponse } from "next/server";
 export const revalidate = 3600;
 
 const FIELDS = "id,media_type,media_url,thumbnail_url,permalink,timestamp,caption";
+// Instagram Business/Creator account ID (shown in Meta app → Instagram → API setup).
+const IG_USER_ID = process.env.INSTAGRAM_USER_ID ?? "17841408157382088";
 
 export async function GET() {
-  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+  const token = process.env.INSTAGRAM_ACCESS_TOKEN?.trim();
 
   if (!token) {
     return NextResponse.json(
@@ -44,7 +46,7 @@ export async function GET() {
   }
 
   try {
-    const url = `https://graph.instagram.com/me/media?fields=${FIELDS}&limit=24&access_token=${token}`;
+    const url = `https://graph.facebook.com/v21.0/${IG_USER_ID}/media?fields=${FIELDS}&limit=24&access_token=${encodeURIComponent(token)}`;
     const res = await fetch(url, { next: { revalidate: 3600 } });
     const data = await res.json();
 
