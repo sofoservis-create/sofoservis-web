@@ -10,6 +10,7 @@ import { selectDiscoveryArticles } from "@/lib/blog/discovery";
 import ServiceAreas from "@/components/sections/ServiceAreas";
 import FAQJsonLd from "@/components/seo/FAQJsonLd";
 import Container from "@/components/ui/Container";
+import ServicePriceTable from "@/components/sections/ServicePriceTable";
 
 // Code-split heavy below-fold client components (preserve SSR for SEO,
 // only defer hydration JS from the initial bundle).
@@ -164,6 +165,12 @@ export default function Home() {
           </div>
         </Container>
       </section>
+
+      <ServicePriceTable
+        variant="stahovanie"
+        title="Cenník sťahovania v Bratislave"
+        headingLevel="h2"
+      />
 
       <Features
           title="Prečo si vybrať Sofoservis"

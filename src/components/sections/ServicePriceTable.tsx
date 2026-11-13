@@ -73,41 +73,78 @@ export default function ServicePriceTable({
 }: ServicePriceTableProps) {
   const items = tables[variant];
 
+  // Long price lists split into two columns on desktop so the card stays
+  // compact; on mobile everything is one full-width list.
+  const twoColumns = items.length > 6;
+  const splitAt = twoColumns ? Math.ceil(items.length / 2) : items.length;
+  const columns = twoColumns
+    ? [items.slice(0, splitAt), items.slice(splitAt)]
+    : [items];
+
   return (
     <section className="pt-12 md:pt-16 lg:pt-20 pb-6 md:pb-8 bg-white">
       <Container>
-        <div className="text-center mb-8 md:mb-10">
+        <div className="text-center mb-6 md:mb-10">
           <Heading className="text-3xl md:text-4xl font-bold text-primary-900 mb-3">
             {title}
           </Heading>
-          <p className="text-lg text-primary-600/90 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-primary-600/90 max-w-2xl mx-auto">
             {subtitle ??
               "Transparentné ceny bez skrytých poplatkov. Presná kalkulácia po bezplatnej obhliadke."}
           </p>
         </div>
 
-        <div className="max-w-xl mx-auto bg-white rounded-2xl border border-gray-200 p-6">
-          <div className="space-y-3 mb-6">
-            {items.map((item, index) => (
+        <div
+          className={`mx-auto overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm ${
+            twoColumns ? "max-w-xl lg:max-w-4xl" : "max-w-xl"
+          }`}
+        >
+          <dl
+            className={`px-4 sm:px-6 ${
+              twoColumns ? "lg:grid lg:grid-cols-2 lg:gap-x-12 lg:px-8" : ""
+            }`}
+          >
+            {columns.map((column, columnIndex) => (
               <div
-                key={index}
-                className={`flex justify-between items-center py-2 px-3 rounded-lg ${
-                  item.isHighlighted
-                    ? "bg-accent-100 font-semibold text-accent-700"
-                    : "text-primary-700"
+                key={columnIndex}
+                className={`divide-y divide-gray-100 ${
+                  columnIndex > 0 ? "border-t border-gray-100 lg:border-t-0" : ""
                 }`}
               >
-                <span className="text-sm">{item.label}</span>
-                <span className="text-sm font-bold">{item.price}</span>
+                {column.map((item) => {
+                  const isFree = item.price === "zadarmo";
+                  return (
+                    <div
+                      key={item.label}
+                      className="flex min-h-[48px] items-center justify-between gap-4 py-3"
+                    >
+                      <dt className="text-[15px] leading-snug text-primary-700 sm:text-base">
+                        {item.label}
+                      </dt>
+                      <dd
+                        className={`shrink-0 whitespace-nowrap text-right text-[15px] font-bold tabular-nums text-primary-900 sm:text-base ${
+                          isFree || item.isHighlighted
+                            ? "-my-0.5 rounded-full bg-accent-500/25 px-3 py-0.5"
+                            : ""
+                        }`}
+                      >
+                        {item.price}
+                      </dd>
+                    </div>
+                  );
+                })}
               </div>
             ))}
+          </dl>
+
+          <div className="border-t border-gray-200 bg-gray-50 p-4 sm:p-6">
+            <Link
+              href="/kontakt"
+              className="mx-auto flex min-h-[52px] w-full items-center justify-center rounded-xl bg-accent-500 px-6 text-center text-base font-bold text-primary-900 transition-colors duration-300 hover:bg-accent-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-900 focus-visible:ring-offset-2 sm:max-w-sm"
+            >
+              Získať obhliadku zadarmo
+            </Link>
           </div>
-          <Link
-            href="/kontakt"
-            className="w-full bg-primary-900 hover:bg-primary-800 text-white font-bold py-3 px-4 rounded-lg transition-colors duration-300 text-sm text-center block"
-          >
-            ZÍSKAŤ OBHLIADKU ZADARMO
-          </Link>
         </div>
       </Container>
     </section>
