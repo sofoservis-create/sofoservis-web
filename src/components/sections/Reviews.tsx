@@ -252,7 +252,7 @@ export default function Reviews({
                 });
               }
             }}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 flex items-center justify-center rounded-full bg-white shadow-lg text-accent-500 hover:text-accent-600 transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 flex items-center justify-center rounded-full bg-white shadow-lg text-black hover:text-black transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2"
             aria-label="Predchádzajúce videá"
             type="button"
           >
@@ -371,7 +371,7 @@ export default function Reviews({
                 });
               }
             }}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 flex items-center justify-center rounded-full bg-white shadow-lg text-accent-500 hover:text-accent-600 transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 h-12 w-12 flex items-center justify-center rounded-full bg-white shadow-lg text-black hover:text-black transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent-400 focus:ring-offset-2"
             aria-label="Nasledujúce videá"
             type="button"
           >
